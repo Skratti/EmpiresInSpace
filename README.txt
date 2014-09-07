@@ -6,4 +6,7 @@ This may be helpful to detect faulty cross references (for example referencing a
 
 
 
+If someone is interested in it, I could also upload the C# solution to create the starmap and solar systems, and the solution that I used to create the planet surfaces. The latter one uses an adaption of the perlin noise algorithm. Please inform me via my email adresse - I will then clean up the solutions so that they are a good base for enhancements of the community.
+
+
 

@@ -2,7 +2,7 @@
 truncate table dbo.Labels
 BULK
 INSERT dbo.Labels
-FROM 'C:\SVN\SpaceGame\DE4tu2.csv'
+FROM 'C:\Github\Labels\DE4tu2.csv'
 WITH
 (
 ROWTERMINATOR = '\n'

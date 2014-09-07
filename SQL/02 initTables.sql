@@ -134,6 +134,16 @@ drop table game;
 drop table [dbo].[defaultMap]
 print 'tables dropped'
 go
+drop function [dbo].[randomFunc]
+go
+CREATE function [dbo].[randomFunc] ( @maxRandomValue int ,  @minRandomValue int) 
+returns int
+as
+begin
+	set @maxRandomValue = @maxRandomValue + 1;
+	return (ABS(CAST(CAST((SELECT [NewId] FROM GetNewID) AS VARBINARY) AS int)) % (@maxRandomValue - @minRandomValue)) + @minRandomValue
+end
+GO
 
 
 -- default map for planet surface
@@ -1426,7 +1436,7 @@ END
 go
 
 go
-drop TRIGGER TRIGGER_ShipCreated
+--drop TRIGGER TRIGGER_ShipCreated
 go
 CREATE TRIGGER TRIGGER_ShipCreated ON dbo.[Ships]
 AFTER Insert

@@ -9,9 +9,10 @@ ROWTERMINATOR = '\n'
 )
 GO
 
+/* depending on the text format:
 update Labels set label =  SUBSTRING(label,2, LEN(label) -2)
 from Labels
-
+*/
 go
 
 -- new turns 
@@ -37,8 +38,8 @@ select
 into #tempTurns
 from numbers 
 cross apply #tempTimes
-where	numbers.number > 0 
-	and	numbers.number < 366 
+where	numbers.number > 1000 
+	and	numbers.number < 1366 
 
 
 

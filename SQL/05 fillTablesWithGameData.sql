@@ -1592,6 +1592,7 @@ select 1, 3005	, 1, 3006 --Administration IIIII
 ----------------------------------------------------------------------------------
 --  Ship Templates
 -- -> this is not consistent yet
+-- Blueprint for scout
 SET IDENTITY_INSERT [dbo].[ShipTemplateBlueprints] ON
 INSERT [dbo].[ShipTemplateBlueprints] ([id] , [shipHullId], [name], [gif], [energy], [crew], [scanRange], [attack], [defense], [hitpoints], [damagereduction], [cargoroom], [fuelroom], [systemMovesPerTurn], [galaxyMovesPerTurn], [systemMovesMax], [galaxyMovesMax], [isColonizer], [constructionDuration], [constructable], [amountBuilt], [obsolete]) 
 VALUES (0, 1, N'Kolonieschiff', N'scout.png', 1, 8, 3, 0, 0, 100, 0, 20, 80, 20, 4, 160, 35, 1, 1, 1, 0, 1)
@@ -1600,13 +1601,13 @@ SET IDENTITY_INSERT [dbo].[ShipTemplateBlueprints] OFF
 --insert neutral user 0
 INSERT [dbo].[Users] ([id], [username], [created], [player_ip], [user_ip], [activity], [locked], [user_session], [showRaster], [moveShipsAsync], [homeCoordX], [homeCoordY], [language], [loginDT], [lastSelectedObjectType], [lastSelectedObjectId], [showSystemNames], [showColonyNames], [showCoordinates]) VALUES (0, N'Niemand', NULL, NULL, NULL, NULL, NULL, NULL, 0, 1, 100, 100, 1, CAST(0x0000A1B200EF844B AS DateTime), 1, 332, 0, 0, 0)
 
+--0 Blueprint Colony ship, needed during player creation
 SET IDENTITY_INSERT [dbo].[ShipTemplate] ON
---Colony ship, needed during player creation
 INSERT [dbo].[ShipTemplate] ([id], [userId], [shipHullId], [name], [gif], [energy], [crew], [scanRange], [attack], [defense], [hitpoints], [damagereduction], [cargoroom], [fuelroom], [systemMovesPerTurn], [galaxyMovesPerTurn], [systemMovesMax], [galaxyMovesMax], [isColonizer], [constructionDuration], [constructable], [amountBuilt], [obsolete]) 
 VALUES (0, 0, 1, N'Kolonieschiff', N'scout.png', 1, 8, 3, 0, 0, 100, 0, 20, 80, 20, 4, 160, 35, 1, 1, 0, 0, 1)
 
 
---Scout, needed when quest 9 (Explorer) is done
+--1 Blueprint Scout, needed when quest 9 (Explorer) is done
 INSERT [dbo].[ShipTemplate] ([id], [userId], [shipHullId], [name], [gif], [energy], [crew], [scanRange], 
 [attack], [defense], [hitpoints], [damagereduction], 
 [cargoroom], [fuelroom], 
@@ -1617,7 +1618,7 @@ VALUES (1, 0, 1, N'Scout', N'scout.png', 6, 10, 2,
 20, 5, 100, 15, 
 0, 1, 1, 0, 0)
 
---Defense satellite
+--2 Blueprint Defense satellite
 INSERT [dbo].[ShipTemplate] ([id], [userId], [shipHullId], [name], [gif], [energy], [crew], [scanRange], 
 [attack], [defense], [hitpoints], [damagereduction], [cargoroom], [fuelroom], 
 [systemMovesPerTurn], [galaxyMovesPerTurn], [systemMovesMax], [galaxyMovesMax], [isColonizer], [constructionDuration], [constructable], [amountBuilt], [obsolete], shipHullsImage) 

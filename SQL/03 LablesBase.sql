@@ -546,7 +546,7 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (434, N'Th
 
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (435, N'Allied', N'', 7)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (436, N'Neutral', N'', 7)
-INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (437, N'Alliances', N'', 7)
+
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (438, N'Alliance description...', N'', 7)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (439, N'Done', N'', 7)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (440, N'Close', N'', 7)
@@ -671,14 +671,15 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (537, N'Se
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (538, N'Read / Overall', N'', 7)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (539, N'Notify when a new message was posted', N'', 7)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (540, N'Name of the communication channel', N'', 7)
-INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (541, N'The number of unread and overall messages of this channel', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (541, N'The number of read and overall messages per channel', N'', 7)
 
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (542, N'Own', N'', 7)  --Trade selector
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (543, N'Write', N'', 7)  --Comm nodes
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (544, N'More', N'', 7)  --Comm nodes
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (545, N'Abort', N'', 7)  --Comm nodes
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (546, N'New text...', N'', 7)  --Comm nodes
-
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (547, N'Open quests', N'', 7)  --Comm nodes
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (548, N'Finished quests', N'', 7)  --Comm nodes
 --delete from [LabelsBase] where id = 434
 -- update [dbo].[LabelsBase] set value = N' was destroyed by the ' where id = 397
 

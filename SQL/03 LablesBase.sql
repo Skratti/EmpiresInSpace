@@ -680,6 +680,12 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (545, N'Ab
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (546, N'New text...', N'', 7)  --Comm nodes
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (547, N'Open quests', N'', 7)  --Comm nodes
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (548, N'Finished quests', N'', 7)  --Comm nodes
+
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (549, N'Fast mode', N'', 3)  --Spaceyard
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (550, N'Detail mode', N'', 3)  --Spaceyard
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (551, N'Costs', N'', 3)  --Spaceyard
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (552, N'Build it', N'', 3)  --Spaceyard
+
 --delete from [LabelsBase] where id = 434
 -- update [dbo].[LabelsBase] set value = N' was destroyed by the ' where id = 397
 

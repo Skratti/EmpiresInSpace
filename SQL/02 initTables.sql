@@ -292,7 +292,7 @@ CREATE TABLE [dbo].[Users]			  (
 	user_ip nvarchar(55),		-- creation IP
 	activity bit DEFAULT 0,
 	locked bit DEFAULT 0,		-- deleted?	
-	lastlogin TIMESTAMP,
+	lastlogin TIMESTAMP,	--this is of course the row version... Needs to be renamed...
 	user_session nvarchar(32),
 	showRaster bit not null default 0,
 	moveShipsAsync bit not null default 0,

@@ -1674,10 +1674,10 @@ Nachrichtentabelle
 --------------------------------------------------- */ 
 go
 
-CREATE TABLE [dbo].UserContacts  (
-sender		int 
+CREATE TABLE [dbo].[UserContacts]  (
+sender		int not null 
 	references [Users](id) on update cascade on delete cascade,		
-addressee	int	,
+addressee	int	not null ,
 currentRelation tinyint not null default 1 references [UserRelations](relationId) on update cascade on delete no action 
 );
 create clustered index UserContacts_UNIQUE ON UserContacts(sender,addressee);

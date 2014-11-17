@@ -1342,6 +1342,8 @@ CREATE TABLE [dbo].[Ships]  (
 	position geometry NOT NULL,
 	systemX TINYINT,
 	systemY TINYINT,
+	spaceX  INT not null DEFAULT 0,
+	spaceY  INT not null DEFAULT 0,
 	hitpoints SMALLINT DEFAULT 100 NOT NULL,
 	damageReduction tinyInt not null default 0,
 	attack SMALLINT DEFAULT '2' NOT NULL,
@@ -1361,6 +1363,7 @@ CREATE TABLE [dbo].[Ships]  (
 	templateId INT not null 
 		references	[dbo].ShipTemplate (id) on update cascade on delete cascade,
 	objectId int NOT NULL default 400, --one of the objects which are allowed by the table [ShipHullsImages]
+	versionId bigint not null default 0, 
 	constraint ships_primary primary key clustered (id)
 );
 create nonclustered index ShipsIdKey on [dbo].[Ships](userId);
@@ -1466,7 +1469,7 @@ CREATE TABLE [dbo].[shipStock](
 		references [dbo].[Ships](id) on update cascade on delete cascade,
 	goodsId SMALLINT NOT NULL
 		references [dbo].[Goods](id) on update no action on delete no action,
-	amount SMALLINT NOT NULL DEFAULT 0,
+	amount INT NOT NULL DEFAULT 0,
 	constraint shipStock_primary primary key clustered (shipId,goodsId)
 );
 print 'table [dbo].[shipStock] created.'
@@ -1627,7 +1630,7 @@ CREATE TABLE [dbo].[colonyStock](
 		references [dbo].[Colonies](id) on update cascade on delete cascade,
 	goodsId SMALLINT NOT NULL
 		references [dbo].[Goods](id) on update no action on delete no action,
-	amount SMALLINT NOT NULL DEFAULT 0,
+	amount INT NOT NULL DEFAULT 0,
 	constraint colonyStock_primary primary key clustered (colonyId,goodsId)
 );
 print 'table [dbo].[colonyStock] created.'

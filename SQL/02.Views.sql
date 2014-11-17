@@ -1081,7 +1081,10 @@ AS
          systemid, 
          templateid, 
          objectid, 
-         damagereduction 
+         damagereduction,
+		 versionId,
+         spaceX,
+		 spaceY
   FROM   [ships]; 
 
 go 

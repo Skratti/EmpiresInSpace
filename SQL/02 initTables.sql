@@ -305,6 +305,7 @@ CREATE TABLE [dbo].[Users]			  (
 	showSystemNames bit not null default 0,
 	showColonyNames bit not null default 0,
 	showCoordinates bit not null default 0,
+	showcolonyowner bit not null default 0,
 	[showColonyOwners] bit not null default 0,
 	[showShipNames] bit not null default 0,
 	[showShipOwners] bit not null default 0,

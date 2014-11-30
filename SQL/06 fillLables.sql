@@ -1,3 +1,5 @@
+SET QUOTED_IDENTIFIER ON
+go
 --1 copy Label file to server, since this script will look in the server file system
 truncate table dbo.Labels
 BULK

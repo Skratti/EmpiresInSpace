@@ -311,6 +311,11 @@ CREATE TABLE [dbo].[Users]			  (
 	[showShipOwners] bit not null default 0,
 	researchPoints int not null default 0,
 	scanRangeBrightness tinyint not null default 12,
+	constructionRatio decimal(3,2) not null default 1,
+	industrieRatio decimal(3,2) not null default 1,
+	foodRatio decimal(3,2) not null default 1,
+	versionId bigint not null default 0, 
+	-- alter table [Users] add versionId bigint not null default 0
 	--researchSpent int not null default 0,  -- redundant, can be calculated by summing all researches of that user
 	constraint Users_primary primary key nonclustered (id)
 );
@@ -638,7 +643,7 @@ go
 
 /*
 	Benefits that are created per Research -> is not mandatory for researches	
-	alter  TABLE  [dbo].[ModulesGain] add [population] bigint not null default 0
+	alter  TABLE  [dbo].[ResearchGain] add fleetCount SMALLINT not null default 0
 */
 CREATE TABLE  [dbo].[ResearchGain]
 (
@@ -649,6 +654,7 @@ CREATE TABLE  [dbo].[ResearchGain]
 	industrie int not null default 0,
 	food  int not null default 0,
 	colonyCount SMALLINT not null default 0,
+	fleetCount SMALLINT not null default 0,
 	objectId SMALLINT NOT NULL
 		references [ObjectDescription](id) on update cascade on delete cascade	
 );
@@ -1333,13 +1339,16 @@ print '--- user data ---'
 /* ---------------------------------------------------
 Schiffsliste
 herkunft ist doppelt belegt (und nicht hier drin). einmal für den Sektorein- bzw. ausflug, zum anderen bei der Schiffserstellung :(
+
+alter table [Ships] 
+alter column impuls Decimal(8,5) NOT NULL 
+
 --------------------------------------------------- */ 
 CREATE TABLE [dbo].[Ships]  (
 	id INT identity (1000,1),		--ToDo : 1000 is a reaaly bad workaround, because ships and colonies will sometimes (for example during trading) be stored in the same array as spaceobjects...
 	userId int NOT NULL,  --delete user will also result in delete template, this will delete this schip
 	--	references [dbo].[Users](id) on update cascade on delete cascade,	
 	[name] nvarchar(63) DEFAULT 'Noname' NOT NULL,
-	position geometry NOT NULL,
 	systemX TINYINT,
 	systemY TINYINT,
 	spaceX  INT not null DEFAULT 0,
@@ -1347,15 +1356,14 @@ CREATE TABLE [dbo].[Ships]  (
 	hitpoints SMALLINT DEFAULT 100 NOT NULL,
 	damageReduction tinyInt not null default 0,
 	attack SMALLINT DEFAULT '2' NOT NULL,
-	verteidigung SMALLINT DEFAULT '1' NOT NULL,
+	defense SMALLINT DEFAULT '1' NOT NULL,
 	scanRange TINYINT DEFAULT '3' NOT NULL,
-	scanBox geometry,
-	max_hyper TINYINT NOT NULL DEFAULT '4',
-	max_impuls TINYINT NOT NULL DEFAULT '12',
-	rest_hyper TINYINT NOT NULL DEFAULT '4',
-	rest_impuls TINYINT NOT NULL DEFAULT '12',
+	max_hyper Decimal(8,5) NOT NULL DEFAULT 16,
+	max_impuls Decimal(8,5) NOT NULL DEFAULT 48,
+	hyper Decimal(8,5) NOT NULL DEFAULT 4,
+	impuls Decimal(8,5) NOT NULL DEFAULT 12,
 	colonizer BIT NOT NULL DEFAULT 0,
-	heimat BIT DEFAULT 0,
+--	heimat BIT DEFAULT 0,
 	hullId TINYINT NOT NULL DEFAULT '1',
 --		references bpHull(id) on update no action on delete no action,			
 	systemId INT DEFAULT Null
@@ -1392,6 +1400,7 @@ BEGIN
 	insert into [ShipsDirection] select shipId, 0 , moveDirection from inserted;
 END
 --drop trigger TRIGGER_ShipMoved
+/*
 go
 CREATE TRIGGER TRIGGER_ShipMoved ON dbo.[Ships]
 AFTER Update
@@ -1438,7 +1447,7 @@ BEGIN
 	
 END
 go
-
+*/
 go
 --drop TRIGGER TRIGGER_ShipCreated
 go
@@ -1985,7 +1994,7 @@ go
 ALTER INDEX [StarMap_position] ON [dbo].[StarMap]
 REBUILD;
 go
-
+/*
 CREATE SPATIAL INDEX [Ships_position]  
    ON [dbo].[Ships]([position])
    USING GEOMETRY_GRID
@@ -2009,6 +2018,7 @@ go
 ALTER INDEX [Ships_ScanBox] ON [dbo].[Ships]
 REBUILD;
 go
+*/
 
 CREATE SPATIAL INDEX [CommunicationNode_position] 
    ON [dbo].CommunicationNode([position])

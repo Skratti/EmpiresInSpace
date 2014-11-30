@@ -110,6 +110,14 @@ INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [d
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (175, N'Administration IV', N'Houses.png', 1, 0, 482)
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (176, N'Administration V', N'Houses.png', 1, 0, 483)
 
+--delete  [ObjectDescription] where id > 199 and id < 205
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (200, N'Scout2', N'Scout2G.png', 1, 0, 565)
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (201, N'Corvette', N'Corvette.png', 1, 0, 566)
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (202, N'Fregatte', N'Fregatte.png', 1, 0, 567)
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (203, N'destroyer', N'400.gif', 1, 0, 568)
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (204, N'Cruiser', N'400.gif', 1, 0, 569)
+
+
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (400, N'Kolonieschiff', N'400.gif', 1, 0, 54)
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (401, N'Scout', N'401Template.gif', 1, 0, 55)
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (402, N'Corvette', N'Corvette.png', 1, 0, 56)
@@ -431,23 +439,40 @@ select 1054, N'Lutetium Modules I', N'1.gif', N'', 100, 392, 516, 3, 3, 9
 
 INSERT into [dbo].[Research] 
 	  ([id], [name],[objectimageUrl], [description]	, [cost], [label]	, [descriptionLabel], [researchType], [treeColumn]	, [treeRow]) 
-select 3002, N'Administration I', N'1.gif', N''		, 20	, 472		, 477				, 4				, 1				, 5 union all
-select 3003, N'Administration II', N'1.gif', N''	, 200	, 473		, 478				, 4				, 2				, 5 union all
-select 3004, N'Administration III', N'1.gif', N''	, 1000	, 474		, 479				, 4				, 3				, 5 union all
-select 3005, N'Administration VI', N'1.gif', N''	, 2000	, 475		, 480				, 4				, 4				, 5 union all
-select 3006, N'Administration V', N'1.gif', N''		, 4000	, 476		, 481				, 4				, 5				, 5 
+select 3002, N'Administration I', N'1.gif', N''		, 20	, 472		, 477				, 4				, 1				, 4 union all
+select 3003, N'Administration II', N'1.gif', N''	, 200	, 473		, 478				, 4				, 2				, 4 union all
+select 3004, N'Administration III', N'1.gif', N''	, 1000	, 474		, 479				, 4				, 3				, 4 union all
+select 3005, N'Administration VI', N'1.gif', N''	, 2000	, 475		, 480				, 4				, 4				, 4 union all
+select 3006, N'Administration V', N'1.gif', N''		, 4000	, 476		, 481				, 4				, 5				, 4 
+
+
+INSERT into [dbo].[Research] 
+	  ([id], [name],[objectimageUrl], [description]	, [cost], [label]	, [descriptionLabel], [researchType], [treeColumn]	, [treeRow]) 
+select 4002, N'Fleet Command I', N'1.gif', N''		, 20	, 553		, 558				, 4				, 1				, 6 union all
+select 4003, N'Fleet Command II', N'1.gif', N''		, 200	, 554		, 559				, 4				, 2				, 6 union all
+select 4004, N'Fleet Command III', N'1.gif', N''	, 1000	, 555		, 560				, 4				, 3				, 6 union all
+select 4005, N'Fleet Command VI', N'1.gif', N''		, 2000	, 556		, 561				, 4				, 4				, 6 union all
+select 4006, N'Fleet Command V', N'1.gif', N''		, 4000	, 557		, 562				, 4				, 5				, 6 
+
+
+
 
 SET IDENTITY_INSERT [dbo].[Research] OFF
 go
 
-
+--delete from dbo.ResearchGain
 insert into dbo.ResearchGain
-([researchId]	,[growth]	,[construction]	,[industrie]	,[food]	,[colonyCount]	,[objectId])
-select 3002		, 0			,0				,0				,0		,1				,172		union all
-select 3003		, 0			,0				,0				,0		,1				,173		union all
-select 3004		, 0			,0				,0				,0		,1				,174		union all
-select 3005		, 0			,0				,0				,0		,1				,175		union all
-select 3006		, 0			,0				,0				,0		,2				,176	
+([researchId]	,[growth]	,[construction]	,[industrie]	,[food]	,[colonyCount]	,fleetCount	,[objectId])
+select 3002		, 0			,0				,0				,0		,1				,0			,172		union all
+select 3003		, 0			,0				,0				,0		,1				,0			,173		union all
+select 3004		, 0			,0				,0				,0		,1				,0			,174		union all
+select 3005		, 0			,0				,0				,0		,1				,0			,175		union all
+select 3006		, 0			,0				,0				,0		,2				,0			,176		union all
+select 4002		, 0			,-10			,-10			,0		,0				,50			,200		union all
+select 4003		, 0			,-12			,-12			,0		,1				,100		,201		union all
+select 4004		, 0			,-15			,-15			,0		,1				,150		,202		union all
+select 4005		, 0			,-19			,-19			,0		,1				,200		,203		union all
+select 4006		, 0			,-24			,-24			,0		,2				,250		,204	
 
 
 
@@ -609,8 +634,9 @@ select 1115, 4, N'Lutetium Scanner I', 15, 3115, 390
 
 
 SET IDENTITY_INSERT [dbo].[Modules] OFF
-
 delete from [dbo].[ModulesGain]
+
+--level 1
 INSERT [dbo].[ModulesGain] ([modulesId], [crew], [energy], [hitpoints], [damagereduction], [damageoutput], [cargoroom], [fuelroom], [inSpaceSpeed], [inSystemSpeed], [maxSpaceMoves], [maxSystemMoves], [special], [scanRange]) VALUES (1, 10, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
 INSERT [dbo].[ModulesGain] ([modulesId], [crew], [energy], [hitpoints], [damagereduction], [damageoutput], [cargoroom], [fuelroom], [inSpaceSpeed], [inSystemSpeed], [maxSpaceMoves], [maxSystemMoves], [special], [scanRange]) VALUES (2, -1, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
 INSERT [dbo].[ModulesGain] ([modulesId], [crew], [energy], [hitpoints], [damagereduction], [damageoutput], [cargoroom], [fuelroom], [inSpaceSpeed], [inSystemSpeed], [maxSpaceMoves], [maxSystemMoves], [special], [scanRange]) VALUES (3, 0, 0, 100, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
@@ -634,9 +660,9 @@ select 101, 25, -3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 union all   --crew
 select 102, -2, 30, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 union all  --reactor
 select 103, 0, 0, 175, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 union all   --hull
 select 104, -1, -4, 0, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 union all  --shield
-select 105, -1, -6, 0, 0, 50, 0, 0, 0, 0, 0, 0, 0, 0, 1 union all    --laser
-select 106, -1, -2, 0, 0, 50, 0, 0, 0, 0, 0, 0, 0, 0, 2 union all   --missile
-select 107, -1, -4, 0, 0, 50, 0, 0, 0, 0, 0, 0, 0, 0, 3 union all   --mass driver
+select 105, -1, -6, 0, 0, 25, 0, 0, 0, 0, 0, 0, 0, 0, 1 union all    --laser
+select 106, -1, -2, 0, 0, 25, 0, 0, 0, 0, 0, 0, 0, 0, 2 union all   --missile
+select 107, -1, -4, 0, 0, 25, 0, 0, 0, 0, 0, 0, 0, 0, 3 union all   --mass driver
 select 108, -1, -2, 0, 0, 0, 1500, 50, 0, 0, 0, 0, 0, 0, 0 union all   -- cargo
 select 109, -1, -4, 0, 0, 0, 0, 0, 0, 24, 0, 100, 0, 0, 0 union all   --system Enginge
 select 110, -1, -4, 0, 0, 0, 0, 0, 5, 0, 20, 0, 0, 0, 0 union all    --star engines
@@ -648,7 +674,7 @@ select 1101, 20, -3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 union all   --crew
 select 1102, -2, 25, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 union all  --reactor
 select 1103, 0, 0,  150, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 union all   --hull
 select 1104, -1, -4, 0, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 union all  --shield
-select 1105, -1, -6, 0, 0, 40, 0, 0, 0, 0, 0, 0, 0, 0, 1 union all    --laser
+select 1105, -1, -6, 0, 0, 30, 0, 0, 0, 0, 0, 0, 0, 0, 1 union all    --laser
 select 1108, -1, -2, 0, 0, 0, 1200, 50, 0, 0, 0, 0, 0, 0, 0 union all   -- cargo
 select 1110, -1, -4, 0, 0, 0, 0, 0, 6, 0, 24, 0, 0, 0, 0 union all    --star engines
 select 1115, -1, -7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0    --scanner
@@ -794,48 +820,48 @@ INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1101, 1, 
 INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1101, 2, 30)
 INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1101, 7, 30)
 INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1101, 50, 20)  -- adv bm 2
-INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1101, 1043, 10)  --Yttrium
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1101, 1043, 50)  --Yttrium
 
 --reactor
 INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1102, 1, 10)
 INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1102, 7, 20)
 INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1102, 50, 20)  -- adv bm 2
-INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1102, 1044, 10)  --Lutetium
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1102, 1044, 50)  --Lutetium
 
 --hull
 INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1103, 1, 10)
 INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1103, 7, 20)
 INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1103, 50, 20)  -- adv bm 2
-INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1103, 1041, 10) --Terbium
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1103, 1041, 50) --Terbium
 
 --shield
 INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1104, 1, 10)
 INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1104, 7, 20)
 INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1104, 50, 20)  -- adv bm 2
-INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1104, 1042, 10) --Scandium
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1104, 1042, 50) --Scandium
 
 --laser
 INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1105, 1, 10)
 INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1105, 7, 20)
 INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1105, 50, 20)  -- adv bm 2
-INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1105, 1040, 10)  --Holmium
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1105, 1040, 50)  --Holmium
 
 --cargo
 INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1108, 1, 10)
 INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1108, 7, 20)
 INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1108, 50, 20)  -- adv bm 2
-INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1108, 1043, 10)  --Yttrium
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1108, 1043, 50)  --Yttrium
 
 --star engines
 INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1110, 1, 10)
 INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1110, 7, 20)
 INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1110, 50, 20)  -- adv bm 2
-INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1110, 1043, 10)  --Yttrium
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1110, 1043, 50)  --Yttrium
 --scanner
 INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1115, 1, 20)
 INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1115, 7, 20)
 INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1115, 50, 20)  -- adv bm 2
-INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1115, 1044, 10)  --Lutetium
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1115, 1044, 50)  --Lutetium
 
 
 /****** Object:  Table [dbo].[ShipTemplate]    Script Date: 12/06/2013 21:56:05 ******/
@@ -1051,27 +1077,26 @@ INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (1
 INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (1034, 6, -20)  -- energy
 INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (1034, 8, -10)  -- population
 
+----
+
 INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (1040, 1030, -10) -- Hütte Holmium	-> - Erz Holmium
-INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (1040, 1040, 2) -- Hütte Holmium	-> - Erz Holmium	
+INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (1040, 1040, 10) -- Hütte Holmium	-> - Erz Holmium	
 INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (1040, 6,   -15)  -- energy
 
 INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (1041, 1031, -10) -- Hütte Terbium	-> - Erz Terbium
-INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (1041, 1041, 2)	-- Hütte Terbium	-> +  Terbium	
+INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (1041, 1041, 10)	-- Hütte Terbium	-> +  Terbium	
 INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (1041, 6,   -15)  -- energy
 
-
---
-
 INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (1042, 1032, -10) -- Hütte Scandium	-> - Erz Scandium
-INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (1042, 1042, 2)	-- Hütte Scandium	-> +  Scandium	
+INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (1042, 1042, 10)	-- Hütte Scandium	-> +  Scandium	
 INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (1042, 6,   -15)  -- energy
 
 INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (1043, 1033, -10) -- Hütte Yttrium	-> - Erz Yttrium
-INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (1043, 1043, 2)	-- Hütte Yttrium	-> +  Yttrium	
+INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (1043, 1043, 10)	-- Hütte Yttrium	-> +  Yttrium	
 INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (1043, 6,   -15)  -- energy
 
 INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (1044, 1034, -10) -- Hütte Lutetium	-> - Erz Lutetium
-INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (1044, 1044, 2)	-- Hütte Lutetium	-> +  Lutetium	
+INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (1044, 1044, 10)	-- Hütte Lutetium	-> +  Lutetium	
 INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (1044, 6,   -15)  -- energy
 
 
@@ -1189,7 +1214,7 @@ INSERT [dbo].[BuildingCosts] ([buildingId], [goodsId], [amount]) VALUES (1044, 7
 
 
 
-/****** Object:  Table [dbo].[ModulesGain]    Script Date: 12/06/2013 21:56:05 ******/
+/****** Object:  Table [dbo].[ShipHulls]    Script Date: 12/06/2013 21:56:05 ******/
 
 INSERT [dbo].[ShipHulls] ([id], [isStarBase], [typename], [labelName], [objectId], [modulesCount], [templateImageUrl], [label]) VALUES (0, 0, N'Debris', 0, 440, 5, N'', 60)
 INSERT [dbo].[ShipHulls] ([id], [isStarBase], [typename], [labelName], [objectId], [modulesCount], [templateImageUrl], [label]) VALUES (1, 0, N'Scout', 0, 410, 5, N'ScoutHull.png', 55)
@@ -1587,6 +1612,14 @@ select 1, 3002	, 1, 3003 union all  --Administration II
 select 1, 3003	, 1, 3004 union all  --Administration III
 select 1, 3004	, 1, 3005 union all  --Administration IIII
 select 1, 3005	, 1, 3006 --Administration IIIII
+
+INSERT into [dbo].[ResearchQuestPrerequisites] 
+([SourceType], [SourceId], [TargetType], [TargetId]) 
+select 1, 1		, 1, 4002 union all  --Fleet Command  I
+select 1, 4002	, 1, 4003 union all  --Fleet Command  II
+select 1, 4003	, 1, 4004 union all  --Fleet Command  III
+select 1, 4004	, 1, 4005 union all  --Fleet Command  IV
+select 1, 4005	, 1, 4006 --Fleet Command  V
 
 
 

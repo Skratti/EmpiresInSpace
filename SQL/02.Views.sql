@@ -1057,26 +1057,25 @@ IF EXISTS(SELECT 1
   END 
 
 go 
-
+--select * from [engine].[v_Ships] 
 CREATE VIEW [engine].[v_Ships] 
 AS 
   SELECT id, 
          userid, 
          NAME, 
-         position.STX as posX, 
-		 position.STY as posY,
+         spaceX as posX, 
+		 spaceY as posY,
          systemx, 
          systemy, 
          hitpoints, 
          attack, 
-         verteidigung, 
+         defense, 
          scanrange, 
          max_hyper, 
          max_impuls, 
-         rest_hyper, 
-         rest_impuls, 
+         hyper, 
+         impuls, 
          colonizer, 
-         heimat, 
          hullid, 
          systemid, 
          templateid, 

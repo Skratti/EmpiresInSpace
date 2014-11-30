@@ -431,7 +431,7 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (345, N' L
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (346, N'Lost a colony: ', N'', 7)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (347, N'Lost a colony to an attacker...', N'', 7)
 
-INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (348, N'Research tree', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (348, N'Research', N'', 7)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (349, N'Activate and deactivate buildings', N'', 7)
 
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (350, N'Adv. building material', N'', 6)
@@ -686,7 +686,31 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (550, N'De
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (551, N'Costs', N'', 3)  --Spaceyard
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (552, N'Build it', N'', 3)  --Spaceyard
 
---delete from [LabelsBase] where id = 434
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (553, N'Fleet Command I', N'', 1)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (554, N'Fleet Command II', N'', 1)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (555, N'Fleet Command III', N'', 1)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (556, N'Fleet Command IV', N'', 1)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (557, N'Fleet Command V', N'', 1)
+
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (558, N'Increasing the efficiency of the Fleet Command allows more ships to be managed', N'', 1)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (559, N'Better Fleet Command allow the management of more ships', N'', 1)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (560, N'Further improvements in Fleet Command ', N'', 1)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (561, N'Even further improvements in Fleet Command', N'', 1)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (562, N'Fleet Command V - you can''t get better at commanding fleets', N'', 1)
+
+
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (563, N'Fleet Upkeep ', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (564, N' of ', N'', 7)
+
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (565, N' + 50 fleet command points<br> -10% productivity', N'', 1)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (566, N' + 100 fleet command points<br> -12% productivity', N'', 1)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (567, N' + 150 fleet command points<br> -15% productivity', N'', 1)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (568, N' + 200 fleet command points<br> -19% productivity', N'', 1)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (569, N' + 250 fleet command points<br> -24% productivity', N'', 1)
+
+--delete from [LabelsBase] where id > 564
+--delete from [LabelsBase] where id = 348
+--INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (348, N'Research', N'', 7)
 -- update [dbo].[LabelsBase] set value = N' was destroyed by the ' where id = 397
 
 

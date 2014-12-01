@@ -868,7 +868,7 @@ INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1115, 104
 
 
 /****** Object:  Table [dbo].[Buildings]    Script Date: 12/06/2013 21:56:05 ******/
-INSERT [dbo].[Buildings] ([id], [name], [objectId], [BuildingScript], [isBuildable], [visibilityNeedsGoods], [groupId], [label], prodQueueLevel, housing) VALUES (1, N'Koloniezentrale', 470, NULL, 0, 0, 1, 43, 0, 100)
+INSERT [dbo].[Buildings] ([id], [name], [objectId], [BuildingScript], [isBuildable], [visibilityNeedsGoods], [groupId], [label], prodQueueLevel, housing) VALUES (1, N'Koloniezentrale', 470, NULL, 0, 0, 1, 43, 0, 120)
 INSERT [dbo].[Buildings] ([id], [name], [objectId], [BuildingScript], [isBuildable], [visibilityNeedsGoods], [groupId], [label], prodQueueLevel) VALUES (2, N'Mine', 152, NULL, 1, 0, 1, 44, 2)
 INSERT [dbo].[Buildings] ([id], [name], [objectId], [BuildingScript], [isBuildable], [visibilityNeedsGoods], [groupId], [label], prodQueueLevel) VALUES (3, N'Farm', 153, NULL, 1, 0, 1, 45, 2)
 INSERT [dbo].[Buildings] ([id], [name], [objectId], [BuildingScript], [isBuildable], [visibilityNeedsGoods], [groupId], [label], prodQueueLevel ,oncePerColony) VALUES (4, N'Raumhafen', 154, N'SpaceportB.js', 1, 0, 1, 119,1 , 1)
@@ -998,7 +998,7 @@ INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (6, 50)
 /****** Object:  Table [dbo].[BuildingProductions]    Script Date: 12/06/2013 21:56:05 ******/
 --sets which goods are consumed and produced by active buildings
 INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (1, 1, 5) -- ColonyCenter -> building material
-INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (1, 2, 10) -- food
+INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (1, 2, 12) -- food
 INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (1, 6, 10) -- energy
 INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (1, 7, 10)  --assemby points
 
@@ -1235,8 +1235,8 @@ INSERT into [dbo].[ShipHullsImages]([id],[shipHullId], objectId , templateImageI
 select 0, 0 , 440 , 501 , 0 , 0 union all --Debris
 select 1, 1 , 411 , 511 , 0 , 0 union all  --Scout 3
 select 2, 1 , 450 , 550 ,50 ,10 union all  --defense satellit
-select 3, 2 , 402 , 512 , 0 , 0 union all  --Corvette
-select 4, 3 , 403 , 513 , 0 , 0 union all  -- fregatte
+select 3, 2 , 402 , 512 , 0 , -40 union all  --Corvette
+select 4, 3 , 403 , 513 , 23 , 0 union all  -- fregatte
 select 5, 4 , 404 , 501 , 0 , 0 union all   -- destroyer
 select 6, 5 , 405 , 501 , 0 , 0 union all
 select 7, 6 , 406 , 501 , 0 , 0 union all
@@ -1290,6 +1290,8 @@ INSERT [dbo].[ShipHullsModulePositions] ([shipHullId], [posX], [posY]) VALUES (4
 INSERT [dbo].[ShipHullsModulePositions] ([shipHullId], [posX], [posY]) VALUES (4, 4, 3)
 
 /****** Object:  Table [dbo].[ShipHullsGain]    Script Date: 12/06/2013 21:56:05 ******/ --delete from [ShipHullsGain]
+-- delete from [ShipHullsGain]
+/*
 INSERT [dbo].[ShipHullsGain] ([shipHullId], [crew], [energy], [hitpoints], [damagereduction], [damageoutput], [cargoroom], [fuelroom], [inSpaceSpeed], [inSystemSpeed], [maxSpaceMoves], [maxSystemMoves], [special], [scanRange]) VALUES (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
 INSERT [dbo].[ShipHullsGain] ([shipHullId], [crew], [energy], [hitpoints], [damagereduction], [damageoutput], [cargoroom], [fuelroom], [inSpaceSpeed], [inSystemSpeed], [maxSpaceMoves], [maxSystemMoves], [special], [scanRange]) VALUES (1, 2, -1, 100, 0, 0, 20, 80, 0, 0, 0, 0, 0, 2)
 INSERT [dbo].[ShipHullsGain] ([shipHullId], [crew], [energy], [hitpoints], [damagereduction], [damageoutput], [cargoroom], [fuelroom], [inSpaceSpeed], [inSystemSpeed], [maxSpaceMoves], [maxSystemMoves], [special], [scanRange]) VALUES (2, 3, -3, 150, 0, 0, 20, 20, 0, 0, 0, 0, 0, 1)
@@ -1302,6 +1304,32 @@ INSERT [dbo].[ShipHullsGain] ([shipHullId], [crew], [energy], [hitpoints], [dama
 INSERT [dbo].[ShipHullsGain] ([shipHullId], [crew], [energy], [hitpoints], [damagereduction], [damageoutput], [cargoroom], [fuelroom], [inSpaceSpeed], [inSystemSpeed], [maxSpaceMoves], [maxSystemMoves], [special], [scanRange]) VALUES (200, -1, -2, 300, 0, 0, 100, 100, 0, 20, 0, 0, 0, 1)
 INSERT [dbo].[ShipHullsGain] ([shipHullId], [crew], [energy], [hitpoints], [damagereduction], [damageoutput], [cargoroom], [fuelroom], [inSpaceSpeed], [inSystemSpeed], [maxSpaceMoves], [maxSystemMoves], [special], [scanRange]) VALUES (201, -1, -2, 600, 0, 0, 200, 200, 4, 0, 0, 0, 0, 1)
 INSERT [dbo].[ShipHullsGain] ([shipHullId], [crew], [energy], [hitpoints], [damagereduction], [damageoutput], [cargoroom], [fuelroom], [inSpaceSpeed], [inSystemSpeed], [maxSpaceMoves], [maxSystemMoves], [special], [scanRange]) VALUES (202, 0, -1, 1000, 0, 0, 400, 400, 0, 0, 10, 100, 0, 1)
+*/
+insert [dbo].[ShipHullsGain] ([shipHullId], [crew], [energy], [hitpoints], [damagereduction], [damageoutput], [cargoroom], [fuelroom], [inSpaceSpeed], [inSystemSpeed], [maxSpaceMoves], [maxSystemMoves], [special], [scanRange]	, [speedFactor])
+select									0,		0,		0,				0,				0,				0,				0,			0,				0,			 0,					0,				0,			0,				0 	,			1	union all
+select 1, 2, -1, 100, 0, 0, 20, 80, 0, 0, 0, 0, 0, 2 ,			1.0 union all
+select 2, 3, -3, 150, 0, 0, 20, 20, 0, 0, 0, 0, 0, 1 ,			0.8 union all
+select 3, -1, -5, 200, 0, 0, 80, 60, 0, 0, 0, 0, 0, 1 ,			0.7 union all
+select 4, -2, -7, 250, 5, 0, 100, 60, 0, 0, 0, 0, 0, 1 ,			0.6 union all
+select 5, -3, -9, 300, 0, 10, 150, 60, 0, 0, 0, 0, 0, 1 ,			0.5 union all
+select 6, -10, -11, 350, 0, 10, 200, 50, 0, 0, 0, 0, 0, 0 ,			0.4 union all
+select 7, -15, -18, 450, 0, 10, 200, 50, 0, 0, 0, 0, 0, 0 ,			0.3 union all
+select 8, -20, -25, 600, 0, 0, 240, 50, 0, 0, 0, 0, 0, 0 ,			0.2 union all
+select 200, -1, -2, 300, 0, 0, 100, 100, 0, 20, 0, 0, 0, 1 ,			0.0 union all
+select 201, -1, -2, 600, 0, 0, 200, 200, 4, 0, 0, 0, 0, 1 ,			0.0 union all
+select 202, 0, -1, 1000, 0, 0, 400, 400, 0, 0, 10, 100, 0, 1 , 0.0
+
+
+
+
+
+
+
+
+
+
+
+
 /****** Object:  Table [dbo].[ShipHullsCosts]    Script Date: 12/06/2013 21:56:05 ******/
 
 
@@ -1649,7 +1677,7 @@ INSERT [dbo].[ShipTemplate] ([id], [userId], [shipHullId], [name], [gif], [energ
 VALUES (1, 0, 1, N'Scout', N'scout.png', 6, 10, 2, 
 0, 0, 100, 0, 
 20, 80, 
-20, 5, 100, 15, 
+20, 5, 100, 25, 
 0, 1, 1, 0, 0)
 
 --2 Blueprint Defense satellite

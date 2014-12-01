@@ -1189,7 +1189,11 @@ CREATE TABLE [dbo].[ShipHullsModulePositions]  (
 );
 print 'table [ShipHullsModulePositions] created.'
 
----- alter table [ShipHullsGain] add  [population] bigint default 0
+---- alter table [ShipHullsGain] add  [speedFactor] decimal not null default 1
+/*
+alter table [ShipHullsGain] 
+alter column speedFactor Decimal(4,2) NOT NULL 
+*/
 CREATE TABLE  [dbo].[ShipHullsGain]
 (
 	shipHullId TINYINT NOT NULL
@@ -1201,13 +1205,14 @@ CREATE TABLE  [dbo].[ShipHullsGain]
 	damageoutput SMALLINT not null default 0, 
 	cargoroom SMALLINT not null default 0,
 	fuelroom SMALLINT not null default 0,
-	inSpaceSpeed SMALLINT not null default 0,-- (moves oper turn), 
-	inSystemSpeed SMALLINT not null default 0,-- (moves oper turn), 
+	inSpaceSpeed SMALLINT not null default 0,-- (moves per turn), 
+	inSystemSpeed SMALLINT not null default 0,-- (moves per turn), 
 	maxSpaceMoves SMALLINT not null default 0,
 	maxSystemMoves SMALLINT not null default 0,
 	special int not null default 0,	--Special like Colonization, asteroid mining	
 	scanRange smallint not null default 0,
-	[population] bigint default 0
+	[population] bigint default 0,
+	speedFactor	decimal(4,2) not null default 1
 );
 go
 create clustered index SHipHullsGain_prim ON [ShipHullsGain](shipHullId);
@@ -1261,6 +1266,10 @@ go
 
 -- alter table [ShipTemplate] add  [population] bigint default 0
 -- alter table [ShipTemplate] add  shipHullsImage int not null default 1 references	[dbo].ShipHullsImages (id) on update NO ACTION on delete NO ACTION
+/*
+alter table [ShipTemplate] 
+alter column systemMovesPerTurn Decimal(8,5) NOT NULL 
+*/
 create TABLE [dbo].[ShipTemplate]  (
 	id int identity (1,1) ,
 	userId int not null 
@@ -1285,11 +1294,11 @@ create TABLE [dbo].[ShipTemplate]  (
     cargoroom SMALLINT  default 0,
 	fuelroom SMALLINT  default 0,
 	
-    systemMovesPerTurn int,
-    galaxyMovesPerTurn int,
+    systemMovesPerTurn Decimal(8,5),
+    galaxyMovesPerTurn Decimal(8,5),
 
-    systemMovesMax int,
-    galaxyMovesMax int,
+    systemMovesMax Decimal(8,5),
+    galaxyMovesMax Decimal(8,5),
 
     isColonizer int,
     [population] bigint default 0,

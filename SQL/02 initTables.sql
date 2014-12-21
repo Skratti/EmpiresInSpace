@@ -2,6 +2,7 @@ SET QUOTED_IDENTIFIER ON
 go
 
 
+
 /* USER GENERATED DATA: */
 drop function [dbo].[getLabel];
 drop view TradeOffersWithUsers
@@ -132,6 +133,7 @@ drop table gameNewTurnLog;
 drop table gameNewTurns;
 drop table game;
 drop table [dbo].[defaultMap]
+drop table [dbo].[Log]
 print 'tables dropped'
 go
 drop function [dbo].[randomFunc]
@@ -146,6 +148,20 @@ end
 GO
 
 
+
+-- drop table [Log]
+create TABLE [dbo].[Log]  (
+	
+	logText nvarchar(max) NOT NULL,
+	comment nvarchar(200) NOT NULL default '',
+	module int not null default 0,
+	logDateTime datetime NOT NULL CONSTRAINT DF_Log_CreateDate_GETDATE DEFAULT GETDATE()
+);
+go
+-- 
+
+
+go
 -- default map for planet surface
 CREATE TABLE [dbo].[defaultMap](
 	[X] [int] NULL,
@@ -281,7 +297,6 @@ go
 create UNIQUE clustered index UserRelations_Cluster ON [UserRelations](relationId);
 go
 
-
 CREATE TABLE [dbo].[Users]			  (
 	[id] int not null UNIQUE check ( id > -1 ),		
 	username nvarchar(63) DEFAULT '' NOT NULL,
@@ -315,7 +330,13 @@ CREATE TABLE [dbo].[Users]			  (
 	industrieRatio decimal(3,2) not null default 1,
 	foodRatio decimal(3,2) not null default 1,
 	versionId bigint not null default 0, 
-	-- alter table [Users] add versionId bigint not null default 0
+	popVicPoints  int not null default 0,
+	researchVicPoints  int not null default 0,
+	goodsVicPoints  int not null default 0,
+	shipVicPoints  int not null default 0,
+	overallVicPoints  int not null default 0,
+	overallRank	int not null default 1000,
+	-- alter table [Users] add overallRank	int not null default 1000
 	--researchSpent int not null default 0,  -- redundant, can be calculated by summing all researches of that user
 	constraint Users_primary primary key nonclustered (id)
 );
@@ -331,6 +352,11 @@ CREATE   TABLE [dbo].[Alliances]			  (
 	[description] nvarchar(4000) DEFAULT '',
 	passwrd	nvarchar(63)  NOT NULL DEFAULT '',		
 	allianceOwner int references [dbo].[Users] (id) on update cascade on delete SET Default,		
+	overallVicPoints  int not null default 0,
+	overallRank	int not null default 1000,
+	-- alter table [Alliances] add overallVicPoints	int not null default 0
+	--researchSpent int not null default 0,  -- redundant, can be calculated by summing all researches of that user
+
 	constraint Alliances_primary primary key nonclustered (id)
 );
 print 'table [Alliances] created.'

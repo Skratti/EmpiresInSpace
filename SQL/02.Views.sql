@@ -46,7 +46,7 @@ AS
          objectid, 
          modulescount, 
          templateimageurl, 
-         label 
+         label 		
   FROM   [shiphulls]; 
 
 go 
@@ -373,7 +373,12 @@ AS
          showcolonyowner, 
          showshipnames, 
          showshipowners, 
-         showcolonyowners 
+         showcolonyowners,
+		 popVicPoints  ,
+		 researchVicPoints,
+		 goodsVicPoints ,
+	     shipVicPoints ,
+		 overallVicPoints 
   FROM   [users]; 
 
 go 
@@ -404,7 +409,8 @@ AS
          maxsystemmoves, 
          special, 
          scanrange, 
-         [population] 
+         [population] ,
+		 speedFactor
   FROM   [shiphullsgain]; 
 
 go 
@@ -696,6 +702,7 @@ AS
          industrie, 
          food, 
          colonycount, 
+		 fleetCount,
          objectid 
   FROM   [researchgain]; 
 
@@ -1494,6 +1501,7 @@ go
 CREATE VIEW [engine].[v_ObjectDescription] 
 AS 
   SELECT id,  
+		 name,
          objectimageurl, 
          movecost, 
          damage, 

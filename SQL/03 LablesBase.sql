@@ -720,6 +720,22 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (574, N'Dr
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (575, N'Then travel to the next spacestation:', N'', 2)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (576, N'at the coordinates: ', N'', 2)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (577, N'Press r to see a raster an c for coordinates, or activate raster and coordinates in your user settings.', N'', 2)
+
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (578, N'Transfer & Close', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (579, N'Transfer', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (580, N'Show active unit', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (581, N'Show all units', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (582, N'Show only own units', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (583, N'Show only foreign units', N'', 7)
+
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (584, N'Star base', N'', 1)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (585, N'Outpost', N'', 1)
+
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (586, N'Outpost hull', N'', 1)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (587, N'Space station hull', N'', 1)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (588, N'Star base hull', N'', 1)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (589, N'Star fortress hull', N'', 1)
+
 /*
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (403, N'<p>Drag the scout to the outside of your solar system. This will let him leave the system and switch the map to the starmap.<br> Find one of the neutral space stations. The next one will be at ', N'', 2)--<p> Erkunde deine Umgebung und treffe deine Nachbarn.<br> Finde eine neutrale Raumstation. Die nächste ist bei 
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (404, N'.<br>Press r to see a raster an c for coordinates, or activate raster and coordinates in your user settings.<br> The neutral space station works as a communication node and as trade station - as soon as you arrive there you may contact all other players that visited the station.</p>', N'', 2)--.<br> Drücke r für ein Raster und c für Koordinatenangaben oder aktiviere das Raster oder die Koordinaten in den Einstellungen.<br> Die neutrale Raumstation dient als Kommunikationszentrale und Handelszentrum - sobald du dort ankommst kannst du alle Siedler anschreiben die diese Station schon besucht haben.</p>

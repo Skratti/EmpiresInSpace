@@ -1376,7 +1376,8 @@ Schiffsliste
 herkunft ist doppelt belegt (und nicht hier drin). einmal für den Sektorein- bzw. ausflug, zum anderen bei der Schiffserstellung :(
 
 alter table [Ships] 
-alter column impuls Decimal(8,5) NOT NULL 
+add shipHullsImage int not null default 1 
+		references	[dbo].ShipHullsImages (id) on update no action on delete no action
 
 --------------------------------------------------- */ 
 CREATE TABLE [dbo].[Ships]  (
@@ -1384,23 +1385,34 @@ CREATE TABLE [dbo].[Ships]  (
 	userId int NOT NULL,  --delete user will also result in delete template, this will delete this schip
 	--	references [dbo].[Users](id) on update cascade on delete cascade,	
 	[name] nvarchar(63) DEFAULT 'Noname' NOT NULL,
-	systemX TINYINT,
-	systemY TINYINT,
-	spaceX  INT not null DEFAULT 0,
-	spaceY  INT not null DEFAULT 0,
-	hitpoints SMALLINT DEFAULT 100 NOT NULL,
-	damageReduction tinyInt not null default 0,
+	
+
+	--equivalent to ship template:
+	energy int  default 5, -- will change dynamically during template-design
+	crew int default 5,	
+	scanRange TINYINT DEFAULT '3' NOT NULL,
 	attack SMALLINT DEFAULT '2' NOT NULL,
 	defense SMALLINT DEFAULT '1' NOT NULL,
-	scanRange TINYINT DEFAULT '3' NOT NULL,
+	hitpoints SMALLINT DEFAULT 100 NOT NULL,
+	damageReduction tinyInt not null default 0,
+	cargoroom SMALLINT  default 0,
+	fuelroom SMALLINT  default 0,		
 	max_hyper Decimal(8,5) NOT NULL DEFAULT 16,
 	max_impuls Decimal(8,5) NOT NULL DEFAULT 48,
 	hyper Decimal(8,5) NOT NULL DEFAULT 4,
 	impuls Decimal(8,5) NOT NULL DEFAULT 12,
+
 	colonizer BIT NOT NULL DEFAULT 0,
---	heimat BIT DEFAULT 0,
+	[population] bigint default 0,    
+	shipHullsImage int not null default 1 
+		references	[dbo].ShipHullsImages (id) on update no action on delete no action,
 	hullId TINYINT NOT NULL DEFAULT '1',
---		references bpHull(id) on update no action on delete no action,			
+--		references bpHull(id) on update no action on delete no action,	
+	
+	systemX TINYINT,
+	systemY TINYINT,
+	spaceX  INT not null DEFAULT 0,
+	spaceY  INT not null DEFAULT 0,
 	systemId INT DEFAULT Null
 		references [dbo].[StarMap](id) on update cascade on delete cascade,
 	templateId INT not null 

@@ -1090,7 +1090,13 @@ AS
          damagereduction,
 		 versionId,
          spaceX,
-		 spaceY
+		 spaceY,
+		 isNull([energy],0) as [energy]
+		  , isNull([crew],0) as [crew] 
+		  , isNull([cargoroom],0) as [cargoroom] 
+		  , isNull([fuelroom],0) as [fuelroom] 
+		  , isNull([population],0) as [population] 
+		  , isNull([shipHullsImage],0) as [shipHullsImage] 
   FROM   [ships]; 
 
 go 

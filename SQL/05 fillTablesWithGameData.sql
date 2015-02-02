@@ -137,6 +137,9 @@ INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [d
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (440, N'Debris', N'DummyDebris.png', 1, 0, 60)
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (450, N'Satellit', N'DefSat2.png', 1, 0, 61)
 
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (460, N'Transcendence Construct', N'TranscendenceConstruct60.png', 1, 0, 594)
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (461, N'Transcendence Builder', N'TranscendenceBuildert60.png', 1, 0, 595)
+
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (470, N'Colonizer', N'Colonizer2_60.png', 1, 0, 57)
 --big images for template designer
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (500, N'Kolonieschiff', N'ScoutHull.png', 1, 0, 54)
@@ -160,6 +163,10 @@ INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [d
 
 
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (550, N'Satellit', N'DefSat2B.png', 1, 0, 61)
+
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (560, N'Transcendence Construct', N'TranscendenceConstruct300.png', 1, 0, 594)
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (561, N'Transcendence Builder', N'TranscendenceBuildert300.png', 1, 0, 595)
+
 
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (1000, N'Energy', N'Energy.png', 1, 0, 62)
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (1001, N'BM', N'BM.png', 1, 0, 63)
@@ -470,6 +477,12 @@ select 4005, N'Fleet Command VI', N'1.gif', N''		, 2000	, 556		, 561				, 4				,
 select 4006, N'Fleet Command V', N'1.gif', N''		, 4000	, 557		, 562				, 4				, 5				, 6 
 
 
+--Transcendence
+INSERT into [dbo].[Research] 
+	  ([id], [name],						[objectimageUrl], [description]	, [cost], [label]	, [descriptionLabel], [researchType], [treeColumn]	, [treeRow]) 
+select 5000, N'Transcendence',				 N'1.gif'			, N''		, 1000	, 590		, 591				, 4				, 3				, 8 union all
+select 5001, N'Transcendence Collaboration', N'1.gif'			, N''		, 1000	, 592		, 593				, 4				, 4				, 8 
+
 
 SET IDENTITY_INSERT [dbo].[Research] OFF
 go
@@ -572,6 +585,8 @@ INSERT [dbo].[Goods] ([id], [name], [objectDescriptionId], [goodsType], [label])
 INSERT [dbo].[Goods] ([id], [name], [objectDescriptionId], [goodsType], [label]) VALUES (2501, N'Star base hull', 434, 2, 588)
 INSERT [dbo].[Goods] ([id], [name], [objectDescriptionId], [goodsType], [label]) VALUES (2502, N'Star fortress hull', 437, 2, 589)
 
+INSERT [dbo].[Goods] ([id], [name], [objectDescriptionId], [goodsType], [label]) VALUES (2520, N'Transcendence Construct', 460, 2, 594)
+
 INSERT [dbo].[Goods] ([id], [name], [objectDescriptionId], [goodsType], [label]) VALUES (2523, N'Colonizing Module II', 2013, 2, 351)
 go 
 --delete from Quests
@@ -641,11 +656,12 @@ select 523, 2, N'Colonizing Module II', 13, 2523, 88
 
 --space stations
 INSERT into [dbo].[Modules] 
-	([id], [level], [name],			[descriptionLabel], [goodsId],	[label]) 
+	([id], [level], [name],			[descriptionLabel], [goodsId],	[label])  
 select 499, 1,	N'Outpost hull',		1,					2499,		586 union all
 select 500, 2,	N'Space station hull',	1,					2500,		587 union all
 select 501, 3,	N'Star base hull',		1,					2501,		589 union all
-select 502, 4,	N'Star fortress hull',	1,					2502,		589;
+select 502, 4,	N'Star fortress hull',	1,					2502,		589 union all
+select 520, 4,	N'Transcendence Construct',	1,				2520,		594;
 --level 3
 
 --special ressource 1
@@ -714,8 +730,8 @@ INSERT into [dbo].[ModulesGain]
 select 499,			-9,		-4,	0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0 union all   --outpost
 select 500,			-30, -30,	0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0 union all  --
 select 501,			-100, -100, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0 union all   --
-select 502,			-300, -300, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0   --star fortress
-
+select 502,			-300, -300, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0 union all --star fortressu   --
+select 520,			-200, -200, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0
 
 /****** Object:  Table [dbo].[ModulesCosts]    Script Date: 12/06/2013 21:56:05 ******/
 /*
@@ -911,7 +927,14 @@ select			500,		7,		300		union all
 select			501,		1,		250		union all
 select			501,		7,		450		union all
 select			502,		1,		500		union all
-select			502,		7,		1000		
+select			502,		7,		1000	union all
+select			520,		1,		400		union all
+select			520,		7,		600		union all
+select			520,		1040,		100		union all
+select			520,		1041,		100		union all
+select			520,		1042,		100		union all
+select			520,		1043,		100		union all
+select			520,		1044,		100						
 
 
 
@@ -1268,7 +1291,7 @@ INSERT [dbo].[BuildingCosts] ([buildingId], [goodsId], [amount]) VALUES (1044, 7
 
 
 /****** Object:  Table [dbo].[ShipHulls]    Script Date: 12/06/2013 21:56:05 ******/
-
+--delete from   [ShipHulls] where id = 221
 INSERT [dbo].[ShipHulls] ([id], [isStarBase], [typename], [labelName], [objectId], [modulesCount], [templateImageUrl], [label]) VALUES (0, 0, N'Debris', 0, 440, 5, N'', 60)
 INSERT [dbo].[ShipHulls] ([id], [isStarBase], [typename], [labelName], [objectId], [modulesCount], [templateImageUrl], [label]) VALUES (1, 0, N'Scout', 0, 410, 5, N'ScoutHull.png', 55)
 INSERT [dbo].[ShipHulls] ([id], [isStarBase], [typename], [labelName], [objectId], [modulesCount], [templateImageUrl], [label]) VALUES (2, 0, N'Corvette', 0, 402, 5, N'401Template.gif', 100)
@@ -1282,6 +1305,8 @@ INSERT [dbo].[ShipHulls] ([id], [isStarBase], [typename], [labelName], [objectId
 INSERT [dbo].[ShipHulls] ([id], [isStarBase], [typename], [labelName], [objectId], [modulesCount], [templateImageUrl], [label]) VALUES (200, 1, N'Spacestation', 0, 431, 5, N'SpaceStation1_60.png', 59)
 INSERT [dbo].[ShipHulls] ([id], [isStarBase], [typename], [labelName], [objectId], [modulesCount], [templateImageUrl], [label]) VALUES (201, 1, N'Starbase', 0, 434, 5, N'401Template.gif', 126)
 INSERT [dbo].[ShipHulls] ([id], [isStarBase], [typename], [labelName], [objectId], [modulesCount], [templateImageUrl], [label]) VALUES (202, 1, N'Star Fortress', 0, 437, 5, N'401Template.gif', 127)
+INSERT [dbo].[ShipHulls] ([id], [isStarBase], [typename], [labelName], [objectId], [modulesCount], [templateImageUrl], [label]) VALUES (220, 1, N'Transcendence  Construct', 0, 460, 0, N'401Template.gif', 594)
+INSERT [dbo].[ShipHulls] ([id], [isStarBase], [typename], [labelName], [objectId], [modulesCount], [templateImageUrl], [label]) VALUES (221, 0, N'Transcendence  Builder', 0, 461, 0, N'401Template.gif', 595)
 
 --truncate table [ShipHullsImages]
 INSERT into [dbo].[ShipHullsImages]
@@ -1300,9 +1325,9 @@ select 10,	  200 ,			431 ,			 531 ,					  73 ,						0 union all
 select 11,    201 ,			434 ,			 534 ,					   0 ,						0 union all
 select 12,    202 ,			437 ,			 537 ,					   0 ,						0 union all
 select 13,      1 ,			410 ,			 510 ,					   0 ,						0 union all		-- Scout 2
-select 14,    199 ,			430 ,			 530 ,					  49 ,						6  --spacestation 0 Outpost
-
-
+select 14,    199 ,			430 ,			 530 ,					  49 ,						6 union all --spacestation 0 Outpost
+select 15,    220 ,			460 ,			 560 ,					  0 ,						0 union all
+select 16,    221 ,			461 ,			 561 ,					  0 ,						0
 --scout 5 
 INSERT [dbo].[ShipHullsModulePositions] ([shipHullId], [posX], [posY]) VALUES (1, 1, 3)
 INSERT [dbo].[ShipHullsModulePositions] ([shipHullId], [posX], [posY]) VALUES (1, 2, 2)
@@ -1395,7 +1420,7 @@ select		199	,	3,		3
 
 
 /****** Object:  Table [dbo].[ShipHullsGain]    Script Date: 12/06/2013 21:56:05 ******/ --delete from [ShipHullsGain]
--- delete from [ShipHullsGain]
+-- delete from [ShipHullsGain] where [shipHullId] > 219
 /*
 INSERT [dbo].[ShipHullsGain] ([shipHullId], [crew], [energy], [hitpoints], [damagereduction], [damageoutput], [cargoroom], [fuelroom], [inSpaceSpeed], [inSystemSpeed], [maxSpaceMoves], [maxSystemMoves], [special], [scanRange]) VALUES (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
 INSERT [dbo].[ShipHullsGain] ([shipHullId], [crew], [energy], [hitpoints], [damagereduction], [damageoutput], [cargoroom], [fuelroom], [inSpaceSpeed], [inSystemSpeed], [maxSpaceMoves], [maxSystemMoves], [special], [scanRange]) VALUES (1, 2, -1, 100, 0, 0, 20, 80, 0, 0, 0, 0, 0, 2)
@@ -1424,7 +1449,9 @@ select		8,		-20,	-25,		600,				0,				0,				240,		50,				0,				0,				0,				0,			0
 select		199,	3,		4,			200,				0,				0,				100,		100,			0,				0,				0,				0,			0,				1 ,			0.0		union all  
 select		200,	5,		6,			400,				0,				0,				100,		100,			0,				0,				0,				0,			0,				1 ,			0.0		union all
 select		201,	8,		10,			550,				0,				0,				200,		200,			0,				0,				0,				0,			0,				1 ,			0.0		union all
-select		202,	13,		16,			800,				0,				0,				400,		400,			0,				0,				0,				0,			0,				1 ,			0.0
+select		202,	13,		16,			800,				0,				0,				400,		400,			0,				0,				0,				0,			0,				1 ,			0.0     union all
+select		220,	1,		100,		3000,				0,				50,				0,			0,				0,				0,				0,				0,			0,				1 ,			0.0     union all
+select		221,	1,		10,			100,				0,				5,				0,			0,				5,				5,				0,				0,			0,				0 ,			1.0
 
 
 
@@ -1465,6 +1492,40 @@ select		7,			7,		1200	union all
 
 select		8,			1,		900		union all -- super battleship : 30 BM, 50 PP, 
 select		8,			7,		1800
+
+--Transcendence Construct:
+
+INSERT [dbo].[ShipHullsCosts] 
+		([shipHullId],	[goodsId], [amount]) 
+select			220,		1,		900		union all
+select			220,		7,		1500		union all
+select			220,		10,		300		union all  --Steel
+select			220,		50,		400		union all --Adv. Building Materials
+select			220,		1040,		100		union all
+select			220,		1041,		100		union all
+select			220,		1042,		100		union all
+select			220,		1043,		100		union all
+select			220,		1044,		100		
+
+
+
+--Transcendence Builder
+INSERT [dbo].[ShipHullsCosts] 
+([shipHullId],	[goodsId], [amount]) 
+select		221,			1,		100		union all -- 30 BM, 50 PP, 
+select		221,			7,		1000	union all --Assembly
+select		221,			10,		100		union all  --Steel
+select		221,			50,		100		union all --Adv. Building Materials
+select		221,			1040,	20    union all --Specials
+select		221,			1041,	20    union all
+select		221,			1042,	20    union all
+select		221,			1043,	20    union all
+select		221,			1044,	20    
+
+
+
+
+
 
 /*
 INSERT [dbo].[ShipHullsCosts] ([shipHullId], [goodsId], [amount]) VALUES (4, 1, 400)
@@ -1809,7 +1870,18 @@ select 1, 4003	, 1, 4004 union all  --Fleet Command  III
 select 1, 4004	, 1, 4005 union all  --Fleet Command  IV
 select 1, 4005	, 1, 4006 --Fleet Command  V
 
-
+--Special ressources  1020 -> 5000 Transcendence
+INSERT into [dbo].[ResearchQuestPrerequisites] 
+([SourceType], [SourceId], [TargetType], [TargetId]) 
+select 1, 1020		, 1, 5000 union all  
+select 1, 1021	, 1, 5000 union all  
+select 1, 1022	, 1, 5000 union all  --
+select 1, 1023	, 1, 5000 union all  --
+select 1, 1024	, 1, 5000 union all  --
+select 1, 5000		, 1, 5001  union all  -- Transcendence Construct -> Transcendence Collaboration
+select 1, 5000		, 5, 220  union all  -- Trans Construct
+select 1, 5000		, 5, 221  union all  -- Trans Collab
+select 1, 5000		, 4, 520   -- Trans Construct Module
 
 ----------------------------------------------------------------------------------
 --  Ship Templates

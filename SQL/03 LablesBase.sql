@@ -735,7 +735,12 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (586, N'Ou
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (587, N'Space station hull', N'', 1)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (588, N'Star base hull', N'', 1)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (589, N'Star fortress hull', N'', 1)
-
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (590, N'Transcendence', N'', 1)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (591, N'Allows building of the Transcendence Construct, which will trigger galaxy wide ascension upon completion. Research of all special ressources is needed to enable this technology', N'', 1)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (592, N'Transcendence Collaboration', N'', 1)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (593, N'Transcendence Collaboration allows participating in the Transcendence Projects of others, provided that access to the construct was being granted', N'', 1)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (594, N'Transcendence Construct', N'', 1)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (595, N'Transcendence Builder', N'', 1)
 /*
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (403, N'<p>Drag the scout to the outside of your solar system. This will let him leave the system and switch the map to the starmap.<br> Find one of the neutral space stations. The next one will be at ', N'', 2)--<p> Erkunde deine Umgebung und treffe deine Nachbarn.<br> Finde eine neutrale Raumstation. Die nächste ist bei 
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (404, N'.<br>Press r to see a raster an c for coordinates, or activate raster and coordinates in your user settings.<br> The neutral space station works as a communication node and as trade station - as soon as you arrive there you may contact all other players that visited the station.</p>', N'', 2)--.<br> Drücke r für ein Raster und c für Koordinatenangaben oder aktiviere das Raster oder die Koordinaten in den Einstellungen.<br> Die neutrale Raumstation dient als Kommunikationszentrale und Handelszentrum - sobald du dort ankommst kannst du alle Siedler anschreiben die diese Station schon besucht haben.</p>

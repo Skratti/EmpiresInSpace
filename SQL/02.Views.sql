@@ -10,6 +10,25 @@ go
 
 IF EXISTS(SELECT 1 
           FROM   sys.objects 
+          WHERE  NAME = N'v_game' 
+                 AND type = N'V') 
+  BEGIN 
+      DROP VIEW engine.v_game 
+  END 
+
+go
+
+CREATE VIEW [engine].v_game 
+AS 
+  SELECT name, 
+         colonyCount         
+  FROM   game; 
+
+
+go 
+
+IF EXISTS(SELECT 1 
+          FROM   sys.objects 
           WHERE  NAME = N'v_gameNewTurns' 
                  AND type = N'V') 
   BEGIN 
@@ -1089,6 +1108,8 @@ AS
          objectid, 
          damagereduction,
 		 versionId,
+		 shipStockVersionId,
+		 shipModulesVersionId,
          spaceX,
 		 spaceY,
 		 isNull([energy],0) as [energy]
@@ -1097,9 +1118,50 @@ AS
 		  , isNull([fuelroom],0) as [fuelroom] 
 		  , isNull([population],0) as [population] 
 		  , isNull([shipHullsImage],0) as [shipHullsImage] 
+		  , refitCounter
   FROM   [ships]; 
 
 go 
+
+IF EXISTS(SELECT 1 
+          FROM   sys.objects 
+          WHERE  NAME = N'v_ShipTranscension' 
+                 AND type = N'V') 
+  BEGIN 
+      DROP VIEW [engine].[v_ShipTranscension]
+  END 
+
+go 
+--select * from [engine].[v_Ships] 
+CREATE VIEW [engine].[v_ShipTranscension] 
+AS 
+  SELECT [shipId]
+      ,[helperMinimumRelation]
+      ,[constructionDate]
+      ,[ressourceCount]
+  FROM   [ShipTranscension]; 
+
+go 
+
+IF EXISTS(SELECT 1 
+          FROM   sys.objects 
+          WHERE  NAME = N'v_ShipRefit' 
+                 AND type = N'V') 
+  BEGIN 
+      DROP VIEW [engine].[v_ShipRefit] 
+  END 
+
+go 
+
+ CREATE VIEW [engine].[v_ShipRefit] 
+ AS 
+ SELECT 
+	shipId,
+	refitCounter
+FROM [ShipRefit]
+
+go 
+
 
 
 IF EXISTS(SELECT 1 
@@ -1119,8 +1181,6 @@ go
 	moveCounter,
 	moveDirection 
 FROM [ShipsDirection]
-
-
 
 go 
 
@@ -1259,7 +1319,8 @@ AS
          galaxyname, 
          objectid, 
          size, 
-         isdemo 
+         isdemo ,
+		 colonyCount
   FROM   [galaxymap]; 
 
 go 

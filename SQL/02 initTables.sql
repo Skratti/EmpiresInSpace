@@ -25,6 +25,7 @@ drop table [dbo].[Colonies]				-- Kolonien
 drop table [dbo].[shipStock]
 drop table [ShipsDirection]
 drop table [dbo].[shipModules]
+drop table [dbo].[ShipRefit]
 drop table [dbo].[Ships]
 
 drop table [ShipTemplateModulePositions]
@@ -172,9 +173,10 @@ GO
 create unique clustered index [defaultMap_index] ON [defaultMap]([X],[Y],[surfaceObjectId]);
 go
 
-
+--alter table [game] add colonyCount int not null default 0
 CREATE TABLE [dbo].[game]			  (
-	name nvarchar(63) NOT NULL	
+	name nvarchar(63) NOT NULL,
+	colonyCount int not null default 0
 );
 print 'table [game] created.'
 go
@@ -884,6 +886,7 @@ go
 	crew, energy, hitpoints, damagereduction, damageoutput, cargoroom, speed (moves oper turn), maxMoves, both in System and inSpace
 	Special like Colonization, asteroid mining
 	alter  TABLE  [dbo].[ModulesGain] add [population] bigint not null default 0
+	alter  TABLE  [dbo].[ModulesGain] alter column [scanRange] tinyInt DEFAULT 0 NOT NULL
 */
 CREATE TABLE  [dbo].[ModulesGain]
 (
@@ -892,15 +895,15 @@ CREATE TABLE  [dbo].[ModulesGain]
 	crew int not null default 0,
 	energy SMALLINT not null default 0,
 	hitpoints SMALLINT not null default 0,
-	damagereduction SMALLINT not null default 0,
+	damagereduction tinyInt not null default 0,
 	damageoutput SMALLINT not null default 0, 
 	cargoroom SMALLINT not null default 0,
 	fuelroom SMALLINT not null default 0,
 	inSpaceSpeed SMALLINT not null default 0,-- (moves oper turn), 
 	inSystemSpeed SMALLINT not null default 0,-- (moves oper turn), 
-	maxSpaceMoves SMALLINT not null default 0,
-	maxSystemMoves SMALLINT not null default 0,
-	scanRange SMALLINT not null default 0,
+	maxSpaceMoves Decimal(8,5) not null default 0,
+	maxSystemMoves Decimal(8,5) not null default 0,
+	scanRange  TINYINT DEFAULT 0 NOT NULL,
 	special int not null default 0,	--Special like Colonization, asteroid mining	
 	weaponType tinyint not null default 0,
 	[population] bigint not null default 0
@@ -956,6 +959,7 @@ print 'table [dbo].[SolarSystemBlueprints] created.'
 /* ---------------------------------------------------
 die Sternenkartenobjekte, hole die entsprechenden ID's aus der Sternenkarte
 ToDo: Default 1 -> Funktion die ein Default-Wert berechnet...
+alter table [GalaxyMap] add colonyCount int not null default 0
 --------------------------------------------------- */ 
 create TABLE  [dbo].[GalaxyMap]
 (
@@ -964,7 +968,8 @@ create TABLE  [dbo].[GalaxyMap]
 	galaxyName nvarchar(63),					
 	objectId SMALLINT NOT NULL DEFAULT 1,
 	size smallint not null default 10000,	
-	isDemo bit not null default 0
+	isDemo bit not null default 0,  -- is used by sql turn calculation to determine if the map is a demo
+	colonyCount int not null default 0,
 	constraint GalaxyMap_primary primary key clustered (id)
 );
 
@@ -1219,6 +1224,8 @@ print 'table [ShipHullsModulePositions] created.'
 /*
 alter table [ShipHullsGain] 
 alter column speedFactor Decimal(4,2) NOT NULL 
+
+	alter  TABLE  [dbo].[ShipHullsGain] alter column [damagereduction] TINYINT  DEFAULT 0 NOT NULL
 */
 CREATE TABLE  [dbo].[ShipHullsGain]
 (
@@ -1227,17 +1234,17 @@ CREATE TABLE  [dbo].[ShipHullsGain]
 	crew int not null default 0,
 	energy SMALLINT not null default 0,
 	hitpoints SMALLINT not null default 0,
-	damagereduction SMALLINT not null default 0,
+	damagereduction TINYINT not null default 0,
 	damageoutput SMALLINT not null default 0, 
 	cargoroom SMALLINT not null default 0,
 	fuelroom SMALLINT not null default 0,
 	inSpaceSpeed SMALLINT not null default 0,-- (moves per turn), 
 	inSystemSpeed SMALLINT not null default 0,-- (moves per turn), 
-	maxSpaceMoves SMALLINT not null default 0,
-	maxSystemMoves SMALLINT not null default 0,
+	maxSpaceMoves decimal(8,5) not null default 0,
+	maxSystemMoves decimal(8,5)  not null default 0,
 	special int not null default 0,	--Special like Colonization, asteroid mining	
-	scanRange smallint not null default 0,
-	[population] bigint default 0,
+	scanRange tinyInt not null default 0,
+	[population] bigint default 0 not null,
 	speedFactor	decimal(4,2) not null default 1
 );
 go
@@ -1294,7 +1301,7 @@ go
 -- alter table [ShipTemplate] add  shipHullsImage int not null default 1 references	[dbo].ShipHullsImages (id) on update NO ACTION on delete NO ACTION
 /*
 alter table [ShipTemplate] 
-alter column systemMovesPerTurn Decimal(8,5) NOT NULL 
+alter column galaxyMovesPerTurn  Decimal(8,5) NOT NULL default 0
 */
 create TABLE [dbo].[ShipTemplate]  (
 	id int identity (1,1) ,
@@ -1309,13 +1316,13 @@ create TABLE [dbo].[ShipTemplate]  (
 	energy int  default 5, -- will change dynamically during template-design
 	crew int default 5,
 	
-	scanRange SMALLINT,
+	scanRange TINYINT DEFAULT '3' NOT NULL,
 	    
-    attack int,
-    defense int,
+    attack  SMALLINT default 0 NOT NULL,
+    defense  SMALLINT default 0 NOT NULL,
     
-    hitpoints int,
-    damagereduction SMALLINT default 0,
+    hitpoints  SMALLINT DEFAULT 100 NOT NULL,
+    damagereduction tinyInt not null default 0,
     
     cargoroom SMALLINT  default 0,
 	fuelroom SMALLINT  default 0,
@@ -1378,17 +1385,18 @@ herkunft ist doppelt belegt (und nicht hier drin). einmal für den Sektorein- bzw
 alter table [Ships] 
 add shipHullsImage int not null default 1 
 		references	[dbo].ShipHullsImages (id) on update no action on delete no action
-
+alter table [Ships] 
+alter column energy SMALLINT  default 5
 --------------------------------------------------- */ 
 CREATE TABLE [dbo].[Ships]  (
-	id INT identity (1000,1),		--ToDo : 1000 is a reaaly bad workaround, because ships and colonies will sometimes (for example during trading) be stored in the same array as spaceobjects...
-	userId int NOT NULL,  --delete user will also result in delete template, this will delete this schip
+	id INT identity (1000,1),		--ToDo : 1000 is a really bad workaround, because ships and colonies will sometimes (for example during trading) be stored in the same array as spaceobjects...
+	--Todo: check if this is still wrong. I rather doubt it...
+	userId int NOT NULL,  --delete user will also result in delete template, this will delete this ship
 	--	references [dbo].[Users](id) on update cascade on delete cascade,	
 	[name] nvarchar(63) DEFAULT 'Noname' NOT NULL,
 	
-
 	--equivalent to ship template:
-	energy int  default 5, -- will change dynamically during template-design
+	energy SMALLINT  default 5, -- will change dynamically during template-design
 	crew int default 5,	
 	scanRange TINYINT DEFAULT '3' NOT NULL,
 	attack SMALLINT DEFAULT '2' NOT NULL,
@@ -1417,12 +1425,34 @@ CREATE TABLE [dbo].[Ships]  (
 		references [dbo].[StarMap](id) on update cascade on delete cascade,
 	templateId INT not null 
 		references	[dbo].ShipTemplate (id) on update cascade on delete cascade,
+	refitCounter TINYINT NOT NULL DEFAULT 0,
 	objectId int NOT NULL default 400, --one of the objects which are allowed by the table [ShipHullsImages]
 	versionId bigint not null default 0, 
+	shipStockVersionId bigint not null default 0, 
+	shipModulesVersionId bigint not null default 0, 
 	constraint ships_primary primary key clustered (id)
 );
 create nonclustered index ShipsIdKey on [dbo].[Ships](userId);
 -- drop  INDEX [Ships_position]  ON [dbo].[Ships]
+
+go
+
+--1 to 1 to ships, always joined on ships to increment the ships versionId after the  update
+-- insert into [ShipTranscension] select 1738 , 1,  GETDATE(), 100
+CREATE TABLE [dbo].[ShipTranscension]  (
+	shipId INT references dbo.Ships on update cascade on delete cascade,
+	helperMinimumRelation tinyint default 1,
+	constructionDate datetime not null default GETDATE(),
+	ressourceCount int not null default 100
+);
+
+go
+
+
+CREATE TABLE [dbo].[ShipRefit]  (
+	shipId INT references dbo.Ships on update cascade on delete cascade,
+	refitCounter int not null default 3
+);
 
 go
 

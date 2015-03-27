@@ -802,7 +802,8 @@ AS
          constructable, 
          amountbuilt, 
          obsolete, 
-         shiphullsimage 
+         shiphullsimage ,
+		 versionId
   FROM   [shiptemplate]; 
 
 go 
@@ -1145,6 +1146,27 @@ go
 
 IF EXISTS(SELECT 1 
           FROM   sys.objects 
+          WHERE  NAME = N'v_ShipTranscensionUsers' 
+                 AND type = N'V') 
+  BEGIN 
+      DROP VIEW [engine].[v_ShipTranscensionUsers]
+  END 
+
+go 
+--select * from [engine].[v_Ships] 
+CREATE VIEW [engine].[v_ShipTranscensionUsers] 
+AS 
+ SELECT [shipId]
+      ,[userId]
+      ,[helpCount]
+  FROM [dbo].[ShipTranscensionUsers];
+
+
+
+go 
+
+IF EXISTS(SELECT 1 
+          FROM   sys.objects 
           WHERE  NAME = N'v_ShipRefit' 
                  AND type = N'V') 
   BEGIN 
@@ -1320,7 +1342,10 @@ AS
          objectid, 
          size, 
          isdemo ,
-		 colonyCount
+		 colonyCount,
+		 transcendenceRequirement,
+		 gameState,
+		 winningTranscendenceConstruct
   FROM   [galaxymap]; 
 
 go 

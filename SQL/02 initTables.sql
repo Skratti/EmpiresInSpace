@@ -23,9 +23,11 @@ drop table [dbo].[UserColonyMap]
 drop table [dbo].[ColonyBuildings]
 drop table [dbo].[Colonies]				-- Kolonien
 drop table [dbo].[shipStock]
-drop table [ShipsDirection]
+drop table [dbo].[ShipsDirection]
 drop table [dbo].[shipModules]
 drop table [dbo].[ShipRefit]
+drop table [dbo].[ShipTranscension]
+drop table [ShipTranscensionUsers]
 drop table [dbo].[Ships]
 
 drop table [ShipTemplateModulePositions]
@@ -959,7 +961,7 @@ print 'table [dbo].[SolarSystemBlueprints] created.'
 /* ---------------------------------------------------
 die Sternenkartenobjekte, hole die entsprechenden ID's aus der Sternenkarte
 ToDo: Default 1 -> Funktion die ein Default-Wert berechnet...
-alter table [GalaxyMap] add colonyCount int not null default 0
+alter table [GalaxyMap] add winningTranscendenceConstruct int smallint not null default 1
 --------------------------------------------------- */ 
 create TABLE  [dbo].[GalaxyMap]
 (
@@ -970,6 +972,9 @@ create TABLE  [dbo].[GalaxyMap]
 	size smallint not null default 10000,	
 	isDemo bit not null default 0,  -- is used by sql turn calculation to determine if the map is a demo
 	colonyCount int not null default 0,
+	transcendenceRequirement int not null default 0,
+	gameState smallint not null default 1,   -- 0 : coming soon (with date) // 1: open for registration // 2: running // 3 : running and closed // 4: stopped-finished
+	winningTranscendenceConstruct int
 	constraint GalaxyMap_primary primary key clustered (id)
 );
 
@@ -1297,14 +1302,14 @@ print 'table [dbo].ShipTemplateBlueprints created.'
 
 go
 
--- alter table [ShipTemplate] add  [population] bigint default 0
+-- alter table [ShipTemplate] add versionId bigint not null default 0, 
 -- alter table [ShipTemplate] add  shipHullsImage int not null default 1 references	[dbo].ShipHullsImages (id) on update NO ACTION on delete NO ACTION
 /*
 alter table [ShipTemplate] 
-alter column galaxyMovesPerTurn  Decimal(8,5) NOT NULL default 0
+alter column id int not null unique 
 */
 create TABLE [dbo].[ShipTemplate]  (
-	id int identity (1,1) ,
+	id int not null  ,
 	userId int not null 
 		references	[dbo].Users (id) on update cascade on delete cascade,
 	shipHullId tinyInt not null 
@@ -1342,7 +1347,8 @@ create TABLE [dbo].[ShipTemplate]  (
     obsolete bit default 0,
     shipHullsImage int not null default 1 
 		references	[dbo].ShipHullsImages (id) on update no action on delete no action,
-	constraint ShipTemplate_primary primary key clustered (id)
+	versionId bigint not null default 0, 
+	constraint ShipTemplate_primary2 primary key clustered (id)
 );
 
 create index ShipTemplate_userIndex ON ShipTemplate(userId);
@@ -1389,7 +1395,7 @@ alter table [Ships]
 alter column energy SMALLINT  default 5
 --------------------------------------------------- */ 
 CREATE TABLE [dbo].[Ships]  (
-	id INT identity (1000,1),		--ToDo : 1000 is a really bad workaround, because ships and colonies will sometimes (for example during trading) be stored in the same array as spaceobjects...
+	id int not null,		--ToDo : 1000 is a really bad workaround, because ships and colonies will sometimes (for example during trading) be stored in the same array as spaceobjects...
 	--Todo: check if this is still wrong. I rather doubt it...
 	userId int NOT NULL,  --delete user will also result in delete template, this will delete this ship
 	--	references [dbo].[Users](id) on update cascade on delete cascade,	
@@ -1448,6 +1454,14 @@ CREATE TABLE [dbo].[ShipTranscension]  (
 
 go
 
+--1 to n  ships to userId, always joined on ships to increment the ships versionId after the  update
+-- insert into [ShipTranscension] select 1738 , 1,  GETDATE(), 100
+CREATE TABLE [dbo].[ShipTranscensionUsers]  (
+	shipId INT references dbo.Ships on update cascade on delete cascade,
+	userId INT not null default 0 references dbo.Users on update no action on delete no action,
+	helpCount smallint not null
+);
+go
 
 CREATE TABLE [dbo].[ShipRefit]  (
 	shipId INT references dbo.Ships on update cascade on delete cascade,
@@ -1532,7 +1546,15 @@ CREATE TRIGGER TRIGGER_ShipCreated ON dbo.[Ships]
 AFTER Insert
 AS
 BEGIN	
-		
+	
+	insert into dbo.[ShipTranscension](shipId, ressourceCount)
+	select 
+		inserted.id as shipId,		
+		1
+	from inserted
+	where inserted.hullId = 220
+			
+/*
 	insert into dbo.shipModules
 	select 
 		inserted.id,
@@ -1544,7 +1566,7 @@ BEGIN
 	from inserted
 	inner join dbo.ShipTemplateModulePositions
 	on  ShipTemplateModulePositions.shipTemplateId = inserted.templateId
-			
+*/			
 END
 go
 

@@ -741,13 +741,36 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (592, N'Tr
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (593, N'Transcendence Collaboration allows participating in the Transcendence Projects of others, provided that access to the construct was being granted', N'', 1)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (594, N'Transcendence Construct', N'', 1)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (595, N'Transcendence Builder', N'', 1)
+
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (596, N'Create star base', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (597, N'Add to Transcendence Construct', N'', 7)
+
+
+----------------------
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (598, N'Congratulations!', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (599, N'Game over', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (600, N'You completed your Transcendence Construct and sentient life throughout the galaxy has ascended to the next higher level of being.', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (601, N'Your alliance completed its Transcendence Construct and sentient life throughout the galaxy has ascended to the next higher level of being.', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (602, N'A Transcension Construct where you participated was finished and sentient life throughout the galaxy ascended to the next higher level of being.', N'', 7)
+
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (603, N'A Transcension Construct was finished and sentient life throughout the galaxy has ascended to the next higher level of being.', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (604, N'This game has ended.', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (605, N'{0}, the Transcension Construct of {1} of the alliance %3 was finished and sentient life throughout the galaxy has ascended to the next higher level of being.', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (606, N'{0}, the Transcension Construct of {1} was finished and sentient life throughout the galaxy has ascended to the next higher level of being.', N'', 7)
+
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (607, N'A new game is already open. Turn evaluation of the new game will start within two days.', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (608, N'With {0} points, your alliance won this game!', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (609, N'Your alliance has archieved the{0}. rank.', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (610, N'With {0} points, you are the best player of the game.', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (611, N'Your overall rank: {0}', N'', 7)
+
 /*
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (403, N'<p>Drag the scout to the outside of your solar system. This will let him leave the system and switch the map to the starmap.<br> Find one of the neutral space stations. The next one will be at ', N'', 2)--<p> Erkunde deine Umgebung und treffe deine Nachbarn.<br> Finde eine neutrale Raumstation. Die nächste ist bei 
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (404, N'.<br>Press r to see a raster an c for coordinates, or activate raster and coordinates in your user settings.<br> The neutral space station works as a communication node and as trade station - as soon as you arrive there you may contact all other players that visited the station.</p>', N'', 2)--.<br> Drücke r für ein Raster und c für Koordinatenangaben oder aktiviere das Raster oder die Koordinaten in den Einstellungen.<br> Die neutrale Raumstation dient als Kommunikationszentrale und Handelszentrum - sobald du dort ankommst kannst du alle Siedler anschreiben die diese Station schon besucht haben.</p>
 
 */
 
---delete from [LabelsBase] where id > 564
+--delete from [LabelsBase] where id > 597
 --delete from [LabelsBase] where id = 348
 --INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (348, N'Research', N'', 7)
 -- update [dbo].[LabelsBase] set value = N' was destroyed by the ' where id = 397

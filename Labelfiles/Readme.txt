@@ -7,4 +7,3 @@ When saving, Choose "Save as", and activate the checkbox "filtersettings" (actua
 Replace the old file, and in then new dialog select:
 Unicode
 Tab
-"

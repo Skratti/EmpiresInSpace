@@ -287,7 +287,7 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (235, N'Se
 
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (236, N'<p>Drag a ship to move it around. Try it out now...</p>', N'', 2) --Um ein Schiff zu bewegen ziehe mit gedrückter Maustaste oder dem Finger vom Schiff auf ein benachbartes Feld. Tue dies nun...
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (237, N'Colonize a world', N'', 2)--Kolonisiere eine Welt
-INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (238, N'<p>Search with your ship for a colonizable planet in this starsystem.</p>', N'', 2) --Finde einen kolonisierbaren Planeten und fliege das Schiff dorthin.
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (238, N'<p>Fly your starship to a colonizable planet in this starsystem.</p>', N'', 2) --Finde einen kolonisierbaren Planeten und fliege das Schiff dorthin.
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (239, N'<p>Use the button in the lower left corner to colonize the planet.</p>', N'', 2) --Benutze nun das Icon links unten um den Planeten zu kolonisieren.
 
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (240, N'Switch to the planet surface', N'', 2) --Wechsel zur Planetenoberfläche
@@ -770,7 +770,7 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (404, N'.<
 
 */
 
---delete from [LabelsBase] where id > 597
+--delete from [LabelsBase] where id > 590
 --delete from [LabelsBase] where id = 348
 --INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (348, N'Research', N'', 7)
 -- update [dbo].[LabelsBase] set value = N' was destroyed by the ' where id = 397

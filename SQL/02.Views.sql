@@ -369,12 +369,47 @@ go
 
 CREATE VIEW [engine].[v_Users] 
 AS 
-  SELECT id, 
-         username,          
-         created,          
+  SELECT 
+		[id]
+      ,[username]
+      ,[activity]
+      ,[locked]
+      ,[user_session]
+      ,[showRaster]
+      ,[moveShipsAsync]
+      ,[homeCoordX]
+      ,[homeCoordY]
+      ,[language]
+      ,[loginDT]
+      ,[lastSelectedObjectType]
+      ,[lastSelectedObjectId]
+      ,[showSystemNames]
+      ,[showColonyNames]
+      ,[showCoordinates]
+
+      ,[showColonyOwners]
+      ,[showShipNames]
+      ,[showShipOwners]
+      ,[researchPoints]
+      ,[scanRangeBrightness]
+
+      ,[constructionRatio]
+      ,[industrieRatio]
+      ,[foodRatio]
+      ,[versionId]
+
+      ,[popVicPoints]
+      ,[researchVicPoints]
+      ,[goodsVicPoints]
+      ,[shipVicPoints]
+      ,[overallVicPoints]
+      ,[overallRank]
+	  ,player_ip 
+
+  /*id, 
+         username,                   
          activity, 
          locked, 
-         lastlogin, 
          user_session, 
          showraster, 
          moveshipsasync, 
@@ -387,17 +422,21 @@ AS
          showsystemnames, 
          showcolonynames, 
          showcoordinates, 
+
+
          researchpoints, 
          scanrangebrightness, 
+
+
          showcolonyowner, 
          showshipnames, 
-         showshipowners, 
-         showcolonyowners,
+         showshipowners,         
 		 popVicPoints  ,
 		 researchVicPoints,
 		 goodsVicPoints ,
 	     shipVicPoints ,
-		 overallVicPoints 
+		 overallVicPoints,
+		 overallRank*/
   FROM   [users]; 
 
 go 

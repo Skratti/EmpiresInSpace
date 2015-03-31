@@ -300,18 +300,18 @@ relationDescription nvarchar(255)
 go
 create UNIQUE clustered index UserRelations_Cluster ON [UserRelations](relationId);
 go
-
+--alter table [Users] add player_ip nvarchar(55)
+--alter table [Users] drop DF__Users__password1__3C00B29C
 CREATE TABLE [dbo].[Users]			  (
 	[id] int not null UNIQUE check ( id > -1 ),		
 	username nvarchar(63) DEFAULT '' NOT NULL,
-	password1 nvarchar(63) DEFAULT '' NOT NULL,	
-	email nvarchar(63),
-	created datetime,	
-	player_ip nvarchar(55),		-- last used ip
-	user_ip nvarchar(55),		-- creation IP
+	--password1 nvarchar(63) DEFAULT '' NOT NULL,	
+	--email nvarchar(63),
+	--created datetime,	
+	--user_ip nvarchar(55),		-- creation IP
 	activity bit DEFAULT 0,
 	locked bit DEFAULT 0,		-- deleted?	
-	lastlogin TIMESTAMP,	--this is of course the row version... Needs to be renamed...
+	--lastlogin TIMESTAMP,	--this is of course the row version... Needs to be renamed...
 	user_session nvarchar(32),
 	showRaster bit not null default 0,
 	moveShipsAsync bit not null default 0,
@@ -324,7 +324,6 @@ CREATE TABLE [dbo].[Users]			  (
 	showSystemNames bit not null default 0,
 	showColonyNames bit not null default 0,
 	showCoordinates bit not null default 0,
-	showcolonyowner bit not null default 0,
 	[showColonyOwners] bit not null default 0,
 	[showShipNames] bit not null default 0,
 	[showShipOwners] bit not null default 0,
@@ -340,6 +339,7 @@ CREATE TABLE [dbo].[Users]			  (
 	shipVicPoints  int not null default 0,
 	overallVicPoints  int not null default 0,
 	overallRank	int not null default 1000,
+	player_ip nvarchar(55),		-- last used ip nneded for authentification after login from index,
 	-- alter table [Users] add overallRank	int not null default 1000
 	--researchSpent int not null default 0,  -- redundant, can be calculated by summing all researches of that user
 	constraint Users_primary primary key nonclustered (id)
@@ -348,6 +348,22 @@ print 'table [Users] created.'
 go
 create unique clustered index Users_index ON [Users]([id]);
 go
+
+CREATE TRIGGER TRIGGER_UserInsert ON dbo.[Users]
+AFTER INSERT
+AS
+BEGIN	
+	insert into dbo.UserQuests
+	select inserted.id, 1, 0, 0
+		from inserted;
+
+	insert into dbo.UserResearch ([userId] ,[researchId] ,[isCompleted]  ,[investedResearchpoints] ,[researchPriority])
+		select inserted.id, 1, 1, 3,0
+		from inserted;
+END
+--create unique index LabelsBase_Unique ON LabelsBase(value);
+go
+
 
 
 CREATE   TABLE [dbo].[Alliances]			  (

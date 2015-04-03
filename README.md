@@ -6,7 +6,7 @@
 * strategic cooperation with friends – defend (or expand) the borders of your realms together
 
 [Empires in Space](http://empiresinspace.com/) is a civilization-like game, implemented as being a massive multiplayer title.
-The game targets players who want a multiplayer 4X strategy game, without the need to be online at the same time, and thus without the need to arrange a hours lasting multiplayer match. Also it is balanced so that the player may spend just a few minutes per day, to keep his empire running. 
+The game targets players who want a multiplayer 4X strategy game, without the need to be online at the same time, and thus without the need to arrange a hours lasting multiplayer match. Also it is balanced so that the player may spend just a few minutes per day to keep his empire running. 
 
 
 ## Contribute

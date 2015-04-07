@@ -22,16 +22,16 @@ go
 [label] - is not needed in most cases. An entry in goods referencing an object-Id will have its own label. Labels are in file "03 Labelsbase.sql"
 */
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (1, N'Oranger Zwerg', N'RedSun.png', 1, 0, 1)
-INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (2, N'Gelber Zwerg', N'YellowSun.png', 1, 0, 2)
-INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (3, N'GelberOranger Zwerg', N'OrangeSun.png', 1, 0, 3)
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (2, N'Gelber Zwerg', N'YellowSunN.png', 1, 0, 2)
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (3, N'GelberOranger Zwerg', N'RedSun_1.png', 1, 0, 3)
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (4, N'Nebel', N'2.png', 1, 0, 4)
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (5, N'dichter Nebel', N'3.png', 1, 0, 5)
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (8, N'Plamanebel', N'6.gif', 1, 0, 8)
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (10, N'Asteroidenfeld', N'11.png', 1, 0, 10)
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (11, N'dichtes Asteroidenfeld', N'12.png', 1, 0, 11)
-INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (13, N'Roter Zwerg', N'RedSun.png', 1, 0, 15)
-INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (14, N'Blauer Riese', N'BlueSun.png', 1, 0, 13)
-INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (15, N'Oranger Riese', N'OrangeSun.png', 1, 0, 14)
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (13, N'Roter Zwerg', N'sunRed.png', 1, 0, 15)
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (14, N'Blauer Riese', N'SunBlue.png', 1, 0, 13)
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (15, N'Oranger Riese', N'sunRed.png', 1, 0, 14)
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (16, N'Zwerg', N'BlueSun.png', 1, 0, 17)
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (17, N'Schwarzes Loch', N'28.gif', 1, 0, 18)
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (24, N'EarthLike', N'51.png', 1, 0, 25)
@@ -69,6 +69,11 @@ INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [d
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (56, N'Oranger Riese', N'262.gif', 1, 0, 14)
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (57, N'Oranger Riese', N'263.gif', 1, 0, 14)
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (58, N'Oranger Riese', N'264.gif', 1, 0, 14)
+
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (59, N'Yellow Sun', N'YellowSunN.png', 1, 0, 14)
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (60, N'Yellow Sun', N'262.gif', 1, 0, 14)
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (61, N'Yellow Sun', N'263.gif', 1, 0, 14)
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (62, N'Yellow Sun', N'264.gif', 1, 0, 14)
 
 
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (70, N'Arrow Lower Left', N'ArrowToLowerLeft.png', 1, 0, 14)
@@ -700,18 +705,18 @@ select		523,   -20,		-10,		 0,					 0,				 0,			 0,			 0,					0,				 0,				 0, 0
 
 -- Level 2
 INSERT into [dbo].[ModulesGain] 
-([modulesId], [crew], [energy], [hitpoints], [damagereduction], [damageoutput], [cargoroom], [fuelroom], [inSpaceSpeed], [inSystemSpeed], [maxSpaceMoves], [maxSystemMoves], [special], [scanRange],weaponType) 
-select	101,	 25,		 -3,		  0,					0,				 0,			0, 0, 0, 0, 0, 0, 0, 0, 0 union all   --crew
-select	102,	 -2,		 30,		  0,					0,				 0,			0, 0, 0, 0, 0, 0, 0, 0, 0 union all  --reactor
-select	103,	  0,		  0,		175,					0,				 0,			0, 0, 0, 0, 0, 0, 0, 0, 0 union all   --hull
-select	104,	 -1,		 -4,		  0,					8,				 0,			0, 0, 0, 0, 0, 0, 0, 0, 0 union all  --shield
-select	105,	 -1,		 -6,		  0,					0,				 25,		0, 0, 0, 0, 0, 0, 0, 0, 1 union all    --laser
-select	106,	 -1,		 -2,		  0,					0,				 25,		0, 0, 0, 0, 0, 0, 0, 0, 2 union all   --missile
-select	107,	 -1,		 -4,		  0,					0,				 25,		0, 0, 0, 0, 0, 0, 0, 0, 3 union all   --mass driver
-select	108,	 -1,		 -2,		  0,					0,				 0,			1500, 50, 0, 0, 0, 0, 0, 0, 0 union all   -- cargo
-select	109,	 -1,		 -4,		  0,					0,				 0,			0, 0, 0, 24, 0, 100, 0, 0, 0 union all   --system Enginge
-select	110,	 -1,		 -4,		  0,					0,				 0,			0, 0, 5, 0, 20, 0, 0, 0, 0 union all    --star engines
-select	115,	 -1,		 -7,		  0,					0,				 0,			0, 0, 0, 0, 0, 0, 0, 2, 0    --scanner
+([modulesId], [crew], [energy], [hitpoints],	[damagereduction],	[damageoutput], [cargoroom],	[fuelroom], [inSpaceSpeed], [inSystemSpeed], [maxSpaceMoves], [maxSystemMoves], [special], [scanRange],	weaponType) 
+select	101,	 25,		 -3,		  0,					0,				 0,			0,				0,				0,				0,				0,					0,			0,			0,			0 union all   --crew
+select	102,	 -2,		 30,		  0,					0,				 0,			0,				0,				0,				0,				0,					0,			0,			0,			0 union all  --reactor
+select	103,	  0,		  0,		175,					0,				 0,			0,				0,				0,				0,				0,					0,			0,			0,			0 union all   --hull
+select	104,	 -1,		 -4,		  0,					8,				 0,			0,				0,				0,				0,				0,					0,			0,			0,			0 union all  --shield
+select	105,	 -1,		 -6,		  0,					0,				 25,		0,				0,				0,				0,				0,					0,			0,			0,			1 union all    --laser
+select	106,	 -1,		 -2,		  0,					0,				 25,		0,				0,				0,				0,				0,					0,			0,			0,			2 union all   --missile
+select	107,	 -1,		 -4,		  0,					0,				 25,		0,				0,				0,				0,				0,					0,			0,			0,			3 union all   --mass driver
+select	108,	 -1,		 -2,		  0,					0,				 0,			1500,			50,				0,				0,				0,					0,			0,			0,			0 union all   -- cargo
+select	109,	 -1,		 -4,		  0,					0,				 0,			0,				0,				0,				24,				0,				  100,			0,			0,			0 union all   --system Enginge
+select	110,	 -1,		 -4,		  0,					0,				 0,			0,				0,				5,				0,			   20,					0,			0,			0,			0 union all    --star engines
+select	115,	 -1,		 -7,		  0,					0,				 0,			0,				0,				0,				0,				0,					0,			0,			2,			0    --scanner
 
 --specail Res 1
 INSERT into [dbo].[ModulesGain] ([modulesId], [crew], [energy], [hitpoints], [damagereduction], [damageoutput], [cargoroom], [fuelroom], [inSpaceSpeed], [inSystemSpeed], [maxSpaceMoves], [maxSystemMoves], [special], [scanRange],weaponType) 

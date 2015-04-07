@@ -763,14 +763,21 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (608, N'Wi
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (609, N'Your alliance has archieved the{0}. rank.', N'', 7)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (610, N'With {0} points, you are the best player of the game.', N'', 7)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (611, N'Your overall rank: {0}', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (612, N'Refit', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (613, N'Refit the ship?', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (614, N'Refitting will disable ship systems for 4 turns, rendering it defenseless.', N'', 7)
 
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (615, N'Ship construction is not possible: An enemy is in orbit', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (616, N'Goods are missing: {0}', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (617, N'A spaceport is missing', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (618, N'Ship construction is not possible: Research for module {0} is missing', N'', 7)
 /*
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (403, N'<p>Drag the scout to the outside of your solar system. This will let him leave the system and switch the map to the starmap.<br> Find one of the neutral space stations. The next one will be at ', N'', 2)--<p> Erkunde deine Umgebung und treffe deine Nachbarn.<br> Finde eine neutrale Raumstation. Die nächste ist bei 
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (404, N'.<br>Press r to see a raster an c for coordinates, or activate raster and coordinates in your user settings.<br> The neutral space station works as a communication node and as trade station - as soon as you arrive there you may contact all other players that visited the station.</p>', N'', 2)--.<br> Drücke r für ein Raster und c für Koordinatenangaben oder aktiviere das Raster oder die Koordinaten in den Einstellungen.<br> Die neutrale Raumstation dient als Kommunikationszentrale und Handelszentrum - sobald du dort ankommst kannst du alle Siedler anschreiben die diese Station schon besucht haben.</p>
 
 */
 
---delete from [LabelsBase] where id > 590
+--delete from [LabelsBase] where id >614 614
 --delete from [LabelsBase] where id = 348
 --INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (348, N'Research', N'', 7)
 -- update [dbo].[LabelsBase] set value = N' was destroyed by the ' where id = 397

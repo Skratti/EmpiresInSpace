@@ -774,7 +774,7 @@ create unique clustered index ObjectWeaponModificators_index ON [ObjectWeaponMod
 go	
 
 go
-
+-- alter  TABLE  [dbo].[Goods] add prodLevel tinyint not null default 1
 CREATE TABLE [dbo].[Goods](
 	id SMALLINT NOT NULL UNIQUE,	
 	[name] nvarchar(55),
@@ -784,6 +784,7 @@ CREATE TABLE [dbo].[Goods](
 	--objektimage_url nvarchar(128) DEFAULT '',
 	label int NOT NULL Default 1
 		references [dbo].LabelsBase (id) on update NO ACTION on delete NO ACTION,
+	prodLevel tinyint not null default 1,
 	constraint bpGoods_primary primary key nonclustered (id)
 );
 print 'table [Goods] created.'
@@ -1093,9 +1094,32 @@ CREATE TABLE [dbo].[planetStock](
 print 'table [dbo].[planetStock] created.'
 go
 
+
+/* ---------------------------------------------------
+Kolonientabelle
+
+
+alter table [PlanetSurface]
+add PlanetSurfaceId bigint 
+
+update PlanetSurface set PlanetSurfaceId = id
+
+drop table [ServerTest01].[dbo].[UserColonyMap]
+drop table [ServerTest01].[dbo].ColoniesBuildQueue
+
+SELECT * FROM INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE TABLE_NAME = 'Colonies';
+SELECT * FROM INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE Constraint_name  = 'FK__ColonyBui__plane__3791033A'
+ALTER TABLE Colonies DROP CONSTRAINT UQ__Colonies__3213E83E928A7311;
+alter table [PlanetSurface]  drop column id
+alter table [PlanetSurface] add id bigint  NOT NULL	default 1
+update PlanetSurface set id = PlanetSurfaceId
+
+--------------------------------------------------- */ 
+
+
 -- Planet Surface as terrainMap
 CREATE TABLE [dbo].[PlanetSurface]  (
-	id bigint not null identity(1,1),	
+	id bigint not null ,	
 	planetId INT NOT NULL
 		references [dbo].[SolarSystemInstances](id), --on update cascade on delete cascade,
 	X TINYINT NOT NULL,
@@ -1667,9 +1691,27 @@ go
 
 /* ---------------------------------------------------
 Kolonientabelle
+
+
+alter table [Colonies] 
+add versionId bigint not null default 1
+
+update Colonies set colonyId = id
+
+drop table [ServerTest01].[dbo].[UserColonyMap]
+drop table [ServerTest01].[dbo].ColoniesBuildQueue
+
+SELECT * FROM INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE TABLE_NAME = 'Colonies';
+SELECT * FROM INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE Constraint_name  = 'UQ__Colonies__3213E83E928A7311'
+ALTER TABLE Colonies DROP CONSTRAINT UQ__Colonies__3213E83E928A7311;
+alter table [Colonies]  drop column [colonyId]
+alter table [Colonies] add id int  NOT NULL	default 1
+update Colonies set id = colonyId
+
+DROP TRIGGER [dbo].[TRIGGER_CreatePlanetSurface]
 --------------------------------------------------- */ 
 CREATE TABLE [dbo].[Colonies]  (
-	id INT NOT NULL UNIQUE identity(1,1),		
+	id INT NOT NULL,		
 	userId int NOT NULL
 		references users(id) on update cascade on delete cascade,	
 	[name] character varying(63) DEFAULT 'Colony' NOT NULL,		
@@ -1685,6 +1727,7 @@ CREATE TABLE [dbo].[Colonies]  (
 	[population] bigint not null default 1000000000,
 	[construction] int not null default 0	,
 	turnsOfRioting smallInt not null default 0,
+	versionId bigint not null default 1
 	constraint colonies_primary primary  key clustered (id)		
 );
 create index colonies_userIndex ON colonies(userId);
@@ -1728,9 +1771,26 @@ left join dbo.Colonies
 go
 --select * from TradeOffersWithUsers 
 
+/*
 
+
+alter table [ColonyBuildings] add colonyBuildingId int 
+
+update ColonyBuildings set colonyBuildingId = id
+
+
+
+SELECT * FROM INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE TABLE_NAME = '[ColonyBuildings]';
+SELECT * FROM INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE Constraint_name  = 'UQ__Colonies__3213E83E928A7311'
+ALTER TABLE ColonyBuildings DROP CONSTRAINT UQ__Colonies__3213E83E928A7311;
+alter table ColonyBuildings  drop column id
+alter table ColonyBuildings add id int  NOT NULL	default 1
+update ColonyBuildings set id = colonyBuildingId
+
+
+*/
 CREATE TABLE [dbo].[ColonyBuildings](	
-	id INT NOT NULL UNIQUE identity(1,1),		
+	id INT NOT NULL,		
 	colonyId Int NOT NULL
 		references [dbo].[Colonies](id) on update cascade on delete cascade,
 	planetSurfaceId bigint NOT NULL
@@ -1765,16 +1825,14 @@ go
 CREATE TABLE [dbo].[ColoniesBuildQueue]
 (
 	id INT NOT NULL UNIQUE identity(1,1),
-	colonyId int NOT NULL
-		references Colonies(id) on update cascade on delete cascade,
+	colonyId int NOT NULL		,
 	orderNo int not null,
 	buildType int not null,
 	buildId int not null,
 	targetAmount int not null default 1,
 	productionNeededPerUnit int not null default 10,
 	productionInvested int not null default 0,
-	multiTurn bit not null default 0, --menas that construction points can be saved over multiple turns
-	constraint ColoniesBuildQueue_primary primary key nonclustered (colonyId,orderNo)	
+	multiTurn bit not null default 0, --menas that construction points can be saved over multiple turns	
 )
 print 'table [dbo].[ColoniesBuildQueue] created.'
 go

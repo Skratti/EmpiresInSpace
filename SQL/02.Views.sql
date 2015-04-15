@@ -293,7 +293,9 @@ AS
          NAME, 
          [description], 
          passwrd, 
-         allianceowner 
+         allianceowner,
+		 overallRank,
+		 overallVicPoints
   FROM   [alliances]; 
 
 go 
@@ -533,7 +535,8 @@ AS
          NAME, 
          objectdescriptionid, 
          goodstype, 
-         label 
+         label ,
+		 prodLevel
   FROM   [goods]; 
 
 go 
@@ -1664,7 +1667,8 @@ AS
          constructionduration, 
          [population], 
          construction, 
-         turnsofrioting 
+         turnsofrioting,
+		 versionId
   FROM   [colonies]; 
 
 go 

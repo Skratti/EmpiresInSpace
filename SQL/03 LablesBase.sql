@@ -771,6 +771,14 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (615, N'Sh
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (616, N'Goods are missing: {0}', N'', 7)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (617, N'A spaceport is missing', N'', 7)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (618, N'Ship construction is not possible: Research for module {0} is missing', N'', 7)
+
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (619, N'Should the ship be destroyed?', N'', 7)
+
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (620, N'Synthetic materials', N'', 6)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (621, N'Synthetic materials plant', N'', 3)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (622, N'Metal', N'', 6)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (623, N'Ecosytem Adaption I', N'', 1)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (624, N'Adaption to the ecosystem of newly inhabitated worlds allows further population growth', N'', 1)
 /*
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (403, N'<p>Drag the scout to the outside of your solar system. This will let him leave the system and switch the map to the starmap.<br> Find one of the neutral space stations. The next one will be at ', N'', 2)--<p> Erkunde deine Umgebung und treffe deine Nachbarn.<br> Finde eine neutrale Raumstation. Die nächste ist bei 
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (404, N'.<br>Press r to see a raster an c for coordinates, or activate raster and coordinates in your user settings.<br> The neutral space station works as a communication node and as trade station - as soon as you arrive there you may contact all other players that visited the station.</p>', N'', 2)--.<br> Drücke r für ein Raster und c für Koordinatenangaben oder aktiviere das Raster oder die Koordinaten in den Einstellungen.<br> Die neutrale Raumstation dient als Kommunikationszentrale und Handelszentrum - sobald du dort ankommst kannst du alle Siedler anschreiben die diese Station schon besucht haben.</p>
@@ -780,7 +788,7 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (404, N'.<
 --delete from [LabelsBase] where id >614 614
 --delete from [LabelsBase] where id = 348
 --INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (348, N'Research', N'', 7)
--- update [dbo].[LabelsBase] set value = N' was destroyed by the ' where id = 397
+-- update [dbo].[LabelsBase] set value = N'Adaption to the ecosystem of newly inhabitated worlds allows further population growth' where id = 624
 
 
 /*

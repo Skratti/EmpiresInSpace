@@ -724,6 +724,25 @@ go
 
 IF EXISTS(SELECT 1 
           FROM   sys.objects 
+          WHERE  NAME = N'v_DiplomaticEntityState' 
+                 AND type = N'V') 
+  BEGIN 
+      DROP VIEW [engine].[v_DiplomaticEntityState] 
+  END 
+
+go 
+
+CREATE VIEW [engine].[v_DiplomaticEntityState] 
+AS 
+  SELECT [sender] ,
+		[target] ,
+		[relation]
+  FROM   [DiplomaticEntityState]; 
+
+go 
+
+IF EXISTS(SELECT 1 
+          FROM   sys.objects 
           WHERE  NAME = N'v_Quests' 
                  AND type = N'V') 
   BEGIN 
@@ -1162,6 +1181,7 @@ AS
 		  , isNull([population],0) as [population] 
 		  , isNull([shipHullsImage],0) as [shipHullsImage] 
 		  , refitCounter
+		  , noMovementCounter
   FROM   [ships]; 
 
 go 

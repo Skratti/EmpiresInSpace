@@ -38,7 +38,7 @@ drop table [ShipTemplate]
 drop table [ShipHullsModulePositions]
 drop table [dbo].[planetStock]
 
-
+drop table dbo.[DiplomaticEntityState]
 drop table dbo.[UserTargetRelations]
 drop table [dbo].[UserContacts]
 drop table dbo.[activeUsers]
@@ -364,10 +364,25 @@ END
 --create unique index LabelsBase_Unique ON LabelsBase(value);
 go
 
+/*
 
+alter table [Alliances] add aId int 
+
+update Alliances set aId = id
+
+
+
+SELECT * FROM INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE TABLE_NAME = '[Alliances]';
+SELECT * FROM INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE Constraint_name  = 'UQ__Colonies__3213E83E928A7311'
+ALTER TABLE ColonyBuildings DROP CONSTRAINT UQ__Colonies__3213E83E928A7311;
+alter table [Alliances]  drop column aId
+alter table [Alliances] add id int  NOT NULL	default 0
+update [Alliances] set id = aId
+
+*/
 
 CREATE   TABLE [dbo].[Alliances]			  (
-	[id] int not null identity(1,1),		
+	[id] int not null,		
 	name nvarchar(300) DEFAULT '' NOT NULL,
 	[description] nvarchar(4000) DEFAULT '',
 	passwrd	nvarchar(63)  NOT NULL DEFAULT '',		
@@ -1426,9 +1441,11 @@ print ''
 print '--- user data ---'
 /* ---------------------------------------------------
 Schiffsliste
-herkunft ist doppelt belegt (und nicht hier drin). einmal für den Sektorein- bzw. ausflug, zum anderen bei der Schiffserstellung :(
+herkunft ist doppelt belegt (und nicht hier drin). einmal für den Sektorein- bzw. ausflug, zum anderen bei der Schiffserstellung :(alter table [Ships] 
 
 alter table [Ships] 
+add noMovementCounter TINYINT NOT NULL DEFAULT 0
+
 add shipHullsImage int not null default 1 
 		references	[dbo].ShipHullsImages (id) on update no action on delete no action
 alter table [Ships] 
@@ -1472,6 +1489,7 @@ CREATE TABLE [dbo].[Ships]  (
 	templateId INT not null 
 		references	[dbo].ShipTemplate (id) on update cascade on delete cascade,
 	refitCounter TINYINT NOT NULL DEFAULT 0,
+	noMovementCounter TINYINT NOT NULL DEFAULT 0,
 	objectId int NOT NULL default 400, --one of the objects which are allowed by the table [ShipHullsImages]
 	versionId bigint not null default 0, 
 	shipStockVersionId bigint not null default 0, 
@@ -1868,7 +1886,14 @@ currentRelation tinyint not null default 1 references [UserRelations](relationId
 );
 create clustered index UserContacts_UNIQUE ON UserContacts(sender,addressee);
 print 'table [dbo].[UserContacts] created.'
+go
 
+CREATE TABLE [dbo].[DiplomaticEntityState](
+	[sender] int not null,
+	[target] int not null,
+	[relation] int not null
+);
+go
 
 /* ---------------------------------------------------
 Nachrichtentabelle

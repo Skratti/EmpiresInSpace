@@ -407,7 +407,8 @@ AS
       ,[overallVicPoints]
       ,[overallRank]
 	  ,player_ip 
-
+	  ,fogVersion
+	  ,fogString
   /*id, 
          username,                   
          activity, 
@@ -777,6 +778,9 @@ go
 CREATE VIEW [engine].[v_ResearchGain] 
 AS 
   SELECT researchid, 
+		[research],	
+		[energy]	,
+		[housing],
          growth, 
          construction, 
          industrie, 

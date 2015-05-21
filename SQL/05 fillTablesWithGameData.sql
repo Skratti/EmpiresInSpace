@@ -78,6 +78,7 @@ INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [d
 
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (70, N'Arrow Lower Left', N'ArrowToLowerLeft.png', 1, 0, 14)
 
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (80, N'Nebula1', N'nebel01.png', 1, 0, 390)
 
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (100, N'Gras', N'101.gif', 1, 0, 36)
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (101, N'Gras', N'101.gif', 1, 0, 36)
@@ -177,6 +178,9 @@ INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [d
 
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (560, N'Transcendence Construct', N'TranscendenceConstruct300.png', 1, 0, 594)
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (561, N'Transcendence Builder', N'TranscendenceBuildert300.png', 1, 0, 595)
+
+
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (671, N'Supraconductors', N'SolarPanels.png', 1, 0, 658)
 
 
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (1000, N'Energy', N'Energy.png', 1, 0, 62)
@@ -321,7 +325,8 @@ select 53, 1, 100, 1, 100, 0, 0, 0 union all
 select 55, 1, 100, 1, 100, 0, 0, 2 union all
 select 56, 1, 100, 1, 100, 0, 0, 0 union all
 select 57, 1, 100, 1, 100, 0, 0, 0 union all
-select 58, 1, 100, 1, 100, 0, 0, 0 
+select 58, 1, 100, 1, 100, 0, 0, 0 union all
+select 80, 2, 0, null, 0, 0, 10, 10			--nebula
 go
 
 
@@ -394,6 +399,7 @@ INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], 
 INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], [label], [descriptionLabel], [researchType], [treeColumn], [treeRow]) VALUES (50, N'Verb. Baumaterial', N'1.gif', N'Erlaubt den Bau des Kraftwerks', 40, 350, 489, 1, 2, 8)
 INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], [label], [descriptionLabel], [researchType], [treeColumn], [treeRow]) VALUES (51, N'PlaneteryScanner', N'1.gif', N'Erlaubt den Bau des Kraftwerks', 20, 382, 490, 1, 2, 11)
 										
+INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], [label], [descriptionLabel], [researchType], [treeColumn], [treeRow]) VALUES (71, N'Superconductors', N'1.gif', N'Erlaubt den Bau des Kraftwerks', 120, 656, 657, 1, 3, 4)
 
 INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], [label], [descriptionLabel], [researchType], [treeColumn], [treeRow]) VALUES (112, N'Warehouse construction plan', N'1.gif', N'', 1500, 162, 491,1,2,6)
 
@@ -501,19 +507,20 @@ select 5001, N'Transcendence Collaboration', N'1.gif'			, N''		, 1000	, 592		, 5
 SET IDENTITY_INSERT [dbo].[Research] OFF
 go
 
---delete from dbo.ResearchGain
+--delete from dbo.ResearchGain 
 insert into dbo.ResearchGain
-([researchId]	,[growth]	,[construction]	,[industrie]	,[food]	,[colonyCount]	,fleetCount	,[objectId])
-select 3002		, 0			,0				,0				,0		,2				,0			,172		union all
-select 3003		, 0			,0				,0				,0		,2				,0			,173		union all
-select 3004		, 0			,0				,0				,0		,3				,0			,174		union all
-select 3005		, 0			,0				,0				,0		,3				,0			,175		union all
-select 3006		, 0			,0				,0				,0		,4				,0			,176		union all
-select 4002		, 0			,-10			,-10			,0		,0				,50			,200		union all
-select 4003		, 0			,-12			,-12			,0		,1				,100		,201		union all
-select 4004		, 0			,-15			,-15			,0		,1				,150		,202		union all
-select 4005		, 0			,-19			,-19			,0		,1				,200		,203		union all
-select 4006		, 0			,-24			,-24			,0		,2				,250		,204	
+([researchId]	  ,[research]	,[energy]	,[housing]	,[growth]	,[construction]	,[industrie]	,[food]	,[colonyCount]	,fleetCount	,[objectId])
+select 71		  ,0			,10			,0			, 0			,0				,0				,0		,0				,0			,671		union all
+select 3002		  ,0			,0			,0			, 0			,0				,0				,0		,2				,0			,172		union all
+select 3003		  ,0			,0			,0			, 0			,0				,0				,0		,2				,0			,173		union all
+select 3004		  ,0			,0			,0			, 0			,0				,0				,0		,3				,0			,174		union all
+select 3005		  ,0			,0			,0			, 0			,0				,0				,0		,3				,0			,175		union all
+select 3006		  ,0			,0			,0			, 0			,0				,0				,0		,4				,0			,176		union all
+select 4002		  ,0			,0			,0			, 0			,-10			,-10			,0		,0				,50			,200		union all
+select 4003		  ,0			,0			,0			, 0			,-12			,-12			,0		,1				,100		,201		union all
+select 4004		  ,0			,0			,0			, 0			,-15			,-15			,0		,1				,150		,202		union all
+select 4005		  ,0			,0			,0			, 0			,-19			,-19			,0		,1				,200		,203		union all
+select 4006		  ,0			,0			,0			, 0			,-24			,-24			,0		,2				,250		,204	
 
 
 
@@ -1201,6 +1208,7 @@ INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (1
 INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (18, 6, -10)	-- Häuser - energy
 
 --Montagehalle
+--delete from [dbo].[BuildingProductions] where [buildingId] = 19
 INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (19, 6, -10) -- energy
 INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (19, 8, -15) -- population
 INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (19, 7, 20)  --assembly points
@@ -1386,9 +1394,9 @@ INSERT [dbo].[BuildingCosts] ([buildingId], [goodsId], [amount]) VALUES (18, 10,
 INSERT [dbo].[BuildingCosts] ([buildingId], [goodsId], [amount]) VALUES (18, 11, 10)  -- kunststoffe
 
 --Assembly Plant
---delete from [BuildingCosts] where [buildingId] = 20
-INSERT [dbo].[BuildingCosts] ([buildingId], [goodsId], [amount]) VALUES (19, 1, 100)
-INSERT [dbo].[BuildingCosts] ([buildingId], [goodsId], [amount]) VALUES (19, 7, 200)
+--delete from [BuildingCosts] where [buildingId] = 19
+INSERT [dbo].[BuildingCosts] ([buildingId], [goodsId], [amount]) VALUES (19, 1, 60)
+INSERT [dbo].[BuildingCosts] ([buildingId], [goodsId], [amount]) VALUES (19, 7, 30)   --montagepunkte
 INSERT [dbo].[BuildingCosts] ([buildingId], [goodsId], [amount]) VALUES (19, 10, 50)  --metall
 INSERT [dbo].[BuildingCosts] ([buildingId], [goodsId], [amount]) VALUES (19, 11, 80)  -- kunststoffe
 
@@ -1883,6 +1891,8 @@ INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType
 INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 3, 1, 5) --Kraftwerk
 INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 5, 3, 14)
 
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 5, 1, 71) --Kraftwerk -> Superconductors
+
 
 INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 1, 1, 400)  --Space travel 
 
@@ -2088,9 +2098,12 @@ select 1, 1022	, 1, 5000 union all  --
 select 1, 1023	, 1, 5000 union all  --
 select 1, 1024	, 1, 5000 union all  --
 select 1, 5000		, 1, 5001  union all  -- Transcendence Construct -> Transcendence Collaboration
-select 1, 5000		, 5, 220  union all  -- Trans Construct
+select 1, 5001		, 5, 220  union all  -- Trans Construct
 select 1, 5000		, 5, 221  union all  -- Trans Collab
-select 1, 5000		, 4, 520   -- Trans Construct Module
+select 1, 5001		, 4, 520   -- Trans Construct Module
+
+--delete from [dbo].[ResearchQuestPrerequisites]  where [SourceType] = 1 and [SourceId] = 5000
+
 
 ----------------------------------------------------------------------------------
 --  Ship Templates

@@ -340,7 +340,9 @@ CREATE TABLE [dbo].[Users]			  (
 	overallVicPoints  int not null default 0,
 	overallRank	int not null default 1000,
 	player_ip nvarchar(55),		-- last used ip nneded for authentification after login from index,
-	-- alter table [Users] add overallRank	int not null default 1000
+	fogVersion int not null default 0,
+	fogString nvarchar(max) DEFAULT '' NOT NULL,
+	-- alter table [Users] add fogString nvarchar(max) DEFAULT '' NOT NULL
 	--researchSpent int not null default 0,  -- redundant, can be calculated by summing all researches of that user
 	constraint Users_primary primary key nonclustered (id)
 );
@@ -704,12 +706,17 @@ go
 
 /*
 	Benefits that are created per Research -> is not mandatory for researches	
-	alter  TABLE  [dbo].[ResearchGain] add fleetCount SMALLINT not null default 0
+	alter  TABLE  [dbo].[ResearchGain] add [research] SMALLINT not null default 0
+	alter  TABLE  [dbo].[ResearchGain] add [energy] SMALLINT not null default 0
+	alter  TABLE  [dbo].[ResearchGain] add [housing] SMALLINT not null default 0
 */
 CREATE TABLE  [dbo].[ResearchGain]
 (
 	researchId SMALLINT NOT NULL
 		references [dbo].[Research] (id) on update cascade on delete cascade,
+	[research] SMALLINT not null default 0,
+	[energy] SMALLINT not null default 0,
+	housing SMALLINT not null default 0,
 	growth int not null default 0,
 	construction int not null default 0,
 	industrie int not null default 0,

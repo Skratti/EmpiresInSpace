@@ -423,6 +423,7 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (339, N'Co
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (340, N'Allows the building of outposts on earthlike planets', N'', 1) --	
 
 
+
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (341, N'Enter colonyname ', N'', 7) --	Kolonie benennen 
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (342, N'Analyse rare ressource', N'', 7) --	Sonderressource analysieren
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (343, N'Defense satellite', N'', 0)
@@ -779,6 +780,58 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (621, N'Sy
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (622, N'Metal', N'', 6)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (623, N'Ecosytem Adaption I', N'', 1)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (624, N'Adaption to the ecosystem of newly inhabitated worlds allows further population growth', N'', 1)
+
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (625, N'Declare war', N'', 7)--Relation verschlechtern?
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (626, N'Your ships will be moved to your colonies to be prepared for war. They will not gain movememnt points for 7 turns.', N'', 7)--Relation verschlechtern?
+
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (627, N'Deploy star base', N'', 7)--Relation verschlechtern?
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (628, N'Ship will be converted to a star base.', N'', 7)--Relation verschlechtern?
+
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (629, N'Colony limit reached', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (630, N'Research more administration technologies to increase this limit.', N'', 7)
+
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (631, N'Population points', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (632, N'Research points', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (633, N'Ship points', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (634, N'Goods on stock points', N'', 7)
+
+
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (635, N'Leave alliance', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (636, N'Kick member', N'', 7)
+
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (637, N'Industry', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (638, N'Research', N'Colony  details', 7) --Colony  details
+
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (639, N'Growth: ', N'Colony  details', 7) --Colony  details
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (640, N'from Buildings', N'Colony  details', 7) --Colony  details
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (641, N'from Research', N'Colony  details', 7) --Colony  details
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (642, N'Total Growth: ', N'Colony  details', 7) --Colony  details
+--delete from [dbo].[LabelsBase]  where id > 638
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (643, N'Needed Workers: ', N'Colony  details', 7) --Colony  details
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (644, N'Workers remaining: ', N'Colony  details', 7) --Colony  details
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (645, N'Food Shortage', N'Colony  details', 7) --Colony  details
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (646, N'due to Food Shortage', N'Colony  details', 7) --Colony  details
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (647, N'Total Energy: ', N'Colony  details', 7) --Colony  details
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (648, N'Energy Consumption: ', N'Colony  details', 7) --Colony  details
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (649, N'Available Energy: ', N'Colony  details', 7) --Colony  details
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (650, N'from Population', N'Colony  details', 7) --Colony  details
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (651, N'Total Assembly: ', N'Colony  details', 7) --Colony  details
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (652, N'Available Assembly: ', N'Colony  details', 7) --Colony  details
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (653, N'Limit: ', N'Colony  details', 7) --Colony  details
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (654, N'Industry Modifier ', N'Colony  details', 7) --Colony  details
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (655, N'Total Research: ', N'Colony  details', 7) --Colony  details
+
+
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (656, N'Superconductors ', N'', 1) --
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (657, N'Allows more efficient energy generation', N'', 1) --
+
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (658, N'+10% Energy', N'', 1) --
+
+
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (659, N'from Fleet Upkeep', N'', 7)
+
+
+--296
 /*
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (403, N'<p>Drag the scout to the outside of your solar system. This will let him leave the system and switch the map to the starmap.<br> Find one of the neutral space stations. The next one will be at ', N'', 2)--<p> Erkunde deine Umgebung und treffe deine Nachbarn.<br> Finde eine neutrale Raumstation. Die nächste ist bei 
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (404, N'.<br>Press r to see a raster an c for coordinates, or activate raster and coordinates in your user settings.<br> The neutral space station works as a communication node and as trade station - as soon as you arrive there you may contact all other players that visited the station.</p>', N'', 2)--.<br> Drücke r für ein Raster und c für Koordinatenangaben oder aktiviere das Raster oder die Koordinaten in den Einstellungen.<br> Die neutrale Raumstation dient als Kommunikationszentrale und Handelszentrum - sobald du dort ankommst kannst du alle Siedler anschreiben die diese Station schon besucht haben.</p>
@@ -786,7 +839,7 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (404, N'.<
 */
 
 --delete from [LabelsBase] where id >614 614
---delete from [LabelsBase] where id = 348
+--delete from [LabelsBase] where id = 657
 --INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (348, N'Research', N'', 7)
 -- update [dbo].[LabelsBase] set value = N'Adaption to the ecosystem of newly inhabitated worlds allows further population growth' where id = 624
 

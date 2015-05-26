@@ -8,12 +8,12 @@
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="2350px"
-   height="608px"
+   width="3350"
+   height="2608"
    id="svg3544"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="R1.svg">
+   sodipodi:docname="R5.svg">
   <metadata
      id="metadata3750">
     <rdf:RDF>
@@ -22,6 +22,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -38,9 +39,9 @@
      inkscape:window-height="1018"
      id="namedview3748"
      showgrid="false"
-     inkscape:zoom="0.8425102"
-     inkscape:cx="653.24571"
-     inkscape:cy="386.36243"
+     inkscape:zoom="0.59574468"
+     inkscape:cx="1985.6743"
+     inkscape:cy="1403.4674"
      inkscape:window-x="1272"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
@@ -49,10 +50,10 @@
      id="defs3546">
     <linearGradient
        id="gradBlue1"
-       x1="0%"
-       x2="100%"
-       y1="0%"
-       y2="0%">
+       x1="0"
+       x2="1"
+       y1="0"
+       y2="0">
       <stop
          id="myStop1"
          offset="0%"
@@ -64,10 +65,10 @@
     </linearGradient>
     <linearGradient
        id="gradGreen1"
-       x1="0%"
-       x2="100%"
-       y1="0%"
-       y2="0%">
+       x1="0"
+       x2="1"
+       y1="0"
+       y2="0">
       <stop
          id="stop3552"
          offset="0%"
@@ -79,10 +80,10 @@
     </linearGradient>
     <linearGradient
        id="gradViolet1"
-       x1="0%"
-       x2="100%"
-       y1="0%"
-       y2="0%">
+       x1="0"
+       x2="1"
+       y1="0"
+       y2="0">
       <stop
          id="stop3557"
          offset="0%"
@@ -94,10 +95,10 @@
     </linearGradient>
     <linearGradient
        id="gradDarkGreen1"
-       x1="0%"
-       x2="100%"
-       y1="0%"
-       y2="0%">
+       x1="0"
+       x2="1"
+       y1="0"
+       y2="0">
       <stop
          id="stop3562"
          offset="0%"
@@ -108,649 +109,4877 @@
          stop-color="#008800" />
     </linearGradient>
     <linearGradient
-       inkscape:collect="always"
-       xlink:href="#gradGreen1"
-       id="linearGradient3444"
-       x1="390"
-       y1="671"
-       x2="500"
-       y2="671"
-       gradientTransform="scale(2,0.5)"
-       gradientUnits="userSpaceOnUse" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#gradDarkGreen1"
-       id="linearGradient3455"
-       x1="390"
-       y1="244"
-       x2="500"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2,0,0,0.5,-128.72657,130.44092)"
        y2="244"
-       gradientTransform="scale(2,0.5)"
-       gradientUnits="userSpaceOnUse" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#gradDarkGreen1"
-       id="linearGradient3466"
-       x1="260"
+       x2="240"
        y1="244"
+       x1="130"
+       id="linearGradient3748"
+       xlink:href="#gradDarkGreen1"
+       inkscape:collect="always" />
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2,0,0,0.5,-128.72657,130.44092)"
+       y2="244"
        x2="370"
+       y1="244"
+       x1="260"
+       id="linearGradient3750"
+       xlink:href="#gradDarkGreen1"
+       inkscape:collect="always" />
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2,0,0,0.5,-128.72657,130.44092)"
        y2="244"
-       gradientTransform="scale(2,0.5)"
-       gradientUnits="userSpaceOnUse" />
+       x2="500"
+       y1="244"
+       x1="390"
+       id="linearGradient3752"
+       xlink:href="#gradGreen1"
+       inkscape:collect="always" />
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2,0,0,0.5,-128.72657,130.44092)"
+       y2="244"
+       x2="630"
+       y1="244"
+       x1="520"
+       id="linearGradient3754"
+       xlink:href="#gradBlue1"
+       inkscape:collect="always" />
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2,0,0,0.5,-128.72657,130.44092)"
+       y2="244"
+       x2="760"
+       y1="244"
+       x1="650"
+       id="linearGradient3756"
+       xlink:href="#gradBlue1"
+       inkscape:collect="always" />
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2,0,0,0.5,-128.72657,130.44092)"
+       y2="366"
+       x2="240"
+       y1="366"
+       x1="130"
+       id="linearGradient3758"
+       xlink:href="#gradDarkGreen1"
+       inkscape:collect="always" />
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2,0,0,0.5,-128.72657,130.44092)"
+       y2="366"
+       x2="370"
+       y1="366"
+       x1="260"
+       id="linearGradient3760"
+       xlink:href="#gradGreen1"
+       inkscape:collect="always" />
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2,0,0,0.5,-128.72657,130.44092)"
+       y2="366"
+       x2="500"
+       y1="366"
+       x1="390"
+       id="linearGradient3762"
+       xlink:href="#gradBlue1"
+       inkscape:collect="always" />
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2,0,0,0.5,-128.72657,130.44092)"
+       y2="366"
+       x2="630"
+       y1="366"
+       x1="520"
+       id="linearGradient3764"
+       xlink:href="#gradBlue1"
+       inkscape:collect="always" />
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2,0,0,0.5,-128.72657,130.44092)"
+       y2="366"
+       x2="760"
+       y1="366"
+       x1="650"
+       id="linearGradient3766"
+       xlink:href="#gradBlue1"
+       inkscape:collect="always" />
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2,0,0,0.5,-128.72657,130.44092)"
+       y2="488"
+       x2="500"
+       y1="488"
+       x1="390"
+       id="linearGradient3768"
+       xlink:href="#gradDarkGreen1"
+       inkscape:collect="always" />
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2,0,0,0.5,-128.72657,130.44092)"
+       y2="488"
+       x2="630"
+       y1="488"
+       x1="520"
+       id="linearGradient3770"
+       xlink:href="#gradDarkGreen1"
+       inkscape:collect="always" />
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2,0,0,0.5,-253.13629,484.9726)"
+       y2="305"
+       x2="110"
+       y1="305"
+       x1="0"
+       id="linearGradient3848"
+       xlink:href="#gradDarkGreen1"
+       inkscape:collect="always" />
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2,0,0,0.5,-253.13629,484.9726)"
+       y2="61"
+       x2="240"
+       y1="61"
+       x1="130"
+       id="linearGradient3850"
+       xlink:href="#gradDarkGreen1"
+       inkscape:collect="always" />
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2,0,0,0.5,-253.13629,484.9726)"
+       y2="183"
+       x2="240"
+       y1="183"
+       x1="130"
+       id="linearGradient3852"
+       xlink:href="#gradDarkGreen1"
+       inkscape:collect="always" />
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2,0,0,0.5,-253.13629,484.9726)"
+       y2="305"
+       x2="240"
+       y1="305"
+       x1="130"
+       id="linearGradient3854"
+       xlink:href="#gradDarkGreen1"
+       inkscape:collect="always" />
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2,0,0,0.5,-253.13629,484.9726)"
+       y2="427"
+       x2="240"
+       y1="427"
+       x1="130"
+       id="linearGradient3856"
+       xlink:href="#gradDarkGreen1"
+       inkscape:collect="always" />
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2,0,0,0.5,-149.51309,1357.1542)"
+       y2="549"
+       x2="240"
+       y1="549"
+       x1="130"
+       id="linearGradient3858"
+       xlink:href="#gradDarkGreen1"
+       inkscape:collect="always" />
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2,0,0,0.5,-253.13629,484.9726)"
+       y2="61"
+       x2="370"
+       y1="61"
+       x1="260"
+       id="linearGradient3860"
+       xlink:href="#gradDarkGreen1"
+       inkscape:collect="always" />
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2,0,0,0.5,-405.51994,1756.177)"
+       y2="183"
+       x2="370"
+       y1="183"
+       x1="260"
+       id="linearGradient3862"
+       xlink:href="#gradDarkGreen1"
+       inkscape:collect="always" />
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2,0,0,0.5,-253.13629,484.9726)"
+       y2="305"
+       x2="370"
+       y1="305"
+       x1="260"
+       id="linearGradient3864"
+       xlink:href="#gradDarkGreen1"
+       inkscape:collect="always" />
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2,0,0,0.5,-253.13629,484.9726)"
+       y2="427"
+       x2="370"
+       y1="427"
+       x1="260"
+       id="linearGradient3866"
+       xlink:href="#gradDarkGreen1"
+       inkscape:collect="always" />
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2,0,0,0.5,-253.13629,484.9726)"
+       y2="549"
+       x2="370"
+       y1="549"
+       x1="260"
+       id="linearGradient3868"
+       xlink:href="#gradDarkGreen1"
+       inkscape:collect="always" />
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2,0,0,0.5,-253.13629,484.9726)"
+       y2="61"
+       x2="500"
+       y1="61"
+       x1="390"
+       id="linearGradient3870"
+       xlink:href="#gradGreen1"
+       inkscape:collect="always" />
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2,0,0,0.5,-253.13629,484.9726)"
+       y2="183"
+       x2="500"
+       y1="183"
+       x1="390"
+       id="linearGradient3872"
+       xlink:href="#gradGreen1"
+       inkscape:collect="always" />
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2,0,0,0.5,-253.13629,484.9726)"
+       y2="305"
+       x2="500"
+       y1="305"
+       x1="390"
+       id="linearGradient3874"
+       xlink:href="#gradGreen1"
+       inkscape:collect="always" />
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2,0,0,0.5,-253.13629,484.9726)"
+       y2="427"
+       x2="500"
+       y1="427"
+       x1="390"
+       id="linearGradient3876"
+       xlink:href="#gradGreen1"
+       inkscape:collect="always" />
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2,0,0,0.5,-253.13629,484.9726)"
+       y2="549"
+       x2="500"
+       y1="549"
+       x1="390"
+       id="linearGradient3878"
+       xlink:href="#gradGreen1"
+       inkscape:collect="always" />
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2,0,0,0.5,377.86203,809.54454)"
+       y2="305"
+       x2="240"
+       y1="305"
+       x1="130"
+       id="linearGradient4126"
+       xlink:href="#gradDarkGreen1"
+       inkscape:collect="always" />
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2,0,0,0.5,377.86203,809.54454)"
+       y2="671"
+       x2="370"
+       y1="671"
+       x1="260"
+       id="linearGradient4128"
+       xlink:href="#gradDarkGreen1"
+       inkscape:collect="always" />
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2,0,0,0.5,377.86203,809.54454)"
+       y2="671"
+       x2="500"
+       y1="671"
+       x1="390"
+       id="linearGradient4130"
+       xlink:href="#gradDarkGreen1"
+       inkscape:collect="always" />
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2,0,0,0.5,377.86203,809.54454)"
+       y2="671"
+       x2="630"
+       y1="671"
+       x1="520"
+       id="linearGradient4132"
+       xlink:href="#gradDarkGreen1"
+       inkscape:collect="always" />
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2,0,0,0.5,377.86203,809.54454)"
+       y2="671"
+       x2="760"
+       y1="671"
+       x1="650"
+       id="linearGradient4134"
+       xlink:href="#gradDarkGreen1"
+       inkscape:collect="always" />
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2,0,0,0.5,377.86203,809.54454)"
+       y2="671"
+       x2="890"
+       y1="671"
+       x1="780"
+       id="linearGradient4136"
+       xlink:href="#gradGreen1"
+       inkscape:collect="always" />
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2,0,0,0.5,377.86203,809.54454)"
+       y2="671"
+       x2="1020"
+       y1="671"
+       x1="910"
+       id="linearGradient4138"
+       xlink:href="#gradBlue1"
+       inkscape:collect="always" />
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2,0,0,0.5,377.86203,809.54454)"
+       y2="793"
+       x2="370"
+       y1="793"
+       x1="260"
+       id="linearGradient4140"
+       xlink:href="#gradDarkGreen1"
+       inkscape:collect="always" />
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2,0,0,0.5,377.86203,809.54454)"
+       y2="793"
+       x2="630"
+       y1="793"
+       x1="520"
+       id="linearGradient4142"
+       xlink:href="#gradDarkGreen1"
+       inkscape:collect="always" />
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2,0,0,0.5,377.86203,809.54454)"
+       y2="793"
+       x2="890"
+       y1="793"
+       x1="780"
+       id="linearGradient4144"
+       xlink:href="#gradDarkGreen1"
+       inkscape:collect="always" />
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2,0,0,0.5,377.86203,809.54454)"
+       y2="793"
+       x2="1150"
+       y1="793"
+       x1="1040"
+       id="linearGradient4146"
+       xlink:href="#gradBlue1"
+       inkscape:collect="always" />
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2,0,0,0.5,377.86203,809.54454)"
+       y2="183"
+       x2="370"
+       y1="183"
+       x1="260"
+       id="linearGradient4148"
+       xlink:href="#gradDarkGreen1"
+       inkscape:collect="always" />
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2,0,0,0.5,377.86203,809.54454)"
+       y2="0"
+       x2="500"
+       y1="0"
+       x1="390"
+       id="linearGradient4150"
+       xlink:href="#gradDarkGreen1"
+       inkscape:collect="always" />
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2,0,0,0.5,377.86203,809.54454)"
+       y2="366"
+       x2="500"
+       y1="366"
+       x1="390"
+       id="linearGradient4152"
+       xlink:href="#gradDarkGreen1"
+       inkscape:collect="always" />
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2,0,0,0.5,377.86203,809.54454)"
+       y2="244"
+       x2="500"
+       y1="244"
+       x1="390"
+       id="linearGradient4154"
+       xlink:href="#gradDarkGreen1"
+       inkscape:collect="always" />
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2,0,0,0.5,377.86203,809.54454)"
+       y2="122"
+       x2="500"
+       y1="122"
+       x1="390"
+       id="linearGradient4156"
+       xlink:href="#gradDarkGreen1"
+       inkscape:collect="always" />
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2,0,0,0.5,377.86203,809.54454)"
+       y2="488"
+       x2="500"
+       y1="488"
+       x1="390"
+       id="linearGradient4158"
+       xlink:href="#gradDarkGreen1"
+       inkscape:collect="always" />
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2,0,0,0.5,377.86203,809.54454)"
+       y2="488"
+       x2="630"
+       y1="488"
+       x1="520"
+       id="linearGradient4160"
+       xlink:href="#gradGreen1"
+       inkscape:collect="always" />
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2,0,0,0.5,377.86203,809.54454)"
+       y2="183"
+       x2="760"
+       y1="183"
+       x1="650"
+       id="linearGradient4162"
+       xlink:href="#gradDarkGreen1"
+       inkscape:collect="always" />
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2,0,0,0.5,377.86203,809.54454)"
+       y2="0"
+       x2="890"
+       y1="0"
+       x1="780"
+       id="linearGradient4164"
+       xlink:href="#gradGreen1"
+       inkscape:collect="always" />
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2,0,0,0.5,377.86203,809.54454)"
+       y2="366"
+       x2="890"
+       y1="366"
+       x1="780"
+       id="linearGradient4166"
+       xlink:href="#gradGreen1"
+       inkscape:collect="always" />
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2,0,0,0.5,377.86203,809.54454)"
+       y2="244"
+       x2="890"
+       y1="244"
+       x1="780"
+       id="linearGradient4168"
+       xlink:href="#gradDarkGreen1"
+       inkscape:collect="always" />
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2,0,0,0.5,377.86203,809.54454)"
+       y2="122"
+       x2="890"
+       y1="122"
+       x1="780"
+       id="linearGradient4170"
+       xlink:href="#gradDarkGreen1"
+       inkscape:collect="always" />
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2,0,0,0.5,1993.3826,424.50001)"
+       y2="0"
+       x2="240"
+       y1="0"
+       x1="130"
+       id="linearGradient3697"
+       xlink:href="#gradDarkGreen1"
+       inkscape:collect="always" />
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2,0,0,0.5,1993.3826,424.50001)"
+       y2="183"
+       x2="240"
+       y1="183"
+       x1="130"
+       id="linearGradient3699"
+       xlink:href="#gradDarkGreen1"
+       inkscape:collect="always" />
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2,0,0,0.5,1993.3826,424.50001)"
+       y2="244"
+       x2="370"
+       y1="244"
+       x1="260"
+       id="linearGradient3701"
+       xlink:href="#gradDarkGreen1"
+       inkscape:collect="always" />
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2,0,0,0.5,1993.3826,424.50001)"
+       y2="671"
+       x2="500"
+       y1="671"
+       x1="390"
+       id="linearGradient3703"
+       xlink:href="#gradGreen1"
+       inkscape:collect="always" />
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2,0,0,0.5,1993.3826,424.50001)"
+       y2="610"
+       x2="240"
+       y1="610"
+       x1="130"
+       id="linearGradient3705"
+       xlink:href="#gradDarkGreen1"
+       inkscape:collect="always" />
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2,0,0,0.5,1993.3826,424.50001)"
+       y2="488"
+       x2="370"
+       y1="488"
+       x1="260"
+       id="linearGradient3707"
+       xlink:href="#gradDarkGreen1"
+       inkscape:collect="always" />
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2,0,0,0.5,1993.3826,424.50001)"
+       y2="671"
+       x2="370"
+       y1="671"
+       x1="260"
+       id="linearGradient3709"
+       xlink:href="#gradDarkGreen1"
+       inkscape:collect="always" />
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2,0,0,0.5,1993.3826,424.50001)"
+       y2="244"
+       x2="500"
+       y1="244"
+       x1="390"
+       id="linearGradient3711"
+       xlink:href="#gradDarkGreen1"
+       inkscape:collect="always" />
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2,0,0,0.5,2107.5254,1054.7857)"
+       y2="366"
+       x2="370"
+       y1="366"
+       x1="260"
+       id="linearGradient3713"
+       xlink:href="#gradGreen1"
+       inkscape:collect="always" />
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2,0,0,0.5,1993.3826,424.50001)"
+       y2="427"
+       x2="240"
+       y1="427"
+       x1="130"
+       id="linearGradient3715"
+       xlink:href="#gradDarkGreen1"
+       inkscape:collect="always" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#gradDarkGreen1"
+       id="linearGradient5870"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2,0,0,0.5,453.72891,1212.3307)"
+       x1="130"
+       y1="61"
+       x2="240"
+       y2="61" />
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2,0,0,0.5,-253.13629,484.9726)"
+       y2="427"
+       x2="240"
+       y1="427"
+       x1="130"
+       id="linearGradient6022"
+       xlink:href="#gradDarkGreen1"
+       inkscape:collect="always" />
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2,0,0,0.5,-253.13629,484.9726)"
+       y2="305"
+       x2="240"
+       y1="305"
+       x1="130"
+       id="linearGradient6024"
+       xlink:href="#gradDarkGreen1"
+       inkscape:collect="always" />
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2,0,0,0.5,-253.13629,484.9726)"
+       y2="183"
+       x2="240"
+       y1="183"
+       x1="130"
+       id="linearGradient6026"
+       xlink:href="#gradDarkGreen1"
+       inkscape:collect="always" />
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2,0,0,0.5,-253.13629,484.9726)"
+       y2="61"
+       x2="240"
+       y1="61"
+       x1="130"
+       id="linearGradient6028"
+       xlink:href="#gradDarkGreen1"
+       inkscape:collect="always" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#gradDarkGreen1"
+       id="linearGradient6157"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2,0,0,0.5,704.21019,1099.6629)"
+       x1="260"
+       y1="61"
+       x2="370"
+       y2="61" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#gradDarkGreen1"
+       id="linearGradient6470"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2,0,0,0.5,1993.3826,424.50001)"
+       x1="390"
+       y1="244"
+       x2="500"
+       y2="244" />
   </defs>
-  <rect
-     fill="url(#gradDarkGreen1)"
-     width="220px"
-     height="55px"
-     x="0"
-     y="152.5"
-     title=""
-     id="rect3566" />
-  <text
-     id="text3568">
-    <tspan
-       font-size="14px"
-       fill="rgb(0,0,0)"
-       stroke="none"
-       x="3"
-       y="169.5"
-       id="tspan3570">Basisforschung</tspan>
-  </text>
-  <text
-     id="text3572">
-    <tspan
-       font-size="14px"
-       fill="rgb(0,0,0)"
-       stroke="none"
-       x="210"
-       y="169.5"
-       id="tspan3574">2</tspan>
-  </text>
   <line
-     fill="none"
-     stroke="rgb(0,0,0)"
-     x1="5"
-     y1="172.5"
-     x2="215"
-     y2="172.5"
-     id="line3576" />
+     style="fill:none;stroke:#000000"
+     x1="439.24133"
+     y1="603.63873"
+     x2="479.24133"
+     y2="573.13873"
+     id="line36" />
   <line
-     fill="none"
-     stroke="rgb(0,0,0)"
-     x1="220"
-     y1="180"
-     x2="260"
-     y2="27.5"
-     id="line3578" />
+     style="fill:none;stroke:#000000"
+     x1="670.88422"
+     y1="1298.5673"
+     x2="710.88422"
+     y2="1329.0673"
+     id="line38" />
   <line
-     fill="none"
-     stroke="rgb(0,0,0)"
-     x1="220"
-     y1="180"
-     x2="260"
-     y2="119"
-     id="line3580" />
-  <line
-     fill="none"
-     stroke="rgb(0,0,0)"
-     x1="220"
-     y1="180"
-     x2="260"
-     y2="332.5"
-     id="line3582" />
-  <line
-     fill="none"
-     stroke="rgb(0,0,0)"
-     x1="220"
-     y1="180"
-     x2="260"
-     y2="241"
-     id="line3584" />
-  <image
-     sodipodi:absref="C:\Users\Andi\Desktop\Spacegame\ResearchSVG\BuildingMaterialPlant.png"
-     xlink:href="BuildingMaterialPlant.png"
-     id="image3586"
-     title="Baumaterialfabrik"
-     height="32"
-     width="32"
-     y="174.5"
-     x="3" />
-  <image
-     sodipodi:absref="C:\Users\Andi\Desktop\Spacegame\ResearchSVG\SolarPanels.png"
-     xlink:href="SolarPanels.png"
-     id="image3588"
-     title="Sonnenkraftwerk"
-     height="32"
-     width="32"
-     y="174.5"
-     x="38" />
-  <image
-     sodipodi:absref="C:\Users\Andi\Desktop\Spacegame\ResearchSVG\AssemblyPlant.png"
-     xlink:href="AssemblyPlant.png"
-     id="image3590"
-     title="Montagewerk"
-     height="32"
-     width="32"
-     y="174.5"
-     x="73" />
-  <rect
-     fill="url(#gradDarkGreen1)"
-     width="220px"
-     height="55px"
-     x="260"
-     y="0"
-     title=""
-     id="rect3592" />
-  <text
-     id="text3594">
-    <tspan
-       font-size="14px"
-       fill="rgb(0,0,0)"
-       stroke="none"
-       x="263"
-       y="17"
-       id="tspan3596">Wasserkraftwerk</tspan>
-  </text>
-  <text
-     id="text3598">
-    <tspan
-       font-size="14px"
-       fill="rgb(0,0,0)"
-       stroke="none"
-       x="470"
-       y="17"
-       id="tspan3600">5</tspan>
-  </text>
-  <line
-     fill="none"
-     stroke="rgb(0,0,0)"
-     x1="265"
-     y1="20"
-     x2="475"
-     y2="20"
-     id="line3602" />
-  <image
-     sodipodi:absref="C:\Users\Andi\Desktop\Spacegame\ResearchSVG\SolarPanels.png"
-     xlink:href="SolarPanels.png"
-     id="image3604"
-     title="Wasserkraftwerk"
-     height="32"
-     width="32"
-     y="22"
-     x="263" />
-  <rect
-     fill="url(#gradDarkGreen1)"
-     width="220px"
-     height="55px"
-     x="260"
-     y="91.5"
-     title=""
-     id="rect3606" />
-  <text
-     id="text3608">
-    <tspan
-       font-size="14px"
-       fill="rgb(0,0,0)"
-       stroke="none"
-       x="263"
-       y="108.5"
-       id="tspan3610">Raffinerie</tspan>
-  </text>
-  <text
-     id="text3612">
-    <tspan
-       font-size="14px"
-       fill="rgb(0,0,0)"
-       stroke="none"
-       x="470"
-       y="108.5"
-       id="tspan3614">4</tspan>
-  </text>
-  <line
-     fill="none"
-     stroke="rgb(0,0,0)"
-     x1="265"
-     y1="111.5"
-     x2="475"
-     y2="111.5"
-     id="line3616" />
-  <line
-     fill="none"
-     stroke="rgb(0,0,0)"
-     x1="480"
-     y1="119"
-     x2="520"
-     y2="149.5"
-     id="line3618" />
-  <image
-     sodipodi:absref="C:\Users\Andi\Desktop\Spacegame\ResearchSVG\OilWell2.png"
-     xlink:href="OilWell2.png"
-     id="image3620"
-     title="Treibstofferzeugung"
-     height="32"
-     width="32"
-     y="113.5"
-     x="263" />
-  <image
-     sodipodi:absref="C:\Users\Andi\Desktop\Spacegame\ResearchSVG\AssemblyPlant.png"
-     xlink:href="AssemblyPlant.png"
-     id="image3622"
-     title="Synthetik Fabrik"
-     height="32"
-     width="32"
-     y="113.5"
-     x="298" />
-  <line
-     fill="none"
-     stroke="rgb(0,0,0)"
-     x1="740"
-     y1="149.5"
-     x2="780"
-     y2="149.5"
-     id="line3636" />
+     style="fill:none;stroke:#000000"
+     x1="699.24133"
+     y1="573.13873"
+     x2="739.24133"
+     y2="573.13873"
+     id="line58" />
   <g
-     id="g3457"
-     transform="translate(47.47717,-78.337331)">
+     id="g3731"
+     transform="translate(827.87065,835.84929)">
     <rect
-       id="rect3624"
+       id="rect46"
        title=""
-       y="122"
-       x="520"
+       y="252.44092"
+       x="131.27342"
        height="55"
        width="220"
-       style="fill:url(#linearGradient3466)" />
+       style="fill:url(#linearGradient3748)" />
     <text
-       id="text3626">
+       x="-128.72658"
+       id="text48"
+       y="130.44092">
       <tspan
-         id="tspan3628"
-         y="139"
-         x="523"
+         id="tspan50"
+         y="269.44092"
+         x="134.27342"
          font-size="14px"
-         style="font-size:14px;fill:#000000;stroke:none">Kraftwerk</tspan>
+         style="font-size:14px;fill:#000000;stroke:none">Administration I</tspan>
     </text>
     <text
-       id="text3630">
+       x="-128.72658"
+       id="text52"
+       y="130.44092">
       <tspan
-         id="tspan3632"
-         y="139"
-         x="723"
+         id="tspan54"
+         y="269.44092"
+         x="341.27344"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">5</tspan>
+    </text>
+    <line
+       id="line56"
+       y2="272.44092"
+       x2="346.27344"
+       y1="272.44092"
+       x1="136.27342"
+       style="fill:none;stroke:#000000" />
+    <image
+       sodipodi:absref="D:\EmpiresInSpace\Research\Houses.png"
+       xlink:href="Houses.png"
+       id="image60"
+       title=" +1 number of possible colonies to own"
+       height="32"
+       width="32"
+       y="274.44092"
+       x="134.27342" />
+  </g>
+  <line
+     style="fill:none;stroke:#000000"
+     x1="959.24133"
+     y1="573.13873"
+     x2="999.24133"
+     y2="573.13873"
+     id="line74" />
+  <g
+     id="g3749"
+     transform="translate(1092.1853,770.29395)">
+    <rect
+       id="rect62"
+       title=""
+       y="252.44092"
+       x="391.27344"
+       height="55"
+       width="220"
+       style="fill:url(#linearGradient3750)" />
+    <text
+       x="-128.72658"
+       id="text64"
+       y="130.44092">
+      <tspan
+         id="tspan66"
+         y="269.44092"
+         x="394.27344"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">Administration II</tspan>
+    </text>
+    <text
+       x="-128.72658"
+       id="text68"
+       y="130.44092">
+      <tspan
+         id="tspan70"
+         y="269.44092"
+         x="594.27344"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">55</tspan>
+    </text>
+    <line
+       id="line72"
+       y2="272.44092"
+       x2="606.27344"
+       y1="272.44092"
+       x1="396.27344"
+       style="fill:none;stroke:#000000" />
+    <image
+       sodipodi:absref="D:\EmpiresInSpace\Research\Houses.png"
+       xlink:href="Houses.png"
+       id="image76"
+       title=" +1 number of possible colonies to own"
+       height="32"
+       width="32"
+       y="274.44092"
+       x="394.27344" />
+  </g>
+  <line
+     style="fill:none;stroke:#000000"
+     x1="1219.2415"
+     y1="573.13873"
+     x2="1259.2415"
+     y2="573.13873"
+     id="line90" />
+  <g
+     id="g3767"
+     transform="translate(2143.3973,885.56581)">
+    <rect
+       id="rect78"
+       title=""
+       y="252.44092"
+       x="651.27344"
+       height="55"
+       width="220"
+       style="fill:url(#linearGradient3752)" />
+    <text
+       x="-128.72658"
+       id="text80"
+       y="130.44092">
+      <tspan
+         id="tspan82"
+         y="269.44092"
+         x="654.27344"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">Administration III</tspan>
+    </text>
+    <text
+       x="-128.72658"
+       id="text84"
+       y="130.44092">
+      <tspan
+         id="tspan86"
+         y="269.44092"
+         x="847.27344"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">320</tspan>
+    </text>
+    <line
+       id="line88"
+       y2="272.44092"
+       x2="866.27344"
+       y1="272.44092"
+       x1="656.27344"
+       style="fill:none;stroke:#000000" />
+    <image
+       sodipodi:absref="D:\EmpiresInSpace\Research\Houses.png"
+       xlink:href="Houses.png"
+       id="image92"
+       title=" +1 number of possible colonies to own"
+       height="32"
+       width="32"
+       y="274.44092"
+       x="654.27344" />
+  </g>
+  <line
+     style="fill:none;stroke:#000000"
+     x1="1479.2415"
+     y1="573.13873"
+     x2="1519.2415"
+     y2="573.13873"
+     id="line106" />
+  <g
+     id="g3813"
+     transform="translate(1983.5564,344.23579)">
+    <rect
+       id="rect94"
+       title=""
+       y="252.44092"
+       x="911.27344"
+       height="55"
+       width="220"
+       style="fill:url(#linearGradient3754)" />
+    <text
+       x="-128.72658"
+       id="text96"
+       y="130.44092">
+      <tspan
+         id="tspan98"
+         y="269.44092"
+         x="914.27344"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">Administration IV</tspan>
+    </text>
+    <text
+       x="-128.72658"
+       id="text100"
+       y="130.44092">
+      <tspan
+         id="tspan102"
+         y="269.44092"
+         x="1107.2734"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">900</tspan>
+    </text>
+    <line
+       id="line104"
+       y2="272.44092"
+       x2="1126.2734"
+       y1="272.44092"
+       x1="916.27344"
+       style="fill:none;stroke:#000000" />
+    <image
+       sodipodi:absref="D:\EmpiresInSpace\Research\Houses.png"
+       xlink:href="Houses.png"
+       id="image108"
+       title=" +1 number of possible colonies to own"
+       height="32"
+       width="32"
+       y="274.44092"
+       x="914.27344" />
+  </g>
+  <g
+     id="g3822"
+     transform="translate(2158.035,694.3799)">
+    <rect
+       id="rect110"
+       title=""
+       y="252.44092"
+       x="1171.2734"
+       height="55"
+       width="220"
+       style="fill:url(#linearGradient3756)" />
+    <text
+       x="-128.72658"
+       id="text112"
+       y="130.44092">
+      <tspan
+         id="tspan114"
+         y="269.44092"
+         x="1174.2734"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">Administration V</tspan>
+    </text>
+    <text
+       x="-128.72658"
+       id="text116"
+       y="130.44092">
+      <tspan
+         id="tspan118"
+         y="269.44092"
+         x="1359.2734"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">1000</tspan>
+    </text>
+    <line
+       id="line120"
+       y2="272.44092"
+       x2="1386.2734"
+       y1="272.44092"
+       x1="1176.2734"
+       style="fill:none;stroke:#000000" />
+    <image
+       sodipodi:absref="D:\EmpiresInSpace\Research\Houses.png"
+       xlink:href="Houses.png"
+       id="image122"
+       title=" +2 number of possible colonies to own"
+       height="32"
+       width="32"
+       y="274.44092"
+       x="1174.2734" />
+  </g>
+  <line
+     style="fill:none;stroke:#000000"
+     x1="699.24133"
+     y1="634.13873"
+     x2="739.24133"
+     y2="634.13873"
+     id="line136" />
+  <g
+     id="g3740"
+     transform="translate(831.41095,963.43528)">
+    <rect
+       id="rect124"
+       title=""
+       y="313.44092"
+       x="131.27342"
+       height="55"
+       width="220"
+       style="fill:url(#linearGradient3758)" />
+    <text
+       x="-128.72658"
+       id="text126"
+       y="130.44092">
+      <tspan
+         id="tspan128"
+         y="330.44092"
+         x="134.27342"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">Fleet Command I</tspan>
+    </text>
+    <text
+       x="-128.72658"
+       id="text130"
+       y="130.44092">
+      <tspan
+         id="tspan132"
+         y="330.44092"
+         x="334.27344"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">14</tspan>
+    </text>
+    <line
+       id="line134"
+       y2="333.44092"
+       x2="346.27344"
+       y1="333.44092"
+       x1="136.27342"
+       style="fill:none;stroke:#000000" />
+    <image
+       id="image138"
+       title=" + 50 fleet command points"
+       height="32"
+       width="32"
+       y="335.44092"
+       x="134.27342" />
+  </g>
+  <line
+     style="fill:none;stroke:#000000"
+     x1="959.24133"
+     y1="634.13873"
+     x2="999.24133"
+     y2="634.13873"
+     id="line152" />
+  <g
+     id="g3758"
+     transform="translate(1348.0924,924.17294)">
+    <rect
+       id="rect140"
+       title=""
+       y="313.44092"
+       x="391.27344"
+       height="55"
+       width="220"
+       style="fill:url(#linearGradient3760)" />
+    <text
+       x="-128.72658"
+       id="text142"
+       y="130.44092">
+      <tspan
+         id="tspan144"
+         y="330.44092"
+         x="394.27344"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">Fleet Command II</tspan>
+    </text>
+    <text
+       x="-128.72658"
+       id="text146"
+       y="130.44092">
+      <tspan
+         id="tspan148"
+         y="330.44092"
+         x="587.27344"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">178</tspan>
+    </text>
+    <line
+       id="line150"
+       y2="333.44092"
+       x2="606.27344"
+       y1="333.44092"
+       x1="396.27344"
+       style="fill:none;stroke:#000000" />
+    <image
+       id="image154"
+       title=" + 100 fleet command points"
+       height="32"
+       width="32"
+       y="335.44092"
+       x="394.27344" />
+  </g>
+  <line
+     style="fill:none;stroke:#000000"
+     x1="1219.2415"
+     y1="634.13873"
+     x2="1259.2415"
+     y2="634.13873"
+     id="line168" />
+  <g
+     id="g3776"
+     transform="translate(1891.1399,916.12774)">
+    <rect
+       id="rect156"
+       title=""
+       y="313.44092"
+       x="651.27344"
+       height="55"
+       width="220"
+       style="fill:url(#linearGradient3762)" />
+    <text
+       x="-128.72658"
+       id="text158"
+       y="130.44092">
+      <tspan
+         id="tspan160"
+         y="330.44092"
+         x="654.27344"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">Fleet Command III</tspan>
+    </text>
+    <text
+       x="-128.72658"
+       id="text162"
+       y="130.44092">
+      <tspan
+         id="tspan164"
+         y="330.44092"
+         x="847.27344"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">945</tspan>
+    </text>
+    <line
+       id="line166"
+       y2="333.44092"
+       x2="866.27344"
+       y1="333.44092"
+       x1="656.27344"
+       style="fill:none;stroke:#000000" />
+    <image
+       id="image170"
+       title=" + 150 fleet command points"
+       height="32"
+       width="32"
+       y="335.44092"
+       x="654.27344" />
+  </g>
+  <line
+     style="fill:none;stroke:#000000"
+     x1="1479.2415"
+     y1="634.13873"
+     x2="1519.2415"
+     y2="634.13873"
+     id="line184" />
+  <g
+     id="g3804"
+     transform="translate(2131.9805,599.48517)">
+    <rect
+       id="rect172"
+       title=""
+       y="313.44092"
+       x="911.27344"
+       height="55"
+       width="220"
+       style="fill:url(#linearGradient3764)" />
+    <text
+       x="-128.72658"
+       id="text174"
+       y="130.44092">
+      <tspan
+         id="tspan176"
+         y="330.44092"
+         x="914.27344"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">Fleet Command IV</tspan>
+    </text>
+    <text
+       x="-128.72658"
+       id="text178"
+       y="130.44092">
+      <tspan
+         id="tspan180"
+         y="330.44092"
+         x="1099.2734"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">2000</tspan>
+    </text>
+    <line
+       id="line182"
+       y2="333.44092"
+       x2="1126.2734"
+       y1="333.44092"
+       x1="916.27344"
+       style="fill:none;stroke:#000000" />
+    <image
+       id="image186"
+       title=" + 200 fleet command points"
+       height="32"
+       width="32"
+       y="335.44092"
+       x="914.27344" />
+  </g>
+  <g
+     id="g3839"
+     transform="translate(1735.4882,385.77825)">
+    <rect
+       id="rect188"
+       title=""
+       y="313.44092"
+       x="1171.2734"
+       height="55"
+       width="220"
+       style="fill:url(#linearGradient3766)" />
+    <g
+       id="g3831">
+      <text
+         y="130.44092"
+         id="text190"
+         x="-128.72658">
+        <tspan
+           style="font-size:14px;fill:#000000;stroke:none"
+           font-size="14px"
+           x="1174.2734"
+           y="330.44092"
+           id="tspan192">Fleet Command V</tspan>
+      </text>
+      <text
+         y="130.44092"
+         id="text194"
+         x="-128.72658">
+        <tspan
+           style="font-size:14px;fill:#000000;stroke:none"
+           font-size="14px"
+           x="1359.2734"
+           y="330.44092"
+           id="tspan196">4000</tspan>
+      </text>
+      <line
+         style="fill:none;stroke:#000000"
+         x1="1176.2734"
+         y1="333.44092"
+         x2="1386.2734"
+         y2="333.44092"
+         id="line198" />
+      <image
+         x="1174.2734"
+         y="335.44092"
+         width="32"
+         height="32"
+         title=" + 250 fleet command points"
+         id="image200" />
+    </g>
+  </g>
+  <line
+     style="fill:none;stroke:#000000"
+     x1="1219.2415"
+     y1="695.13873"
+     x2="1259.2415"
+     y2="695.13873"
+     id="line214" />
+  <g
+     id="g3785"
+     transform="translate(2427.2421,764.00747)">
+    <rect
+       id="rect202"
+       title=""
+       y="374.44092"
+       x="651.27344"
+       height="55"
+       width="220"
+       style="fill:url(#linearGradient3768)" />
+    <text
+       x="-128.72658"
+       id="text204"
+       y="130.44092">
+      <tspan
+         id="tspan206"
+         y="391.44092"
+         x="654.27344"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">Transcendence</tspan>
+    </text>
+    <text
+       x="-128.72658"
+       id="text208"
+       y="130.44092">
+      <tspan
+         id="tspan210"
+         y="391.44092"
+         x="854.27344"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">95</tspan>
+    </text>
+    <line
+       id="line212"
+       y2="394.44092"
+       x2="866.27344"
+       y1="394.44092"
+       x1="656.27344"
+       style="fill:none;stroke:#000000" />
+    <image
+       sodipodi:absref="D:\EmpiresInSpace\Research\TranscendenceBuildert60.png"
+       xlink:href="TranscendenceBuildert60.png"
+       id="image216"
+       title="Transcendence Builder"
+       height="32"
+       width="32"
+       y="396.44092"
+       x="654.27344" />
+  </g>
+  <g
+     id="g3794"
+     transform="translate(2436.7375,762.82046)">
+    <rect
+       id="rect218"
+       title=""
+       y="374.44092"
+       x="911.27344"
+       height="55"
+       width="220"
+       style="fill:url(#linearGradient3770)" />
+    <text
+       x="-128.72658"
+       id="text220"
+       y="130.44092">
+      <tspan
+         id="tspan222"
+         y="391.44092"
+         x="914.27344"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">Transcendence Collaboration</tspan>
+    </text>
+    <text
+       x="-128.72658"
+       id="text224"
+       y="130.44092">
+      <tspan
+         id="tspan226"
+         y="391.44092"
+         x="1107.2734"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">945</tspan>
+    </text>
+    <line
+       id="line228"
+       y2="394.44092"
+       x2="1126.2734"
+       y1="394.44092"
+       x1="916.27344"
+       style="fill:none;stroke:#000000" />
+    <image
+       sodipodi:absref="D:\EmpiresInSpace\Research\TranscendenceConstruct60.png"
+       xlink:href="TranscendenceConstruct60.png"
+       id="image230"
+       title="Transcendence Construct"
+       height="32"
+       width="32"
+       y="396.44092"
+       x="914.27344" />
+    <image
+       sodipodi:absref="D:\EmpiresInSpace\Research\TranscendenceConstruct60.png"
+       xlink:href="TranscendenceConstruct60.png"
+       id="image232"
+       title="Transcendence Construct"
+       height="32"
+       width="32"
+       y="396.44092"
+       x="949.27344" />
+  </g>
+  <line
+     style="fill:none;stroke:#000000"
+     x1="413.36371"
+     y1="1177.2941"
+     x2="453.36371"
+     y2="1055.2941"
+     id="line36-0" />
+  <line
+     style="fill:none;stroke:#000000"
+     x1="413.36371"
+     y1="1177.2941"
+     x2="453.36371"
+     y2="1116.2941"
+     id="line38-5" />
+  <line
+     style="fill:none;stroke:#000000"
+     x1="316.03552"
+     y1="1018.2455"
+     x2="356.03552"
+     y2="1018.2455"
+     id="line40" />
+  <line
+     style="fill:none;stroke:#000000"
+     x1="301.79236"
+     y1="1271.0615"
+     x2="341.79236"
+     y2="1332.0615"
+     id="line42" />
+  <line
+     style="fill:none;stroke:#000000"
+     x1="413.36371"
+     y1="1177.2941"
+     x2="453.36371"
+     y2="1299.2941"
+     id="line44" />
+  <g
+     id="g4342"
+     transform="translate(446.5,512.3214)">
+    <rect
+       id="rect24-1"
+       title=""
+       y="637.4726"
+       x="-253.13629"
+       height="55"
+       width="220"
+       style="fill:url(#linearGradient3848)" />
+    <text
+       x="-253.13629"
+       id="text26-5"
+       y="484.9726">
+      <tspan
+         id="tspan28-2"
+         y="654.4726"
+         x="-250.13629"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">Base research</tspan>
+    </text>
+    <text
+       x="-253.13629"
+       id="text30-9"
+       y="484.9726">
+      <tspan
+         id="tspan32-0"
+         y="654.4726"
+         x="-43.136295"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">2</tspan>
+    </text>
+    <line
+       id="line34-9"
+       y2="657.4726"
+       x2="-38.136295"
+       y1="657.4726"
+       x1="-248.13629"
+       style="fill:none;stroke:#000000" />
+    <image
+       sodipodi:absref="D:\EmpiresInSpace\Research\BuildingMaterialPlant.png"
+       xlink:href="BuildingMaterialPlant.png"
+       id="image46"
+       title="Building material plant"
+       height="32"
+       width="32"
+       y="659.4726"
+       x="-250.13629" />
+    <image
+       sodipodi:absref="D:\EmpiresInSpace\Research\SolarPanels.png"
+       xlink:href="SolarPanels.png"
+       id="image48"
+       title="Solar power plant"
+       height="32"
+       width="32"
+       y="659.4726"
+       x="-215.13629" />
+    <image
+       sodipodi:absref="D:\EmpiresInSpace\Research\AssemblyPlant.png"
+       xlink:href="AssemblyPlant.png"
+       id="image50"
+       title="Assembly plant"
+       height="32"
+       width="32"
+       y="659.4726"
+       x="-180.13629" />
+  </g>
+  <g
+     id="g4297"
+     transform="translate(96.908911,1189.4316)">
+    <rect
+       id="rect52"
+       title=""
+       y="515.4726"
+       x="6.8637056"
+       height="55"
+       width="220"
+       style="fill:url(#linearGradient3850)" />
+    <text
+       x="-253.13629"
+       id="text54"
+       y="484.9726">
+      <tspan
+         id="tspan56"
+         y="532.4726"
+         x="9.8637056"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">Holmium analysis</tspan>
+    </text>
+    <text
+       x="-253.13629"
+       id="text58"
+       y="484.9726">
+      <tspan
+         id="tspan60"
+         y="532.4726"
+         x="216.86371"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">9</tspan>
+    </text>
+    <line
+       id="line62"
+       y2="535.4726"
+       x2="221.86371"
+       y1="535.4726"
+       x1="11.863706"
+       style="fill:none;stroke:#000000" />
+    <image
+       sodipodi:absref="D:\EmpiresInSpace\Research\Headframe.png"
+       xlink:href="Headframe.png"
+       id="image66"
+       title="Holmium mine"
+       height="32"
+       width="32"
+       y="537.4726"
+       x="9.8637056" />
+  </g>
+  <g
+     id="g4306"
+     transform="translate(103.6232,872.18156)">
+    <rect
+       id="rect68"
+       title=""
+       y="576.4726"
+       x="6.8637056"
+       height="55"
+       width="220"
+       style="fill:url(#linearGradient3852)" />
+    <text
+       x="-253.13629"
+       id="text70"
+       y="484.9726">
+      <tspan
+         id="tspan72"
+         y="593.4726"
+         x="9.8637056"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">Terbium analysis</tspan>
+    </text>
+    <text
+       x="-253.13629"
+       id="text74"
+       y="484.9726">
+      <tspan
+         id="tspan76"
+         y="593.4726"
+         x="216.86371"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">9</tspan>
+    </text>
+    <line
+       id="line78"
+       y2="596.4726"
+       x2="221.86371"
+       y1="596.4726"
+       x1="11.863706"
+       style="fill:none;stroke:#000000" />
+    <image
+       sodipodi:absref="D:\EmpiresInSpace\Research\Headframe.png"
+       xlink:href="Headframe.png"
+       id="image82"
+       title="Terbium mine"
+       height="32"
+       width="32"
+       y="598.4726"
+       x="9.8637056" />
+  </g>
+  <line
+     style="fill:none;stroke:#000000"
+     x1="692.35461"
+     y1="1470.4656"
+     x2="732.35461"
+     y2="1470.4656"
+     id="line96" />
+  <g
+     id="g4315"
+     transform="translate(103.6232,872.18156)">
+    <rect
+       id="rect84"
+       title=""
+       y="637.4726"
+       x="6.8637056"
+       height="55"
+       width="220"
+       style="fill:url(#linearGradient3854)" />
+    <text
+       x="-253.13629"
+       id="text86"
+       y="484.9726">
+      <tspan
+         id="tspan88"
+         y="654.4726"
+         x="9.8637056"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">Scandium analysis</tspan>
+    </text>
+    <text
+       x="-253.13629"
+       id="text90"
+       y="484.9726">
+      <tspan
+         id="tspan92"
+         y="654.4726"
+         x="216.86371"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">8</tspan>
+    </text>
+    <line
+       id="line94"
+       y2="657.4726"
+       x2="221.86371"
+       y1="657.4726"
+       x1="11.863706"
+       style="fill:none;stroke:#000000" />
+    <image
+       sodipodi:absref="D:\EmpiresInSpace\Research\Headframe.png"
+       xlink:href="Headframe.png"
+       id="image98"
+       title="Scandium mine"
+       height="32"
+       width="32"
+       y="659.4726"
+       x="9.8637056" />
+  </g>
+  <line
+     style="fill:none;stroke:#000000"
+     x1="845.46844"
+     y1="1507.7271"
+     x2="885.46844"
+     y2="1507.7271"
+     id="line112" />
+  <g
+     id="g4324"
+     transform="translate(103.6232,872.18156)">
+    <rect
+       id="rect100"
+       title=""
+       y="698.4726"
+       x="6.8637056"
+       height="55"
+       width="220"
+       style="fill:url(#linearGradient3856)" />
+    <text
+       x="-253.13629"
+       id="text102"
+       y="484.9726">
+      <tspan
+         id="tspan104"
+         y="715.4726"
+         x="9.8637056"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">Yttrium analysis</tspan>
+    </text>
+    <text
+       x="-253.13629"
+       id="text106"
+       y="484.9726">
+      <tspan
+         id="tspan108"
+         y="715.4726"
+         x="216.86371"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">8</tspan>
+    </text>
+    <line
+       id="line110"
+       y2="718.4726"
+       x2="221.86371"
+       y1="718.4726"
+       x1="11.863706"
+       style="fill:none;stroke:#000000" />
+    <image
+       sodipodi:absref="D:\EmpiresInSpace\Research\Headframe.png"
+       xlink:href="Headframe.png"
+       id="image114"
+       title="Yttrium mine"
+       height="32"
+       width="32"
+       y="720.4726"
+       x="9.8637056" />
+  </g>
+  <rect
+     style="fill:url(#linearGradient3858)"
+     width="220"
+     height="55"
+     x="110.48692"
+     y="1631.6542"
+     title=""
+     id="rect116" />
+  <text
+     y="1357.1542"
+     id="text118"
+     x="-149.51308">
+    <tspan
+       style="font-size:14px;fill:#000000;stroke:none"
+       font-size="14px"
+       x="113.4869"
+       y="1648.6542"
+       id="tspan120">Lutetium analysis</tspan>
+  </text>
+  <text
+     y="1357.1542"
+     id="text122"
+     x="-149.51308">
+    <tspan
+       style="font-size:14px;fill:#000000;stroke:none"
+       font-size="14px"
+       x="320.48691"
+       y="1648.6542"
+       id="tspan124">8</tspan>
+  </text>
+  <line
+     style="fill:none;stroke:#000000"
+     x1="115.4869"
+     y1="1651.6542"
+     x2="325.48691"
+     y2="1651.6542"
+     id="line126" />
+  <image
+     sodipodi:absref="D:\EmpiresInSpace\Research\Headframe.png"
+     xlink:href="Headframe.png"
+     x="113.4869"
+     y="1653.6542"
+     width="32"
+     height="32"
+     title="Lutetium mine"
+     id="image130" />
+  <line
+     style="fill:none;stroke:#000000;stroke-width:2.58216715"
+     x1="1981.1965"
+     y1="1634.1141"
+     x2="2247.9001"
+     y2="1634.1141"
+     id="line144" />
+  <g
+     id="g4288"
+     transform="translate(-152.38365,1271.2044)">
+    <rect
+       id="rect132"
+       title=""
+       y="515.4726"
+       x="266.86371"
+       height="55"
+       width="220"
+       style="fill:url(#linearGradient3860)" />
+    <text
+       x="-253.13629"
+       id="text134"
+       y="484.9726">
+      <tspan
+         id="tspan136"
+         y="532.4726"
+         x="269.86371"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">Holmium processing</tspan>
+    </text>
+    <text
+       x="-253.13629"
+       id="text138"
+       y="484.9726">
+      <tspan
+         id="tspan140"
+         y="532.4726"
+         x="469.86371"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">14</tspan>
+    </text>
+    <line
+       id="line142"
+       y2="535.4726"
+       x2="481.86371"
+       y1="535.4726"
+       x1="271.86371"
+       style="fill:none;stroke:#000000" />
+    <image
+       sodipodi:absref="D:\EmpiresInSpace\Research\BuildingMaterialPlant.png"
+       xlink:href="BuildingMaterialPlant.png"
+       id="image146"
+       title="Holmium processing"
+       height="32"
+       width="32"
+       y="537.4726"
+       x="269.86371" />
+  </g>
+  <rect
+     style="fill:url(#linearGradient3862)"
+     width="220"
+     height="55"
+     x="114.48006"
+     y="1847.677"
+     title=""
+     id="rect148" />
+  <line
+     style="fill:none;stroke:#000000"
+     x1="935.73761"
+     y1="1011.8443"
+     x2="975.73761"
+     y2="1011.8443"
+     id="line160" />
+  <g
+     id="g4280"
+     transform="translate(-152.38365,1271.2044)">
+    <text
+       x="-253.13629"
+       id="text150"
+       y="484.9726">
+      <tspan
+         id="tspan152"
+         y="593.4726"
+         x="269.86371"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">Terbium processing</tspan>
+    </text>
+    <text
+       x="-253.13629"
+       id="text154"
+       y="484.9726">
+      <tspan
+         id="tspan156"
+         y="593.4726"
+         x="469.86371"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">14</tspan>
+    </text>
+    <line
+       id="line158"
+       y2="596.4726"
+       x2="481.86371"
+       y1="596.4726"
+       x1="271.86371"
+       style="fill:none;stroke:#000000" />
+    <image
+       sodipodi:absref="D:\EmpiresInSpace\Research\BuildingMaterialPlant.png"
+       xlink:href="BuildingMaterialPlant.png"
+       id="image162"
+       title="Terbium processing"
+       height="32"
+       width="32"
+       y="598.4726"
+       x="269.86371" />
+  </g>
+  <line
+     style="fill:none;stroke:#000000"
+     x1="882.32574"
+     y1="1572.5415"
+     x2="922.32574"
+     y2="1572.5415"
+     id="line176" />
+  <g
+     id="g4271"
+     transform="translate(-152.38365,1271.2044)">
+    <rect
+       id="rect164"
+       title=""
+       y="637.4726"
+       x="266.86371"
+       height="55"
+       width="220"
+       style="fill:url(#linearGradient3864)" />
+    <text
+       x="-253.13629"
+       id="text166"
+       y="484.9726">
+      <tspan
+         id="tspan168"
+         y="654.4726"
+         x="269.86371"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">Scandium processing</tspan>
+    </text>
+    <text
+       x="-253.13629"
+       id="text170"
+       y="484.9726">
+      <tspan
+         id="tspan172"
+         y="654.4726"
+         x="469.86371"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">12</tspan>
+    </text>
+    <line
+       id="line174"
+       y2="657.4726"
+       x2="481.86371"
+       y1="657.4726"
+       x1="271.86371"
+       style="fill:none;stroke:#000000" />
+    <image
+       sodipodi:absref="D:\EmpiresInSpace\Research\BuildingMaterialPlant.png"
+       xlink:href="BuildingMaterialPlant.png"
+       id="image178"
+       title="Scandium processing"
+       height="32"
+       width="32"
+       y="659.4726"
+       x="269.86371" />
+  </g>
+  <g
+     id="g4262"
+     transform="translate(-152.38365,1271.2044)">
+    <rect
+       id="rect180"
+       title=""
+       y="698.4726"
+       x="266.86371"
+       height="55"
+       width="220"
+       style="fill:url(#linearGradient3866)" />
+    <text
+       x="-253.13629"
+       id="text182"
+       y="484.9726">
+      <tspan
+         id="tspan184"
+         y="715.4726"
+         x="269.86371"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">Yttrium processing</tspan>
+    </text>
+    <text
+       x="-253.13629"
+       id="text186"
+       y="484.9726">
+      <tspan
+         id="tspan188"
+         y="715.4726"
+         x="469.86371"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">11</tspan>
+    </text>
+    <line
+       id="line190"
+       y2="718.4726"
+       x2="481.86371"
+       y1="718.4726"
+       x1="271.86371"
+       style="fill:none;stroke:#000000" />
+    <image
+       sodipodi:absref="D:\EmpiresInSpace\Research\BuildingMaterialPlant.png"
+       xlink:href="BuildingMaterialPlant.png"
+       id="image194"
+       title="Yttrium processing"
+       height="32"
+       width="32"
+       y="720.4726"
+       x="269.86371" />
+  </g>
+  <line
+     style="fill:none;stroke:#000000"
+     x1="1135.1417"
+     y1="1609.0826"
+     x2="1175.1417"
+     y2="1609.0826"
+     id="line208" />
+  <g
+     id="g4253"
+     transform="translate(-152.38365,1271.2044)">
+    <rect
+       id="rect196"
+       title=""
+       y="759.4726"
+       x="266.86371"
+       height="55"
+       width="220"
+       style="fill:url(#linearGradient3868)" />
+    <text
+       x="-253.13629"
+       id="text198"
+       y="484.9726">
+      <tspan
+         id="tspan200"
+         y="776.4726"
+         x="269.86371"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">Lutetium processing</tspan>
+    </text>
+    <text
+       x="-253.13629"
+       id="text202"
+       y="484.9726">
+      <tspan
+         id="tspan204"
+         y="776.4726"
+         x="469.86371"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">12</tspan>
+    </text>
+    <line
+       id="line206"
+       y2="779.4726"
+       x2="481.86371"
+       y1="779.4726"
+       x1="271.86371"
+       style="fill:none;stroke:#000000" />
+    <image
+       sodipodi:absref="D:\EmpiresInSpace\Research\BuildingMaterialPlant.png"
+       xlink:href="BuildingMaterialPlant.png"
+       id="image210"
+       title="Lutetium processing"
+       height="32"
+       width="32"
+       y="781.4726"
+       x="269.86371" />
+  </g>
+  <g
+     id="g4197"
+     transform="translate(1210.8577,661.26689)">
+    <rect
+       id="rect212"
+       title=""
+       y="515.4726"
+       x="526.86371"
+       height="55"
+       width="220"
+       style="fill:url(#linearGradient3870)" />
+    <text
+       x="-253.13629"
+       id="text214"
+       y="484.9726">
+      <tspan
+         id="tspan216"
+         y="532.4726"
+         x="529.86371"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">Holmium Laser I</tspan>
+    </text>
+    <text
+       x="-253.13629"
+       id="text218"
+       y="484.9726">
+      <tspan
+         id="tspan220"
+         y="532.4726"
+         x="729.86371"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">95</tspan>
+    </text>
+    <line
+       id="line222"
+       y2="535.4726"
+       x2="741.86371"
+       y1="535.4726"
+       x1="531.86371"
+       style="fill:none;stroke:#000000" />
+    <image
+       sodipodi:absref="D:\EmpiresInSpace\Research\WeaponLaser.png"
+       xlink:href="WeaponLaser.png"
+       id="image224"
+       title="Holmium Laser I"
+       height="32"
+       width="32"
+       y="537.4726"
+       x="529.86371" />
+  </g>
+  <g
+     id="g4206"
+     transform="translate(1214.1729,535.37529)">
+    <rect
+       id="rect226"
+       title=""
+       y="576.4726"
+       x="526.86371"
+       height="55"
+       width="220"
+       style="fill:url(#linearGradient3872)" />
+    <text
+       x="-253.13629"
+       id="text228"
+       y="484.9726">
+      <tspan
+         id="tspan230"
+         y="593.4726"
+         x="529.86371"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">Terbium Hull I</tspan>
+    </text>
+    <text
+       x="-253.13629"
+       id="text232"
+       y="484.9726">
+      <tspan
+         id="tspan234"
+         y="593.4726"
+         x="729.86371"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">95</tspan>
+    </text>
+    <line
+       id="line236"
+       y2="596.4726"
+       x2="741.86371"
+       y1="596.4726"
+       x1="531.86371"
+       style="fill:none;stroke:#000000" />
+    <image
+       sodipodi:absref="D:\EmpiresInSpace\Research\Hull.png"
+       xlink:href="Hull.png"
+       id="image238"
+       title="Terbium Hull I"
+       height="32"
+       width="32"
+       y="598.4726"
+       x="529.86371" />
+  </g>
+  <g
+     id="g4215"
+     transform="translate(952.06497,445.36468)">
+    <rect
+       id="rect240"
+       title=""
+       y="637.4726"
+       x="526.86371"
+       height="55"
+       width="220"
+       style="fill:url(#linearGradient3874)" />
+    <text
+       x="-253.13629"
+       id="text242"
+       y="484.9726">
+      <tspan
+         id="tspan244"
+         y="654.4726"
+         x="529.86371"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">Scandium Shield I</tspan>
+    </text>
+    <text
+       x="-253.13629"
+       id="text246"
+       y="484.9726">
+      <tspan
+         id="tspan248"
+         y="654.4726"
+         x="729.86371"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">89</tspan>
+    </text>
+    <line
+       id="line250"
+       y2="657.4726"
+       x2="741.86371"
+       y1="657.4726"
+       x1="531.86371"
+       style="fill:none;stroke:#000000" />
+    <image
+       sodipodi:absref="D:\EmpiresInSpace\Research\Shield.png"
+       xlink:href="Shield.png"
+       id="image252"
+       title="Scandium Shield I"
+       height="32"
+       width="32"
+       y="659.4726"
+       x="529.86371" />
+  </g>
+  <g
+     id="g4231"
+     transform="translate(951.75211,514.48662)">
+    <rect
+       id="rect254"
+       title=""
+       y="698.4726"
+       x="526.86371"
+       height="55"
+       width="220"
+       style="fill:url(#linearGradient3876)" />
+    <g
+       id="g4224">
+      <text
+         y="484.9726"
+         id="text256"
+         x="-253.13629">
+        <tspan
+           style="font-size:14px;fill:#000000;stroke:none"
+           font-size="14px"
+           x="529.86371"
+           y="715.4726"
+           id="tspan258">Yttrium Modules I</tspan>
+      </text>
+      <text
+         y="484.9726"
+         id="text260"
+         x="-253.13629">
+        <tspan
+           style="font-size:14px;fill:#000000;stroke:none"
+           font-size="14px"
+           x="729.86371"
+           y="715.4726"
+           id="tspan262">84</tspan>
+      </text>
+      <line
+         style="fill:none;stroke:#000000"
+         x1="531.86371"
+         y1="718.4726"
+         x2="741.86371"
+         y2="718.4726"
+         id="line264" />
+    </g>
+    <image
+       sodipodi:absref="D:\EmpiresInSpace\Research\Crew1.png"
+       xlink:href="Crew1.png"
+       id="image266"
+       title="Yttrium Crew I"
+       height="32"
+       width="32"
+       y="720.4726"
+       x="529.86371" />
+    <image
+       sodipodi:absref="D:\EmpiresInSpace\Research\Cargo.png"
+       xlink:href="Cargo.png"
+       id="image268"
+       title="Yttrium Cargo I"
+       height="32"
+       width="32"
+       y="720.4726"
+       x="564.86371" />
+    <image
+       sodipodi:absref="D:\EmpiresInSpace\Research\Hyper.png"
+       xlink:href="Hyper.png"
+       id="image270"
+       title="Yttrium Engines I"
+       height="32"
+       width="32"
+       y="720.4726"
+       x="599.86371" />
+  </g>
+  <g
+     id="g4243"
+     transform="translate(954.68961,515.74555)">
+    <rect
+       id="rect272"
+       title=""
+       y="759.4726"
+       x="526.86371"
+       height="55"
+       width="220"
+       style="fill:url(#linearGradient3878)" />
+    <text
+       x="-253.13629"
+       id="text274"
+       y="484.9726">
+      <tspan
+         id="tspan276"
+         y="776.4726"
+         x="529.86371"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">Lutetium Modules I</tspan>
+    </text>
+    <text
+       x="-253.13629"
+       id="text278"
+       y="484.9726">
+      <tspan
+         id="tspan280"
+         y="776.4726"
+         x="729.86371"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">84</tspan>
+    </text>
+    <line
+       id="line282"
+       y2="779.4726"
+       x2="741.86371"
+       y1="779.4726"
+       x1="531.86371"
+       style="fill:none;stroke:#000000" />
+    <image
+       sodipodi:absref="D:\EmpiresInSpace\Research\Reactor.png"
+       xlink:href="Reactor.png"
+       id="image284"
+       title="Lutetium Reactor I"
+       height="32"
+       width="32"
+       y="781.4726"
+       x="529.86371" />
+    <image
+       sodipodi:absref="D:\EmpiresInSpace\Research\Scanner.png"
+       xlink:href="Scanner.png"
+       id="image286"
+       title="Lutetium Scanner I"
+       height="32"
+       width="32"
+       y="781.4726"
+       x="564.86371" />
+  </g>
+  <line
+     style="fill:none;stroke:#000000"
+     x1="712.00482"
+     y1="1619.8302"
+     x2="752.00482"
+     y2="1619.8302"
+     id="line36-9" />
+  <line
+     style="fill:none;stroke:#000000"
+     x1="972.00482"
+     y1="1619.8302"
+     x2="1012.0049"
+     y2="1802.8302"
+     id="line56-2" />
+  <line
+     style="fill:none;stroke:#000000"
+     x1="972.00482"
+     y1="1619.8302"
+     x2="1012.0049"
+     y2="1863.8302"
+     id="line58-8" />
+  <line
+     style="fill:none;stroke:#000000"
+     x1="972.00482"
+     y1="1619.8302"
+     x2="1012.0049"
+     y2="1558.8302"
+     id="line60" />
+  <g
+     id="g4906"
+     transform="translate(-184.64287,311.35713)">
+    <rect
+       id="rect44"
+       title=""
+       y="962.04456"
+       x="637.862"
+       height="55"
+       width="220"
+       style="fill:url(#linearGradient4126)" />
+    <text
+       y="809.54456"
+       x="377.86206"
+       id="text46">
+      <tspan
+         id="tspan48"
+         y="979.04456"
+         x="640.862"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">Space travel</tspan>
+    </text>
+    <text
+       y="809.54456"
+       x="377.86206"
+       id="text50">
+      <tspan
+         id="tspan52"
+         y="979.04456"
+         x="847.862"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">3</tspan>
+    </text>
+    <line
+       id="line54"
+       y2="982.04456"
+       x2="852.862"
+       y1="982.04456"
+       x1="642.862"
+       style="fill:none;stroke:#000000" />
+    <image
+       sodipodi:absref="D:\EmpiresInSpace\Research\Spaceport.png"
+       xlink:href="Spaceport.png"
+       id="image62"
+       title="Shipyard"
+       height="32"
+       width="32"
+       y="984.04456"
+       x="640.862" />
+    <image
+       sodipodi:absref="D:\EmpiresInSpace\Research\Scout2XK.png"
+       xlink:href="Scout2XK.png"
+       id="image64"
+       title="Scout"
+       height="32"
+       width="32"
+       y="984.04456"
+       x="675.862" />
+  </g>
+  <line
+     style="fill:none;stroke:#000000"
+     x1="1232.005"
+     y1="1802.8302"
+     x2="1272.005"
+     y2="1802.8302"
+     id="line78-9" />
+  <line
+     style="fill:none;stroke:#000000;stroke-width:2.4321177"
+     x1="1179.6599"
+     y1="1120.5978"
+     x2="1480.176"
+     y2="1048.5563"
+     id="line234-9" />
+  <g
+     id="g4929"
+     transform="translate(334.88699,-156.00076)">
+    <rect
+       id="rect66"
+       title=""
+       y="1145.0446"
+       x="897.86206"
+       height="55"
+       width="220"
+       style="fill:url(#linearGradient4128)" />
+    <text
+       y="809.54456"
+       x="377.86206"
+       id="text68-2">
+      <tspan
+         id="tspan70-9"
+         y="1162.0446"
+         x="900.86206"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">Corvette</tspan>
+    </text>
+    <text
+       y="809.54456"
+       x="377.86206"
+       id="text72">
+      <tspan
+         id="tspan74"
+         y="1162.0446"
+         x="1100.8621"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">34</tspan>
+    </text>
+    <line
+       id="line76"
+       y2="1165.0446"
+       x2="1112.8621"
+       y1="1165.0446"
+       x1="902.86206"
+       style="fill:none;stroke:#000000" />
+    <image
+       sodipodi:absref="D:\EmpiresInSpace\Research\Corvette.png"
+       xlink:href="Corvette.png"
+       id="image80"
+       title="Corvette hull"
+       height="32"
+       width="32"
+       y="1167.0446"
+       x="900.86206" />
+  </g>
+  <line
+     style="fill:none;stroke:#000000"
+     x1="1492.005"
+     y1="1802.8302"
+     x2="1532.005"
+     y2="1802.8302"
+     id="line94-2" />
+  <line
+     style="fill:none;stroke:#000000"
+     x1="1492.005"
+     y1="1802.8302"
+     x2="1532.005"
+     y2="1863.8302"
+     id="line96-7" />
+  <g
+     id="g4948"
+     transform="translate(585.47304,160.35208)">
+    <rect
+       id="rect82"
+       title=""
+       y="1145.0446"
+       x="1157.8621"
+       height="55"
+       width="220"
+       style="fill:url(#linearGradient4130)" />
+    <text
+       y="809.54456"
+       x="377.86206"
+       id="text84-7">
+      <tspan
+         id="tspan86-9"
+         y="1162.0446"
+         x="1160.8621"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">Frigatte</tspan>
+    </text>
+    <text
+       y="809.54456"
+       x="377.86206"
+       id="text88">
+      <tspan
+         id="tspan90"
+         y="1162.0446"
+         x="1360.8621"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">60</tspan>
+    </text>
+    <line
+       id="line92"
+       y2="1165.0446"
+       x2="1372.8621"
+       y1="1165.0446"
+       x1="1162.8621"
+       style="fill:none;stroke:#000000" />
+    <image
+       sodipodi:absref="D:\EmpiresInSpace\Research\Fregatte.png"
+       xlink:href="Fregatte.png"
+       id="image98-6"
+       title="Frigatte hull"
+       height="32"
+       width="32"
+       y="1167.0446"
+       x="1160.8621" />
+  </g>
+  <g
+     id="g5014"
+     transform="translate(1123.8036,146.01784)">
+    <rect
+       id="rect100-1"
+       title=""
+       y="1145.0446"
+       x="1417.8621"
+       height="55"
+       width="220"
+       style="fill:url(#linearGradient4132)" />
+    <text
+       y="809.54456"
+       x="377.86206"
+       id="text102-7">
+      <tspan
+         id="tspan104-5"
+         y="1162.0446"
+         x="1420.8621"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">Destroyer</tspan>
+    </text>
+    <text
+       y="809.54456"
+       x="377.86206"
+       id="text106-7">
+      <tspan
+         id="tspan108-6"
+         y="1162.0446"
+         x="1613.8621"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">117</tspan>
+    </text>
+    <line
+       id="line110-4"
+       y2="1165.0446"
+       x2="1632.8621"
+       y1="1165.0446"
+       x1="1422.8621"
+       style="fill:none;stroke:#000000" />
+  </g>
+  <line
+     style="fill:none;stroke:#000000"
+     x1="1752.005"
+     y1="1802.8302"
+     x2="1792.005"
+     y2="1802.8302"
+     id="line112-6" />
+  <g
+     id="g5032"
+     transform="translate(1127.7804,172.13101)">
+    <rect
+       id="rect114"
+       title=""
+       y="1145.0446"
+       x="1677.8621"
+       height="55"
+       width="220"
+       style="fill:url(#linearGradient4134)" />
+    <text
+       y="809.54456"
+       x="377.86206"
+       id="text116-2">
+      <tspan
+         id="tspan118-1"
+         y="1162.0446"
+         x="1680.8621"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">Cruiser</tspan>
+    </text>
+    <text
+       y="809.54456"
+       x="377.86206"
+       id="text120">
+      <tspan
+         id="tspan122"
+         y="1162.0446"
+         x="1873.8621"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">209</tspan>
+    </text>
+    <line
+       id="line124"
+       y2="1165.0446"
+       x2="1892.8621"
+       y1="1165.0446"
+       x1="1682.8621"
+       style="fill:none;stroke:#000000" />
+  </g>
+  <line
+     style="fill:none;stroke:#000000"
+     x1="3044.6335"
+     y1="1324.4977"
+     x2="3084.6333"
+     y2="1324.4977"
+     id="line126-1" />
+  <line
+     style="fill:none;stroke:#000000"
+     x1="3060.0637"
+     y1="1528.6495"
+     x2="3100.0635"
+     y2="1589.6495"
+     id="line128-6" />
+  <g
+     id="g5050"
+     transform="translate(1146.7713,151.95321)">
+    <rect
+       id="rect130"
+       title=""
+       y="1145.0446"
+       x="1937.8621"
+       height="55"
+       width="220"
+       style="fill:url(#linearGradient4136)" />
+    <text
+       y="809.54456"
+       x="377.86206"
+       id="text132">
+      <tspan
+         id="tspan134"
+         y="1162.0446"
+         x="1940.8621"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">Battleship</tspan>
+    </text>
+    <text
+       y="809.54456"
+       x="377.86206"
+       id="text136">
+      <tspan
+         id="tspan138"
+         y="1162.0446"
+         x="2133.8621"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">567</tspan>
+    </text>
+    <line
+       id="line140"
+       y2="1165.0446"
+       x2="2152.8621"
+       y1="1165.0446"
+       x1="1942.8621"
+       style="fill:none;stroke:#000000" />
+  </g>
+  <line
+     style="fill:none;stroke:#000000"
+     x1="3304.6333"
+     y1="1324.4977"
+     x2="3344.6333"
+     y2="1324.4977"
+     id="line142-9" />
+  <g
+     id="g5058"
+     transform="translate(1146.7713,151.95321)">
+    <rect
+       id="rect144"
+       title=""
+       y="1145.0446"
+       x="2197.8621"
+       height="55"
+       width="220"
+       style="fill:url(#linearGradient4138)" />
+    <text
+       y="809.54456"
+       x="377.86206"
+       id="text146-3">
+      <tspan
+         id="tspan148-6"
+         y="1162.0446"
+         x="2200.8621"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">Superbattleship</tspan>
+    </text>
+    <text
+       y="809.54456"
+       x="377.86206"
+       id="text150-0">
+      <tspan
+         id="tspan152-5"
+         y="1162.0446"
+         x="2385.8621"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">2000</tspan>
+    </text>
+    <line
+       id="line154"
+       y2="1165.0446"
+       x2="2412.8621"
+       y1="1165.0446"
+       x1="2202.8621"
+       style="fill:none;stroke:#000000" />
+  </g>
+  <line
+     style="fill:none;stroke:#000000"
+     x1="3564.6333"
+     y1="1324.4977"
+     x2="3604.6333"
+     y2="1385.4977"
+     id="line156" />
+  <g
+     id="g4938"
+     transform="translate(-187.48118,31.717964)">
+    <rect
+       id="rect158"
+       title=""
+       y="1206.0446"
+       x="897.86206"
+       height="55"
+       width="220"
+       style="fill:url(#linearGradient4140)" />
+    <text
+       y="809.54456"
+       x="377.86206"
+       id="text160">
+      <tspan
+         id="tspan162"
+         y="1223.0446"
+         x="900.86206"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">Outpost</tspan>
+    </text>
+    <text
+       y="809.54456"
+       x="377.86206"
+       id="text164">
+      <tspan
+         id="tspan166"
+         y="1223.0446"
+         x="1100.8621"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">34</tspan>
+    </text>
+    <line
+       id="line168-0"
+       y2="1226.0446"
+       x2="1112.8621"
+       y1="1226.0446"
+       x1="902.86206"
+       style="fill:none;stroke:#000000" />
+    <image
+       sodipodi:absref="D:\EmpiresInSpace\Research\SpaceStation0_1_60.png"
+       xlink:href="SpaceStation0_1_60.png"
+       id="image170-3"
+       title="Outpost hull"
+       height="32"
+       width="32"
+       y="1228.0446"
+       x="900.86206" />
+    <image
+       sodipodi:absref="D:\EmpiresInSpace\Research\SpaceStation0_1_60.png"
+       xlink:href="SpaceStation0_1_60.png"
+       id="image172"
+       title="Outpost"
+       height="32"
+       width="32"
+       y="1228.0446"
+       x="935.86206" />
+  </g>
+  <g
+     id="g5022"
+     transform="translate(581.79297,-253.97659)">
+    <rect
+       id="rect174"
+       title=""
+       y="1206.0446"
+       x="1417.8621"
+       height="55"
+       width="220"
+       style="fill:url(#linearGradient4142)" />
+    <text
+       y="809.54456"
+       x="377.86206"
+       id="text176">
+      <tspan
+         id="tspan178"
+         y="1223.0446"
+         x="1420.8621"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">Space station</tspan>
+    </text>
+    <text
+       y="809.54456"
+       x="377.86206"
+       id="text180">
+      <tspan
+         id="tspan182"
+         y="1223.0446"
+         x="1613.8621"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">100</tspan>
+    </text>
+    <line
+       id="line184-3"
+       y2="1226.0446"
+       x2="1632.8621"
+       y1="1226.0446"
+       x1="1422.8621"
+       style="fill:none;stroke:#000000" />
+    <image
+       sodipodi:absref="D:\EmpiresInSpace\Research\SpaceStation1_1_60.png"
+       xlink:href="SpaceStation1_1_60.png"
+       id="image186-3"
+       title="Space station hull"
+       height="32"
+       width="32"
+       y="1228.0446"
+       x="1420.8621" />
+    <image
+       sodipodi:absref="D:\EmpiresInSpace\Research\SpaceStation1_1_60.png"
+       xlink:href="SpaceStation1_1_60.png"
+       id="image188"
+       title="Space station"
+       height="32"
+       width="32"
+       y="1228.0446"
+       x="1455.8621" />
+  </g>
+  <g
+     id="g5040"
+     transform="translate(600.78385,-197.00399)">
+    <rect
+       id="rect190"
+       title=""
+       y="1206.0446"
+       x="1937.8621"
+       height="55"
+       width="220"
+       style="fill:url(#linearGradient4144)" />
+    <text
+       y="809.54456"
+       x="377.86206"
+       id="text192">
+      <tspan
+         id="tspan194"
+         y="1223.0446"
+         x="1940.8621"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">Star base</tspan>
+    </text>
+    <text
+       y="809.54456"
+       x="377.86206"
+       id="text196">
+      <tspan
+         id="tspan198"
+         y="1223.0446"
+         x="2133.8621"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">267</tspan>
+    </text>
+    <line
+       id="line200"
+       y2="1226.0446"
+       x2="2152.8621"
+       y1="1226.0446"
+       x1="1942.8621"
+       style="fill:none;stroke:#000000" />
+    <image
+       sodipodi:absref="D:\EmpiresInSpace\Research\SpaceStation2_1_60.png"
+       xlink:href="SpaceStation2_1_60.png"
+       id="image202"
+       title="Star fortress hull"
+       height="32"
+       width="32"
+       y="1228.0446"
+       x="1940.8621" />
+    <image
+       sodipodi:absref="D:\EmpiresInSpace\Research\SpaceStation2_1_60.png"
+       xlink:href="SpaceStation2_1_60.png"
+       id="image204"
+       title="Starbase"
+       height="32"
+       width="32"
+       y="1228.0446"
+       x="1975.8621" />
+  </g>
+  <g
+     id="g5066"
+     transform="translate(343.2202,41.56879)">
+    <rect
+       id="rect206"
+       title=""
+       y="1206.0446"
+       x="2457.8621"
+       height="55"
+       width="220"
+       style="fill:url(#linearGradient4146)" />
+    <text
+       y="809.54456"
+       x="377.86206"
+       id="text208-9">
+      <tspan
+         id="tspan210-9"
+         y="1223.0446"
+         x="2460.8621"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">Star fortress</tspan>
+    </text>
+    <text
+       y="809.54456"
+       x="377.86206"
+       id="text212">
+      <tspan
+         id="tspan214"
+         y="1223.0446"
+         x="2653.8621"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">800</tspan>
+    </text>
+    <line
+       id="line216"
+       y2="1226.0446"
+       x2="2672.8621"
+       y1="1226.0446"
+       x1="2462.8621"
+       style="fill:none;stroke:#000000" />
+    <image
+       sodipodi:absref="D:\EmpiresInSpace\Research\SpaceStation3_1_60.png"
+       xlink:href="SpaceStation3_1_60.png"
+       id="image218"
+       title="Star fortress hull"
+       height="32"
+       width="32"
+       y="1228.0446"
+       x="2460.8621" />
+    <image
+       sodipodi:absref="D:\EmpiresInSpace\Research\SpaceStation3_1_60.png"
+       xlink:href="SpaceStation3_1_60.png"
+       id="image220"
+       title="Star fortress"
+       height="32"
+       width="32"
+       y="1228.0446"
+       x="2495.8621" />
+  </g>
+  <line
+     style="fill:none;stroke:#000000"
+     x1="1232.005"
+     y1="1558.8302"
+     x2="1272.005"
+     y2="1467.3302"
+     id="line234" />
+  <line
+     style="fill:none;stroke:#000000"
+     x1="1232.005"
+     y1="1558.8302"
+     x2="1272.005"
+     y2="1650.3304"
+     id="line236-9" />
+  <line
+     style="fill:none;stroke:#000000"
+     x1="930.52496"
+     y1="1333.3136"
+     x2="970.52496"
+     y2="1363.8136"
+     id="line238" />
+  <line
+     style="fill:none;stroke:#000000"
+     x1="606.49323"
+     y1="1541.3865"
+     x2="646.49323"
+     y2="1571.8865"
+     id="line240" />
+  <line
+     style="fill:none;stroke:#000000"
+     x1="1232.005"
+     y1="1558.8302"
+     x2="1272.005"
+     y2="1711.3302"
+     id="line242" />
+  <line
+     style="fill:none;stroke:#000000"
+     x1="1232.005"
+     y1="1558.8302"
+     x2="1792.005"
+     y2="1558.8302"
+     id="line244" />
+  <g
+     id="g4916"
+     transform="translate(-442.52697,116.34533)">
+    <rect
+       id="rect222"
+       title=""
+       y="901.04456"
+       x="897.86206"
+       height="55"
+       width="220"
+       style="fill:url(#linearGradient4148)" />
+    <text
+       y="809.54456"
+       x="377.86206"
+       id="text224-8">
+      <tspan
+         id="tspan226-9"
+         y="918.04456"
+         x="900.86206"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">Modules</tspan>
+    </text>
+    <text
+       y="809.54456"
+       x="377.86206"
+       id="text228-1">
+      <tspan
+         id="tspan230-7"
+         y="918.04456"
+         x="1107.8621"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">6</tspan>
+    </text>
+    <line
+       id="line232"
+       y2="921.04456"
+       x2="1112.8621"
+       y1="921.04456"
+       x1="902.86206"
+       style="fill:none;stroke:#000000" />
+    <image
+       sodipodi:absref="D:\EmpiresInSpace\Research\ModulePlant.png"
+       xlink:href="ModulePlant.png"
+       id="image246"
+       title="Module plant"
+       height="32"
+       width="32"
+       y="923.04456"
+       x="900.86206" />
+    <image
+       sodipodi:absref="D:\EmpiresInSpace\Research\Crew1.png"
+       xlink:href="Crew1.png"
+       id="image248"
+       title="Crew I"
+       height="32"
+       width="32"
+       y="923.04456"
+       x="935.86206" />
+    <image
+       sodipodi:absref="D:\EmpiresInSpace\Research\Reactor.png"
+       xlink:href="Reactor.png"
+       id="image250"
+       title="Reactor I"
+       height="32"
+       width="32"
+       y="923.04456"
+       x="970.86206" />
+    <image
+       sodipodi:absref="D:\EmpiresInSpace\Research\Impuls.png"
+       xlink:href="Impuls.png"
+       id="image252-5"
+       title="System engines I"
+       height="32"
+       width="32"
+       y="923.04456"
+       x="1005.8621" />
+    <image
+       sodipodi:absref="D:\EmpiresInSpace\Research\Hyper.png"
+       xlink:href="Hyper.png"
+       id="image254"
+       title="Hyper engines I"
+       height="32"
+       width="32"
+       y="923.04456"
+       x="1040.8621" />
+  </g>
+  <g
+     id="g4996"
+     transform="translate(-442.52697,184.77994)">
+    <rect
+       id="rect256"
+       title=""
+       y="809.54456"
+       x="1157.8621"
+       height="55"
+       width="220"
+       style="fill:url(#linearGradient4150)" />
+    <text
+       y="809.54456"
+       x="377.86206"
+       id="text258">
+      <tspan
+         id="tspan260"
+         y="826.54456"
+         x="1160.8621"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">Storage</tspan>
+    </text>
+    <text
+       y="809.54456"
+       x="377.86206"
+       id="text262">
+      <tspan
+         id="tspan264"
+         y="826.54456"
+         x="1367.8621"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">8</tspan>
+    </text>
+    <line
+       id="line266"
+       y2="829.54456"
+       x2="1372.8621"
+       y1="829.54456"
+       x1="1162.8621"
+       style="fill:none;stroke:#000000" />
+    <image
+       sodipodi:absref="D:\EmpiresInSpace\Research\Cargo.png"
+       xlink:href="Cargo.png"
+       id="image270-1"
+       title="Cargo I"
+       height="32"
+       width="32"
+       y="831.54456"
+       x="1160.8621" />
+  </g>
+  <line
+     style="fill:none;stroke:#000000"
+     x1="1492.005"
+     y1="1650.3304"
+     x2="2052.0049"
+     y2="1650.3304"
+     id="line284" />
+  <g
+     id="g4966"
+     transform="translate(-443.7139,-67.505164)">
+    <rect
+       id="rect272-9"
+       title=""
+       y="992.54456"
+       x="1157.8621"
+       height="55"
+       width="220"
+       style="fill:url(#linearGradient4152)" />
+    <text
+       y="809.54456"
+       x="377.86206"
+       id="text274-8">
+      <tspan
+         id="tspan276-7"
+         y="1009.5446"
+         x="1160.8621"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">Scanner</tspan>
+    </text>
+    <text
+       y="809.54456"
+       x="377.86206"
+       id="text278-7">
+      <tspan
+         id="tspan280-8"
+         y="1009.5446"
+         x="1367.8621"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">7</tspan>
+    </text>
+    <line
+       id="line282-7"
+       y2="1012.5446"
+       x2="1372.8621"
+       y1="1012.5446"
+       x1="1162.8621"
+       style="fill:none;stroke:#000000" />
+    <image
+       sodipodi:absref="D:\EmpiresInSpace\Research\Scanner.png"
+       xlink:href="Scanner.png"
+       id="image286-0"
+       title="Scanner I"
+       height="32"
+       width="32"
+       y="1014.5446"
+       x="1160.8621" />
+  </g>
+  <line
+     style="fill:none;stroke:#000000"
+     x1="1492.005"
+     y1="1589.3302"
+     x2="2052.0049"
+     y2="1589.3302"
+     id="line300" />
+  <g
+     id="g4975"
+     transform="translate(61.19797,312.87971)">
+    <rect
+       id="rect288"
+       title=""
+       y="931.54456"
+       x="1157.8621"
+       height="55"
+       width="220"
+       style="fill:url(#linearGradient4154)" />
+    <text
+       y="809.54456"
+       x="377.86206"
+       id="text290">
+      <tspan
+         id="tspan292"
+         y="948.54456"
+         x="1160.8621"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">Ship defenses</tspan>
+    </text>
+    <text
+       y="809.54456"
+       x="377.86206"
+       id="text294">
+      <tspan
+         id="tspan296"
+         y="948.54456"
+         x="1360.8621"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">14</tspan>
+    </text>
+    <line
+       id="line298"
+       y2="951.54456"
+       x2="1372.8621"
+       y1="951.54456"
+       x1="1162.8621"
+       style="fill:none;stroke:#000000" />
+    <image
+       sodipodi:absref="D:\EmpiresInSpace\Research\Hull.png"
+       xlink:href="Hull.png"
+       id="image302"
+       title="Hull I"
+       height="32"
+       width="32"
+       y="953.54456"
+       x="1160.8621" />
+    <image
+       sodipodi:absref="D:\EmpiresInSpace\Research\Shield.png"
+       xlink:href="Shield.png"
+       id="image304"
+       title="Shield I"
+       height="32"
+       width="32"
+       y="953.54456"
+       x="1195.8621" />
+  </g>
+  <line
+     style="fill:none;stroke:#000000;stroke-width:0.99832934"
+     x1="1698.5306"
+     y1="1168.7205"
+     x2="2256.6614"
+     y2="1168.7205"
+     id="line318" />
+  <g
+     id="g4985"
+     transform="translate(62.384899,437.15965)">
+    <rect
+       id="rect306"
+       title=""
+       y="870.54456"
+       x="1157.8621"
+       height="55"
+       width="220"
+       style="fill:url(#linearGradient4156)" />
+    <text
+       y="809.54456"
+       x="377.86206"
+       id="text308">
+      <tspan
+         id="tspan310"
+         y="887.54456"
+         x="1160.8621"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">Ship weapons</tspan>
+    </text>
+    <text
+       y="809.54456"
+       x="377.86206"
+       id="text312">
+      <tspan
+         id="tspan314"
+         y="887.54456"
+         x="1360.8621"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">14</tspan>
+    </text>
+    <line
+       id="line316"
+       y2="890.54456"
+       x2="1372.8621"
+       y1="890.54456"
+       x1="1162.8621"
+       style="fill:none;stroke:#000000" />
+    <image
+       sodipodi:absref="D:\EmpiresInSpace\Research\WeaponLaser.png"
+       xlink:href="WeaponLaser.png"
+       id="image320"
+       title="Laser I"
+       height="32"
+       width="32"
+       y="892.54456"
+       x="1160.8621" />
+    <image
+       sodipodi:absref="D:\EmpiresInSpace\Research\WeaponRocket.png"
+       xlink:href="WeaponRocket.png"
+       id="image322"
+       title="Missile I"
+       height="32"
+       width="32"
+       y="892.54456"
+       x="1195.8621" />
+    <image
+       sodipodi:absref="D:\EmpiresInSpace\Research\WeaponMassDriver.png"
+       xlink:href="WeaponMassDriver.png"
+       id="image324"
+       title="Mass driver  I"
+       height="32"
+       width="32"
+       y="892.54456"
+       x="1230.8621" />
+  </g>
+  <line
+     style="fill:none;stroke:#000000"
+     x1="1492.005"
+     y1="1711.3302"
+     x2="1532.005"
+     y2="1711.3302"
+     id="line338" />
+  <g
+     id="g4957"
+     transform="translate(-443.7139,3.5870559)">
+    <rect
+       id="rect326"
+       title=""
+       y="1053.5446"
+       x="1157.8621"
+       height="55"
+       width="220"
+       style="fill:url(#linearGradient4158)" />
+    <text
+       y="809.54456"
+       x="377.86206"
+       id="text328">
+      <tspan
+         id="tspan330"
+         y="1070.5446"
+         x="1160.8621"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">Colonizing module</tspan>
+    </text>
+    <text
+       y="809.54456"
+       x="377.86206"
+       id="text332">
+      <tspan
+         id="tspan334"
+         y="1070.5446"
+         x="1360.8621"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">14</tspan>
+    </text>
+    <line
+       id="line336"
+       y2="1073.5446"
+       x2="1372.8621"
+       y1="1073.5446"
+       x1="1162.8621"
+       style="fill:none;stroke:#000000" />
+    <image
+       sodipodi:absref="D:\EmpiresInSpace\Research\Engine.png"
+       xlink:href="Engine.png"
+       id="image340"
+       title="Colonizing module"
+       height="32"
+       width="32"
+       y="1075.5446"
+       x="1160.8621" />
+  </g>
+  <g
+     id="g5005"
+     transform="translate(842.91741,-137.65752)">
+    <rect
+       id="rect342"
+       title=""
+       y="1053.5446"
+       x="1417.8621"
+       height="55"
+       width="220"
+       style="fill:url(#linearGradient4160)" />
+    <text
+       y="809.54456"
+       x="377.86206"
+       id="text344">
+      <tspan
+         id="tspan346"
+         y="1070.5446"
+         x="1420.8621"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">Colonizing module II</tspan>
+    </text>
+    <text
+       y="809.54456"
+       x="377.86206"
+       id="text348">
+      <tspan
+         id="tspan350"
+         y="1070.5446"
+         x="1613.8621"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">250</tspan>
+    </text>
+    <line
+       id="line352"
+       y2="1073.5446"
+       x2="1632.8621"
+       y1="1073.5446"
+       x1="1422.8621"
+       style="fill:none;stroke:#000000" />
+    <image
+       sodipodi:absref="D:\EmpiresInSpace\Research\Engine.png"
+       xlink:href="Engine.png"
+       id="image354"
+       title="Colonizing module"
+       height="32"
+       width="32"
+       y="1075.5446"
+       x="1420.8621" />
+  </g>
+  <line
+     style="fill:none;stroke:#000000"
+     x1="2012.005"
+     y1="1558.8302"
+     x2="2052.0049"
+     y2="1589.3302"
+     id="line368" />
+  <line
+     style="fill:none;stroke:#000000"
+     x1="2758.5835"
+     y1="1317.8835"
+     x2="2798.5835"
+     y2="1287.3835"
+     id="line370" />
+  <g
+     id="g5115"
+     transform="translate(323.52204,113.69796)">
+    <rect
+       id="rect356"
+       title=""
+       y="901.04456"
+       x="1677.8621"
+       height="55"
+       width="220"
+       style="fill:url(#linearGradient4162)" />
+    <text
+       y="809.54456"
+       x="377.86206"
+       id="text358">
+      <tspan
+         id="tspan360"
+         y="918.04456"
+         x="1680.8621"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">Modules II</tspan>
+    </text>
+    <text
+       y="809.54456"
+       x="377.86206"
+       id="text362">
+      <tspan
+         id="tspan364"
+         y="918.04456"
+         x="1880.8621"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">58</tspan>
+    </text>
+    <line
+       id="line366"
+       y2="921.04456"
+       x2="1892.8621"
+       y1="921.04456"
+       x1="1682.8621"
+       style="fill:none;stroke:#000000" />
+    <image
+       sodipodi:absref="D:\EmpiresInSpace\Research\Crew1.png"
+       xlink:href="Crew1.png"
+       id="image372"
+       title="Crew II"
+       height="32"
+       width="32"
+       y="923.04456"
+       x="1680.8621" />
+    <image
+       sodipodi:absref="D:\EmpiresInSpace\Research\Reactor.png"
+       xlink:href="Reactor.png"
+       id="image374"
+       title="Reactor II"
+       height="32"
+       width="32"
+       y="923.04456"
+       x="1715.8621" />
+    <image
+       sodipodi:absref="D:\EmpiresInSpace\Research\Impuls.png"
+       xlink:href="Impuls.png"
+       id="image376"
+       title="System engines II"
+       height="32"
+       width="32"
+       y="923.04456"
+       x="1750.8621" />
+    <image
+       sodipodi:absref="D:\EmpiresInSpace\Research\Hyper.png"
+       xlink:href="Hyper.png"
+       id="image378"
+       title="Hyper engines II"
+       height="32"
+       width="32"
+       y="923.04456"
+       x="1785.8621" />
+  </g>
+  <g
+     id="g5106"
+     transform="translate(325.41626,236.22519)">
+    <rect
+       id="rect380"
+       title=""
+       y="809.54456"
+       x="1937.8621"
+       height="55"
+       width="220"
+       style="fill:url(#linearGradient4164)" />
+    <text
+       y="809.54456"
+       x="377.86206"
+       id="text382">
+      <tspan
+         id="tspan384"
+         y="826.54456"
+         x="1940.8621"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">Cargo II</tspan>
+    </text>
+    <text
+       y="809.54456"
+       x="377.86206"
+       id="text386">
+      <tspan
+         id="tspan388"
+         y="826.54456"
+         x="2140.8621"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">45</tspan>
+    </text>
+    <line
+       id="line390"
+       y2="829.54456"
+       x2="2152.8621"
+       y1="829.54456"
+       x1="1942.8621"
+       style="fill:none;stroke:#000000" />
+    <image
+       sodipodi:absref="D:\EmpiresInSpace\Research\Cargo.png"
+       xlink:href="Cargo.png"
+       id="image392"
+       title="Cargo II"
+       height="32"
+       width="32"
+       y="831.54456"
+       x="1940.8621" />
+  </g>
+  <g
+     id="g5076"
+     transform="translate(853.03651,-76.558362)">
+    <rect
+       id="rect394"
+       title=""
+       y="992.54456"
+       x="1937.8621"
+       height="55"
+       width="220"
+       style="fill:url(#linearGradient4166)" />
+    <text
+       y="809.54456"
+       x="377.86206"
+       id="text396">
+      <tspan
+         id="tspan398"
+         y="1009.5446"
+         x="1940.8621"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">Scanner II</tspan>
+    </text>
+    <text
+       y="809.54456"
+       x="377.86206"
+       id="text400">
+      <tspan
+         id="tspan402"
+         y="1009.5446"
+         x="2140.8621"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">59</tspan>
+    </text>
+    <line
+       id="line404"
+       y2="1012.5446"
+       x2="2152.8621"
+       y1="1012.5446"
+       x1="1942.8621"
+       style="fill:none;stroke:#000000" />
+    <image
+       sodipodi:absref="D:\EmpiresInSpace\Research\Scanner.png"
+       xlink:href="Scanner.png"
+       id="image406"
+       title="Scanner II"
+       height="32"
+       width="32"
+       y="1014.5446"
+       x="1940.8621" />
+  </g>
+  <g
+     id="g5085"
+     transform="translate(604.26028,236.50895)">
+    <rect
+       id="rect408"
+       title=""
+       y="931.54456"
+       x="1937.8621"
+       height="55"
+       width="220"
+       style="fill:url(#linearGradient4168)" />
+    <text
+       y="809.54456"
+       x="377.86206"
+       id="text410">
+      <tspan
+         id="tspan412"
+         y="948.54456"
+         x="1940.8621"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">Ship Defenses II</tspan>
+    </text>
+    <text
+       y="809.54456"
+       x="377.86206"
+       id="text414">
+      <tspan
+         id="tspan416"
+         y="948.54456"
+         x="2140.8621"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">87</tspan>
+    </text>
+    <line
+       id="line418"
+       y2="951.54456"
+       x2="2152.8621"
+       y1="951.54456"
+       x1="1942.8621"
+       style="fill:none;stroke:#000000" />
+    <image
+       sodipodi:absref="D:\EmpiresInSpace\Research\Hull.png"
+       xlink:href="Hull.png"
+       id="image420"
+       title="Hull II"
+       height="32"
+       width="32"
+       y="953.54456"
+       x="1940.8621" />
+    <image
+       sodipodi:absref="D:\EmpiresInSpace\Research\Shield.png"
+       xlink:href="Shield.png"
+       id="image422"
+       title="Shield II"
+       height="32"
+       width="32"
+       y="953.54456"
+       x="1975.8621" />
+  </g>
+  <g
+     id="g5095"
+     transform="translate(600.90314,203.08152)">
+    <rect
+       id="rect424"
+       title=""
+       y="870.54456"
+       x="1937.8621"
+       height="55"
+       width="220"
+       style="fill:url(#linearGradient4170)" />
+    <text
+       y="809.54456"
+       x="377.86206"
+       id="text426">
+      <tspan
+         id="tspan428"
+         y="887.54456"
+         x="1940.8621"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">Ship Weapons II</tspan>
+    </text>
+    <text
+       y="809.54456"
+       x="377.86206"
+       id="text430">
+      <tspan
+         id="tspan432"
+         y="887.54456"
+         x="2140.8621"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">87</tspan>
+    </text>
+    <line
+       id="line434"
+       y2="890.54456"
+       x2="2152.8621"
+       y1="890.54456"
+       x1="1942.8621"
+       style="fill:none;stroke:#000000" />
+    <image
+       sodipodi:absref="D:\EmpiresInSpace\Research\WeaponLaser.png"
+       xlink:href="WeaponLaser.png"
+       id="image436"
+       title="Laser II"
+       height="32"
+       width="32"
+       y="892.54456"
+       x="1940.8621" />
+    <image
+       sodipodi:absref="D:\EmpiresInSpace\Research\WeaponRocket.png"
+       xlink:href="WeaponRocket.png"
+       id="image438"
+       title="Missile II"
+       height="32"
+       width="32"
+       y="892.54456"
+       x="1975.8621" />
+    <image
+       sodipodi:absref="D:\EmpiresInSpace\Research\WeaponMassDriver.png"
+       xlink:href="WeaponMassDriver.png"
+       id="image440"
+       title="Mass driver  II"
+       height="32"
+       width="32"
+       y="892.54456"
+       x="2010.8621" />
+  </g>
+  <line
+     style="fill:none;stroke:#000000"
+     x1="2466.5156"
+     y1="1758.3119"
+     x2="2506.5156"
+     y2="1697.3119"
+     id="line38-4" />
+  <line
+     style="fill:none;stroke:#000000"
+     x1="2771.437"
+     y1="1609.8555"
+     x2="2811.437"
+     y2="1762.3555"
+     id="line40-6" />
+  <line
+     style="fill:none;stroke:#000000"
+     x1="1813.7043"
+     y1="696.01019"
+     x2="1853.7043"
+     y2="757.01019"
+     id="line42-8" />
+  <line
+     style="fill:none;stroke:#000000;stroke-width:1.53019333"
+     x1="676.33929"
+     y1="1205.8497"
+     x2="962.33124"
+     y2="1235.8153"
+     id="line236-9-4-8" />
+  <g
+     id="g5379"
+     transform="translate(-1540.0888,705.59906)">
+    <rect
+       id="rect50"
+       title=""
+       y="424.49994"
+       x="2253.3826"
+       height="55"
+       width="220"
+       style="fill:url(#linearGradient3697)" />
+    <text
+       y="424.49994"
+       x="1993.3824"
+       id="text52-4">
+      <tspan
+         id="tspan54-2"
+         y="441.49994"
+         x="2256.3826"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">Water power plant</tspan>
+    </text>
+    <text
+       y="424.49994"
+       x="1993.3824"
+       id="text56">
+      <tspan
+         id="tspan58"
+         y="441.49994"
+         x="2463.3826"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">5</tspan>
+    </text>
+    <line
+       id="line60-2"
+       y2="444.49994"
+       x2="2468.3826"
+       y1="444.49994"
+       x1="2258.3826"
+       style="fill:none;stroke:#000000" />
+    <image
+       sodipodi:absref="D:\EmpiresInSpace\Research\SolarPanels.png"
+       xlink:href="SolarPanels.png"
+       id="image62-2"
+       title="Water power plant"
+       height="32"
+       width="32"
+       y="446.49994"
+       x="2256.3826" />
+  </g>
+  <line
+     style="fill:none;stroke:#000000;stroke-width:1.42049634"
+     x1="3010.4495"
+     y1="942.8327"
+     x2="3050.157"
+     y2="1004.8295"
+     id="line76-3" />
+  <g
+     id="g5388"
+     transform="translate(-511.72927,502.65886)">
+    <rect
+       id="rect64"
+       title=""
+       y="515.99994"
+       x="2253.3826"
+       height="55"
+       width="220"
+       style="fill:url(#linearGradient3699)" />
+    <text
+       y="424.49994"
+       x="1993.3824"
+       id="text66">
+      <tspan
+         id="tspan68"
+         y="532.99994"
+         x="2256.3826"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">Refinery</tspan>
+    </text>
+    <text
+       y="424.49994"
+       x="1993.3824"
+       id="text70-6">
+      <tspan
+         id="tspan72-3"
+         y="532.99994"
+         x="2463.3826"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">4</tspan>
+    </text>
+    <line
+       id="line74-5"
+       y2="535.99994"
+       x2="2468.3826"
+       y1="535.99994"
+       x1="2258.3826"
+       style="fill:none;stroke:#000000" />
+    <image
+       sodipodi:absref="D:\EmpiresInSpace\Research\OilWell2.png"
+       xlink:href="OilWell2.png"
+       id="image78"
+       title="Fuel generation"
+       height="32"
+       width="32"
+       y="537.99994"
+       x="2256.3826" />
+    <image
+       sodipodi:absref="D:\EmpiresInSpace\Research\AssemblyPlant.png"
+       xlink:href="AssemblyPlant.png"
+       id="image80-0"
+       title="Synthetic materials plant"
+       height="32"
+       width="32"
+       y="537.99994"
+       x="2291.3826" />
+  </g>
+  <line
+     style="fill:none;stroke:#000000"
+     x1="2236.3762"
+     y1="793.69867"
+     x2="2276.3762"
+     y2="793.69867"
+     id="line94-7" />
+  <g
+     id="g5398"
+     transform="translate(-249.27313,435.25096)">
+    <rect
+       id="rect82-9"
+       title=""
+       y="546.49994"
+       x="2513.3826"
+       height="55"
+       width="220"
+       style="fill:url(#linearGradient3701)" />
+    <text
+       y="424.49994"
+       x="1993.3824"
+       id="text84-4">
+      <tspan
+         id="tspan86-6"
+         y="563.49994"
+         x="2516.3826"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">Power plant</tspan>
+    </text>
+    <text
+       y="424.49994"
+       x="1993.3824"
+       id="text88-3">
+      <tspan
+         id="tspan90-1"
+         y="563.49994"
+         x="2716.3826"
          font-size="14px"
          style="font-size:14px;fill:#000000;stroke:none">22</tspan>
     </text>
     <line
-       id="line3634"
-       y2="142"
-       x2="735"
-       y1="142"
-       x1="525"
+       id="line92-9"
+       y2="566.49994"
+       x2="2728.3826"
+       y1="566.49994"
+       x1="2518.3826"
        style="fill:none;stroke:#000000" />
     <image
-       sodipodi:absref="C:\Users\Andi\Desktop\Spacegame\ResearchSVG\PowerPlant.png"
+       sodipodi:absref="D:\EmpiresInSpace\Research\PowerPlant.png"
        xlink:href="PowerPlant.png"
-       x="523"
-       y="144"
-       width="32"
+       id="image96"
+       title="Power plant"
        height="32"
-       title="Kraftwerk"
-       id="image3638" />
+       width="32"
+       y="568.49994"
+       x="2516.3826" />
   </g>
   <g
-     id="g3435"
-     transform="translate(271.8068,109.19749)">
+     id="g5432"
+     transform="translate(-774.28765,318.61391)">
     <rect
-       id="rect3640"
+       id="rect98"
        title=""
-       y="335.5"
-       x="780"
+       y="759.99994"
+       x="2773.3826"
        height="55"
        width="220"
-       style="fill:url(#linearGradient3444)" />
+       style="fill:url(#linearGradient3703)" />
     <text
-       id="text3642">
+       y="424.49994"
+       x="1993.3824"
+       id="text100-2">
       <tspan
-         id="tspan3644"
-         y="352.5"
-         x="783"
+         id="tspan102-5"
+         y="776.99994"
+         x="2776.3826"
          font-size="14px"
-         style="font-size:14px;fill:#000000;stroke:none">Kommunikationszentrale</tspan>
+         style="font-size:14px;fill:#000000;stroke:none">Communication center</tspan>
     </text>
     <text
-       id="text3646">
+       y="424.49994"
+       x="1993.3824"
+       id="text104">
       <tspan
-         id="tspan3648"
-         y="352.5"
-         x="983"
+         id="tspan106"
+         y="776.99994"
+         x="2976.3826"
          font-size="14px"
          style="font-size:14px;fill:#000000;stroke:none">29</tspan>
     </text>
     <line
-       id="line3650"
-       y2="355.5"
-       x2="995"
-       y1="355.5"
-       x1="785"
+       id="line108"
+       y2="779.99994"
+       x2="2988.3826"
+       y1="779.99994"
+       x1="2778.3826"
        style="fill:none;stroke:#000000" />
     <image
-       sodipodi:absref="C:\Users\Andi\Desktop\Spacegame\ResearchSVG\CommCenter.png"
+       sodipodi:absref="D:\EmpiresInSpace\Research\CommCenter.png"
        xlink:href="CommCenter.png"
-       x="783"
-       y="357.5"
-       width="32"
+       id="image110"
+       title="Communication center"
        height="32"
-       title="Kommunikationszentrale"
-       id="image3652" />
+       width="32"
+       y="781.99994"
+       x="2776.3826" />
   </g>
-  <rect
-     fill="url(#gradDarkGreen1)"
-     width="220px"
-     height="55px"
-     x="260"
-     y="305"
-     title=""
-     id="rect3654" />
-  <text
-     id="text3656">
-    <tspan
-       font-size="14px"
-       fill="rgb(0,0,0)"
-       stroke="none"
-       x="263"
-       y="322"
-       id="tspan3658">�kosystem Anpassung I</tspan>
-  </text>
-  <text
-     id="text3660">
-    <tspan
-       font-size="14px"
-       fill="rgb(0,0,0)"
-       stroke="none"
-       x="470"
-       y="322"
-       id="tspan3662">2</tspan>
-  </text>
-  <line
-     fill="none"
-     stroke="rgb(0,0,0)"
-     x1="265"
-     y1="325"
-     x2="475"
-     y2="325"
-     id="line3664" />
-  <image
-     sodipodi:absref="C:\Users\Andi\Desktop\Spacegame\ResearchSVG\Farm.png"
-     xlink:href="Farm.png"
-     id="image3666"
-     title="Landwirtschaft-Sektor"
-     height="32"
-     width="32"
-     y="327"
-     x="263" />
-  <image
-     sodipodi:absref="C:\Users\Andi\Desktop\Spacegame\ResearchSVG\Houses.png"
-     xlink:href="Houses.png"
-     id="image3668"
-     title="H�user"
-     height="32"
-     width="32"
-     y="327"
-     x="298" />
-  <rect
-     fill="url(#gradDarkGreen1)"
-     width="220px"
-     height="55px"
-     x="520"
-     y="244"
-     title=""
-     id="rect3670" />
-  <text
-     id="text3672">
-    <tspan
-       font-size="14px"
-       fill="rgb(0,0,0)"
-       stroke="none"
-       x="523"
-       y="261"
-       id="tspan3674">Verb. Baumaterial</tspan>
-  </text>
-  <text
-     id="text3676">
-    <tspan
-       font-size="14px"
-       fill="rgb(0,0,0)"
-       stroke="none"
-       x="723"
-       y="261"
-       id="tspan3678">29</tspan>
-  </text>
-  <line
-     fill="none"
-     stroke="rgb(0,0,0)"
-     x1="525"
-     y1="264"
-     x2="735"
-     y2="264"
-     id="line3680" />
-  <image
-     sodipodi:absref="C:\Users\Andi\Desktop\Spacegame\ResearchSVG\AdvBuildingMaterial.png"
-     xlink:href="AdvBuildingMaterial.png"
-     id="image3682"
-     title="Verb. Baumaterialfabrik"
-     height="32"
-     width="32"
-     y="266"
-     x="523" />
-  <rect
-     fill="url(#gradDarkGreen1)"
-     width="220px"
-     height="55px"
-     x="520"
-     y="335.5"
-     title=""
-     id="rect3684" />
-  <text
-     id="text3686">
-    <tspan
-       font-size="14px"
-       fill="rgb(0,0,0)"
-       stroke="none"
-       x="523"
-       y="352.5"
-       id="tspan3688">Planetarer Scanner</tspan>
-  </text>
-  <text
-     id="text3690">
-    <tspan
-       font-size="14px"
-       fill="rgb(0,0,0)"
-       stroke="none"
-       x="723"
-       y="352.5"
-       id="tspan3692">14</tspan>
-  </text>
-  <line
-     fill="none"
-     stroke="rgb(0,0,0)"
-     x1="525"
-     y1="355.5"
-     x2="735"
-     y2="355.5"
-     id="line3694" />
-  <line
-     fill="none"
-     stroke="rgb(0,0,0)"
-     x1="740"
-     y1="363"
-     x2="780"
-     y2="363"
-     id="line3696" />
-  <image
-     sodipodi:absref="C:\Users\Andi\Desktop\Spacegame\ResearchSVG\PlanetaryScanner.png"
-     xlink:href="PlanetaryScanner.png"
-     id="image3698"
-     title="Planetarer Scanner"
-     height="32"
-     width="32"
-     y="357.5"
-     x="523" />
   <g
-     id="g3446"
-     transform="translate(92.580482,-59.346463)">
+     id="g5450"
+     transform="translate(-1799.9203,353.42623)">
     <rect
-       id="rect3700"
+       id="rect112"
        title=""
-       y="122"
-       x="780"
+       y="729.49994"
+       x="2253.3826"
        height="55"
        width="220"
-       style="fill:url(#linearGradient3455)" />
+       style="fill:url(#linearGradient3705)" />
     <text
-       id="text3702">
+       y="424.49994"
+       x="1993.3824"
+       id="text114">
       <tspan
-         id="tspan3704"
-         y="139"
-         x="783"
+         id="tspan116"
+         y="746.49994"
+         x="2256.3826"
          font-size="14px"
-         style="font-size:14px;fill:#000000;stroke:none">Supraleiter</tspan>
+         style="font-size:14px;fill:#000000;stroke:none">Ecosytem Adaption I</tspan>
     </text>
     <text
-       id="text3706">
+       y="424.49994"
+       x="1993.3824"
+       id="text118-4">
       <tspan
-         id="tspan3708"
-         y="139"
-         x="976"
+         id="tspan120-8"
+         y="746.49994"
+         x="2463.3826"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">2</tspan>
+    </text>
+    <line
+       id="line122"
+       y2="749.49994"
+       x2="2468.3826"
+       y1="749.49994"
+       x1="2258.3826"
+       style="fill:none;stroke:#000000" />
+    <image
+       sodipodi:absref="D:\EmpiresInSpace\Research\Farm.png"
+       xlink:href="Farm.png"
+       id="image124"
+       title="Agriculture"
+       height="32"
+       width="32"
+       y="751.49994"
+       x="2256.3826" />
+    <image
+       sodipodi:absref="D:\EmpiresInSpace\Research\Houses.png"
+       xlink:href="Houses.png"
+       id="image126"
+       title="Houses"
+       height="32"
+       width="32"
+       y="751.49994"
+       x="2291.3826" />
+  </g>
+  <g
+     id="g5423"
+     transform="translate(-243.34873,467.27509)">
+    <rect
+       id="rect128"
+       title=""
+       y="668.49994"
+       x="2513.3826"
+       height="55"
+       width="220"
+       style="fill:url(#linearGradient3707)" />
+    <text
+       y="424.49994"
+       x="1993.3824"
+       id="text130-4">
+      <tspan
+         id="tspan132-2"
+         y="685.49994"
+         x="2516.3826"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">Adv. building material</tspan>
+    </text>
+    <text
+       y="424.49994"
+       x="1993.3824"
+       id="text134-4">
+      <tspan
+         id="tspan136-1"
+         y="685.49994"
+         x="2716.3826"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">29</tspan>
+    </text>
+    <line
+       id="line138"
+       y2="688.49994"
+       x2="2728.3826"
+       y1="688.49994"
+       x1="2518.3826"
+       style="fill:none;stroke:#000000" />
+    <image
+       sodipodi:absref="D:\EmpiresInSpace\Research\AdvBuildingMaterial.png"
+       xlink:href="AdvBuildingMaterial.png"
+       id="image140"
+       title="Adv. material factory"
+       height="32"
+       width="32"
+       y="690.49994"
+       x="2516.3826" />
+  </g>
+  <g
+     id="g5441"
+     transform="translate(-1539.4312,164.61661)">
+    <rect
+       id="rect142"
+       title=""
+       y="759.99994"
+       x="2513.3826"
+       height="55"
+       width="220"
+       style="fill:url(#linearGradient3709)" />
+    <text
+       y="424.49994"
+       x="1993.3824"
+       id="text144">
+      <tspan
+         id="tspan146"
+         y="776.99994"
+         x="2516.3826"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">Planetary Scanner</tspan>
+    </text>
+    <text
+       y="424.49994"
+       x="1993.3824"
+       id="text148">
+      <tspan
+         id="tspan150"
+         y="776.99994"
+         x="2716.3826"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">14</tspan>
+    </text>
+    <line
+       id="line152-0"
+       y2="779.99994"
+       x2="2728.3826"
+       y1="779.99994"
+       x1="2518.3826"
+       style="fill:none;stroke:#000000" />
+    <image
+       sodipodi:absref="D:\EmpiresInSpace\Research\PlanetaryScanner.png"
+       xlink:href="PlanetaryScanner.png"
+       id="image156"
+       title="Planetary Scanner"
+       height="32"
+       width="32"
+       y="781.99994"
+       x="2516.3826" />
+  </g>
+  <g
+     id="g5407"
+     transform="translate(-1293.7364,599.18271)">
+    <rect
+       id="rect158-6"
+       title=""
+       y="546.49994"
+       x="2773.3826"
+       height="55"
+       width="220"
+       style="fill:url(#linearGradient3711)" />
+    <text
+       y="424.49994"
+       x="1993.3824"
+       id="text160-7">
+      <tspan
+         id="tspan162-3"
+         y="563.49994"
+         x="2776.3826"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">Superconductors</tspan>
+    </text>
+    <text
+       y="424.49994"
+       x="1993.3824"
+       id="text164-4">
+      <tspan
+         id="tspan166-3"
+         y="563.49994"
+         x="2969.3826"
          font-size="14px"
          style="font-size:14px;fill:#000000;stroke:none">114</tspan>
     </text>
     <line
-       id="line3710"
-       y2="142"
-       x2="995"
-       y1="142"
-       x1="785"
+       id="line168-8"
+       y2="566.49994"
+       x2="2988.3826"
+       y1="566.49994"
+       x1="2778.3826"
        style="fill:none;stroke:#000000" />
     <image
-       sodipodi:absref="C:\Users\Andi\Desktop\Spacegame\ResearchSVG\SolarPanels.png"
+       sodipodi:absref="D:\EmpiresInSpace\Research\SolarPanels.png"
        xlink:href="SolarPanels.png"
-       x="783"
-       y="144"
+       id="image170-0"
+       title="+10% Energy"
+       height="32"
+       width="32"
+       y="568.49994"
+       x="2776.3826" />
+  </g>
+  <g
+     id="g5580"
+     transform="translate(-1656.6431,-247.83988)">
+    <rect
+       id="rect172-0"
+       title=""
+       y="1237.7858"
+       x="2627.5254"
+       height="55"
+       width="220"
+       style="fill:url(#linearGradient3713)" />
+    <g
+       transform="translate(114.14285,630.2857)"
+       id="g5416">
+      <text
+         id="text174-6"
+         x="1993.3824"
+         y="424.49994">
+        <tspan
+           style="font-size:14px;fill:#000000;stroke:none"
+           font-size="14px"
+           x="2516.3826"
+           y="624.49994"
+           id="tspan176-2">Warehouse construction plan</tspan>
+      </text>
+      <text
+         id="text178-9"
+         x="1993.3824"
+         y="424.49994">
+        <tspan
+           style="font-size:14px;fill:#000000;stroke:none"
+           font-size="14px"
+           x="2701.3826"
+           y="624.49994"
+           id="tspan180-4">1500</tspan>
+      </text>
+      <line
+         style="fill:none;stroke:#000000"
+         x1="2518.3826"
+         y1="627.49994"
+         x2="2728.3826"
+         y2="627.49994"
+         id="line182-5" />
+    </g>
+    <image
+       sodipodi:absref="D:\EmpiresInSpace\Research\Depot.png"
+       xlink:href="Depot.png"
+       id="image184"
+       title="Warehouse"
+       height="32"
+       width="32"
+       y="1259.7858"
+       x="2630.5254" />
+  </g>
+  <g
+     id="g5460"
+     transform="translate(-1799.1871,542.45294)">
+    <rect
+       id="rect186"
+       title=""
+       y="637.99994"
+       x="2253.3826"
+       height="55"
+       width="220"
+       style="fill:url(#linearGradient3715)" />
+    <text
+       y="424.49994"
+       x="1993.3824"
+       id="text188">
+      <tspan
+         id="tspan190"
+         y="654.99994"
+         x="2256.3826"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">Ore mine construction plan</tspan>
+    </text>
+    <text
+       y="424.49994"
+       x="1993.3824"
+       id="text192-2">
+      <tspan
+         id="tspan194-4"
+         y="654.99994"
+         x="2463.3826"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">4</tspan>
+    </text>
+    <line
+       id="line196"
+       y2="657.99994"
+       x2="2468.3826"
+       y1="657.99994"
+       x1="2258.3826"
+       style="fill:none;stroke:#000000" />
+    <image
+       sodipodi:absref="D:\EmpiresInSpace\Research\Headframe.png"
+       xlink:href="Headframe.png"
+       id="image202-5"
+       title="Mining sector"
+       height="32"
+       width="32"
+       y="659.99994"
+       x="2256.3826" />
+    <image
+       sodipodi:absref="D:\EmpiresInSpace\Research\152.png"
+       xlink:href="152.png"
+       id="image204-3"
+       title="Blast furnace"
+       height="32"
+       width="32"
+       y="659.99994"
+       x="2291.3826" />
+  </g>
+  <line
+     style="fill:none;stroke:#000000"
+     x1="671.9798"
+     y1="1114.663"
+     x2="711.9798"
+     y2="1084.163"
+     id="line240-2" />
+  <line
+     style="fill:none;stroke:#000000"
+     x1="673.16669"
+     y1="1054.4897"
+     x2="713.16669"
+     y2="1084.9897"
+     id="line238-6" />
+  <line
+     style="fill:none;stroke:#000000"
+     x1="930.73035"
+     y1="1330.2173"
+     x2="970.73035"
+     y2="1421.7175"
+     id="line236-9-6" />
+  <line
+     style="fill:none;stroke:#000000;stroke-width:0.85469121"
+     x1="673.06757"
+     y1="1115.2808"
+     x2="958.04919"
+     y2="1118.408"
+     id="line238-4" />
+  <line
+     style="fill:none;stroke:#000000"
+     x1="410.85535"
+     y1="1175.5565"
+     x2="450.85535"
+     y2="1206.0565"
+     id="line238-4-6" />
+  <line
+     style="fill:none;stroke:#000000"
+     x1="1039.9279"
+     y1="1685.2157"
+     x2="1079.9279"
+     y2="1593.7157"
+     id="line234-1" />
+  <line
+     style="fill:none;stroke:#000000;stroke-width:1.08881259"
+     x1="1374.6636"
+     y1="1783.3712"
+     x2="1414.6201"
+     y2="1602.3839"
+     id="line242-7" />
+  <line
+     style="fill:none;stroke:#000000"
+     x1="787.06848"
+     y1="1394.8035"
+     x2="827.06848"
+     y2="1425.3035"
+     id="line238-4-3" />
+  <line
+     style="fill:none;stroke:#000000"
+     x1="933.94348"
+     y1="951.20526"
+     x2="973.94348"
+     y2="951.20526"
+     id="line192-8" />
+  <line
+     style="fill:none;stroke:#000000"
+     x1="1570.4851"
+     y1="1486.9617"
+     x2="1610.4851"
+     y2="1456.4617"
+     id="line38-52" />
+  <line
+     style="fill:none;stroke:#000000"
+     x1="2767.0293"
+     y1="1564.1327"
+     x2="2807.0293"
+     y2="1655.6329"
+     id="line236-9-4" />
+  <line
+     style="fill:none;stroke:#000000"
+     x1="2221.0417"
+     y1="1043.1774"
+     x2="2261.0417"
+     y2="951.67706"
+     id="line236-9-9" />
+  <line
+     style="fill:none;stroke:#000000"
+     x1="2191.3684"
+     y1="1571.2544"
+     x2="2231.3684"
+     y2="1662.7546"
+     id="line236-9-90" />
+  <line
+     style="fill:none;stroke:#000000"
+     x1="3303.176"
+     y1="1165.4797"
+     x2="3343.176"
+     y2="1165.4797"
+     id="line154-4-50" />
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:124.00000095%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
+     x="729.33929"
+     y="1259.6875"
+     id="text6105"
+     sodipodi:linespacing="124%"><tspan
+       sodipodi:role="line"
+       id="tspan6107"
+       x="729.33929"
+       y="1259.6875" /></text>
+  <g
+     id="g6535"
+     transform="translate(247.58928,-33.571429)">
+    <rect
+       id="rect52-8"
+       title=""
+       y="1242.8307"
+       x="713.72888"
+       height="55"
+       width="220"
+       style="fill:url(#linearGradient5870)" />
+    <text
+       x="453.72891"
+       id="text58-7"
+       y="1212.3307">
+      <tspan
+         id="tspan60-7"
+         y="1259.8307"
+         x="923.72888"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">9</tspan>
+    </text>
+    <line
+       id="line62-2"
+       y2="1262.8307"
+       x2="928.72888"
+       y1="1262.8307"
+       x1="718.72888"
+       style="fill:none;stroke:#000000" />
+    <image
+       sodipodi:absref="D:\EmpiresInSpace\Research\Headframe.png"
+       xlink:href="Headframe.png"
+       x="716.72888"
+       y="1264.8307"
        width="32"
        height="32"
-       title="+10% Energie"
-       id="image3712" />
+       title="Holmium mine"
+       id="image66-7" />
+    <image
+       sodipodi:absref="D:\EmpiresInSpace\Research\Headframe.png"
+       xlink:href="Headframe.png"
+       x="805.97504"
+       y="1266.2212"
+       width="32"
+       height="32"
+       title="Holmium mine"
+       id="image66-1" />
+    <image
+       sodipodi:absref="D:\EmpiresInSpace\Research\Headframe.png"
+       xlink:href="Headframe.png"
+       x="748.72888"
+       y="1264.8307"
+       width="32"
+       height="32"
+       title="Scandium mine"
+       id="image98-9" />
+    <image
+       sodipodi:absref="D:\EmpiresInSpace\Research\Headframe.png"
+       xlink:href="Headframe.png"
+       x="773.97504"
+       y="1266.2212"
+       width="32"
+       height="32"
+       title="Yttrium mine"
+       id="image114-1" />
+    <image
+       sodipodi:absref="D:\EmpiresInSpace\Research\Headframe.png"
+       xlink:href="Headframe.png"
+       x="837.97504"
+       y="1266.2212"
+       width="32"
+       height="32"
+       title="Lutetium mine"
+       id="image130-1" />
+    <text
+       sodipodi:linespacing="124%"
+       id="text6109"
+       y="1259.2678"
+       x="719.26788"
+       style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:124.00000095%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         y="1259.2678"
+         x="719.26788"
+         id="tspan6111"
+         sodipodi:role="line">Special Ressouce Analysis</tspan></text>
   </g>
-  <rect
-     fill="url(#gradGreen1)"
-     width="220px"
-     height="55px"
-     x="520"
-     y="183"
-     title=""
-     id="rect3714" />
-  <text
-     id="text3716">
-    <tspan
-       font-size="14px"
-       fill="rgb(0,0,0)"
-       stroke="none"
-       x="523"
-       y="200"
-       id="tspan3718">Konstruktionsplan Lager</tspan>
-  </text>
-  <text
-     id="text3720">
-    <tspan
-       font-size="14px"
-       fill="rgb(0,0,0)"
-       stroke="none"
-       x="708"
-       y="200"
-       id="tspan3722">1500</tspan>
-  </text>
+  <g
+     id="g6578"
+     transform="translate(-5.7484712,49.808852)">
+    <rect
+       id="rect132-8"
+       title=""
+       y="1130.1628"
+       x="1224.2102"
+       height="55"
+       width="220"
+       style="fill:url(#linearGradient6157)" />
+    <text
+       x="704.21021"
+       id="text138-6"
+       y="1099.6628">
+      <tspan
+         id="tspan140-0"
+         y="1147.1628"
+         x="1427.2102"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">14</tspan>
+    </text>
+    <line
+       id="line142-4"
+       y2="1150.1628"
+       x2="1439.2102"
+       y1="1150.1628"
+       x1="1229.2102"
+       style="fill:none;stroke:#000000" />
+    <image
+       sodipodi:absref="D:\EmpiresInSpace\Research\BuildingMaterialPlant.png"
+       xlink:href="BuildingMaterialPlant.png"
+       x="1227.2102"
+       y="1152.1628"
+       width="32"
+       height="32"
+       title="Holmium processing"
+       id="image146-0" />
+    <text
+       sodipodi:linespacing="124%"
+       id="text6176"
+       y="1145.7936"
+       x="1229.778"
+       style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:124.00000095%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         y="1145.7936"
+         x="1229.778"
+         id="tspan6178"
+         sodipodi:role="line">Special Ressource Processing</tspan></text>
+    <image
+       sodipodi:absref="D:\EmpiresInSpace\Research\BuildingMaterialPlant.png"
+       xlink:href="BuildingMaterialPlant.png"
+       x="1259.2102"
+       y="1152.1628"
+       width="32"
+       height="32"
+       title="Holmium processing"
+       id="image146-0-0" />
+    <image
+       sodipodi:absref="D:\EmpiresInSpace\Research\BuildingMaterialPlant.png"
+       xlink:href="BuildingMaterialPlant.png"
+       x="1291.2102"
+       y="1152.1628"
+       width="32"
+       height="32"
+       title="Holmium processing"
+       id="image146-0-2" />
+    <image
+       sodipodi:absref="D:\EmpiresInSpace\Research\BuildingMaterialPlant.png"
+       xlink:href="BuildingMaterialPlant.png"
+       x="1323.2102"
+       y="1152.1628"
+       width="32"
+       height="32"
+       title="Holmium processing"
+       id="image146-0-00" />
+    <image
+       sodipodi:absref="D:\EmpiresInSpace\Research\BuildingMaterialPlant.png"
+       xlink:href="BuildingMaterialPlant.png"
+       x="1355.2102"
+       y="1152.1628"
+       width="32"
+       height="32"
+       title="Holmium processing"
+       id="image146-0-6" />
+  </g>
   <line
-     fill="none"
-     stroke="rgb(0,0,0)"
-     x1="525"
-     y1="203"
-     x2="735"
-     y2="203"
-     id="line3724" />
-  <image
-     sodipodi:absref="C:\Users\Andi\Desktop\Spacegame\ResearchSVG\Depot.png"
-     xlink:href="Depot.png"
-     id="image3726"
-     title="Lager"
-     height="32"
-     width="32"
-     y="205"
-     x="523" />
-  <rect
-     fill="url(#gradDarkGreen1)"
-     width="220px"
-     height="55px"
-     x="260"
-     y="213.5"
-     title=""
-     id="rect3728" />
-  <text
-     id="text3730">
-    <tspan
-       font-size="14px"
-       fill="rgb(0,0,0)"
-       stroke="none"
-       x="263"
-       y="230.5"
-       id="tspan3732">Konstruktionsplan Bergwerk</tspan>
-  </text>
-  <text
-     id="text3734">
-    <tspan
-       font-size="14px"
-       fill="rgb(0,0,0)"
-       stroke="none"
-       x="470"
-       y="230.5"
-       id="tspan3736">4</tspan>
-  </text>
+     style="fill:none;stroke:#000000;stroke-width:0.734891"
+     x1="1441.3015"
+     y1="1336.0416"
+     x2="1743.7377"
+     y2="1336.0416"
+     id="line300-6-6-1" />
   <line
-     fill="none"
-     stroke="rgb(0,0,0)"
-     x1="265"
-     y1="233.5"
-     x2="475"
-     y2="233.5"
-     id="line3738" />
+     style="fill:none;stroke:#000000"
+     x1="1439.2627"
+     y1="1206.1613"
+     x2="1479.2627"
+     y2="1175.6613"
+     id="line240-5" />
   <line
-     fill="none"
-     stroke="rgb(0,0,0)"
-     x1="480"
-     y1="241"
-     x2="520"
-     y2="271.5"
-     id="line3740" />
+     style="fill:none;stroke:#000000"
+     x1="1439.2626"
+     y1="1206.5215"
+     x2="1479.2626"
+     y2="1237.0215"
+     id="line240-4" />
   <line
-     fill="none"
-     stroke="rgb(0,0,0)"
-     x1="480"
-     y1="241"
-     x2="520"
-     y2="210.5"
-     id="line3742" />
-  <image
-     sodipodi:absref="C:\Users\Andi\Desktop\Spacegame\ResearchSVG\Headframe.png"
-     xlink:href="Headframe.png"
-     id="image3744"
-     title="Bergbausektor"
-     height="32"
-     width="32"
-     y="235.5"
-     x="263" />
-  <image
-     sodipodi:absref="C:\Users\Andi\Desktop\Spacegame\ResearchSVG\152.png"
-     xlink:href="152.png"
-     id="image3746"
-     title="Hochofen"
-     height="32"
-     width="32"
-     y="235.5"
-     x="298" />
+     style="fill:none;stroke:#000000"
+     x1="1439.2627"
+     y1="1204.5077"
+     x2="1479.2627"
+     y2="1296.0079"
+     id="line236-9-64" />
+  <line
+     style="fill:none;stroke:#000000"
+     x1="1701.1667"
+     y1="1172.9128"
+     x2="1741.1667"
+     y2="1142.4128"
+     id="line38-52-0" />
+  <line
+     style="fill:none;stroke:#000000"
+     x1="1702.3538"
+     y1="1166.1515"
+     x2="1742.3538"
+     y2="1196.6515"
+     id="line240-53" />
+  <line
+     style="fill:none;stroke:#000000;stroke-width:1.21589184"
+     x1="1180.8561"
+     y1="1118.934"
+     x2="1233.9595"
+     y2="1017.0399"
+     id="line234-7" />
+  <line
+     style="fill:none;stroke:#000000"
+     x1="1438.0757"
+     y1="1208.1749"
+     x2="1478.0757"
+     y2="1116.6749"
+     id="line234-3" />
+  <g
+     id="g5407-1"
+     transform="translate(-237.28859,370.83865)">
+    <rect
+       id="rect158-6-1"
+       title=""
+       y="546.49994"
+       x="2773.3826"
+       height="55"
+       width="220"
+       style="fill:url(#linearGradient6470)" />
+    <text
+       y="424.49994"
+       x="1993.3824"
+       id="text160-7-0">
+      <tspan
+         id="tspan162-3-3"
+         y="563.49994"
+         x="2776.3826"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">Superconductors</tspan>
+    </text>
+    <text
+       y="424.49994"
+       x="1993.3824"
+       id="text164-4-9">
+      <tspan
+         id="tspan166-3-7"
+         y="563.49994"
+         x="2969.3826"
+         font-size="14px"
+         style="font-size:14px;fill:#000000;stroke:none">114</tspan>
+    </text>
+    <line
+       id="line168-8-7"
+       y2="566.49994"
+       x2="2988.3826"
+       y1="566.49994"
+       x1="2778.3826"
+       style="fill:none;stroke:#000000" />
+    <image
+       sodipodi:absref="D:\EmpiresInSpace\Research\SolarPanels.png"
+       xlink:href="SolarPanels.png"
+       x="2776.3826"
+       y="568.49994"
+       width="32"
+       height="32"
+       title="+10% Energy"
+       id="image170-0-1" />
+  </g>
+  <line
+     style="fill:none;stroke:#000000"
+     x1="2753.2905"
+     y1="946.02551"
+     x2="2793.2905"
+     y2="946.02551"
+     id="line94-7-7" />
+  <line
+     style="fill:none;stroke:#000000"
+     x1="674.35364"
+     y1="1055.3164"
+     x2="714.35364"
+     y2="1024.8164"
+     id="line38-52-07" />
+  <line
+     style="fill:none;stroke:#000000;stroke-width:1.06232715"
+     x1="671.99847"
+     y1="1053.7637"
+     x2="711.961"
+     y2="950.40564"
+     id="line234-29" />
+  <line
+     style="fill:none;stroke:#000000;stroke-width:0.71931267"
+     x1="671.75006"
+     y1="1301.2322"
+     x2="961.5"
+     y2="1301.2322"
+     id="line318-9" />
+  <line
+     style="fill:none;stroke:#000000"
+     x1="671.57141"
+     y1="1295.5"
+     x2="711.57141"
+     y2="1265"
+     id="line38-52-07-1" />
+  <line
+     style="fill:none;stroke:#000000"
+     x1="1179.3394"
+     y1="1240.1072"
+     x2="1219.3394"
+     y2="1209.6072"
+     id="line38-52-07-6" />
+  <line
+     style="fill:none;stroke:#000000"
+     x1="1180.1786"
+     y1="1298.0178"
+     x2="1220.1786"
+     y2="1267.5178"
+     id="line38-52-07-6-4" />
+  <line
+     style="fill:none;stroke:#000000"
+     x1="1181.0178"
+     y1="1298.5714"
+     x2="1221.0178"
+     y2="1329.0714"
+     id="line238-4-3-3" />
+  <line
+     style="fill:none;stroke:#000000"
+     x1="2497.8572"
+     y1="1163.7142"
+     x2="2537.8569"
+     y2="1316.2142"
+     id="line242-72-3" />
+  <line
+     style="fill:none;stroke:#000000;stroke-width:1.0042299"
+     x1="1967.0125"
+     y1="1331.4464"
+     x2="2531.7603"
+     y2="1331.4464"
+     id="line318-95" />
+  <line
+     style="fill:none;stroke:#000000"
+     x1="1960.7144"
+     y1="1046.0892"
+     x2="2000.7144"
+     y2="1046.0892"
+     id="line94-2-2" />
+  <line
+     style="fill:none;stroke:#000000"
+     x1="1698.8572"
+     y1="1047.7678"
+     x2="1738.8572"
+     y2="1047.7678"
+     id="line94-2-8" />
+  <line
+     style="fill:none;stroke:#000000"
+     x1="2222.5715"
+     y1="1045.3928"
+     x2="2262.5715"
+     y2="1014.8928"
+     id="line38-52-0-3" />
+  <line
+     style="fill:none;stroke:#000000;stroke-width:1.18569028"
+     x1="2483.6736"
+     y1="1011.0691"
+     x2="2534.4158"
+     y2="943.46661"
+     id="line38-5-0" />
+  <line
+     style="fill:none;stroke:#000000"
+     x1="2220.9226"
+     y1="1046.1812"
+     x2="2260.9226"
+     y2="1076.6812"
+     id="line240-53-6" />
+  <line
+     style="fill:none;stroke:#000000"
+     x1="2496.8835"
+     y1="1163.8672"
+     x2="2536.8835"
+     y2="1224.8672"
+     id="line38-5-0-6" />
+  <line
+     style="fill:none;stroke:#000000"
+     x1="2499.8508"
+     y1="1165.5208"
+     x2="2539.8508"
+     y2="1104.5208"
+     id="line38-5-0-6-8" />
+  <line
+     style="fill:none;stroke:#000000;stroke-width:0.9129988"
+     x1="2498.6428"
+     y1="1164.3885"
+     x2="2538.6853"
+     y2="1037.4047"
+     id="line36-3-8" />
+  <line
+     style="fill:none;stroke:#000000;stroke-width:0.9129988"
+     x1="2402.5015"
+     y1="1556.3894"
+     x2="2442.5439"
+     y2="1683.3733"
+     id="line36-3-8-8" />
+  <line
+     style="fill:none;stroke:#000000;stroke-width:1.39764988"
+     x1="2497.5203"
+     y1="1165.9591"
+     x2="2548.116"
+     y2="1260.1638"
+     id="line38-5-0-4" />
+  <line
+     style="fill:none;stroke:#000000;stroke-width:0.72791624"
+     x1="2500.3816"
+     y1="1165.2875"
+     x2="2797.1045"
+     y2="1165.2875"
+     id="line318-95-1" />
+  <line
+     style="fill:none;stroke:#000000;stroke-width:1.19184852"
+     x1="2758.0825"
+     y1="948.01422"
+     x2="2797.989"
+     y2="1165.1465"
+     id="line242-72-3-0" />
+  <line
+     style="fill:none;stroke:#000000"
+     x1="1698.6735"
+     y1="1165.2343"
+     x2="1738.6735"
+     y2="1256.7343"
+     id="line234-8" />
+  <line
+     style="fill:none;stroke:#000000;stroke-width:0.72982621"
+     x1="1699.798"
+     y1="1107.1279"
+     x2="1998.0798"
+     y2="1107.1279"
+     id="line318-95-3" />
+  <line
+     style="fill:none;stroke:#000000;stroke-width:0.85034901"
+     x1="1960.9401"
+     y1="1045.4777"
+     x2="2001.0299"
+     y2="979.46295"
+     id="line236-9-9-9" />
+  <line
+     style="fill:none;stroke:#000000;stroke-width:1.27160466"
+     x1="672.50525"
+     y1="1208.0885"
+     x2="712.31628"
+     y2="1158.5365"
+     id="line38-52-07-1-7" />
 </svg>

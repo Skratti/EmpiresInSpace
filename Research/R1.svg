@@ -1,756 +1,133 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:xlink="http://www.w3.org/1999/xlink"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="2350px"
-   height="608px"
-   id="svg3544"
-   version="1.1"
-   inkscape:version="0.91 r13725"
-   sodipodi:docname="R1.svg">
-  <metadata
-     id="metadata3750">
-    <rdf:RDF>
-      <cc:Work
-         rdf:about="">
-        <dc:format>image/svg+xml</dc:format>
-        <dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-      </cc:Work>
-    </rdf:RDF>
-  </metadata>
-  <sodipodi:namedview
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1"
-     objecttolerance="10"
-     gridtolerance="10"
-     guidetolerance="10"
-     inkscape:pageopacity="0"
-     inkscape:pageshadow="2"
-     inkscape:window-width="1920"
-     inkscape:window-height="1018"
-     id="namedview3748"
-     showgrid="false"
-     inkscape:zoom="0.8425102"
-     inkscape:cx="653.24571"
-     inkscape:cy="386.36243"
-     inkscape:window-x="1272"
-     inkscape:window-y="-8"
-     inkscape:window-maximized="1"
-     inkscape:current-layer="svg3544" />
-  <defs
-     id="defs3546">
-    <linearGradient
-       id="gradBlue1"
-       x1="0%"
-       x2="100%"
-       y1="0%"
-       y2="0%">
-      <stop
-         id="myStop1"
-         offset="0%"
-         stop-color="White" />
-      <stop
-         id="myStop2"
-         offset="100%"
-         stop-color="#1919FF" />
+<svg width="2350px" height="548px">
+  <defs>
+    <linearGradient id="gradBlue1" x1="0%" x2="100%" y1="0%" y2="0%">
+      <stop id="myStop1" offset="0%" stop-color="White"></stop>
+      <stop id="myStop2" offset="100%" stop-color="#1919FF"></stop>
     </linearGradient>
-    <linearGradient
-       id="gradGreen1"
-       x1="0%"
-       x2="100%"
-       y1="0%"
-       y2="0%">
-      <stop
-         id="stop3552"
-         offset="0%"
-         stop-color="White" />
-      <stop
-         id="stop3554"
-         offset="100%"
-         stop-color="#00FF00" />
+    <linearGradient id="gradGreen1" x1="0%" x2="100%" y1="0%" y2="0%">
+      <stop id="myStop1" offset="0%" stop-color="White"></stop>
+      <stop id="myStop2" offset="100%" stop-color="#00FF00"></stop>
     </linearGradient>
-    <linearGradient
-       id="gradViolet1"
-       x1="0%"
-       x2="100%"
-       y1="0%"
-       y2="0%">
-      <stop
-         id="stop3557"
-         offset="0%"
-         stop-color="White" />
-      <stop
-         id="stop3559"
-         offset="100%"
-         stop-color="#FF0066" />
+    <linearGradient id="gradViolet1" x1="0%" x2="100%" y1="0%" y2="0%">
+      <stop id="myStop1" offset="0%" stop-color="White"></stop>
+      <stop id="myStop2" offset="100%" stop-color="#FF0066"></stop>
     </linearGradient>
-    <linearGradient
-       id="gradDarkGreen1"
-       x1="0%"
-       x2="100%"
-       y1="0%"
-       y2="0%">
-      <stop
-         id="stop3562"
-         offset="0%"
-         stop-color="#00FF00" />
-      <stop
-         id="stop3564"
-         offset="100%"
-         stop-color="#008800" />
+    <linearGradient id="gradDarkGreen1" x1="0%" x2="100%" y1="0%" y2="0%">
+      <stop id="myStop1" offset="0%" stop-color="#00FF00"></stop>
+      <stop id="myStop2" offset="100%" stop-color="#008800"></stop>
     </linearGradient>
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#gradGreen1"
-       id="linearGradient3444"
-       x1="390"
-       y1="671"
-       x2="500"
-       y2="671"
-       gradientTransform="scale(2,0.5)"
-       gradientUnits="userSpaceOnUse" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#gradDarkGreen1"
-       id="linearGradient3455"
-       x1="390"
-       y1="244"
-       x2="500"
-       y2="244"
-       gradientTransform="scale(2,0.5)"
-       gradientUnits="userSpaceOnUse" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#gradDarkGreen1"
-       id="linearGradient3466"
-       x1="260"
-       y1="244"
-       x2="370"
-       y2="244"
-       gradientTransform="scale(2,0.5)"
-       gradientUnits="userSpaceOnUse" />
   </defs>
-  <rect
-     fill="url(#gradDarkGreen1)"
-     width="220px"
-     height="55px"
-     x="0"
-     y="152.5"
-     title=""
-     id="rect3566" />
-  <text
-     id="text3568">
-    <tspan
-       font-size="14px"
-       fill="rgb(0,0,0)"
-       stroke="none"
-       x="3"
-       y="169.5"
-       id="tspan3570">Basisforschung</tspan>
+  <rect fill="url(#gradDarkGreen1)" width="220px" height="55px" x="0" y="152.5" title=""></rect>
+  <text>
+    <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="3" y="169.5">Base research</tspan>
   </text>
-  <text
-     id="text3572">
-    <tspan
-       font-size="14px"
-       fill="rgb(0,0,0)"
-       stroke="none"
-       x="210"
-       y="169.5"
-       id="tspan3574">2</tspan>
+  <text>
+    <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="210" y="169.5">2</tspan>
   </text>
-  <line
-     fill="none"
-     stroke="rgb(0,0,0)"
-     x1="5"
-     y1="172.5"
-     x2="215"
-     y2="172.5"
-     id="line3576" />
-  <line
-     fill="none"
-     stroke="rgb(0,0,0)"
-     x1="220"
-     y1="180"
-     x2="260"
-     y2="27.5"
-     id="line3578" />
-  <line
-     fill="none"
-     stroke="rgb(0,0,0)"
-     x1="220"
-     y1="180"
-     x2="260"
-     y2="119"
-     id="line3580" />
-  <line
-     fill="none"
-     stroke="rgb(0,0,0)"
-     x1="220"
-     y1="180"
-     x2="260"
-     y2="332.5"
-     id="line3582" />
-  <line
-     fill="none"
-     stroke="rgb(0,0,0)"
-     x1="220"
-     y1="180"
-     x2="260"
-     y2="241"
-     id="line3584" />
-  <image
-     sodipodi:absref="C:\Users\Andi\Desktop\Spacegame\ResearchSVG\BuildingMaterialPlant.png"
-     xlink:href="BuildingMaterialPlant.png"
-     id="image3586"
-     title="Baumaterialfabrik"
-     height="32"
-     width="32"
-     y="174.5"
-     x="3" />
-  <image
-     sodipodi:absref="C:\Users\Andi\Desktop\Spacegame\ResearchSVG\SolarPanels.png"
-     xlink:href="SolarPanels.png"
-     id="image3588"
-     title="Sonnenkraftwerk"
-     height="32"
-     width="32"
-     y="174.5"
-     x="38" />
-  <image
-     sodipodi:absref="C:\Users\Andi\Desktop\Spacegame\ResearchSVG\AssemblyPlant.png"
-     xlink:href="AssemblyPlant.png"
-     id="image3590"
-     title="Montagewerk"
-     height="32"
-     width="32"
-     y="174.5"
-     x="73" />
-  <rect
-     fill="url(#gradDarkGreen1)"
-     width="220px"
-     height="55px"
-     x="260"
-     y="0"
-     title=""
-     id="rect3592" />
-  <text
-     id="text3594">
-    <tspan
-       font-size="14px"
-       fill="rgb(0,0,0)"
-       stroke="none"
-       x="263"
-       y="17"
-       id="tspan3596">Wasserkraftwerk</tspan>
+  <line fill="none" stroke="rgb(0,0,0)" x1="5" y1="172.5" x2="215" y2="172.5"></line>
+  <line fill="none" stroke="rgb(0,0,0)" x1="220" y1="180" x2="260" y2="27.5"></line>
+  <line fill="none" stroke="rgb(0,0,0)" x1="220" y1="180" x2="260" y2="119"></line>
+  <line fill="none" stroke="rgb(0,0,0)" x1="220" y1="180" x2="260" y2="332.5"></line>
+  <line fill="none" stroke="rgb(0,0,0)" x1="220" y1="180" x2="260" y2="241"></line>
+  <image x="3" y="174.5" width="32" height="32" title="Building material plant" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="BuildingMaterialPlant.png"></image>
+  <image x="38" y="174.5" width="32" height="32" title="Solar power plant" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="SolarPanels.png"></image>
+  <image x="73" y="174.5" width="32" height="32" title="Assembly plant" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="AssemblyPlant.png"></image>
+  <rect fill="url(#gradDarkGreen1)" width="220px" height="55px" x="260" y="0" title=""></rect>
+  <text>
+    <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="263" y="17">Water power plant</tspan>
   </text>
-  <text
-     id="text3598">
-    <tspan
-       font-size="14px"
-       fill="rgb(0,0,0)"
-       stroke="none"
-       x="470"
-       y="17"
-       id="tspan3600">5</tspan>
+  <text>
+    <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="470" y="17">5</tspan>
   </text>
-  <line
-     fill="none"
-     stroke="rgb(0,0,0)"
-     x1="265"
-     y1="20"
-     x2="475"
-     y2="20"
-     id="line3602" />
-  <image
-     sodipodi:absref="C:\Users\Andi\Desktop\Spacegame\ResearchSVG\SolarPanels.png"
-     xlink:href="SolarPanels.png"
-     id="image3604"
-     title="Wasserkraftwerk"
-     height="32"
-     width="32"
-     y="22"
-     x="263" />
-  <rect
-     fill="url(#gradDarkGreen1)"
-     width="220px"
-     height="55px"
-     x="260"
-     y="91.5"
-     title=""
-     id="rect3606" />
-  <text
-     id="text3608">
-    <tspan
-       font-size="14px"
-       fill="rgb(0,0,0)"
-       stroke="none"
-       x="263"
-       y="108.5"
-       id="tspan3610">Raffinerie</tspan>
+  <line fill="none" stroke="rgb(0,0,0)" x1="265" y1="20" x2="475" y2="20"></line>
+  <image x="263" y="22" width="32" height="32" title="Water power plant" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="SolarPanels.png"></image>
+  <rect fill="url(#gradDarkGreen1)" width="220px" height="55px" x="260" y="91.5" title=""></rect>
+  <text>
+    <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="263" y="108.5">Refinery</tspan>
   </text>
-  <text
-     id="text3612">
-    <tspan
-       font-size="14px"
-       fill="rgb(0,0,0)"
-       stroke="none"
-       x="470"
-       y="108.5"
-       id="tspan3614">4</tspan>
+  <text>
+    <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="470" y="108.5">4</tspan>
   </text>
-  <line
-     fill="none"
-     stroke="rgb(0,0,0)"
-     x1="265"
-     y1="111.5"
-     x2="475"
-     y2="111.5"
-     id="line3616" />
-  <line
-     fill="none"
-     stroke="rgb(0,0,0)"
-     x1="480"
-     y1="119"
-     x2="520"
-     y2="149.5"
-     id="line3618" />
-  <image
-     sodipodi:absref="C:\Users\Andi\Desktop\Spacegame\ResearchSVG\OilWell2.png"
-     xlink:href="OilWell2.png"
-     id="image3620"
-     title="Treibstofferzeugung"
-     height="32"
-     width="32"
-     y="113.5"
-     x="263" />
-  <image
-     sodipodi:absref="C:\Users\Andi\Desktop\Spacegame\ResearchSVG\AssemblyPlant.png"
-     xlink:href="AssemblyPlant.png"
-     id="image3622"
-     title="Synthetik Fabrik"
-     height="32"
-     width="32"
-     y="113.5"
-     x="298" />
-  <line
-     fill="none"
-     stroke="rgb(0,0,0)"
-     x1="740"
-     y1="149.5"
-     x2="780"
-     y2="149.5"
-     id="line3636" />
-  <g
-     id="g3457"
-     transform="translate(47.47717,-78.337331)">
-    <rect
-       id="rect3624"
-       title=""
-       y="122"
-       x="520"
-       height="55"
-       width="220"
-       style="fill:url(#linearGradient3466)" />
-    <text
-       id="text3626">
-      <tspan
-         id="tspan3628"
-         y="139"
-         x="523"
-         font-size="14px"
-         style="font-size:14px;fill:#000000;stroke:none">Kraftwerk</tspan>
-    </text>
-    <text
-       id="text3630">
-      <tspan
-         id="tspan3632"
-         y="139"
-         x="723"
-         font-size="14px"
-         style="font-size:14px;fill:#000000;stroke:none">22</tspan>
-    </text>
-    <line
-       id="line3634"
-       y2="142"
-       x2="735"
-       y1="142"
-       x1="525"
-       style="fill:none;stroke:#000000" />
-    <image
-       sodipodi:absref="C:\Users\Andi\Desktop\Spacegame\ResearchSVG\PowerPlant.png"
-       xlink:href="PowerPlant.png"
-       x="523"
-       y="144"
-       width="32"
-       height="32"
-       title="Kraftwerk"
-       id="image3638" />
-  </g>
-  <g
-     id="g3435"
-     transform="translate(271.8068,109.19749)">
-    <rect
-       id="rect3640"
-       title=""
-       y="335.5"
-       x="780"
-       height="55"
-       width="220"
-       style="fill:url(#linearGradient3444)" />
-    <text
-       id="text3642">
-      <tspan
-         id="tspan3644"
-         y="352.5"
-         x="783"
-         font-size="14px"
-         style="font-size:14px;fill:#000000;stroke:none">Kommunikationszentrale</tspan>
-    </text>
-    <text
-       id="text3646">
-      <tspan
-         id="tspan3648"
-         y="352.5"
-         x="983"
-         font-size="14px"
-         style="font-size:14px;fill:#000000;stroke:none">29</tspan>
-    </text>
-    <line
-       id="line3650"
-       y2="355.5"
-       x2="995"
-       y1="355.5"
-       x1="785"
-       style="fill:none;stroke:#000000" />
-    <image
-       sodipodi:absref="C:\Users\Andi\Desktop\Spacegame\ResearchSVG\CommCenter.png"
-       xlink:href="CommCenter.png"
-       x="783"
-       y="357.5"
-       width="32"
-       height="32"
-       title="Kommunikationszentrale"
-       id="image3652" />
-  </g>
-  <rect
-     fill="url(#gradDarkGreen1)"
-     width="220px"
-     height="55px"
-     x="260"
-     y="305"
-     title=""
-     id="rect3654" />
-  <text
-     id="text3656">
-    <tspan
-       font-size="14px"
-       fill="rgb(0,0,0)"
-       stroke="none"
-       x="263"
-       y="322"
-       id="tspan3658">�kosystem Anpassung I</tspan>
+  <line fill="none" stroke="rgb(0,0,0)" x1="265" y1="111.5" x2="475" y2="111.5"></line>
+  <line fill="none" stroke="rgb(0,0,0)" x1="480" y1="119" x2="520" y2="149.5"></line>
+  <image x="263" y="113.5" width="32" height="32" title="Fuel generation" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="OilWell2.png"></image>
+  <image x="298" y="113.5" width="32" height="32" title="Synthetic materials plant" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="AssemblyPlant.png"></image>
+  <rect fill="url(#gradDarkGreen1)" width="220px" height="55px" x="520" y="122" title=""></rect>
+  <text>
+    <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="523" y="139">Power plant</tspan>
   </text>
-  <text
-     id="text3660">
-    <tspan
-       font-size="14px"
-       fill="rgb(0,0,0)"
-       stroke="none"
-       x="470"
-       y="322"
-       id="tspan3662">2</tspan>
+  <text>
+    <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="723" y="139">22</tspan>
   </text>
-  <line
-     fill="none"
-     stroke="rgb(0,0,0)"
-     x1="265"
-     y1="325"
-     x2="475"
-     y2="325"
-     id="line3664" />
-  <image
-     sodipodi:absref="C:\Users\Andi\Desktop\Spacegame\ResearchSVG\Farm.png"
-     xlink:href="Farm.png"
-     id="image3666"
-     title="Landwirtschaft-Sektor"
-     height="32"
-     width="32"
-     y="327"
-     x="263" />
-  <image
-     sodipodi:absref="C:\Users\Andi\Desktop\Spacegame\ResearchSVG\Houses.png"
-     xlink:href="Houses.png"
-     id="image3668"
-     title="H�user"
-     height="32"
-     width="32"
-     y="327"
-     x="298" />
-  <rect
-     fill="url(#gradDarkGreen1)"
-     width="220px"
-     height="55px"
-     x="520"
-     y="244"
-     title=""
-     id="rect3670" />
-  <text
-     id="text3672">
-    <tspan
-       font-size="14px"
-       fill="rgb(0,0,0)"
-       stroke="none"
-       x="523"
-       y="261"
-       id="tspan3674">Verb. Baumaterial</tspan>
+  <line fill="none" stroke="rgb(0,0,0)" x1="525" y1="142" x2="735" y2="142"></line>
+  <line fill="none" stroke="rgb(0,0,0)" x1="740" y1="149.5" x2="780" y2="149.5"></line>
+  <image x="523" y="144" width="32" height="32" title="Power plant" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="PowerPlant.png"></image>
+  <rect fill="url(#gradGreen1)" width="220px" height="55px" x="780" y="335.5" title=""></rect>
+  <text>
+    <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="783" y="352.5">Communication center</tspan>
   </text>
-  <text
-     id="text3676">
-    <tspan
-       font-size="14px"
-       fill="rgb(0,0,0)"
-       stroke="none"
-       x="723"
-       y="261"
-       id="tspan3678">29</tspan>
+  <text>
+    <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="983" y="352.5">29</tspan>
   </text>
-  <line
-     fill="none"
-     stroke="rgb(0,0,0)"
-     x1="525"
-     y1="264"
-     x2="735"
-     y2="264"
-     id="line3680" />
-  <image
-     sodipodi:absref="C:\Users\Andi\Desktop\Spacegame\ResearchSVG\AdvBuildingMaterial.png"
-     xlink:href="AdvBuildingMaterial.png"
-     id="image3682"
-     title="Verb. Baumaterialfabrik"
-     height="32"
-     width="32"
-     y="266"
-     x="523" />
-  <rect
-     fill="url(#gradDarkGreen1)"
-     width="220px"
-     height="55px"
-     x="520"
-     y="335.5"
-     title=""
-     id="rect3684" />
-  <text
-     id="text3686">
-    <tspan
-       font-size="14px"
-       fill="rgb(0,0,0)"
-       stroke="none"
-       x="523"
-       y="352.5"
-       id="tspan3688">Planetarer Scanner</tspan>
+  <line fill="none" stroke="rgb(0,0,0)" x1="785" y1="355.5" x2="995" y2="355.5"></line>
+  <image x="783" y="357.5" width="32" height="32" title="Communication center" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="CommCenter.png"></image>
+  <rect fill="url(#gradDarkGreen1)" width="220px" height="55px" x="260" y="305" title=""></rect>
+  <text>
+    <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="263" y="322">Ecosytem Adaption I</tspan>
   </text>
-  <text
-     id="text3690">
-    <tspan
-       font-size="14px"
-       fill="rgb(0,0,0)"
-       stroke="none"
-       x="723"
-       y="352.5"
-       id="tspan3692">14</tspan>
+  <text>
+    <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="470" y="322">2</tspan>
   </text>
-  <line
-     fill="none"
-     stroke="rgb(0,0,0)"
-     x1="525"
-     y1="355.5"
-     x2="735"
-     y2="355.5"
-     id="line3694" />
-  <line
-     fill="none"
-     stroke="rgb(0,0,0)"
-     x1="740"
-     y1="363"
-     x2="780"
-     y2="363"
-     id="line3696" />
-  <image
-     sodipodi:absref="C:\Users\Andi\Desktop\Spacegame\ResearchSVG\PlanetaryScanner.png"
-     xlink:href="PlanetaryScanner.png"
-     id="image3698"
-     title="Planetarer Scanner"
-     height="32"
-     width="32"
-     y="357.5"
-     x="523" />
-  <g
-     id="g3446"
-     transform="translate(92.580482,-59.346463)">
-    <rect
-       id="rect3700"
-       title=""
-       y="122"
-       x="780"
-       height="55"
-       width="220"
-       style="fill:url(#linearGradient3455)" />
-    <text
-       id="text3702">
-      <tspan
-         id="tspan3704"
-         y="139"
-         x="783"
-         font-size="14px"
-         style="font-size:14px;fill:#000000;stroke:none">Supraleiter</tspan>
-    </text>
-    <text
-       id="text3706">
-      <tspan
-         id="tspan3708"
-         y="139"
-         x="976"
-         font-size="14px"
-         style="font-size:14px;fill:#000000;stroke:none">114</tspan>
-    </text>
-    <line
-       id="line3710"
-       y2="142"
-       x2="995"
-       y1="142"
-       x1="785"
-       style="fill:none;stroke:#000000" />
-    <image
-       sodipodi:absref="C:\Users\Andi\Desktop\Spacegame\ResearchSVG\SolarPanels.png"
-       xlink:href="SolarPanels.png"
-       x="783"
-       y="144"
-       width="32"
-       height="32"
-       title="+10% Energie"
-       id="image3712" />
-  </g>
-  <rect
-     fill="url(#gradGreen1)"
-     width="220px"
-     height="55px"
-     x="520"
-     y="183"
-     title=""
-     id="rect3714" />
-  <text
-     id="text3716">
-    <tspan
-       font-size="14px"
-       fill="rgb(0,0,0)"
-       stroke="none"
-       x="523"
-       y="200"
-       id="tspan3718">Konstruktionsplan Lager</tspan>
+  <line fill="none" stroke="rgb(0,0,0)" x1="265" y1="325" x2="475" y2="325"></line>
+  <image x="263" y="327" width="32" height="32" title="Agriculture" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Farm.png"></image>
+  <image x="298" y="327" width="32" height="32" title="Houses" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Houses.png"></image>
+  <rect fill="url(#gradDarkGreen1)" width="220px" height="55px" x="520" y="244" title=""></rect>
+  <text>
+    <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="523" y="261">Adv. building material</tspan>
   </text>
-  <text
-     id="text3720">
-    <tspan
-       font-size="14px"
-       fill="rgb(0,0,0)"
-       stroke="none"
-       x="708"
-       y="200"
-       id="tspan3722">1500</tspan>
+  <text>
+    <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="723" y="261">29</tspan>
   </text>
-  <line
-     fill="none"
-     stroke="rgb(0,0,0)"
-     x1="525"
-     y1="203"
-     x2="735"
-     y2="203"
-     id="line3724" />
-  <image
-     sodipodi:absref="C:\Users\Andi\Desktop\Spacegame\ResearchSVG\Depot.png"
-     xlink:href="Depot.png"
-     id="image3726"
-     title="Lager"
-     height="32"
-     width="32"
-     y="205"
-     x="523" />
-  <rect
-     fill="url(#gradDarkGreen1)"
-     width="220px"
-     height="55px"
-     x="260"
-     y="213.5"
-     title=""
-     id="rect3728" />
-  <text
-     id="text3730">
-    <tspan
-       font-size="14px"
-       fill="rgb(0,0,0)"
-       stroke="none"
-       x="263"
-       y="230.5"
-       id="tspan3732">Konstruktionsplan Bergwerk</tspan>
+  <line fill="none" stroke="rgb(0,0,0)" x1="525" y1="264" x2="735" y2="264"></line>
+  <image x="523" y="266" width="32" height="32" title="Adv. material factory" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="AdvBuildingMaterial.png"></image>
+  <rect fill="url(#gradDarkGreen1)" width="220px" height="55px" x="520" y="335.5" title=""></rect>
+  <text>
+    <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="523" y="352.5">Planetary Scanner</tspan>
   </text>
-  <text
-     id="text3734">
-    <tspan
-       font-size="14px"
-       fill="rgb(0,0,0)"
-       stroke="none"
-       x="470"
-       y="230.5"
-       id="tspan3736">4</tspan>
+  <text>
+    <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="723" y="352.5">14</tspan>
   </text>
-  <line
-     fill="none"
-     stroke="rgb(0,0,0)"
-     x1="265"
-     y1="233.5"
-     x2="475"
-     y2="233.5"
-     id="line3738" />
-  <line
-     fill="none"
-     stroke="rgb(0,0,0)"
-     x1="480"
-     y1="241"
-     x2="520"
-     y2="271.5"
-     id="line3740" />
-  <line
-     fill="none"
-     stroke="rgb(0,0,0)"
-     x1="480"
-     y1="241"
-     x2="520"
-     y2="210.5"
-     id="line3742" />
-  <image
-     sodipodi:absref="C:\Users\Andi\Desktop\Spacegame\ResearchSVG\Headframe.png"
-     xlink:href="Headframe.png"
-     id="image3744"
-     title="Bergbausektor"
-     height="32"
-     width="32"
-     y="235.5"
-     x="263" />
-  <image
-     sodipodi:absref="C:\Users\Andi\Desktop\Spacegame\ResearchSVG\152.png"
-     xlink:href="152.png"
-     id="image3746"
-     title="Hochofen"
-     height="32"
-     width="32"
-     y="235.5"
-     x="298" />
+  <line fill="none" stroke="rgb(0,0,0)" x1="525" y1="355.5" x2="735" y2="355.5"></line>
+  <line fill="none" stroke="rgb(0,0,0)" x1="740" y1="363" x2="780" y2="363"></line>
+  <image x="523" y="357.5" width="32" height="32" title="Planetary Scanner" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="PlanetaryScanner.png"></image>
+  <rect fill="url(#gradDarkGreen1)" width="220px" height="55px" x="780" y="122" title=""></rect>
+  <text>
+    <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="783" y="139">Superconductors </tspan>
+  </text>
+  <text>
+    <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="976" y="139">114</tspan>
+  </text>
+  <line fill="none" stroke="rgb(0,0,0)" x1="785" y1="142" x2="995" y2="142"></line>
+  <image x="783" y="144" width="32" height="32" title="+10% Energy" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="SolarPanels.png"></image>
+  <rect fill="url(#gradGreen1)" width="220px" height="55px" x="520" y="183" title=""></rect>
+  <text>
+    <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="523" y="200">Warehouse construction plan</tspan>
+  </text>
+  <text>
+    <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="708" y="200">1500</tspan>
+  </text>
+  <line fill="none" stroke="rgb(0,0,0)" x1="525" y1="203" x2="735" y2="203"></line>
+  <image x="523" y="205" width="32" height="32" title="Warehouse" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Depot.png"></image>
+  <rect fill="url(#gradDarkGreen1)" width="220px" height="55px" x="260" y="213.5" title=""></rect>
+  <text>
+    <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="263" y="230.5">Ore mine construction plan</tspan>
+  </text>
+  <text>
+    <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="470" y="230.5">4</tspan>
+  </text>
+  <line fill="none" stroke="rgb(0,0,0)" x1="265" y1="233.5" x2="475" y2="233.5"></line>
+  <line fill="none" stroke="rgb(0,0,0)" x1="480" y1="241" x2="520" y2="271.5"></line>
+  <line fill="none" stroke="rgb(0,0,0)" x1="480" y1="241" x2="520" y2="210.5"></line>
+  <image x="263" y="235.5" width="32" height="32" title="Mining sector" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Headframe.png"></image>
+  <image x="298" y="235.5" width="32" height="32" title="Blast furnace" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="152.png"></image>
 </svg>

@@ -1,1 +1,184 @@
-<svg width="2350px" height="548px"><defs><linearGradient id="gradBlue3" x1="0%" x2="100%" y1="0%" y2="0%"><stop id="myStop1" offset="0%" stop-color="White"></stop><stop id="myStop2" offset="100%" stop-color="#1919FF"></stop></linearGradient><linearGradient id="gradGreen3" x1="0%" x2="100%" y1="0%" y2="0%"><stop id="myStop1" offset="0%" stop-color="White"></stop><stop id="myStop2" offset="100%" stop-color="#00FF00"></stop></linearGradient><linearGradient id="gradViolet3" x1="0%" x2="100%" y1="0%" y2="0%"><stop id="myStop1" offset="0%" stop-color="White"></stop><stop id="myStop2" offset="100%" stop-color="#FF0066"></stop></linearGradient><linearGradient id="gradDarkGreen3" x1="0%" x2="100%" y1="0%" y2="0%"><stop id="myStop1" offset="0%" stop-color="#00FF00"></stop><stop id="myStop2" offset="100%" stop-color="#008800"></stop></linearGradient></defs><rect fill="url(#gradDarkGreen3)" width="220px" height="55px" x="0" y="152.5" title=""></rect><text><tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="3" y="169.5">Basisforschung</tspan></text><text><tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="210" y="169.5">2</tspan></text><line fill="none" stroke="rgb(0,0,0)" x1="5" y1="172.5" x2="215" y2="172.5"></line><line fill="none" stroke="rgb(0,0,0)" x1="220" y1="180" x2="260" y2="58"></line><line fill="none" stroke="rgb(0,0,0)" x1="220" y1="180" x2="260" y2="119"></line><line fill="none" stroke="rgb(0,0,0)" x1="220" y1="180" x2="260" y2="180"></line><line fill="none" stroke="rgb(0,0,0)" x1="220" y1="180" x2="260" y2="241"></line><line fill="none" stroke="rgb(0,0,0)" x1="220" y1="180" x2="260" y2="302"></line><image x="3" y="174.5" width="32" height="32" title="Baumaterialfabrik" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://localhost:55487/game02/images/BuildingMaterialPlant.png?1.016"></image><image x="38" y="174.5" width="32" height="32" title="Sonnenkraftwerk" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://localhost:55487/game02/images/SolarPanels.png?1.016"></image><image x="73" y="174.5" width="32" height="32" title="Montagewerk" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://localhost:55487/game02/images/AssemblyPlant.png?1.016"></image><rect fill="url(#gradDarkGreen3)" width="220px" height="55px" x="260" y="30.5" title=""></rect><text><tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="263" y="47.5">Holmium Analyse</tspan></text><text><tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="470" y="47.5">9</tspan></text><line fill="none" stroke="rgb(0,0,0)" x1="265" y1="50.5" x2="475" y2="50.5"></line><line fill="none" stroke="rgb(0,0,0)" x1="480" y1="58" x2="520" y2="58"></line><image x="263" y="52.5" width="32" height="32" title="Holmium Mine" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://localhost:55487/game02/images/Headframe.png?1.016"></image><rect fill="url(#gradDarkGreen3)" width="220px" height="55px" x="260" y="91.5" title=""></rect><text><tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="263" y="108.5">Terbium Analyse</tspan></text><text><tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="470" y="108.5">9</tspan></text><line fill="none" stroke="rgb(0,0,0)" x1="265" y1="111.5" x2="475" y2="111.5"></line><line fill="none" stroke="rgb(0,0,0)" x1="480" y1="119" x2="520" y2="119"></line><image x="263" y="113.5" width="32" height="32" title="Terbium Mine" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://localhost:55487/game02/images/Headframe.png?1.016"></image><rect fill="url(#gradDarkGreen3)" width="220px" height="55px" x="260" y="152.5" title=""></rect><text><tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="263" y="169.5">Scandium Analyse</tspan></text><text><tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="470" y="169.5">8</tspan></text><line fill="none" stroke="rgb(0,0,0)" x1="265" y1="172.5" x2="475" y2="172.5"></line><line fill="none" stroke="rgb(0,0,0)" x1="480" y1="180" x2="520" y2="180"></line><image x="263" y="174.5" width="32" height="32" title="Scandium Mine" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://localhost:55487/game02/images/Headframe.png?1.016"></image><rect fill="url(#gradDarkGreen3)" width="220px" height="55px" x="260" y="213.5" title=""></rect><text><tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="263" y="230.5">Yttrium Analyse</tspan></text><text><tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="470" y="230.5">8</tspan></text><line fill="none" stroke="rgb(0,0,0)" x1="265" y1="233.5" x2="475" y2="233.5"></line><line fill="none" stroke="rgb(0,0,0)" x1="480" y1="241" x2="520" y2="241"></line><image x="263" y="235.5" width="32" height="32" title="Yttrium Mine" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://localhost:55487/game02/images/Headframe.png?1.016"></image><rect fill="url(#gradDarkGreen3)" width="220px" height="55px" x="260" y="274.5" title=""></rect><text><tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="263" y="291.5">Lutetium Analyse</tspan></text><text><tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="470" y="291.5">8</tspan></text><line fill="none" stroke="rgb(0,0,0)" x1="265" y1="294.5" x2="475" y2="294.5"></line><line fill="none" stroke="rgb(0,0,0)" x1="480" y1="302" x2="520" y2="302"></line><image x="263" y="296.5" width="32" height="32" title="Lutetium Mine" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://localhost:55487/game02/images/Headframe.png?1.016"></image><rect fill="url(#gradDarkGreen3)" width="220px" height="55px" x="520" y="30.5" title=""></rect><text><tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="523" y="47.5">Holmium Verarbeitung</tspan></text><text><tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="723" y="47.5">14</tspan></text><line fill="none" stroke="rgb(0,0,0)" x1="525" y1="50.5" x2="735" y2="50.5"></line><line fill="none" stroke="rgb(0,0,0)" x1="740" y1="58" x2="780" y2="58"></line><image x="523" y="52.5" width="32" height="32" title="Holmium Verarbeitung" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://localhost:55487/game02/images/BuildingMaterialPlant.png?1.016"></image><rect fill="url(#gradDarkGreen3)" width="220px" height="55px" x="520" y="91.5" title=""></rect><text><tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="523" y="108.5">Terbium Verarbeitung</tspan></text><text><tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="723" y="108.5">14</tspan></text><line fill="none" stroke="rgb(0,0,0)" x1="525" y1="111.5" x2="735" y2="111.5"></line><line fill="none" stroke="rgb(0,0,0)" x1="740" y1="119" x2="780" y2="119"></line><image x="523" y="113.5" width="32" height="32" title="Terbium Verarbeitung" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://localhost:55487/game02/images/BuildingMaterialPlant.png?1.016"></image><rect fill="url(#gradDarkGreen3)" width="220px" height="55px" x="520" y="152.5" title=""></rect><text><tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="523" y="169.5">Scandium Verarbeitung</tspan></text><text><tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="723" y="169.5">12</tspan></text><line fill="none" stroke="rgb(0,0,0)" x1="525" y1="172.5" x2="735" y2="172.5"></line><line fill="none" stroke="rgb(0,0,0)" x1="740" y1="180" x2="780" y2="180"></line><image x="523" y="174.5" width="32" height="32" title="Scandium Verarbeitung" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://localhost:55487/game02/images/BuildingMaterialPlant.png?1.016"></image><rect fill="url(#gradDarkGreen3)" width="220px" height="55px" x="520" y="213.5" title=""></rect><text><tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="523" y="230.5">Yttrium Verarbeitung</tspan></text><text><tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="723" y="230.5">11</tspan></text><line fill="none" stroke="rgb(0,0,0)" x1="525" y1="233.5" x2="735" y2="233.5"></line><line fill="none" stroke="rgb(0,0,0)" x1="740" y1="241" x2="780" y2="241"></line><image x="523" y="235.5" width="32" height="32" title="Yttrium Verarbeitung" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://localhost:55487/game02/images/BuildingMaterialPlant.png?1.016"></image><rect fill="url(#gradDarkGreen3)" width="220px" height="55px" x="520" y="274.5" title=""></rect><text><tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="523" y="291.5">Lutetium Verarbeitung</tspan></text><text><tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="723" y="291.5">12</tspan></text><line fill="none" stroke="rgb(0,0,0)" x1="525" y1="294.5" x2="735" y2="294.5"></line><line fill="none" stroke="rgb(0,0,0)" x1="740" y1="302" x2="780" y2="302"></line><image x="523" y="296.5" width="32" height="32" title="Lutetium Verarbeitung" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://localhost:55487/game02/images/BuildingMaterialPlant.png?1.016"></image><rect fill="url(#gradGreen3)" width="220px" height="55px" x="780" y="30.5" title=""></rect><text><tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="783" y="47.5">Holmium Laser I</tspan></text><text><tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="983" y="47.5">95</tspan></text><line fill="none" stroke="rgb(0,0,0)" x1="785" y1="50.5" x2="995" y2="50.5"></line><image x="783" y="52.5" width="32" height="32" title="Holmium Laser I" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://localhost:55487/game02/images/WeaponLaser.png?1.016"></image><rect fill="url(#gradGreen3)" width="220px" height="55px" x="780" y="91.5" title=""></rect><text><tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="783" y="108.5">Terbium Hülle I</tspan></text><text><tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="983" y="108.5">95</tspan></text><line fill="none" stroke="rgb(0,0,0)" x1="785" y1="111.5" x2="995" y2="111.5"></line><image x="783" y="113.5" width="32" height="32" title="Terbium Hülle I" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://localhost:55487/game02/images/Hull.png?1.016"></image><rect fill="url(#gradGreen3)" width="220px" height="55px" x="780" y="152.5" title=""></rect><text><tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="783" y="169.5">Scandium Schild I</tspan></text><text><tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="983" y="169.5">89</tspan></text><line fill="none" stroke="rgb(0,0,0)" x1="785" y1="172.5" x2="995" y2="172.5"></line><image x="783" y="174.5" width="32" height="32" title="Scandium Schild I" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://localhost:55487/game02/images/Shield.png?1.016"></image><rect fill="url(#gradGreen3)" width="220px" height="55px" x="780" y="213.5" title=""></rect><text><tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="783" y="230.5">Yttrium Module I</tspan></text><text><tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="983" y="230.5">84</tspan></text><line fill="none" stroke="rgb(0,0,0)" x1="785" y1="233.5" x2="995" y2="233.5"></line><image x="783" y="235.5" width="32" height="32" title="Yttrium Crew I" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://localhost:55487/game02/images/Crew1.png?1.016"></image><image x="818" y="235.5" width="32" height="32" title="Yttrium Lager I" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://localhost:55487/game02/images/Cargo.png?1.016"></image><image x="853" y="235.5" width="32" height="32" title="Yttrium Antrieb I" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://localhost:55487/game02/images/Hyper.png?1.016"></image><rect fill="url(#gradGreen3)" width="220px" height="55px" x="780" y="274.5" title=""></rect><text><tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="783" y="291.5">Lutetium Module I</tspan></text><text><tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="983" y="291.5">84</tspan></text><line fill="none" stroke="rgb(0,0,0)" x1="785" y1="294.5" x2="995" y2="294.5"></line><image x="783" y="296.5" width="32" height="32" title="Lutetium Reaktor I" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://localhost:55487/game02/images/Reactor.png?1.016"></image><image x="818" y="296.5" width="32" height="32" title="Lutetium Scanner I" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://localhost:55487/game02/images/Scanner.png?1.016"></image></svg>
+<svg width="2350px" height="548px">
+  <defs>
+    <linearGradient id="gradBlue3" x1="0%" x2="100%" y1="0%" y2="0%">
+      <stop id="myStop1" offset="0%" stop-color="White"></stop>
+      <stop id="myStop2" offset="100%" stop-color="#1919FF"></stop>
+    </linearGradient>
+    <linearGradient id="gradGreen3" x1="0%" x2="100%" y1="0%" y2="0%">
+      <stop id="myStop1" offset="0%" stop-color="White"></stop>
+      <stop id="myStop2" offset="100%" stop-color="#00FF00"></stop>
+    </linearGradient>
+    <linearGradient id="gradViolet3" x1="0%" x2="100%" y1="0%" y2="0%">
+      <stop id="myStop1" offset="0%" stop-color="White"></stop>
+      <stop id="myStop2" offset="100%" stop-color="#FF0066"></stop>
+    </linearGradient>
+    <linearGradient id="gradDarkGreen3" x1="0%" x2="100%" y1="0%" y2="0%">
+      <stop id="myStop1" offset="0%" stop-color="#00FF00"></stop>
+      <stop id="myStop2" offset="100%" stop-color="#008800"></stop>
+    </linearGradient>
+  </defs>
+  <rect fill="url(#gradDarkGreen3)" width="220px" height="55px" x="0" y="152.5" title=""></rect>
+  <text>
+    <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="3" y="169.5">Base research</tspan>
+  </text>
+  <text>
+    <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="210" y="169.5">2</tspan>
+  </text>
+  <line fill="none" stroke="rgb(0,0,0)" x1="5" y1="172.5" x2="215" y2="172.5"></line>
+  <line fill="none" stroke="rgb(0,0,0)" x1="220" y1="180" x2="260" y2="58"></line>
+  <line fill="none" stroke="rgb(0,0,0)" x1="220" y1="180" x2="260" y2="119"></line>
+  <line fill="none" stroke="rgb(0,0,0)" x1="220" y1="180" x2="260" y2="180"></line>
+  <line fill="none" stroke="rgb(0,0,0)" x1="220" y1="180" x2="260" y2="241"></line>
+  <line fill="none" stroke="rgb(0,0,0)" x1="220" y1="180" x2="260" y2="302"></line>
+  <image x="3" y="174.5" width="32" height="32" title="Building material plant" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="BuildingMaterialPlant.png"></image>
+  <image x="38" y="174.5" width="32" height="32" title="Solar power plant" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="SolarPanels.png"></image>
+  <image x="73" y="174.5" width="32" height="32" title="Assembly plant" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="AssemblyPlant.png"></image>
+  <rect fill="url(#gradDarkGreen3)" width="220px" height="55px" x="260" y="30.5" title=""></rect>
+  <text>
+    <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="263" y="47.5">Holmium analysis</tspan>
+  </text>
+  <text>
+    <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="470" y="47.5">9</tspan>
+  </text>
+  <line fill="none" stroke="rgb(0,0,0)" x1="265" y1="50.5" x2="475" y2="50.5"></line>
+  <line fill="none" stroke="rgb(0,0,0)" x1="480" y1="58" x2="520" y2="58"></line>
+  <image x="263" y="52.5" width="32" height="32" title="Holmium mine" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Headframe.png"></image>
+  <rect fill="url(#gradDarkGreen3)" width="220px" height="55px" x="260" y="91.5" title=""></rect>
+  <text>
+    <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="263" y="108.5">Terbium analysis</tspan>
+  </text>
+  <text>
+    <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="470" y="108.5">9</tspan>
+  </text>
+  <line fill="none" stroke="rgb(0,0,0)" x1="265" y1="111.5" x2="475" y2="111.5"></line>
+  <line fill="none" stroke="rgb(0,0,0)" x1="480" y1="119" x2="520" y2="119"></line>
+  <image x="263" y="113.5" width="32" height="32" title="Terbium mine" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Headframe.png"></image>
+  <rect fill="url(#gradDarkGreen3)" width="220px" height="55px" x="260" y="152.5" title=""></rect>
+  <text>
+    <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="263" y="169.5">Scandium analysis</tspan>
+  </text>
+  <text>
+    <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="470" y="169.5">8</tspan>
+  </text>
+  <line fill="none" stroke="rgb(0,0,0)" x1="265" y1="172.5" x2="475" y2="172.5"></line>
+  <line fill="none" stroke="rgb(0,0,0)" x1="480" y1="180" x2="520" y2="180"></line>
+  <image x="263" y="174.5" width="32" height="32" title="Scandium mine" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Headframe.png"></image>
+  <rect fill="url(#gradDarkGreen3)" width="220px" height="55px" x="260" y="213.5" title=""></rect>
+  <text>
+    <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="263" y="230.5">Yttrium analysis</tspan>
+  </text>
+  <text>
+    <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="470" y="230.5">8</tspan>
+  </text>
+  <line fill="none" stroke="rgb(0,0,0)" x1="265" y1="233.5" x2="475" y2="233.5"></line>
+  <line fill="none" stroke="rgb(0,0,0)" x1="480" y1="241" x2="520" y2="241"></line>
+  <image x="263" y="235.5" width="32" height="32" title="Yttrium mine" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Headframe.png"></image>
+  <rect fill="url(#gradDarkGreen3)" width="220px" height="55px" x="260" y="274.5" title=""></rect>
+  <text>
+    <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="263" y="291.5">Lutetium analysis</tspan>
+  </text>
+  <text>
+    <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="470" y="291.5">8</tspan>
+  </text>
+  <line fill="none" stroke="rgb(0,0,0)" x1="265" y1="294.5" x2="475" y2="294.5"></line>
+  <line fill="none" stroke="rgb(0,0,0)" x1="480" y1="302" x2="520" y2="302"></line>
+  <image x="263" y="296.5" width="32" height="32" title="Lutetium mine" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Headframe.png"></image>
+  <rect fill="url(#gradDarkGreen3)" width="220px" height="55px" x="520" y="30.5" title=""></rect>
+  <text>
+    <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="523" y="47.5">Holmium processing</tspan>
+  </text>
+  <text>
+    <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="723" y="47.5">14</tspan>
+  </text>
+  <line fill="none" stroke="rgb(0,0,0)" x1="525" y1="50.5" x2="735" y2="50.5"></line>
+  <line fill="none" stroke="rgb(0,0,0)" x1="740" y1="58" x2="780" y2="58"></line>
+  <image x="523" y="52.5" width="32" height="32" title="Holmium processing" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="BuildingMaterialPlant.png"></image>
+  <rect fill="url(#gradDarkGreen3)" width="220px" height="55px" x="520" y="91.5" title=""></rect>
+  <text>
+    <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="523" y="108.5">Terbium processing</tspan>
+  </text>
+  <text>
+    <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="723" y="108.5">14</tspan>
+  </text>
+  <line fill="none" stroke="rgb(0,0,0)" x1="525" y1="111.5" x2="735" y2="111.5"></line>
+  <line fill="none" stroke="rgb(0,0,0)" x1="740" y1="119" x2="780" y2="119"></line>
+  <image x="523" y="113.5" width="32" height="32" title="Terbium processing" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="BuildingMaterialPlant.png"></image>
+  <rect fill="url(#gradDarkGreen3)" width="220px" height="55px" x="520" y="152.5" title=""></rect>
+  <text>
+    <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="523" y="169.5">Scandium processing</tspan>
+  </text>
+  <text>
+    <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="723" y="169.5">12</tspan>
+  </text>
+  <line fill="none" stroke="rgb(0,0,0)" x1="525" y1="172.5" x2="735" y2="172.5"></line>
+  <line fill="none" stroke="rgb(0,0,0)" x1="740" y1="180" x2="780" y2="180"></line>
+  <image x="523" y="174.5" width="32" height="32" title="Scandium processing" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="BuildingMaterialPlant.png"></image>
+  <rect fill="url(#gradDarkGreen3)" width="220px" height="55px" x="520" y="213.5" title=""></rect>
+  <text>
+    <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="523" y="230.5">Yttrium processing</tspan>
+  </text>
+  <text>
+    <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="723" y="230.5">11</tspan>
+  </text>
+  <line fill="none" stroke="rgb(0,0,0)" x1="525" y1="233.5" x2="735" y2="233.5"></line>
+  <line fill="none" stroke="rgb(0,0,0)" x1="740" y1="241" x2="780" y2="241"></line>
+  <image x="523" y="235.5" width="32" height="32" title="Yttrium processing" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="BuildingMaterialPlant.png"></image>
+  <rect fill="url(#gradDarkGreen3)" width="220px" height="55px" x="520" y="274.5" title=""></rect>
+  <text>
+    <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="523" y="291.5">Lutetium processing</tspan>
+  </text>
+  <text>
+    <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="723" y="291.5">12</tspan>
+  </text>
+  <line fill="none" stroke="rgb(0,0,0)" x1="525" y1="294.5" x2="735" y2="294.5"></line>
+  <line fill="none" stroke="rgb(0,0,0)" x1="740" y1="302" x2="780" y2="302"></line>
+  <image x="523" y="296.5" width="32" height="32" title="Lutetium processing" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="BuildingMaterialPlant.png"></image>
+  <rect fill="url(#gradGreen3)" width="220px" height="55px" x="780" y="30.5" title=""></rect>
+  <text>
+    <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="783" y="47.5">Holmium Laser I</tspan>
+  </text>
+  <text>
+    <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="983" y="47.5">95</tspan>
+  </text>
+  <line fill="none" stroke="rgb(0,0,0)" x1="785" y1="50.5" x2="995" y2="50.5"></line>
+  <image x="783" y="52.5" width="32" height="32" title="Holmium Laser I" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="WeaponLaser.png"></image>
+  <rect fill="url(#gradGreen3)" width="220px" height="55px" x="780" y="91.5" title=""></rect>
+  <text>
+    <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="783" y="108.5">Terbium Hull I</tspan>
+  </text>
+  <text>
+    <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="983" y="108.5">95</tspan>
+  </text>
+  <line fill="none" stroke="rgb(0,0,0)" x1="785" y1="111.5" x2="995" y2="111.5"></line>
+  <image x="783" y="113.5" width="32" height="32" title="Terbium Hull I" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Hull.png"></image>
+  <rect fill="url(#gradGreen3)" width="220px" height="55px" x="780" y="152.5" title=""></rect>
+  <text>
+    <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="783" y="169.5">Scandium Shield I</tspan>
+  </text>
+  <text>
+    <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="983" y="169.5">89</tspan>
+  </text>
+  <line fill="none" stroke="rgb(0,0,0)" x1="785" y1="172.5" x2="995" y2="172.5"></line>
+  <image x="783" y="174.5" width="32" height="32" title="Scandium Shield I" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Shield.png"></image>
+  <rect fill="url(#gradGreen3)" width="220px" height="55px" x="780" y="213.5" title=""></rect>
+  <text>
+    <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="783" y="230.5">Yttrium Modules I</tspan>
+  </text>
+  <text>
+    <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="983" y="230.5">84</tspan>
+  </text>
+  <line fill="none" stroke="rgb(0,0,0)" x1="785" y1="233.5" x2="995" y2="233.5"></line>
+  <image x="783" y="235.5" width="32" height="32" title="Yttrium Crew I" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Crew1.png"></image>
+  <image x="818" y="235.5" width="32" height="32" title="Yttrium Cargo I" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Cargo.png"></image>
+  <image x="853" y="235.5" width="32" height="32" title="Yttrium Engines I" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Hyper.png"></image>
+  <rect fill="url(#gradGreen3)" width="220px" height="55px" x="780" y="274.5" title=""></rect>
+  <text>
+    <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="783" y="291.5">Lutetium Modules I</tspan>
+  </text>
+  <text>
+    <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="983" y="291.5">84</tspan>
+  </text>
+  <line fill="none" stroke="rgb(0,0,0)" x1="785" y1="294.5" x2="995" y2="294.5"></line>
+  <image x="783" y="296.5" width="32" height="32" title="Lutetium Reactor I" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Reactor.png"></image>
+  <image x="818" y="296.5" width="32" height="32" title="Lutetium Scanner I" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Scanner.png"></image>
+</svg>

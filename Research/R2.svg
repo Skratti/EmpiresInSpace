@@ -1,1 +1,277 @@
-<svg width="2350px" height="548px"><defs><linearGradient id="gradBlue2" x1="0%" x2="100%" y1="0%" y2="0%"><stop id="myStop1" offset="0%" stop-color="White"></stop><stop id="myStop2" offset="100%" stop-color="#1919FF"></stop></linearGradient><linearGradient id="gradGreen2" x1="0%" x2="100%" y1="0%" y2="0%"><stop id="myStop1" offset="0%" stop-color="White"></stop><stop id="myStop2" offset="100%" stop-color="#00FF00"></stop></linearGradient><linearGradient id="gradViolet2" x1="0%" x2="100%" y1="0%" y2="0%"><stop id="myStop1" offset="0%" stop-color="White"></stop><stop id="myStop2" offset="100%" stop-color="#FF0066"></stop></linearGradient><linearGradient id="gradDarkGreen2" x1="0%" x2="100%" y1="0%" y2="0%"><stop id="myStop1" offset="0%" stop-color="#00FF00"></stop><stop id="myStop2" offset="100%" stop-color="#008800"></stop></linearGradient></defs><rect fill="url(#gradDarkGreen2)" width="220px" height="55px" x="0" y="152.5" title=""></rect><text><tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="3" y="169.5">Basisforschung</tspan></text><text><tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="210" y="169.5">2</tspan></text><line fill="none" stroke="rgb(0,0,0)" x1="5" y1="172.5" x2="215" y2="172.5"></line><line fill="none" stroke="rgb(0,0,0)" x1="220" y1="180" x2="260" y2="180"></line><image x="3" y="174.5" width="32" height="32" title="Baumaterialfabrik" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://localhost:55487/game02/images/BuildingMaterialPlant.png?1.016"></image><image x="38" y="174.5" width="32" height="32" title="Sonnenkraftwerk" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://localhost:55487/game02/images/SolarPanels.png?1.016"></image><image x="73" y="174.5" width="32" height="32" title="Montagewerk" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://localhost:55487/game02/images/AssemblyPlant.png?1.016"></image><rect fill="url(#gradDarkGreen2)" width="220px" height="55px" x="260" y="152.5" title=""></rect><text><tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="263" y="169.5">Raumfahrt</tspan></text><text><tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="470" y="169.5">3</tspan></text><line fill="none" stroke="rgb(0,0,0)" x1="265" y1="172.5" x2="475" y2="172.5"></line><line fill="none" stroke="rgb(0,0,0)" x1="480" y1="180" x2="520" y2="363"></line><line fill="none" stroke="rgb(0,0,0)" x1="480" y1="180" x2="520" y2="424"></line><line fill="none" stroke="rgb(0,0,0)" x1="480" y1="180" x2="520" y2="119"></line><image x="263" y="174.5" width="32" height="32" title="Werft" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://localhost:55487/game02/images/Spaceport.png?1.016"></image><image x="298" y="174.5" width="32" height="32" title="Scout" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://localhost:55487/game02/images/Scout2XK.png?1.016"></image><rect fill="url(#gradDarkGreen2)" width="220px" height="55px" x="520" y="335.5" title=""></rect><text><tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="523" y="352.5">Korvette</tspan></text><text><tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="723" y="352.5">34</tspan></text><line fill="none" stroke="rgb(0,0,0)" x1="525" y1="355.5" x2="735" y2="355.5"></line><line fill="none" stroke="rgb(0,0,0)" x1="740" y1="363" x2="780" y2="363"></line><image x="523" y="357.5" width="32" height="32" title="Korvette" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://localhost:55487/game02/images/Corvette.png?1.016"></image><rect fill="url(#gradDarkGreen2)" width="220px" height="55px" x="780" y="335.5" title=""></rect><text><tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="783" y="352.5">Fregatte</tspan></text><text><tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="983" y="352.5">60</tspan></text><line fill="none" stroke="rgb(0,0,0)" x1="785" y1="355.5" x2="995" y2="355.5"></line><line fill="none" stroke="rgb(0,0,0)" x1="1000" y1="363" x2="1040" y2="363"></line><line fill="none" stroke="rgb(0,0,0)" x1="1000" y1="363" x2="1040" y2="424"></line><image x="783" y="357.5" width="32" height="32" title="Fregatte" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://localhost:55487/game02/images/Fregatte.png?1.016"></image><rect fill="url(#gradDarkGreen2)" width="220px" height="55px" x="1040" y="335.5" title=""></rect><text><tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="1043" y="352.5">Zerstörer</tspan></text><text><tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="1236" y="352.5">117</tspan></text><line fill="none" stroke="rgb(0,0,0)" x1="1045" y1="355.5" x2="1255" y2="355.5"></line><line fill="none" stroke="rgb(0,0,0)" x1="1260" y1="363" x2="1300" y2="363"></line><rect fill="url(#gradDarkGreen2)" width="220px" height="55px" x="1300" y="335.5" title=""></rect><text><tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="1303" y="352.5">Kreuzer</tspan></text><text><tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="1496" y="352.5">209</tspan></text><line fill="none" stroke="rgb(0,0,0)" x1="1305" y1="355.5" x2="1515" y2="355.5"></line><line fill="none" stroke="rgb(0,0,0)" x1="1520" y1="363" x2="1560" y2="363"></line><line fill="none" stroke="rgb(0,0,0)" x1="1520" y1="363" x2="1560" y2="424"></line><rect fill="url(#gradGreen2)" width="220px" height="55px" x="1560" y="335.5" title=""></rect><text><tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="1563" y="352.5">Schlachtschiff</tspan></text><text><tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="1756" y="352.5">567</tspan></text><line fill="none" stroke="rgb(0,0,0)" x1="1565" y1="355.5" x2="1775" y2="355.5"></line><line fill="none" stroke="rgb(0,0,0)" x1="1780" y1="363" x2="1820" y2="363"></line><rect fill="url(#gradBlue2)" width="220px" height="55px" x="1820" y="335.5" title=""></rect><text><tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="1823" y="352.5">Superschlachtschiff</tspan></text><text><tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="2008" y="352.5">2000</tspan></text><line fill="none" stroke="rgb(0,0,0)" x1="1825" y1="355.5" x2="2035" y2="355.5"></line><line fill="none" stroke="rgb(0,0,0)" x1="2040" y1="363" x2="2080" y2="424"></line><rect fill="url(#gradDarkGreen2)" width="220px" height="55px" x="520" y="396.5" title=""></rect><text><tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="523" y="413.5">Außenposten</tspan></text><text><tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="723" y="413.5">34</tspan></text><line fill="none" stroke="rgb(0,0,0)" x1="525" y1="416.5" x2="735" y2="416.5"></line><image x="523" y="418.5" width="32" height="32" title="Außenposten Rumpf" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://localhost:55487/game02/images/SpaceStation0_1_60.png?1.016"></image><image x="558" y="418.5" width="32" height="32" title="Außenposten" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://localhost:55487/game02/images/SpaceStation0_1_60.png?1.016"></image><rect fill="url(#gradDarkGreen2)" width="220px" height="55px" x="1040" y="396.5" title=""></rect><text><tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="1043" y="413.5">Raumstation</tspan></text><text><tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="1236" y="413.5">100</tspan></text><line fill="none" stroke="rgb(0,0,0)" x1="1045" y1="416.5" x2="1255" y2="416.5"></line><image x="1043" y="418.5" width="32" height="32" title="Raumstation Rumpf" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://localhost:55487/game02/images/SpaceStation1_1_60.png?1.016"></image><image x="1078" y="418.5" width="32" height="32" title="Raumstation" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://localhost:55487/game02/images/SpaceStation1_1_60.png?1.016"></image><rect fill="url(#gradDarkGreen2)" width="220px" height="55px" x="1560" y="396.5" title=""></rect><text><tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="1563" y="413.5">Sternenbasis</tspan></text><text><tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="1756" y="413.5">267</tspan></text><line fill="none" stroke="rgb(0,0,0)" x1="1565" y1="416.5" x2="1775" y2="416.5"></line><image x="1563" y="418.5" width="32" height="32" title="Sternenfestung Rumpf" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://localhost:55487/game02/images/SpaceStation2_1_60.png?1.016"></image><image x="1598" y="418.5" width="32" height="32" title="Raumbasis" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://localhost:55487/game02/images/SpaceStation2_1_60.png?1.016"></image><rect fill="url(#gradBlue2)" width="220px" height="55px" x="2080" y="396.5" title=""></rect><text><tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="2083" y="413.5">Sternenfestung</tspan></text><text><tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="2276" y="413.5">800</tspan></text><line fill="none" stroke="rgb(0,0,0)" x1="2085" y1="416.5" x2="2295" y2="416.5"></line><image x="2083" y="418.5" width="32" height="32" title="Sternenfestung Rumpf" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://localhost:55487/game02/images/SpaceStation3_1_60.png?1.016"></image><image x="2118" y="418.5" width="32" height="32" title="Sternenfestung" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://localhost:55487/game02/images/SpaceStation3_1_60.png?1.016"></image><rect fill="url(#gradDarkGreen2)" width="220px" height="55px" x="520" y="91.5" title=""></rect><text><tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="523" y="108.5">Module</tspan></text><text><tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="730" y="108.5">6</tspan></text><line fill="none" stroke="rgb(0,0,0)" x1="525" y1="111.5" x2="735" y2="111.5"></line><line fill="none" stroke="rgb(0,0,0)" x1="740" y1="119" x2="780" y2="27.5"></line><line fill="none" stroke="rgb(0,0,0)" x1="740" y1="119" x2="780" y2="210.5"></line><line fill="none" stroke="rgb(0,0,0)" x1="740" y1="119" x2="780" y2="149.5"></line><line fill="none" stroke="rgb(0,0,0)" x1="740" y1="119" x2="780" y2="88.5"></line><line fill="none" stroke="rgb(0,0,0)" x1="740" y1="119" x2="780" y2="271.5"></line><line fill="none" stroke="rgb(0,0,0)" x1="740" y1="119" x2="1300" y2="119"></line><image x="523" y="113.5" width="32" height="32" title="Modulfabrik" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://localhost:55487/game02/images/ModulePlant.png?1.016"></image><image x="558" y="113.5" width="32" height="32" title="Crew I" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://localhost:55487/game02/images/Crew1.png?1.016"></image><image x="593" y="113.5" width="32" height="32" title="Reaktor I" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://localhost:55487/game02/images/Reactor.png?1.016"></image><image x="628" y="113.5" width="32" height="32" title="System-Antrieb" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://localhost:55487/game02/images/Impuls.png?1.016"></image><image x="663" y="113.5" width="32" height="32" title="Hyper-Antrieb" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://localhost:55487/game02/images/Hyper.png?1.016"></image><rect fill="url(#gradDarkGreen2)" width="220px" height="55px" x="780" y="0" title=""></rect><text><tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="783" y="17">Lagerraum</tspan></text><text><tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="990" y="17">8</tspan></text><line fill="none" stroke="rgb(0,0,0)" x1="785" y1="20" x2="995" y2="20"></line><line fill="none" stroke="rgb(0,0,0)" x1="1000" y1="27.5" x2="1560" y2="27.5"></line><image x="783" y="22" width="32" height="32" title="Lager I" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://localhost:55487/game02/images/Cargo.png?1.016"></image><rect fill="url(#gradDarkGreen2)" width="220px" height="55px" x="780" y="183" title=""></rect><text><tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="783" y="200">Scanner</tspan></text><text><tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="990" y="200">7</tspan></text><line fill="none" stroke="rgb(0,0,0)" x1="785" y1="203" x2="995" y2="203"></line><line fill="none" stroke="rgb(0,0,0)" x1="1000" y1="210.5" x2="1560" y2="210.5"></line><image x="783" y="205" width="32" height="32" title="Scanner I" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://localhost:55487/game02/images/Scanner.png?1.016"></image><rect fill="url(#gradDarkGreen2)" width="220px" height="55px" x="780" y="122" title=""></rect><text><tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="783" y="139">Schiffsverteidigung</tspan></text><text><tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="983" y="139">14</tspan></text><line fill="none" stroke="rgb(0,0,0)" x1="785" y1="142" x2="995" y2="142"></line><line fill="none" stroke="rgb(0,0,0)" x1="1000" y1="149.5" x2="1560" y2="149.5"></line><image x="783" y="144" width="32" height="32" title="Hülle I" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://localhost:55487/game02/images/Hull.png?1.016"></image><image x="818" y="144" width="32" height="32" title="Schild I" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://localhost:55487/game02/images/Shield.png?1.016"></image><rect fill="url(#gradDarkGreen2)" width="220px" height="55px" x="780" y="61" title=""></rect><text><tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="783" y="78">Schiffwaffen</tspan></text><text><tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="983" y="78">14</tspan></text><line fill="none" stroke="rgb(0,0,0)" x1="785" y1="81" x2="995" y2="81"></line><line fill="none" stroke="rgb(0,0,0)" x1="1000" y1="88.5" x2="1560" y2="88.5"></line><image x="783" y="83" width="32" height="32" title="Laser I" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://localhost:55487/game02/images/WeaponLaser.png?1.016"></image><image x="818" y="83" width="32" height="32" title="Rakete I" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://localhost:55487/game02/images/WeaponRocket.png?1.016"></image><image x="853" y="83" width="32" height="32" title="Railgun  I" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://localhost:55487/game02/images/WeaponMassDriver.png?1.016"></image><rect fill="url(#gradDarkGreen2)" width="220px" height="55px" x="780" y="244" title=""></rect><text><tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="783" y="261">Kolonisierungsmodul</tspan></text><text><tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="983" y="261">14</tspan></text><line fill="none" stroke="rgb(0,0,0)" x1="785" y1="264" x2="995" y2="264"></line><line fill="none" stroke="rgb(0,0,0)" x1="1000" y1="271.5" x2="1040" y2="271.5"></line><image x="783" y="266" width="32" height="32" title="Kolonisierungsmodul" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://localhost:55487/game02/images/Engine.png?1.016"></image><rect fill="url(#gradGreen2)" width="220px" height="55px" x="1040" y="244" title=""></rect><text><tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="1043" y="261">Kolonisierungsmodul II</tspan></text><text><tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="1236" y="261">250</tspan></text><line fill="none" stroke="rgb(0,0,0)" x1="1045" y1="264" x2="1255" y2="264"></line><image x="1043" y="266" width="32" height="32" title="Kolonisierungsmodul" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://localhost:55487/game02/images/Engine.png?1.016"></image><rect fill="url(#gradDarkGreen2)" width="220px" height="55px" x="1300" y="91.5" title=""></rect><text><tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="1303" y="108.5">Module II</tspan></text><text><tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="1503" y="108.5">58</tspan></text><line fill="none" stroke="rgb(0,0,0)" x1="1305" y1="111.5" x2="1515" y2="111.5"></line><line fill="none" stroke="rgb(0,0,0)" x1="1520" y1="119" x2="1560" y2="149.5"></line><line fill="none" stroke="rgb(0,0,0)" x1="1520" y1="119" x2="1560" y2="88.5"></line><image x="1303" y="113.5" width="32" height="32" title="Crew II" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://localhost:55487/game02/images/Crew1.png?1.016"></image><image x="1338" y="113.5" width="32" height="32" title="Reaktor II" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://localhost:55487/game02/images/Reactor.png?1.016"></image><image x="1373" y="113.5" width="32" height="32" title="System Antrieb II" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://localhost:55487/game02/images/Impuls.png?1.016"></image><image x="1408" y="113.5" width="32" height="32" title="Hyper Antrieb II" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://localhost:55487/game02/images/Hyper.png?1.016"></image><rect fill="url(#gradGreen2)" width="220px" height="55px" x="1560" y="0" title=""></rect><text><tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="1563" y="17">Lager II</tspan></text><text><tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="1763" y="17">45</tspan></text><line fill="none" stroke="rgb(0,0,0)" x1="1565" y1="20" x2="1775" y2="20"></line><image x="1563" y="22" width="32" height="32" title="Lager II" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://localhost:55487/game02/images/Cargo.png?1.016"></image><rect fill="url(#gradGreen2)" width="220px" height="55px" x="1560" y="183" title=""></rect><text><tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="1563" y="200">Scanner II</tspan></text><text><tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="1763" y="200">59</tspan></text><line fill="none" stroke="rgb(0,0,0)" x1="1565" y1="203" x2="1775" y2="203"></line><image x="1563" y="205" width="32" height="32" title="Scanner II" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://localhost:55487/game02/images/Scanner.png?1.016"></image><rect fill="url(#gradDarkGreen2)" width="220px" height="55px" x="1560" y="122" title=""></rect><text><tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="1563" y="139">Verteidigung II</tspan></text><text><tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="1763" y="139">87</tspan></text><line fill="none" stroke="rgb(0,0,0)" x1="1565" y1="142" x2="1775" y2="142"></line><image x="1563" y="144" width="32" height="32" title="Hülle II" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://localhost:55487/game02/images/Hull.png?1.016"></image><image x="1598" y="144" width="32" height="32" title="Schild II" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://localhost:55487/game02/images/Shield.png?1.016"></image><rect fill="url(#gradDarkGreen2)" width="220px" height="55px" x="1560" y="61" title=""></rect><text><tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="1563" y="78">Angriff II</tspan></text><text><tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="1763" y="78">87</tspan></text><line fill="none" stroke="rgb(0,0,0)" x1="1565" y1="81" x2="1775" y2="81"></line><image x="1563" y="83" width="32" height="32" title="Laser II" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://localhost:55487/game02/images/WeaponLaser.png?1.016"></image><image x="1598" y="83" width="32" height="32" title="Rakete II" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://localhost:55487/game02/images/WeaponRocket.png?1.016"></image><image x="1633" y="83" width="32" height="32" title="Railgun  II" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://localhost:55487/game02/images/WeaponMassDriver.png?1.016"></image></svg>
+<svg width="2350px" height="548px">
+  <defs>
+    <linearGradient id="gradBlue2" x1="0%" x2="100%" y1="0%" y2="0%">
+      <stop id="myStop1" offset="0%" stop-color="White"></stop>
+      <stop id="myStop2" offset="100%" stop-color="#1919FF"></stop>
+    </linearGradient>
+    <linearGradient id="gradGreen2" x1="0%" x2="100%" y1="0%" y2="0%">
+      <stop id="myStop1" offset="0%" stop-color="White"></stop>
+      <stop id="myStop2" offset="100%" stop-color="#00FF00"></stop>
+    </linearGradient>
+    <linearGradient id="gradViolet2" x1="0%" x2="100%" y1="0%" y2="0%">
+      <stop id="myStop1" offset="0%" stop-color="White"></stop>
+      <stop id="myStop2" offset="100%" stop-color="#FF0066"></stop>
+    </linearGradient>
+    <linearGradient id="gradDarkGreen2" x1="0%" x2="100%" y1="0%" y2="0%">
+      <stop id="myStop1" offset="0%" stop-color="#00FF00"></stop>
+      <stop id="myStop2" offset="100%" stop-color="#008800"></stop>
+    </linearGradient>
+  </defs>
+  <rect fill="url(#gradDarkGreen2)" width="220px" height="55px" x="0" y="152.5" title=""></rect>
+  <text>
+    <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="3" y="169.5">Base research</tspan>
+  </text>
+  <text>
+    <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="210" y="169.5">2</tspan>
+  </text>
+  <line fill="none" stroke="rgb(0,0,0)" x1="5" y1="172.5" x2="215" y2="172.5"></line>
+  <line fill="none" stroke="rgb(0,0,0)" x1="220" y1="180" x2="260" y2="180"></line>
+  <image x="3" y="174.5" width="32" height="32" title="Building material plant" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="BuildingMaterialPlant.png"></image>
+  <image x="38" y="174.5" width="32" height="32" title="Solar power plant" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="SolarPanels.png"></image>
+  <image x="73" y="174.5" width="32" height="32" title="Assembly plant" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="AssemblyPlant.png"></image>
+  <rect fill="url(#gradDarkGreen2)" width="220px" height="55px" x="260" y="152.5" title=""></rect>
+  <text>
+    <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="263" y="169.5">Space travel</tspan>
+  </text>
+  <text>
+    <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="470" y="169.5">3</tspan>
+  </text>
+  <line fill="none" stroke="rgb(0,0,0)" x1="265" y1="172.5" x2="475" y2="172.5"></line>
+  <line fill="none" stroke="rgb(0,0,0)" x1="480" y1="180" x2="520" y2="363"></line>
+  <line fill="none" stroke="rgb(0,0,0)" x1="480" y1="180" x2="520" y2="424"></line>
+  <line fill="none" stroke="rgb(0,0,0)" x1="480" y1="180" x2="520" y2="119"></line>
+  <image x="263" y="174.5" width="32" height="32" title="Shipyard" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Spaceport.png"></image>
+  <image x="298" y="174.5" width="32" height="32" title="Scout" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Scout2XK.png"></image>
+  <rect fill="url(#gradDarkGreen2)" width="220px" height="55px" x="520" y="335.5" title=""></rect>
+  <text>
+    <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="523" y="352.5">Corvette</tspan>
+  </text>
+  <text>
+    <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="723" y="352.5">34</tspan>
+  </text>
+  <line fill="none" stroke="rgb(0,0,0)" x1="525" y1="355.5" x2="735" y2="355.5"></line>
+  <line fill="none" stroke="rgb(0,0,0)" x1="740" y1="363" x2="780" y2="363"></line>
+  <image x="523" y="357.5" width="32" height="32" title="Corvette hull" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Corvette.png"></image>
+  <rect fill="url(#gradDarkGreen2)" width="220px" height="55px" x="780" y="335.5" title=""></rect>
+  <text>
+    <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="783" y="352.5">Frigatte</tspan>
+  </text>
+  <text>
+    <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="983" y="352.5">60</tspan>
+  </text>
+  <line fill="none" stroke="rgb(0,0,0)" x1="785" y1="355.5" x2="995" y2="355.5"></line>
+  <line fill="none" stroke="rgb(0,0,0)" x1="1000" y1="363" x2="1040" y2="363"></line>
+  <line fill="none" stroke="rgb(0,0,0)" x1="1000" y1="363" x2="1040" y2="424"></line>
+  <image x="783" y="357.5" width="32" height="32" title="Frigatte hull" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Fregatte.png"></image>
+  <rect fill="url(#gradDarkGreen2)" width="220px" height="55px" x="1040" y="335.5" title=""></rect>
+  <text>
+    <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="1043" y="352.5">Destroyer</tspan>
+  </text>
+  <text>
+    <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="1236" y="352.5">117</tspan>
+  </text>
+  <line fill="none" stroke="rgb(0,0,0)" x1="1045" y1="355.5" x2="1255" y2="355.5"></line>
+  <line fill="none" stroke="rgb(0,0,0)" x1="1260" y1="363" x2="1300" y2="363"></line>
+  <rect fill="url(#gradDarkGreen2)" width="220px" height="55px" x="1300" y="335.5" title=""></rect>
+  <text>
+    <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="1303" y="352.5">Cruiser</tspan>
+  </text>
+  <text>
+    <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="1496" y="352.5">209</tspan>
+  </text>
+  <line fill="none" stroke="rgb(0,0,0)" x1="1305" y1="355.5" x2="1515" y2="355.5"></line>
+  <line fill="none" stroke="rgb(0,0,0)" x1="1520" y1="363" x2="1560" y2="363"></line>
+  <line fill="none" stroke="rgb(0,0,0)" x1="1520" y1="363" x2="1560" y2="424"></line>
+  <rect fill="url(#gradGreen2)" width="220px" height="55px" x="1560" y="335.5" title=""></rect>
+  <text>
+    <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="1563" y="352.5">Battleship</tspan>
+  </text>
+  <text>
+    <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="1756" y="352.5">567</tspan>
+  </text>
+  <line fill="none" stroke="rgb(0,0,0)" x1="1565" y1="355.5" x2="1775" y2="355.5"></line>
+  <line fill="none" stroke="rgb(0,0,0)" x1="1780" y1="363" x2="1820" y2="363"></line>
+  <rect fill="url(#gradBlue2)" width="220px" height="55px" x="1820" y="335.5" title=""></rect>
+  <text>
+    <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="1823" y="352.5">Superbattleship</tspan>
+  </text>
+  <text>
+    <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="2008" y="352.5">2000</tspan>
+  </text>
+  <line fill="none" stroke="rgb(0,0,0)" x1="1825" y1="355.5" x2="2035" y2="355.5"></line>
+  <line fill="none" stroke="rgb(0,0,0)" x1="2040" y1="363" x2="2080" y2="424"></line>
+  <rect fill="url(#gradDarkGreen2)" width="220px" height="55px" x="520" y="396.5" title=""></rect>
+  <text>
+    <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="523" y="413.5">Outpost</tspan>
+  </text>
+  <text>
+    <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="723" y="413.5">34</tspan>
+  </text>
+  <line fill="none" stroke="rgb(0,0,0)" x1="525" y1="416.5" x2="735" y2="416.5"></line>
+  <image x="523" y="418.5" width="32" height="32" title="Outpost hull" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="SpaceStation0_1_60.png"></image>
+  <image x="558" y="418.5" width="32" height="32" title="Outpost" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="SpaceStation0_1_60.png"></image>
+  <rect fill="url(#gradDarkGreen2)" width="220px" height="55px" x="1040" y="396.5" title=""></rect>
+  <text>
+    <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="1043" y="413.5">Space station</tspan>
+  </text>
+  <text>
+    <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="1236" y="413.5">100</tspan>
+  </text>
+  <line fill="none" stroke="rgb(0,0,0)" x1="1045" y1="416.5" x2="1255" y2="416.5"></line>
+  <image x="1043" y="418.5" width="32" height="32" title="Space station hull" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="SpaceStation1_1_60.png"></image>
+  <image x="1078" y="418.5" width="32" height="32" title="Space station" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="SpaceStation1_1_60.png"></image>
+  <rect fill="url(#gradDarkGreen2)" width="220px" height="55px" x="1560" y="396.5" title=""></rect>
+  <text>
+    <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="1563" y="413.5">Star base</tspan>
+  </text>
+  <text>
+    <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="1756" y="413.5">267</tspan>
+  </text>
+  <line fill="none" stroke="rgb(0,0,0)" x1="1565" y1="416.5" x2="1775" y2="416.5"></line>
+  <image x="1563" y="418.5" width="32" height="32" title="Star fortress hull" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="SpaceStation2_1_60.png"></image>
+  <image x="1598" y="418.5" width="32" height="32" title="Starbase" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="SpaceStation2_1_60.png"></image>
+  <rect fill="url(#gradBlue2)" width="220px" height="55px" x="2080" y="396.5" title=""></rect>
+  <text>
+    <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="2083" y="413.5">Star fortress</tspan>
+  </text>
+  <text>
+    <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="2276" y="413.5">800</tspan>
+  </text>
+  <line fill="none" stroke="rgb(0,0,0)" x1="2085" y1="416.5" x2="2295" y2="416.5"></line>
+  <image x="2083" y="418.5" width="32" height="32" title="Star fortress hull" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="SpaceStation3_1_60.png"></image>
+  <image x="2118" y="418.5" width="32" height="32" title="Star fortress" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="SpaceStation3_1_60.png"></image>
+  <rect fill="url(#gradDarkGreen2)" width="220px" height="55px" x="520" y="91.5" title=""></rect>
+  <text>
+    <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="523" y="108.5">Modules</tspan>
+  </text>
+  <text>
+    <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="730" y="108.5">6</tspan>
+  </text>
+  <line fill="none" stroke="rgb(0,0,0)" x1="525" y1="111.5" x2="735" y2="111.5"></line>
+  <line fill="none" stroke="rgb(0,0,0)" x1="740" y1="119" x2="780" y2="27.5"></line>
+  <line fill="none" stroke="rgb(0,0,0)" x1="740" y1="119" x2="780" y2="210.5"></line>
+  <line fill="none" stroke="rgb(0,0,0)" x1="740" y1="119" x2="780" y2="149.5"></line>
+  <line fill="none" stroke="rgb(0,0,0)" x1="740" y1="119" x2="780" y2="88.5"></line>
+  <line fill="none" stroke="rgb(0,0,0)" x1="740" y1="119" x2="780" y2="271.5"></line>
+  <line fill="none" stroke="rgb(0,0,0)" x1="740" y1="119" x2="1300" y2="119"></line>
+  <image x="523" y="113.5" width="32" height="32" title="Module plant" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="ModulePlant.png"></image>
+  <image x="558" y="113.5" width="32" height="32" title="Crew I" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Crew1.png"></image>
+  <image x="593" y="113.5" width="32" height="32" title="Reactor I" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Reactor.png"></image>
+  <image x="628" y="113.5" width="32" height="32" title="System engines I" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Impuls.png"></image>
+  <image x="663" y="113.5" width="32" height="32" title="Hyper engines I" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Hyper.png"></image>
+  <rect fill="url(#gradDarkGreen2)" width="220px" height="55px" x="780" y="0" title=""></rect>
+  <text>
+    <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="783" y="17">Storage</tspan>
+  </text>
+  <text>
+    <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="990" y="17">8</tspan>
+  </text>
+  <line fill="none" stroke="rgb(0,0,0)" x1="785" y1="20" x2="995" y2="20"></line>
+  <line fill="none" stroke="rgb(0,0,0)" x1="1000" y1="27.5" x2="1560" y2="27.5"></line>
+  <image x="783" y="22" width="32" height="32" title="Cargo I" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Cargo.png"></image>
+  <rect fill="url(#gradDarkGreen2)" width="220px" height="55px" x="780" y="183" title=""></rect>
+  <text>
+    <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="783" y="200">Scanner</tspan>
+  </text>
+  <text>
+    <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="990" y="200">7</tspan>
+  </text>
+  <line fill="none" stroke="rgb(0,0,0)" x1="785" y1="203" x2="995" y2="203"></line>
+  <line fill="none" stroke="rgb(0,0,0)" x1="1000" y1="210.5" x2="1560" y2="210.5"></line>
+  <image x="783" y="205" width="32" height="32" title="Scanner I" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Scanner.png"></image>
+  <rect fill="url(#gradDarkGreen2)" width="220px" height="55px" x="780" y="122" title=""></rect>
+  <text>
+    <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="783" y="139">Ship defenses</tspan>
+  </text>
+  <text>
+    <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="983" y="139">14</tspan>
+  </text>
+  <line fill="none" stroke="rgb(0,0,0)" x1="785" y1="142" x2="995" y2="142"></line>
+  <line fill="none" stroke="rgb(0,0,0)" x1="1000" y1="149.5" x2="1560" y2="149.5"></line>
+  <image x="783" y="144" width="32" height="32" title="Hull I" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Hull.png"></image>
+  <image x="818" y="144" width="32" height="32" title="Shield I" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Shield.png"></image>
+  <rect fill="url(#gradDarkGreen2)" width="220px" height="55px" x="780" y="61" title=""></rect>
+  <text>
+    <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="783" y="78">Ship weapons</tspan>
+  </text>
+  <text>
+    <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="983" y="78">14</tspan>
+  </text>
+  <line fill="none" stroke="rgb(0,0,0)" x1="785" y1="81" x2="995" y2="81"></line>
+  <line fill="none" stroke="rgb(0,0,0)" x1="1000" y1="88.5" x2="1560" y2="88.5"></line>
+  <image x="783" y="83" width="32" height="32" title="Laser I" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="WeaponLaser.png"></image>
+  <image x="818" y="83" width="32" height="32" title="Missile I" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="WeaponRocket.png"></image>
+  <image x="853" y="83" width="32" height="32" title="Mass driver  I" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="WeaponMassDriver.png"></image>
+  <rect fill="url(#gradDarkGreen2)" width="220px" height="55px" x="780" y="244" title=""></rect>
+  <text>
+    <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="783" y="261">Colonizing module</tspan>
+  </text>
+  <text>
+    <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="983" y="261">14</tspan>
+  </text>
+  <line fill="none" stroke="rgb(0,0,0)" x1="785" y1="264" x2="995" y2="264"></line>
+  <line fill="none" stroke="rgb(0,0,0)" x1="1000" y1="271.5" x2="1040" y2="271.5"></line>
+  <image x="783" y="266" width="32" height="32" title="Colonizing module" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Engine.png"></image>
+  <rect fill="url(#gradGreen2)" width="220px" height="55px" x="1040" y="244" title=""></rect>
+  <text>
+    <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="1043" y="261">Colonizing module II</tspan>
+  </text>
+  <text>
+    <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="1236" y="261">250</tspan>
+  </text>
+  <line fill="none" stroke="rgb(0,0,0)" x1="1045" y1="264" x2="1255" y2="264"></line>
+  <image x="1043" y="266" width="32" height="32" title="Colonizing module" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Engine.png"></image>
+  <rect fill="url(#gradDarkGreen2)" width="220px" height="55px" x="1300" y="91.5" title=""></rect>
+  <text>
+    <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="1303" y="108.5">Modules II</tspan>
+  </text>
+  <text>
+    <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="1503" y="108.5">58</tspan>
+  </text>
+  <line fill="none" stroke="rgb(0,0,0)" x1="1305" y1="111.5" x2="1515" y2="111.5"></line>
+  <line fill="none" stroke="rgb(0,0,0)" x1="1520" y1="119" x2="1560" y2="149.5"></line>
+  <line fill="none" stroke="rgb(0,0,0)" x1="1520" y1="119" x2="1560" y2="88.5"></line>
+  <image x="1303" y="113.5" width="32" height="32" title="Crew II" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Crew1.png"></image>
+  <image x="1338" y="113.5" width="32" height="32" title="Reactor II" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Reactor.png"></image>
+  <image x="1373" y="113.5" width="32" height="32" title="System engines II" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Impuls.png"></image>
+  <image x="1408" y="113.5" width="32" height="32" title="Hyper engines II" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Hyper.png"></image>
+  <rect fill="url(#gradGreen2)" width="220px" height="55px" x="1560" y="0" title=""></rect>
+  <text>
+    <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="1563" y="17">Cargo II</tspan>
+  </text>
+  <text>
+    <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="1763" y="17">45</tspan>
+  </text>
+  <line fill="none" stroke="rgb(0,0,0)" x1="1565" y1="20" x2="1775" y2="20"></line>
+  <image x="1563" y="22" width="32" height="32" title="Cargo II" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Cargo.png"></image>
+  <rect fill="url(#gradGreen2)" width="220px" height="55px" x="1560" y="183" title=""></rect>
+  <text>
+    <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="1563" y="200">Scanner II</tspan>
+  </text>
+  <text>
+    <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="1763" y="200">59</tspan>
+  </text>
+  <line fill="none" stroke="rgb(0,0,0)" x1="1565" y1="203" x2="1775" y2="203"></line>
+  <image x="1563" y="205" width="32" height="32" title="Scanner II" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Scanner.png"></image>
+  <rect fill="url(#gradDarkGreen2)" width="220px" height="55px" x="1560" y="122" title=""></rect>
+  <text>
+    <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="1563" y="139">Ship Defenses II</tspan>
+  </text>
+  <text>
+    <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="1763" y="139">87</tspan>
+  </text>
+  <line fill="none" stroke="rgb(0,0,0)" x1="1565" y1="142" x2="1775" y2="142"></line>
+  <image x="1563" y="144" width="32" height="32" title="Hull II" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Hull.png"></image>
+  <image x="1598" y="144" width="32" height="32" title="Shield II" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Shield.png"></image>
+  <rect fill="url(#gradDarkGreen2)" width="220px" height="55px" x="1560" y="61" title=""></rect>
+  <text>
+    <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="1563" y="78">Ship Weapons II</tspan>
+  </text>
+  <text>
+    <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="1763" y="78">87</tspan>
+  </text>
+  <line fill="none" stroke="rgb(0,0,0)" x1="1565" y1="81" x2="1775" y2="81"></line>
+  <image x="1563" y="83" width="32" height="32" title="Laser II" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="WeaponLaser.png"></image>
+  <image x="1598" y="83" width="32" height="32" title="Missile II" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="WeaponRocket.png"></image>
+  <image x="1633" y="83" width="32" height="32" title="Mass driver  II" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="WeaponMassDriver.png"></image>
+</svg>

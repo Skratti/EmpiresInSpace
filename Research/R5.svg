@@ -8,8 +8,8 @@
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="3850"
-   height="2608"
+   width="3950"
+   height="608"
    id="svg3544"
    version="1.1"
    inkscape:version="0.91 r13725"
@@ -39,9 +39,9 @@
      inkscape:window-height="1018"
      id="namedview3748"
      showgrid="false"
-     inkscape:zoom="0.8425102"
-     inkscape:cx="1925"
-     inkscape:cy="1564.0503"
+     inkscape:zoom="0.29787234"
+     inkscape:cx="2078.9939"
+     inkscape:cy="235.32622"
      inkscape:window-x="1272"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
@@ -280,7 +280,7 @@
        inkscape:collect="always" />
     <linearGradient
        gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(2,0,0,0.5,3056.3828,444.40561)"
+       gradientTransform="matrix(2,0,0,0.5,3177.2399,-38.165869)"
        y2="549"
        x2="240"
        y1="549"
@@ -300,7 +300,7 @@
        inkscape:collect="always" />
     <linearGradient
        gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(2,0,0,0.5,3031.8272,513.46211)"
+       gradientTransform="matrix(2,0,0,0.5,3152.6843,30.890631)"
        y2="183"
        x2="370"
        y1="183"
@@ -791,7 +791,7 @@
   </defs>
   <g
      id="g3731"
-     transform="translate(827.87065,835.84929)">
+     transform="translate(653.29922,20.920731)">
     <rect
        id="rect46"
        title=""
@@ -841,7 +841,7 @@
   </g>
   <g
      id="g3749"
-     transform="translate(1092.1853,770.29395)">
+     transform="translate(917.61387,-44.634569)">
     <rect
        id="rect62"
        title=""
@@ -891,7 +891,7 @@
   </g>
   <g
      id="g3767"
-     transform="translate(2143.3973,885.56581)">
+     transform="translate(1968.8259,70.637231)">
     <rect
        id="rect78"
        title=""
@@ -941,7 +941,7 @@
   </g>
   <g
      id="g3813"
-     transform="translate(2142.1813,817.59294)">
+     transform="translate(1967.6099,2.6644305)">
     <rect
        id="rect94"
        title=""
@@ -991,7 +991,7 @@
   </g>
   <g
      id="g3822"
-     transform="translate(2144.6064,814.39776)">
+     transform="translate(1970.035,-0.5307695)">
     <rect
        id="rect110"
        title=""
@@ -1041,7 +1041,7 @@
   </g>
   <g
      id="g3740"
-     transform="translate(831.41095,963.43528)">
+     transform="translate(656.83952,148.50673)">
     <rect
        id="rect124"
        title=""
@@ -1089,7 +1089,7 @@
   </g>
   <g
      id="g3758"
-     transform="translate(1348.0924,924.17294)">
+     transform="translate(1173.521,109.24443)">
     <rect
        id="rect140"
        title=""
@@ -1137,7 +1137,7 @@
   </g>
   <g
      id="g3776"
-     transform="translate(1891.1399,916.12774)">
+     transform="translate(1716.5685,101.19923)">
     <rect
        id="rect156"
        title=""
@@ -1185,7 +1185,7 @@
   </g>
   <g
      id="g3804"
-     transform="translate(2154.5322,908.08678)">
+     transform="translate(1979.9608,93.158231)">
     <rect
        id="rect172"
        title=""
@@ -1233,7 +1233,7 @@
   </g>
   <g
      id="g3839"
-     transform="translate(2419.1594,894.97089)">
+     transform="translate(2244.588,80.042331)">
     <rect
        id="rect188"
        title=""
@@ -1284,7 +1284,7 @@
   </g>
   <g
      id="g3785"
-     transform="translate(2402.9028,764.00747)">
+     transform="translate(2228.3314,-50.921069)">
     <rect
        id="rect202"
        title=""
@@ -1334,7 +1334,7 @@
   </g>
   <g
      id="g3794"
-     transform="translate(2404.8446,764.49903)">
+     transform="translate(2230.2732,-50.429569)">
     <rect
        id="rect218"
        title=""
@@ -1393,28 +1393,28 @@
   </g>
   <line
      style="fill:none;stroke:#000000"
-     x1="413.36371"
-     y1="1177.2941"
-     x2="453.36371"
-     y2="1055.2941"
+     x1="238.79228"
+     y1="362.36557"
+     x2="278.79227"
+     y2="240.36557"
      id="line36-0" />
   <line
      style="fill:none;stroke:#000000"
-     x1="413.36371"
-     y1="1177.2941"
-     x2="453.36371"
-     y2="1116.2941"
+     x1="238.79228"
+     y1="362.36557"
+     x2="278.79227"
+     y2="301.36557"
      id="line38-5" />
   <line
      style="fill:none;stroke:#000000"
-     x1="413.36371"
-     y1="1177.2941"
-     x2="453.36371"
-     y2="1299.2941"
+     x1="238.79228"
+     y1="362.36557"
+     x2="278.79227"
+     y2="484.36557"
      id="line44" />
   <g
      id="g4342"
-     transform="translate(446.5,512.3214)">
+     transform="translate(271.92857,-302.60717)">
     <rect
        id="rect24-1"
        title=""
@@ -1482,7 +1482,7 @@
   </g>
   <g
      id="g4297"
-     transform="translate(3302.8048,276.68301)">
+     transform="translate(3423.6619,-205.88847)">
     <rect
        id="rect52"
        title=""
@@ -1532,7 +1532,7 @@
   </g>
   <g
      id="g4306"
-     transform="translate(3309.5191,-40.566987)">
+     transform="translate(3430.3762,-523.13837)">
     <rect
        id="rect68"
        title=""
@@ -1582,7 +1582,7 @@
   </g>
   <g
      id="g4315"
-     transform="translate(3309.5191,-40.566987)">
+     transform="translate(3430.3762,-523.13837)">
     <rect
        id="rect84"
        title=""
@@ -1632,7 +1632,7 @@
   </g>
   <g
      id="g4324"
-     transform="translate(3309.5191,-40.566987)">
+     transform="translate(3430.3762,-523.13837)">
     <rect
        id="rect100"
        title=""
@@ -1684,51 +1684,51 @@
      style="fill:url(#linearGradient3858)"
      width="220"
      height="55"
-     x="3316.3828"
-     y="718.90558"
+     x="3437.24"
+     y="236.3342"
      title=""
      id="rect116" />
   <text
-     y="444.40558"
+     y="-38.165684"
      id="text118"
-     x="3056.3828">
+     x="3177.24">
     <tspan
        style="font-size:14px;fill:#000000;stroke:none"
        font-size="14px"
-       x="3319.3828"
-       y="735.90558"
+       x="3440.24"
+       y="253.3342"
        id="tspan120">Lutetium analysis</tspan>
   </text>
   <text
-     y="444.40558"
+     y="-38.165684"
      id="text122"
-     x="3056.3828">
+     x="3177.24">
     <tspan
        style="font-size:14px;fill:#000000;stroke:none"
        font-size="14px"
-       x="3526.3828"
-       y="735.90558"
+       x="3647.24"
+       y="253.3342"
        id="tspan124">8</tspan>
   </text>
   <line
      style="fill:none;stroke:#000000"
-     x1="3321.3828"
-     y1="738.90558"
-     x2="3531.3828"
-     y2="738.90558"
+     x1="3442.24"
+     y1="256.3342"
+     x2="3652.24"
+     y2="256.3342"
      id="line126" />
   <image
      sodipodi:absref="D:\EmpiresInSpace\Research\Headframe.png"
      xlink:href="Headframe.png"
-     x="3319.3828"
-     y="740.90558"
+     x="3440.24"
+     y="258.3342"
      width="32"
      height="32"
      title="Lutetium mine"
      id="image130" />
   <g
      id="g4288"
-     transform="translate(3284.9635,28.489513)">
+     transform="translate(3405.8206,-454.08187)">
     <rect
        id="rect132"
        title=""
@@ -1780,20 +1780,20 @@
      style="fill:url(#linearGradient3862)"
      width="220"
      height="55"
-     x="3551.8271"
-     y="604.9621"
+     x="3672.6843"
+     y="122.39071"
      title=""
      id="rect148" />
   <line
      style="fill:none;stroke:#000000"
-     x1="935.73761"
-     y1="1011.8443"
-     x2="975.73761"
-     y2="1011.8443"
+     x1="761.1662"
+     y1="196.91574"
+     x2="801.1662"
+     y2="196.91574"
      id="line160" />
   <g
      id="g4280"
-     transform="translate(3284.9635,28.489513)">
+     transform="translate(3405.8206,-454.08187)">
     <text
        x="-253.13629"
        id="text150"
@@ -1835,7 +1835,7 @@
   </g>
   <g
      id="g4271"
-     transform="translate(3284.9635,28.489513)">
+     transform="translate(3405.8206,-454.08187)">
     <rect
        id="rect164"
        title=""
@@ -1885,7 +1885,7 @@
   </g>
   <g
      id="g4262"
-     transform="translate(3284.9635,28.489513)">
+     transform="translate(3405.8206,-454.08187)">
     <rect
        id="rect180"
        title=""
@@ -1935,7 +1935,7 @@
   </g>
   <g
      id="g4253"
-     transform="translate(3284.9635,28.489513)">
+     transform="translate(3405.8206,-454.08187)">
     <rect
        id="rect196"
        title=""
@@ -1985,7 +1985,7 @@
   </g>
   <g
      id="g4197"
-     transform="translate(1210.8577,661.26689)">
+     transform="translate(1036.2863,-153.66167)">
     <rect
        id="rect212"
        title=""
@@ -2035,7 +2035,7 @@
   </g>
   <g
      id="g4206"
-     transform="translate(1214.1729,535.37529)">
+     transform="translate(1039.6015,-279.55327)">
     <rect
        id="rect226"
        title=""
@@ -2085,7 +2085,7 @@
   </g>
   <g
      id="g4215"
-     transform="translate(952.06497,445.36468)">
+     transform="translate(777.49354,-369.56387)">
     <rect
        id="rect240"
        title=""
@@ -2135,7 +2135,7 @@
   </g>
   <g
      id="g4231"
-     transform="translate(951.75211,514.48662)">
+     transform="translate(777.18068,-300.44197)">
     <rect
        id="rect254"
        title=""
@@ -2206,7 +2206,7 @@
   </g>
   <g
      id="g4243"
-     transform="translate(954.68961,515.74555)">
+     transform="translate(780.11818,-299.18297)">
     <rect
        id="rect272"
        title=""
@@ -2265,7 +2265,7 @@
   </g>
   <g
      id="g4906"
-     transform="translate(-184.64287,311.35713)">
+     transform="translate(-359.2143,-503.57147)">
     <rect
        id="rect44"
        title=""
@@ -2324,14 +2324,14 @@
   </g>
   <line
      style="fill:none;stroke:#000000;stroke-width:2.4321177"
-     x1="1179.6599"
-     y1="1120.5978"
-     x2="1480.176"
-     y2="1048.5563"
+     x1="1005.0885"
+     y1="305.66928"
+     x2="1305.6046"
+     y2="233.62778"
      id="line234-9" />
   <g
      id="g4929"
-     transform="translate(334.88699,-156.00076)">
+     transform="translate(160.31556,-970.92927)">
     <rect
        id="rect66"
        title=""
@@ -2381,7 +2381,7 @@
   </g>
   <g
      id="g4948"
-     transform="translate(585.47304,160.35208)">
+     transform="translate(410.90161,-654.57647)">
     <rect
        id="rect82"
        title=""
@@ -2431,7 +2431,7 @@
   </g>
   <g
      id="g5014"
-     transform="translate(1123.8036,146.01784)">
+     transform="translate(949.23213,-668.91067)">
     <rect
        id="rect100-1"
        title=""
@@ -2472,7 +2472,7 @@
   </g>
   <g
      id="g5032"
-     transform="translate(1126.1018,141.07744)">
+     transform="translate(951.53033,-673.85107)">
     <rect
        id="rect114"
        title=""
@@ -2513,14 +2513,14 @@
   </g>
   <line
      style="fill:none;stroke:#000000"
-     x1="3026.1692"
-     y1="1315.2655"
-     x2="3066.1689"
-     y2="1315.2655"
+     x1="2851.5977"
+     y1="500.33701"
+     x2="2891.5974"
+     y2="500.33701"
      id="line126-1" />
   <g
      id="g5050"
-     transform="translate(1125.2379,144.95093)">
+     transform="translate(950.66643,-669.97767)">
     <rect
        id="rect130"
        title=""
@@ -2561,14 +2561,14 @@
   </g>
   <line
      style="fill:none;stroke:#000000"
-     x1="3291.2048"
-     y1="1314.4263"
-     x2="3331.2048"
-     y2="1314.4263"
+     x1="3116.6333"
+     y1="499.49765"
+     x2="3156.6333"
+     y2="499.49765"
      id="line142-9" />
   <g
      id="g5058"
-     transform="translate(1133.3427,140.20321)">
+     transform="translate(958.77123,-674.72537)">
     <rect
        id="rect144"
        title=""
@@ -2609,7 +2609,7 @@
   </g>
   <g
      id="g4938"
-     transform="translate(-187.48118,31.717964)">
+     transform="translate(-362.05261,-783.21057)">
     <rect
        id="rect158"
        title=""
@@ -2668,7 +2668,7 @@
   </g>
   <g
      id="g5022"
-     transform="translate(581.79297,-253.97659)">
+     transform="translate(407.22154,-1068.9052)">
     <rect
        id="rect174"
        title=""
@@ -2727,7 +2727,7 @@
   </g>
   <g
      id="g5040"
-     transform="translate(600.78385,-197.00399)">
+     transform="translate(426.21242,-1011.9326)">
     <rect
        id="rect190"
        title=""
@@ -2786,7 +2786,7 @@
   </g>
   <g
      id="g5066"
-     transform="translate(339.02377,-1.2347818)">
+     transform="translate(164.45234,-816.16337)">
     <rect
        id="rect206"
        title=""
@@ -2845,7 +2845,7 @@
   </g>
   <g
      id="g4916"
-     transform="translate(-442.52697,116.34533)">
+     transform="translate(-617.0984,-698.58327)">
     <rect
        id="rect222"
        title=""
@@ -2931,7 +2931,7 @@
   </g>
   <g
      id="g4996"
-     transform="translate(-442.52697,184.77994)">
+     transform="translate(-617.0984,-630.14857)">
     <rect
        id="rect256"
        title=""
@@ -2981,7 +2981,7 @@
   </g>
   <g
      id="g4966"
-     transform="translate(-443.7139,-67.505164)">
+     transform="translate(-618.28533,-882.43377)">
     <rect
        id="rect272-9"
        title=""
@@ -3031,7 +3031,7 @@
   </g>
   <g
      id="g4975"
-     transform="translate(61.19797,312.87971)">
+     transform="translate(-113.37346,-502.04887)">
     <rect
        id="rect288"
        title=""
@@ -3090,14 +3090,14 @@
   </g>
   <line
      style="fill:none;stroke:#000000;stroke-width:0.99832934"
-     x1="1698.5306"
-     y1="1168.7205"
-     x2="2256.6614"
-     y2="1168.7205"
+     x1="1523.9592"
+     y1="353.79184"
+     x2="2082.0898"
+     y2="353.79184"
      id="line318" />
   <g
      id="g4985"
-     transform="translate(62.384899,437.15965)">
+     transform="translate(-112.18653,-377.76887)">
     <rect
        id="rect306"
        title=""
@@ -3165,7 +3165,7 @@
   </g>
   <g
      id="g4957"
-     transform="translate(-443.7139,3.5870559)">
+     transform="translate(-618.28533,-811.34147)">
     <rect
        id="rect326"
        title=""
@@ -3215,7 +3215,7 @@
   </g>
   <g
      id="g5005"
-     transform="translate(842.91741,-137.65752)">
+     transform="translate(668.34598,-952.58607)">
     <rect
        id="rect342"
        title=""
@@ -3265,14 +3265,14 @@
   </g>
   <line
      style="fill:none;stroke:#000000;stroke-width:1.58027554"
-     x1="2763.821"
-     y1="1316.7661"
-     x2="2803.4172"
-     y2="1239.8225"
+     x1="2589.2495"
+     y1="501.83749"
+     x2="2628.8457"
+     y2="424.89389"
      id="line370" />
   <g
      id="g5115"
-     transform="translate(323.52204,113.69796)">
+     transform="translate(148.95061,-701.23057)">
     <rect
        id="rect356"
        title=""
@@ -3349,7 +3349,7 @@
   </g>
   <g
      id="g5106"
-     transform="translate(325.41626,236.22519)">
+     transform="translate(150.84483,-578.70337)">
     <rect
        id="rect380"
        title=""
@@ -3399,7 +3399,7 @@
   </g>
   <g
      id="g5076"
-     transform="translate(853.03651,-76.558362)">
+     transform="translate(678.46508,-891.48697)">
     <rect
        id="rect394"
        title=""
@@ -3449,7 +3449,7 @@
   </g>
   <g
      id="g5085"
-     transform="translate(604.26028,236.50895)">
+     transform="translate(429.68885,-578.41957)">
     <rect
        id="rect408"
        title=""
@@ -3508,7 +3508,7 @@
   </g>
   <g
      id="g5095"
-     transform="translate(600.90314,203.08152)">
+     transform="translate(426.33171,-611.84707)">
     <rect
        id="rect424"
        title=""
@@ -3576,14 +3576,14 @@
   </g>
   <line
      style="fill:none;stroke:#000000;stroke-width:1.53019333"
-     x1="676.33929"
-     y1="1205.8497"
-     x2="962.33124"
-     y2="1235.8153"
+     x1="501.76785"
+     y1="390.92123"
+     x2="787.75983"
+     y2="420.88681"
      id="line236-9-4-8" />
   <g
      id="g5379"
-     transform="translate(-1540.0888,705.59906)">
+     transform="translate(-1714.6602,-109.32947)">
     <rect
        id="rect50"
        title=""
@@ -3633,7 +3633,7 @@
   </g>
   <g
      id="g5388"
-     transform="translate(-511.72927,502.65886)">
+     transform="translate(-686.3007,-312.26967)">
     <rect
        id="rect64"
        title=""
@@ -3692,7 +3692,7 @@
   </g>
   <g
      id="g5398"
-     transform="translate(-249.27313,435.25096)">
+     transform="translate(-423.84456,-379.67757)">
     <rect
        id="rect82-9"
        title=""
@@ -3742,7 +3742,7 @@
   </g>
   <g
      id="g5432"
-     transform="translate(-774.28765,318.61391)">
+     transform="translate(-948.85908,-496.31467)">
     <rect
        id="rect98"
        title=""
@@ -3792,7 +3792,7 @@
   </g>
   <g
      id="g5450"
-     transform="translate(-1799.9203,353.42623)">
+     transform="translate(-1974.4917,-461.50237)">
     <rect
        id="rect112"
        title=""
@@ -3851,7 +3851,7 @@
   </g>
   <g
      id="g5423"
-     transform="translate(-243.34873,467.27509)">
+     transform="translate(-417.92016,-347.65347)">
     <rect
        id="rect128"
        title=""
@@ -3901,7 +3901,7 @@
   </g>
   <g
      id="g5441"
-     transform="translate(-1539.4312,164.61661)">
+     transform="translate(-1714.0026,-650.31197)">
     <rect
        id="rect142"
        title=""
@@ -3951,7 +3951,7 @@
   </g>
   <g
      id="g5407"
-     transform="translate(-1293.7364,599.18271)">
+     transform="translate(-1468.3078,-215.74587)">
     <rect
        id="rect158-6"
        title=""
@@ -4001,7 +4001,7 @@
   </g>
   <g
      id="g5580"
-     transform="translate(-1656.6431,-247.83988)">
+     transform="translate(-1831.2145,-1062.7685)">
     <rect
        id="rect172-0"
        title=""
@@ -4055,7 +4055,7 @@
   </g>
   <g
      id="g5460"
-     transform="translate(-1799.1871,542.45294)">
+     transform="translate(-1973.7585,-272.47557)">
     <rect
        id="rect186"
        title=""
@@ -4114,67 +4114,67 @@
   </g>
   <line
      style="fill:none;stroke:#000000"
-     x1="671.9798"
-     y1="1114.663"
-     x2="711.9798"
-     y2="1084.163"
+     x1="497.40836"
+     y1="299.73447"
+     x2="537.40839"
+     y2="269.23447"
      id="line240-2" />
   <line
      style="fill:none;stroke:#000000"
-     x1="673.16669"
-     y1="1054.4897"
-     x2="713.16669"
-     y2="1084.9897"
+     x1="498.59525"
+     y1="239.56113"
+     x2="538.59528"
+     y2="270.06113"
      id="line238-6" />
   <line
      style="fill:none;stroke:#000000;stroke-width:0.85469121"
-     x1="673.06757"
-     y1="1115.2808"
-     x2="958.04919"
-     y2="1118.408"
+     x1="498.49612"
+     y1="300.35214"
+     x2="783.47778"
+     y2="303.47934"
      id="line238-4" />
   <line
      style="fill:none;stroke:#000000"
-     x1="410.85535"
-     y1="1175.5565"
-     x2="450.85535"
-     y2="1206.0565"
+     x1="236.28392"
+     y1="360.62802"
+     x2="276.28391"
+     y2="391.12802"
      id="line238-4-6" />
   <line
      style="fill:none;stroke:#000000"
-     x1="933.94348"
-     y1="951.20526"
-     x2="973.94348"
-     y2="951.20526"
+     x1="759.37207"
+     y1="136.2767"
+     x2="799.37207"
+     y2="136.2767"
      id="line192-8" />
   <line
      style="fill:none;stroke:#000000"
-     x1="2221.0417"
-     y1="1043.1774"
-     x2="2261.0417"
-     y2="951.67706"
+     x1="2046.4703"
+     y1="228.24887"
+     x2="2086.4702"
+     y2="136.7485"
      id="line236-9-9" />
   <line
      style="fill:none;stroke:#000000"
-     x1="3275.4795"
-     y1="1165.4797"
-     x2="3315.4795"
-     y2="1165.4797"
+     x1="3100.908"
+     y1="350.55112"
+     x2="3140.908"
+     y2="350.55112"
      id="line154-4-50" />
   <text
      xml:space="preserve"
      style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:124.00000095%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
      x="729.33929"
-     y="1259.6875"
+     y="-740.3125"
      id="text6105"
      sodipodi:linespacing="124%"><tspan
        sodipodi:role="line"
        id="tspan6107"
        x="729.33929"
-       y="1259.6875" /></text>
+       y="-740.3125" /></text>
   <g
      id="g6535"
-     transform="translate(247.58928,-33.571429)">
+     transform="translate(73.017851,-848.49997)">
     <rect
        id="rect52-8"
        title=""
@@ -4260,7 +4260,7 @@
   </g>
   <g
      id="g6578"
-     transform="translate(-5.7484712,49.808852)">
+     transform="translate(-180.3199,-765.11967)">
     <rect
        id="rect132-8"
        title=""
@@ -4346,63 +4346,63 @@
   </g>
   <line
      style="fill:none;stroke:#000000;stroke-width:0.734891"
-     x1="1441.3015"
-     y1="1336.0416"
-     x2="1743.7377"
-     y2="1336.0416"
+     x1="1266.7301"
+     y1="521.1131"
+     x2="1569.1663"
+     y2="521.1131"
      id="line300-6-6-1" />
   <line
      style="fill:none;stroke:#000000"
-     x1="1439.2627"
-     y1="1206.1613"
-     x2="1479.2627"
-     y2="1175.6613"
+     x1="1264.6913"
+     y1="391.23276"
+     x2="1304.6913"
+     y2="360.73276"
      id="line240-5" />
   <line
      style="fill:none;stroke:#000000"
-     x1="1439.2626"
-     y1="1206.5215"
-     x2="1479.2626"
-     y2="1237.0215"
+     x1="1264.6912"
+     y1="391.59286"
+     x2="1304.6912"
+     y2="422.09286"
      id="line240-4" />
   <line
      style="fill:none;stroke:#000000"
-     x1="1439.2627"
-     y1="1204.5077"
-     x2="1479.2627"
-     y2="1296.0079"
+     x1="1264.6913"
+     y1="389.57919"
+     x2="1304.6913"
+     y2="481.07944"
      id="line236-9-64" />
   <line
      style="fill:none;stroke:#000000"
-     x1="1701.1667"
-     y1="1172.9128"
-     x2="1741.1667"
-     y2="1142.4128"
+     x1="1526.5953"
+     y1="357.98422"
+     x2="1566.5953"
+     y2="327.48422"
      id="line38-52-0" />
   <line
      style="fill:none;stroke:#000000"
-     x1="1702.3538"
-     y1="1166.1515"
-     x2="1742.3538"
-     y2="1196.6515"
+     x1="1527.7823"
+     y1="351.22299"
+     x2="1567.7823"
+     y2="381.72299"
      id="line240-53" />
   <line
      style="fill:none;stroke:#000000;stroke-width:1.21589184"
-     x1="1180.8561"
-     y1="1118.934"
-     x2="1233.9595"
-     y2="1017.0399"
+     x1="1006.2847"
+     y1="304.00546"
+     x2="1059.3881"
+     y2="202.11142"
      id="line234-7" />
   <line
      style="fill:none;stroke:#000000"
-     x1="1438.0757"
-     y1="1208.1749"
-     x2="1478.0757"
-     y2="1116.6749"
+     x1="1263.5043"
+     y1="393.24643"
+     x2="1303.5043"
+     y2="301.74643"
      id="line234-3" />
   <g
      id="g5407-1"
-     transform="translate(-237.28859,370.83865)">
+     transform="translate(-411.86002,-444.08987)">
     <rect
        id="rect158-6-1"
        title=""
@@ -4452,226 +4452,226 @@
   </g>
   <line
      style="fill:none;stroke:#000000"
-     x1="2753.2905"
-     y1="946.02551"
-     x2="2793.2905"
-     y2="946.02551"
+     x1="2578.719"
+     y1="131.09702"
+     x2="2618.719"
+     y2="131.09702"
      id="line94-7-7" />
   <line
      style="fill:none;stroke:#000000"
-     x1="674.35364"
-     y1="1055.3164"
-     x2="714.35364"
-     y2="1024.8164"
+     x1="499.7822"
+     y1="240.38779"
+     x2="539.78223"
+     y2="209.88779"
      id="line38-52-07" />
   <line
      style="fill:none;stroke:#000000;stroke-width:1.06232715"
-     x1="671.99847"
-     y1="1053.7637"
-     x2="711.961"
-     y2="950.40564"
+     x1="497.42703"
+     y1="238.83505"
+     x2="537.38959"
+     y2="135.47714"
      id="line234-29" />
   <line
      style="fill:none;stroke:#000000;stroke-width:0.71931267"
-     x1="671.75006"
-     y1="1301.2322"
-     x2="961.5"
-     y2="1301.2322"
+     x1="497.17862"
+     y1="486.30356"
+     x2="786.92859"
+     y2="486.30356"
      id="line318-9" />
   <line
      style="fill:none;stroke:#000000"
-     x1="671.57141"
-     y1="1295.5"
-     x2="711.57141"
-     y2="1265"
+     x1="496.99997"
+     y1="480.57138"
+     x2="537"
+     y2="450.07138"
      id="line38-52-07-1" />
   <line
      style="fill:none;stroke:#000000"
-     x1="1179.3394"
-     y1="1240.1072"
-     x2="1219.3394"
-     y2="1209.6072"
+     x1="1004.7679"
+     y1="425.17856"
+     x2="1044.7679"
+     y2="394.67856"
      id="line38-52-07-6" />
   <line
      style="fill:none;stroke:#000000"
-     x1="1180.1786"
-     y1="1298.0178"
-     x2="1220.1786"
-     y2="1267.5178"
+     x1="1005.6072"
+     y1="483.0892"
+     x2="1045.6072"
+     y2="452.5892"
      id="line38-52-07-6-4" />
   <line
      style="fill:none;stroke:#000000"
-     x1="1181.0178"
-     y1="1298.5714"
-     x2="1221.0178"
-     y2="1329.0714"
+     x1="1006.4464"
+     y1="483.64291"
+     x2="1046.4464"
+     y2="514.14288"
      id="line238-4-3-3" />
   <line
      style="fill:none;stroke:#000000"
-     x1="2497.8572"
-     y1="1163.7142"
-     x2="2537.8569"
-     y2="1316.2142"
+     x1="2323.2856"
+     y1="348.78574"
+     x2="2363.2854"
+     y2="501.28574"
      id="line242-72-3" />
   <line
      style="fill:none;stroke:#000000;stroke-width:1.0042299"
-     x1="1967.0125"
-     y1="1331.4464"
-     x2="2531.7603"
-     y2="1331.4464"
+     x1="1792.441"
+     y1="516.51788"
+     x2="2357.1887"
+     y2="516.51788"
      id="line318-95" />
   <line
      style="fill:none;stroke:#000000"
-     x1="1960.7144"
-     y1="1046.0892"
-     x2="2000.7144"
-     y2="1046.0892"
+     x1="1786.1429"
+     y1="231.16074"
+     x2="1826.1429"
+     y2="231.16074"
      id="line94-2-2" />
   <line
      style="fill:none;stroke:#000000"
-     x1="1698.8572"
-     y1="1047.7678"
-     x2="1738.8572"
-     y2="1047.7678"
+     x1="1524.2858"
+     y1="232.8392"
+     x2="1564.2858"
+     y2="232.8392"
      id="line94-2-8" />
   <line
      style="fill:none;stroke:#000000"
-     x1="2222.5715"
-     y1="1045.3928"
-     x2="2262.5715"
-     y2="1014.8928"
+     x1="2048"
+     y1="230.4642"
+     x2="2088"
+     y2="199.9642"
      id="line38-52-0-3" />
   <line
      style="fill:none;stroke:#000000;stroke-width:1.18569028"
-     x1="2483.6736"
-     y1="1011.0691"
-     x2="2534.4158"
-     y2="943.46661"
+     x1="2309.1021"
+     y1="196.14047"
+     x2="2359.8442"
+     y2="128.53806"
      id="line38-5-0" />
   <line
      style="fill:none;stroke:#000000"
-     x1="2220.9226"
-     y1="1046.1812"
-     x2="2260.9226"
-     y2="1076.6812"
+     x1="2046.3512"
+     y1="231.25253"
+     x2="2086.3511"
+     y2="261.75253"
      id="line240-53-6" />
   <line
      style="fill:none;stroke:#000000"
-     x1="2496.8835"
-     y1="1163.8672"
-     x2="2536.8835"
-     y2="1224.8672"
+     x1="2322.312"
+     y1="348.93857"
+     x2="2362.312"
+     y2="409.93857"
      id="line38-5-0-6" />
   <line
      style="fill:none;stroke:#000000"
-     x1="2499.8508"
-     y1="1165.5208"
-     x2="2539.8508"
-     y2="1104.5208"
+     x1="2325.2793"
+     y1="350.59213"
+     x2="2365.2793"
+     y2="289.59213"
      id="line38-5-0-6-8" />
   <line
      style="fill:none;stroke:#000000;stroke-width:0.9129988"
-     x1="2498.6428"
-     y1="1164.3885"
-     x2="2538.6853"
-     y2="1037.4047"
+     x1="2324.0713"
+     y1="349.46005"
+     x2="2364.1138"
+     y2="222.47617"
      id="line36-3-8" />
   <line
      style="fill:none;stroke:#000000;stroke-width:1.39764988"
-     x1="2497.5203"
-     y1="1165.9591"
-     x2="2548.116"
-     y2="1260.1638"
+     x1="2322.9487"
+     y1="351.03061"
+     x2="2373.5444"
+     y2="445.2352"
      id="line38-5-0-4" />
   <line
      style="fill:none;stroke:#000000;stroke-width:0.72791624"
-     x1="2500.3816"
-     y1="1165.2875"
-     x2="2797.1045"
-     y2="1165.2875"
+     x1="2325.8101"
+     y1="350.35898"
+     x2="2622.533"
+     y2="350.35898"
      id="line318-95-1" />
   <line
      style="fill:none;stroke:#000000;stroke-width:1.19184852"
-     x1="2758.0825"
-     y1="948.01422"
-     x2="2797.989"
-     y2="1165.1465"
+     x1="2583.511"
+     y1="133.08566"
+     x2="2623.4175"
+     y2="350.21786"
      id="line242-72-3-0" />
   <line
      style="fill:none;stroke:#000000"
-     x1="1698.6735"
-     y1="1165.2343"
-     x2="1738.6735"
-     y2="1256.7343"
+     x1="1524.1021"
+     y1="350.30576"
+     x2="1564.1021"
+     y2="441.80576"
      id="line234-8" />
   <line
      style="fill:none;stroke:#000000;stroke-width:0.72982621"
-     x1="1699.798"
-     y1="1107.1279"
-     x2="1998.0798"
-     y2="1107.1279"
+     x1="1525.2266"
+     y1="292.19931"
+     x2="1823.5084"
+     y2="292.19931"
      id="line318-95-3" />
   <line
      style="fill:none;stroke:#000000;stroke-width:0.85034901"
-     x1="1960.9401"
-     y1="1045.4777"
-     x2="2001.0299"
-     y2="979.46295"
+     x1="1786.3687"
+     y1="230.54916"
+     x2="1826.4585"
+     y2="164.53439"
      id="line236-9-9-9" />
   <line
      style="fill:none;stroke:#000000;stroke-width:1.27160466"
-     x1="672.50525"
-     y1="1208.0885"
-     x2="712.31628"
-     y2="1158.5365"
+     x1="497.93381"
+     y1="393.16"
+     x2="537.74487"
+     y2="343.608"
      id="line38-52-07-1-7" />
   <line
      style="fill:none;stroke:#000000"
-     x1="3014.0178"
-     y1="1164.8481"
-     x2="3054.0176"
-     y2="1164.8481"
+     x1="2839.4463"
+     y1="349.91953"
+     x2="2879.446"
+     y2="349.91953"
      id="line126-1-7" />
   <line
      style="fill:none;stroke:#000000;stroke-width:1.40158284"
-     x1="3011.6396"
-     y1="1162.7041"
-     x2="3051.3604"
-     y2="1102.3673"
+     x1="2837.0681"
+     y1="347.77548"
+     x2="2876.7888"
+     y2="287.43881"
      id="line370-9" />
   <line
      style="fill:none;stroke:#000000"
-     x1="3275.875"
-     y1="1097.7053"
-     x2="3315.875"
-     y2="1097.7053"
+     x1="3101.3035"
+     y1="282.7767"
+     x2="3141.3035"
+     y2="282.7767"
      id="line154-4-50-8" />
   <line
      style="fill:none;stroke:#000000;stroke-width:0.86887407"
-     x1="2763.0273"
-     y1="1196.0072"
-     x2="2803.1155"
-     y2="1241.9572"
+     x1="2588.4558"
+     y1="381.0787"
+     x2="2628.5439"
+     y2="427.02866"
      id="line128-6-6" />
   <line
      style="fill:none;stroke:#000000"
-     x1="2763.9109"
-     y1="1315.5"
-     x2="2803.9106"
-     y2="1315.5"
+     x1="2589.3394"
+     y1="500.57138"
+     x2="2629.3391"
+     y2="500.57138"
      id="line126-1-5" />
   <line
      style="fill:none;stroke:#000000;stroke-width:1.58027554"
-     x1="3024.6755"
-     y1="1321.8588"
-     x2="3064.2717"
-     y2="1244.9152"
+     x1="2850.104"
+     y1="506.93027"
+     x2="2889.7002"
+     y2="429.98666"
      id="line370-8" />
   <line
      style="fill:none;stroke:#000000;stroke-width:1.58027554"
-     x1="3552.8591"
-     y1="1318.298"
-     x2="3592.4553"
-     y2="1241.3544"
+     x1="3378.2876"
+     y1="503.36948"
+     x2="3417.8838"
+     y2="426.42587"
      id="line370-1" />
 </svg>

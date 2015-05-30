@@ -395,122 +395,143 @@ go
 
 SET IDENTITY_INSERT [dbo].[Research] ON
 INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], [label], [descriptionLabel], [researchType], [treeColumn], [treeRow]) VALUES (1, N'Base research', N'1.gif', N'Recovery of the mothership database.', 3, 402, 166,0,0,5)
-INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], [label], [descriptionLabel], [researchType], [treeColumn], [treeRow]) VALUES (2, N'Wasserkraftwerk', N'1.gif', N'Erlaubt den Bau des Wasserkraftwerkes', 8, 92, 484,1,1,0)
-INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], [label], [descriptionLabel], [researchType], [treeColumn], [treeRow]) VALUES (3, N'TreibstoffRaffinerie', N'1.gif', N'Erlaubt den Bau der TreibstoffRaffinerie', 6, 93, 485,1,1,3)
---INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], [label], [descriptionLabel], [researchType], [treeColumn], [treeRow]) VALUES (4, N'Treibstofflager', N'1.gif', N'Erlaubt den Bau des Treibstofflager', 800, 94, 486,1,2,2)
-INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], [label], [descriptionLabel], [researchType], [treeColumn], [treeRow]) VALUES (5, N'Kraftwerk', N'1.gif', N'Erlaubt den Bau des Kraftwerks', 30, 95, 487,1,2,4)
-INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], [label], [descriptionLabel], [researchType], [treeColumn], [treeRow]) VALUES (8, N'Kommunikation Center', N'1.gif', N'Erlaubt den Bau des Kraftwerks', 30, 53, 488,1,3,11)
-INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], [label], [descriptionLabel], [researchType], [treeColumn], [treeRow]) VALUES (9, N'Ecosytem Adaption I', N'1.gif', N'Erlaubt den Bau des Kraftwerks', 2, 623, 624,1,1,10)
-INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], [label], [descriptionLabel], [researchType], [treeColumn], [treeRow]) VALUES (50, N'Verb. Baumaterial', N'1.gif', N'Erlaubt den Bau des Kraftwerks', 40, 350, 489, 1, 2, 8)
-INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], [label], [descriptionLabel], [researchType], [treeColumn], [treeRow]) VALUES (51, N'PlaneteryScanner', N'1.gif', N'Erlaubt den Bau des Kraftwerks', 20, 382, 490, 1, 2, 11)
-										
-INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], [label], [descriptionLabel], [researchType], [treeColumn], [treeRow]) VALUES (71, N'Superconductors', N'1.gif', N'Erlaubt den Bau des Kraftwerks', 120, 656, 657, 1, 3, 4)
 
-INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], [label], [descriptionLabel], [researchType], [treeColumn], [treeRow]) VALUES (112, N'Warehouse construction plan', N'1.gif', N'', 1500, 162, 491,1,2,6)
+--Level 1
+INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], [label], [descriptionLabel], [researchType], [treeColumn], [treeRow]) VALUES (2000, N'Modules', N'1.gif', N'', 8, 164, 517, 2 , 1, 3)
+INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], [label], [descriptionLabel], [researchType], [treeColumn], [treeRow]) VALUES (9, N'Ecosytem Adaption I', N'1.gif', N'Erlaubt den Bau des Kraftwerks', 2, 623, 624,1,1,6)
+INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], [label], [descriptionLabel], [researchType], [treeColumn], [treeRow]) VALUES (152, N'BluePrints: Metal Working', N'1.gif', N'', 6, 158, 492,1,1,8)
+INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], [label], [descriptionLabel], [researchType], [treeColumn], [treeRow]) VALUES (400, N'Space travel', N'1.gif', N'', 5, 265, 493, 2 , 1 , 11)
 
-											
-INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], [label], [descriptionLabel], [researchType], [treeColumn], [treeRow]) VALUES (152, N'BluePrints: Metal Working', N'1.gif', N'', 6, 158, 492,1,1,7)
---INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], [label], [descriptionLabel]) VALUES (164, N'Blast furnace construction plan', N'1.gif', N'', 30, 160, 160)
+--Level 2
+INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], [label], [descriptionLabel], [researchType], [treeColumn], [treeRow]) VALUES (2002, N'Scanner', N'1.gif', N'', 15, 222, 528, 2 , 2 , 0)
+INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], [label], [descriptionLabel], [researchType], [treeColumn], [treeRow]) VALUES (2001, N'Cargo', N'1.gif', N'', 22, 220, 518,  2 , 2 , 2)
+INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], [label], [descriptionLabel], [researchType], [treeColumn], [treeRow]) VALUES (2013, N'Colonization I', N'1.gif', N'Außenposten module.', 15, 88, 521, 2 , 2 , 4)
+INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], [label], [descriptionLabel], [researchType], [treeColumn], [treeRow]) VALUES (2, N'Wasserkraftwerk', N'1.gif', N'Erlaubt den Bau des Wasserkraftwerkes', 18, 92, 484,1,2,7)
+INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], [label], [descriptionLabel], [researchType], [treeColumn], [treeRow]) VALUES (501, N'Outpost'	, N'1.gif'	  , N''	, 30, 585, 585	, 2	, 2	, 10)
 
 
-
-
-INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], [label], [descriptionLabel], [researchType], [treeColumn], [treeRow]) VALUES (2000, N'Modules', N'1.gif', N'', 8, 164, 517, 2 , 2, 3)
-
-
-
-INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], [label], [descriptionLabel], [researchType], [treeColumn], [treeRow]) VALUES (2003, N'Ship Defenses I', N'1.gif', N'Simple ship defenses.', 20, 99, 519, 2 , 3 , 4)
-INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], [label], [descriptionLabel], [researchType], [treeColumn], [treeRow]) VALUES (2005, N'Ship Weapons I', N'1.gif', N'Simple ship weapons.', 20, 98, 520, 2 , 3 , 2)
-
-INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], [label], [descriptionLabel], [researchType], [treeColumn], [treeRow]) VALUES (2001, N'Cargo', N'1.gif', N'', 12, 220, 518,  2 , 3 , 0)
-INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], [label], [descriptionLabel], [researchType], [treeColumn], [treeRow]) VALUES (2002, N'Scanner', N'1.gif', N'', 10, 222, 528, 2 , 3 , 6)
-
-INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], [label], [descriptionLabel], [researchType], [treeColumn], [treeRow]) VALUES (2013, N'Colonization I', N'1.gif', N'Außenposten module.', 20, 88, 521, 2 , 3 , 8)
-INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], [label], [descriptionLabel], [researchType], [treeColumn], [treeRow]) VALUES (2023, N'Colonization II', N'1.gif', N'Colonization module.', 250, 468, 522, 2 , 4 , 8)
-
-INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], [label], [descriptionLabel], [researchType], [treeColumn], [treeRow]) VALUES (2101, N'Cargo II', N'1.gif', N'', 50, 376, 524,  2 , 6 , 0)
-INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], [label], [descriptionLabel], [researchType], [treeColumn], [treeRow]) VALUES (2102, N'Scanner II', N'1.gif', N'', 75, 381, 525, 2 , 6 , 6)
-
-INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], [label], [descriptionLabel], [researchType], [treeColumn], [treeRow]) VALUES (2103, N'Ship Defenses II', N'1.gif', N'Better ship defenses.', 120, 167, 526, 2 , 6 , 4)
-INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], [label], [descriptionLabel], [researchType], [treeColumn], [treeRow]) VALUES (2105, N'Ship Weapons II', N'1.gif', N'Better ship weapons.', 120, 168, 527, 2 , 6 , 2)
-
-INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], [label], [descriptionLabel], [researchType], [treeColumn], [treeRow]) VALUES (2100, N'Modules II', N'1.gif', N'', 80, 171, 523,2,5,3)
-
-INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], [label], [descriptionLabel], [researchType], [treeColumn], [treeRow]) VALUES (400, N'Space travel', N'1.gif', N'', 5, 265, 493, 2 , 1 , 5)
---INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], [label], [descriptionLabel]) VALUES (401, N'Scout Hull', N'1.gif', N'', 15, 119, 1)
-INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], [label], [descriptionLabel], [researchType], [treeColumn], [treeRow]) VALUES (402, N'Corvette', N'1.gif', N'', 50, 173, 494, 2 , 2 , 11)
-INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], [label], [descriptionLabel], [researchType], [treeColumn], [treeRow]) VALUES (403, N'Frigatte', N'1.gif', N'', 90, 174, 495, 2 , 3 , 11)
-INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], [label], [descriptionLabel], [researchType], [treeColumn], [treeRow]) VALUES (404, N'Destroyer', N'1.gif', N'', 150, 118, 496, 2 , 4 , 11)
-INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], [label], [descriptionLabel], [researchType], [treeColumn], [treeRow]) VALUES (405, N'Cruiser', N'1.gif', N'', 250, 58, 497, 2 , 5 , 11)
-INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], [label], [descriptionLabel], [researchType], [treeColumn], [treeRow]) VALUES (406, N'Battleship', N'1.gif', N'', 600, 124, 498, 2 , 6 , 11)
-INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], [label], [descriptionLabel], [researchType], [treeColumn], [treeRow]) VALUES (407, N'Superbattleship', N'1.gif', N'', 2000, 125, 499, 2 , 7 , 11)
-INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], [label], [descriptionLabel], [researchType], [treeColumn], [treeRow]) VALUES (900, N'Kolonieren Wüste', N'1.gif', N'', 2000, 125, 500, 2 , 0 , 8)
+--Level 3
+INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], [label], [descriptionLabel], [researchType], [treeColumn], [treeRow]) VALUES (51, N'PlaneteryScanner', N'1.gif', N'Erlaubt den Bau des Kraftwerks', 25, 382, 490, 1, 3, 0)
+INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], [label], [descriptionLabel], [researchType], [treeColumn], [treeRow]) VALUES (112, N'Warehouse construction plan', N'1.gif', N'', 1500, 162, 491,1,3,2)
 
 INSERT into [dbo].[Research] 
-	  ([id], [name],			[objectimageUrl], [description]	, [cost]		, [label]	, [descriptionLabel], [researchType]	, [treeColumn]	, [treeRow]) 
-select 501, N'Outpost'			, N'1.gif'		, N''			, 50			, 585		, 585				, 2					, 2				, 13 union all
-select 502, N'Space station'	, N'1.gif'		, N''			, 80			, 59		, 558				, 2					, 4				, 13 union all
-select 503, N'Star base'		, N'1.gif'		, N''			, 300			, 584		, 559				, 2					, 6				, 13 union all
-select 504, N'Star fortress'	, N'1.gif'		, N''			, 1200			, 127		, 560				, 2					, 8				, 13
+	  ([id], [name],[objectimageUrl], [description]	, [cost], [label]	, [descriptionLabel], [researchType], [treeColumn]	, [treeRow]) 
+select 3002, N'Administration I', N'1.gif', N''		, 15		, 472		, 477				, 4				, 3				, 6
 
-INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], [label], [descriptionLabel], [researchType], [treeColumn], [treeRow]) VALUES (1020, N'Holmium Analyse', N'1.gif', N'', 10, 352, 501, 3, 1, 1)
---INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], [label], [descriptionLabel], [researchType], [treeColumn], [treeRow]) VALUES (1030, N'Holmium Abbau', N'1.gif', N'', 100, 342, 1)
-INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], [label], [descriptionLabel], [researchType], [treeColumn], [treeRow]) VALUES (1040, N'Holmium Verarbeiten', N'1.gif', N'', 15, 357, 507, 3, 2, 1)
+INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], [label], [descriptionLabel], [researchType], [treeColumn], [treeRow]) VALUES (1010, N'Special Ressource Analysis', N'1.gif', N'', 12, 667, 669, 1, 3, 8)
 
-INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], [label], [descriptionLabel], [researchType], [treeColumn], [treeRow]) VALUES (1021, N'Terbium Analyse', N'1.gif', N'', 10, 353, 502, 3, 1, 3)
---INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], [label], [descriptionLabel], [researchType], [treeColumn], [treeRow]) VALUES (1031, N'Terbium Abbau', N'1.gif', N'', 100, 342, 1)
-INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], [label], [descriptionLabel], [researchType], [treeColumn], [treeRow]) VALUES (1041, N'Terbium Verarbeiten', N'1.gif', N'', 15, 358, 508, 3, 2, 3)
+INSERT into [dbo].[Research] 
+	  ([id], [name],[objectimageUrl], [description]	, [cost], [label]	, [descriptionLabel], [researchType], [treeColumn]	, [treeRow]) 
+select 4002, N'Fleet Command I', N'1.gif', N''		, 20	, 553		, 558				, 4				, 3				, 12
 
-INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], [label], [descriptionLabel], [researchType], [treeColumn], [treeRow]) VALUES (1022, N'Scandium Analyse', N'1.gif', N'', 10, 354, 503, 3, 1, 5)
---INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], [label], [descriptionLabel], [researchType], [treeColumn], [treeRow]) VALUES (1032, N'Scandium Abbau', N'1.gif', N'', 100, 342, 1)
-INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], [label], [descriptionLabel], [researchType], [treeColumn], [treeRow]) VALUES (1042, N'Scandium Verarbeiten', N'1.gif', N'', 15, 359, 509, 3, 2, 5)
+--Level 4
+INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], [label], [descriptionLabel], [researchType], [treeColumn], [treeRow]) VALUES (402, N'Corvette', N'1.gif', N'', 65, 173, 494, 2 , 4 , 0)
+INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], [label], [descriptionLabel], [researchType], [treeColumn], [treeRow]) VALUES (1030, N'Special Ressource Processing', N'1.gif', N'', 20, 668, 670, 1, 4, 9)
+INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], [label], [descriptionLabel], [researchType], [treeColumn], [treeRow]) VALUES (2003, N'Ship Defenses I', N'1.gif', N'Simple ship defenses.', 20, 99, 519, 2 , 4 , 11)
+INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], [label], [descriptionLabel], [researchType], [treeColumn], [treeRow]) VALUES (2005, N'Ship Weapons I', N'1.gif', N'Simple ship weapons.', 20, 98, 520, 2 , 4 , 13)
 
-INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], [label], [descriptionLabel], [researchType], [treeColumn], [treeRow]) VALUES (1023, N'Yttrium Analyse', N'1.gif', N'', 10, 355, 504, 3, 1, 7)
---INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], [label], [descriptionLabel], [researchType], [treeColumn], [treeRow]) VALUES (1033, N'Yttrium Abbau', N'1.gif', N'', 100, 342, 1)
-INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], [label], [descriptionLabel], [researchType], [treeColumn], [treeRow]) VALUES (1043, N'Yttrium Verarbeiten', N'1.gif', N'', 15, 360, 510, 3, 2, 7)
+--Level 5
+INSERT into [dbo].[Research] 
+	  ([id], [name],[objectimageUrl], [description]	, [cost], [label]	, [descriptionLabel], [researchType], [treeColumn]	, [treeRow]) 
+select 3003, N'Administration II', N'1.gif', N''	, 120	, 473		, 478				, 4				, 5				, 1			union all
+select 1060, N'Holmium Generator', N'1.gif', N'', 40, 660, 512, 3, 5, 3 union all
+select 1053, N'Yttrium Modules I', N'1.gif', N'', 60, 391, 515, 3, 5, 10 union all
+select 1054, N'Lutetium Modules I', N'1.gif', N'', 30, 392, 516, 3, 5, 12 
 
-INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], [label], [descriptionLabel], [researchType], [treeColumn], [treeRow]) VALUES (1024, N'Lutetium Analyse', N'1.gif', N'', 10, 356, 505, 3, 1, 9)
---INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], [label], [descriptionLabel], [researchType], [treeColumn], [treeRow]) VALUES (1034, N'Lutetium Abbau', N'1.gif', N'', 100, 342, 1)
-INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], [label], [descriptionLabel], [researchType], [treeColumn], [treeRow]) VALUES (1044, N'Lutetium Verarbeiten', N'1.gif', N'', 15, 361, 511, 3, 2, 9)
-
-INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], [label], [descriptionLabel], [researchType], [treeColumn], [treeRow]) VALUES (1025, N'Adamantium Analyse', N'1.gif', N'', 5000, 342, 506,3 , 0, 9)
-INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], [label], [descriptionLabel], [researchType], [treeColumn], [treeRow]) VALUES (1045, N'Adamantium Verarbeiten', N'1.gif', N'', 10000, 342, 1,3 , 0, 9)
+--Level 6
+INSERT into [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], [label], [descriptionLabel], [researchType], [treeColumn], [treeRow]) 
+select 1052, N'Scandium Shield I', N'1.gif', N'', 80, 386, 514, 3, 6, 5 
+INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], [label], [descriptionLabel], [researchType], [treeColumn], [treeRow]) VALUES (71, N'Superconductors', N'1.gif', N'Erlaubt den Bau des Kraftwerks', 120, 656, 657, 1, 6, 8)
 
 INSERT into [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], [label], [descriptionLabel], [researchType], [treeColumn], [treeRow]) 
-select 1050, N'Holmium Laser I', N'1.gif', N'', 100, 387, 512, 3, 3, 1 union all
-select 1051, N'Terbium Hull I', N'1.gif', N'', 100, 385, 513, 3, 3, 3 union all
-select 1052, N'Scandium Shield I', N'1.gif', N'', 100, 386, 514, 3, 3, 5 union all
-select 1053, N'Yttrium Modules I', N'1.gif', N'', 100, 391, 515, 3, 3, 7 union all
-select 1054, N'Lutetium Modules I', N'1.gif', N'', 100, 392, 516, 3, 3, 9 
+select 1063, N'Yttrium Cloning Lab', N'1.gif', N'', 100, 663, 515, 3, 6, 10 union all
+select 1064, N'Lutetium Ecosystem Improvements', N'1.gif', N'', 110, 664, 516, 3, 6, 12 
 
 
-INSERT into [dbo].[Research] 
-	  ([id], [name],[objectimageUrl], [description]	, [cost], [label]	, [descriptionLabel], [researchType], [treeColumn]	, [treeRow]) 
-select 3002, N'Administration I', N'1.gif', N''		, 8		, 472		, 477				, 4				, 1				, 4 union all
-select 3003, N'Administration II', N'1.gif', N''	, 70	, 473		, 478				, 4				, 2				, 4 union all
-select 3004, N'Administration III', N'1.gif', N''	, 320	, 474		, 479				, 4				, 3				, 4 union all
-select 3005, N'Administration VI', N'1.gif', N''	, 900	, 475		, 480				, 4				, 4				, 4 union all
-select 3006, N'Administration V', N'1.gif', N''		, 1600	, 476		, 481				, 4				, 5				, 4 
-
+--Level 7
+INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], [label], [descriptionLabel], [researchType], [treeColumn], [treeRow]) VALUES (3, N'TreibstoffRaffinerie', N'1.gif', N'Erlaubt den Bau der TreibstoffRaffinerie', 140, 93, 485,1,7,2)
+INSERT into [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], [label], [descriptionLabel], [researchType], [treeColumn], [treeRow]) 
+select 1062, N'Scandium Tools', N'1.gif', N'', 120, 662, 514, 3, 7, 4 
 
 INSERT into [dbo].[Research] 
 	  ([id], [name],[objectimageUrl], [description]	, [cost], [label]	, [descriptionLabel], [researchType], [treeColumn]	, [treeRow]) 
-select 4002, N'Fleet Command I', N'1.gif', N''		, 20	, 553		, 558				, 4				, 1				, 6 union all
-select 4003, N'Fleet Command II', N'1.gif', N''		, 200	, 554		, 559				, 4				, 2				, 6 union all
-select 4004, N'Fleet Command III', N'1.gif', N''	, 1000	, 555		, 560				, 4				, 3				, 6 union all
-select 4005, N'Fleet Command VI', N'1.gif', N''		, 2000	, 556		, 561				, 4				, 4				, 6 union all
-select 4006, N'Fleet Command V', N'1.gif', N''		, 4000	, 557		, 562				, 4				, 5				, 6 
+select 4003, N'Fleet Command II', N'1.gif', N''		, 200	, 554		, 559				, 4				, 7				, 6			union all
+select 1051, N'Terbium Hull I', N'1.gif', N'', 130, 385, 513, 3, 7, 9  union all
+select 1050, N'Holmium Laser I', N'1.gif', N'', 140, 387, 512, 3, 7, 11 
 
 
---Transcendence
+--Level 8
 INSERT into [dbo].[Research] 
-	  ([id], [name],						[objectimageUrl], [description]	, [cost], [label]	, [descriptionLabel], [researchType], [treeColumn]	, [treeRow]) 
-select 5000, N'Transcendence',				 N'1.gif'			, N''		, 400	, 590		, 591				, 4				, 3				, 8 union all
-select 5001, N'Transcendence Collaboration', N'1.gif'			, N''		, 1000	, 592		, 593				, 4				, 4				, 8 
+	  ([id], [name],			[objectimageUrl], [description]	, [cost]		, [label]	, [descriptionLabel], [researchType]	, [treeColumn]	, [treeRow]) 
+select 502, N'Space station'	, N'1.gif'		, N''			, 180			, 59		, 558				, 2					, 8				, 0			union all
+select 1061, N'Terbium Factory Improvements', N'1.gif', N'', 160, 661, 513, 3, 8, 10 
+
+INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], [label], [descriptionLabel], [researchType], [treeColumn], [treeRow]) VALUES (403, N'Frigatte', N'1.gif', N'', 190, 174, 495, 2 , 8 , 13)
+
+
+--Level 9
+INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], [label], [descriptionLabel], [researchType], [treeColumn], [treeRow]) VALUES (2100, N'Modules II', N'1.gif', N'', 280, 171, 523,2,9,1)
+
+--Level 10
+INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], [label], [descriptionLabel], [researchType], [treeColumn], [treeRow]) VALUES (2023, N'Colonization II', N'1.gif', N'Colonization module.', 250, 468, 522, 2 , 10 , 0)
+INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], [label], [descriptionLabel], [researchType], [treeColumn], [treeRow]) VALUES (5, N'Kraftwerk', N'1.gif', N'Erlaubt den Bau des Kraftwerks', 230, 95, 487,1,10,2)
+INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], [label], [descriptionLabel], [researchType], [treeColumn], [treeRow]) VALUES (2101, N'Cargo II', N'1.gif', N'', 350, 376, 524,  2 , 10 , 4)
+INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], [label], [descriptionLabel], [researchType], [treeColumn], [treeRow]) VALUES (50, N'Verb. Baumaterial', N'1.gif', N'Erlaubt den Bau des Kraftwerks', 340, 350, 489, 1, 10, 7)
+
+
+--Level 11
+INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], [label], [descriptionLabel], [researchType], [treeColumn], [treeRow]) VALUES (72, N'Superconductors II', N'1.gif', N'Erlaubt den Bau des Kraftwerks', 420, 666, 657, 1, 11, 0)
+INSERT into [dbo].[Research] 
+	  ([id], [name],			[objectimageUrl], [description]	, [cost]		, [label]	, [descriptionLabel], [researchType]	, [treeColumn]	, [treeRow]) 
+select 503, N'Star base'		, N'1.gif'		, N''			, 500			, 584		, 559				, 2					, 11				, 3 
+INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], [label], [descriptionLabel], [researchType], [treeColumn], [treeRow]) VALUES (2105, N'Ship Weapons II', N'1.gif', N'Better ship weapons.', 320, 168, 527, 2 , 11 , 5)
+INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], [label], [descriptionLabel], [researchType], [treeColumn], [treeRow]) VALUES (2103, N'Ship Defenses II', N'1.gif', N'Better ship defenses.', 320, 167, 526, 2 , 11 , 8)
+INSERT into [dbo].[Research] 
+	  ([id], [name],[objectimageUrl], [description]	, [cost], [label]	, [descriptionLabel], [researchType], [treeColumn]	, [treeRow]) 
+select 4004, N'Fleet Command III', N'1.gif', N''	, 900	, 555		, 560				, 4				, 11				, 10
+INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], [label], [descriptionLabel], [researchType], [treeColumn], [treeRow]) VALUES (404, N'Destroyer', N'1.gif', N'', 350, 118, 496, 2 , 11 , 12)
+
+
+--Level 12
+INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], [label], [descriptionLabel], [researchType], [treeColumn], [treeRow]) VALUES (2102, N'Scanner II', N'1.gif', N'', 375, 381, 525, 2 , 12 , 0)
+INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], [label], [descriptionLabel], [researchType], [treeColumn], [treeRow]) VALUES (8, N'Kommunikation Center', N'1.gif', N'Erlaubt den Bau es Kraftwerks', 230, 53, 488,1,12,3)
+INSERT into [dbo].[Research] 
+	  ([id], [name],[objectimageUrl], [description]	, [cost], [label]	, [descriptionLabel], [researchType], [treeColumn]	, [treeRow]) 
+select 3004, N'Administration III', N'1.gif', N''	, 620	, 474		, 479				, 4				, 12				, 7 
+INSERT into [dbo].[Research] 
+	  ([id], [name],			[objectimageUrl], [description]	, [cost]		, [label]	, [descriptionLabel], [researchType]	, [treeColumn]	, [treeRow]) 
+select 504, N'Star fortress'	, N'1.gif'		, N''			, 1200			, 127		, 560				, 2					, 12				, 9
+INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], [label], [descriptionLabel], [researchType], [treeColumn], [treeRow]) VALUES (405, N'Cruiser', N'1.gif', N'', 650, 58, 497, 2 , 12 , 12)
+
+--Level 13
+--ToDo: C
+INSERT into [dbo].[Research] 
+	  ([id], [name],[objectimageUrl], [description]	, [cost], [label]	, [descriptionLabel], [researchType], [treeColumn]	, [treeRow]) 
+select 3005, N'Administration VI', N'1.gif', N''	 , 900	, 475		, 480				, 4				, 13				, 6			union all
+select 5000, N'Transcendence Collab', N'1.gif'  , N'', 400	, 590		, 591				, 4				, 13				, 8		union all
+select 4005, N'Fleet Command VI', N'1.gif', N''		 , 2000	, 556		, 561				, 4				, 13				, 10
+INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], [label], [descriptionLabel], [researchType], [treeColumn], [treeRow]) VALUES (406, N'Battleship', N'1.gif', N'', 900, 124, 498, 2 , 13 , 12)
+
+--Level 14
+INSERT into [dbo].[Research] 
+	  ([id], [name],[objectimageUrl], [description]	, [cost], [label]	, [descriptionLabel], [researchType], [treeColumn]	, [treeRow]) 
+select 3006, N'Administration V', N'1.gif', N''		, 1600	, 476		, 481				, 4				, 14				, 6		union all
+select 5001, N'Transcendence', N'1.gif'	, N''		, 1200	, 592		, 593				, 4				, 14				, 8 
+INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], [label], [descriptionLabel], [researchType], [treeColumn], [treeRow]) VALUES (407, N'Superbattleship', N'1.gif', N'', 2000, 125, 499, 2 , 14 , 12)
+
+--level 15
+INSERT into [dbo].[Research] 
+	  ([id], [name],[objectimageUrl], [description]	, [cost], [label]	, [descriptionLabel], [researchType], [treeColumn]	, [treeRow]) 
+select 4006, N'Fleet Command V', N'1.gif', N''		, 4000	, 557		, 562				, 4				, 15				, 9 
+
+
+
+--INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], [label], [descriptionLabel], [researchType], [treeColumn], [treeRow]) VALUES (900, N'Kolonieren Wüste', N'1.gif', N'', 2000, 125, 500, 2 , 0 , 8)
 
 
 SET IDENTITY_INSERT [dbo].[Research] OFF
 go
+
 
 --delete from dbo.ResearchGain 
 insert into dbo.ResearchGain
@@ -1832,6 +1853,12 @@ INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType
 --INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 1, 2, 15)   -- ResearchDetails werden angezeigt.
 
 
+
+
+
+
+
+
 --Schiffbau
 --INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (2, 15, 2, 20)  --Schiffbau
 
@@ -1858,130 +1885,264 @@ INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType
 -- Research
 --delete from [ResearchQuestPrerequisites] where sourcetype = 2 and sourceid = 40 and targetType = 3 and [TargetId] = 18
 
+--Level 0
 INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 1, 3, 9)   -- Baumaterialfabrik
 INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 1, 3, 10)   -- Sonnenkraftwerk
 INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 1, 3, 19)   -- Montagehalle
 
 
 INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 1, 1, 9)   -- Ecosystem Adaption I 
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 1, 1, 152)  -- F erzmine
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 1, 1, 2000)  --F Space travel erlaubt F Modules  
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 1, 1, 400)  --Space travel 
+
+--Level 1
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 2000, 3, 16)  --Modulefabrik
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 2000, 4, 1)  --Crew I
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 2000, 4, 2)  --Reactor I
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 2000, 4, 9)  --System Engines I
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 2000, 4, 10)  --Hyper Engines I
+
 INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 9, 3, 18)   -- Häuser 
 INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 9, 3, 3)   -- Farm
 
-
-INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 1, 1, 2)   -- Wasserkraft
-INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 2, 3, 11)
-
-INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 1, 1, 3)  --TreibstoffRaffinerie
-INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 3, 3, 6)  -- TreibstoffRaffinerie
-INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 3, 3, 22) -- Synth Material Plant
-
-INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 1, 1, 152)  -- F erzmine
 INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 152, 3, 2)   -- G erzmine
 INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 152, 3, 20) -- G Hochofen
 
---delete from [dbo].[ResearchQuestPrerequisites] where TargetId = 164 or sourceid = 164
---INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 152, 1, 164)  --Hochofen
---INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 164, 3, 20)
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 400, 3, 17)  -- RaumWerft
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 400, 5, 1)  -- Scout hull
 
-INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 152, 1, 50) -- F Verb. Baumaterial
-INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 50, 3, 50)  -- GVerb. Baumaterial
-
-
-INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 152, 1, 112)  --Lager
-INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 112, 3, 12)
-
---INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 3, 1, 4)	--Treibstofflager
---INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 4, 3, 7)
-	
-INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 3, 1, 5) --Kraftwerk
-INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 5, 3, 14)
-
-INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 5, 1, 71) --Kraftwerk -> Superconductors
-
-
-INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 1, 1, 400)  --Space travel 
-
-
-
--- Modules
-INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 400, 1, 2000)  --F Space travel erlaubt F Modules  
-INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 2000, 3, 16)  --Modulefabrik
-INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 2000, 1, 2100)  --Modules II
-INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 2000, 1, 2013)  --Colonization
-
-INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 2000, 4, 1)  --Crew I
-INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 2000, 4, 2)  --Reactor I
---INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 2000, 4, 8)  --Cargo I
-INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 2000, 4, 9)  --System Engines I
-INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 2000, 4, 10)  --Hyper Engines I
---INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 2000, 4, 15)  --Scanner I
---delete from  [dbo].[ResearchQuestPrerequisites] where [SourceType] = 1 and [SourceId] = 2000 and [TargetType] = 4 and  [TargetId] in (2015)
-
-INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 2000, 1, 2001)  --Cargo
-INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 2001, 4, 8)  --Cargo
 
 INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 2000,  1, 2002)  --Scanner
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 152, 1, 2)   -- Wasserkraft
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 2000, 1, 2001)  --Cargo
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 2000, 1, 2013)	--Colonization
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 9, 1, 2013)		--Colonization
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 400, 1, 501) -- Outpost
+
+-- >3
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 9, 1, 3002)		--Administration I
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 152, 1, 1010)		--'Special Ressource Analysis',  I
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 400, 1, 4002)		--Fleet Command I
+
+--Level 2
 INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 2002, 4, 15)  --Scanner
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 2001, 4, 8)  --Cargo
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 2013, 4, 13)  --Colonization I
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 2, 3, 11)		-- Water Power Plant
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 501, 5, 199)		-- outpost Space Station hull
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 501, 4, 499)		-- outpost module
 
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 2002, 1, 51)  --Planetary Scanner
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 2001, 1, 112)  --Lager
 
-INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 2000, 1, 2003) --Def 1
-INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 2000, 1, 2005)  -- Weapons 1
+--Level 3
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 51, 3, 51)	--Planetary Scanner
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 112, 3, 12)	--Lager
+-- administration I realized by researchGain
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 1010, 3, 1030) -- Special Ressource Analysis erlaubt Abbau
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 1010, 3, 1031) -- Special Ressource Analysis erlaubt Abbau
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 1010, 3, 1032) -- Special Ressource Analysis erlaubt Abbau
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 1010, 3, 1033) -- Special Ressource Analysis erlaubt Abbau
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 1010, 3, 1034) -- Special Ressource Analysis erlaubt Abbau
+-- Fleet Command I realized by researchGain
+
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 3002, 1, 402)  -- Corvette
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 1010, 1, 1030) -- Special Ressource Analysis erlaubt Special Ressource Processing
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 4002, 1, 2003) --Def 1
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 4002, 1, 2005)  -- Weapons 1
+
+-- >5
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 3002, 1, 3003)		--Administration II
+
+--Level 4
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 402, 5, 2)  -- Corvette
+
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 1030, 3, 1040) -- 1030  Special Ressource Processing erlaubt Verarbeitungsgebäude
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 1030, 3, 1041) -- 1030  Special Ressource Processing erlaubt Verarbeitungsgebäude
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 1030, 3, 1042) -- 1030  Special Ressource Processing erlaubt Verarbeitungsgebäude
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 1030, 3, 1043) -- 1030  Special Ressource Processing erlaubt Verarbeitungsgebäude
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 1030, 3, 1044) -- 1030  Special Ressource Processing erlaubt Verarbeitungsgebäude
+
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 2003, 4, 4) --Shield 1
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 2003, 4, 3) --Hull 1
+
 INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 2005, 4, 5)  -- Laser  1
 INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 2005, 4, 6)  -- rocket  1
 INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 2005, 4, 7)  -- missile  1
-INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 2003, 4, 4) --Shield 1
-INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 2003, 4, 3) --Hull 1
---INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 2005, 4, 5)  -- Laser  1
---INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 2005, 4, 5)  -- Laser  1
 
-INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 2013, 4, 13)  --Outpost I
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 1030, 1, 1060)  --Holmium Generator
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 1030, 1, 1053)  -- Yttrium modules
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 1030, 1, 1054)  -- lutetium modules
 
-INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 2013, 1, 2023)
-INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 2023, 4, 23)  --Colonization I
+-- >6
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 1030, 1, 1052)  -- Scandium shield
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 1030, 1, 71)  --  Superconductors
+-- >8
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 2005, 1, 403)  -- Frigatte
 
---
+-- level 5
+-- Administration II 
+-- Todo: Holmium generator
+INSERT into [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId])
+select 1, 1053, 4, 1101 union all	-- Yttrium  Crew
+select 1, 1053, 4, 1108 union all	-- Yttrium  Cargo
+select 1, 1053, 4, 1110 union all	-- Yttrium Engine
+select 1, 1054, 4, 1102	union all	-- Lutetium reactor
+select 1, 1054, 4, 1115				-- Lutetium scanner
 
-INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 2002, 1, 51)  --Planetary Scanner
-INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 51, 3, 51)  --Planetary Scanner
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 1053, 1, 1063)  -- Yttrium cloning lab
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 1054, 1, 1064)  -- lutetium Ecosystem Improvements
 
-INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 51, 1, 8)  --CommCenter
-INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 8, 3, 8)  --CommCenter
+-- >7 
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 3003, 1, 3)		-- HydroCarbon
 
--- Stufe 2 Module:
-INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 2003, 1, 2103) --def1 -> Def 2
-INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 2005, 1, 2105)  --weapons1 -> Weapons 2
-INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 2100, 1, 2103) --Module2  Def 2
-INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 2100, 1, 2105)  --Module2  Weapons 2
+--Level 6
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 1052, 4, 1104)  -- Scandium shield
+-- Superconductors
+--Todo Yttrium cloning lab
+--Todo lutetium Ecosystem Improvements
 
-INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 2001, 1, 2101)  --Cargo
-INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 2101, 4, 108)  --Cargo
-INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 2002,  1, 2102)  --Scanner II
-INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 2102, 4, 115)  --Scanner II
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 1052, 1, 1062)  -- Scandium Tools
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 71, 1, 4003)		--Fleet Command II
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 71, 1, 1050)		--Terbium Hull
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 71, 1, 1051)		--Holmium Laser
 
-INSERT into [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) select  1, 2100, 4, 101 union all --Crew II
+-- >10
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 71, 1, 50)		--Adv Building material
+
+--Level 7
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 3, 3, 6)  -- TreibstoffRaffinerie
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 3, 3, 22) -- Synth Material Plant
+--Todo: Scandium Tools
+-- Fleet Command II
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES ( 1, 1051, 4, 1103)  --Terbium Hull
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES ( 1, 1050, 4, 1105)  --Holmium Laser
+
+
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 3, 1, 502)  -- Space Station
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 1051, 1, 1061)  -- Terbium Factory
+
+-- >9
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 3, 1, 2100)  -- Modules II
+
+-- >10
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 3, 1, 50)  -- Adv Building materials
+
+
+-- Level 8
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 502, 5, 200)  -- Space Station hull
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 502, 4, 500)  -- Space Station module
+--Todo: Terbium Fatory
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 403, 5, 3)  --Frigatte hull
+
+-- >11
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 403, 1, 404)  --Destroyer hull
+
+-- level 9
+INSERT into [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) 
+select 1, 2100, 4, 101 union all --Crew II
 select 1, 2100, 4, 102 union all  --Reactor II
+select 1, 2100, 4, 109 union all  --System Engines II
+select 1, 2100, 4, 110   --Hyper Engines II
+
+
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 2100, 1, 2023)  -- Colonization II
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 2100, 1, 5) --Kraftwerk
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 2100, 1, 2101)  --Cargo
+
+-- Level 10
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 2023, 4, 23)  --Colonization II
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 5, 3, 14) --Kraftwerk
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 2101, 4, 108)  --Cargo
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 50, 3, 50)  -- GVerb. Baumaterial
+
+
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 5, 1, 72) --SuperConductors II
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 50, 1, 503)  -- Star Base
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 50, 1, 2105)  -- Weapons 2
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 50, 1, 2103) -- Def 2
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 50, 1, 4004)		--Fleet Command III
+
+-- >12
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 50, 1, 3004)		--Administration III
+
+-- Level 11
+--Superconductors
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 503, 5, 201)  -- Star Base hull
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 503, 4, 501)  -- Star Base module
+
+INSERT into [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId])
 select 1, 2105, 4, 105 union all  -- Laser  II
 select 1, 2105, 4, 106 union all  -- rocket  II
 select 1, 2105, 4, 107 union all  -- missile  II
 select 1, 2103, 4, 104 union all --Shield II
-select 1, 2103, 4, 103 union all --Hull II
-select 1, 2100, 4, 109 union all  --System Engines II
-select 1, 2100, 4, 110   --Hyper Engines II
+select 1, 2103, 4, 103 --Hull II
+--Fleet Command III
+--ToDo: Destroyer
+
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 72,  1, 2102)  --Scanner II
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 72, 1, 8)  --CommCenter
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 72, 1, 3004)		--Administration III
+
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 2103, 1, 504)		--Star Fortress
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 404, 1, 504)		--Star Fortress
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 404, 1, 405)		--Cruiser
+
+--Level 12
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 2102, 4, 115)  --Scanner II
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 8, 3, 8)  --CommCenter
+-- Administration III
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 503, 5, 202)  -- Star Fortress hull
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 503, 4, 502)  -- Star Fortress module
+--Todo: Cruiser
+--delete from [dbo].[ResearchQuestPrerequisites] where [SourceId] = 3003 and [TargetId] = 2023
+--INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 3003, 1, 2023)		--Colonization 3
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 3004, 1, 3005)		--Administration IV
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 3004, 1, 5000)		--Transcendence Collaboration
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 405, 1, 4005)		--Fleet Command IV
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 405, 1, 406)		--Battleship
+
+
+--Level 13
+--ToDo: Colonizing Module III
+-- Administration IV
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 5000, 5, 221)		--Transcendence Collaboration hull
+--Fleet Command IV
+--ToDo: Battleship
+
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 3005, 1, 3006)		--Administration V
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 5000, 1, 5001)		--Transcendence Construct
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 406, 1, 407)		--Super Battleship
+
+--Level 14
+--Administration V
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 5001, 5, 220)		--Transcendence Construct hull
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 5001, 4, 520)		--Transcendence Construct module
+--ToDo:  Super Battleship
+
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 407, 1, 4006)		--Fleet Command V
+
+--delete from [dbo].[ResearchQuestPrerequisites] 
+
+--Level 14
+--Fleet Command V
+
+/*
+-- Stufe 2 Module:
+
 
 
 
 -- Shipp Hulls
 
-INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 400, 3, 17)  -- RaumWerft
-INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 400, 5, 1)  -- Scout hull
+
 
 --INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 400, 1, 401)  -- Corvette
 
-INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 400, 1, 402)  -- Corvette
-INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 402, 5, 2)  -- Corvette
 
-INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 402, 1, 403)  -- Frigatte
-INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 403, 5, 3)  
+
+
 
 INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 403, 1, 404)  --  destroyer
 INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 404, 1, 405)  --   cruiser
@@ -2106,6 +2267,8 @@ select 1, 5000		, 1, 5001  union all  -- Transcendence Construct -> Transcendenc
 select 1, 5001		, 5, 220  union all  -- Trans Construct
 select 1, 5000		, 5, 221  union all  -- Trans Collab
 select 1, 5001		, 4, 520   -- Trans Construct Module
+*/
+
 
 --delete from [dbo].[ResearchQuestPrerequisites]  where [SourceType] = 1 and [SourceId] = 5000
 

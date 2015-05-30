@@ -831,6 +831,21 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (658, N'+1
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (659, N'from Fleet Upkeep', N'', 7)
 
 
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (660, N'Holmium Generator', N'', 1)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (661, N'Terbium Factory Improvements', N'', 1)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (662, N'Scandium Tools', N'', 1)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (663, N'Yttrium Cloning Lab', N'', 1)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (664, N'Lutetium Ecosystem Improvements', N'', 1)
+
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (665, N'Energy Harvesting', N'', 1)
+
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (666, N'Superconductors II', N'', 1)
+
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (667, N'SR Analysis', N'', 1)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (668, N'SR Processing', N'', 1)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (669, N'Special Ressource Analysis allows the mining of these', N'', 1)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (670, N'Special Ressource Processing allows the construction of processing plants.', N'', 1)
+
 --296
 /*
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (403, N'<p>Drag the scout to the outside of your solar system. This will let him leave the system and switch the map to the starmap.<br> Find one of the neutral space stations. The next one will be at ', N'', 2)--<p> Erkunde deine Umgebung und treffe deine Nachbarn.<br> Finde eine neutrale Raumstation. Die nächste ist bei 

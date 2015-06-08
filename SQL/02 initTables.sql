@@ -813,8 +813,15 @@ print 'table [Goods] created.'
 go
 create unique clustered index Goodsindex ON [Goods](id);
 go	
-
-
+/*
+alter table [dbo].[Buildings] add storage int not null default 0, researchModifier int not null default 0,
+	assemblyModifier int not null default 0,
+	energyModifier int not null default 0,
+	housingModifier int not null default 0,
+	foodModifier int not null default 0,
+	productionModifier int not null default 0,
+	growthModifier int not null default 0
+	*/
 CREATE TABLE [dbo].[Buildings]  (
 	id SMALLINT NOT NULL UNIQUE,	
 	[name] nvarchar(55),
@@ -829,6 +836,14 @@ CREATE TABLE [dbo].[Buildings]  (
 	label int NOT NULL Default 1
 		references [dbo].LabelsBase (id) on update NO ACTION on delete NO ACTION,	
 	housing int not null default 0,
+	storage int not null default 0,
+	researchModifier int not null default 0,
+	assemblyModifier int not null default 0,
+	energyModifier int not null default 0,
+	housingModifier int not null default 0,
+	foodModifier int not null default 0,
+	productionModifier int not null default 0,
+	growthModifier int not null default 0,
 	constraint buildings_primary primary key clustered (id)
 );
 go

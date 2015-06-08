@@ -13,7 +13,7 @@ go
 */
 
 --truncate table LabelsBase
--- delete from [LabelsBase] where id in (6,7,9,16,19,20,21,22,23,24)
+-- delete from [LabelsBase] where id in (36)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (1, N'Orange dwarf star', N'', 0)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (2, N'Yellow dwarf star', N'', 0)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (3, N'Yellow-orange dwarf star', N'', 0)
@@ -39,7 +39,7 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (32, N'Tox
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (33, N'Gasgiant', N'', 0)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (34, N'Sunless planet', N'', 0)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (35, N'Moon', N'', 0)
-INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (36, N'Gras', N'', 0)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (36, N'Grass', N'', 0)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (37, N'Forest', N'', 0)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (38, N'Water', N'', 0)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (39, N'Mountain', N'', 0)
@@ -295,8 +295,8 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (241, N'<p
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (242, N'The planet surface', N'', 2) --Die Planetenoberfläche
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (243, N'To the left are the currently available buildings, in the lower left are major statistics, in the lower center ships in the orbit of this colony will be shown and the lower right shows your ressources on this colony.', N'', 2) --Rechts unten werden Güter angezeigt.Im Baumenü am rechten Rand können die zur Zeit verfügbaren Gebäude zum Bau ausgewählt werden...
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (244, N'Construction of buildings', N'', 2) --Gebäudebau
-INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (245, N'<p>Build a Building material plant, a solar energy plant and a construction plant. Use the menu to the left to select a building, then select a location on the planet surface to place the building.</p>', N'', 2) --<p>Baue eine Baumaterialfabrik, ein Sonnenkraftwerk und ein Montagewerk. Wähle im Menü auf der linken Seite das Gebäude aus und klicke auf eine freie Fläche auf der Planetenoberfläche um das Gebäude zu bauen</p>
---delete from  [LabelsBase] where id in (247)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (245, N'<p>Build a Building material plant and a solar energy plant. Use the menu to the left to select a building, then select a location on the planet surface to place the building.</p>', N'', 2) --<p>Baue eine Baumaterialfabrik, ein Sonnenkraftwerk und ein Montagewerk. Wähle im Menü auf der linken Seite das Gebäude aus und klicke auf eine freie Fläche auf der Planetenoberfläche um das Gebäude zu bauen</p>
+--delete from  [LabelsBase] where id in (245)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (246, N'The scout', N'', 2)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (247, N'<p>The mothership deployed a scout vessel before landing. Click on it in the middle lower area of the colony view to select it.</p>', N'', 2) --Das Mutterschiff hatte genug Schiffsmodule an Bord um einen Kundschafter zu bauen. Baue ihn über das Baumenü der Kolonie. Sobald er gebaut ist, wähle ihn auf der Planetenoberfläche an und starte das Schiff.
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (248, N'Now switch to the scout ship. You can do this by clicking on the scout in the lower area, by opening the ship view (left button in the upper right menu bar) or by switching to the systemview (upper left corner) and clicking on the ship that is above your colony.', N'', 2) --Der System-Kundschafter kann über die Schaltfläche unten ausgewählt werden, über das Schiffsmenü oben rechts, oder indem von der Planetenansicht auf die Systemansicht gewechselt wird (links oben), und dann das Schiff über der Kolonie ausgewählt wird.
@@ -339,8 +339,8 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (275, N'<p
 
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (276, N'Level', N'', 2)  -- Stufe
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (277, N'Build orders', N'', 2) --Bauaufträge
-INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (278, N'Construction', N'', 2)  -- Konstruktion
-
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (278, N'Assembly', N'', 2)  -- Konstruktion
+--delete from [LabelsBase] where id = 278
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (279, N'Rename colony', N'', 2)  -- Kolonie umbenennen
 
 
@@ -824,7 +824,6 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (655, N'To
 
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (656, N'Superconductors ', N'', 1) --
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (657, N'Allows more efficient energy generation', N'', 1) --
-
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (658, N'+10% Energy', N'', 1) --
 
 
@@ -846,6 +845,23 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (668, N'SR
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (669, N'Special Ressource Analysis allows the mining of these', N'', 1)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (670, N'Special Ressource Processing allows the construction of processing plants.', N'', 1)
 
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (671, N'Research Modifier ', N'Colony  details', 7) --Colony  details
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (672, N'Assembly Modifier ', N'Colony  details', 7) --Colony  details
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (673, N'Energy Modifier ', N'Colony  details', 7) --Colony  details
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (674, N'Housing Modifier ', N'Colony  details', 7) --Colony  details
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (675, N'Food Modifier ', N'Colony  details', 7) --Colony  details
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (676, N'Production Modifier ', N'Colony  details', 7) --Colony  details
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (677, N'Growth Modifier ', N'Colony  details', 7) --Colony  details
+
+
+
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (678, N'Fleet Command', N'', 1)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (679, N'Number of Colonies', N'', 1)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (680, N'Administration', N'', 1)
+
+
+
+
 --296
 /*
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (403, N'<p>Drag the scout to the outside of your solar system. This will let him leave the system and switch the map to the starmap.<br> Find one of the neutral space stations. The next one will be at ', N'', 2)--<p> Erkunde deine Umgebung und treffe deine Nachbarn.<br> Finde eine neutrale Raumstation. Die nächste ist bei 
@@ -853,7 +869,7 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (404, N'.<
 
 */
 
---delete from [LabelsBase] where id >614 614
+--delete from [LabelsBase] where id >677 614
 --delete from [LabelsBase] where id = 657
 --INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (348, N'Research', N'', 7)
 -- update [dbo].[LabelsBase] set value = N'Adaption to the ecosystem of newly inhabitated worlds allows further population growth' where id = 624

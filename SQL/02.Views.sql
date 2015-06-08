@@ -605,7 +605,15 @@ AS
          groupid, 
          prodqueuelevel, 
          label, 
-         housing 
+         housing,
+		 storage,
+		 researchModifier ,
+		 assemblyModifier ,
+		 energyModifier ,
+		 housingModifier ,
+		 foodModifier ,
+		 productionModifier,
+		 growthModifier
   FROM   [buildings]; 
 
 go 

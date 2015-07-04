@@ -675,6 +675,9 @@ INSERT [dbo].[Quests] ([id], [descriptionLabel], [isIntro], [isRandom], [hasScri
 INSERT [dbo].[Quests] ([id], [descriptionLabel], [isIntro], [isRandom], [hasScript], [script], [label]) VALUES (31, NULL, 1, 0, 1, N'ContactsDetail.js', 260)
 
 INSERT [dbo].[Quests] ([id], [descriptionLabel], [isIntro], [isRandom], [hasScript], [script], [label]) VALUES (40, NULL, 1, 0, 1, N'FinishedIntro.js', 115)
+
+INSERT [dbo].[Quests] ([id], [descriptionLabel], [isIntro], [isRandom], [hasScript], [script], [label]) VALUES (50, NULL, 1, 0, 1, N'Reinforcements.js', 683)
+
 SET IDENTITY_INSERT [dbo].[Quests] OFF
 
 SET IDENTITY_INSERT [dbo].[Modules] ON
@@ -1474,18 +1477,17 @@ INSERT [dbo].[BuildingCosts] ([buildingId], [goodsId], [amount]) VALUES (50, 11,
 
 --Planetary Scanner
 INSERT [dbo].[BuildingCosts] ([buildingId], [goodsId], [amount]) VALUES (51, 7,  120) -- Assembly
-INSERT [dbo].[BuildingCosts] ([buildingId], [goodsId], [amount]) VALUES (51, 1,  30) --  -Baumaterial
-INSERT [dbo].[BuildingCosts] ([buildingId], [goodsId], [amount]) VALUES (51, 50,  20) --  verb. Baumaterial
-INSERT [dbo].[BuildingCosts] ([buildingId], [goodsId], [amount]) VALUES (51, 10, 20)  --  -Stahl
+INSERT [dbo].[BuildingCosts] ([buildingId], [goodsId], [amount]) VALUES (51, 1,  230) --  -Baumaterial
+INSERT [dbo].[BuildingCosts] ([buildingId], [goodsId], [amount]) VALUES (51, 10, 120)  --  -Stahl
 INSERT [dbo].[BuildingCosts] ([buildingId], [goodsId], [amount]) VALUES (51, 2015, 3)  --  3 Sensoren sind benötigt
-INSERT [dbo].[BuildingCosts] ([buildingId], [goodsId], [amount]) VALUES (51, 11, 30)  -- kunststoffe
+
 
 
 
 
 
 --Assembly Plant
---delete from [BuildingCosts] where [buildingId] = 19
+--delete from [BuildingCosts] where [buildingId] = 51
 INSERT [dbo].[BuildingCosts] ([buildingId], [goodsId], [amount]) VALUES (19, 1, 40)
 INSERT [dbo].[BuildingCosts] ([buildingId], [goodsId], [amount]) VALUES (19, 7, 20)   --montagepunkte
 INSERT [dbo].[BuildingCosts] ([buildingId], [goodsId], [amount]) VALUES (19, 10, 20)  --metall
@@ -1718,9 +1720,9 @@ INSERT [dbo].[ShipHullsGain] ([shipHullId], [crew], [energy], [hitpoints], [dama
 insert [dbo].[ShipHullsGain] 
 ([shipHullId], [crew], [energy], [hitpoints], [damagereduction], [damageoutput], [cargoroom], [fuelroom], [inSpaceSpeed], [inSystemSpeed], [maxSpaceMoves], [maxSystemMoves], [special], [scanRange], [speedFactor])
 select		0,		0,		0,			   0,				0,				0,				0,			0,				0,				0,				0,				0,			0,				0 ,			1		union all
-select		1,		2,		-1,			 100,				0,				0,				20,			80,				0,				5,				0,				20,			0,				2 ,			1.0		union all -- Scout
-select		2,		3,		-3,			150,				0,				0,				20,			20,				0,				0,				0,				0,			0,				1 ,			0.8		union all
-select		3,		-1,		-5,			200,				0,				0,				80,			60,				0,				0,				0,				0,			0,				1 ,			0.7		union all --fregatte
+select		1,		2,		-1,			 100,				0,				0,				2,			80,				0,				5,				0,				20,			0,				2 ,			1.0		union all -- Scout
+select		2,		3,		-3,			150,				0,				0,				10,			20,				0,				0,				0,				0,			0,				1 ,			0.8		union all
+select		3,		-1,		-5,			200,				0,				0,				50,			60,				0,				0,				0,				0,			0,				1 ,			0.7		union all --fregatte
 select		4,		-2,		-7,			250,				5,				0,				100,		60,				0,				0,				0,				0,			0,				1 ,			0.6		union all  -- destr
 select		5,		-3,		-9,			300,				0,				10,				150,		60,				0,				0,				0,				0,			0,				1 ,			0.5		union all  -- cruiser
 select		6,		-10,	-11,		350,				0,				10,				200,		50,				0,				0,				0,				0,			0,				0 ,			0.4		union all -- starship
@@ -1881,6 +1883,7 @@ SourceType, SourceId, TargetType, TargetId
 
 
 --Quests
+-- quest 1 is inserted into userQuests automaticaly
 INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (2, 1, 2, 2)
 
 INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (2, 1, 3, 9)	--Frei: Baumaterialfabrik
@@ -1889,6 +1892,8 @@ INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType
 INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (2, 1, 3, 18) -- Häuser
 INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (2, 1, 3, 19) -- Montagehalle
 INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (2, 1, 3, 21)	-- Defense satellite
+
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (2, 1, 2, 50)
 
 INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (2, 2, 2, 3)
 INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (2, 3, 2, 4)
@@ -2369,7 +2374,7 @@ INSERT [dbo].[ShipTemplate] ([id], [userId], [shipHullId], [name], [gif], [energ
 [isColonizer], [constructionDuration], [constructable], [amountBuilt], [obsolete], shipHullsImage) 
 VALUES (0, 0, 1, N'Scout', N'scout.png', 1, 8, 3, 0, 0, 100, 0, 20, 80, 
 20, 4, 160, 35,  --moves 
-0, 1, 1, 0, 0, 2)
+0, 1, 1, 0, 0, 1)
 
 
 --2 Corvette
@@ -2407,7 +2412,7 @@ VALUES (10, 0, 199, N'Outpost', N'scout.png', 5, 8, 2,
 60, 60, 100, 0, 
 20, 80, 
 0, 0, 0, 0,  --moves 
-0, 1, 1, 0, 0, 4) 
+0, 1, 1, 0, 0, 14) 
 
 /****** Object:  Table [dbo].[ShipTemplateModulePositions]    Script Date: 12/07/2013 17:04:33 ******/
 

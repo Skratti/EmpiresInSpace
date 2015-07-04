@@ -1522,6 +1522,22 @@ create nonclustered index ShipsIdKey on [dbo].[Ships](userId);
 -- drop  INDEX [Ships_position]  ON [dbo].[Ships]
 
 go
+go
+CREATE TRIGGER TRIGGER_Ships_Delete_FKs ON dbo.Ships
+AFTER DELETE
+AS
+BEGIN	
+		
+	DELETE FROM shipModules 
+		FROM shipModules
+		INNER JOIN deleted on shipModules.shipId = deleted.id
+	
+END
+go
+print 'trigger [dbo].[TRIGGER_Ships_Delete_FKs] created.'
+go
+
+
 
 --1 to 1 to ships, always joined on ships to increment the ships versionId after the  update
 -- insert into [ShipTranscension] select 1738 , 1,  GETDATE(), 100

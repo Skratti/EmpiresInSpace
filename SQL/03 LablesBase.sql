@@ -331,7 +331,7 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (269, N'<p
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (270, N'Shipyard intro', N'', 2)
 
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (271, N'<p>The mothership had enough spare ship modules for a scout on board. The construction plan is already there, so you can just open the space port menu by clicking on it and select the scout ship to be build.</p>', N'', 2)
-INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (272, N'<p>When you arrive at a star base that has a communication module, you get the contact data of all nations that already visited that star base.<br>You can see them with the contact view (fourth button in the upper menu).<br>Here you can change your relationship towards that nation or write messages.<br>The relationship can be worsened without mutural consent, but to improve the relationship  both parties have to agree on that.</p>', N'', 2)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (272, N'<p>When you arrive at a star base that has a communication module, you get the contact data of all nations that already visited that star base.<br>You can see them with the contact view (fourth button in the upper menu).<br>Here you can change your relationship towards that nation or write messages.<br>The relationship can be worsened unilaterally, but both parties have to agree to improve it.</p>', N'', 2)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (273, N' <p>The ship designer is used to create ship construction plans.<br>Open this screen from the ship yard, or from the the ship list (left button in the upper toolbar).<br>The left menu can be used to create, delete or duplicate ship plans. In the upper menu on the right side the ship hull can be selected. Drag&drop ship modules from the right side onto the space ship.<br>A ship should consist at last of a crew module, a reactor, system engines and hyper engines.</p>', N'', 2)
 
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (274, N'<p>The star base you just arrived also functions as a trade node. Select your ship and click this<br><div style="background: rgb(57,191,191) url(images/ui-icons.png) no-repeat 5px -28px;width:40px;height:40px;background-repeat:no-repeat; border: 1px solid #75E0F0;" /><br>button to open the trade menu. If your ship has any goods on board, you can offer them here and define which goods you demand in exchange. You can also see any trades from other players, and accept them if you have enough goods on board.</p>', N'', 2)
@@ -340,7 +340,7 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (275, N'<p
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (276, N'Level', N'', 2)  -- Stufe
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (277, N'Build orders', N'', 2) --Bauaufträge
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (278, N'Assembly', N'', 2)  -- Konstruktion
---delete from [LabelsBase] where id = 271
+--delete from [LabelsBase] where id = 272
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (279, N'Rename colony', N'', 2)  -- Kolonie umbenennen
 
 
@@ -862,6 +862,10 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (680, N'Ad
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (681, N'Overcrowding', N'', 1)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (682, N'Total', N'', 1)
 
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (683, N'Some reinforcements have arrived</p>', N'', 1)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (684, N'<p>Three ships just arrived at your colony, coming from your old homeland. Their engines barely made the trip, and their captains report that more ships were sent to you, but only these three ships made it.</p><p>Perhaps a search commando should be sent out to find the missing ships and secure the cargo on them.</p>', N'', 1)
+
+--delete from [LabelsBase] where id = 684
 --296
 /*
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (403, N'<p>Drag the scout to the outside of your solar system. This will let him leave the system and switch the map to the starmap.<br> Find one of the neutral space stations. The next one will be at ', N'', 2)--<p> Erkunde deine Umgebung und treffe deine Nachbarn.<br> Finde eine neutrale Raumstation. Die nächste ist bei 

@@ -514,7 +514,7 @@ INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], 
 INSERT into [dbo].[Research] 
 	  ([id], [name],[objectimageUrl], [description]	, [cost], [label]	, [descriptionLabel], [researchType], [treeColumn]	, [treeRow]) 
 select 3005, N'Administration VI', N'1.gif', N''	 , 900	, 475		, 480				, 4				, 13				, 6			union all
-select 5000, N'Transcendence Collab', N'1.gif'  , N'', 400	, 590		, 591				, 4				, 13				, 8		union all
+select 5000, N'Transcendence Collab', N'1.gif'  , N'', 400	, 592		, 593				, 4				, 13				, 8		union all
 select 4005, N'Fleet Command VI', N'1.gif', N''		 , 2000	, 556		, 561				, 4				, 13				, 10
 INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], [label], [descriptionLabel], [researchType], [treeColumn], [treeRow]) VALUES (406, N'Battleship', N'1.gif', N'', 900, 124, 498, 2 , 13 , 12)
 
@@ -522,7 +522,7 @@ INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], 
 INSERT into [dbo].[Research] 
 	  ([id], [name],[objectimageUrl], [description]	, [cost], [label]	, [descriptionLabel], [researchType], [treeColumn]	, [treeRow]) 
 select 3006, N'Administration V', N'1.gif', N''		, 1600	, 476		, 481				, 4				, 14				, 6		union all
-select 5001, N'Transcendence', N'1.gif'	, N''		, 1200	, 592		, 593				, 4				, 14				, 8 
+select 5001, N'Transcendence', N'1.gif'	, N''		, 1200	, 590		, 591				, 4				, 14				, 8 
 INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], [label], [descriptionLabel], [researchType], [treeColumn], [treeRow]) VALUES (407, N'Superbattleship', N'1.gif', N'', 2000, 125, 499, 2 , 14 , 12)
 
 --level 15
@@ -540,9 +540,10 @@ go
 
 
 --delete from dbo.ResearchGain 
-insert into dbo.ResearchGain
-([researchId]	  ,[research]	,[energy]	,[housing]	,[growth]	,[construction]	,[industrie]	,[food]	,[colonyCount]	,fleetCount	,[objectId])
+insert into dbo.ResearchGain 
+([researchId]	  ,[research]	,[energy]	,[housing]	,[growth]	,[construction]	,[industrie]	,[food]	,[colonyCount]	,fleetCount	,[objectId])	
 select 71		  ,0			,10			,0			, 0			,0				,0				,0		,0				,0			,671		union all
+select 72		  ,0			,15			,0			, 0			,0				,0				,0		,0				,0			,671		union all
 select 3002		  ,0			,0			,0			, 0			,0				,0				,0		,2				,0			,172		union all
 select 3003		  ,0			,0			,0			, 0			,0				,0				,0		,2				,0			,173		union all
 select 3004		  ,0			,0			,0			, 0			,0				,0				,0		,3				,0			,174		union all
@@ -747,7 +748,7 @@ select		4,		-1,		 -2,		 0,					 5,				 0,			 0,			 0,					0,				 0,				 0, 0, 0,
 select		5,		-1,		 -1,		 0,					 0,				20,			 0,			 0,					0,				 0,				 0, 0, 0, 0,1  union all	   --laser
 select		6,		-1,		 -1,		 0,					 0,				20,			 0,			 0,					0,				 0,				 0, 0, 0, 0,2  union all	  --missile
 select		7,		-1,		 -1,		 0,					 0,				20,			 0,			 0,					0,				 0,				 0, 0, 0, 0,3  union all	  --mass driver
-select		8,		-1,		 -1,		 0,					 0,				 0,		   500,			50,					0,				 0,				 0, 0, 0, 0  union all    -- cargo
+select		8,		-1,		 -1,		 0,					 0,				 0,		   200,			50,					0,				 0,				 0, 0, 0, 0  union all    -- cargo
 select		9,		-1,		 -2,		 0,					 0,				 0,			 0,			 0,					0,			   100,				 0, 100, 0, 0  union all	 --system Enginge
 select		10,		-1,		 -2,		 0,					 0,				 0,			 0,			 0,					20,				 0,				20, 0, 0, 0 union all		 --star engines
 select		13,		-5,		 -2,		 0,					 0,				 0,			 0,			 0,					0,				 0,				 0, 0, 1, 0,200000000 union all  -- colonisation
@@ -766,7 +767,7 @@ select	104,	 -1,		 -4,		  0,					8,				 0,			0,				0,				0,				0,				0,					0,		
 select	105,	 -1,		 -6,		  0,					0,				 25,		0,				0,				0,				0,				0,					0,			0,			0,			1 union all    --laser
 select	106,	 -1,		 -2,		  0,					0,				 25,		0,				0,				0,				0,				0,					0,			0,			0,			2 union all   --missile
 select	107,	 -1,		 -4,		  0,					0,				 25,		0,				0,				0,				0,				0,					0,			0,			0,			3 union all   --mass driver
-select	108,	 -1,		 -2,		  0,					0,				 0,			1500,			50,				0,				0,				0,					0,			0,			0,			0 union all   -- cargo
+select	108,	 -1,		 -2,		  0,					0,				 0,			500,			50,				0,				0,				0,					0,			0,			0,			0 union all   -- cargo
 select	109,	 -1,		 -4,		  0,					0,				 0,			0,				0,				0,		 	  120,				0,				  100,			0,			0,			0 union all   --system Enginge
 select	110,	 -1,		 -4,		  0,					0,				 0,			0,				0,				25,				0,			   20,					0,			0,			0,			0 union all    --star engines
 select	115,	 -1,		 -7,		  0,					0,				 0,			0,				0,				0,				0,				0,					0,			0,			2,			0    --scanner
@@ -778,7 +779,7 @@ select 1102, -2, 25, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 union all  --reactor
 select 1103, 0, 0,  150, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 union all   --hull
 select 1104, -1, -4, 0, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 union all  --shield
 select 1105, -1, -6, 0, 0, 30, 0, 0, 0, 0, 0, 0, 0, 0, 1 union all    --laser
-select 1108, -1, -2, 0, 0, 0, 1200, 50, 0, 0, 0, 0, 0, 0, 0 union all   -- cargo
+select 1108, -1, -2, 0, 0, 0, 400, 50, 0, 0, 0, 0, 0, 0, 0 union all   -- cargo
 select 1110, -1, -4, 0, 0, 0, 0, 0, 30, 0, 24, 0, 0, 0, 0 union all    --star engines
 select 1115, -1, -7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0    --scanner
 
@@ -2181,10 +2182,10 @@ INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType
 INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 2102, 4, 115)  --Scanner II
 INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 8, 3, 8)  --CommCenter
 -- Administration III
-INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 503, 5, 202)  -- Star Fortress hull
-INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 503, 4, 502)  -- Star Fortress module
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 504, 5, 202)  -- Star Fortress hull
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 504, 4, 502)  -- Star Fortress module
 --Todo: Cruiser
---delete from [dbo].[ResearchQuestPrerequisites] where [SourceId] = 3003 and [TargetId] = 2023
+--delete from [dbo].[ResearchQuestPrerequisites] where [SourceId] = 503 and [TargetId] = 502
 --INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 3003, 1, 2023)		--Colonization 3
 INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 3004, 1, 3005)		--Administration IV
 INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 3004, 1, 5000)		--Transcendence Collaboration

@@ -865,6 +865,8 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (682, N'To
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (683, N'Some reinforcements have arrived</p>', N'', 1)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (684, N'<p>Three ships just arrived at your colony, coming from your old homeland. Their engines barely made the trip, and their captains report that more ships were sent to you, but only these three ships made it.</p><p>Perhaps a search commando should be sent out to find the missing ships and secure the cargo on them.</p>', N'', 1)
 
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (685, N'Reply', N'', 7)
+
 --delete from [LabelsBase] where id = 684
 --296
 /*

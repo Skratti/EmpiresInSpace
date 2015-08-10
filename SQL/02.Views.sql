@@ -409,6 +409,7 @@ AS
 	  ,player_ip 
 	  ,fogVersion
 	  ,fogString
+	  ,[description]
   /*id, 
          username,                   
          activity, 
@@ -1700,7 +1701,8 @@ AS
          [population], 
          construction, 
          turnsofrioting,
-		 versionId
+		 versionId,
+		 TurnsOfSiege
   FROM   [colonies]; 
 
 go 

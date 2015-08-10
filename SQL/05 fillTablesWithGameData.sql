@@ -32,8 +32,8 @@ INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [d
 --INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (4, N'Nebel', N'2.png', 1, 0, 4)
 --INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (5, N'dichter Nebel', N'3.png', 1, 0, 5)
 --INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (8, N'Plasmanebel', N'6.gif', 1, 0, 8)
-INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (10, N'Asteroidenfeld', N'11.png', 1, 0, 10)
-INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (11, N'dichtes Asteroidenfeld', N'12.png', 1, 0, 11)
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (10, N'Asteroidenfeld', N'11.png', 2, 0, 10)
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (11, N'dichtes Asteroidenfeld', N'12.png', 3, 0, 11)
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (13, N'Roter Zwerg', N'sunRed.png', 1, 0, 15)
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (14, N'Blauer Riese', N'SunBlue.png', 1, 0, 13)
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (15, N'Oranger Riese', N'sunRed.png', 1, 0, 14)
@@ -137,15 +137,15 @@ INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [d
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (200, N'Scout2', N'Scout2G.png', 1, 0, 565)
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (201, N'Corvette', N'Corvette.png', 1, 0, 566)
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (202, N'Fregatte', N'Fregatte.png', 1, 0, 567)
-INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (203, N'destroyer', N'Fregatte.png', 1, 0, 568)
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (203, N'Destroyer', N'Fregatte.png', 1, 0, 568)
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (204, N'Cruiser', N'Fregatte.png', 1, 0, 569)
 
-
+--delete  [ObjectDescription] where id = 404
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (400, N'Kolonieschiff', N'Fregatte.png', 1, 0, 54)
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (401, N'Scout', N'Scout3_60.png', 1, 0, 55)
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (402, N'Corvette', N'Corvette.png', 1, 0, 56)
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (403, N'Fregatte', N'Fregatte.png', 1, 0, 118)
-INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (404, N'destroyer', N'Fregatte.png', 1, 0, 57)
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (404, N'destroyer', N'Destroyer_1_60.png', 1, 0, 118)
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (405, N'Cruiser', N'Fregatte.png', 1, 0, 58)
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (406, N'star ship', N'Fregatte.png', 1, 0, 118)
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (407, N'Battleship', N'Fregatte.png', 1, 0, 57)
@@ -169,8 +169,8 @@ INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [d
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (501, N'Scout', N'Scout3_60.png', 1, 0, 55)
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (502, N'smallDef', N'Scout3_60.png', 1, 0, 56)
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (503, N'Destroyer', N'Scout3_60.png', 1, 0, 118)
-INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (504, N'Tanker', N'Scout3_60.png', 1, 0, 57)
-INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (505, N'Cruiser', N'Scout3_60.png', 1, 0, 58)
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (504, N'Destroyer', N'Destroyer_1_300.png', 1, 0, 118)
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (505, N'Cruiser', N'Destroyer_1_300.png', 1, 0, 58)
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (506, N'Destroyer', N'Scout3_60.png', 1, 0, 118)
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (507, N'Tanker', N'Scout3_60.png', 1, 0, 57)
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (508, N'Cruiser', N'Scout3_60.png', 1, 0, 58)
@@ -741,20 +741,32 @@ delete from [dbo].[ModulesGain]
 --level 1
 INSERT [dbo].[ModulesGain] 
 ([modulesId],	[crew], [energy], [hitpoints], [damagereduction], [damageoutput], [cargoroom], [fuelroom], [inSpaceSpeed], [inSystemSpeed], [maxSpaceMoves], [maxSystemMoves], [special], [scanRange]) 
-select		1,		10,		 -1,		 0,					 0,				 0,			 0,			 0,					0,				 0,				 0, 0, 0, 0 union all        --crew
-select		2,		-1,		 10,		 0,					 0,				 0,			 0,			 0,					0,				 0,				 0, 0, 0, 0 union all		 --reactor
-select		3,		 0,		  0,	   100,					 0,				 0,			 0,			 0,					0,				 0,				 0, 0, 0, 0 union all		  --hull
-select		4,		-1,		 -2,		 0,					 5,				 0,			 0,			 0,					0,				 0,				 0, 0, 0, 0 union all		 --shield
-select		5,		-1,		 -1,		 0,					 0,				20,			 0,			 0,					0,				 0,				 0, 0, 0, 0,1  union all	   --laser
-select		6,		-1,		 -1,		 0,					 0,				20,			 0,			 0,					0,				 0,				 0, 0, 0, 0,2  union all	  --missile
-select		7,		-1,		 -1,		 0,					 0,				20,			 0,			 0,					0,				 0,				 0, 0, 0, 0,3  union all	  --mass driver
-select		8,		-1,		 -1,		 0,					 0,				 0,		   200,			50,					0,				 0,				 0, 0, 0, 0  union all    -- cargo
-select		9,		-1,		 -2,		 0,					 0,				 0,			 0,			 0,					0,			   100,				 0, 100, 0, 0  union all	 --system Enginge
-select		10,		-1,		 -2,		 0,					 0,				 0,			 0,			 0,					20,				 0,				20, 0, 0, 0 union all		 --star engines
-select		13,		-5,		 -2,		 0,					 0,				 0,			 0,			 0,					0,				 0,				 0, 0, 1, 0,200000000 union all  -- colonisation
-select		15,		-1,		 -3,		 0,					 0,				 0,			 0,			 0,					0,				 0,				 0, 0, 0, 1 union all				--scanner
-select		23,	   -10,		 -5,		 0,					 0,				 0,			 0,			 0,					0,				 0,				 0, 0, 1, 0,500000000 union all	 -- colonisation
-select		523,   -20,		-10,		 0,					 0,				 0,			 0,			 0,					0,				 0,				 0, 0, 1, 0,1000000000			-- colonisation
+select		1,		10,		 -1,		 0,					 0,				 0,			 0,			 0,					0,				 0,				 0,				0,			0,			0	union all        --crew
+select		2,		-1,		 10,		 0,					 0,				 0,			 0,			 0,					0,				 0,				 0,				0,			0,			0	union all		 --reactor
+select		3,		 0,		  0,	   100,					 0,				 0,			 0,			 0,					0,				 0,				 0,				0,			0,			0	union all		  --hull
+select		4,		-1,		 -2,		 0,					50,				 0,			 0,			 0,					0,				 0,				 0,				0,			0,			0	union all		 --shield
+select		5,		-1,		 -1,		 0,					 0,				20,			 0,			 0,					0,				 0,				 0,				0,			0,			0,	1  union all	   --laser
+select		6,		-1,		 -1,		 0,					 0,				20,			 0,			 0,					0,				 0,				 0,				0,			0,			0,	2  union all	  --missile
+select		7,		-1,		 -1,		 0,					 0,				20,			 0,			 0,					0,				 0,				 0,				0,			0,			0,	3  union all	  --mass driver
+select		8,		-1,		 -1,		 0,					 0,				 0,		   200,			50,					0,				 0,				 0,				0,			0,			0	union all    -- cargo
+select		9,		-1,		 -2,		 0,					 0,				 0,			 0,			 0,					0,			   100,				 0,				100,		0,			0	union all	 --system Enginge
+select		10,		-1,		 -2,		 0,					 0,				 0,			 0,			 0,					20,				 0,				20,				0,			0,			0	union all		 --star engines
+select		13,		-5,		 -2,		 0,					 0,				 0,			 0,			 0,					0,				 0,				 0,				0,			1,			0	,200000000 union all  -- colonisation
+select		15,		-1,		 -3,		 0,					 0,				 0,			 0,			 0,					0,				 0,				 0,				0,			0,			1 union all				--scanner
+select		23,	   -10,		 -5,		 0,					 0,				 0,			 0,			 0,					0,				 0,				 0,				0,			1,			0	,500000000 union all	 -- colonisation
+select		523,   -20,		-10,		 0,					 0,				 0,			 0,			 0,					0,				 0,				 0,				0,			1,			0	,1000000000			-- colonisation
+
+--specail Res 1
+INSERT into [dbo].[ModulesGain] (
+[modulesId], [crew], [energy], [hitpoints], [damagereduction], [damageoutput], [cargoroom], [fuelroom], [inSpaceSpeed], [inSystemSpeed], [maxSpaceMoves], [maxSystemMoves], [special], [scanRange],weaponType) 
+select 1101, 20,	-3,					0,		0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 union all   --crew
+select 1102, -2,	25,					0,		0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 union all  --reactor
+select 1103, 0,		0,					150,	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 union all   --hull
+select 1104, -1,	-4,					0,		7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 union all  --shield
+select 1105, -1,	-6,					0,		0, 28, 0, 0, 0, 0, 0, 0, 0, 0, 1 union all    --laser
+select 1108, -1,	-2,					0,		0, 0, 400, 50, 0, 0, 0, 0, 0, 0, 0 union all   -- cargo
+select 1110, -1,	-4,					0,		0, 0, 0, 0, 28, 0, 24, 0, 0, 0, 0 union all    --star engines
+select 1115, -1,	-7,					0,		0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0    --scanner
 
 
 -- Level 2
@@ -763,25 +775,16 @@ INSERT into [dbo].[ModulesGain]
 select	101,	 25,		 -3,		  0,					0,				 0,			0,				0,				0,				0,				0,					0,			0,			0,			0 union all   --crew
 select	102,	 -2,		 30,		  0,					0,				 0,			0,				0,				0,				0,				0,					0,			0,			0,			0 union all  --reactor
 select	103,	  0,		  0,		175,					0,				 0,			0,				0,				0,				0,				0,					0,			0,			0,			0 union all   --hull
-select	104,	 -1,		 -4,		  0,					8,				 0,			0,				0,				0,				0,				0,					0,			0,			0,			0 union all  --shield
-select	105,	 -1,		 -6,		  0,					0,				 25,		0,				0,				0,				0,				0,					0,			0,			0,			1 union all    --laser
-select	106,	 -1,		 -2,		  0,					0,				 25,		0,				0,				0,				0,				0,					0,			0,			0,			2 union all   --missile
-select	107,	 -1,		 -4,		  0,					0,				 25,		0,				0,				0,				0,				0,					0,			0,			0,			3 union all   --mass driver
+select	104,	 -1,		 -4,		  0,				   90,				 0,			0,				0,				0,				0,				0,					0,			0,			0,			0 union all  --shield
+select	105,	 -1,		 -6,		  0,					0,				 30,		0,				0,				0,				0,				0,					0,			0,			0,			1 union all    --laser
+select	106,	 -1,		 -2,		  0,					0,				 30,		0,				0,				0,				0,				0,					0,			0,			0,			2 union all   --missile
+select	107,	 -1,		 -4,		  0,					0,				 30,		0,				0,				0,				0,				0,					0,			0,			0,			3 union all   --mass driver
 select	108,	 -1,		 -2,		  0,					0,				 0,			500,			50,				0,				0,				0,					0,			0,			0,			0 union all   -- cargo
 select	109,	 -1,		 -4,		  0,					0,				 0,			0,				0,				0,		 	  120,				0,				  100,			0,			0,			0 union all   --system Enginge
-select	110,	 -1,		 -4,		  0,					0,				 0,			0,				0,				25,				0,			   20,					0,			0,			0,			0 union all    --star engines
+select	110,	 -1,		 -4,		  0,					0,				 0,			0,				0,				30,				0,			   20,					0,			0,			0,			0 union all    --star engines
 select	115,	 -1,		 -7,		  0,					0,				 0,			0,				0,				0,				0,				0,					0,			0,			2,			0    --scanner
 
---specail Res 1
-INSERT into [dbo].[ModulesGain] ([modulesId], [crew], [energy], [hitpoints], [damagereduction], [damageoutput], [cargoroom], [fuelroom], [inSpaceSpeed], [inSystemSpeed], [maxSpaceMoves], [maxSystemMoves], [special], [scanRange],weaponType) 
-select 1101, 20, -3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 union all   --crew
-select 1102, -2, 25, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 union all  --reactor
-select 1103, 0, 0,  150, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 union all   --hull
-select 1104, -1, -4, 0, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 union all  --shield
-select 1105, -1, -6, 0, 0, 30, 0, 0, 0, 0, 0, 0, 0, 0, 1 union all    --laser
-select 1108, -1, -2, 0, 0, 0, 400, 50, 0, 0, 0, 0, 0, 0, 0 union all   -- cargo
-select 1110, -1, -4, 0, 0, 0, 0, 0, 30, 0, 24, 0, 0, 0, 0 union all    --star engines
-select 1115, -1, -7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0    --scanner
+
 
 --star bases
 INSERT into [dbo].[ModulesGain] 
@@ -1574,12 +1577,12 @@ INSERT [dbo].[BuildingCosts] ([buildingId], [goodsId], [amount]) VALUES (184, 7,
 INSERT [dbo].[BuildingCosts] ([buildingId], [goodsId], [amount]) VALUES (184, 1044, 10)  --Holmium
 
 /****** Object:  Table [dbo].[ShipHulls]    Script Date: 12/06/2013 21:56:05 ******/
---delete from   [ShipHulls] where id = 221
+--delete from   [ShipHulls] where id = 4
 INSERT [dbo].[ShipHulls] ([id], [isStarBase], [typename], [labelName], [objectId], [modulesCount], [templateImageUrl], [label]) VALUES (0, 0, N'Debris', 0, 440, 0, N'', 60)
 INSERT [dbo].[ShipHulls] ([id], [isStarBase], [typename], [labelName], [objectId], [modulesCount], [templateImageUrl], [label]) VALUES (1, 0, N'Scout', 0, 410, 5, N'ScoutHull.png', 55)
 INSERT [dbo].[ShipHulls] ([id], [isStarBase], [typename], [labelName], [objectId], [modulesCount], [templateImageUrl], [label]) VALUES (2, 0, N'Corvette', 0, 402, 7, N'401Template.gif', 100)
 INSERT [dbo].[ShipHulls] ([id], [isStarBase], [typename], [labelName], [objectId], [modulesCount], [templateImageUrl], [label]) VALUES (3, 0, N'Fregatte', 0, 403, 9, N'401Template.gif', 101)
-INSERT [dbo].[ShipHulls] ([id], [isStarBase], [typename], [labelName], [objectId], [modulesCount], [templateImageUrl], [label]) VALUES (4, 0, N'Destroyer', 0, 402, 12, N'401Template.gif', 1)
+INSERT [dbo].[ShipHulls] ([id], [isStarBase], [typename], [labelName], [objectId], [modulesCount], [templateImageUrl], [label]) VALUES (4, 0, N'Destroyer', 0, 404, 12, N'401Template.gif', 118)
 INSERT [dbo].[ShipHulls] ([id], [isStarBase], [typename], [labelName], [objectId], [modulesCount], [templateImageUrl], [label]) VALUES (5, 0, N'Cruiser', 0, 403, 15, N'401Template.gif', 58)
 INSERT [dbo].[ShipHulls] ([id], [isStarBase], [typename], [labelName], [objectId], [modulesCount], [templateImageUrl], [label]) VALUES (6, 0, N'Starship', 0, 403, 19, N'401Template.gif', 123)
 INSERT [dbo].[ShipHulls] ([id], [isStarBase], [typename], [labelName], [objectId], [modulesCount], [templateImageUrl], [label]) VALUES (7, 0, N'Battleship', 0, 405, 24, N'401Template.gif', 124)
@@ -1593,13 +1596,14 @@ INSERT [dbo].[ShipHulls] ([id], [isStarBase], [typename], [labelName], [objectId
 
 --truncate table [ShipHullsImages]
 INSERT into [dbo].[ShipHullsImages]
+					-- on map:		-- in designer:  
 (	[id],[shipHullId], objectId , templateImageId, templateModulesXoffset, templateModulesYoffset) 
 select 0,		0 ,			440 ,			 501 ,					   0 ,						0 union all --Debris
 select 1,		1 ,			411 ,			 511 ,					   0 ,						0 union all  --Scout 3
 select 2,		1 ,			450 ,			 550 ,					  50 ,					   10 union all  --defense satellit
 select 3,		2 ,			402 ,			 512 ,					   0 ,					  -40 union all  --Corvette
 select 4,		3 ,			403 ,			 513 ,					  23 ,						0 union all  -- fregatte
-select 5,		4 ,			404 ,			 501 ,					   0 ,						0 union all   -- destroyer
+select 5,		4 ,			404 ,			 504 ,					  49 ,					   60 union all   -- destroyer
 select 6,		5 ,			405 ,			 501 ,					   0 ,						0 union all
 select 7,		6 ,			406 ,			 501 ,					   0 ,						0 union all
 select 8,		7 ,			407 ,			 501 ,					   0 ,						0 union all
@@ -1652,8 +1656,8 @@ INSERT [dbo].[ShipHullsModulePositions] ([shipHullId], [posX], [posY]) VALUES (4
 INSERT [dbo].[ShipHullsModulePositions] ([shipHullId], [posX], [posY]) VALUES (4, 0, 4)
 INSERT [dbo].[ShipHullsModulePositions] ([shipHullId], [posX], [posY]) VALUES (4, 4, 4)
 
-INSERT [dbo].[ShipHullsModulePositions] ([shipHullId], [posX], [posY]) VALUES (4, 0, 3)
-INSERT [dbo].[ShipHullsModulePositions] ([shipHullId], [posX], [posY]) VALUES (4, 4, 3)
+INSERT [dbo].[ShipHullsModulePositions] ([shipHullId], [posX], [posY]) VALUES (4, 1, 5)
+INSERT [dbo].[ShipHullsModulePositions] ([shipHullId], [posX], [posY]) VALUES (4, 3, 5)
 
 -- cruiser 14
 
@@ -1724,15 +1728,15 @@ select		0,		0,		0,			   0,				0,				0,				0,			0,				0,				0,				0,				0,			0,		
 select		1,		2,		-1,			 100,				0,				0,				2,			80,				0,				5,				0,				20,			0,				2 ,			1.0		union all -- Scout
 select		2,		3,		-3,			150,				0,				0,				10,			20,				0,				0,				0,				0,			0,				1 ,			0.8		union all
 select		3,		-1,		-5,			200,				0,				0,				50,			60,				0,				0,				0,				0,			0,				1 ,			0.7		union all --fregatte
-select		4,		-2,		-7,			250,				5,				0,				100,		60,				0,				0,				0,				0,			0,				1 ,			0.6		union all  -- destr
-select		5,		-3,		-9,			300,				0,				10,				150,		60,				0,				0,				0,				0,			0,				1 ,			0.5		union all  -- cruiser
-select		6,		-10,	-11,		350,				0,				10,				200,		50,				0,				0,				0,				0,			0,				0 ,			0.4		union all -- starship
-select		7,		-15,	-18,		450,				0,				10,				200,		50,				0,				0,				0,				0,			0,				0 ,			0.3		union all -- battle
-select		8,		-20,	-25,		600,				0,				0,				240,		50,				0,				0,				0,				0,			0,				0 ,			0.2		union all -- superbattle
+select		4,		-2,		-7,			250,			   50,				0,				100,		60,				0,				0,				0,				0,			0,				1 ,			0.6		union all  -- destr
+select		5,		-3,		-9,			300,			   70,				10,				150,		60,				0,				0,				0,				0,			0,				1 ,			0.5		union all  -- cruiser
+select		6,		-10,	-11,		350,			  100,				10,				200,		50,				0,				0,				0,				0,			0,				0 ,			0.4		union all -- starship
+select		7,		-15,	-18,		450,			  100,				10,				200,		50,				0,				0,				0,				0,			0,				0 ,			0.3		union all -- battle
+select		8,		-20,	-25,		600,			  100,				0,				240,		50,				0,				0,				0,				0,			0,				0 ,			0.2		union all -- superbattle
 select		199,	3,		4,			200,				0,				0,				100,		100,			0,				0,				0,				0,			0,				1 ,			0.0		union all  
-select		200,	5,		6,			400,				0,				0,				100,		100,			0,				0,				0,				0,			0,				1 ,			0.0		union all
-select		201,	8,		10,			550,				0,				0,				200,		200,			0,				0,				0,				0,			0,				1 ,			0.0		union all
-select		202,	13,		16,			800,				0,				0,				400,		400,			0,				0,				0,				0,			0,				1 ,			0.0     union all
+select		200,	5,		6,			400,			   50,				0,				100,		100,			0,				0,				0,				0,			0,				1 ,			0.0		union all
+select		201,	8,		10,			550,			   80,				0,				200,		200,			0,				0,				0,				0,			0,				1 ,			0.0		union all
+select		202,	13,		16,			800,			  120,				0,				400,		400,			0,				0,				0,				0,			0,				1 ,			0.0     union all
 select		220,	1,		100,		3000,				0,				50,				0,			0,				0,				0,				0,				0,			0,				1 ,			0.0     union all
 select		221,	1,		10,			100,				0,				5,				0,			0,				5,				6,				5,				15,			0,				0 ,			1.0
 
@@ -2153,7 +2157,7 @@ INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType
 INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 50, 1, 2103) -- Def 2
 INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 50, 1, 4004)		--Fleet Command III
 
--- >12
+-- ->12
 INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 50, 1, 3004)		--Administration III
 
 -- Level 11
@@ -2177,6 +2181,8 @@ INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType
 INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 2103, 1, 504)		--Star Fortress
 INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 404, 1, 504)		--Star Fortress
 INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 404, 1, 405)		--Cruiser
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 404, 5, 4)		--destroyer ship hull
+
 
 --Level 12
 INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 2102, 4, 115)  --Scanner II

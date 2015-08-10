@@ -342,7 +342,8 @@ CREATE TABLE [dbo].[Users]			  (
 	player_ip nvarchar(55),		-- last used ip nneded for authentification after login from index,
 	fogVersion int not null default 0,
 	fogString nvarchar(max) DEFAULT '' NOT NULL,
-	-- alter table [Users] add fogString nvarchar(max) DEFAULT '' NOT NULL
+    [description] nvarchar(4000) DEFAULT '' NOT NULL,
+	-- alter table [Users] add 	[description] nvarchar(4000) DEFAULT '' NOT NULL
 	--researchSpent int not null default 0,  -- redundant, can be calculated by summing all researches of that user
 	constraint Users_primary primary key nonclustered (id)
 );

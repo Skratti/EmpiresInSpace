@@ -403,10 +403,10 @@ SET IDENTITY_INSERT [dbo].[Research] ON
 INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], [label], [descriptionLabel], [researchType], [treeColumn], [treeRow]) VALUES (1, N'Base research', N'1.gif', N'Recovery of the mothership database.', 3, 402, 166,0,0,5)
 
 --Level 1
-INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], [label], [descriptionLabel], [researchType], [treeColumn], [treeRow]) VALUES (2000, N'Modules', N'1.gif', N'', 8, 164, 517, 2 , 1, 3)
+INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], [label], [descriptionLabel], [researchType], [treeColumn], [treeRow]) VALUES (2000, N'Modules', N'1.gif', N'', 8, 164, 517, 2 , 1, 2)
 INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], [label], [descriptionLabel], [researchType], [treeColumn], [treeRow]) VALUES (9, N'Ecosytem Adaption I', N'1.gif', N'Erlaubt den Bau des Kraftwerks', 2, 623, 624,1,1,6)
 INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], [label], [descriptionLabel], [researchType], [treeColumn], [treeRow]) VALUES (152, N'BluePrints: Metal Working', N'1.gif', N'', 6, 158, 492,1,1,8)
-INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], [label], [descriptionLabel], [researchType], [treeColumn], [treeRow]) VALUES (400, N'Space travel', N'1.gif', N'', 5, 265, 493, 2 , 1 , 11)
+INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], [label], [descriptionLabel], [researchType], [treeColumn], [treeRow]) VALUES (400, N'Space travel', N'1.gif', N'', 5, 265, 493, 2 , 1 , 12)
 
 --Level 2
 INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], [label], [descriptionLabel], [researchType], [treeColumn], [treeRow]) VALUES (2002, N'Scanner', N'1.gif', N'', 15, 222, 528, 2 , 2 , 0)
@@ -495,7 +495,7 @@ INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], 
 INSERT into [dbo].[Research] 
 	  ([id], [name],[objectimageUrl], [description]	, [cost], [label]	, [descriptionLabel], [researchType], [treeColumn]	, [treeRow]) 
 select 4004, N'Fleet Command III', N'1.gif', N''	, 900	, 555		, 560				, 4				, 11				, 10
-INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], [label], [descriptionLabel], [researchType], [treeColumn], [treeRow]) VALUES (404, N'Destroyer', N'1.gif', N'', 350, 118, 496, 2 , 11 , 12)
+INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], [label], [descriptionLabel], [researchType], [treeColumn], [treeRow]) VALUES (404, N'Destroyer', N'1.gif', N'', 350, 118, 496, 2 , 10 , 13)
 
 
 --Level 12
@@ -696,7 +696,7 @@ INSERT [dbo].[Modules] ([id], [name], [descriptionLabel], [goodsId], [label]) VA
 --INSERT [dbo].[Modules] ([id], [name], [descriptionLabel], [goodsId], [label]) VALUES (14, N'Asteroid Miner', 14, 2014, 90)
 INSERT [dbo].[Modules] ([id], [name], [descriptionLabel], [goodsId], [label]) VALUES (15, N'Scanner I', 15, 2015, 89)
 INSERT [dbo].[Modules] ([id], [name], [descriptionLabel], [goodsId], [label]) VALUES (23, N'Colonizing Module II', 13, 2023, 339)
---delete from [dbo].[Modules] where id = 14
+--delete from [dbo].[Modules] where id = 523
 
 --level 2
 INSERT into [dbo].[Modules] ([id], [level], [name], [descriptionLabel], [goodsId], [label]) 
@@ -718,7 +718,7 @@ INSERT into [dbo].[Modules]
 	([id], [level], [name],			[descriptionLabel], [goodsId],	[label])  
 select 499, 1,	N'Outpost hull',		1,					2499,		586 union all
 select 500, 2,	N'Space station hull',	1,					2500,		587 union all
-select 501, 3,	N'Star base hull',		1,					2501,		589 union all
+select 501, 3,	N'Star base hull',		1,					2501,		588 union all
 select 502, 4,	N'Star fortress hull',	1,					2502,		589 union all
 select 520, 4,	N'Transcendence Construct',	1,				2520,		594;
 --level 3
@@ -1041,10 +1041,17 @@ select			500,		7,		100		union all
 select			500,		10,		280		union all
 select			500,		11,		140		union all
 select			500,		50,		80		union all
-select			501,		1,		260		union all
-select			501,		7,		160		union all
-select			502,		1,		500		union all
-select			502,		7,		1000	union all
+select			501,		1,		300		union all   --bm
+select			501,		7,		200		union all   -- ASSEMBLY
+select			501,		10,		340		union all   --metal
+select			501,		11,		180		union all   --synth
+select			501,		50,		120		union all   --Adv. Building Materials
+select			502,		1,		500		union all   --bm
+select			502,		7,		400		union all   -- ASSEMBLY
+select			502,		10,		500		union all   --metal
+select			502,		11,		300		union all   --synth
+select			502,		50,		200	    union all   --Adv. Building Materials
+
 select			520,		1,		900		union all
 select			520,		7,		300	union all
 select			520,		10,		680		union all  --  metal
@@ -1693,11 +1700,15 @@ select		200	,	3,		4
 --star base 12 
 INSERT [dbo].[ShipHullsModulePositions] 
 ([shipHullId], [posX], [posY])  
-select		199	,	1,		3  union all
-select		199	,	2,		2  union all
-select		199	,	3,		3
+select		200	,	1,		3  union all
+select		200	,	1,		4  union all
+select		200	,	2,		2 union all
+select		200	,	2,		3 union all
+select		200	,	2,		4 union all
+select		200	,	3,		3 union all
+select		200	,	3,		4 
 
---star fortress  21
+--star fortress  18
 INSERT [dbo].[ShipHullsModulePositions] 
 ([shipHullId], [posX], [posY])  
 select		199	,	1,		3  union all
@@ -1807,8 +1818,20 @@ select		199,			10,		120	union all  --  metal
 select		200,			1,		220	union all --Spacestation : 30 BM, 50 PP, 
 select		200,			7,		120 union all
 select		200,			10,		280	union all  --  metal
-select		200,			11,		80	--union all --synth     union all --Adv. Building Materials	
+select		200,			11,		80	union all --synth     union all --Adv. Building Materials	
 
+select			201,		1,		300		union all   --bm
+select			201,		7,		200		union all   -- ASSEMBLY
+select			201,		10,		340		union all   --metal
+select			201,		11,		180		union all   --synth
+select			201,		50,		120		union all   --Adv. Building Materials
+
+
+select			202,		1,		500		union all   --bm
+select			202,		7,		400		union all   -- ASSEMBLY
+select			202,		10,		500		union all   --metal
+select			202,		11,		300		union all   --synth
+select			202,		50,		200		   --Adv. Building Materials
 
 
 
@@ -2122,6 +2145,7 @@ INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType
 
 
 -- Level 8
+-- delete from [dbo].[ResearchQuestPrerequisites]  where [SourceType] = 1 and [SourceId] = 502
 INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 502, 5, 200)  -- Space Station hull
 INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 502, 4, 500)  -- Space Station module
 INSERT into [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId])
@@ -2162,6 +2186,7 @@ INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType
 
 -- Level 11
 --Superconductors
+-- delete from [dbo].[ResearchQuestPrerequisites]  where [SourceType] = 1 and [SourceId] = 503
 INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 503, 5, 201)  -- Star Base hull
 INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 503, 4, 501)  -- Star Base module
 
@@ -2179,7 +2204,6 @@ INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType
 INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 72, 1, 3004)		--Administration III
 
 INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 2103, 1, 504)		--Star Fortress
-INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 404, 1, 504)		--Star Fortress
 INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 404, 1, 405)		--Cruiser
 INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 404, 5, 4)		--destroyer ship hull
 

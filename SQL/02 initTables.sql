@@ -1537,7 +1537,41 @@ END
 go
 print 'trigger [dbo].[TRIGGER_Ships_Delete_FKs] created.'
 go
+CREATE TRIGGER [dbo].[TRIGGER_ShipUpdate] ON [dbo].[Ships]
+AFTER Update
+AS
+BEGIN	
+	
+	delete from dbo.[ShipTranscension]
+	from dbo.[ShipTranscension]
+	inner join inserted
+	on inserted.id = dbo.[ShipTranscension].shipId
+	where inserted.userId = 0
 
+
+	delete from dbo.[ShipTranscensionUsers]
+	from dbo.[ShipTranscensionUsers]
+	inner join inserted
+	on inserted.id = dbo.[ShipTranscensionUsers].shipId
+	where inserted.userId = 0
+	
+END
+go
+CREATE TRIGGER [dbo].[TRIGGER_ShipCreated] ON [dbo].[Ships]
+AFTER Insert
+AS
+BEGIN	
+	
+	insert into dbo.[ShipTranscension](shipId, ressourceCount)
+	select 
+		inserted.id as shipId,		
+		1
+	from inserted
+	where inserted.hullId = 220
+				
+END
+
+GO
 
 
 --1 to 1 to ships, always joined on ships to increment the ships versionId after the  update

@@ -761,7 +761,7 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (606, N'{0
 
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (607, N'A new game is already open. Turn evaluation of the new game will start within two days.', N'', 7)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (608, N'With {0} points, your alliance won this game!', N'', 7)
-INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (609, N'Your alliance has archieved the{0}. rank.', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (609, N'Your alliance has archieved the {0}. rank.', N'', 7)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (610, N'With {0} points, you are the best player of the game.', N'', 7)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (611, N'Your overall rank: {0}', N'', 7)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (612, N'Refit', N'', 7)

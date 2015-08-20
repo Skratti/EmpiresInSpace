@@ -1,0 +1,758 @@
+<svg width="4250px" height="461px">
+    <defs>
+        <linearGradient id="gradBlue1" x1="0%" x2="100%" y1="0%" y2="0%">
+            <stop id="myStop1" offset="0%" stop-color="White"></stop>
+            <stop id="myStop2" offset="100%" stop-color="#1919FF"></stop>
+        </linearGradient>
+        <linearGradient id="gradGreen1" x1="0%" x2="100%" y1="0%" y2="0%">
+            <stop id="myStop1" offset="0%" stop-color="White"></stop>
+            <stop id="myStop2" offset="100%" stop-color="#00FF00"></stop>
+        </linearGradient>
+        <linearGradient id="gradViolet1" x1="0%" x2="100%" y1="0%" y2="0%">
+            <stop id="myStop1" offset="0%" stop-color="White"></stop>
+            <stop id="myStop2" offset="100%" stop-color="#FF0066"></stop>
+        </linearGradient>
+        <linearGradient id="gradDarkGreen1" x1="0%" x2="100%" y1="0%" y2="0%">
+            <stop id="myStop1" offset="0%" stop-color="#00FF00"></stop>
+            <stop id="myStop2" offset="100%" stop-color="#008800"></stop>
+        </linearGradient>
+    </defs>
+    <line fill="none" stroke="rgb(0,0,0)" x1="220" y1="180" x2="260" y2="210.5"></line>
+    <line fill="none" stroke="rgb(0,0,0)" x1="220" y1="180" x2="260" y2="271.5"></line>
+    <line fill="none" stroke="rgb(0,0,0)" x1="220" y1="180" x2="260" y2="393.5"></line>
+    <line fill="none" stroke="rgb(0,0,0)" x1="220" y1="180" x2="260" y2="88.5"></line>
+    <g id="r1">
+        <rect fill="url(#gradDarkGreen1)" width="220px" height="55px" x="0" y="152.5" title=""></rect>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="3" y="169.5">Base research</tspan>
+        </text>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="210" y="169.5">2</tspan>
+        </text>
+        <line fill="none" stroke="rgb(0,0,0)" x1="5" y1="172.5" x2="215" y2="172.5"></line>
+        <image x="3" y="174.5" width="32" height="32" title="Building material plant" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="BuildingMaterialPlant.png"></image>
+        <image x="38" y="174.5" width="32" height="32" title="Solar power plant" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="SolarPanels.png"></image>
+        <image x="73" y="174.5" width="32" height="32" title="Assembly plant" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="AssemblyPlant.png"></image>
+    </g>
+    <g id="r2">
+        <rect fill="url(#gradBlue1)" width="220px" height="55px" x="520" y="213.5" title=""></rect>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="523" y="230.5">Water power plant</tspan>
+        </text>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="723" y="230.5">18</tspan>
+        </text>
+        <line fill="none" stroke="rgb(0,0,0)" x1="525" y1="233.5" x2="735" y2="233.5"></line>
+        <image x="523" y="235.5" width="32" height="32" title="Water power plant" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="SolarPanels.png"></image>
+    </g>
+    <line fill="none" stroke="rgb(0,0,0)" x1="2040" y1="88.5" x2="2600" y2="241"></line>
+    <line fill="none" stroke="rgb(0,0,0)" x1="2040" y1="88.5" x2="2080" y2="27.5"></line>
+    <line fill="none" stroke="rgb(0,0,0)" x1="2040" y1="88.5" x2="2340" y2="58"></line>
+    <g id="r3">
+        <rect fill="url(#gradBlue1)" width="220px" height="55px" x="1820" y="61" title=""></rect>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="1823" y="78">Refinery</tspan>
+        </text>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="2016" y="78">140</tspan>
+        </text>
+        <line fill="none" stroke="rgb(0,0,0)" x1="1825" y1="81" x2="2035" y2="81"></line>
+        <image x="1823" y="83" width="32" height="32" title="Fuel generation" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="OilWell2.png"></image>
+        <image x="1858" y="83" width="32" height="32" title="Synthetic materials plant" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="AssemblyPlant.png"></image>
+    </g>
+    <line fill="none" stroke="rgb(0,0,0)" x1="2820" y1="88.5" x2="2860" y2="27.5"></line>
+    <g id="r5">
+        <rect fill="url(#gradBlue1)" width="220px" height="55px" x="2600" y="61" title=""></rect>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="2603" y="78">Power plant</tspan>
+        </text>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="2796" y="78">230</tspan>
+        </text>
+        <line fill="none" stroke="rgb(0,0,0)" x1="2605" y1="81" x2="2815" y2="81"></line>
+        <image x="2603" y="83" width="32" height="32" title="Power plant" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="PowerPlant.png"></image>
+    </g>
+    <g id="r8">
+        <rect fill="url(#gradBlue1)" width="220px" height="55px" x="3120" y="91.5" title=""></rect>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="3123" y="108.5">Communication center</tspan>
+        </text>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="3316" y="108.5">230</tspan>
+        </text>
+        <line fill="none" stroke="rgb(0,0,0)" x1="3125" y1="111.5" x2="3335" y2="111.5"></line>
+        <image x="3123" y="113.5" width="32" height="32" title="Communication center" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="CommCenter.png"></image>
+    </g>
+    <line fill="none" stroke="rgb(0,0,0)" x1="480" y1="210.5" x2="520" y2="149.5"></line>
+    <line fill="none" stroke="rgb(0,0,0)" x1="480" y1="210.5" x2="780" y2="210.5"></line>
+    <g id="r9">
+        <rect fill="url(#gradGreen1)" width="220px" height="55px" x="260" y="183" title=""></rect>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="263" y="200">Ecosytem Adaption I</tspan>
+        </text>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="470" y="200">2</tspan>
+        </text>
+        <line fill="none" stroke="rgb(0,0,0)" x1="265" y1="203" x2="475" y2="203"></line>
+        <image x="263" y="205" width="32" height="32" title="Agriculture" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Farm.png"></image>
+        <image x="298" y="205" width="32" height="32" title="Houses" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Houses.png"></image>
+    </g>
+    <line fill="none" stroke="rgb(0,0,0)" x1="2820" y1="241" x2="2860" y2="119"></line>
+    <line fill="none" stroke="rgb(0,0,0)" x1="2820" y1="241" x2="2860" y2="271.5"></line>
+    <line fill="none" stroke="rgb(0,0,0)" x1="2820" y1="241" x2="2860" y2="180"></line>
+    <line fill="none" stroke="rgb(0,0,0)" x1="2820" y1="241" x2="3120" y2="241"></line>
+    <line fill="none" stroke="rgb(0,0,0)" x1="2820" y1="241" x2="2860" y2="332.5"></line>
+    <g id="r50">
+        <rect fill="url(#gradBlue1)" width="220px" height="55px" x="2600" y="213.5" title=""></rect>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="2603" y="230.5">Adv. building material</tspan>
+        </text>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="2796" y="230.5">340</tspan>
+        </text>
+        <line fill="none" stroke="rgb(0,0,0)" x1="2605" y1="233.5" x2="2815" y2="233.5"></line>
+        <image x="2603" y="235.5" width="32" height="32" title="Adv. material factory" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="AdvBuildingMaterial.png"></image>
+    </g>
+    <g id="r51">
+        <rect fill="url(#gradBlue1)" width="220px" height="55px" x="780" y="0" title=""></rect>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="783" y="17">Planetary Scanner</tspan>
+        </text>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="983" y="17">25</tspan>
+        </text>
+        <line fill="none" stroke="rgb(0,0,0)" x1="785" y1="20" x2="995" y2="20"></line>
+        <image x="783" y="22" width="32" height="32" title="Planetary Scanner" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="PlanetaryScanner.png"></image>
+    </g>
+    <line fill="none" stroke="rgb(0,0,0)" x1="1780" y1="271.5" x2="2600" y2="241"></line>
+    <line fill="none" stroke="rgb(0,0,0)" x1="1780" y1="271.5" x2="1820" y2="363"></line>
+    <line fill="none" stroke="rgb(0,0,0)" x1="1780" y1="271.5" x2="1820" y2="302"></line>
+    <line fill="none" stroke="rgb(0,0,0)" x1="1780" y1="271.5" x2="1820" y2="210.5"></line>
+    <g id="r71">
+        <rect fill="url(#gradBlue1)" width="220px" height="55px" x="1560" y="244" title=""></rect>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="1563" y="261">Superconductors </tspan>
+        </text>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="1756" y="261">120</tspan>
+        </text>
+        <line fill="none" stroke="rgb(0,0,0)" x1="1565" y1="264" x2="1775" y2="264"></line>
+        <image x="1563" y="266" width="32" height="32" title="+10% Energy" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="SolarPanels.png"></image>
+    </g>
+    <line fill="none" stroke="rgb(0,0,0)" x1="3080" y1="27.5" x2="3120" y2="119"></line>
+    <line fill="none" stroke="rgb(0,0,0)" x1="3080" y1="27.5" x2="3120" y2="27.5"></line>
+    <line fill="none" stroke="rgb(0,0,0)" x1="3080" y1="27.5" x2="3120" y2="241"></line>
+    <g id="r72">
+        <rect fill="url(#gradBlue1)" width="220px" height="55px" x="2860" y="0" title=""></rect>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="2863" y="17">Superconductors II</tspan>
+        </text>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="3056" y="17">420</tspan>
+        </text>
+        <line fill="none" stroke="rgb(0,0,0)" x1="2865" y1="20" x2="3075" y2="20"></line>
+        <image x="2863" y="22" width="32" height="32" title="+10% Energy" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="SolarPanels.png"></image>
+    </g>
+    <g id="r112">
+        <rect fill="url(#gradBlue1)" width="220px" height="55px" x="780" y="61" title=""></rect>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="783" y="78">Warehouse construction plan</tspan>
+        </text>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="983" y="78">35</tspan>
+        </text>
+        <line fill="none" stroke="rgb(0,0,0)" x1="785" y1="81" x2="995" y2="81"></line>
+        <image x="783" y="83" width="32" height="32" title="Warehouse" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Depot.png"></image>
+    </g>
+    <line fill="none" stroke="rgb(0,0,0)" x1="480" y1="271.5" x2="520" y2="241"></line>
+    <line fill="none" stroke="rgb(0,0,0)" x1="480" y1="271.5" x2="780" y2="271.5"></line>
+    <g id="r152">
+        <rect fill="url(#gradGreen1)" width="220px" height="55px" x="260" y="244" title=""></rect>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="263" y="261">Ore mine construction plan</tspan>
+        </text>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="470" y="261">6</tspan>
+        </text>
+        <line fill="none" stroke="rgb(0,0,0)" x1="265" y1="264" x2="475" y2="264"></line>
+        <image x="263" y="266" width="32" height="32" title="Mining sector" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Headframe.png"></image>
+        <image x="298" y="266" width="32" height="32" title="Blast furnace" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="BlastFurnace.png"></image>
+    </g>
+    <line fill="none" stroke="rgb(0,0,0)" x1="480" y1="393.5" x2="520" y2="332.5"></line>
+    <line fill="none" stroke="rgb(0,0,0)" x1="480" y1="393.5" x2="780" y2="393.5"></line>
+    <g id="r400">
+        <rect fill="url(#gradGreen1)" width="220px" height="55px" x="260" y="366" title=""></rect>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="263" y="383">Space travel</tspan>
+        </text>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="470" y="383">5</tspan>
+        </text>
+        <line fill="none" stroke="rgb(0,0,0)" x1="265" y1="386" x2="475" y2="386"></line>
+        <image x="263" y="388" width="32" height="32" title="Shipyard" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Spaceport.png"></image>
+        <image x="298" y="388" width="32" height="32" title="Scout" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Scout2XK.png"></image>
+    </g>
+    <g id="r402">
+        <rect fill="url(#gradBlue1)" width="220px" height="55px" x="1040" y="0" title=""></rect>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="1043" y="17">Corvette</tspan>
+        </text>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="1243" y="17">65</tspan>
+        </text>
+        <line fill="none" stroke="rgb(0,0,0)" x1="1045" y1="20" x2="1255" y2="20"></line>
+        <image x="1043" y="22" width="32" height="32" title="Corvette hull" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Corvette.png"></image>
+    </g>
+    <line fill="none" stroke="rgb(0,0,0)" x1="2300" y1="424" x2="2600" y2="424"></line>
+    <g id="r403">
+        <rect fill="url(#gradBlue1)" width="220px" height="55px" x="2080" y="396.5" title=""></rect>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="2083" y="413.5">Frigatte</tspan>
+        </text>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="2276" y="413.5">190</tspan>
+        </text>
+        <line fill="none" stroke="rgb(0,0,0)" x1="2085" y1="416.5" x2="2295" y2="416.5"></line>
+        <image x="2083" y="418.5" width="32" height="32" title="Frigatte hull" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Fregatte.png"></image>
+    </g>
+    <line fill="none" stroke="rgb(0,0,0)" x1="2820" y1="424" x2="3120" y2="393.5"></line>
+    <g id="r404">
+        <rect fill="url(#gradBlue1)" width="220px" height="55px" x="2600" y="396.5" title=""></rect>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="2603" y="413.5">Destroyer</tspan>
+        </text>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="2796" y="413.5">350</tspan>
+        </text>
+        <line fill="none" stroke="rgb(0,0,0)" x1="2605" y1="416.5" x2="2815" y2="416.5"></line>
+        <image x="2603" y="418.5" width="32" height="32" title="Destroyer" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Destroyer_1_60.png"></image>
+    </g>
+    <line fill="none" stroke="rgb(0,0,0)" x1="3340" y1="393.5" x2="3380" y2="393.5"></line>
+    <line fill="none" stroke="rgb(0,0,0)" x1="3340" y1="393.5" x2="3380" y2="332.5"></line>
+    <g id="r405">
+        <rect fill="url(#gradBlue1)" width="220px" height="55px" x="3120" y="366" title=""></rect>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="3123" y="383">Cruiser</tspan>
+        </text>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="3316" y="383">650</tspan>
+        </text>
+        <line fill="none" stroke="rgb(0,0,0)" x1="3125" y1="386" x2="3335" y2="386"></line>
+    </g>
+    <line fill="none" stroke="rgb(0,0,0)" x1="3600" y1="393.5" x2="3640" y2="393.5"></line>
+    <g id="r406">
+        <rect fill="url(#gradBlue1)" width="220px" height="55px" x="3380" y="366" title=""></rect>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="3383" y="383">Battleship</tspan>
+        </text>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="3576" y="383">900</tspan>
+        </text>
+        <line fill="none" stroke="rgb(0,0,0)" x1="3385" y1="386" x2="3595" y2="386"></line>
+    </g>
+    <line fill="none" stroke="rgb(0,0,0)" x1="3860" y1="393.5" x2="3900" y2="302"></line>
+    <g id="r407">
+        <rect fill="url(#gradBlue1)" width="220px" height="55px" x="3640" y="366" title=""></rect>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="3643" y="383">Superbattleship</tspan>
+        </text>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="3828" y="383">2000</tspan>
+        </text>
+        <line fill="none" stroke="rgb(0,0,0)" x1="3645" y1="386" x2="3855" y2="386"></line>
+    </g>
+    <g id="r501">
+        <rect fill="url(#gradBlue1)" width="220px" height="55px" x="520" y="305" title=""></rect>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="523" y="322">Outpost</tspan>
+        </text>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="723" y="322">30</tspan>
+        </text>
+        <line fill="none" stroke="rgb(0,0,0)" x1="525" y1="325" x2="735" y2="325"></line>
+        <image x="523" y="327" width="32" height="32" title="Outpost hull" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="SpaceStation0_1_60.png"></image>
+        <image x="558" y="327" width="32" height="32" title="Outpost" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="SpaceStation0_1_60.png"></image>
+    </g>
+    <g id="r502">
+        <rect fill="url(#gradBlue1)" width="220px" height="55px" x="2080" y="0" title=""></rect>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="2083" y="17">Space station</tspan>
+        </text>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="2276" y="17">180</tspan>
+        </text>
+        <line fill="none" stroke="rgb(0,0,0)" x1="2085" y1="20" x2="2295" y2="20"></line>
+        <image x="2083" y="22" width="32" height="32" title="Space station hull" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="SpaceStation1_1_60.png"></image>
+        <image x="2118" y="22" width="32" height="32" title="Space station" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="SpaceStation1_1_60.png"></image>
+    </g>
+    <g id="r503">
+        <rect fill="url(#gradBlue1)" width="220px" height="55px" x="2860" y="91.5" title=""></rect>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="2863" y="108.5">Star base</tspan>
+        </text>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="3056" y="108.5">500</tspan>
+        </text>
+        <line fill="none" stroke="rgb(0,0,0)" x1="2865" y1="111.5" x2="3075" y2="111.5"></line>
+    </g>
+    <g id="r504">
+        <rect fill="url(#gradBlue1)" width="220px" height="55px" x="3120" y="274.5" title=""></rect>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="3123" y="291.5">Star fortress</tspan>
+        </text>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="3308" y="291.5">1200</tspan>
+        </text>
+        <line fill="none" stroke="rgb(0,0,0)" x1="3125" y1="294.5" x2="3335" y2="294.5"></line>
+    </g>
+    <line fill="none" stroke="rgb(0,0,0)" x1="1000" y1="271.5" x2="1040" y2="302"></line>
+    <g id="r1010">
+        <rect fill="url(#gradBlue1)" width="220px" height="55px" x="780" y="244" title=""></rect>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="783" y="261">Special Resource Analysis</tspan>
+        </text>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="983" y="261">12</tspan>
+        </text>
+        <line fill="none" stroke="rgb(0,0,0)" x1="785" y1="264" x2="995" y2="264"></line>
+        <image x="783" y="266" width="32" height="32" title="Holmium mine" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Headframe.png"></image>
+        <image x="818" y="266" width="32" height="32" title="Terbium mine" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Headframe.png"></image>
+        <image x="853" y="266" width="32" height="32" title="Scandium mine" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Headframe.png"></image>
+        <image x="888" y="266" width="32" height="32" title="Yttrium mine" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Headframe.png"></image>
+        <image x="923" y="266" width="32" height="32" title="Lutetium mine" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Headframe.png"></image>
+    </g>
+    <line fill="none" stroke="rgb(0,0,0)" x1="1260" y1="302" x2="1560" y2="271.5"></line>
+    <line fill="none" stroke="rgb(0,0,0)" x1="1260" y1="302" x2="1560" y2="180"></line>
+    <line fill="none" stroke="rgb(0,0,0)" x1="1260" y1="302" x2="1300" y2="332.5"></line>
+    <line fill="none" stroke="rgb(0,0,0)" x1="1260" y1="302" x2="1300" y2="393.5"></line>
+    <line fill="none" stroke="rgb(0,0,0)" x1="1260" y1="302" x2="1300" y2="119"></line>
+    <g id="r1030">
+        <rect fill="url(#gradBlue1)" width="220px" height="55px" x="1040" y="274.5" title=""></rect>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="1043" y="291.5">Special Resource Processing</tspan>
+        </text>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="1243" y="291.5">20</tspan>
+        </text>
+        <line fill="none" stroke="rgb(0,0,0)" x1="1045" y1="294.5" x2="1255" y2="294.5"></line>
+        <image x="1043" y="296.5" width="32" height="32" title="Holmium processing" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="BuildingMaterialPlant.png"></image>
+        <image x="1078" y="296.5" width="32" height="32" title="Terbium processing" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="BuildingMaterialPlant.png"></image>
+        <image x="1113" y="296.5" width="32" height="32" title="Scandium processing" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="BuildingMaterialPlant.png"></image>
+        <image x="1148" y="296.5" width="32" height="32" title="Yttrium processing" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="BuildingMaterialPlant.png"></image>
+        <image x="1183" y="296.5" width="32" height="32" title="Lutetium processing" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="BuildingMaterialPlant.png"></image>
+    </g>
+    <g id="r1050">
+        <rect fill="url(#gradBlue1)" width="220px" height="55px" x="1820" y="335.5" title=""></rect>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="1823" y="352.5">Holmium Laser I</tspan>
+        </text>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="2016" y="352.5">140</tspan>
+        </text>
+        <line fill="none" stroke="rgb(0,0,0)" x1="1825" y1="355.5" x2="2035" y2="355.5"></line>
+        <image x="1823" y="357.5" width="32" height="32" title="Holmium Laser I" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="WeaponLaser.png"></image>
+    </g>
+    <line fill="none" stroke="rgb(0,0,0)" x1="2040" y1="302" x2="2080" y2="332.5"></line>
+    <g id="r1051">
+        <rect fill="url(#gradBlue1)" width="220px" height="55px" x="1820" y="274.5" title=""></rect>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="1823" y="291.5">Terbium Hull I</tspan>
+        </text>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="2016" y="291.5">130</tspan>
+        </text>
+        <line fill="none" stroke="rgb(0,0,0)" x1="1825" y1="294.5" x2="2035" y2="294.5"></line>
+        <image x="1823" y="296.5" width="32" height="32" title="Terbium Hull I" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Hull.png"></image>
+    </g>
+    <line fill="none" stroke="rgb(0,0,0)" x1="1780" y1="180" x2="1820" y2="149.5"></line>
+    <g id="r1052">
+        <rect fill="url(#gradBlue1)" width="220px" height="55px" x="1560" y="152.5" title=""></rect>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="1563" y="169.5">Scandium Shield I</tspan>
+        </text>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="1763" y="169.5">80</tspan>
+        </text>
+        <line fill="none" stroke="rgb(0,0,0)" x1="1565" y1="172.5" x2="1775" y2="172.5"></line>
+        <image x="1563" y="174.5" width="32" height="32" title="Scandium Shield I" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Shield.png"></image>
+    </g>
+    <line fill="none" stroke="rgb(0,0,0)" x1="1520" y1="332.5" x2="1560" y2="332.5"></line>
+    <g id="r1053">
+        <rect fill="url(#gradBlue1)" width="220px" height="55px" x="1300" y="305" title=""></rect>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="1303" y="322">Yttrium Modules I</tspan>
+        </text>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="1503" y="322">60</tspan>
+        </text>
+        <line fill="none" stroke="rgb(0,0,0)" x1="1305" y1="325" x2="1515" y2="325"></line>
+        <image x="1303" y="327" width="32" height="32" title="Yttrium Crew I" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Crew1.png"></image>
+        <image x="1338" y="327" width="32" height="32" title="Yttrium Cargo I" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Cargo.png"></image>
+        <image x="1373" y="327" width="32" height="32" title="Yttrium Engines I" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Hyper.png"></image>
+    </g>
+    <line fill="none" stroke="rgb(0,0,0)" x1="1520" y1="393.5" x2="1560" y2="393.5"></line>
+    <g id="r1054">
+        <rect fill="url(#gradBlue1)" width="220px" height="55px" x="1300" y="366" title=""></rect>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="1303" y="383">Lutetium Modules I</tspan>
+        </text>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="1503" y="383">30</tspan>
+        </text>
+        <line fill="none" stroke="rgb(0,0,0)" x1="1305" y1="386" x2="1515" y2="386"></line>
+        <image x="1303" y="388" width="32" height="32" title="Lutetium Reactor I" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Reactor.png"></image>
+        <image x="1338" y="388" width="32" height="32" title="Lutetium Scanner I" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Scanner.png"></image>
+    </g>
+    <g id="r1060">
+        <rect fill="url(#gradBlue1)" width="220px" height="55px" x="1300" y="91.5" title=""></rect>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="1303" y="108.5">Holmium Generator</tspan>
+        </text>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="1503" y="108.5">40</tspan>
+        </text>
+        <line fill="none" stroke="rgb(0,0,0)" x1="1305" y1="111.5" x2="1515" y2="111.5"></line>
+        <image x="1303" y="113.5" width="32" height="32" title="Holmium Generator" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="HolmiumGenerator.png"></image>
+    </g>
+    <g id="r1061">
+        <rect fill="url(#gradBlue1)" width="220px" height="55px" x="2080" y="305" title=""></rect>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="2083" y="322">Terbium Factory Improvements</tspan>
+        </text>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="2276" y="322">160</tspan>
+        </text>
+        <line fill="none" stroke="rgb(0,0,0)" x1="2085" y1="325" x2="2295" y2="325"></line>
+        <image x="2083" y="327" width="32" height="32" title="Terbium Factory Improvements" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="ScandTools.png"></image>
+    </g>
+    <g id="r1062">
+        <rect fill="url(#gradBlue1)" width="220px" height="55px" x="1820" y="122" title=""></rect>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="1823" y="139">Scandium Tools</tspan>
+        </text>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="2016" y="139">120</tspan>
+        </text>
+        <line fill="none" stroke="rgb(0,0,0)" x1="1825" y1="142" x2="2035" y2="142"></line>
+        <image x="1823" y="144" width="32" height="32" title="Scandium Tools" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="TerbiumFact.png"></image>
+    </g>
+    <g id="r1063">
+        <rect fill="url(#gradBlue1)" width="220px" height="55px" x="1560" y="305" title=""></rect>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="1563" y="322">Yttrium Cloning Lab</tspan>
+        </text>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="1756" y="322">100</tspan>
+        </text>
+        <line fill="none" stroke="rgb(0,0,0)" x1="1565" y1="325" x2="1775" y2="325"></line>
+        <image x="1563" y="327" width="32" height="32" title="Yttrium Cloning Lab" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="YttriumCloning.png"></image>
+    </g>
+    <g id="r1064">
+        <rect fill="url(#gradBlue1)" width="220px" height="55px" x="1560" y="366" title=""></rect>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="1563" y="383">Lutetium Ecosystem Improvements</tspan>
+        </text>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="1756" y="383">110</tspan>
+        </text>
+        <line fill="none" stroke="rgb(0,0,0)" x1="1565" y1="386" x2="1775" y2="386"></line>
+        <image x="1563" y="388" width="32" height="32" title="Lutetium Ecosystem Improvements" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="LutEcosystem.png"></image>
+    </g>
+    <line fill="none" stroke="rgb(0,0,0)" x1="480" y1="88.5" x2="520" y2="88.5"></line>
+    <line fill="none" stroke="rgb(0,0,0)" x1="480" y1="88.5" x2="520" y2="27.5"></line>
+    <line fill="none" stroke="rgb(0,0,0)" x1="480" y1="88.5" x2="520" y2="149.5"></line>
+    <g id="r2000">
+        <rect fill="url(#gradGreen1)" width="220px" height="55px" x="260" y="61" title=""></rect>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="263" y="78">Modules</tspan>
+        </text>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="470" y="78">8</tspan>
+        </text>
+        <line fill="none" stroke="rgb(0,0,0)" x1="265" y1="81" x2="475" y2="81"></line>
+        <image x="263" y="83" width="32" height="32" title="Module plant" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="ModulePlant.png"></image>
+        <image x="298" y="83" width="32" height="32" title="Crew I" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Crew1.png"></image>
+        <image x="333" y="83" width="32" height="32" title="Reactor I" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Reactor.png"></image>
+        <image x="368" y="83" width="32" height="32" title="System engines I" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Impuls.png"></image>
+        <image x="403" y="83" width="32" height="32" title="Hyper engines I" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Hyper.png"></image>
+    </g>
+    <line fill="none" stroke="rgb(0,0,0)" x1="740" y1="88.5" x2="780" y2="88.5"></line>
+    <g id="r2001">
+        <rect fill="url(#gradBlue1)" width="220px" height="55px" x="520" y="61" title=""></rect>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="523" y="78">Storage</tspan>
+        </text>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="723" y="78">22</tspan>
+        </text>
+        <line fill="none" stroke="rgb(0,0,0)" x1="525" y1="81" x2="735" y2="81"></line>
+        <image x="523" y="83" width="32" height="32" title="Cargo I" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Cargo.png"></image>
+    </g>
+    <line fill="none" stroke="rgb(0,0,0)" x1="740" y1="27.5" x2="780" y2="27.5"></line>
+    <g id="r2002">
+        <rect fill="url(#gradBlue1)" width="220px" height="55px" x="520" y="0" title=""></rect>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="523" y="17">Scanner</tspan>
+        </text>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="723" y="17">15</tspan>
+        </text>
+        <line fill="none" stroke="rgb(0,0,0)" x1="525" y1="20" x2="735" y2="20"></line>
+        <image x="523" y="22" width="32" height="32" title="Scanner I" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Scanner.png"></image>
+    </g>
+    <g id="r2003">
+        <rect fill="url(#gradBlue1)" width="220px" height="55px" x="1040" y="335.5" title=""></rect>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="1043" y="352.5">Ship defenses</tspan>
+        </text>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="1243" y="352.5">20</tspan>
+        </text>
+        <line fill="none" stroke="rgb(0,0,0)" x1="1045" y1="355.5" x2="1255" y2="355.5"></line>
+        <image x="1043" y="357.5" width="32" height="32" title="Hull I" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Hull.png"></image>
+        <image x="1078" y="357.5" width="32" height="32" title="Shield I" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Shield.png"></image>
+    </g>
+    <line fill="none" stroke="rgb(0,0,0)" x1="1260" y1="424" x2="2080" y2="424"></line>
+    <g id="r2005">
+        <rect fill="url(#gradBlue1)" width="220px" height="55px" x="1040" y="396.5" title=""></rect>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="1043" y="413.5">Ship weapons</tspan>
+        </text>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="1243" y="413.5">20</tspan>
+        </text>
+        <line fill="none" stroke="rgb(0,0,0)" x1="1045" y1="416.5" x2="1255" y2="416.5"></line>
+        <image x="1043" y="418.5" width="32" height="32" title="Laser I" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="WeaponLaser.png"></image>
+        <image x="1078" y="418.5" width="32" height="32" title="Missile I" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="WeaponRocket.png"></image>
+        <image x="1113" y="418.5" width="32" height="32" title="Mass driver  I" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="WeaponMassDriver.png"></image>
+    </g>
+    <g id="r2013">
+        <rect fill="url(#gradBlue1)" width="220px" height="55px" x="520" y="122" title=""></rect>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="523" y="139">Colonizing module</tspan>
+        </text>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="723" y="139">15</tspan>
+        </text>
+        <line fill="none" stroke="rgb(0,0,0)" x1="525" y1="142" x2="735" y2="142"></line>
+        <image x="523" y="144" width="32" height="32" title="Colonizing module" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Engine.png"></image>
+    </g>
+    <g id="r2023">
+        <rect fill="url(#gradBlue1)" width="220px" height="55px" x="2600" y="0" title=""></rect>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="2603" y="17">Colonizing module II</tspan>
+        </text>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="2796" y="17">250</tspan>
+        </text>
+        <line fill="none" stroke="rgb(0,0,0)" x1="2605" y1="20" x2="2815" y2="20"></line>
+        <image x="2603" y="22" width="32" height="32" title="Colonizing module" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Engine.png"></image>
+    </g>
+    <line fill="none" stroke="rgb(0,0,0)" x1="2560" y1="58" x2="2600" y2="88.5"></line>
+    <line fill="none" stroke="rgb(0,0,0)" x1="2560" y1="58" x2="2600" y2="27.5"></line>
+    <line fill="none" stroke="rgb(0,0,0)" x1="2560" y1="58" x2="2600" y2="149.5"></line>
+    <g id="r2100">
+        <rect fill="url(#gradBlue1)" width="220px" height="55px" x="2340" y="30.5" title=""></rect>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="2343" y="47.5">Modules II</tspan>
+        </text>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="2536" y="47.5">280</tspan>
+        </text>
+        <line fill="none" stroke="rgb(0,0,0)" x1="2345" y1="50.5" x2="2555" y2="50.5"></line>
+        <image x="2343" y="52.5" width="32" height="32" title="Crew II" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Crew1.png"></image>
+        <image x="2378" y="52.5" width="32" height="32" title="Reactor II" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Reactor.png"></image>
+        <image x="2413" y="52.5" width="32" height="32" title="System engines II" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Impuls.png"></image>
+        <image x="2448" y="52.5" width="32" height="32" title="Hyper engines II" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Hyper.png"></image>
+    </g>
+    <g id="r2101">
+        <rect fill="url(#gradBlue1)" width="220px" height="55px" x="2600" y="122" title=""></rect>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="2603" y="139">Cargo II</tspan>
+        </text>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="2796" y="139">350</tspan>
+        </text>
+        <line fill="none" stroke="rgb(0,0,0)" x1="2605" y1="142" x2="2815" y2="142"></line>
+        <image x="2603" y="144" width="32" height="32" title="Cargo II" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Cargo.png"></image>
+    </g>
+    <g id="r2102">
+        <rect fill="url(#gradBlue1)" width="220px" height="55px" x="3120" y="0" title=""></rect>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="3123" y="17">Scanner II</tspan>
+        </text>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="3316" y="17">375</tspan>
+        </text>
+        <line fill="none" stroke="rgb(0,0,0)" x1="3125" y1="20" x2="3335" y2="20"></line>
+        <image x="3123" y="22" width="32" height="32" title="Scanner II" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Scanner.png"></image>
+    </g>
+    <line fill="none" stroke="rgb(0,0,0)" x1="3080" y1="271.5" x2="3120" y2="302"></line>
+    <g id="r2103">
+        <rect fill="url(#gradBlue1)" width="220px" height="55px" x="2860" y="244" title=""></rect>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="2863" y="261">Ship Defenses II</tspan>
+        </text>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="3056" y="261">320</tspan>
+        </text>
+        <line fill="none" stroke="rgb(0,0,0)" x1="2865" y1="264" x2="3075" y2="264"></line>
+        <image x="2863" y="266" width="32" height="32" title="Hull II" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Hull.png"></image>
+        <image x="2898" y="266" width="32" height="32" title="Shield II" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Shield.png"></image>
+    </g>
+    <g id="r2105">
+        <rect fill="url(#gradBlue1)" width="220px" height="55px" x="2860" y="152.5" title=""></rect>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="2863" y="169.5">Ship Weapons II</tspan>
+        </text>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="3056" y="169.5">320</tspan>
+        </text>
+        <line fill="none" stroke="rgb(0,0,0)" x1="2865" y1="172.5" x2="3075" y2="172.5"></line>
+        <image x="2863" y="174.5" width="32" height="32" title="Laser II" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="WeaponLaser.png"></image>
+        <image x="2898" y="174.5" width="32" height="32" title="Missile II" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="WeaponRocket.png"></image>
+        <image x="2933" y="174.5" width="32" height="32" title="Mass driver  II" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="WeaponMassDriver.png"></image>
+    </g>
+    <line fill="none" stroke="rgb(0,0,0)" x1="1000" y1="210.5" x2="1040" y2="27.5"></line>
+    <line fill="none" stroke="rgb(0,0,0)" x1="1000" y1="210.5" x2="1300" y2="58"></line>
+    <g id="r3002">
+        <rect fill="url(#gradBlue1)" width="220px" height="55px" x="780" y="183" title=""></rect>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="783" y="200">Administration I</tspan>
+        </text>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="983" y="200">15</tspan>
+        </text>
+        <line fill="none" stroke="rgb(0,0,0)" x1="785" y1="203" x2="995" y2="203"></line>
+        <image x="783" y="205" width="32" height="32" title="Administration" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Houses.png"></image>
+    </g>
+    <line fill="none" stroke="rgb(0,0,0)" x1="1520" y1="58" x2="1820" y2="88.5"></line>
+    <g id="r3003">
+        <rect fill="url(#gradBlue1)" width="220px" height="55px" x="1300" y="30.5" title=""></rect>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="1303" y="47.5">Administration II</tspan>
+        </text>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="1496" y="47.5">120</tspan>
+        </text>
+        <line fill="none" stroke="rgb(0,0,0)" x1="1305" y1="50.5" x2="1515" y2="50.5"></line>
+        <image x="1303" y="52.5" width="32" height="32" title="Administration" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Houses.png"></image>
+    </g>
+    <line fill="none" stroke="rgb(0,0,0)" x1="3340" y1="241" x2="3380" y2="210.5"></line>
+    <line fill="none" stroke="rgb(0,0,0)" x1="3340" y1="241" x2="3380" y2="271.5"></line>
+    <g id="r3004">
+        <rect fill="url(#gradBlue1)" width="220px" height="55px" x="3120" y="213.5" title=""></rect>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="3123" y="230.5">Administration III</tspan>
+        </text>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="3316" y="230.5">620</tspan>
+        </text>
+        <line fill="none" stroke="rgb(0,0,0)" x1="3125" y1="233.5" x2="3335" y2="233.5"></line>
+        <image x="3123" y="235.5" width="32" height="32" title="Administration" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Houses.png"></image>
+    </g>
+    <line fill="none" stroke="rgb(0,0,0)" x1="3600" y1="210.5" x2="3640" y2="210.5"></line>
+    <g id="r3005">
+        <rect fill="url(#gradBlue1)" width="220px" height="55px" x="3380" y="183" title=""></rect>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="3383" y="200">Administration IV</tspan>
+        </text>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="3576" y="200">900</tspan>
+        </text>
+        <line fill="none" stroke="rgb(0,0,0)" x1="3385" y1="203" x2="3595" y2="203"></line>
+        <image x="3383" y="205" width="32" height="32" title="Administration" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Houses.png"></image>
+    </g>
+    <g id="r3006">
+        <rect fill="url(#gradBlue1)" width="220px" height="55px" x="3640" y="183" title=""></rect>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="3643" y="200">Administration V</tspan>
+        </text>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="3828" y="200">1600</tspan>
+        </text>
+        <line fill="none" stroke="rgb(0,0,0)" x1="3645" y1="203" x2="3855" y2="203"></line>
+        <image x="3643" y="205" width="32" height="32" title="Administration" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Houses.png"></image>
+    </g>
+    <line fill="none" stroke="rgb(0,0,0)" x1="1000" y1="393.5" x2="1040" y2="363"></line>
+    <line fill="none" stroke="rgb(0,0,0)" x1="1000" y1="393.5" x2="1040" y2="424"></line>
+    <g id="r4002">
+        <rect fill="url(#gradBlue1)" width="220px" height="55px" x="780" y="366" title=""></rect>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="783" y="383">Fleet Command I</tspan>
+        </text>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="983" y="383">20</tspan>
+        </text>
+        <line fill="none" stroke="rgb(0,0,0)" x1="785" y1="386" x2="995" y2="386"></line>
+        <image x="783" y="388" width="32" height="32" title="Fleet Command" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Scout2G.png"></image>
+    </g>
+    <g id="r4003">
+        <rect fill="url(#gradBlue1)" width="220px" height="55px" x="1820" y="183" title=""></rect>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="1823" y="200">Fleet Command II</tspan>
+        </text>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="2016" y="200">200</tspan>
+        </text>
+        <line fill="none" stroke="rgb(0,0,0)" x1="1825" y1="203" x2="2035" y2="203"></line>
+        <image x="1823" y="205" width="32" height="32" title="Fleet Command" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Corvette.png"></image>
+    </g>
+    <g id="r4004">
+        <rect fill="url(#gradBlue1)" width="220px" height="55px" x="2860" y="305" title=""></rect>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="2863" y="322">Fleet Command III</tspan>
+        </text>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="3056" y="322">900</tspan>
+        </text>
+        <line fill="none" stroke="rgb(0,0,0)" x1="2865" y1="325" x2="3075" y2="325"></line>
+        <image x="2863" y="327" width="32" height="32" title="Fleet Command" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Fregatte.png"></image>
+    </g>
+    <g id="r4005">
+        <rect fill="url(#gradBlue1)" width="220px" height="55px" x="3380" y="305" title=""></rect>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="3383" y="322">Fleet Command IV</tspan>
+        </text>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="3568" y="322">2000</tspan>
+        </text>
+        <line fill="none" stroke="rgb(0,0,0)" x1="3385" y1="325" x2="3595" y2="325"></line>
+        <image x="3383" y="327" width="32" height="32" title="Fleet Command" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Fregatte.png"></image>
+    </g>
+    <g id="r4006">
+        <rect fill="url(#gradBlue1)" width="220px" height="55px" x="3900" y="274.5" title=""></rect>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="3903" y="291.5">Fleet Command V</tspan>
+        </text>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="4088" y="291.5">4000</tspan>
+        </text>
+        <line fill="none" stroke="rgb(0,0,0)" x1="3905" y1="294.5" x2="4115" y2="294.5"></line>
+        <image x="3903" y="296.5" width="32" height="32" title="Fleet Command" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Fregatte.png"></image>
+    </g>
+    <line fill="none" stroke="rgb(0,0,0)" x1="3600" y1="271.5" x2="3640" y2="271.5"></line>
+    <g id="r5000">
+        <rect fill="url(#gradBlue1)" width="220px" height="55px" x="3380" y="244" title=""></rect>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="3383" y="261">Transcendence Collaboration</tspan>
+        </text>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="3576" y="261">500</tspan>
+        </text>
+        <line fill="none" stroke="rgb(0,0,0)" x1="3385" y1="264" x2="3595" y2="264"></line>
+        <image x="3383" y="266" width="32" height="32" title="Transcendence Builder" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="TranscendenceBuildert60.png"></image>
+    </g>
+    <g id="r5001">
+        <rect fill="url(#gradBlue1)" width="220px" height="55px" x="3640" y="244" title=""></rect>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="3643" y="261">Transcendence</tspan>
+        </text>
+        <text>
+            <tspan font-size="14px" fill="rgb(0,0,0)" stroke="none" x="3828" y="261">1500</tspan>
+        </text>
+        <line fill="none" stroke="rgb(0,0,0)" x1="3645" y1="264" x2="3855" y2="264"></line>
+        <image x="3643" y="266" width="32" height="32" title="Transcendence Construct" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="TranscendenceConstruct60.png"></image>
+        <image x="3678" y="266" width="32" height="32" title="Transcendence Construct" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="TranscendenceConstruct60.png"></image>
+    </g>
+</svg>

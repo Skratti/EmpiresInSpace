@@ -70,7 +70,7 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (63, N'Bui
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (64, N'Food', N'', 6)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (65, N'Supplies', N'', 6)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (66, N'Ammunition', N'', 6)
-INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (67, N'Fuel', N'', 6)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (67, N'Hydrocarbons', N'', 6)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (68, N'Ore', N'', 6)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (69, N'Holmium', N'', 6)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (70, N'Terbium', N'', 6)
@@ -775,7 +775,7 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (618, N'Sh
 
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (619, N'Should the ship be destroyed?', N'', 7)
 
-INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (620, N'Synthetic materials', N'', 6)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (620, N'Carbon fibers', N'', 6)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (621, N'Synthetic materials plant', N'', 3)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (622, N'Metal', N'', 6)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (623, N'Ecosytem Adaption I', N'', 1)
@@ -853,19 +853,73 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (675, N'Fo
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (676, N'Production Modifier ', N'Colony  details', 7) --Colony  details
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (677, N'Growth Modifier ', N'Colony  details', 7) --Colony  details
 
-
-
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (678, N'Fleet Command', N'', 1)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (679, N'Number of Colonies', N'', 1)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (680, N'Administration', N'', 1)
-
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (681, N'Overcrowding', N'', 1)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (682, N'Total', N'', 1)
-
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (683, N'Some reinforcements have arrived</p>', N'', 1)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (684, N'<p>Three ships just arrived at your colony, coming from your old homeland. Their engines barely made the trip, and their captains report that more ships were sent to you, but only these three ships made it.</p><p>Perhaps a search commando should be sent out to find the missing ships and secure the cargo on them.</p>', N'', 1)
-
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (685, N'Reply', N'', 7)
+
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (686, N'Space Marines', N'', 1)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (687, N'This allows the building of huge troop transporters, which can occupy other colonies', N'', 1)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (688, N'Troop Transporter', N'', 1)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (689, N'Troop Transporter hull', N'', 5)
+
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (690, N'Aqua Farming', N'', 1)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (691, N'Enables the building of farms upon water', N'', 1)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (692, N'Aqua Farm', N'building', 3)
+
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (693, N'Superdense Materials', N'', 1)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (694, N'Like it was just fetched from the surface of a neutron star...', N'', 1)	
+
+
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (695, N'Latest discoveries of galaxy wide administration allow the development of new colony centers and colony modules.', N'', 1)
+
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (696, N'Pressure Dome', N'', 1)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (697, N'Using adv. building materials, carbon fibers and superdense materials, we are now able to settle even in the depth of the sea. ', N'', 1)	
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (698, N'Pressure Dome', N'building', 3)
+
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (699, N'Modules III', N'', 1)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (700, N'Modules III description', N'', 1)
+
+
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (701, N'Crew III', N'', 6)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (702, N'Reactor III', N'', 6)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (703, N'Hull III', N'', 6)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (704, N'Shield III', N'', 6)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (705, N'Laser III', N'', 6)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (706, N'Missile III', N'', 6)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (707, N'Mass driver  III', N'', 6)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (708, N'Cargo III', N'', 6)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (709, N'System engines III', N'', 6)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (710, N'Hyper engines III', N'', 6)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (711, N'Neutronium reactor', N'', 3)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (712, N'Scanner III', N'', 6)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (713, N'Colonization III', N'', 6)
+
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (714, N'Neutronium', N'', 6)
+
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (715, N'Arcology', N'', 1)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (716, N'Huge structures providing space for many people, while having no impact on the ecology of the planet', N'', 1)	
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (717, N'Arcology', N'Building', 3)
+
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (718, N'Special Ressources II', N'', 1)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (719, N'Special Ressources II Description', N'', 1)
+
+/* module int not null default 0,
+0 Objects -> part of the objectDescriptin table.
+1 Research - Forschung	 
+2 Quest		
+3 Buildings - Gebäude
+4 Shipmodules - Schiffsmodule
+5 Shiphulls- Schiffsrümpfe
+6 Goods
+7 Game User Interface
+8 Combat
+*/
+
 
 --delete from [LabelsBase] where id = 684
 --296

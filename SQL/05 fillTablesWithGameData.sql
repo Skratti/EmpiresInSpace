@@ -134,9 +134,12 @@ INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [d
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (183, N'YttriumCloning', N'YttriumCloning.png', 1, 0, 663)
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (184, N'LutEcosystem', N'LutEcosystem.png', 1, 0, 664)
 
-INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (185, N'Aqua Farm', N'AdvBuildingMaterial.png', 1, 0, 692)
+
+--update [dbo].[ObjectDescription] set [objectimageUrl] =  N'Aquafarm.png' where id = 185
+--update [dbo].[ObjectDescription] set [objectimageUrl] =  N'PressureDome.png' where id = 187
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (185, N'Aqua Farm', N'Aquafarm.png', 1, 0, 692)
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (186, N'Neutronium reactor', N'AdvBuildingMaterial.png', 1, 0, 711)
-INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (187, N'Pressure Dome', N'AdvBuildingMaterial.png', 1, 0, 698)
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (187, N'Pressure Dome', N'PressureDome.png', 1, 0, 698)
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (188, N'Arcology', N'Houses.png', 1, 0, 717)
 
 --delete  [ObjectDescription] where id > 199 and id < 205
@@ -212,7 +215,9 @@ INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [d
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (1008, N'Population', N'Population.png', 1, 0, 156)
 
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (1009, N'Synthetic Materials', N'SynthMat.png', 1, 0, 620)
-INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (1010, N'Neutronium', N'SynthMat.png', 1, 0, 714)
+
+--update [dbo].[ObjectDescription] set [objectimageUrl] =  N'Neutronium.png' where id = 1010
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (1010, N'Neutronium', N'Neutronium.png', 1, 0, 714)
 
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (1030, N'Holmium', N'ore.png', 1, 0, 69)
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (1031, N'Terbium', N'ore.png', 1, 0, 70)
@@ -244,10 +249,14 @@ GO
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (2010, N'Hyper Engines I', N'Hyper.png', 1, 0, 85)
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (2011, N'System Batteries I', N'Engine.png', 1, 0, 86)
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (2012, N'Hyper Batteries I', N'Engine.png', 1, 0, 87)
-INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (2013, N'Colonizing Module', N'Engine.png', 1, 0, 88)
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (2013, N'Colonizing Module', N'Colonization_I.png', 1, 0, 88)
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (2014, N'Asteroid Mining', N'Engine.png', 1, 0, 90)
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (2015, N'Scanner I', N'Scanner.png', 1, 0, 89)
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (2016, N'Defense satellite', N'ScoutModules.png', 1, 0, 343)
+
+--update [dbo].[ObjectDescription] set [objectimageUrl] =  N'Colonization_I.png' where id = 2013
+--delete from [ObjectDescription] where id = 2023
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (2023, N'Colonizing Module II', N'Colonization_II.png', 1, 0, 720)
 
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (2101, N'Crew II', N'Crew1.png', 1, 0, 369)
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (2102, N'Reactor II', N'Reactor.png', 1, 0, 370)
@@ -274,6 +283,8 @@ INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [d
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (2209, N'System Engines III', N'Impuls.png', 1, 0, 709)
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (2210, N'Hyper Engines III', N'Hyper.png', 1, 0, 710)
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (2215, N'Scanner III', N'Scanner.png', 1, 0, 712)
+
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (2523, N'Colonizing Module III', N'Colonization_III.png', 1, 0, 713)
 
 
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (3101, N'Yttrium Crew I', N'Crew1.png', 1, 0, 383)
@@ -446,24 +457,24 @@ select 4002, N'Fleet Command I', N'1.gif', N''		, 20	, 553		, 558				, 4				, 2	
 select 112, N'Warehouse construction plan', N'1.gif', N'', 30, 162, 491,1,3,3  union all
 select 51, N'PlaneteryScanner', N'1.gif', N'Erlaubt den Bau des Kraftwerks', 25, 382, 490, 1, 3, 5 union all
 select 1010, N'Special Ressource Analysis', N'1.gif', N'', 12, 667, 669, 1, 3, 9 union all
-select 2003, N'Ship Defenses I', N'1.gif', N'Simple ship defenses.', 20, 99, 519, 2 , 3 , 12 union all
-select 2005, N'Ship Weapons I', N'1.gif', N'Simple ship weapons.', 20, 98, 520, 2 , 3 , 14 union all
+select 2003, N'Ship Defenses I', N'1.gif', N'Simple ship defenses.', 45, 99, 519, 2 , 3 , 12 union all
+select 2005, N'Ship Weapons I', N'1.gif', N'Simple ship weapons.', 45, 98, 520, 2 , 3 , 14 union all
 
 --Level 4
 --INSERT into [dbo].[Research] 
 --	  ([id], [name],[objectimageUrl], [description]								, [cost]	, [label]	, [descriptionLabel], [researchType], [treeColumn]	, [treeRow]) 
-select 3002, N'Administration I', N'1.gif', N''									, 15		, 472		, 477				, 4				, 4				, 1  union all
+select 3002, N'Administration I', N'1.gif', N''									, 200		, 472		, 477				, 4				, 4				, 1  union all
 select 8, N'Kommunikation Center', N'1.gif', N'Erlaubt den Bau es Kraftwerks'	, 45		, 53		, 488				,1				,4				,5  union all
-select 410, N'SpaceMarines Center', N'1.gif', N'Erlaubt den Bau es Kraftwerks'	, 70		, 686		, 687				,1				,4				,13 union all
+select 410, N'SpaceMarines Center', N'1.gif', N'Erlaubt den Bau es Kraftwerks'	, 80		, 686		, 687				,1				,4				,13 union all
 
 --Level 5
-select 2, N'Wasserkraftwerk', N'1.gif', N'Erlaubt den Bau des Wasserkraftwerkes', 35, 92, 484,1,5,0 union all
-select 71, N'Superconductors', N'1.gif', N'Erlaubt den Bau des Kraftwerks'		, 60, 656, 657, 1, 5, 2 union all
+select 2, N'Wasserkraftwerk', N'1.gif', N'Erlaubt den Bau des Wasserkraftwerkes', 220, 92, 484,1,5,0 union all
+select 71, N'Superconductors', N'1.gif', N'Erlaubt den Bau des Kraftwerks'		, 260, 656, 657, 1, 5, 2 union all
 select 1030, N'Special Ressource Processing', N'1.gif', N'', 16, 668, 670, 1, 5, 9 union all
-select 402, N'Corvette', N'1.gif', N'', 65, 173, 494, 2 , 5 , 14 union all
+select 402, N'Corvette', N'1.gif', N'', 160, 173, 494, 2 , 5 , 14 union all
 
 --Level 6
-select 3, N'TreibstoffRaffinerie', N'1.gif', N'Erlaubt den Bau der TreibstoffRaffinerie', 140, 93, 485,1,6,4  union all
+select 3, N'TreibstoffRaffinerie', N'1.gif', N'Erlaubt den Bau der TreibstoffRaffinerie', 360, 93, 485,1,6,4  union all
 select 1060, N'Holmium Generator', N'1.gif', N'', 40, 660, 512, 3, 6, 6 union all
 select 1052, N'Scandium Shield I', N'1.gif', N'', 80, 386, 514, 3, 6, 8 union all
 select 1053, N'Yttrium Modules I', N'1.gif', N'', 60, 391, 515, 3, 6, 10 union all
@@ -472,92 +483,93 @@ select 1054, N'Lutetium Modules I', N'1.gif', N'', 30, 392, 516, 3, 6, 12  union
 --Level 7
 --INSERT into [dbo].[Research] 
 --	  ([id], [name],[objectimageUrl], [description]	, [cost], [label]	, [descriptionLabel], [researchType], [treeColumn]	, [treeRow]) 
-select 3003, N'Administration II', N'1.gif', N''	, 120	, 473		, 478				, 4				, 7				, 1		 union all
+select 3003, N'Administration II', N'1.gif', N''	, 550	, 473		, 478				, 4				, 7				, 1		 union all
 select 1062, N'Scandium Tools', N'1.gif', N'', 120, 662, 514, 3, 7, 8  union all
 select 1063, N'Yttrium Cloning Lab', N'1.gif', N'', 100, 663, 515, 3, 7, 10 union all
 select 1064, N'Lutetium Ecosystem Improvements', N'1.gif', N'', 110, 664, 516, 3, 7, 12  union all
 
 --Level 8
-select 2023, N'Colonization II', N'1.gif', N'Colonization module.', 220, 468, 522, 2 , 8 , 0 union all
+select 2023, N'Colonization II', N'1.gif', N'Colonization module.', 350, 468, 522, 2 , 8 , 0 union all
 --INSERT into [dbo].[Research] 
 --	  ([id], [name],							[objectimageUrl], [description]	, [cost], [label]	, [descriptionLabel], [researchType], [treeColumn]	, [treeRow]) 
 select 1061, N'Terbium Factory Improvements',			N'1.gif',			N'',	160,	661,		513,				3,				8,				6 	union all
-select 4003, N'Fleet Command II',						N'1.gif',			N''		, 200	, 554		, 559				, 4				, 8				, 9		 union all
+select 4003, N'Fleet Command II',						N'1.gif',			N''		, 250	, 554		, 559				, 4				, 8				, 9		 union all
 
 --Level 9
-select 50, N'Verb. Baumaterial', N'1.gif', N'Erlaubt den Bau des Kraftwerks', 340, 350, 489, 1, 9, 4 union all
+select 50, N'Verb. Baumaterial', N'1.gif', N'Erlaubt den Bau des Kraftwerks', 600, 350, 489, 1, 9, 4 union all
 
 --INSERT into [dbo].[Research] 
 --	  ([id], [name],[objectimageUrl], [description]	, [cost], [label]	, [descriptionLabel], [researchType], [treeColumn]	, [treeRow]) 
 select 1051, N'Terbium Hull I', N'1.gif', N'', 130, 385, 513, 3, 9, 8  union all
 select 1050, N'Holmium Laser I', N'1.gif', N'', 140, 387, 512, 3, 9, 10  union all
-select 403, N'Frigatte', N'1.gif', N'', 190, 174, 495, 2 , 9 , 14  union all
+select 403, N'Frigatte', N'1.gif', N'', 320, 174, 495, 2 , 9 , 14  union all
 
 --Level 10
 --INSERT into [dbo].[Research] 
 --	  ([id], [name],[objectimageUrl], [description]	, [cost], [label]	, [descriptionLabel], [researchType], [treeColumn]	, [treeRow]) 
-select 3004, N'Administration III', N'1.gif', N''	, 480	, 474		, 479				, 4				, 10				, 1  union all
-select 5, N'Kraftwerk', N'1.gif', N'Erlaubt den Bau des Kraftwerks', 230, 95, 487,1,10,3 union all
-select 55, N'Aquafarming', N'1.gif', N'Erlaubt den Bau des Kraftwerks', 170, 690, 691,1,10,5 union all
-select 502, N'Space station'	, N'1.gif'		, N''			, 180			, 59		, 558				, 2					, 10			, 7	 union all
+select 3004, N'Administration III', N'1.gif', N''	, 880	, 474		, 479				, 4				, 10				, 1  union all
+select 5, N'Kraftwerk', N'1.gif', N'Erlaubt den Bau des Kraftwerks', 430, 95, 487,1,10,3 union all
+select 55, N'Aquafarming', N'1.gif', N'Erlaubt den Bau des Kraftwerks', 370, 690, 691,1,10,5 union all
+select 502, N'Space station'	, N'1.gif'		, N''			, 380			, 59		, 558				, 2					, 10			, 7	 union all
 
 --Level 11
 --INSERT into [dbo].[Research] 
 --	  ([id], [name]				,[objectimageUrl]		, [description]						, [cost]		, [label]	, [descriptionLabel], [researchType], [treeColumn]	, [treeRow]) 
-select 52, N'Arcology'			, N'1.gif'				, N'Erlaubt den Bau des Kraftwerks'	, 440			, 715		, 716				, 1				, 11			, 0 union all
-select 72, N'Superconductors II', N'1.gif', N'Erlaubt den Bau des Kraftwerks', 420, 666, 657, 1, 11, 3 union all
-select 2100, N'Modules II', N'1.gif', N'', 280, 171, 523,2,11,9 union all
+select 52, N'Arcology'			, N'1.gif'				, N'Erlaubt den Bau des Kraftwerks'	, 640			, 715		, 716				, 1				, 11			, 0 union all
+select 72, N'Superconductors II', N'1.gif', N'Erlaubt den Bau des Kraftwerks', 720, 666, 657, 1, 11, 3 union all
+select 2100, N'Modules II', N'1.gif', N'', 1000, 171, 523,2,11,9 union all
 
 --Level 12
-select 2102, N'Scanner II', N'1.gif', N'', 375, 381, 525, 2 , 12 , 6 union all
-select 2101, N'Cargo II', N'1.gif', N'', 350, 376, 524,  2 , 12 , 8 union all
-select 2105, N'Ship Weapons II', N'1.gif', N'Better ship weapons.', 320, 168, 527, 2 , 12 , 10 union all
-select 2103, N'Ship Defenses II', N'1.gif', N'Better ship defenses.', 320, 167, 526, 2 , 12 , 12 union all
+select 2102, N'Scanner II', N'1.gif', N'', 575, 381, 525, 2 , 12 , 6 union all
+select 2101, N'Cargo II', N'1.gif', N'', 550, 376, 524,  2 , 12 , 8 union all
+select 2105, N'Ship Weapons II', N'1.gif', N'Better ship weapons.', 620, 168, 527, 2 , 12 , 10 union all
+select 2103, N'Ship Defenses II', N'1.gif', N'Better ship defenses.', 620, 167, 526, 2 , 12 , 12 union all
 
 --Level 13
 --INSERT into [dbo].[Research] 
 --	  ([id], [name],[objectimageUrl], [description]		, [cost], [label]	, [descriptionLabel], [researchType], [treeColumn]	, [treeRow]) 
-select 3005, N'Administration VI', N'1.gif', N''		, 700	, 475		, 480				, 4				, 13				, 1			union all
-select 80, N'Superdense Materials', N'1.gif', N''		, 800	, 693		, 694				, 4				, 13				, 4			union all
-select 404, N'Destroyer', N'1.gif',			N''			, 450	,118		, 496				, 2				, 13				, 14		union all
+select 3005, N'Administration VI', N'1.gif', N''		, 1200	, 475		, 480				, 4				, 13				, 1			union all
+select 80, N'Superdense Materials', N'1.gif', N''		, 1200	, 693		, 694				, 4				, 13				, 4			union all
+select 404, N'Destroyer', N'1.gif',			N''			, 800	,118		, 496				, 2				, 13				, 14		union all
 
 --Level 14
 --INSERT into [dbo].[Research] 
 --	  ([id]	, [name],[objectimageUrl], [description]					, [cost]	, [label]	, [descriptionLabel]	, [researchType], [treeColumn]	, [treeRow]) 
-select 2033	, N'Colonization III', N'1.gif', N'Colonization module.'	, 550		, 713		, 695					, 2				, 14			,	0 union all
-select 81	, N'Pressure Dome', N'1.gif', N'Colonization module.'		, 400		, 696		, 697					, 2				, 14			,	2 union all
-select 2200	, N'Modules III', N'1.gif', N''								, 480		, 699		, 700					,2				, 14			,	4 union all
-select 503	, N'Star base'		, N'1.gif'		, N''					, 500		, 584		, 559					, 2				, 14			,	9  union all
-select 4004	, N'Fleet Command III', N'1.gif', N''						, 600		, 555		, 560					, 4				, 14			,	14  union all
+select 2033	, N'Colonization III', N'1.gif', N'Colonization module.'	, 1000		, 713		, 695					, 2				, 14			,	0 union all
+select 81	, N'Pressure Dome', N'1.gif', N'Colonization module.'		, 1300		, 696		, 697					, 2				, 14			,	2 union all
+select 2200	, N'Modules III', N'1.gif', N''								, 1500		, 699		, 700					,2				, 14			,	4 union all
+select 503	, N'Star base'		, N'1.gif'		, N''					, 1000		, 584		, 559					, 2				, 14			,	9  union all
+select 4004	, N'Fleet Command III', N'1.gif', N''						, 800		, 555		, 560					, 4				, 14			,	14  union all
 
 --level 15
 --INSERT into [dbo].[Research] 
 --	  ([id], [name],			[objectimageUrl], [description]	, [cost]		, [label]	, [descriptionLabel], [researchType]	, [treeColumn]	, [treeRow]) 
-select 3006, N'Administration V', N'1.gif', N''					, 1400			, 476		, 481				, 4					, 15				, 1		union all
-select 2500, N'Special Ressources Modules', N'1.gif', N''		, 650			, 718		, 719				,2					, 15				, 4 union all
-select 504, N'Star fortress'	, N'1.gif'		, N''			, 1100			, 127		, 560				, 2					, 15				, 9 union all
-select 405, N'Cruiser', N'1.gif', N''							, 750			, 58		, 497				, 2					, 15				, 14  union all
+select 3006, N'Administration V', N'1.gif', N''					, 1800			, 476		, 481				, 4					, 15				, 1		union all
+select 2500, N'Special Ressources Modules', N'1.gif', N''		, 1200			, 718		, 719				,2					, 15				, 4 union all
+select 504, N'Star fortress'	, N'1.gif'		, N''			, 1600			, 127		, 560				, 2					, 15				, 9 union all
+select 405, N'Cruiser', N'1.gif', N''							, 1200			, 58		, 497				, 2					, 15				, 14  union all
 	
 --level 16
 --INSERT into [dbo].[Research] 
 --	  ([id], [name],[objectimageUrl], [description]	, [cost]	, [label]	, [descriptionLabel], [researchType], [treeColumn]	, [treeRow]) 
-select 5000, N'Transcendence Collab', N'1.gif'  , N'', 500		, 592		, 593				, 4				, 16				, 6		union all
+select 5000, N'Transcendence Collab', N'1.gif'  , N'', 600		, 592		, 593				, 4				, 16				, 6		union all
 select 4005, N'Fleet Command VI', N'1.gif', N''		 , 1600		, 556		, 561				, 4				, 16				, 11 union all
-select 406, N'Battleship', N'1.gif', N''			 , 1100		, 124		, 498				, 2				, 16				, 14  union all
+select 406, N'Battleship', N'1.gif', N''			 , 1600		, 124		, 498				, 2				, 16				, 14  union all
 
 --level 17
 --INSERT into [dbo].[Research] 
 --	  ([id], [name],[objectimageUrl], [description]	, [cost]	, [label]	, [descriptionLabel], [researchType], [treeColumn]	, [treeRow]) 
 select 5001, N'Transcendence', N'1.gif'	, N''		, 1200	, 590			, 591				, 4				, 17				, 9 union all
-select 4006, N'Fleet Command V', N'1.gif', N''		, 2000	, 557			, 562				, 4				, 17				, 11 union all
-select 407, N'Superbattleship', N'1.gif', N''		, 1600	, 125			, 499				, 2				, 17				, 14
+select 4006, N'Fleet Command V', N'1.gif', N''		, 2200	, 557			, 562				, 4				, 17				, 11 union all
+select 407, N'Superbattleship', N'1.gif', N''		, 2200	, 125			, 499				, 2				, 17				, 14
 
 /*
 with toUpdate ([id], [name],			[objectimageUrl], [description]	, [cost]		, [label]	, [descriptionLabel], [researchType]	, [treeColumn]	, [treeRow])  as (
 
 ---
 )
-update res set treeColumn = res.treeColumn, treeRow = res.treeRow
+update res set res.treeColumn = toUpdate.treeColumn, res.treeRow = toUpdate.treeRow,
+res.cost = toUpdate.cost
 from dbo.Research as res
 inner join toUpdate
 on toUpdate.id = res.id
@@ -576,7 +588,7 @@ insert into dbo.ResearchGain
 ([researchId]	  ,[research]	,[energy]	,[housing]	,[growth]	,[construction]	,[industrie]	,[food]	,[colonyCount]	,fleetCount	,[objectId])	
 select 9		  ,0			,0			,0			, 0			,0				,0				,0		,1				,0			,172		union all
 select 71		  ,0			,10			,0			, 0			,0				,0				,0		,0				,0			,671		union all
-select 72		  ,0			,15			,0			, 0			,0				,0				,0		,0				,0			,671		union all
+select 72		  ,0			,20			,0			, 0			,0				,0				,0		,0				,0			,671		union all
 select 3002		  ,0			,0			,0			, 0			,0				,0				,0		,1				,0			,172		union all
 select 3003		  ,0			,0			,0			, 0			,0				,0				,0		,1				,0			,173		union all
 select 3004		  ,0			,0			,0			, 0			,0				,0				,0		,2				,0			,174		union all
@@ -641,9 +653,9 @@ INSERT [dbo].[Goods] ([id], [name], [objectDescriptionId], [goodsType], [label])
 INSERT [dbo].[Goods] ([id], [name], [objectDescriptionId], [goodsType], [label]) VALUES (2014, N'Asteroid Mining', 2014, 2, 90)
 INSERT [dbo].[Goods] ([id], [name], [objectDescriptionId], [goodsType], [label]) VALUES (2015, N'Scanner I', 2015, 2, 89)
 INSERT [dbo].[Goods] ([id], [name], [objectDescriptionId], [goodsType], [label]) VALUES (2016, N'Defense satellite', 2016, 2, 343)
-INSERT [dbo].[Goods] ([id], [name], [objectDescriptionId], [goodsType], [label]) VALUES (2023, N'Colonizing Module II', 2013, 2, 339)
+INSERT [dbo].[Goods] ([id], [name], [objectDescriptionId], [goodsType], [label]) VALUES (2023, N'Colonizing Module II', 2023, 2, 720)
 
-
+--update [dbo].[Goods] set [objectDescriptionId] = 2023 where id = 2023
 
 INSERT [dbo].[Goods] ([id], [name], [objectDescriptionId], [goodsType], [label]) VALUES (2101, N'Crew II', 2101, 2, 369)
 INSERT [dbo].[Goods] ([id], [name], [objectDescriptionId], [goodsType], [label]) VALUES (2102, N'Reactor II', 2102, 2, 370)
@@ -689,7 +701,9 @@ INSERT [dbo].[Goods] ([id], [name], [objectDescriptionId], [goodsType], [label])
 
 INSERT [dbo].[Goods] ([id], [name], [objectDescriptionId], [goodsType], [label]) VALUES (2520, N'Transcendence Construct', 460, 2, 594)
 
-INSERT [dbo].[Goods] ([id], [name], [objectDescriptionId], [goodsType], [label]) VALUES (2523, N'Colonizing Module II', 2013, 2, 351)
+INSERT [dbo].[Goods] ([id], [name], [objectDescriptionId], [goodsType], [label]) VALUES (2523, N'Colonizing Module II', 2013, 2, 713)
+--update [dbo].[Goods] set [objectDescriptionId] = 2523 where id = 2523
+
 go 
 --delete from Quests
 SET IDENTITY_INSERT [dbo].[Quests] ON
@@ -1274,9 +1288,9 @@ INSERT [dbo].[Buildings] ([id], [name], [objectId], [BuildingScript], [isBuildab
 INSERT [dbo].[Buildings] ([id], [name], [objectId], [BuildingScript], [isBuildable], [visibilityNeedsGoods], [groupId], [label], prodQueueLevel) VALUES (1043, N'Yttrium  Hütte', 158, NULL, 1, 0, 2, 360, 8)
 INSERT [dbo].[Buildings] ([id], [name], [objectId], [BuildingScript], [isBuildable], [visibilityNeedsGoods], [groupId], [label], prodQueueLevel) VALUES (1044, N'Lutetium Hütte', 158, NULL, 1, 0, 2, 361, 8)
 
-INSERT [dbo].[Buildings] ([id], [name], [objectId], [BuildingScript], [isBuildable], [visibilityNeedsGoods], [groupId], [label], prodQueueLevel, oncePerColony, energyModifier) VALUES (180, N'HolmiumGenerator', 180, NULL, 1, 0, 2, 660, 1, 1, 25)
-INSERT [dbo].[Buildings] ([id], [name], [objectId], [BuildingScript], [isBuildable], [visibilityNeedsGoods], [groupId], [label], prodQueueLevel, oncePerColony, assemblyModifier) VALUES (181, N'ScandTools', 181, NULL, 1, 0, 2, 661, 8, 1, 25)
-INSERT [dbo].[Buildings] ([id], [name], [objectId], [BuildingScript], [isBuildable], [visibilityNeedsGoods], [groupId], [label], prodQueueLevel, oncePerColony, productionModifier) VALUES (182, N'TerbiumFact', 182, NULL, 1, 0, 2, 662, 4, 1, 15)
+INSERT [dbo].[Buildings] ([id], [name], [objectId], [BuildingScript], [isBuildable], [visibilityNeedsGoods], [groupId], [label], prodQueueLevel, oncePerColony, energyModifier) VALUES (180, N'HolmiumGenerator', 180, NULL, 1, 0, 2, 660, 1, 1, 30)
+INSERT [dbo].[Buildings] ([id], [name], [objectId], [BuildingScript], [isBuildable], [visibilityNeedsGoods], [groupId], [label], prodQueueLevel, oncePerColony, assemblyModifier, productionModifier) VALUES (181, N'ScandTools', 181, NULL, 1, 0, 2, 661, 8, 1, 25,10)
+INSERT [dbo].[Buildings] ([id], [name], [objectId], [BuildingScript], [isBuildable], [visibilityNeedsGoods], [groupId], [label], prodQueueLevel, oncePerColony, productionModifier) VALUES (182, N'TerbiumFact', 182, NULL, 1, 0, 2, 662, 4, 1, 20)
 INSERT [dbo].[Buildings] ([id], [name], [objectId], [BuildingScript], [isBuildable], [visibilityNeedsGoods], [groupId], [label], prodQueueLevel, oncePerColony, housingModifier, foodModifier) VALUES (183, N'YttriumCloning', 183, NULL, 1, 0, 2, 663, 4, 1, 10, 25)
 INSERT [dbo].[Buildings] ([id], [name], [objectId], [BuildingScript], [isBuildable], [visibilityNeedsGoods], [groupId], [label], prodQueueLevel, oncePerColony, housingModifier, foodModifier) VALUES (184, N'LutEcosystem', 184, NULL, 1, 0, 2, 664, 2, 1, 25, 10)
 

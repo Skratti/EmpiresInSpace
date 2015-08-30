@@ -908,6 +908,14 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (717, N'Ar
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (718, N'Special Ressources II', N'', 1)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (719, N'Special Ressources II Description', N'', 1)
 
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (720, N'Colonization II', N'', 0)
+
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (721, N'H', N'Holmium', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (722, N'T', N'Terbium', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (723, N'S', N'Scandium', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (724, N'Y', N'Yttrium', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (725, N'L', N'Lutetium', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (726, N'Ressources on/off', N'', 7)
 /* module int not null default 0,
 0 Objects -> part of the objectDescriptin table.
 1 Research - Forschung	 

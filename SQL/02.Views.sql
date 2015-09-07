@@ -1445,7 +1445,8 @@ AS
          descriptionlabel, 
          researchtype, 
          treecolumn, 
-         treerow 
+         treerow ,
+		 baseCost
   FROM   [research]; 
 
 go 

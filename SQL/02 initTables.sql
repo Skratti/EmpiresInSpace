@@ -615,7 +615,8 @@ Nach der initialisierung kommen in diesen Tabllen keine neuen Einträge hinzu
 --------------------------------------------------- */ 
 
 
-
+-- alter table  [dbo].[Research]  add baseCost smallint not null default 10
+-- update  [dbo].[Research] set baseCost = cost
 print '--- Research data ---'
 create TABLE [dbo].[Research] (
 	id SMALLINT NOT NULL identity(1,1),	
@@ -623,6 +624,7 @@ create TABLE [dbo].[Research] (
 	objectimageUrl nvarchar(128) DEFAULT '',	
 	description	nvarchar(1024) NOT NULL DEFAULT '',	
 	cost smallint not null default 10,
+	baseCost smallint not null default 10,
 	label int NOT NULL Default 1
 		references [dbo].LabelsBase (id) on update  NO ACTION on delete  NO ACTION,
 	descriptionLabel int NOT NULL Default 1

@@ -203,7 +203,7 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (171, N'Mo
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (172, N'Better modules, which will also allow bigger ships...', N'', 2)
 
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (173, N'Corvette', N'', 2)
-INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (174, N'Frigatte', N'', 2)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (174, N'Frigate', N'', 2)
 
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (175, N'Peace', N'', 7)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (176, N'War', N'', 7)
@@ -916,6 +916,9 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (723, N'S'
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (724, N'Y', N'Yttrium', 7)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (725, N'L', N'Lutetium', 7)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (726, N'Ressources on/off', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (727, N'Total Modifier: ', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (728, N'Colony Count', N'', 7)
+
 /* module int not null default 0,
 0 Objects -> part of the objectDescriptin table.
 1 Research - Forschung	 
@@ -929,7 +932,7 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (726, N'Re
 */
 
 
---delete from [LabelsBase] where id = 684
+--delete from [LabelsBase] where id = 727
 --296
 /*
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (403, N'<p>Drag the scout to the outside of your solar system. This will let him leave the system and switch the map to the starmap.<br> Find one of the neutral space stations. The next one will be at ', N'', 2)--<p> Erkunde deine Umgebung und treffe deine Nachbarn.<br> Finde eine neutrale Raumstation. Die nächste ist bei 

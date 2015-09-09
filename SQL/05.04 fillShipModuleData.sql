@@ -10,10 +10,10 @@ select		3,		 0,		  0,	   100,					 0,				 0,			 0,			 0,					0,				 0,				 0,			
 select		4,		-1,		 -2,		 0,					8,				 0,			 0,			 0,					0,				 0,				 0,				0,			0,			0			 --shield
 
 INSERT [dbo].[ModulesGain] 
-([modulesId],	[crew], [energy], [hitpoints], [damagereduction], [damageoutput], [cargoroom], [fuelroom], [inSpaceSpeed], [inSystemSpeed], [maxSpaceMoves], [maxSystemMoves], [special], [scanRange], weaponType) 
-select		5,		-1,		 -1,		 0,					 0,				20,			 0,			 0,					0,				 0,				 0,				0,			0,			0,	1  union all	   --laser
-select		6,		-1,		 -1,		 0,					 0,				20,			 0,			 0,					0,				 0,				 0,				0,			0,			0,	2  union all	  --missile
-select		7,		-1,		 -1,		 0,					 0,				20,			 0,			 0,					0,				 0,				 0,				0,			0,			0,	3  	  --mass driver
+([modulesId],	[crew], [energy], [hitpoints], [damagereduction], [damageoutput], [cargoroom], [fuelroom], [inSpaceSpeed], [inSystemSpeed], [maxSpaceMoves], [maxSystemMoves], [special], [scanRange], weaponType, toHitRatio) 
+select		5,		-1,		 -1,		 0,					 0,				30,			 0,			 0,					0,				 0,				 0,				0,			0,			0,			1,		140	union all	--laser
+select		6,		-1,		 -1,		 0,					 0,				60,			 0,			 0,					0,				 0,				 0,				0,			0,			0,			2,		90	union all	--missile
+select		7,		-1,		 -1,		 0,					 0,			   120,			 0,			 0,					0,				 0,				 0,				0,			0,			0,			3,  	50				--mass driver
 
 INSERT [dbo].[ModulesGain] 
 ([modulesId],	[crew], [energy], [hitpoints], [damagereduction], [damageoutput], [cargoroom], [fuelroom], [inSpaceSpeed], [inSystemSpeed], [maxSpaceMoves], [maxSystemMoves], [special], [scanRange]) 

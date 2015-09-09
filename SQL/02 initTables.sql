@@ -944,7 +944,7 @@ go
 	Benefits that are created per Module	
 	crew, energy, hitpoints, damagereduction, damageoutput, cargoroom, speed (moves oper turn), maxMoves, both in System and inSpace
 	Special like Colonization, asteroid mining
-	alter  TABLE  [dbo].[ModulesGain] add [population] bigint not null default 0
+	alter  TABLE  [dbo].[ModulesGain] add toHitRatio	int not null default 100
 	alter  TABLE  [dbo].[ModulesGain] alter column [scanRange] tinyInt DEFAULT 0 NOT NULL
 */
 CREATE TABLE  [dbo].[ModulesGain]
@@ -965,7 +965,8 @@ CREATE TABLE  [dbo].[ModulesGain]
 	scanRange  TINYINT DEFAULT 0 NOT NULL,
 	special int not null default 0,	--Special like Colonization, asteroid mining	
 	weaponType tinyint not null default 0,
-	[population] bigint not null default 0
+	[population] bigint not null default 0,
+	toHitRatio	int not null default 100
 );
 go
 create clustered index ModulesGain_primary ON [ModulesGain](modulesId);
@@ -1469,7 +1470,7 @@ Schiffsliste
 herkunft ist doppelt belegt (und nicht hier drin). einmal für den Sektorein- bzw. ausflug, zum anderen bei der Schiffserstellung :(alter table [Ships] 
 
 alter table [Ships] 
-add noMovementCounter TINYINT NOT NULL DEFAULT 0
+add experience int not null default 0
 
 add shipHullsImage int not null default 1 
 		references	[dbo].ShipHullsImages (id) on update no action on delete no action
@@ -1519,6 +1520,7 @@ CREATE TABLE [dbo].[Ships]  (
 	versionId bigint not null default 0, 
 	shipStockVersionId bigint not null default 0, 
 	shipModulesVersionId bigint not null default 0, 
+	experience int not null default 0
 	constraint ships_primary primary key clustered (id)
 );
 create nonclustered index ShipsIdKey on [dbo].[Ships](userId);

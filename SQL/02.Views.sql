@@ -1195,6 +1195,7 @@ AS
 		  , isNull([shipHullsImage],0) as [shipHullsImage] 
 		  , refitCounter
 		  , noMovementCounter
+		  , experience
   FROM   [ships]; 
 
 go 
@@ -1332,7 +1333,8 @@ AS
          scanrange, 
          special, 
          weapontype, 
-         [population]
+         [population],
+		 toHitRatio
   FROM   [modulesgain]; 
 
 go 

@@ -1548,18 +1548,20 @@ INSERT [dbo].[ShipHullsGain] ([shipHullId], [crew], [energy], [hitpoints], [dama
 insert [dbo].[ShipHullsGain] 
 ([shipHullId], [crew], [energy], [hitpoints], [damagereduction], [damageoutput], [cargoroom], [fuelroom], [inSpaceSpeed], [inSystemSpeed], [maxSpaceMoves], [maxSystemMoves], [special], [scanRange], [speedFactor])
 select		0,		0,		0,			   0,				0,				0,				0,			0,				0,				0,				0,				0,			0,				0 ,			1		union all
-select		1,		2,		-1,			 100,				0,				0,				2,			80,				0,				5,				0,				20,			0,				2 ,			1.0		union all -- Scout
-select		2,		3,		-3,			150,				0,				0,				10,			20,				0,				0,				0,				0,			0,				1 ,			0.8		union all
-select		3,		-1,		-5,			200,				0,				0,				50,			60,				0,				0,				0,				0,			0,				1 ,			0.7		union all --fregatte
-select		4,		-2,		-7,			250,			   50,				0,				100,		60,				0,				0,				0,				0,			0,				1 ,			0.6		union all  -- destr
-select		5,		-3,		-9,			300,			   70,				10,				150,		60,				0,				0,				0,				0,			0,				1 ,			0.5		union all  -- cruiser
-select		6,		-10,	-11,		350,			  100,				10,				200,		50,				0,				0,				0,				0,			0,				0 ,			0.4		union all -- starship
-select		7,		-15,	-18,		450,			  100,				10,				200,		50,				0,				0,				0,				0,			0,				0 ,			0.3		union all -- battle
-select		8,		-20,	-25,		600,			  100,				0,				240,		50,				0,				0,				0,				0,			0,				0 ,			0.2		union all -- superbattle
+select		1,		2,		-1,			 100,			   80,				0,				2,			80,				0,				5,				0,				20,			0,				2 ,			1.0		union all -- Scout
+select		2,		3,		-3,			150,			   60,				0,				10,			20,				0,				0,				0,				0,			0,				1 ,			0.8		union all
+select		3,		-1,		-5,			200,			   40,				0,				50,			60,				0,				0,				0,				0,			0,				1 ,			0.7		union all --fregatte
+select		4,		-2,		-7,			250,			   30,				0,				100,		60,				0,				0,				0,				0,			0,				1 ,			0.6		union all  -- destr
+select		5,		-3,		-9,			300,			   20,				10,				150,		60,				0,				0,				0,				0,			0,				1 ,			0.5		union all  -- cruiser
+--
+select		6,		-10,	-11,		350,			   10,				10,				200,		50,				0,				0,				0,				0,			0,				0 ,			0.4		union all -- starship
+--
+select		7,		-15,	-18,		450,			   10,				10,				200,		50,				0,				0,				0,				0,			0,				0 ,			0.35	union all -- battle
+select		8,		-20,	-25,		600,			    0,				0,				240,		50,				0,				0,				0,				0,			0,				0 ,			0.2		union all -- superbattle
 select		199,	3,		4,			200,				0,				0,				100,		100,			0,				0,				0,				0,			0,				1 ,			0.0		union all  
-select		200,	5,		6,			400,			   50,				0,				100,		100,			0,				0,				0,				0,			0,				1 ,			0.0		union all
-select		201,	8,		10,			550,			   80,				0,				200,		200,			0,				0,				0,				0,			0,				1 ,			0.0		union all
-select		202,	13,		16,			800,			  120,				0,				400,		400,			0,				0,				0,				0,			0,				1 ,			0.0     union all
+select		200,	5,		6,			400,			    0,				0,				100,		100,			0,				0,				0,				0,			0,				1 ,			0.0		union all
+select		201,	8,		10,			550,			    0,				0,				200,		200,			0,				0,				0,				0,			0,				1 ,			0.0		union all
+select		202,	13,		16,			800,			    0,				0,				400,		400,			0,				0,				0,				0,			0,				1 ,			0.0     union all
 select		220,	1,		100,		3000,				0,				50,				0,			0,				0,				0,				0,				0,			0,				1 ,			0.0     union all
 select		221,	1,		10,			100,				0,				5,				0,			0,				5,				6,				5,				15,			0,				0 ,			1.0
 

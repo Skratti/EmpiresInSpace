@@ -782,7 +782,7 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (623, N'Ec
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (624, N'Adaption to the ecosystem of newly inhabitated worlds allows further population growth', N'', 1)
 
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (625, N'Declare war', N'', 7)--Relation verschlechtern?
-INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (626, N'Your ships will be moved to your colonies to be prepared for war. They will not gain movememnt points for 7 turns.', N'', 7)--Relation verschlechtern?
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (626, N'Do you really want to declare war?', N'', 7)--Relation verschlechtern?
 
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (627, N'Deploy star base', N'', 7)--Relation verschlechtern?
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (628, N'Ship will be converted to a star base.', N'', 7)--Relation verschlechtern?
@@ -918,6 +918,32 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (725, N'L'
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (726, N'Ressources on/off', N'', 7)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (727, N'Total Modifier: ', N'', 7)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (728, N'Colony Count', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (729, N'Evasion', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (730, N'Experience', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (731, N'Rookie', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (732, N'Skilled', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (733, N'Veteran', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (734, N'Expert', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (735, N'Elite', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (736, N'Lutetium Engines I', N'', 6)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (737, N'Chance to hit: ', N'', 6)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (738, N'Damage: ', N'', 6)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (739, N'Crew: ', N'', 6)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (740, N'Energy: ', N'', 6)
+
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (741, N'Hitpoints: ', N'', 6)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (742, N'Shields: ', N'', 6)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (743, N'Cargoroom: ', N'', 6)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (744, N'Evasion: ', N'', 6)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (745, N'Hyper speed: ', N'', 6)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (746, N'System speed: ', N'', 6)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (747, N'Scan range: ', N'', 6)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (748, N'Module positions: ', N'', 6)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (749, N'Speed factor: ', N'', 6)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (750, N'Ship can colonize planets', N'', 6)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (751, N'Ship can conquer colonies', N'', 6)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (752, N'Ship can deploy a space station', N'', 6)
+
 
 /* module int not null default 0,
 0 Objects -> part of the objectDescriptin table.
@@ -931,7 +957,8 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (728, N'Co
 8 Combat
 */
 
-
+-- update ships set hyper = 300 
+-- update ships set impuls = 300 
 --delete from [LabelsBase] where id = 727
 --296
 /*
@@ -957,6 +984,8 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (257, N'Al
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (258, N'Allgemein', N'', 2)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (259, N'Allgemein', N'', 2)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (260, N'Allgemein', N'', 2)
+
+  update [Cygnus3].dbo.ModulesGain set toHitRatio = 0 where damageoutput = 0
 */
 
 

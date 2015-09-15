@@ -7,7 +7,7 @@ INSERT [dbo].[ModulesGain]
 select		1,		10,		 -1,		 0,					 0,				 0,			 0,			 0,					0,				 0,				 0,				0,			0,			0	union all        --crew
 select		2,		-1,		 10,		 0,					 0,				 0,			 0,			 0,					0,				 0,				 0,				0,			0,			0	union all		 --reactor
 select		3,		 0,		  0,	   100,					 0,				 0,			 0,			 0,					0,				 0,				 0,				0,			0,			0	union all		  --hull
-select		4,		-1,		 -2,		 0,					8,				 0,			 0,			 0,					0,				 0,				 0,				0,			0,			0			 --shield
+select		4,		-1,		 -2,		 0,					30,				 0,			 0,			 0,					0,				 0,				 0,				0,			0,			0			 --shield
 
 INSERT [dbo].[ModulesGain] 
 ([modulesId],	[crew], [energy], [hitpoints], [damagereduction], [damageoutput], [cargoroom], [fuelroom], [inSpaceSpeed], [inSystemSpeed], [maxSpaceMoves], [maxSystemMoves], [special], [scanRange], weaponType, toHitRatio) 
@@ -18,9 +18,10 @@ select		7,		-1,		 -1,		 0,					 0,			   120,			 0,			 0,					0,				 0,				 0,			
 INSERT [dbo].[ModulesGain] 
 ([modulesId],	[crew], [energy], [hitpoints], [damagereduction], [damageoutput], [cargoroom], [fuelroom], [inSpaceSpeed], [inSystemSpeed], [maxSpaceMoves], [maxSystemMoves], [special], [scanRange]) 
 select		8,		-1,		 -1,		 0,					 0,				 0,		   200,			50,					0,				 0,				 0,				0,			0,			0	union all    -- cargo
-select		9,		-1,		 -2,		 0,					 0,				 0,			 0,			 0,					0,			   100,				 0,				100,		0,			0	union all	 --system Enginge
+select		9,		-1,		 -2,		 0,					 0,				 0,			 0,			 0,					0,			   70,				 0,			   70,			0,			0	union all	 --system Enginge
 select		10,		-1,		 -2,		 0,					 0,				 0,			 0,			 0,					20,				 0,				20,				0,			0,			0	union all		 --star engines
-select		15,		-1,		 -3,		 0,					 0,				 0,			 0,			 0,					0,				 0,				 0,				0,			0,			1 			--scanner
+select		15,		-1,		 -3,		 0,					 0,				 0,			 0,			 0,					0,				 0,				 0,				0,			0,			1 	union all		 --scanner
+select		17,	   -19,		 -11,		 0,					 0,				 0,			 0,			 0,					0,				 0,				 0,				0,			2,			0 			--space marines
 
 INSERT [dbo].[ModulesGain] 
 ([modulesId],	[crew], [energy], [hitpoints], [damagereduction], [damageoutput], [cargoroom], [fuelroom], [inSpaceSpeed], [inSystemSpeed], [maxSpaceMoves], [maxSystemMoves], [special], [scanRange], [population]) 
@@ -30,15 +31,16 @@ select		523,   -20,		-10,		 0,					 0,				 0,			 0,			 0,					0,				 0,				 0,		
 
 --specail Res 1
 INSERT into [dbo].[ModulesGain] (
-[modulesId], [crew], [energy], [hitpoints],		[damagereduction], [damageoutput], [cargoroom], [fuelroom], [inSpaceSpeed], [inSystemSpeed], [maxSpaceMoves], [maxSystemMoves], [special], [scanRange],weaponType) 
-select 1101, 20,	-3,					0,						0,				0,			0,		0,				0,					0,				0,		0,					0,			0,				0 union all   --crew
-select 1102, -2,	25,					0,						0,				0,			0,		0,				0,					0,				0,		0,					0,			0,				0 union all  --reactor
-select 1103, 0,		0,					150,					0,				0,			0,		0,				0,					0,				0,		0,					0,			0,				0 union all   --hull
-select 1104, -1,	-4,					0,						7,				0,			0,		0,				0,					0,				0,		0,					0,			0,				0 union all  --shield
-select 1105, -1,	-6,					0,						0,				28,			0,		0,				0,					0,				0,		0,					0,			0,				1 union all    --laser
-select 1108, -1,	-2,					0,						0,				0,			400,	50,				0,					0,				0,		0,					0,			0,				0 union all   -- cargo
-select 1110, -1,	-4,					0,						0,				0,			0,		0,				28,					0,				24,		0,					0,			0,				0 union all    --star engines
-select 1115, -1,	-7,					0,					   10,				0,			0,		0,				0,					0,				0,		0,					0,			3,				0    --scanner
+[modulesId], [crew], [energy], [hitpoints],		[damagereduction], [damageoutput], [cargoroom], [fuelroom], [inSpaceSpeed], [inSystemSpeed], [maxSpaceMoves], [maxSystemMoves], [special], [scanRange],weaponType, toHitRatio) 
+select 1101, 20,	-3,					0,						0,				0,			0,		0,				0,					0,				0,		0,					0,			0,				0,		0	union all   --crew
+select 1102, -2,	25,					0,						0,				0,			0,		0,				0,					0,				0,		0,					0,			0,				0,		0	union all  --reactor
+select 1103, 0,		0,					140,					0,				0,			0,		0,				0,					0,				0,		0,					0,			0,				0,		0	union all   --hull
+select 1104, -1,	-4,					0,					   33,				0,			0,		0,				0,					0,				0,		0,					0,			0,				0,		0	union all  --shield
+select 1105, -1,	-6,					0,						0,			   42,			0,		0,				0,					0,				0,		0,					0,			0,				1,	  140	union all    --laser
+select 1108, -1,	-2,					0,						0,				0,			400,	50,				0,					0,				0,		0,					0,			0,				0,		0	union all   -- cargo
+select 1109, -1,	-2,					0,						0,				0,			0,		0,				0,				  100,				0,	  100,					0,			0,				0,		0	union all   -- cargo
+select 1110, -1,	-4,					0,						0,				0,			0,		0,				24,					0,				24,		0,					0,			0,				0,		0	union all    --star engines
+select 1115, -1,	-7,					0,					   10,				0,			0,		0,				0,					0,				0,		0,					0,			2,				0,		0	   --scanner
 
 
 -- Level 2
@@ -46,14 +48,14 @@ INSERT into [dbo].[ModulesGain]
 ([modulesId], [crew], [energy], [hitpoints],	[damagereduction],	[damageoutput], [cargoroom],	[fuelroom], [inSpaceSpeed], [inSystemSpeed], [maxSpaceMoves], [maxSystemMoves], [special], [scanRange],	weaponType) 
 select	101,	 25,		 -3,		  0,					0,				 0,			0,				0,				0,				0,				0,					0,			0,			0,			0 union all   --crew
 select	102,	 -2,		 30,		  0,					0,				 0,			0,				0,				0,				0,				0,					0,			0,			0,			0 union all  --reactor
-select	103,	  0,		  0,		175,					0,				 0,			0,				0,				0,				0,				0,					0,			0,			0,			0 union all   --hull
-select	104,	 -1,		 -4,		  0,				   11,				 0,			0,				0,				0,				0,				0,					0,			0,			0,			0 union all  --shield
-select	105,	 -1,		 -6,		  0,					0,				 30,		0,				0,				0,				0,				0,					0,			0,			0,			1 union all    --laser
-select	106,	 -1,		 -2,		  0,					0,				 30,		0,				0,				0,				0,				0,					0,			0,			0,			2 union all   --missile
-select	107,	 -1,		 -4,		  0,					0,				 30,		0,				0,				0,				0,				0,					0,			0,			0,			3 union all   --mass driver
+select	103,	  0,		  0,		150,					0,				 0,			0,				0,				0,				0,				0,					0,			0,			0,			0 union all   --hull
+select	104,	 -1,		 -4,		  0,				   34,				 0,			0,				0,				0,				0,				0,					0,			0,			0,			0 union all  --shield
+select	105,	 -1,		 -6,		  0,					0,				45, 		0,				0,				0,				0,				0,					0,			0,			0,			1 union all    --laser
+select	106,	 -1,		 -2,		  0,					0,				90, 		0,				0,				0,				0,				0,					0,			0,			0,			2 union all   --missile
+select	107,	 -1,		 -4,		  0,					0,			   180,  		0,				0,				0,				0,				0,					0,			0,			0,			3 union all   --mass driver
 select	108,	 -1,		 -2,		  0,					0,				 0,			500,			50,				0,				0,				0,					0,			0,			0,			0 union all   -- cargo
-select	109,	 -1,		 -4,		  0,					0,				 0,			0,				0,				0,		 	  120,				0,				  140,			0,			0,			0 union all   --system Enginge
-select	110,	 -1,		 -4,		  0,					0,				 0,			0,				0,				30,				0,			   30,					0,			0,			0,			0 union all    --star engines
+select	109,	 -1,		 -4,		  0,					0,				 0,			0,				0,				0,		 	  110,				0,				  110,			0,			0,			0 union all   --system Enginge
+select	110,	 -1,		 -4,		  0,					0,				 0,			0,				0,				26,				0,			   26,					0,			0,			0,			0 union all    --star engines
 select	115,	 -1,		 -7,		  0,					0,				 0,			0,				0,				0,				0,				0,					0,			0,			2,			0    --scanner
 
 -- Level 3
@@ -61,11 +63,11 @@ INSERT into [dbo].[ModulesGain]
 ([modulesId], [crew], [energy], [hitpoints],	[damagereduction],	[damageoutput], [cargoroom],	[fuelroom], [inSpaceSpeed], [inSystemSpeed], [maxSpaceMoves], [maxSystemMoves], [special], [scanRange],	weaponType) 
 select	201,	 35,		 -4,		  0,					0,				 0,			0,				0,				0,				0,				0,					0,			0,			0,			0 union all   --crew
 select	202,	 -4,		 40,		  0,					0,				 0,			0,				0,				0,				0,				0,					0,			0,			0,			0 union all  --reactor
-select	203,	  0,		  0,		250,					0,				 0,			0,				0,				0,				0,				0,					0,			0,			0,			0 union all   --hull
-select	204,	 -5,		 -4,		  0,				   14,				 0,			0,				0,				0,				0,				0,					0,			0,			0,			0 union all  --shield
-select	205,	 -5,		 -6,		  0,					0,				 33,		0,				0,				0,				0,				0,					0,			0,			0,			1 union all    --laser
-select	206,	 -5,		 -2,		  0,					0,				 33,		0,				0,				0,				0,				0,					0,			0,			0,			2 union all   --missile
-select	207,	 -5,		 -4,		  0,					0,				 33,		0,				0,				0,				0,				0,					0,			0,			0,			3 union all   --mass driver
+select	203,	  0,		  0,		200,					0,				 0,			0,				0,				0,				0,				0,					0,			0,			0,			0 union all   --hull
+select	204,	 -5,		 -4,		  0,				   37,				 0,	 		0,				0,				0,				0,				0,					0,			0,			0,			0 union all  --shield
+select	205,	 -5,		 -6,		  0,					0,				60,	    	0,				0,				0,				0,				0,					0,			0,			0,			1 union all    --laser
+select	206,	 -5,		 -2,		  0,					0,			   120, 		0,				0,				0,				0,				0,					0,			0,			0,			2 union all   --missile
+select	207,	 -5,		 -4,		  0,					0,			   240, 		0,				0,				0,				0,				0,					0,			0,			0,			3 union all   --mass driver
 select	208,	 -4,		 -7,		  0,					0,				 0,			800,			50,				0,				0,				0,					0,			0,			0,			0 union all   -- cargo
 select	209,	 -3,		 -9,		  0,					0,				 0,			0,				0,				0,		 	  140,				0,				  140,			0,			0,			0 union all   --system Enginge
 select	210,	 -3,		 -9,		  0,					0,				 0,			0,				0,				35,				0,			   35,					0,			0,			0,			0 union all    --star engines
@@ -75,11 +77,11 @@ select	215,	 -4,		 -12,		  0,					0,				 0,			0,				0,				0,				0,				0,					0,	
 --star bases
 INSERT into [dbo].[ModulesGain] 
 	([modulesId], [crew], [energy], [hitpoints], [damagereduction], [damageoutput], [cargoroom], [fuelroom], [inSpaceSpeed], [inSystemSpeed], [maxSpaceMoves], [maxSystemMoves], [special], [scanRange],weaponType) 
-select 499,			-9,		-4,	0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0 union all   --outpost
-select 500,			-30, -30,	0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0 union all  --
-select 501,			-100, -100, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0 union all   --
-select 502,			-300, -300, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0 union all --star fortressu   --
-select 520,			-200, -200, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0
+select 499,			-9,		-4,	0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0 union all   --outpost
+select 500,			-30, -30,	0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0 union all  --
+select 501,			-100, -100, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0 union all   --
+select 502,			-300, -300, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0 union all --star fortressu   --
+select 520,			-200, -200, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0
 
 /****** Object:  Table [dbo].[ModulesCosts]    Script Date: 12/06/2013 21:56:05 ******/
 /*
@@ -98,6 +100,8 @@ select 520,			-200, -200, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0
 23, N'',
 */
 -- Crew I --delete from [ModulesCosts]
+delete from [ModulesCosts]
+
 INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1, 1, 50)  -- bm
 INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1, 2, 30)  -- Nahrung
 INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1, 7, 10)  -- assembly points
@@ -174,6 +178,11 @@ INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (15, 7, 15
 INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (15, 10, 10)  --metall
 INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (15, 1, 35)  -- bm
 
+--Space Marines
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (17, 7, 60)
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (17, 10, 50)  --metall
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (17, 1, 30)  -- bm
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (17, 2, 10)  -- Nahrung
 
 --Colonizing Module II
 INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (23, 1, 90)
@@ -271,11 +280,10 @@ INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1102, 104
 INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1102, 10, 30)  --metall
 
 --hull
-INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1103, 1, 10)		-- bm
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1103, 1, 20)		-- bm
 INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1103, 7, 30)-- assembly points
-INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1103, 50, 20)  -- adv bm 2
 INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1103, 1041, 50) --Terbium
-INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1103, 10, 50)  --metall
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1103, 10, 25)  --metall
 
 --shield
 INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1104, 1, 10)		-- bm
@@ -296,12 +304,17 @@ INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1108, 7, 
 INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1108, 1043, 50)  --Yttrium
 INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1108, 10, 30)  --metall
 
---star engines
+--star engines I
 INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1110, 1, 10)		-- bm
 INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1110, 7, 30)
 INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1110, 1043, 50)  --Yttrium
 INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1110, 10, 30)  --metall
 
+--system engines I
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1109, 1, 10)		-- bm
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1109, 7, 30)
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1109, 1044, 50)  --Lutetium
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1109, 10, 30)  --metall
 
 --scanner
 INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1115, 1, 20)		-- bm

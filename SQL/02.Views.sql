@@ -566,7 +566,7 @@ AS
   FROM   [alliancemembers]; 
 
 go 
-
+/*
 IF EXISTS(SELECT 1 
           FROM   sys.objects 
           WHERE  NAME = N'v_UserColonyMap' 
@@ -584,7 +584,7 @@ AS
   FROM   [usercolonymap]; 
 
 go 
-
+*/
 IF EXISTS(SELECT 1 
           FROM   sys.objects 
           WHERE  NAME = N'v_Buildings' 
@@ -955,8 +955,8 @@ CREATE VIEW [engine].[v_CommunicationNode]
 AS 
   SELECT id, 
          userid, 
-         position.STX AS posX, 
-         position.STY AS posY, 
+         positionX AS posX, 
+         positionY AS posY, 
          NAME, 
          positionx, 
          positiony, 
@@ -1485,8 +1485,8 @@ go
 CREATE VIEW [engine].[v_StarMap] 
 AS 
   SELECT id, 
-         position.STX as posX, 
-		 position.STY as posY,
+         positionX as posX, 
+		 positionY as posY,
          systemname, 
          objectid, 
          size, 
@@ -1732,3 +1732,76 @@ AS
 
 go 
 
+IF EXISTS(SELECT 1 
+          FROM   sys.objects 
+          WHERE  NAME = N'v_Combat' 
+                 AND type = N'V') 
+  BEGIN 
+      DROP VIEW [engine].[v_Combat] 
+  END 
+
+go 
+
+CREATE VIEW [engine].[v_Combat] 
+AS 
+SELECT 
+	combatId ,
+	attackerId ,
+	defenderId ,
+	[attackerName]  ,
+    [defenderName]  ,
+	attackerUserId  ,
+	defenderUserId  ,
+	starId ,
+	spaceX ,
+	spaceY ,
+	systemX ,
+	systemY ,
+
+	attackerDamageDealt ,
+	defenderDamageDealt ,
+
+	attackerHitPointsRemain,
+	defenderHitPointsRemain,
+	defenderHasRead,
+	messageDT,
+	attackerExperience,
+	defenderExperience,
+	attackerShipHullId ,
+	defenderShipHullId ,
+	attackerShipHullImageId,
+	defenderShipHullImageId,
+
+	attackerEvasion			,
+	attackerMaxHitPoints	,
+	attackerStartHitpoint	,
+	defenderEvasion			,
+	defenderMaxHitPoints	,
+	defenderStartHitpoint	,
+
+	attackerShield	,
+	defenderShield  
+
+FROM   [Combat]; 
+go
+IF EXISTS(SELECT 1 
+          FROM   sys.objects 
+          WHERE  NAME = N'v_CombatRounds' 
+                 AND type = N'V') 
+  BEGIN 
+      DROP VIEW [engine].[v_CombatRounds] 
+  END 
+
+go 
+CREATE VIEW [engine].[v_CombatRounds] 
+AS 
+SELECT 
+	combatId,
+	roundNumber   ,
+	shotNumber,
+	side   ,
+	moduleId   ,
+	damage   ,
+	hitPropability   ,
+	isHit   
+FROM   [CombatRounds]; 

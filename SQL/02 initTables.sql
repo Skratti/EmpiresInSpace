@@ -152,6 +152,8 @@ GO
 
 
 
+
+
 -- drop table [Log]
 create TABLE [dbo].[Log]  (
 	
@@ -1741,8 +1743,61 @@ select
 	10,1
 from dbo.ShipTemplateModulePositions
 inner join dbo.Ships on Ships.templateId = ShipTemplateModulePositions.shipTemplateId
+
+alter table [dbo].[Combat] add 
+	attackerShield int not null default 0,
+	defenderShield  int not null default 0
 */
 go
+
+
+
+CREATE TABLE [dbo].[Combat](
+	[combatId] [int] NOT NULL,
+	[attackerId] [int] NOT NULL,
+	[defenderId] [int] NOT NULL,
+	[attackerName] [nvarchar](63) NOT NULL,
+	[defenderName] [nvarchar](63) NOT NULL,
+	[attackerUserId] [int] NOT NULL,
+	[defenderUserId] [int] NOT NULL,
+	[starId] [int] NULL,
+	[spaceX] [int] NOT NULL,
+	[spaceY] [int] NOT NULL,
+	[systemX] [int] NULL,
+	[systemY] [int] NULL,
+	[attackerDamageDealt] [int] NOT NULL,
+	[defenderDamageDealt] [int] NOT NULL,
+	[attackerHitPointsRemain] [int] NOT NULL,
+	[defenderHitPointsRemain] [int] NOT NULL,
+	[defenderHasRead] [bit] NOT NULL,
+	[messageDT] [datetime] NOT NULL,
+	attackerExperience int not null default 0,
+	defenderExperience  int not null default 0,
+	attackerShipHullId int not null default 0,
+	defenderShipHullId  int not null default 0,
+	attackerShipHullImageId int not null default 0,
+	defenderShipHullImageId  int  not null default 0,
+	attackerEvasion  int not null default 0,
+	attackerMaxHitPoints int not null default 0,
+	attackerStartHitpoint int not null default 0,
+	defenderEvasion  int not null default 0,
+	defenderMaxHitPoints int not null default 0,
+	defenderStartHitpoint int not null default 0,
+	attackerShield int not null default 0,
+	defenderShield  int not null default 0
+) ON [PRIMARY]
+go
+
+CREATE TABLE [dbo].[CombatRounds](
+	[combatId] [int] NOT NULL,
+	[roundNumber] [int] NOT NULL,
+	[shotNumber] [int] NOT NULL,
+	[side] [int] NOT NULL,
+	[moduleId] [int] NOT NULL,
+	[damage] [int] NOT NULL,
+	[hitPropability] [real] NOT NULL,
+	[isHit] [bit] NOT NULL
+) ON [PRIMARY]
 
 go
 

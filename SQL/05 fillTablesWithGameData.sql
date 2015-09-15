@@ -253,6 +253,7 @@ INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [d
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (2014, N'Asteroid Mining', N'Engine.png', 1, 0, 90)
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (2015, N'Scanner I', N'Scanner.png', 1, 0, 89)
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (2016, N'Defense satellite', N'ScoutModules.png', 1, 0, 343)
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (2017, N'Space Marines', N'SpaceMarines.png', 1, 0, 686)
 
 --update [dbo].[ObjectDescription] set [objectimageUrl] =  N'Colonization_I.png' where id = 2013
 --delete from [ObjectDescription] where id = 2023
@@ -293,11 +294,14 @@ INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [d
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (3104, N'Scandium Shield I', N'Shield.png', 1, 0, 386)
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (3105, N'Holmium Laser I', N'WeaponLaser.png', 1, 0, 387)
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (3108, N'Yttrium Cargo I', N'Cargo.png', 1, 0, 388)
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (3109, N'Lutetium System Engines I', N'Impuls.png', 1, 0, 736)
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (3110, N'Yttrium Hyper Engines I', N'Hyper.png', 1, 0, 389)
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (3115, N'Lutetium Scanner I', N'Scanner.png', 1, 0, 390)
 
+--INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (3500, N'Nebula', N'nebel01.png', 1, 0, 390)
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (3500, N'Nebula', N'NebulaPurple01.png', 1, 0, 390)
 
-
+--delete from [dbo].[ObjectDescription] where id = 3500
 
 
 print '[ObjectDescription] Done'
@@ -653,6 +657,7 @@ INSERT [dbo].[Goods] ([id], [name], [objectDescriptionId], [goodsType], [label])
 INSERT [dbo].[Goods] ([id], [name], [objectDescriptionId], [goodsType], [label]) VALUES (2014, N'Asteroid Mining', 2014, 2, 90)
 INSERT [dbo].[Goods] ([id], [name], [objectDescriptionId], [goodsType], [label]) VALUES (2015, N'Scanner I', 2015, 2, 89)
 INSERT [dbo].[Goods] ([id], [name], [objectDescriptionId], [goodsType], [label]) VALUES (2016, N'Defense satellite', 2016, 2, 343)
+INSERT [dbo].[Goods] ([id], [name], [objectDescriptionId], [goodsType], [label]) VALUES (2017, N'Space Marines', 2017, 2, 686)
 INSERT [dbo].[Goods] ([id], [name], [objectDescriptionId], [goodsType], [label]) VALUES (2023, N'Colonizing Module II', 2023, 2, 720)
 
 --update [dbo].[Goods] set [objectDescriptionId] = 2023 where id = 2023
@@ -690,6 +695,7 @@ INSERT [dbo].[Goods] ([id], [name], [objectDescriptionId], [goodsType], [label])
 INSERT [dbo].[Goods] ([id], [name], [objectDescriptionId], [goodsType], [label]) VALUES (3104, N'Scandium Shield I', 3104, 2, 386)
 INSERT [dbo].[Goods] ([id], [name], [objectDescriptionId], [goodsType], [label]) VALUES (3105, N'Holmium Laser I', 3105, 2, 387)
 INSERT [dbo].[Goods] ([id], [name], [objectDescriptionId], [goodsType], [label]) VALUES (3108, N'Yttrium Cargo I', 3108, 2, 388)
+INSERT [dbo].[Goods] ([id], [name], [objectDescriptionId], [goodsType], [label]) VALUES (3109, N'Lutetium System Engines I', 3109, 2, 736)
 INSERT [dbo].[Goods] ([id], [name], [objectDescriptionId], [goodsType], [label]) VALUES (3110, N'Yttrium Hyper Engines I', 3110, 2, 389)
 INSERT [dbo].[Goods] ([id], [name], [objectDescriptionId], [goodsType], [label]) VALUES (3115, N'Lutetium Scanner I', 3115, 2, 390)
 
@@ -755,6 +761,9 @@ INSERT [dbo].[Modules] ([id], [name], [descriptionLabel], [goodsId], [label]) VA
 INSERT [dbo].[Modules] ([id], [name], [descriptionLabel], [goodsId], [label]) VALUES (13, N'Colonizing Module I', 13, 2013, 88)
 --INSERT [dbo].[Modules] ([id], [name], [descriptionLabel], [goodsId], [label]) VALUES (14, N'Asteroid Miner', 14, 2014, 90)
 INSERT [dbo].[Modules] ([id], [name], [descriptionLabel], [goodsId], [label]) VALUES (15, N'Scanner I', 15, 2015, 89)
+INSERT [dbo].[Modules] ([id], [name], [descriptionLabel], [goodsId], [label]) VALUES (17, N'Space Marines', 686, 2017, 686)
+
+
 
 --delete from [dbo].[Modules] where id = 523
 
@@ -809,11 +818,12 @@ select 1103, 4, N'Terbium Hull I', 3, 3103, 385 union all
 select 1104, 4, N'Scandium Shield I', 4, 3104, 386 union all
 select 1105, 4, N'Holmium Laser I', 5, 3105, 387 union all
 select 1108, 4, N'Yttrium Cargo I', 8, 3108, 388 union all
+select 1109, 4, N'Lutetium Engines I', 8, 3109, 736 union all
 select 1110, 4, N'Yttrium Hyper Engines I', 10, 3110, 389 union all
 select 1115, 4, N'Lutetium Scanner I', 15, 3115, 390 
 
 
-SET IDENTITY_INSERT [dbo].[Modules] OFF
+SET IDENTITY_INSERT [dbo].[Modules] off
 
 
 
@@ -932,6 +942,8 @@ INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (1, 20)
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (1, 21)
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (1, 22)
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (1, 50)
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (1, 55)
+
 
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (1, 1040)
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (1, 1041)
@@ -960,6 +972,7 @@ INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (2, 20)
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (2, 22)
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (2, 50)
 INSERT [dbo].[BuildOptions] ([objectId],[buildingId]) VALUES (2, 53)  --Neutronium Reactor
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (2, 55)
 
 --,(3, 'Wasser', 103)
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (3, 11)
@@ -1004,6 +1017,7 @@ INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (5, 1043)
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (5, 1044)
 
 INSERT [dbo].[BuildOptions] ([objectId],[buildingId]) VALUES (5, 53)  --Neutronium Reactor
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (5, 55)
 
 --,(6, 'Eis', 106)
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (6, 8)
@@ -1309,6 +1323,14 @@ INSERT [dbo].[BuildingCosts] ([buildingId], [goodsId], [amount]) VALUES (54, 50,
 INSERT [dbo].[BuildingCosts] ([buildingId], [goodsId], [amount]) VALUES (54, 60, 20)  -- Neutronium
 
 
+--Arcology 
+INSERT [dbo].[BuildingCosts] ([buildingId], [goodsId], [amount]) VALUES (55, 7,  70) -- Assembly
+INSERT [dbo].[BuildingCosts] ([buildingId], [goodsId], [amount]) VALUES (55, 1,  30) --  -Baumaterial
+INSERT [dbo].[BuildingCosts] ([buildingId], [goodsId], [amount]) VALUES (55, 10, 70) --  -Stahl
+INSERT [dbo].[BuildingCosts] ([buildingId], [goodsId], [amount]) VALUES (55, 11, 40)  -- kunststoffe
+
+
+
 --Assembly Plant
 --delete from [BuildingCosts] where [buildingId] = 51
 INSERT [dbo].[BuildingCosts] ([buildingId], [goodsId], [amount]) VALUES (19, 1, 40)
@@ -1548,7 +1570,7 @@ INSERT [dbo].[ShipHullsGain] ([shipHullId], [crew], [energy], [hitpoints], [dama
 insert [dbo].[ShipHullsGain] 
 ([shipHullId], [crew], [energy], [hitpoints], [damagereduction], [damageoutput], [cargoroom], [fuelroom], [inSpaceSpeed], [inSystemSpeed], [maxSpaceMoves], [maxSystemMoves], [special], [scanRange], [speedFactor])
 select		0,		0,		0,			   0,				0,				0,				0,			0,				0,				0,				0,				0,			0,				0 ,			1		union all
-select		1,		2,		-1,			 100,			   80,				0,				2,			80,				0,				5,				0,				20,			0,				2 ,			1.0		union all -- Scout
+select		1,		2,		-1,			 100,			   80,				0,				2,			80,				0,			    0,				0,			    0,			0,				2 ,			1.0		union all -- Scout
 select		2,		3,		-3,			150,			   60,				0,				10,			20,				0,				0,				0,				0,			0,				1 ,			0.8		union all
 select		3,		-1,		-5,			200,			   40,				0,				50,			60,				0,				0,				0,				0,			0,				1 ,			0.7		union all --fregatte
 select		4,		-2,		-7,			250,			   30,				0,				100,		60,				0,				0,				0,				0,			0,				1 ,			0.6		union all  -- destr

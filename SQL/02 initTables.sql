@@ -302,7 +302,9 @@ relationDescription nvarchar(255)
 go
 create UNIQUE clustered index UserRelations_Cluster ON [UserRelations](relationId);
 go
---alter table [Users] add player_ip nvarchar(55)
+/*alter table [Users] add aiId  int not null default 0,
+	aiRelation  int not null default 1
+*/
 --alter table [Users] drop DF__Users__password1__3C00B29C
 CREATE TABLE [dbo].[Users]			  (
 	[id] int not null UNIQUE check ( id > -1 ),		
@@ -345,6 +347,8 @@ CREATE TABLE [dbo].[Users]			  (
 	fogVersion int not null default 0,
 	fogString nvarchar(max) DEFAULT '' NOT NULL,
     [description] nvarchar(4000) DEFAULT '' NOT NULL,
+	aiId  int not null default 0,
+	aiRelation  int not null default 1
 	-- alter table [Users] add 	[description] nvarchar(4000) DEFAULT '' NOT NULL
 	--researchSpent int not null default 0,  -- redundant, can be calculated by summing all researches of that user
 	constraint Users_primary primary key nonclustered (id)
@@ -968,7 +972,7 @@ CREATE TABLE  [dbo].[ModulesGain]
 	special int not null default 0,	--Special like Colonization, asteroid mining	
 	weaponType tinyint not null default 0,
 	[population] bigint not null default 0,
-	toHitRatio	int not null default 100
+	toHitRatio	int not null default 0
 );
 go
 create clustered index ModulesGain_primary ON [ModulesGain](modulesId);
@@ -1855,7 +1859,7 @@ SELECT * FROM INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE TABLE_NAME = 'Colonies'
 SELECT * FROM INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE Constraint_name  = 'UQ__Colonies__3213E83E928A7311'
 ALTER TABLE Colonies DROP CONSTRAINT UQ__Colonies__3213E83E928A7311;
 alter table [Colonies]  drop column [colonyId]
-alter table [Colonies] add id int  NOT NULL	default 1
+alter table [Colonies] add [besiegedBy] int not null default 0	
 update Colonies set id = colonyId
 
 DROP TRIGGER [dbo].[TRIGGER_CreatePlanetSurface]
@@ -1877,7 +1881,8 @@ CREATE TABLE [dbo].[Colonies]  (
 	[population] bigint not null default 1000000000,
 	[construction] int not null default 0	,
 	turnsOfRioting smallInt not null default 0,
-	versionId bigint not null default 1
+	versionId bigint not null default 1,
+	[besiegedBy] int not null default 0	  --userId besieging
 	constraint colonies_primary primary  key clustered (id)		
 );
 create index colonies_userIndex ON colonies(userId);

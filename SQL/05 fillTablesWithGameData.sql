@@ -161,7 +161,7 @@ INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [d
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (408, N'Super Battleship', N'Fregatte.png', 1, 0, 58)
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (410, N'Scout2', N'Scout2XK.png', 1, 0, 55)
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (411, N'Scout3', N'Scout3_60.png', 1, 0, 55)
-
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (412, N'ScoutPirate', N'ScoutPirate60.png', 1, 0, 55)
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (430, N'Outpost', N'SpaceStation0_1_60.png', 1, 0, 585)
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (431, N'SpaceStation', N'SpaceStation1_1_60.png', 1, 0, 59)
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (434, N'Star base', N'SpaceStation2_1_60.png', 1, 0, 584)
@@ -187,6 +187,7 @@ INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [d
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (511, N'Scout3', N'Scout3_200.png', 1, 0, 55)
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (512, N'CorvetteG', N'CorvetteG.png', 1, 0, 55)
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (513, N'FregatteG', N'FregatteG.png', 1, 0, 55)
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (514, N'ScoutPirate', N'ScoutPirate200.png', 1, 0, 55)
 
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (530, N'FregatteG', N'SpaceStation0_1_300.png', 1, 0, 55)
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (531, N'FregatteG', N'SpaceStation1_1_350.png', 1, 0, 55)
@@ -541,22 +542,23 @@ select 404, N'Destroyer', N'1.gif',			N''			, 800	,118		, 496				, 2				, 13				
 --	  ([id]	, [name],[objectimageUrl], [description]					, [cost]	, [label]	, [descriptionLabel]	, [researchType], [treeColumn]	, [treeRow]) 
 select 2033	, N'Colonization III', N'1.gif', N'Colonization module.'	, 1000		, 713		, 695					, 2				, 14			,	0 union all
 select 81	, N'Pressure Dome', N'1.gif', N'Colonization module.'		, 1300		, 696		, 697					, 2				, 14			,	2 union all
-select 2200	, N'Modules III', N'1.gif', N''								, 1500		, 699		, 700					,2				, 14			,	4 union all
-select 503	, N'Star base'		, N'1.gif'		, N''					, 1000		, 584		, 559					, 2				, 14			,	9  union all
+select 2200	, N'Modules III', N'1.gif', N''								, 2000		, 699		, 700					,2				, 14			,	9 union all
+
 select 4004	, N'Fleet Command III', N'1.gif', N''						, 800		, 555		, 560					, 4				, 14			,	14  union all
 
 --level 15
 --INSERT into [dbo].[Research] 
 --	  ([id], [name],			[objectimageUrl], [description]	, [cost]		, [label]	, [descriptionLabel], [researchType]	, [treeColumn]	, [treeRow]) 
 select 3006, N'Administration V', N'1.gif', N''					, 1800			, 476		, 481				, 4					, 15				, 1		union all
-select 2500, N'Special Ressources Modules', N'1.gif', N''		, 1200			, 718		, 719				,2					, 15				, 4 union all
-select 504, N'Star fortress'	, N'1.gif'		, N''			, 1600			, 127		, 560				, 2					, 15				, 9 union all
+select 2500, N'Special Ressources Modules', N'1.gif', N''		, 1200			, 718		, 719				,2					, 15				, 6 union all
+select 503	, N'Star base'		, N'1.gif'		, N''			, 1000			, 584		, 559				, 2					, 15			,	9  union all
 select 405, N'Cruiser', N'1.gif', N''							, 1200			, 58		, 497				, 2					, 15				, 14  union all
 	
 --level 16
 --INSERT into [dbo].[Research] 
 --	  ([id], [name],[objectimageUrl], [description]	, [cost]	, [label]	, [descriptionLabel], [researchType], [treeColumn]	, [treeRow]) 
 select 5000, N'Transcendence Collab', N'1.gif'  , N'', 600		, 592		, 593				, 4				, 16				, 6		union all
+select 504, N'Star fortress'	, N'1.gif'		, N'', 1600		, 127		, 560				, 2				, 16				, 9 union all
 select 4005, N'Fleet Command VI', N'1.gif', N''		 , 1600		, 556		, 561				, 4				, 16				, 11 union all
 select 406, N'Battleship', N'1.gif', N''			 , 1600		, 124		, 498				, 2				, 16				, 14  union all
 
@@ -1428,6 +1430,7 @@ INSERT [dbo].[ShipHulls] ([id], [isStarBase], [typename], [labelName], [objectId
 INSERT [dbo].[ShipHulls] ([id], [isStarBase], [typename], [labelName], [objectId], [modulesCount], [templateImageUrl], [label]) VALUES (6, 0, N'Starship', 0, 403, 19, N'401Template.gif', 123)
 INSERT [dbo].[ShipHulls] ([id], [isStarBase], [typename], [labelName], [objectId], [modulesCount], [templateImageUrl], [label]) VALUES (7, 0, N'Battleship', 0, 405, 24, N'401Template.gif', 124)
 INSERT [dbo].[ShipHulls] ([id], [isStarBase], [typename], [labelName], [objectId], [modulesCount], [templateImageUrl], [label]) VALUES (8, 0, N'Superbattleship', 0, 405, 28, N'401Template.gif', 125)
+
 INSERT [dbo].[ShipHulls] ([id], [isStarBase], [typename], [labelName], [objectId], [modulesCount], [templateImageUrl], [label]) VALUES (199, 1, N'Outpost', 0, 430, 3, N'401Template.gif', 585)
 INSERT [dbo].[ShipHulls] ([id], [isStarBase], [typename], [labelName], [objectId], [modulesCount], [templateImageUrl], [label]) VALUES (200, 1, N'Spacestation', 0, 431, 7, N'SpaceStation1_60.png', 59)
 INSERT [dbo].[ShipHulls] ([id], [isStarBase], [typename], [labelName], [objectId], [modulesCount], [templateImageUrl], [label]) VALUES (201, 1, N'Starbase', 0, 434, 12, N'401Template.gif', 126)
@@ -1455,7 +1458,8 @@ select 12,    202 ,			437 ,			 537 ,					   0 ,						0 union all
 select 13,      1 ,			410 ,			 510 ,					   0 ,						0 union all		-- Scout 2
 select 14,    199 ,			430 ,			 530 ,					  49 ,						6 union all --spacestation 0 Outpost
 select 15,    220 ,			460 ,			 560 ,					  0 ,						0 union all
-select 16,    221 ,			461 ,			 561 ,					  0 ,						0
+select 16,    221 ,			461 ,			 561 ,					  0 ,						0 union all
+select 17,      8 ,			412 ,			 514 ,					  0 ,					  -40
 --scout 5 
 INSERT [dbo].[ShipHullsModulePositions] ([shipHullId], [posX], [posY]) VALUES (1, 1, 3)
 INSERT [dbo].[ShipHullsModulePositions] ([shipHullId], [posX], [posY]) VALUES (1, 2, 2)
@@ -1570,19 +1574,19 @@ INSERT [dbo].[ShipHullsGain] ([shipHullId], [crew], [energy], [hitpoints], [dama
 insert [dbo].[ShipHullsGain] 
 ([shipHullId], [crew], [energy], [hitpoints], [damagereduction], [damageoutput], [cargoroom], [fuelroom], [inSpaceSpeed], [inSystemSpeed], [maxSpaceMoves], [maxSystemMoves], [special], [scanRange], [speedFactor])
 select		0,		0,		0,			   0,				0,				0,				0,			0,				0,				0,				0,				0,			0,				0 ,			1		union all
-select		1,		2,		-1,			 100,			   80,				0,				2,			80,				0,			    0,				0,			    0,			0,				2 ,			1.0		union all -- Scout
-select		2,		3,		-3,			150,			   60,				0,				10,			20,				0,				0,				0,				0,			0,				1 ,			0.8		union all
-select		3,		-1,		-5,			200,			   40,				0,				50,			60,				0,				0,				0,				0,			0,				1 ,			0.7		union all --fregatte
-select		4,		-2,		-7,			250,			   30,				0,				100,		60,				0,				0,				0,				0,			0,				1 ,			0.6		union all  -- destr
-select		5,		-3,		-9,			300,			   20,				10,				150,		60,				0,				0,				0,				0,			0,				1 ,			0.5		union all  -- cruiser
+select		1,		-1,		-1,			200,			   80,				0,				2,			80,				0,			    0,				0,			    0,			0,				2 ,			1.0		union all -- Scout
+select		2,		-2,		-2,			250,			   60,				0,				10,			20,				0,				0,				0,				0,			0,				1 ,			0.8		union all
+select		3,		-4,		-3,			300,			   40,				0,				50,			60,				0,				0,				0,				0,			0,				1 ,			0.7		union all --fregatte
+select		4,		-6,		-5,			350,			   30,				0,				100,		60,				0,				0,				0,				0,			0,				1 ,			0.6		union all  -- destr
+select		5,		-8,		-9,			400,			   20,				10,				150,		60,				0,				0,				0,				0,			0,				1 ,			0.5		union all  -- cruiser
 --
-select		6,		-10,	-11,		350,			   10,				10,				200,		50,				0,				0,				0,				0,			0,				0 ,			0.4		union all -- starship
+select		6,		-10,	-11,		450,			   10,				10,				200,		50,				0,				0,				0,				0,			0,				0 ,			0.4		union all -- starship
 --
-select		7,		-15,	-18,		450,			   10,				10,				200,		50,				0,				0,				0,				0,			0,				0 ,			0.35	union all -- battle
+select		7,		-15,	-18,		500,			   10,				10,				200,		50,				0,				0,				0,				0,			0,				0 ,			0.35	union all -- battle
 select		8,		-20,	-25,		600,			    0,				0,				240,		50,				0,				0,				0,				0,			0,				0 ,			0.2		union all -- superbattle
-select		199,	3,		4,			200,				0,				0,				100,		100,			0,				0,				0,				0,			0,				1 ,			0.0		union all  
-select		200,	5,		6,			400,			    0,				0,				100,		100,			0,				0,				0,				0,			0,				1 ,			0.0		union all
-select		201,	8,		10,			550,			    0,				0,				200,		200,			0,				0,				0,				0,			0,				1 ,			0.0		union all
+select		199,	3,		4,			300,				0,				0,				100,		100,			0,				0,				0,				0,			0,				1 ,			0.0		union all  
+select		200,	5,		6,			450,			    0,				0,				100,		100,			0,				0,				0,				0,			0,				1 ,			0.0		union all
+select		201,	8,		10,			600,			    0,				0,				200,		200,			0,				0,				0,				0,			0,				1 ,			0.0		union all
 select		202,	13,		16,			800,			    0,				0,				400,		400,			0,				0,				0,				0,			0,				1 ,			0.0     union all
 select		220,	1,		100,		3000,				0,				50,				0,			0,				0,				0,				0,				0,			0,				1 ,			0.0     union all
 select		221,	1,		10,			100,				0,				5,				0,			0,				5,				6,				5,				15,			0,				0 ,			1.0
@@ -1719,7 +1723,12 @@ go
 ----------------------------------------------------------------------------------
 
 --insert neutral user 0
-INSERT [dbo].[Users] ([id], [username],  [player_ip],  [activity], [locked], [user_session], [showRaster], [moveShipsAsync], [homeCoordX], [homeCoordY], [language], [loginDT], [lastSelectedObjectType], [lastSelectedObjectId], [showSystemNames], [showColonyNames], [showCoordinates]) VALUES (0, N'Niemand', NULL,  NULL,  NULL, NULL, 0, 1, 100, 100, 1, CAST(0x0000A1B200EF844B AS DateTime), 1, 332, 0, 0, 0)
+declare @maxUserId int;
+select @maxUserId = max(id) from inSpaceIndex.dbo.Users 
+
+INSERT [dbo].[Users] ([id], [username],  [player_ip],  [activity], [locked], [user_session], [showRaster], [moveShipsAsync], [homeCoordX], [homeCoordY], [language], [loginDT], [lastSelectedObjectType], [lastSelectedObjectId], [showSystemNames], [showColonyNames], [showCoordinates], aiId, aiRelation) VALUES (0 , N'@755', NULL,  NULL,  NULL, NULL, 0, 1, 100, 100, 1, CAST(0x0000A1B200EF844B AS DateTime), 1, 332, 0, 0, 0 , 1 , 1)	--robot AI
+INSERT [dbo].[Users] (id, [username],  [player_ip],  [activity], [locked], [user_session], [showRaster], [moveShipsAsync], [homeCoordX], [homeCoordY], [language], [loginDT], [lastSelectedObjectType], [lastSelectedObjectId], [showSystemNames], [showColonyNames], [showCoordinates], aiId, aiRelation) VALUES (280, N'@756', NULL,  NULL,  NULL, NULL, 0, 1, 100, 100, 1, CAST(0x0000A1B200EF844B AS DateTime), 1, 332, 0, 0, 0 , 2 , 0)   --Pirates
+INSERT [dbo].[Users] (id, [username],  [player_ip],  [activity], [locked], [user_session], [showRaster], [moveShipsAsync], [homeCoordX], [homeCoordY], [language], [loginDT], [lastSelectedObjectType], [lastSelectedObjectId], [showSystemNames], [showColonyNames], [showCoordinates], aiId, aiRelation) VALUES ( 281, N'@762', NULL,  NULL,  NULL, NULL, 0, 1, 100, 100, 1, CAST(0x0000A1B200EF844B AS DateTime), 1, 332, 0, 0, 0 , 3 , 0)	-- Separatists
 
 --  Ship Templates
 -- One Blueprint per hull type:

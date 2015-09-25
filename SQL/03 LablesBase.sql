@@ -943,7 +943,19 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (749, N'Sp
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (750, N'Ship can colonize planets', N'', 6)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (751, N'Ship can conquer colonies', N'', 6)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (752, N'Ship can deploy a space station', N'', 6)
-
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (753, N'Besieged by {0}', N'', 6)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (754, N'Resistance: {0} turns', N'', 6)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (755, N'Robot AI', N'', 6)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (756, N'Space Pirate', N'', 6)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (757, N'Raider', N'', 6)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (758, N'Pirate vessel', N'', 6)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (759, N'Outlaws', N'', 6)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (760, N'Bandits', N'', 6)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (761, N'Rebels', N'', 6)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (762, N'Separatists', N'', 6)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (763, N'Abandon colony?', N'', 6)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (764, N'Do you really want do abandon {0}? Separatists will take over, even seizing your ships in orbit. Enter your authorization code {1} if you are sure about the consequences: ', N'', 6)
+-- delete from [LabelsBase] where id = 764
 
 /* module int not null default 0,
 0 Objects -> part of the objectDescriptin table.
@@ -959,7 +971,7 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (752, N'Sh
 
 -- update ships set hyper = 300 
 -- update ships set impuls = 300 
---delete from [LabelsBase] where id = 727
+--delete from [LabelsBase] where id > 758
 --296
 /*
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (403, N'<p>Drag the scout to the outside of your solar system. This will let him leave the system and switch the map to the starmap.<br> Find one of the neutral space stations. The next one will be at ', N'', 2)--<p> Erkunde deine Umgebung und treffe deine Nachbarn.<br> Finde eine neutrale Raumstation. Die nächste ist bei 

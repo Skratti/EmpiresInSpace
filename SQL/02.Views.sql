@@ -410,6 +410,8 @@ AS
 	  ,fogVersion
 	  ,fogString
 	  ,[description]
+	  ,aiId
+	  ,aiRelation
   /*id, 
          username,                   
          activity, 
@@ -1705,7 +1707,8 @@ AS
          construction, 
          turnsofrioting,
 		 versionId,
-		 TurnsOfSiege
+		 TurnsOfSiege,
+		 besiegedBy
   FROM   [colonies]; 
 
 go 

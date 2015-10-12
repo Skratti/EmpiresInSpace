@@ -260,7 +260,7 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (213, N'St
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (214, N'System battery', N'', 7)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (215, N'Star battery', N'', 7)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (216, N'Attack', N'', 7)
-INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (217, N'Defense', N'ShipDetail', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (217, N'Evasion', N'ShipDetail', 7)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (218, N'Hitpoints', N'', 7)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (219, N'Shield', N'', 7)
 
@@ -955,6 +955,8 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (761, N'Re
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (762, N'Separatists', N'', 6)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (763, N'Abandon colony?', N'', 6)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (764, N'Do you really want do abandon {0}? Separatists will take over, even seizing your ships in orbit. Enter your authorization code {1} if you are sure about the consequences: ', N'', 6)
+
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (765, N'Damaged', N'', 8)
 -- delete from [LabelsBase] where id = 764
 
 /* module int not null default 0,

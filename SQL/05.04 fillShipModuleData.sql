@@ -11,9 +11,9 @@ select		4,		-1,		 -1,		 0,					30,				 0,			 0,			 0,					0,				 0,				 0,				0,
 
 INSERT [dbo].[ModulesGain] 
 ([modulesId],	[crew], [energy], [hitpoints], [damagereduction], [damageoutput], [cargoroom], [fuelroom], [inSpaceSpeed], [inSystemSpeed], [maxSpaceMoves], [maxSystemMoves], [special], [scanRange], weaponType, toHitRatio) 
-select		5,		-1,		 -1,		 0,					 0,				30,			 0,			 0,					0,				 0,				 0,				0,			0,			0,			1,		140	union all	--laser
-select		6,		-1,		 -1,		 0,					 0,				60,			 0,			 0,					0,				 0,				 0,				0,			0,			0,			2,		90	union all	--missile
-select		7,		-1,		 -1,		 0,					 0,			   120,			 0,			 0,					0,				 0,				 0,				0,			0,			0,			3,  	50				--mass driver
+select		5,		-1,		 -1,		 0,					 0,				20,			 0,			 0,					0,				 0,				 0,				0,			0,			0,			1,		140	union all	--laser
+select		6,		-1,		 -1,		 0,					 0,				40,			 0,			 0,					0,				 0,				 0,				0,			0,			0,			2,		90	union all	--missile
+select		7,		-1,		 -1,		 0,					 0,			   80,			 0,			 0,					0,				 0,				 0,				0,			0,			0,			3,  	50				--mass driver
 
 INSERT [dbo].[ModulesGain] 
 ([modulesId],	[crew], [energy], [hitpoints], [damagereduction], [damageoutput], [cargoroom], [fuelroom], [inSpaceSpeed], [inSystemSpeed], [maxSpaceMoves], [maxSystemMoves], [special], [scanRange]) 
@@ -36,7 +36,7 @@ select 1101, 20,	-3,					0,						0,				0,			0,		0,				0,					0,				0,		0,					0,
 select 1102, -2,	25,					0,						0,				0,			0,		0,				0,					0,				0,		0,					0,			0,				0,		0	union all  --reactor
 select 1103, 0,		0,					140,					0,				0,			0,		0,				0,					0,				0,		0,					0,			0,				0,		0	union all   --hull
 select 1104, -3,	-4,					0,					   33,				0,			0,		0,				0,					0,				0,		0,					0,			0,				0,		0	union all  --shield
-select 1105, -3,	-5,					0,						0,			   42,			0,		0,				0,					0,				0,		0,					0,			0,				1,	  140	union all    --laser
+select 1105, -3,	-5,					0,						0,			   37,			0,		0,				0,					0,				0,		0,					0,			0,				1,	  140	union all    --laser
 select 1108, -2,	-2,					0,						0,				0,			400,	50,				0,					0,				0,		0,					0,			0,				0,		0	union all   -- cargo
 select 1109, -3,	-2,					0,						0,				0,			0,		0,				0,				  100,				0,	  100,					0,			0,				0,		0	union all   -- cargo
 select 1110, -3,	-4,					0,						0,				0,			0,		0,				24,					0,				24,		0,					0,			0,				0,		0	union all    --star engines
@@ -50,9 +50,9 @@ select	101,	 24,		 -3,		  0,					0,				 0,			0,				0,				0,				0,				0,					0,		
 select	102,	 -2,		 38,		  0,					0,				 0,			0,				0,				0,				0,				0,					0,			0,			0,			0,		0	 union all  --reactor
 select	103,	  0,		  0,		150,					0,				 0,			0,				0,				0,				0,				0,					0,			0,			0,			0,		0	 union all   --hull
 select	104,	 -3,		 -4,		  0,				   34,				 0,			0,				0,				0,				0,				0,					0,			0,			0,			0,		0	 union all  --shield
-select	105,	 -3,		 -6,		  0,					0,				45, 		0,				0,				0,				0,				0,					0,			0,			0,			1,	  140	 union all    --laser
-select	106,	 -3,		 -6,		  0,					0,				90, 		0,				0,				0,				0,				0,					0,			0,			0,			2,	   90	 union all   --missile
-select	107,	 -3,		 -6,		  0,					0,			   180,  		0,				0,				0,				0,				0,					0,			0,			0,			3,	   50	 union all   --mass driver
+select	105,	 -3,		 -6,		  0,					0,				30, 		0,				0,				0,				0,				0,					0,			0,			0,			1,	  140	 union all    --laser
+select	106,	 -3,		 -6,		  0,					0,				60, 		0,				0,				0,				0,				0,					0,			0,			0,			2,	   90	 union all   --missile
+select	107,	 -3,		 -6,		  0,					0,			   120,  		0,				0,				0,				0,				0,					0,			0,			0,			3,	   50	 union all   --mass driver
 select	108,	 -1,		 -2,		  0,					0,				 0,			500,			50,				0,				0,				0,					0,			0,			0,			0,		0	 union all   -- cargo
 select	109,	 -2,		 -4,		  0,					0,				 0,			0,				0,				0,		 	  110,				0,				  110,			0,			0,			0,		0	 union all   --system Enginge
 select	110,	 -2,		 -4,		  0,					0,				 0,			0,				0,				26,				0,			   26,					0,			0,			0,			0,		0   union all    --star engines
@@ -65,9 +65,9 @@ select	201,	 35,		 -4,		  0,					0,				 0,			0,				0,				0,				0,				0,					0,		
 select	202,	 -4,		 40,		  0,					0,				 0,			0,				0,				0,				0,				0,					0,			0,			0,			0 union all  --reactor
 select	203,	  0,		  0,		200,					0,				 0,			0,				0,				0,				0,				0,					0,			0,			0,			0 union all   --hull
 select	204,	 -5,		 -4,		  0,				   37,				 0,	 		0,				0,				0,				0,				0,					0,			0,			0,			0 union all  --shield
-select	205,	 -5,		 -6,		  0,					0,				60,	    	0,				0,				0,				0,				0,					0,			0,			0,			1 union all    --laser
-select	206,	 -5,		 -2,		  0,					0,			   120, 		0,				0,				0,				0,				0,					0,			0,			0,			2 union all   --missile
-select	207,	 -5,		 -4,		  0,					0,			   240, 		0,				0,				0,				0,				0,					0,			0,			0,			3 union all   --mass driver
+select	205,	 -5,		 -6,		  0,					0,				40,	    	0,				0,				0,				0,				0,					0,			0,			0,			1 union all    --laser
+select	206,	 -5,		 -2,		  0,					0,			    80, 		0,				0,				0,				0,				0,					0,			0,			0,			2 union all   --missile
+select	207,	 -5,		 -4,		  0,					0,			   160, 		0,				0,				0,				0,				0,					0,			0,			0,			3 union all   --mass driver
 select	208,	 -2,		 -7,		  0,					0,				 0,			800,			50,				0,				0,				0,					0,			0,			0,			0 union all   -- cargo
 select	209,	 -3,		 -9,		  0,					0,				 0,			0,				0,				0,		 	  140,				0,				  140,			0,			0,			0 union all   --system Enginge
 select	210,	 -3,		 -9,		  0,					0,				 0,			0,				0,				35,				0,			   35,					0,			0,			0,			0 union all    --star engines

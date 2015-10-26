@@ -12,6 +12,7 @@ drop table TradeOffers
 drop table [dbo].[ServerEvents]
 
 drop table [dbo].[MessageBody]
+drop table [dbo].[MessageParticipants]
 drop table [dbo].[MessageHeads]
 drop TRIGGER TRIGGER_Alliances_Delete_FKs
 drop TRIGGER TRIGGER_Users_Delete_FKs
@@ -2121,9 +2122,56 @@ create index MessageHeads_addressee ON [MessageHeads](addressee);
 print 'table [dbo].[MessageHeads] created.'
 go
 
+--drop table  [dbo].[MessageParticipants]
+CREATE TABLE [dbo].[MessageParticipants]  (
+	headerId INT NOT NULL 	references [MessageHeads](id) on update no action on delete cascade,
+	participant INT NOT NULL references users(id) on update cascade on delete cascade,	
+	[read] bit DEFAULT 0 NOT NULL
+		
+);
+create index MessageParticipants_Head ON [MessageParticipants](headerId);
+create index MessageParticipants_Participant ON [MessageParticipants](participant);
+print 'table [dbo].[MessageParticipants] created.'
+go
+/*
+insert into [MessageParticipants]
+select id,sender,1 from dbo.MessageHeads;
+
+insert into [MessageParticipants]
+select id,addressee,[read] from dbo.MessageHeads;
+*/
+go
+
+/*
+ALTER TABLE [dbo].[MessageBody] DROP CONSTRAINT [FK__MessageBo__heade__69285ECE]
+ALTER TABLE [dbo].[MessageBody] DROP CONSTRAINT [MessageBody_primary]
+ALTER TABLE [dbo].[MessageBody] DROP CONSTRAINT [UQ__MessageB__C03165DAFAFC40F2]
+
+ALTER TABLE [dbo].[MessageBody] ADD  CONSTRAINT [MessageBody_primary] PRIMARY KEY CLUSTERED 
+(
+	[headerId] ASC,
+	messagePart ASC
+)
+
+
+ALTER TABLE [MessageBody] ADD 	messagePart int not null default 0
+ALTER TABLE [MessageBody] ADD 	sender int references users(id) on update no action on delete SET NULL
+ALTER TABLE [MessageBody] ADD 	sendingDate datetime not null default GETDATE()
+
+
+update body set body.sender = head.sender, body.sendingDate = head.sendingDate
+from [dbo].[MessageBody]  as body
+inner join dbo.MessageHeads as head
+on head.id = body.headerId
+*/
+go
+
 CREATE TABLE [dbo].[MessageBody]  (
 	headerId INT NOT NULL UNIQUE 
-		references [MessageHeads](id) on update cascade on delete cascade,		
+		references [MessageHeads](id) on update no action on delete no action,		
+	messagePart int not null default 0,
+	sender int references users(id) on update cascade on delete SET NULL,
+	sendingDate datetime not null default GETDATE(),
 	[message] nvarchar (4000) DEFAULT 'message' NOT NULL,				
 	constraint MessageBody_primary primary key clustered (headerId)		
 );

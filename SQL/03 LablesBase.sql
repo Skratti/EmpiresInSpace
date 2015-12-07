@@ -957,6 +957,17 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (763, N'Ab
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (764, N'Do you really want do abandon {0}? Separatists will take over, even seizing your ships in orbit. Enter your authorization code {1} if you are sure about the consequences: ', N'', 6)
 
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (765, N'Damaged', N'', 8)
+
+
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (766, N'Mark as read', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (767, N'Mark all read', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (768, N'Hostile', N'', 7)
+
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (769, N'Owner', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (770, N'Trade ports', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (771, N'Position', N'', 7)
+
+
 -- delete from [LabelsBase] where id = 764
 
 /* module int not null default 0,

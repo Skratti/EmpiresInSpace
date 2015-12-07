@@ -439,7 +439,7 @@ SET IDENTITY_INSERT [dbo].[Research] ON
 INSERT into [dbo].[Research] 
 	  ([id], [name],[objectimageUrl], [description]	, [cost], [label]	, [descriptionLabel], [researchType], [treeColumn]	, [treeRow]) 
 
-select 1, N'Base research', N'1.gif', N'Recovery of the mothership database.', 3, 402, 166,0,0,4 union all
+select 1, N'Base research', N'1.gif', N'Recovery of the mothership database.', 3, 402, 166,0,0,6 union all
 
 --Level 1
 select 9, N'Ecosytem Adaption I', N'1.gif', N'Erlaubt den Bau des Kraftwerks', 2, 623, 624,1,1,0 union all
@@ -490,43 +490,47 @@ select 1064, N'Lutetium Ecosystem Improvements', N'1.gif', N'', 60, 664, 516, 3,
 --Level 7
 --INSERT into [dbo].[Research] 
 --	  ([id], [name],[objectimageUrl], [description]	, [cost], [label]	, [descriptionLabel], [researchType], [treeColumn]	, [treeRow]) 
-select 3, N'TreibstoffRaffinerie', N'1.gif', N'Erlaubt den Bau der TreibstoffRaffinerie', 460, 93, 485,1,7,3  union all
-select 3003, N'Administration II', N'1.gif', N''	, 550	, 473		, 478				, 4				, 7				, 1		 union all
+select 1051, N'Terbium Hull I', N'1.gif', N'', 1000, 385, 513, 3, 7, 4  union all
+select 1050, N'Holmium Laser I', N'1.gif', N'', 1200, 387, 512, 3, 7, 6  union all
+
 select 1052, N'Scandium Shield I', N'1.gif', N'', 780, 386, 514, 3, 7, 8 union all
 select 1053, N'Yttrium Modules I', N'1.gif', N'', 660, 391, 515, 3, 7, 10 union all
 select 1054, N'Lutetium Modules I', N'1.gif', N'', 630, 392, 516, 3, 7, 12   union all
 
 
 --Level 8
-select 2023, N'Colonization II', N'1.gif', N'Colonization module.', 200, 468, 522, 2 , 8 , 0 union all
+select 3003, N'Administration II', N'1.gif', N''	, 550	, 473		, 478				, 4				, 8				, 1		 union all
+
 --INSERT into [dbo].[Research] 
 --	  ([id], [name],							[objectimageUrl], [description]	, [cost], [label]	, [descriptionLabel], [researchType], [treeColumn]	, [treeRow]) 
-
-select 4003, N'Fleet Command II',						N'1.gif',			N''		, 250	, 554		, 559				, 4				, 8				, 9		 union all
+select 3, N'TreibstoffRaffinerie', N'1.gif', N'Erlaubt den Bau der TreibstoffRaffinerie', 460, 93, 485,1,8,9  union all
+select 4003, N'Fleet Command II',						N'1.gif',			N''		, 250	, 554		, 559				, 4				, 8				, 14		 union all
 
 --Level 9
+select 52, N'Arcology'			, N'1.gif'				, N'Erlaubt den Bau des Kraftwerks'	, 640			, 715		, 716				, 1				, 9			, 10 union all
+
 select 50, N'Verb. Baumaterial', N'1.gif', N'Erlaubt den Bau des Kraftwerks', 700, 350, 489, 1, 9, 4 union all
 
 --INSERT into [dbo].[Research] 
 --	  ([id], [name],[objectimageUrl], [description]	, [cost], [label]	, [descriptionLabel], [researchType], [treeColumn]	, [treeRow]) 
-select 1051, N'Terbium Hull I', N'1.gif', N'', 1000, 385, 513, 3, 9, 8  union all
-select 1050, N'Holmium Laser I', N'1.gif', N'', 1200, 387, 512, 3, 9, 10  union all
-select 403, N'Frigatte', N'1.gif', N'', 1400, 174, 495, 2 , 9 , 14  union all
+select 2023, N'Colonization II', N'1.gif', N'Colonization module.', 200, 468, 522, 2 , 9 , 2 union all
+
 
 --Level 10
 --INSERT into [dbo].[Research] 
 --	  ([id], [name],[objectimageUrl], [description]	, [cost], [label]	, [descriptionLabel], [researchType], [treeColumn]	, [treeRow]) 
-select 3004, N'Administration III', N'1.gif', N''	, 880	, 474		, 479				, 4				, 10				, 1  union all
+select 3004, N'Administration III', N'1.gif', N''	, 1200	, 474		, 479				, 4				, 10				, 1  union all
 select 5, N'Kraftwerk', N'1.gif', N'Erlaubt den Bau des Kraftwerks', 530, 95, 487,1,10,3 union all
 select 55, N'Aquafarming', N'1.gif', N'Erlaubt den Bau des Kraftwerks', 470, 690, 691,1,10,5 union all
 select 502, N'Space station'	, N'1.gif'		, N''			, 880			, 59		, 558				, 2					, 10			, 7	 union all
+select 403, N'Frigatte', N'1.gif', N'', 1400, 174, 495, 2 , 10 , 14  union all
 
 --Level 11
 --INSERT into [dbo].[Research] 
 --	  ([id], [name]				,[objectimageUrl]		, [description]						, [cost]		, [label]	, [descriptionLabel], [researchType], [treeColumn]	, [treeRow]) 
-select 52, N'Arcology'			, N'1.gif'				, N'Erlaubt den Bau des Kraftwerks'	, 640			, 715		, 716				, 1				, 11			, 0 union all
 select 72, N'Superconductors II', N'1.gif', N'Erlaubt den Bau des Kraftwerks', 720, 666, 657, 1, 11, 3 union all
 select 2100, N'Modules II', N'1.gif', N'', 2200, 171, 523,2,11,9 union all
+select 4004	, N'Fleet Command III', N'1.gif', N''						, 1400		, 555		, 560					, 4				, 11			,	13  union all
 
 --Level 12
 select 5000, N'Transcendence Collab', N'1.gif'  , N'', 1200		, 592		, 593				, 4				, 12				, 4		union all
@@ -538,7 +542,7 @@ select 2103, N'Ship Defenses II', N'1.gif', N'Better ship defenses.', 620, 167, 
 --Level 13
 --INSERT into [dbo].[Research] 
 --	  ([id], [name],[objectimageUrl], [description]		, [cost], [label]	, [descriptionLabel], [researchType], [treeColumn]	, [treeRow]) 
-select 3005, N'Administration VI', N'1.gif', N''		, 1200	, 475		, 480				, 4				, 13				, 1			union all
+select 3005, N'Administration VI', N'1.gif', N''		, 2200	, 475		, 480				, 4				, 13				, 1			union all
 select 80, N'Superdense Materials', N'1.gif', N''		, 1200	, 693		, 694				, 4				, 13				, 4			union all
 select 404, N'Destroyer', N'1.gif',			N''			, 3600	,118		, 496				, 2				, 13				, 14		union all
 
@@ -548,8 +552,7 @@ select 404, N'Destroyer', N'1.gif',			N''			, 3600	,118		, 496				, 2				, 13			
 select 2033	, N'Colonization III', N'1.gif', N'Colonization module.'	, 600		, 713		, 695					, 2				, 14			,	0 union all
 select 81	, N'Pressure Dome', N'1.gif', N'Colonization module.'		, 2300		, 696		, 697					, 2				, 14			,	2 union all
 select 2200	, N'Modules III', N'1.gif', N''								, 3000		, 699		, 700					,2				, 14			,	9 union all
-
-select 4004	, N'Fleet Command III', N'1.gif', N''						, 2200		, 555		, 560					, 4				, 14			,	14  union all
+select 4005, N'Fleet Command VI', N'1.gif', N''		 , 3200		, 556		, 561				, 4				, 14				, 14 union all
 
 --level 15
 --INSERT into [dbo].[Research] 
@@ -563,14 +566,14 @@ select 405, N'Cruiser', N'1.gif', N''							, 4600			, 58		, 497				, 2					, 15
 --	  ([id], [name],[objectimageUrl], [description]	, [cost]	, [label]	, [descriptionLabel], [researchType], [treeColumn]	, [treeRow]) 
 select 3006, N'Administration V', N'1.gif', N''					, 4000			, 476		, 481				, 4					, 16				, 1		union all
 select 504, N'Star fortress'	, N'1.gif'		, N'', 1800		, 127		, 560				, 2				, 16				, 9 union all
-select 4005, N'Fleet Command VI', N'1.gif', N''		 , 3200		, 556		, 561				, 4				, 16				, 11 union all
+select 4006, N'Fleet Command V', N'1.gif', N''		, 6000	, 557			, 562				, 4				, 16				, 11 union all
 select 406, N'Battleship', N'1.gif', N''			 , 3200		, 124		, 498				, 2				, 16				, 14  union all
 
 --level 17
 --INSERT into [dbo].[Research] 
 --	  ([id], [name],[objectimageUrl], [description]	, [cost]	, [label]	, [descriptionLabel], [researchType], [treeColumn]	, [treeRow]) 
 select 5001, N'Transcendence', N'1.gif'	, N''		, 12000	, 590			, 591				, 4				, 17				, 9 union all
-select 4006, N'Fleet Command V', N'1.gif', N''		, 6000	, 557			, 562				, 4				, 17				, 11 union all
+
 select 407, N'Superbattleship', N'1.gif', N''		, 6000	, 125			, 499				, 2				, 17				, 14
 
 /*
@@ -812,7 +815,7 @@ INSERT into [dbo].[Modules]
 select 499, 1,	N'Outpost hull',		1,					2499,		586 union all
 select 500, 2,	N'Space station hull',	1,					2500,		587 union all
 select 501, 3,	N'Star base hull',		1,					2501,		588 union all
-select 502, 4,	N'Star fortress hull',	1,					2502,		589 union all
+select 502, 3,	N'Star fortress hull',	1,					2502,		589 union all
 select 520, 4,	N'Transcendence Construct',	1,				2520,		594;
 --level 3
 
@@ -1087,7 +1090,7 @@ INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (1
 
 --Kraftwerk
 INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (14, 4, -20) -- Kraftwerk  verbraucht treibstoff
-INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (14, 6, 150)  -- , erzeugt E
+INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (14, 6, 165)  -- , erzeugt E
 INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (14, 8, -10)  -- benötigt Pop
 
 --Forschungslabor
@@ -1151,6 +1154,11 @@ INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (5
 
 --Pressure Dome
 INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (54, 6, -25)
+
+
+--Arcology
+INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (55, 6, -5)	-- Häuser - energy
+
 
 --special Ressources Mines
 INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (1030, 1030, 20) -- Mine Holmium	-> Erz Holmium	
@@ -1277,13 +1285,15 @@ INSERT [dbo].[BuildingCosts] ([buildingId], [goodsId], [amount]) VALUES (6, 7, 7
 
 
 
+--insert into dbo.serverEvents (eventType) select 4
+
 
 
 --Wasserkraftwerk
 -- delete from [BuildingCosts] where [buildingId] = 11
 INSERT [dbo].[BuildingCosts] ([buildingId], [goodsId], [amount]) VALUES (11, 7, 45) --assembly
-INSERT [dbo].[BuildingCosts] ([buildingId], [goodsId], [amount]) VALUES (11, 1, 75) --BM
-INSERT [dbo].[BuildingCosts] ([buildingId], [goodsId], [amount]) VALUES (11, 10, 15) --metall
+INSERT [dbo].[BuildingCosts] ([buildingId], [goodsId], [amount]) VALUES (11, 1, 80) --BM
+INSERT [dbo].[BuildingCosts] ([buildingId], [goodsId], [amount]) VALUES (11, 10, 45) --metall
 
 --Lager
 INSERT [dbo].[BuildingCosts] ([buildingId], [goodsId], [amount]) VALUES (12, 1, 20)
@@ -1587,8 +1597,8 @@ INSERT [dbo].[ShipHullsGain] ([shipHullId], [crew], [energy], [hitpoints], [dama
 insert [dbo].[ShipHullsGain] 
 ([shipHullId], [crew], [energy], [hitpoints], [damagereduction], [damageoutput], [cargoroom], [fuelroom], [inSpaceSpeed], [inSystemSpeed], [maxSpaceMoves], [maxSystemMoves], [special], [scanRange], [speedFactor])
 select		0,		0,		0,			   0,				0,				0,				0,			0,				0,				0,				0,				0,			0,				0 ,			1		union all
-select		1,		-1,		-1,			200,			   90,				0,				2,			80,				0,			    0,				0,			    0,			0,				2 ,			1.0		union all -- Scout
-select		2,		-2,		-2,			250,			   65,				0,				10,			20,				0,				0,				0,				0,			0,				1 ,			0.8		union all
+select		1,		-1,		-1,			200,			   80,				0,				2,			80,				0,			    0,				0,			    0,			0,				2 ,			1.0		union all -- Scout
+select		2,		-2,		-2,			250,			   60,				0,				10,			20,				0,				0,				0,				0,			0,				1 ,			0.8		union all
 select		3,		-4,		-3,			300,			   45,				0,				50,			60,				0,				0,				0,				0,			0,				1 ,			0.7		union all --fregatte
 select		4,		-6,		-5,			350,			   30,				0,				100,		60,				0,				0,				0,				0,			0,				1 ,			0.6		union all  -- destr
 select		5,		-8,		-9,			400,			   20,				10,				150,		60,				0,				0,				0,				0,			0,				1 ,			0.5		union all  -- cruiser
@@ -1597,12 +1607,12 @@ select		6,		-10,	-11,		450,			   10,				10,				200,		50,				0,				0,				0,				0,
 --
 select		7,		-15,	-18,		500,			   10,				10,				200,		50,				0,				0,				0,				0,			0,				0 ,			0.35	union all -- battle
 select		8,		-20,	-25,		600,			    0,				0,				240,		50,				0,				0,				0,				0,			0,				0 ,			0.2		union all -- superbattle
-select		199,	3,		4,			300,				0,				0,				100,		100,			0,				0,				0,				0,			0,				1 ,			0.0		union all  
-select		200,	5,		6,			450,			    0,				0,				100,		100,			0,				0,				0,				0,			0,				1 ,			0.0		union all
-select		201,	8,		10,			600,			    0,				0,				200,		200,			0,				0,				0,				0,			0,				1 ,			0.0		union all
-select		202,	13,		16,			800,			    0,				0,				400,		400,			0,				0,				0,				0,			0,				1 ,			0.0     union all
+select		199,	3,		4,			450,				0,				0,				100,		100,			0,				0,				0,				0,			0,				1 ,			0.0		union all  
+select		200,	5,		6,			700,			    0,				0,				100,		100,			0,				0,				0,				0,			0,				1 ,			0.0		union all
+select		201,	8,		10,			1000,			    0,				0,				200,		200,			0,				0,				0,				0,			0,				1 ,			0.0		union all
+select		202,	13,		16,			1400,			    0,				0,				400,		400,			0,				0,				0,				0,			0,				1 ,			0.0     union all
 select		220,	1,		100,		3000,				0,				50,				0,			0,				0,				0,				0,				0,			0,				1 ,			0.0     union all
-select		221,	1,		10,			100,				0,				5,				0,			0,				5,				6,				5,				15,			0,				0 ,			1.0
+select		221,	1,		10,			100,				0,				5,				0,			0,				1,				6,				1,				15,			0,				0 ,			1.0
 
 /****** Object:  Table [dbo].[ShipHullsCosts]    Script Date: 12/06/2013 21:56:05 ******/
 

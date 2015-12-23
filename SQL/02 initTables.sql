@@ -1860,7 +1860,7 @@ SELECT * FROM INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE TABLE_NAME = 'Colonies'
 SELECT * FROM INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE Constraint_name  = 'UQ__Colonies__3213E83E928A7311'
 ALTER TABLE Colonies DROP CONSTRAINT UQ__Colonies__3213E83E928A7311;
 alter table [Colonies]  drop column [colonyId]
-alter table [Colonies] add [besiegedBy] int not null default 0	
+alter table [Colonies] add Influence int not null default 0
 update Colonies set id = colonyId
 
 DROP TRIGGER [dbo].[TRIGGER_CreatePlanetSurface]
@@ -1883,7 +1883,8 @@ CREATE TABLE [dbo].[Colonies]  (
 	[construction] int not null default 0	,
 	turnsOfRioting smallInt not null default 0,
 	versionId bigint not null default 1,
-	[besiegedBy] int not null default 0	  --userId besieging
+	[besiegedBy] int not null default 0,	  --userId besieging
+	Influence int not null default 0
 	constraint colonies_primary primary  key clustered (id)		
 );
 create index colonies_userIndex ON colonies(userId);

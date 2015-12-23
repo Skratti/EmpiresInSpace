@@ -1708,7 +1708,8 @@ AS
          turnsofrioting,
 		 versionId,
 		 TurnsOfSiege,
-		 besiegedBy
+		 besiegedBy,
+		 Influence
   FROM   [colonies]; 
 
 go 

@@ -933,7 +933,7 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (740, N'En
 
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (741, N'Hitpoints: ', N'', 6)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (742, N'Shields: ', N'', 6)
-INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (743, N'Cargoroom: ', N'', 6)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (743, N'Storage: ', N'', 6)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (744, N'Evasion: ', N'', 6)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (745, N'Hyper speed: ', N'', 6)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (746, N'System speed: ', N'', 6)
@@ -966,9 +966,13 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (768, N'Ho
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (769, N'Owner', N'', 7)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (770, N'Trade ports', N'', 7)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (771, N'Position', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (772, N'Next turn: ', N'', 7)
 
 
--- delete from [LabelsBase] where id = 764
+
+
+-- delete from [LabelsBase] where id = 743
+-- delete from [LabelsBase] where id = 773
 
 /* module int not null default 0,
 0 Objects -> part of the objectDescriptin table.

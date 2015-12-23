@@ -300,9 +300,23 @@ INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [d
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (3115, N'Lutetium Scanner I', N'Scanner.png', 1, 0, 390)
 
 --INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (3500, N'Nebula', N'nebel01.png', 1, 0, 390)
-INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (3500, N'Nebula', N'NebulaPurple01.png', 1, 0, 390)
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (3500, N'Nebula', N'Nebula240.png', 1, 0, 390)
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (5200, N'BorderLightGreyTileset', N'BorderLightGreyTileset.png', 1, 0, 390)
 
---delete from [dbo].[ObjectDescription] where id = 3500
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (5400, N'BorderDarkBlueTileset', N'BorderDarkBlueTileset.png', 1, 0, 390)
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (5600, N'BorderLightBlueTileset', N'BorderLightBlueTileset.png', 1, 0, 390)
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (5800, N'BorderDarkGreenTileset', N'BorderDarkGreenTileset.png', 1, 0, 390)
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (6000, N'BorderLightGreenTileset', N'BorderLightGreenTileset.png', 1, 0, 390)
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (6200, N'BorderDarkRedTileset', N'BorderDarkRedTileset.png', 1, 0, 390)
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (6400, N'BorderLightRedTileset', N'BorderLightRedTileset.png', 1, 0, 390)
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (6600, N'BorderOrangeTileset', N'BorderOrangeTileset.png', 1, 0, 390)
+
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (6800, N'BorderYellowTileset', N'BorderYellowTileset.png', 1, 0, 390)
+
+
+
+
+--delete from [dbo].[ObjectDescription] where id > 5000
 
 
 print '[ObjectDescription] Done'

@@ -968,11 +968,40 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (770, N'Tr
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (771, N'Position', N'', 7)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (772, N'Next turn: ', N'', 7)
 
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (773, N'Ship Defenses III', N'', 2)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (774, N'Ship Weapons III', N'', 2)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (775, N'Modules III Description ', N'', 2)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (776, N'Cargo III Description', N'', 2)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (777, N'Scanner III Description', N'', 2)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (778, N'Ship Defenses III Description', N'', 2)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (779, N'Ship Weapons III Description', N'', 2)
+
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (780, N'Advanced Auxiliary', N'', 2)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (781, N'Advanced Attack', N'', 2)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (782, N'Advanced Defense', N'', 2)
+
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (783, N'Advanced Special Ressource Auxiliary Shipmodules', N'', 2)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (784, N'Advanced Special Ressource Attack Shipmodules', N'', 2)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (785, N'Advanced Special Ressource Defense Shipmodules', N'', 2)
 
 
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (786, N'Adv. Crew', N'', 6)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (787, N'Adv. Reactor', N'', 6)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (788, N'Adv. System Engines', N'', 6)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (789, N'Adv. Hyper Engines', N'', 6)
 
--- delete from [LabelsBase] where id = 743
--- delete from [LabelsBase] where id = 773
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (790, N'Adv. Cargo', N'', 6)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (791, N'Adv. Scanner', N'', 6)
+
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (792, N'Adv. Hull', N'', 6)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (793, N'Adv. Shield', N'', 6)
+
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (794, N'Adv. Laser', N'', 6)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (795, N'Adv. Rocket', N'', 6)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (796, N'Adv. Mass Driver', N'', 6)
+
+-- delete from [LabelsBase] where id = 782
+-- delete from [LabelsBase] where id = 781
 
 /* module int not null default 0,
 0 Objects -> part of the objectDescriptin table.

@@ -42,6 +42,21 @@ select 1109, -3,	-2,					0,						0,				0,			0,		0,				0,				  100,				0,	  100,	
 select 1110, -3,	-4,					0,						0,				0,			0,		0,				24,					0,				24,		0,					0,			0,				0,		0	union all    --star engines
 select 1115, -2,	-7,					0,					   10,				0,			0,		0,				0,					0,				0,		0,					0,			2,				0,		0	   --scanner
 
+--special Res 2
+INSERT into [dbo].[ModulesGain] 
+([modulesId], [crew], [energy], [hitpoints],	[damagereduction],	[damageoutput], [cargoroom],	[fuelroom], [inSpaceSpeed], [inSystemSpeed], [maxSpaceMoves], [maxSystemMoves], [special], [scanRange],	weaponType, toHitRatio)
+select	1201,	 38,		 -4,		  0,					0,				 0,			0,				0,				0,				0,				0,					0,			0,			0,			0,		0			union all   --crew
+select	1202,	 -4,		 44,		  0,					0,				 0,			0,				0,				0,				0,				0,					0,			0,			0,			0,		0			union all  --reactor
+select	1203,	  0,		  0,		220,					0,				 0,			0,				0,				0,				0,				0,					0,			0,			0,			0,		0			union all   --hull
+select	1204,	 -5,		 -4,		  0,				   39,				 0,	 		0,				0,				0,				0,				0,					0,			0,			0,			0,		0			union all  --shield
+select	1205,	 -5,		 -6,		  0,					0,				44,	    	0,				0,				0,				0,				0,					0,			0,			0,			1,	  140			union all    --laser
+select	1206,	 -5,		 -2,		  0,					0,			    88, 		0,				0,				0,				0,				0,					0,			0,			0,			2,	   90			union all   --missile
+select	1207,	 -5,		 -4,		  0,					0,			   176, 		0,				0,				0,				0,				0,					0,			0,			0,			3,	   50			union all   --mass driver
+select	1208,	 -2,		 -7,		  0,					0,				 0,			1000,		  100,				0,				0,				0,					0,			0,			0,			0,		0			union all   -- cargo
+select	1209,	 -3,		 -9,		  0,					0,				 0,			0,				0,				0,		 	  150,				0,				  150,			0,			0,			0,		0			union all   --system Enginge
+select	1210,	 -3,		 -9,		  0,					0,				 0,			0,				0,				38,				0,			   38,					0,			0,			0,			0,		0			union all    --star engines
+select	1215,	 -4,		 -12,		  0,					0,				 0,			0,				0,				0,				0,				0,					0,			0,			4,			0,		0	--scanner
+--delete from [dbo].[ModulesGain]  where [modulesId] > 1200
 
 -- Level 2
 INSERT into [dbo].[ModulesGain] 
@@ -411,6 +426,122 @@ INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (523, 10, 
 INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (523, 7, 50)
 INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (523, 50, 40)
 
+
+--Adv. Special Ressource 
+
+--Adv. crew 
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1201, 1, 70)  -- bm
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1201, 2, 50)  -- Nahrung
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1201, 7, 25)  -- assembly points
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1201, 50, 20)  -- adv bm 2
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1201, 10, 30)  --metall
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1201, 11, 50)  -- kunststoffe
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1201, 1043, 100)  --Yttrium
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1201, 1042, 50)  --Scandium
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1201, 1041, 50)  --Terbium
+
+--Adv. Reactor
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1202, 1, 70)
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1202, 7, 25)
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1202, 50, 20)  -- adv bm 2
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1202, 10, 30)  --metall
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1202, 11, 50)  -- kunststoffe
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1202, 60, 20)  -- Neutronium
+
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1202, 1044, 100)  --Lutetium
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1202, 1042, 50)  --Scandium
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1202, 1043, 50)  --Yttrium
+
+--Adv. Hull
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1203, 7, 25)
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1203, 50, 30)  -- adv bm 2
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1203, 10, 60)  --metall
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1203, 60, 20)  -- Neutronium
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1203, 1041, 100)  --Terbium
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1203, 1040, 50)  --Holmium
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1203, 1044, 50)  --Lutetium
+
+--Adv. Shield
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1204, 7, 25)
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1204, 50, 30)  -- adv bm 2
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1204, 10, 40)  --metall
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1204, 11, 60)  -- kunststoffe
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1204, 60, 10)  -- Neutronium
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1204, 1042, 100)  --Scandium
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1204, 1040, 50)  --Holmium
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1204, 1041, 50)  --Terbium
+
+--Adv. Laser
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1205, 7, 30)
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1205, 50, 30)  -- adv bm 2
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1205, 10, 20)  --metall
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1205, 11, 50)  -- kunststoffe
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1205, 60, 10)  -- Neutronium
+
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1205, 1040, 100)  --Holmium
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1205, 1043, 50)  --Yttrium
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1205, 1044, 50)  --Lutetium
+
+--Adv. Missile
+--INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (106, 3, 50)  --ammunition
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1206, 7, 30)
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1206, 10, 20)  --metall
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1206, 11, 50)  -- kunststoffe
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1206, 60, 10)  -- Neutronium
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1206, 1040, 100)  --Holmium
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1206, 1043, 50)  --Yttrium
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1206, 1044, 50)  --Lutetium
+
+--Adv. Mass driver
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1207, 7, 30)
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1207, 50, 10)  -- adv bm 2
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1207, 10, 20)  --metall
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1207, 11, 60)  -- kunststoffe
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1207, 60, 10)  -- Neutronium
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1207, 1040, 100)  --Holmium
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1207, 1043, 50)  --Yttrium
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1207, 1044, 50)  --Lutetium
+
+--Adv. cargo
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1208, 7, 25)
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1208, 50, 30)  -- adv bm 2
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1208, 10, 20)  --metall
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1208, 11, 30)  -- kunststoffe
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1208, 60, 20)  -- Neutronium
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1208, 1043, 100)  --Yttrium
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1208, 1042, 50)  --Scandium
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1208, 1041, 50)  --Terbium
+
+--Adv. system
+--INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (9, 4, 20)  --fuel
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1209, 7, 25)  -- assembly points
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1209, 50, 30)  -- adv bm 2
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1209, 10, 20)  --metall
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1209, 11, 50)  -- kunststoffe
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1209, 60, 10)  -- Neutronium
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1209, 1044, 100)  --Lutetium
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1209, 1042, 50)  --Scandium
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1209, 1043, 50)  --Yttrium
+
+--Adv. hyper
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1210, 7, 30)
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1210, 50, 20)  -- adv bm 2
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1210, 10, 30)  --metall
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1210, 11, 50)  -- kunststoffe
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1210, 60, 10)  -- Neutronium
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1210, 1043, 100)  --Yttrium
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1210, 1042, 50)  --Scandium
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1210, 1041, 50)  --Terbium
+
+--Adv. Scanner
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1215, 7, 30)
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1215, 50, 20)  -- adv bm 2
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1215, 10, 50)  --metall
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1215, 11, 30)  -- kunststoffe
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1215, 60, 30)  -- Neutronium
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1215, 1044, 100)  --Lutetium
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1215, 1042, 50)  --Scandium
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1215, 1043, 50)  --Yttrium
 
 -- Star bases
 INSERT [dbo].[ModulesCosts] 

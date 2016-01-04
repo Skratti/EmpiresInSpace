@@ -299,6 +299,19 @@ INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [d
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (3110, N'Yttrium Hyper Engines I', N'Hyper.png', 1, 0, 389)
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (3115, N'Lutetium Scanner I', N'Scanner.png', 1, 0, 390)
 
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (3201, N'Adv. Crew', N'Crew1.png', 1, 0, 786)
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (3202, N'Adv. Reactor', N'Reactor.png', 1, 0, 787)
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (3203, N'Adv. Hull', N'Hull.png', 1, 0, 792)
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (3204, N'Adv. Shield', N'Shield.png', 1, 0, 793)
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (3205, N'Adv. Laser', N'WeaponLaser.png', 1, 0, 794)
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (3206, N'Adv. Laser', N'WeaponRocket.png', 1, 0, 795)
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (3207, N'Adv. Laser', N'WeaponMassDriver.png', 1, 0, 796)
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (3208, N'Adv. Cargo', N'Cargo.png', 1, 0, 790)
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (3209, N'Adv. System Engines', N'Impuls.png', 1, 0, 788)
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (3210, N'Adv. Hyper Engines', N'Hyper.png', 1, 0, 789)
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (3215, N'Adv. Scanner', N'Scanner.png', 1, 0, 791)
+--update  [dbo].[ObjectDescription] set [objectimageUrl] = N'WeaponMassDriver.png'  where id = 3207
+
 --INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (3500, N'Nebula', N'nebel01.png', 1, 0, 390)
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (3500, N'Nebula', N'Nebula240.png', 1, 0, 390)
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (5200, N'BorderLightGreyTileset', N'BorderLightGreyTileset.png', 1, 0, 390)
@@ -527,7 +540,7 @@ select 50, N'Verb. Baumaterial', N'1.gif', N'Erlaubt den Bau des Kraftwerks', 70
 
 --INSERT into [dbo].[Research] 
 --	  ([id], [name],[objectimageUrl], [description]	, [cost], [label]	, [descriptionLabel], [researchType], [treeColumn]	, [treeRow]) 
-select 2023, N'Colonization II', N'1.gif', N'Colonization module.', 200, 468, 522, 2 , 9 , 2 union all
+select 2023, N'Colonization II', N'1.gif', N'Colonization module.', 200, 468, 522, 2 , 9 , 0 union all
 
 
 --Level 10
@@ -568,27 +581,48 @@ select 81	, N'Pressure Dome', N'1.gif', N'Colonization module.'		, 2300		, 696		
 select 2200	, N'Modules III', N'1.gif', N''								, 3000		, 699		, 700					,2				, 14			,	9 union all
 select 4005, N'Fleet Command VI', N'1.gif', N''		 , 3200		, 556		, 561				, 4				, 14				, 14 union all
 
---level 15
+
+--Level 15
+
 --INSERT into [dbo].[Research] 
---	  ([id], [name],			[objectimageUrl], [description]	, [cost]		, [label]	, [descriptionLabel], [researchType]	, [treeColumn]	, [treeRow]) 
-select 2500, N'Special Ressources Modules', N'1.gif', N''		, 1200			, 718		, 719				,2					, 15				, 6 union all
-select 503	, N'Star base'		, N'1.gif'		, N''			, 1200			, 584		, 559				, 2					, 15			,	9  union all
-select 405, N'Cruiser', N'1.gif', N''							, 4600			, 58		, 497				, 2					, 15				, 14  union all
-	
+--	  ([id], [name],			[objectimageUrl], [description]			, [cost]		, [label]	, [descriptionLabel]		, [researchType]	, [treeColumn]	, [treeRow]) 
+select 2500, N'Special Ressources Modules', N'1.gif', N''				, 1200			, 718		, 719						,2					, 15			, 4 union all
+select	2202, N'Scanner III', N'1.gif', N''								, 1600			, 712		, 775						, 2					, 15			, 6 union all
+select	2201, N'Cargo III', N'1.gif', N''								, 1200			, 708		, 774						, 2					, 15			, 8 union all
+select	2205, N'Ship Weapons III', N'1.gif', N'Better ship weapons.'	, 2400			, 168		, 777						, 2					, 15			, 10 union all
+select	2203, N'Ship Defenses III', N'1.gif', N'Better ship defenses.'	, 2000			, 167		, 776						, 2					, 15			, 12 union all
+
+
+
 --level 16
 --INSERT into [dbo].[Research] 
---	  ([id], [name],[objectimageUrl], [description]	, [cost]	, [label]	, [descriptionLabel], [researchType], [treeColumn]	, [treeRow]) 
-select 3006, N'Administration V', N'1.gif', N''					, 4000			, 476		, 481				, 4					, 16				, 1		union all
-select 504, N'Star fortress'	, N'1.gif'		, N'', 1800		, 127		, 560				, 2				, 16				, 9 union all
-select 4006, N'Fleet Command V', N'1.gif', N''		, 6000	, 557			, 562				, 4				, 16				, 11 union all
-select 406, N'Battleship', N'1.gif', N''			 , 3200		, 124		, 498				, 2				, 16				, 14  union all
+--	  ([id], [name],			[objectimageUrl], [description]	, [cost]		, [label]	, [descriptionLabel], [researchType]	, [treeColumn]		, [treeRow]) 
 
+
+select 2501, N'SR Auxilliary Modules', N'1.gif', N''		, 1000				, 780		, 783				,2					, 16				, 2 union all
+select 2502, N'SR Attack Modules', N'1.gif', N''			, 1800				, 781		, 784				,2					, 16				, 4 union all
+select 2503, N'SR Defense Modules', N'1.gif', N''			, 1400				, 782		, 785				,2					, 16				, 6 union all
+
+select 503	, N'Star base'		, N'1.gif'		, N''			, 1200			, 584		, 559				, 2					, 16				, 9  union all
+select 405, N'Cruiser', N'1.gif', N''							, 4600			, 58		, 497				, 2					, 16				, 14  union all
+	
 --level 17
 --INSERT into [dbo].[Research] 
---	  ([id], [name],[objectimageUrl], [description]	, [cost]	, [label]	, [descriptionLabel], [researchType], [treeColumn]	, [treeRow]) 
-select 5001, N'Transcendence', N'1.gif'	, N''		, 12000	, 590			, 591				, 4				, 17				, 9 union all
+--	  ([id], [name],[objectimageUrl], [description]		, [cost]	, [label]	, [descriptionLabel], [researchType], [treeColumn]	, [treeRow]) 
+select 3006, N'Administration V', N'1.gif', N''			, 4000		, 476		, 481				, 4				, 17				, 1		union all
 
-select 407, N'Superbattleship', N'1.gif', N''		, 6000	, 125			, 499				, 2				, 17				, 14
+
+
+
+select 504, N'Star fortress'	, N'1.gif'		, N''	, 1800		, 127		, 560				, 2				, 17				, 9 union all
+select 4006, N'Fleet Command V', N'1.gif', N''			, 6000		, 557		, 562				, 4				, 17				, 11 union all
+select 406, N'Battleship', N'1.gif', N''				, 3200		, 124		, 498				, 2				, 17				, 14  union all
+
+--level 18
+--INSERT into [dbo].[Research] 
+--	  ([id], [name],[objectimageUrl], [description]	, [cost]	, [label]	, [descriptionLabel], [researchType], [treeColumn]	, [treeRow]) 
+select 5001, N'Transcendence', N'1.gif'	, N''		, 12000	, 590			, 591				, 4				, 18				, 9 union all
+select 407, N'Superbattleship', N'1.gif', N''		, 6000	, 125			, 499				, 2				, 18				, 14
 
 /*
 with toUpdate ([id], [name],			[objectimageUrl], [description]	, [cost]		, [label]	, [descriptionLabel], [researchType]	, [treeColumn]	, [treeRow])  as (
@@ -722,6 +756,17 @@ INSERT [dbo].[Goods] ([id], [name], [objectDescriptionId], [goodsType], [label])
 INSERT [dbo].[Goods] ([id], [name], [objectDescriptionId], [goodsType], [label]) VALUES (3110, N'Yttrium Hyper Engines I', 3110, 2, 389)
 INSERT [dbo].[Goods] ([id], [name], [objectDescriptionId], [goodsType], [label]) VALUES (3115, N'Lutetium Scanner I', 3115, 2, 390)
 
+INSERT [dbo].[Goods] ([id], [name], [objectDescriptionId], [goodsType], [label]) VALUES (3201, N'Adv. Crew'				, 3201, 2, 786)
+INSERT [dbo].[Goods] ([id], [name], [objectDescriptionId], [goodsType], [label]) VALUES (3202, N'Adv. Reactor'			, 3202, 2, 787)
+INSERT [dbo].[Goods] ([id], [name], [objectDescriptionId], [goodsType], [label]) VALUES (3203, N'Adv. Hull'				, 3203, 2, 792)
+INSERT [dbo].[Goods] ([id], [name], [objectDescriptionId], [goodsType], [label]) VALUES (3204, N'Adv. Shield'			, 3204, 2, 793)
+INSERT [dbo].[Goods] ([id], [name], [objectDescriptionId], [goodsType], [label]) VALUES (3205, N'Adv. Laser'			, 3205, 2, 794)
+INSERT [dbo].[Goods] ([id], [name], [objectDescriptionId], [goodsType], [label]) VALUES (3206, N'Adv. Rocket'			, 3206, 2, 795)
+INSERT [dbo].[Goods] ([id], [name], [objectDescriptionId], [goodsType], [label]) VALUES (3207, N'Adv. MassDriver'		, 3207, 2, 796)
+INSERT [dbo].[Goods] ([id], [name], [objectDescriptionId], [goodsType], [label]) VALUES (3208, N'Adv. Cargo'			, 3208, 2, 790)
+INSERT [dbo].[Goods] ([id], [name], [objectDescriptionId], [goodsType], [label]) VALUES (3209, N'Adv. System Engines'	, 3209, 2, 788)
+INSERT [dbo].[Goods] ([id], [name], [objectDescriptionId], [goodsType], [label]) VALUES (3210, N'Adv. Hyper Engines'	, 3210, 2, 789)
+INSERT [dbo].[Goods] ([id], [name], [objectDescriptionId], [goodsType], [label]) VALUES (3215, N'Adv. Scanner'			, 3215, 2, 791)
 
 INSERT [dbo].[Goods] ([id], [name], [objectDescriptionId], [goodsType], [label]) VALUES (2499, N'Outpost hull', 430, 2,	586)
 INSERT [dbo].[Goods] ([id], [name], [objectDescriptionId], [goodsType], [label]) VALUES (2500, N'Space station hull', 431, 2, 587)
@@ -845,6 +890,22 @@ select 1109, 4, N'Lutetium Engines I', 8, 3109, 736 union all
 select 1110, 4, N'Yttrium Hyper Engines I', 10, 3110, 389 union all
 select 1115, 4, N'Lutetium Scanner I', 15, 3115, 390 
 
+
+--Adv. special ressource
+INSERT into [dbo].[Modules] 
+	([id], [level], [name]		, [descriptionLabel]	, [goodsId]	, [label]) 
+select 1201, 4, N'Adv. Crew'			, 1				,  3201		, 786 union all
+select 1202, 4, N'Adv. Reactor'			, 2				,  3202		, 787 union all
+select 1203, 4, N'Adv. Hull'			, 3				,  3203		, 792 union all
+select 1204, 4, N'Adv. Shield'			, 4				,  3204		, 793 union all
+select 1205, 4, N'Adv. Laser'			, 5				,  3205		, 794 union all
+select 1206, 4, N'Adv. Rocket'			, 5				,  3206		, 795 union all
+select 1207, 4, N'Adv. Mass driver '	, 5				,  3207		, 796 union all
+select 1208, 4, N'Adv. Cargo'			, 8				,  3208		, 790 union all
+select 1209, 4, N'Adv. System Engines'	, 8				,  3209		, 788 union all
+select 1210, 4, N'Adv. Hyper Engines'	, 10			,  3210		, 789 union all
+select 1215, 4, N'Adv. Scanner'			, 15			,  3215		, 791 
+-- delete from [dbo].[Modules] where id > 1200
 
 SET IDENTITY_INSERT [dbo].[Modules] off
 

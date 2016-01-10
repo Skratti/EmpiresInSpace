@@ -21,9 +21,29 @@ go
 [damage] - deprecated -> new table [ObjectOnMap] will be used for that
 [label] - is not needed in most cases. An entry in goods referencing an object-Id will have its own label. Labels are in file "03 Labelsbase.sql"
 */
-INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (1, N'Oranger Zwerg', N'sunRed.png', 1, 0, 1)
-INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (2, N'Gelber Zwerg', N'YellowSunN.png', 1, 0, 2)
-INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (3, N'GelberOranger Zwerg', N'RedSun_1.png', 1, 0, 3)
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (1, N'Oranger Zwerg', N'SunOrange.png.png', 1, 0, 1)
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (2, N'Gelber Zwerg', N'SunYellow.png.png', 1, 0, 2)
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (3, N'Blauer Zwerg', N'SunBlue.png.png', 1, 0, 3)
+
+  INSERT INTO [dbo].[ObjectDescription]
+           ([id]
+           ,[name]
+           ,[objectimageUrl]
+           ,[moveCost]
+           ,[damage]
+           ,[label])
+-- add new star images
+     select 4 ,'SunDeepPink'  ,'SunDeepPink.png'   ,1  ,0   ,3 union all
+	 select 5 ,'SunGreenYellow'  ,'SunGreenYellow.png'   ,1  ,0   ,3 union all
+	 select 6 ,'SunIndigo'  ,'SunIndigo.png'   ,1  ,0   ,3 union all
+-- add new star images (solar system)
+     select 63 ,'SunDeepPink'  ,'SunDeepPink.png'   ,1  ,0   ,3 union all
+	 select 64 ,'SunDeepPink'  ,'SunDeepPink.png'   ,1  ,0   ,3 union all
+	 select 65 ,'SunGreenYellow'  ,'SunGreenYellow.png'   ,1  ,0   ,3 union all
+	 select 66 ,'SunGreenYellow'  ,'SunGreenYellow.png'   ,1  ,0   ,3 union all
+	 select 67 ,'SunIndigo'  ,'SunIndigo.png'   ,1  ,0   ,3 union all
+	 select 68 ,'SunIndigo'  ,'SunIndigo.png'   ,1  ,0   ,3
+
 
 --delete from [ObjectDescription] where id in (4,5,8,17,33,43)
 --delete from [ObjectDescription] where id in (4,5,8,17,33,43,56,57,58,60,61,62)
@@ -34,10 +54,10 @@ INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [d
 --INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (8, N'Plasmanebel', N'6.gif', 1, 0, 8)
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (10, N'Asteroidenfeld', N'11.png', 2, 0, 10)
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (11, N'dichtes Asteroidenfeld', N'12.png', 3, 0, 11)
-INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (13, N'Roter Zwerg', N'sunRed.png', 1, 0, 15)
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (13, N'Roter Zwerg', N'SunRed.png.png', 1, 0, 15)
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (14, N'Blauer Riese', N'SunBlue.png', 1, 0, 13)
-INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (15, N'Oranger Riese', N'sunRed.png', 1, 0, 14)
-INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (16, N'Zwerg', N'sunRed.png', 1, 0, 17)
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (15, N'Blauer Riese 2', N'SunBlue.png.png', 1, 0, 14)
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (16, N'Blauer Zwerg', N'SunBlue.png.png', 1, 0, 17)
 --INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (17, N'Schwarzes Loch', N'28.gif', 1, 0, 18)
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (24, N'EarthLike', N'51.png', 1, 0, 25)
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (25, N'Land', N'52.png', 1, 0, 26)
@@ -353,54 +373,59 @@ INSERT INTO [dbo].[ObjectOnMap]
            ,[damageProbability]
            ,[damageProbabilityReducableByShip]
            ,[defenseBonus]
-           ,fieldSize)         
-select  1, 1, 100, 1, 100, 0, 0, 1 union all --Oranger Zwerg
-select 2, 1, 100, 1, 100, 0, 0, 1 union all  --Gelber Zwerg
-select 3, 1, 100, 1, 100, 0, 0, 1 union all  --GelbOranger Zwerg
-select 4, 2, 0, null, 0, 0, 10, 1 union all  --Nebel
-select 5, 3, 0, null, 0, 0, 20, 1 union all --dichter Nebel
-select 8, 3, 0, null, 0, 0, 20, 1 union all --Plasmanebel
-select 10, 2, 200, 3, 100, 1, 20, 1 union all --N'Asteroidenfeld'
-select 11, 3, 400, 3, 150, 1, 20, 1 union all --'dichtes Asteroidenfeld'
-select 13, 1, 100, 1, 100, 0, 0, 1 union all
-select 14, 1, 100, 1, 100, 0, 0, 1 union all
-select 15, 1, 100, 1, 100, 0, 0, 1 union all
-select 16, 1, 100, 1, 100, 0, 0, 1 union all
-select 17, 50, 100, 1, 100, 0, 0, 1 union all  --schwarzes Loch
-select 24, 1, 0, null, 0, 0, 60, 1 union all  --earthlike
-select 25, 1, 0, null, 0, 0, 60, 1 union all --land
-select 26, 1, 0, null, 0, 0, 60, 1 union all --Water
-select 27, 1, 0, null, 0, 0, 60, 1 union all --Desert
-select 28, 1, 0, null, 0, 0, 60, 1 union all --Ice
-select 29, 1, 0, null, 0, 0, 60, 1 union all --Barren
-select 30, 1, 0, null, 0, 0, 60, 1 union all --Volcano
-select 31, 1, 0, null, 0, 0, 60, 1 union all --Toxic
-select 32, 1, 0, null, 0, 0, 60, 1 union all --Gasgiant
-select 33, 1, 0, null, 0, 0, 60, 1 union all --Wanderer
-select 34, 1, 0, null, 0, 0, 20, 1 union all --M Mond
-select 35, 1, 0, null, 0, 0, 20, 1 union all --Wanderer
-select 36, 1, 0, null, 0, 0, 20, 1 union all --L  Mond
-select 37, 1, 0, null, 0, 0, 20, 1 union all --N  Mond
-select 38, 1, 0, null, 0, 0, 20, 1 union all --G
-select 39, 1, 0, null, 0, 0, 20, 1 union all -- K
-select 40, 1, 0, null, 0, 0, 20, 1 union all --H 
-select 41, 1, 0, null, 0, 0, 20, 1 union all --X
-select 42, 1, 0, null, 0, 0, 20, 1 union all --Toxic Mond
-select 43, 1, 0, null, 0, 0, 20, 1 union all --Gasriese
-select 44, 1, 0, null, 0, 0, 20, 1 union all --Asteroidenmond
-select 45, 1, 100, 1, 100, 0, 0, 2 union all
-select 46, 1, 100, 1, 100, 0, 0, 0 union all
-select 47, 1, 100, 1, 100, 0, 0, 0 union all
-select 48, 1, 100, 1, 100, 0, 0, 0 union all
-select 50, 1, 100, 1, 100, 0, 0, 2 union all
-select 51, 1, 100, 1, 100, 0, 0, 0 union all
-select 52, 1, 100, 1, 100, 0, 0, 0 union all
-select 53, 1, 100, 1, 100, 0, 0, 0 union all
-select 55, 1, 100, 1, 100, 0, 0, 2 union all
-select 56, 1, 100, 1, 100, 0, 0, 0 union all
-select 57, 1, 100, 1, 100, 0, 0, 0 union all
-select 58, 1, 100, 1, 100, 0, 0, 0 union all
-select 80, 2, 0, null, 0, 0, 10, 10			--nebula
+           ,fieldSize
+		   ,drawSize)         
+select  1, 1, 100, 1, 100, 0, 0, 1,1  union all --Oranger Zwerg
+select 2, 1, 100, 1, 100, 0, 0, 1 ,1 union all  --Gelber Zwerg
+select 3, 1, 100, 1, 100, 0, 0, 1 ,1 union all  --GelbOranger Zwerg
+select			4	 ,		1		,	100		,		1		,			100				,							0				,0					,1				,	1.5 union all
+select			5	 ,		1		,	100		,		1		,			100				,							0				,0					,1				,	1.5 union all
+select			6	 ,		1		,	100		,		1		,			100				,							0				,0					,1				,	1.5 union all
+select			63	 ,		1		,	100		,		1		,			100				,							0				,0					,2				,	2.5 union all
+select			65	 ,		1		,	100		,		1		,			100				,							0				,0					,2				,	2.5 union all
+select			67	 ,		1		,	100		,		1		,			100				,							0				,0					,2				,	2.5 union all
+select 10, 2, 200, 3, 100, 1, 20,1,1 union all --N'Asteroidenfeld'
+select 11, 3, 400, 3, 150, 1, 20,1,1 union all --'dichtes Asteroidenfeld'
+select 13, 1, 100, 1, 100, 0, 0, 1,1 union all  --roter zwerg
+select 14, 1, 100, 1, 100, 0, 0, 1,1 union all
+select 15, 1, 100, 1, 100, 0, 0, 1,1 union all
+select 16, 1, 100, 1, 100, 0, 0, 1,1 union all
+select 17, 50, 100, 1, 100, 0, 0,1,1 union all  --schwarzes Loch
+select 24, 1, 0, null, 0, 0, 60, 1,1 union all  --earthlike
+select 25, 1, 0, null, 0, 0, 60, 1,1 union all --land
+select 26, 1, 0, null, 0, 0, 60, 1,1 union all --Water
+select 27, 1, 0, null, 0, 0, 60, 1,1 union all --Desert
+select 28, 1, 0, null, 0, 0, 60, 1,1 union all --Ice
+select 29, 1, 0, null, 0, 0, 60, 1,1 union all --Barren
+select 30, 1, 0, null, 0, 0, 60, 1,1 union all --Volcano
+select 31, 1, 0, null, 0, 0, 60, 1,1 union all --Toxic
+select 32, 1, 0, null, 0, 0, 60, 1,1 union all --Gasgiant
+select 33, 1, 0, null, 0, 0, 60, 1,1 union all --Wanderer
+select 34, 1, 0, null, 0, 0, 20, 1,1 union all --M Mond
+select 35, 1, 0, null, 0, 0, 20, 1,1 union all --Wanderer
+select 36, 1, 0, null, 0, 0, 20, 1,1 union all --L  Mond
+select 37, 1, 0, null, 0, 0, 20, 1,1 union all --N  Mond
+select 38, 1, 0, null, 0, 0, 20, 1,1 union all --G
+select 39, 1, 0, null, 0, 0, 20, 1,1 union all -- K
+select 40, 1, 0, null, 0, 0, 20, 1,1 union all --H 
+select 41, 1, 0, null, 0, 0, 20, 1,1 union all --X
+select 42, 1, 0, null, 0, 0, 20, 1,1 union all --Toxic Mond
+select 43, 1, 0, null, 0, 0, 20, 1,1 union all --Gasriese
+select 44, 1, 0, null, 0, 0, 20, 1,1 union all --Asteroidenmond
+select 45, 1, 100, 1, 100, 0, 0, 2,1 union all
+select 46, 1, 100, 1, 100, 0, 0, 0,1 union all
+select 47, 1, 100, 1, 100, 0, 0, 0,1 union all
+select 48, 1, 100, 1, 100, 0, 0, 0,1 union all
+select 50, 1, 100, 1, 100, 0, 0, 2,1 union all
+select 51, 1, 100, 1, 100, 0, 0, 0,1 union all
+select 52, 1, 100, 1, 100, 0, 0, 0,1 union all
+select 53, 1, 100, 1, 100, 0, 0, 0,1 union all
+select 55, 1, 100, 1, 100, 0, 0, 2,1 union all
+select 56, 1, 100, 1, 100, 0, 0, 0,1 union all
+select 57, 1, 100, 1, 100, 0, 0, 0,1 union all
+select 58, 1, 100, 1, 100, 0, 0, 0,1 union all
+select 59, 1, 100, 1, 100, 0, 0, 2 ,2.5 union all
+select 80, 2, 0, null, 0, 0, 10, 10	,1		--nebula
 go
 
 
@@ -866,7 +891,7 @@ select	210, 3, N'Hyper Engines III'	, 10			, 2210		, 710 union all
 select	215, 3, N'Scanner III'			, 15			, 2215		, 712 union all
 select	523, 3, N'Colonizing Module III', 13			, 2523		, 88
 
-update [dbo].[Modules] set [level] = 2 where id = 23
+--update [dbo].[Modules] set [level] = 2 where id = 23
 
 --space stations
 INSERT into [dbo].[Modules] 
@@ -894,17 +919,17 @@ select 1115, 4, N'Lutetium Scanner I', 15, 3115, 390
 --Adv. special ressource
 INSERT into [dbo].[Modules] 
 	([id], [level], [name]		, [descriptionLabel]	, [goodsId]	, [label]) 
-select 1201, 4, N'Adv. Crew'			, 1				,  3201		, 786 union all
-select 1202, 4, N'Adv. Reactor'			, 2				,  3202		, 787 union all
-select 1203, 4, N'Adv. Hull'			, 3				,  3203		, 792 union all
-select 1204, 4, N'Adv. Shield'			, 4				,  3204		, 793 union all
-select 1205, 4, N'Adv. Laser'			, 5				,  3205		, 794 union all
-select 1206, 4, N'Adv. Rocket'			, 5				,  3206		, 795 union all
-select 1207, 4, N'Adv. Mass driver '	, 5				,  3207		, 796 union all
-select 1208, 4, N'Adv. Cargo'			, 8				,  3208		, 790 union all
-select 1209, 4, N'Adv. System Engines'	, 8				,  3209		, 788 union all
-select 1210, 4, N'Adv. Hyper Engines'	, 10			,  3210		, 789 union all
-select 1215, 4, N'Adv. Scanner'			, 15			,  3215		, 791 
+select 1201, 5, N'Adv. Crew'			, 1				,  3201		, 786 union all
+select 1202, 5, N'Adv. Reactor'			, 2				,  3202		, 787 union all
+select 1203, 5, N'Adv. Hull'			, 3				,  3203		, 792 union all
+select 1204, 5, N'Adv. Shield'			, 4				,  3204		, 793 union all
+select 1205, 5, N'Adv. Laser'			, 5				,  3205		, 794 union all
+select 1206, 5, N'Adv. Rocket'			, 5				,  3206		, 795 union all
+select 1207, 5, N'Adv. Mass driver '	, 5				,  3207		, 796 union all
+select 1208, 5, N'Adv. Cargo'			, 8				,  3208		, 790 union all
+select 1209, 5, N'Adv. System Engines'	, 8				,  3209		, 788 union all
+select 1210, 5, N'Adv. Hyper Engines'	, 10			,  3210		, 789 union all
+select 1215, 5, N'Adv. Scanner'			, 15			,  3215		, 791 
 -- delete from [dbo].[Modules] where id > 1200
 
 SET IDENTITY_INSERT [dbo].[Modules] off

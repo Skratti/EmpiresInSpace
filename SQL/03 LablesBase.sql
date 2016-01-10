@@ -970,7 +970,7 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (772, N'Ne
 
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (773, N'Ship Defenses III', N'', 2)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (774, N'Ship Weapons III', N'', 2)
-INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (775, N'Modules III Description ', N'', 2)
+--INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (775, N'Modules III Description ', N'', 2) --699
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (776, N'Cargo III Description', N'', 2)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (777, N'Scanner III Description', N'', 2)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (778, N'Ship Defenses III Description', N'', 2)

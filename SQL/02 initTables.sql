@@ -773,6 +773,7 @@ go
 
 --Verteidigungsbonus, Einflugschaden? Schadensstyp? Einflugschadenwahrscheinlichkeit? Wahrscheinlichkeit reduzierbar durch Ausweichfaktor?	
 --drop table [dbo].[ObjectOnMap]
+--   alter table [dbo].[ObjectOnMap] add drawSize real not null default 1.0
 CREATE TABLE [dbo].[ObjectOnMap] (
 	id SMALLINT NOT NULL UNIQUE references [dbo].[ObjectDescription](id) on update cascade on delete cascade ,	
 	moveCost	tinyint NOT NULL DEFAULT 1,
@@ -782,6 +783,7 @@ CREATE TABLE [dbo].[ObjectOnMap] (
 	damageProbabilityReducableByShip bit NOT NULL DEFAULT 1,	
 	defenseBonus tinyint	NOT NULL DEFAULT 0,
 	fieldSize tinyint	NOT NULL DEFAULT 1,
+	drawSize real not null default 1.0,
 	constraint ObjectonMap_primary primary key nonclustered (id)
 );
 print 'table [ObjectOnMap] created.'

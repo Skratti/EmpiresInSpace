@@ -168,7 +168,8 @@ AS
          damageprobability, 
          damageprobabilityreducablebyship, 
          defensebonus, 
-         fieldsize 
+         fieldSize,
+		 drawSize
   FROM   [objectonmap]; 
 
 go 

@@ -2180,7 +2180,50 @@ CREATE TABLE [dbo].[MessageBody]  (
 );
 print 'table [dbo].[MessageBody] created.'
 
+go
+/*
+	eventType:
+	Schiffskampf
+	Ankunft eines neuen Spielers
+	Erste Erforschung
+	Kolonie wird belagert
+	Kolonie wurde erobert
+	Kolonie wurde aufgegebe
+	Diplomatie 3 Konstellationen (allianz-allianz, allianz-spieler, spieler-spieler), 6 Zustände -> 18 Nachrichten 
 
+	ALTER TABLE [GalacticEvents] ADD 	eventDatetime datetime not null default GETDATE()
+
+	insert into [GalacticEvents] (id, eventType) select 0, 1
+	insert into [GalacticEvents] (id, eventType) select 1, 4
+
+*/
+CREATE TABLE [dbo].[GalacticEvents]
+(
+	id int NOT NULL unique,
+	eventType int not null,
+	eventDatetime datetime not null default GETDATE(),
+	int1 int NULL,
+	int2 int NULL,
+	int3 int NULL,
+	int4 int NULL,
+	int5 int NULL,
+	int6 int NULL,
+	string1 nvarchar(255) NULL,
+	string2 nvarchar(255) NULL,
+	string3 nvarchar(255) NULL,
+	string4 nvarchar(255) NULL,
+	string5 nvarchar(255) NULL,
+	string6 nvarchar(255) NULL,
+	string7 nvarchar(255) NULL,
+	string8 nvarchar(255) NULL
+constraint [GalacticEvents_Primary] primary key clustered (id)
+)
+go
+
+create nonclustered index ServerEventsPerUser on [dbo].[ServerEvents](id,userId);
+go
+print 'table [dbo].[ServerEvents] created.'
+go
 
 
 go

@@ -10,6 +10,7 @@ go
 6 Goods
 7 Game User Interface
 8 Combat
+9 Events
 */
 
 --truncate table LabelsBase
@@ -756,7 +757,7 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (602, N'A 
 
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (603, N'A Transcension Construct was finished and sentient life throughout the galaxy has ascended to the next higher level of being.', N'', 7)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (604, N'This game has ended.', N'', 7)
-INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (605, N'{0}, the Transcension Construct of {1} of the alliance %3 was finished and sentient life throughout the galaxy has ascended to the next higher level of being.', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (605, N'{0}, the Transcension Construct of {1} of the alliance {3} was finished and sentient life throughout the galaxy has ascended to the next higher level of being.', N'', 7)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (606, N'{0}, the Transcension Construct of {1} was finished and sentient life throughout the galaxy has ascended to the next higher level of being.', N'', 7)
 
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (607, N'A new game is already open. Turn evaluation of the new game will start within two days.', N'', 7)
@@ -1000,7 +1001,37 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (794, N'Ad
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (795, N'Adv. Rocket', N'', 6)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (796, N'Adv. Mass Driver', N'', 6)
 
--- delete from [LabelsBase] where id = 782
+
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (797, N' (previously {0})', N'', 9)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (798, N'The {0} ({1}) destroys the {2} ({3})', N'', 9)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (799, N'The {0} ({1}) fights off the {2} ({3})', N'', 9)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (800, N'{0} arrives with a colonyship in this galaxy', N'', 9)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (801, N'{0} is the first one to discover the technology {1}', N'', 9)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (802, N'Colony {0} is besieged by {1}', N'', 9)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (803, N'Colony {0} is occupied by {1}', N'', 9)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (804, N'Colony {0} was abandoned by {1}', N'', 9)
+
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (805, N'{2} {0} declared war on {3} {1}', N'', 9)
+-- delete from [LabelsBase] where id > 796
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (806, N'{2} {0} opens hostilities on {3} {1}', N'', 9)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (807, N'{2} {0} and {3} {1} switch to "Hostile" ', N'', 9)
+
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (808, N'{2} {0} reduces his diplomatic relationship to "{4}" towards {3} {1}', N'', 9)  --Alliance {1} and Alliance {2} reduce their diplomatic relationship to "Neutral"
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (809, N'{2} {0} and {3} {1} agree on a {4}', N'', 9)
+
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (810, N'Player', N'', 6)
+
+
+
+
+
+
+
+
+
+
+
+-- delete from [LabelsBase] where id = 798
 -- delete from [LabelsBase] where id = 781
 
 /* module int not null default 0,

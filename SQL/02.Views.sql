@@ -1810,3 +1810,38 @@ SELECT
 	hitPropability   ,
 	isHit   
 FROM   [CombatRounds]; 
+
+go
+
+IF EXISTS(SELECT 1 
+          FROM   sys.objects 
+          WHERE  NAME = N'v_GalacticEvents' 
+                 AND type = N'V') 
+  BEGIN 
+      DROP VIEW [engine].[v_GalacticEvents] 
+  END 
+
+go 
+CREATE VIEW [engine].[v_GalacticEvents]
+AS 
+SELECT
+	[id]
+	,[eventType]
+	,eventDatetime
+	,[int1]
+	,[int2]
+	,[int3]
+	,[int4]
+	,[int5]
+	,[int6]
+	,[string1]
+	,[string2]
+	,[string3]
+	,[string4]
+	,[string5]
+	,[string6]
+	,[string7]
+	,[string8]
+  FROM [dbo].[GalacticEvents]
+
+  go

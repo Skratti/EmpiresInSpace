@@ -349,8 +349,9 @@ CREATE TABLE [dbo].[Users]			  (
 	fogString nvarchar(max) DEFAULT '' NOT NULL,
     [description] nvarchar(4000) DEFAULT '' NOT NULL,
 	aiId  int not null default 0,
-	aiRelation  int not null default 1
-	-- alter table [Users] add 	[description] nvarchar(4000) DEFAULT '' NOT NULL
+	aiRelation  int not null default 1,
+	lastReadGalactivEvent int not null default 0,
+	-- alter table [Users] add 	[lastReadGalactivEvent]  int not null default 0
 	--researchSpent int not null default 0,  -- redundant, can be calculated by summing all researches of that user
 	constraint Users_primary primary key nonclustered (id)
 );
@@ -2219,10 +2220,7 @@ CREATE TABLE [dbo].[GalacticEvents]
 constraint [GalacticEvents_Primary] primary key clustered (id)
 )
 go
-
-create nonclustered index ServerEventsPerUser on [dbo].[ServerEvents](id,userId);
-go
-print 'table [dbo].[ServerEvents] created.'
+print 'table [dbo].[GalacticEvents] created.'
 go
 
 

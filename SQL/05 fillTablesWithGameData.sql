@@ -172,8 +172,8 @@ INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [d
 --delete  [ObjectDescription] where id = 404
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (400, N'Kolonieschiff', N'Fregatte.png', 1, 0, 54)
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (401, N'Scout', N'Scout3_60.png', 1, 0, 55)
-INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (402, N'Corvette', N'Corvette.png', 1, 0, 56)
-INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (403, N'Fregatte', N'Fregatte.png', 1, 0, 118)
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (402, N'Corvette', N'Corvette.png', 1, 0, 173)
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (403, N'Fregatte', N'Fregatte.png', 1, 0, 174)
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (404, N'destroyer', N'Destroyer_1_60.png', 1, 0, 118)
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (405, N'Cruiser', N'Fregatte.png', 1, 0, 58)
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (406, N'star ship', N'Fregatte.png', 1, 0, 118)
@@ -486,7 +486,7 @@ go
 
 
 
-
+-- IMPORTANT: UPDATE FIELD baseResearch AFTER INSERTING
 SET IDENTITY_INSERT [dbo].[Research] ON
 INSERT into [dbo].[Research] 
 	  ([id], [name],[objectimageUrl], [description]	, [cost], [label]	, [descriptionLabel], [researchType], [treeColumn]	, [treeRow]) 
@@ -655,11 +655,13 @@ with toUpdate ([id], [name],			[objectimageUrl], [description]	, [cost]		, [labe
 ---
 )
 update res set res.treeColumn = toUpdate.treeColumn, res.treeRow = toUpdate.treeRow,
-res.cost = toUpdate.cost
+res.cost = toUpdate.cost, res.baseCost = toUpdate.cost
 from dbo.Research as res
 inner join toUpdate
 on toUpdate.id = res.id
 */
+
+
 
 
 --INSERT [dbo].[Research] ([id], [name], [objectimageUrl], [description], [cost], [label], [descriptionLabel], [researchType], [treeColumn], [treeRow]) VALUES (900, N'Kolonieren Wüste', N'1.gif', N'', 2000, 125, 500, 2 , 0 , 8)
@@ -1254,11 +1256,11 @@ INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (5
 
 --Pressure Dome
 INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (54, 6, -25)
-
+INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (54, 2, 3)
 
 --Arcology
-INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (55, 6, -5)	-- Häuser - energy
-
+INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (55, 6, -10)	-- Häuser - energy
+-- delete from [BuildingProductions] where [buildingId] = 55
 
 --special Ressources Mines
 INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (1030, 1030, 20) -- Mine Holmium	-> Erz Holmium	

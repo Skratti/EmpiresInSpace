@@ -1019,19 +1019,23 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (807, N'{2
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (808, N'{2} {0} reduces his diplomatic relationship to "{4}" towards {3} {1}', N'', 9)  --Alliance {1} and Alliance {2} reduce their diplomatic relationship to "Neutral"
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (809, N'{2} {0} and {3} {1} agree on a {4}', N'', 9)
 
-INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (810, N'Player', N'', 6)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (810, N'Player', N'', 9)
+
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (811, N'Galaxy', N'', 9)
 
 
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (812, N'Enemy ships are attacked and major colonies can be plundered and conquered', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (813, N'Enemy ships are attacked and minor colonies can be conquered', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (814, N'Allows the crossing of borders', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (815, N'Trade offers may be restricted to be only visible and accepted by partners having a trade treaty', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (816, N'Ships will defend each other', N'', 7)
+
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (817, N'From:', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (818, N'Name:', N'', 7)
+--INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (818, N'To:', N'', 7) --226
 
 
-
-
-
-
-
-
-
--- delete from [LabelsBase] where id = 798
+-- delete from [LabelsBase] where id = 818
 -- delete from [LabelsBase] where id = 781
 
 /* module int not null default 0,

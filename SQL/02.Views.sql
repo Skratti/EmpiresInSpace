@@ -413,6 +413,7 @@ AS
 	  ,[description]
 	  ,aiId
 	  ,aiRelation
+	  ,lastReadGalactivEvent
   /*id, 
          username,                   
          activity, 

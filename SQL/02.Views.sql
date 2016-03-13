@@ -169,7 +169,10 @@ AS
          damageprobabilityreducablebyship, 
          defensebonus, 
          fieldSize,
-		 drawSize
+		 drawSize,
+		 BackgroundObjectId, 
+		 BackgroundDrawSize, 
+		 TilestartingAt
   FROM   [objectonmap]; 
 
 go 
@@ -1599,7 +1602,8 @@ AS
          y, 
          systemid, 
          objectid, 
-         drawsize 
+         drawsize ,
+		 colonyId
   FROM   [solarsysteminstances]; 
 
 go 

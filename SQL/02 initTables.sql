@@ -775,6 +775,9 @@ go
 --Verteidigungsbonus, Einflugschaden? Schadensstyp? Einflugschadenwahrscheinlichkeit? Wahrscheinlichkeit reduzierbar durch Ausweichfaktor?	
 --drop table [dbo].[ObjectOnMap]
 --   alter table [dbo].[ObjectOnMap] add drawSize real not null default 1.0
+--alter table [dbo].[ObjectOnMap] add TilestartingAt tinyint
+
+
 CREATE TABLE [dbo].[ObjectOnMap] (
 	id SMALLINT NOT NULL UNIQUE references [dbo].[ObjectDescription](id) on update cascade on delete cascade ,	
 	moveCost	tinyint NOT NULL DEFAULT 1,
@@ -785,6 +788,11 @@ CREATE TABLE [dbo].[ObjectOnMap] (
 	defenseBonus tinyint	NOT NULL DEFAULT 0,
 	fieldSize tinyint	NOT NULL DEFAULT 1,
 	drawSize real not null default 1.0,
+
+	BackgroundObjectId  SMALLINT references [dbo].[ObjectDescription](id) on update no action on delete no action  ,	
+	BackgroundDrawSize tinyint, --	 DEFAULT 15, -- Background size forPlanet/Colony View
+	TilestartingAt tinyint , --DEFAULT 3,  --offset of the tiles on Planet/Colony View
+
 	constraint ObjectonMap_primary primary key nonclustered (id)
 );
 print 'table [ObjectOnMap] created.'
@@ -1126,6 +1134,7 @@ CREATE TABLE [dbo].[SolarSystemInstances]
 	objectId SMALLINT NOT NULL
 		references [ObjectDescription](id) on update cascade on delete cascade,	
 	drawSize tinyInt not null default 1,	
+	colonyId int, 
 	constraint bpSolarSystemInstances_primary primary key nonclustered (id)
 );
 --drop index bpSolarSystemInstances_Cluster on [dbo].[SolarSystemInstances]

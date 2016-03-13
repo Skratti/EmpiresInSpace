@@ -1032,6 +1032,25 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (816, N'Sh
 
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (817, N'From:', N'', 7)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (818, N'Name:', N'', 7)
+
+
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (819, N'Desert Colonization', N'', 1)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (820, N'Mostly found in the inner areas of solar systems, these worlds contain few ressources', N'', 1)
+
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (821, N'Arctic Colonization', N'', 1)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (822, N'Mostly found in the outer areas of solar systems, these worlds contain few ressources', N'', 1)
+
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (823, N'Barren Colonization', N'', 1)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (824, N'Old worlds with thin atmospheres, holding few ressources', N'', 1)
+
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (825, N'Asteroid moon Colonization', N'', 1)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (826, N'These rocky moons with no atmosphere have reachable ressources in a wide range between few and abundance', N'', 1)
+
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (827, N'Volcanic Colonization', N'', 1)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (828, N'Mostly found in the inner areas of solar systems, these worlds are extremly rich in ressources', N'', 1)
+
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (829, N'Toxic planet Colonization', N'', 1)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (830, N'Mostly found in the inner areas of solar systems, these worlds have only few ressources', N'', 1)
 --INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (818, N'To:', N'', 7) --226
 
 
@@ -1079,6 +1098,20 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (259, N'Al
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (260, N'Allgemein', N'', 2)
 
   update [Cygnus3].dbo.ModulesGain set toHitRatio = 0 where damageoutput = 0
+
+
+  truncate table dbo.Labels
+BULK
+INSERT dbo.Labels
+--FROM 'D:\EmpiresInSpace\Labelfiles\DE.csv'
+FROM 'C:\Github\EmpiresInSpace\Labelfiles\DE.csv'
+WITH
+(
+ROWTERMINATOR = '\n'
+)
+GO
+
+
 */
 
 

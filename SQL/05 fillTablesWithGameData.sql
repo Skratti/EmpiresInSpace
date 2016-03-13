@@ -193,6 +193,34 @@ INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [d
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (461, N'Transcendence Builder', N'TranscendenceBuildert60.png', 1, 0, 595)
 
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (470, N'Colonizer', N'Colonizer2_60.png', 1, 0, 57)
+
+
+-- Planet Backgrounds:
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (624, N'EarthLike', N'51_Background.png', 1, 0, 25)
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (625, N'Land', N'51_Background.png', 1, 0, 26)
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (626, N'Water', N'51_Background.png', 1, 0, 27)
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (627, N'Desert', N'54.png', 1, 0, 28)
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (628, N'Ice', N'55.png', 1, 0, 29)
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (629, N'Barren', N'56.png', 1, 0, 30)
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (630, N'Volcano', N'VulcanoPlanet1.png', 1, 0, 31)
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (631, N'Toxic ', N'58.png', 1, 0, 32)
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (632, N'Gasgiant', N'GasPlanet.png', 1, 0, 33)
+--INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (633, N'Wanderer', N'60.gif', 1, 0, 34)
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (634, N'M Mond', N'EarthMoon.png', 1, 0, 35)
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (635, N'O', N'EarthMoon.png', 1, 0, 34)
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (636, N'L  Mond', N'EarthMoon.png', 1, 0, 36)
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (637, N'N  Mond', N'63.png', 1, 0, 37)
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (638, N'G  Mond', N'64.png', 1, 0, 28)
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (639, N'K  Mond', N'65.png', 1, 0, 41)
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (640, N'H  Mond', N'BarrenMoon.png', 1, 0, 39)
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (641, N'X Mond', N'VulcanoMoon.png', 1, 0, 31)
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (642, N'Toxic  Mond', N'68.png', 1, 0, 32)
+--INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (643, N'Gasriese', N'69.gif', 1, 0, 33)
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (644, N'Asteroidenmond', N'70.png', 1, 0, 35)
+
+
+
+
 --big images for template designer
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (500, N'Kolonieschiff', N'Scout3_60.png', 1, 0, 54)
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (501, N'Scout', N'Scout3_60.png', 1, 0, 55)
@@ -366,66 +394,59 @@ select 3, 'MassDriver', 1
 
 go
 INSERT INTO [dbo].[ObjectOnMap]
-           ([id]
-           ,[moveCost]
-           ,[damage]
-           ,[damageType]
-           ,[damageProbability]
-           ,[damageProbabilityReducableByShip]
-           ,[defenseBonus]
-           ,fieldSize
-		   ,drawSize)         
-select  1, 1, 100, 1, 100, 0, 0, 1,1  union all --Oranger Zwerg
-select 2, 1, 100, 1, 100, 0, 0, 1 ,1 union all  --Gelber Zwerg
-select 3, 1, 100, 1, 100, 0, 0, 1 ,1 union all  --GelbOranger Zwerg
-select			4	 ,		1		,	100		,		1		,			100				,							0				,0					,1				,	1.5 union all
-select			5	 ,		1		,	100		,		1		,			100				,							0				,0					,1				,	1.5 union all
-select			6	 ,		1		,	100		,		1		,			100				,							0				,0					,1				,	1.5 union all
-select			63	 ,		1		,	100		,		1		,			100				,							0				,0					,2				,	2.5 union all
-select			65	 ,		1		,	100		,		1		,			100				,							0				,0					,2				,	2.5 union all
-select			67	 ,		1		,	100		,		1		,			100				,							0				,0					,2				,	2.5 union all
-select 10, 2, 200, 3, 100, 1, 20,1,1 union all --N'Asteroidenfeld'
-select 11, 3, 400, 3, 150, 1, 20,1,1 union all --'dichtes Asteroidenfeld'
-select 13, 1, 100, 1, 100, 0, 0, 1,1 union all  --roter zwerg
-select 14, 1, 100, 1, 100, 0, 0, 1,1 union all
-select 15, 1, 100, 1, 100, 0, 0, 1,1 union all
-select 16, 1, 100, 1, 100, 0, 0, 1,1 union all
-select 17, 50, 100, 1, 100, 0, 0,1,1 union all  --schwarzes Loch
-select 24, 1, 0, null, 0, 0, 60, 1,1 union all  --earthlike
-select 25, 1, 0, null, 0, 0, 60, 1,1 union all --land
-select 26, 1, 0, null, 0, 0, 60, 1,1 union all --Water
-select 27, 1, 0, null, 0, 0, 60, 1,1 union all --Desert
-select 28, 1, 0, null, 0, 0, 60, 1,1 union all --Ice
-select 29, 1, 0, null, 0, 0, 60, 1,1 union all --Barren
-select 30, 1, 0, null, 0, 0, 60, 1,1 union all --Volcano
-select 31, 1, 0, null, 0, 0, 60, 1,1 union all --Toxic
-select 32, 1, 0, null, 0, 0, 60, 1,1 union all --Gasgiant
-select 33, 1, 0, null, 0, 0, 60, 1,1 union all --Wanderer
-select 34, 1, 0, null, 0, 0, 20, 1,1 union all --M Mond
-select 35, 1, 0, null, 0, 0, 20, 1,1 union all --Wanderer
-select 36, 1, 0, null, 0, 0, 20, 1,1 union all --L  Mond
-select 37, 1, 0, null, 0, 0, 20, 1,1 union all --N  Mond
-select 38, 1, 0, null, 0, 0, 20, 1,1 union all --G
-select 39, 1, 0, null, 0, 0, 20, 1,1 union all -- K
-select 40, 1, 0, null, 0, 0, 20, 1,1 union all --H 
-select 41, 1, 0, null, 0, 0, 20, 1,1 union all --X
-select 42, 1, 0, null, 0, 0, 20, 1,1 union all --Toxic Mond
-select 43, 1, 0, null, 0, 0, 20, 1,1 union all --Gasriese
-select 44, 1, 0, null, 0, 0, 20, 1,1 union all --Asteroidenmond
-select 45, 1, 100, 1, 100, 0, 0, 2,1 union all
-select 46, 1, 100, 1, 100, 0, 0, 0,1 union all
-select 47, 1, 100, 1, 100, 0, 0, 0,1 union all
-select 48, 1, 100, 1, 100, 0, 0, 0,1 union all
-select 50, 1, 100, 1, 100, 0, 0, 2,1 union all
-select 51, 1, 100, 1, 100, 0, 0, 0,1 union all
-select 52, 1, 100, 1, 100, 0, 0, 0,1 union all
-select 53, 1, 100, 1, 100, 0, 0, 0,1 union all
-select 55, 1, 100, 1, 100, 0, 0, 2,1 union all
-select 56, 1, 100, 1, 100, 0, 0, 0,1 union all
-select 57, 1, 100, 1, 100, 0, 0, 0,1 union all
-select 58, 1, 100, 1, 100, 0, 0, 0,1 union all
-select 59, 1, 100, 1, 100, 0, 0, 2 ,2.5 union all
-select 80, 2, 0, null, 0, 0, 10, 10	,1		--nebula
+           (
+				[id],	[moveCost],		[damage],	[damageType],	[damageProbability],	[damageProbabilityReducableByShip], [defenseBonus],	fieldSize,	drawSize,	BackgroundObjectId, BackgroundDrawSize, TilestartingAt)         
+select			1,				1,			100,				1,					100,									0,				0,			1,		1					null,				null,			null		union all --Oranger Zwerg
+select			2,				1,			100,				1,					100,									0,				0,			1,		1					null,				null,			null		union all  --Gelber Zwerg
+select			3,				1,			100,				1,					100,									0,				0,			1,		1					null,				null,			null		union all  --GelbOranger Zwerg
+select			4	 ,			1		,	100		,			1		,			100				,						0				,0			,1	,	1.5					null,				null,			null		union all
+select			5	 ,			1		,	100		,			1		,			100				,						0				,0			,1	,	1.5					null,				null,			null		union all
+select			6	 ,			1		,	100		,			1		,			100				,						0				,0			,1	,	1.5					null,				null,			null		union all
+select			63	 ,			1		,	100		,			1		,			100				,						0				,0			,2	,	2.5					null,				null,			null		union all
+select			65	 ,			1		,	100		,			1		,			100				,						0				,0			,2	,	2.5					null,				null,			null		union all
+select			67	 ,			1		,	100		,			1		,			100				,						0				,0			,2	,	2.5					null,				null,			null		union all
+select			10,				2,			200,				3,					100,									1,				20,			1,		1					null,				null,			null		union all --N'Asteroidenfeld'
+select			11,				3,			400,				3,					150,									1,				20,			1,		1					null,				null,			null		union all --'dichtes Asteroidenfeld'
+select			13,				1,			100,				1,					100,									0,				0,			1,		1					null,				null,			null		union all  --roter zwerg
+select			14,				1,			100,				1,					100,									0,				0,			1,		1					null,				null,			null		union all
+select			15,				1,			100,				1,					100,									0,				0,			1,		1					null,				null,			null		union all
+select			16,				1,			100,				1,					100,									0,				0,			1,		1					null,				null,			null		union all
+select			17,				50,			100,				1,					100,									0,				0,			1,		1					null,				null,			null		union all  --schwarzes Loch
+select			24,				1,			0,				null,					0,										0,				60,			1,		1					 624,				  15,			   3		union all  --earthlike
+select			25,				1,			0,				null,					0,										0,				60,			1,		1					 625,				  15,			   3		union all --land
+select			26,				1,			0,				null,					0,										0,				60,			1,		1					 626,				  15,			   3		union all --Water
+select			27,				1,			0,				null,					0,										0,				60,			1,		1					 627,				   7,			   2		union all --Desert
+select			28,				1,			0,				null,					0,										0,				60,			1,		1					 628,				   7,			   2		union all --Ice
+select			29,				1,			0,				null,					0,										0,				60,			1,		1					 629,				   7,			   2		union all --Barren
+select			30,				1,			0,				null,					0,										0,				60,			1,		1					 630,				   7,			   2		union all --Volcano
+select			31,				1,			0,				null,					0,										0,				60,			1,		1					 631,				   7,			   2		union all --Toxic
+select			32,				1,			0,				null,					0,										0,				60,			1,		1					 632,				   7,			   2		union all --Gasgiant
+--select			33,				1,			0,				null,					0,										0,				60,			1,		1					 633,				   7,			   2		union all --Wanderer
+select			34,				1,			0,				null,					0,										0,				20,			1,		1					 634,				   6,			   2		union all --M Mond
+select			35,				1,			0,				null,					0,										0,				20,			1,		1					 635,				   6,			   2		union all --Wanderer
+select			36,				1,			0,				null,					0,										0,				20,			1,		1					 636,				   6,			   2		union all --L  Mond
+select			37,				1,			0,				null,					0,										0,				20,			1,		1					 637,				   6,			   2		union all --N  Mond
+select			38,				1,			0,				null,					0,										0,				20,			1,		1					 638,				   6,			   2		union all --G
+select			39,				1,			0,				null,					0,										0,				20,			1,		1					 639,				   6,			   2		union all -- K
+select			40,				1,			0,				null,					0,										0,				20,			1,		1					 640,				   6,			   2		union all --H 
+select			41,				1,			0,				null,					0,										0,				20,			1,		1					 641,				   6,			   2		union all --X
+select			42,				1,			0,				null,					0,										0,				20,			1,		1					 642,				   6,			   2		union all --Toxic Mond
+--select			43,				1,			0,				null,					0,										0,				20,			1,		1					 643,				   6,			   2		union all --Gasriese
+select			44,				1,			0,				null,					0,										0,				20,			1,		1					 644,				   6,			   2		union all --Asteroidenmond
+select			45,				1,			100,				1,					100,									0,				0,			2,		1					null,				null,			null		union all
+select			46,				1,			100,				1,					100,									0,				0,			0,		1					null,				null,			null		union all
+select			47,				1,			100,				1,					100,									0,				0,			0,		1					null,				null,			null		union all
+select			48,				1,			100,				1,					100,									0,				0,			0,		1					null,				null,			null		union all
+select			50,				1,			100,				1,					100,									0,				0,			2,		1					null,				null,			null		union all
+select			51,				1,			100,				1,					100,									0,				0,			0,		1					null,				null,			null		union all
+select			52,				1,			100,				1,					100,									0,				0,			0,		1					null,				null,			null		union all
+select			53,				1,			100,				1,					100,									0,				0,			0,		1					null,				null,			null		union all
+select			55,				1,			100,				1,					100,									0,				0,			2,		1					null,				null,			null		union all
+select			56,				1,			100,				1,					100,									0,				0,			0,		1					null,				null,			null		union all
+select			57,				1,			100,				1,					100,									0,				0,			0,		1					null,				null,			null		union all
+select			58,				1,			100,				1,					100,									0,				0,			0,		1					null,				null,			null		union all
+select			59,				1,			100,				1,					100,									0,				0,			2,		2.5					null,				null,			null		union all
+select			80,				8,			0,				null,					0,										0,				10,			10,		1					null,				null,			null	--nebula
 go
 
 
@@ -521,13 +542,16 @@ select 2005, N'Ship Weapons I', N'1.gif', N'Simple ship weapons.', 45, 98, 520, 
 --INSERT into [dbo].[Research] 
 --	  ([id], [name],[objectimageUrl], [description]								, [cost]	, [label]	, [descriptionLabel], [researchType], [treeColumn]	, [treeRow]) 
 select 3002, N'Administration I', N'1.gif', N''									, 200		, 472		, 477				, 4				, 4				, 1  union all
-select 8, N'Kommunikation Center', N'1.gif', N'Erlaubt den Bau es Kraftwerks'	, 120		, 53		, 488				,1				,4				,5  union all
+select 8, N'Kommunikation Center', N'1.gif', N'Erlaubt den Bau es Kraftwerks'	, 120		, 53		, 488				, 1				, 4				, 5  union all
 select 402, N'Corvette', N'1.gif', N'', 200, 173, 494, 2 , 4 , 14 union all
 
 
---Level 5
-select 2, N'Wasserkraftwerk', N'1.gif', N'Erlaubt den Bau des Wasserkraftwerkes', 220, 92, 484,1,5,0 union all
-select 71, N'Superconductors', N'1.gif', N'Erlaubt den Bau des Kraftwerks'		, 260, 656, 657, 1, 5, 2 union all
+--Level 5  delete from [dbo].[Research]  where id = 2
+--select 2, N'Wasserkraftwerk', N'1.gif', N'Erlaubt den Bau des Wasserkraftwerkes', 220, 92, 484,1,5,0 union all
+select 300, N'Desert Colonization', N'1.gif', N''								, 100,			819,		820,			1,					5,			0 union all
+select 301, N'Arctic Colonization', N'1.gif', N''								, 120,			821,		822,			1,					5,			2 union all
+
+select 71, N'Superconductors', N'1.gif', N'Erlaubt den Bau des Kraftwerks'		, 260, 656, 657, 1, 5, 4 union all
 select 1030, N'Special Ressource Processing', N'1.gif', N'', 16, 668, 670, 1, 5, 9 union all
 select 410, N'SpaceMarines Center', N'1.gif', N'Erlaubt den Bau es Kraftwerks'	, 280		, 686		, 687				,1				,5				,13 union all
 
@@ -559,10 +583,15 @@ select 3, N'TreibstoffRaffinerie', N'1.gif', N'Erlaubt den Bau der TreibstoffRaf
 select 4003, N'Fleet Command II',						N'1.gif',			N''		, 250	, 554		, 559				, 4				, 8				, 14		 union all
 
 --Level 9
-select 52, N'Arcology'			, N'1.gif'				, N'Erlaubt den Bau des Kraftwerks'	, 640			, 715		, 716				, 1				, 9			, 10 union all
+select 302, N'Barren Colonization', N'1.gif', N''								, 400,			823,		824,			1,					9,			0 union all
+select 303, N'Asteroid moon Colonization', N'1.gif', N''						, 400,			825,		826,			1,					9,			2 union all
 
-select 50, N'Verb. Baumaterial', N'1.gif', N'Erlaubt den Bau des Kraftwerks', 700, 350, 489, 1, 9, 4 union all
+select 50, N'Verb. Baumaterial', N'1.gif', N'Erlaubt den Bau des Kraftwerks',	700,			350,		489,			1,					9,			4 union all
+select 52, N'Arcology'			, N'1.gif',  N'Erlaubt den Bau des Kraftwerks'	, 640			, 715		, 716			, 1				, 9			, 10 union all
 
+
+
+--delete from [dbo].[Research]  where id = 2023 
 --INSERT into [dbo].[Research] 
 --	  ([id], [name],[objectimageUrl], [description]	, [cost], [label]	, [descriptionLabel], [researchType], [treeColumn]	, [treeRow]) 
 select 2023, N'Colonization II', N'1.gif', N'Colonization module.', 200, 468, 522, 2 , 9 , 0 union all
@@ -601,8 +630,12 @@ select 404, N'Destroyer', N'1.gif',			N''			, 3600	,118		, 496				, 2				, 13			
 --Level 14
 --INSERT into [dbo].[Research] 
 --	  ([id]	, [name],[objectimageUrl], [description]					, [cost]	, [label]	, [descriptionLabel]	, [researchType], [treeColumn]	, [treeRow]) 
-select 2033	, N'Colonization III', N'1.gif', N'Colonization module.'	, 600		, 713		, 695					, 2				, 14			,	0 union all
-select 81	, N'Pressure Dome', N'1.gif', N'Colonization module.'		, 2300		, 696		, 697					, 2				, 14			,	2 union all
+--delete from [dbo].[Research]  where id = 2033 
+--select 2033	, N'Colonization III', N'1.gif', N'Colonization module.'	, 600		, 713		, 695					, 2				, 14			,	0 union all
+select 304, N'Volcanic Colonization', N'1.gif', N''							, 1600,			827,		828,			1,					14,			0 union all
+select 305, N'Toxic  planet Colonization', N'1.gif', N''					, 1600,			829,		830,			1,					14,			2 union all
+
+select 81	, N'Pressure Dome', N'1.gif', N'Colonization module.'		, 2300		, 696		, 697					, 2				, 14			,	4 union all
 select 2200	, N'Modules III', N'1.gif', N''								, 3000		, 699		, 700					,2				, 14			,	9 union all
 select 4005, N'Fleet Command VI', N'1.gif', N''		 , 3200		, 556		, 561				, 4				, 14				, 14 union all
 

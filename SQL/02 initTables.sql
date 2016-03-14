@@ -20,7 +20,6 @@ drop table [dbo].[colonyStock]
 drop table [dbo].[ColoniesBuildQueue]
 
 drop trigger TRIGGER_CreatePlanetSurface		
-drop table [dbo].[UserColonyMap]
 drop table [dbo].[ColonyBuildings]
 drop table [dbo].[Colonies]				-- Kolonien
 drop table [dbo].[shipStock]
@@ -698,16 +697,18 @@ go
 create unique clustered index DamageTypes_index ON [DamageTypes](id);
 go	
 		
-
+-- alter table [ObjectDescription] drop column damage
+-- alter table [ObjectDescription] add versionNo int not null default 1
 go
 CREATE TABLE [dbo].[ObjectDescription] (
 	id SMALLINT NOT NULL UNIQUE,	
 	[name] nvarchar(55),
 	objectimageUrl nvarchar(128) DEFAULT '',
-	moveCost	tinyint NOT NULL DEFAULT 1,
-	damage		tinyint	NOT NULL DEFAULT 0,
-	label int NOT NULL Default 1
-		references [dbo].LabelsBase (id) on update cascade on delete SET Default
+	versionNo int not null default 1,
+--	moveCost	tinyint NOT NULL DEFAULT 1,
+--	damage		tinyint	NOT NULL DEFAULT 0,
+--	label int NOT NULL Default 1
+--		references [dbo].LabelsBase (id) on update cascade on delete SET Default
 	constraint ObjectDescription_primary primary key nonclustered (id)
 );
 print 'table [ObjectDescription] created.'
@@ -768,6 +769,7 @@ CREATE TABLE [dbo].[surfaceDefaultMap](
 ) ON [PRIMARY]
 GO
 create unique clustered index surfaceDefaultMap_index ON [surfaceDefaultMap](id,[X],[Y]);
+create  nonclustered index surfaceDefaultMapId_index ON [surfaceDefaultMap](id);
 go	
 go
 
@@ -775,7 +777,8 @@ go
 --Verteidigungsbonus, Einflugschaden? Schadensstyp? Einflugschadenwahrscheinlichkeit? Wahrscheinlichkeit reduzierbar durch Ausweichfaktor?	
 --drop table [dbo].[ObjectOnMap]
 --   alter table [dbo].[ObjectOnMap] add drawSize real not null default 1.0
---alter table [dbo].[ObjectOnMap] add TilestartingAt tinyint
+--alter table [dbo].[ObjectOnMap] add label int NOT NULL Default 1
+--		references [dbo].LabelsBase (id) on update no action on delete no action
 
 
 CREATE TABLE [dbo].[ObjectOnMap] (
@@ -787,11 +790,13 @@ CREATE TABLE [dbo].[ObjectOnMap] (
 	damageProbabilityReducableByShip bit NOT NULL DEFAULT 1,	
 	defenseBonus tinyint	NOT NULL DEFAULT 0,
 	fieldSize tinyint	NOT NULL DEFAULT 1,
-	drawSize real not null default 1.0,
+	label int NOT NULL Default 1
+		references [dbo].LabelsBase (id) on update cascade on delete SET Default
+	--drawSize real not null default 1.0,
 
-	BackgroundObjectId  SMALLINT references [dbo].[ObjectDescription](id) on update no action on delete no action  ,	
-	BackgroundDrawSize tinyint, --	 DEFAULT 15, -- Background size forPlanet/Colony View
-	TilestartingAt tinyint , --DEFAULT 3,  --offset of the tiles on Planet/Colony View
+	---BackgroundObjectId  SMALLINT references [dbo].[ObjectDescription](id) on update no action on delete no action  ,	
+	--BackgroundDrawSize tinyint, --	 DEFAULT 15, -- Background size forPlanet/Colony View
+	--TilestartingAt tinyint , --DEFAULT 3,  --offset of the tiles on Planet/Colony View
 
 	constraint ObjectonMap_primary primary key nonclustered (id)
 );
@@ -799,6 +804,26 @@ print 'table [ObjectOnMap] created.'
 go
 create unique clustered index ObjectOnMap_index ON [ObjectOnMap](id);
 go	
+
+
+--drop table [ObjectImages]
+-- alter table ObjectImages add surfaceDefaultMapId SMALLINT default null 
+CREATE TABLE [dbo].[ObjectImages] (
+	objectId SMALLINT NOT NULL references [dbo].[ObjectOnMap](id) on update cascade on delete cascade ,	
+	imageId  SMALLINT NOT NULL UNIQUE references [dbo].[ObjectDescription](id) on update no action on delete no action ,		
+	drawSize real not null default 1.0,
+
+	BackgroundObjectId SMALLINT references [dbo].[ObjectDescription](id) on update no action on delete no action  ,	
+	BackgroundDrawSize tinyint, --	 DEFAULT 15, -- Background size forPlanet/Colony View
+	TilestartingAt tinyint , --DEFAULT 3,  --offset of the tiles on Planet/Colony View
+	surfaceDefaultMapId SMALLINT default null references [dbo].surfaceDefaultMap(id) on update no action on delete no action ,		
+	constraint ObjectImages_primary primary key nonclustered (objectId, imageId)
+);
+print 'table [ObjectOnMap] created.'
+go
+--create unique clustered index ObjectImages_index ON [ObjectImages](objectId);
+go	
+
 
 
 --damageType may be NULL, then all damageTypes are meant?
@@ -897,12 +922,16 @@ CREATE TABLE  [dbo].[BuildingProductions]
 );
 print 'table [BuildingProductions] created.'
 go
+-- alter table [dbo].[SurfaceTiles] add   label int NOT NULL Default 1
+--		references [dbo].LabelsBase (id) on update NO ACTION on delete NO ACTION
 CREATE TABLE  [dbo].[SurfaceTiles]
 (
 		id SMALLINT NOT NULL UNIQUE,	
 	[name] nvarchar(55),
 	objectId SMALLINT NOT NULL
 		references [dbo].[ObjectDescription](id) on update cascade on delete cascade,	
+    label int NOT NULL Default 1
+		references [dbo].LabelsBase (id) on update NO ACTION on delete NO ACTION,
 	constraint Surface_primary primary key clustered (id)
 );
 go
@@ -2008,6 +2037,7 @@ go
 create clustered index ColoniesBuildQueue_Cluster ON [ColoniesBuildQueue](id);
 go
 
+/*
 go
 CREATE TABLE  [dbo].[UserColonyMap]
 (
@@ -2018,7 +2048,7 @@ CREATE TABLE  [dbo].[UserColonyMap]
 	constraint UserColonyMap_primary primary key clustered (userId,colonyId)
 );
 go
-
+*/
 
 
 /* ---------------------------------------------------

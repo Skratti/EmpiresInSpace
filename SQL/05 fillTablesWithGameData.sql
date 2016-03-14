@@ -112,6 +112,11 @@ INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [d
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (104, N'Gebirge', N'MountainTile.png', 1, 0, 39)
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (105, N'Wüste', N'DesertTile.png', 1, 0, 40)
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (106, N'Eis', N'SnowTile.png', 1, 0, 41)
+
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl]) VALUES (107, N'BarrenSurfaceTile', N'BarrenSurfaceTile.png')
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl]) VALUES (108, N'AsteroidSurfaceTile', N'AsteroidSurfaceTile.png')
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl]) VALUES (109, N'VulcanoSurfaceTile', N'VulcanoSurfaceTile.png')
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl]) VALUES (110, N'ToxicSurfaceTile', N'ToxicSurfaceTile.png')
 --update [ObjectDescription] set [objectimageUrl] = N'ColonyCenter_60.png' where id = 151
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (149, N'Koloniezentrale', N'ColonyCenterSmall_60.png', 1, 0, 43)
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (150, N'Koloniezentrale', N'ColonyCenterMedium_60.png', 1, 0, 43)
@@ -362,6 +367,27 @@ INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [d
 
 --INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (3500, N'Nebula', N'nebel01.png', 1, 0, 390)
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (3500, N'Nebula', N'Nebula240.png', 1, 0, 390)
+
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl]) VALUES (4000, N'Land Planet', N'SolarSystems/world/Land00.png')
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl]) VALUES (4001, N'Land Planet', N'SolarSystems/world/Land01.png')
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl]) VALUES (4002, N'Land Planet', N'SolarSystems/world/Land02.png')
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl]) VALUES (4003, N'Land Planet', N'SolarSystems/world/Land03.png')
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl]) VALUES (4004, N'Land Planet', N'SolarSystems/world/Land04.png')
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl]) VALUES (4005, N'Land Planet', N'SolarSystems/world/Land05.png')
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl]) VALUES (4006, N'Land Planet', N'SolarSystems/world/Land06.png')
+--delete from [dbo].[ObjectDescription] where [id] > 4499 and id < 4507
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl]) VALUES (4500, N'Land Planet Surface', N'SolarSystems/colony/Land00.png')
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl]) VALUES (4501, N'Land Planet Surface', N'SolarSystems/colony/Land01.png')
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl]) VALUES (4502, N'Land Planet Surface', N'SolarSystems/colony/Land02.png')
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl]) VALUES (4503, N'Land Planet Surface', N'SolarSystems/colony/Land03.png')
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl]) VALUES (4504, N'Land Planet Surface', N'SolarSystems/colony/Land04.png')
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl]) VALUES (4505, N'Land Planet Surface', N'SolarSystems/colony/Land05.png')
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl]) VALUES (4506, N'Land Planet Surface', N'SolarSystems/colony/Land06.png')
+
+
+
+
+
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (5200, N'BorderLightGreyTileset', N'BorderLightGreyTileset.png', 1, 0, 390)
 
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (5400, N'BorderDarkBlueTileset', N'BorderDarkBlueTileset.png', 1, 0, 390)
@@ -383,6 +409,11 @@ INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [d
 print '[ObjectDescription] Done'
 go
 
+insert into  [dbo].[ObjectImages]
+	(	objectId, imageId, drawSize, BackgroundObjectId, BackgroundDrawSize, TilestartingAt)
+
+
+go
 INSERT INTO [dbo].[DamageTypes]
            ([id]
            ,name
@@ -393,6 +424,7 @@ select 3, 'MassDriver', 1
 
 
 go
+/*
 INSERT INTO [dbo].[ObjectOnMap]
            (
 				[id],	[moveCost],		[damage],	[damageType],	[damageProbability],	[damageProbabilityReducableByShip], [defenseBonus],	fieldSize,	drawSize,	BackgroundObjectId, BackgroundDrawSize, TilestartingAt)         
@@ -448,6 +480,119 @@ select			58,				1,			100,				1,					100,									0,				0,			0,		1					null,				n
 select			59,				1,			100,				1,					100,									0,				0,			2,		2.5					null,				null,			null		union all
 select			80,				8,			0,				null,					0,										0,				10,			10,		1					null,				null,			null	--nebula
 go
+*/
+
+INSERT INTO [dbo].[ObjectOnMap]
+           (
+				[id],	[moveCost],		[damage],	[damageType],	[damageProbability],	[damageProbabilityReducableByShip], [defenseBonus],	fieldSize,  	label)         
+select			1,				1,			100,				1,					100,									0,				0,			1,		3	union all --Oranger Zwerg
+select			2,				1,			100,				1,					100,									0,				0,			1,		3	union all  --Gelber Zwerg
+select			3,				1,			100,				1,					100,									0,				0,			1,		3	union all  --GelbOranger Zwerg
+select			4,				1,			100,				1,					100,									0,				0,			1,		3	union all
+select			5,				1,			100,				1,					100,									0,				0,			1,		3	union all
+select			6,				1,			100,				1,					100,									0,				0,			1,		3	union all
+select			63,				1,			100,				1,					100,									0,				0,			2,		3	union all
+select			65,				1,			100,				1,					100,									0,				0,			2,		3	union all
+select			67,				1,			100,				1,					100,									0,				0,			2,		3	union all
+select			10,				2,			200,				3,					100,									1,				20,			1,		3	union all --N'Asteroidenfeld'
+select			11,				3,			400,				3,					150,									1,				20,			1,		3	union all --'dichtes Asteroidenfeld'
+select			13,				1,			100,				1,					100,									0,				0,			1,		3	union all  --roter zwerg
+select			14,				1,			100,				1,					100,									0,				0,			1,		3	union all
+select			15,				1,			100,				1,					100,									0,				0,			1,		3	union all
+select			16,				1,			100,				1,					100,									0,				0,			1,		3	union all
+select			17,				50,			100,				1,					100,									0,				0,			1,		3	union all  --schwarzes Loch
+select			24,				1,			0,				null,					0,										0,				60,			1,		3	union all  --earthlike
+select			25,				1,			0,				null,					0,										0,				60,			1,		3	union all --land
+select			26,				1,			0,				null,					0,										0,				60,			1,		3	union all --Water
+select			27,				1,			0,				null,					0,										0,				60,			1,		3	union all --Desert
+select			28,				1,			0,				null,					0,										0,				60,			1,		3	union all --Ice
+select			29,				1,			0,				null,					0,										0,				60,			1,		3	union all --Barren
+select			30,				1,			0,				null,					0,										0,				60,			1,		3	union all --Volcano
+select			31,				1,			0,				null,					0,										0,				60,			1,		3	union all --Toxic
+select			32,				1,			0,				null,					0,										0,				60,			1,		3	union all --Gasgiant
+select			34,				1,			0,				null,					0,										0,				20,			1,		3	union all --M Mond
+select			35,				1,			0,				null,					0,										0,				20,			1,		3	union all --Wanderer
+select			36,				1,			0,				null,					0,										0,				20,			1,		3	union all --L  Mond
+select			37,				1,			0,				null,					0,										0,				20,			1,		3	union all --N  Mond
+select			38,				1,			0,				null,					0,										0,				20,			1,		3	union all --G
+select			39,				1,			0,				null,					0,										0,				20,			1,		3	union all -- K
+select			40,				1,			0,				null,					0,										0,				20,			1,		3	union all --H 
+select			41,				1,			0,				null,					0,										0,				20,			1,		3	union all --X
+select			42,				1,			0,				null,					0,										0,				20,			1,		3	union all --Toxic Mond
+select			44,				1,			0,				null,					0,										0,				20,			1,		3	union all --Asteroidenmond
+select			45,				1,			100,				1,					100,									0,				0,			2,		3	union all
+select			46,				1,			100,				1,					100,									0,				0,			0,		3	union all
+select			47,				1,			100,				1,					100,									0,				0,			0,		3	union all
+select			48,				1,			100,				1,					100,									0,				0,			0,		3	union all
+select			50,				1,			100,				1,					100,									0,				0,			2,		3	union all
+select			51,				1,			100,				1,					100,									0,				0,			0,		3	union all
+select			52,				1,			100,				1,					100,									0,				0,			0,		3	union all
+select			53,				1,			100,				1,					100,									0,				0,			0,		3	union all
+select			55,				1,			100,				1,					100,									0,				0,			2,		3	union all
+select			56,				1,			100,				1,					100,									0,				0,			0,		3	union all
+select			57,				1,			100,				1,					100,									0,				0,			0,		3	union all
+select			58,				1,			100,				1,					100,									0,				0,			0,		3	union all
+select			59,				1,			100,				1,					100,									0,				0,			2,		3	union all
+select			80,				8,			0,				null,					0,										0,				10,			10,		3			--nebula
+go
+
+
+
+INSERT INTO [dbo].[ObjectImages]
+           (
+			[objectId],	[imageId],	drawSize,	  BackgroundObjectId,   BackgroundDrawSize,	  TilestartingAt,	surfaceDefaultMapId)         
+select			1,				1,			1	,				null,					null,			null	,null	union all --Oranger Zwerg
+select			2,				2,			1	,				null,					null,			null	,null	union all  --Gelber Zwerg
+select			3,				3,			1	,				null,					null,			null	,null	union all  --GelbOranger Zwerg
+select			4,				4,			1.5	,				null,					null,			null	,null	union all
+select			5,				5,			1.5	,				null,					null,			null	,null	union all
+select			6,				6,			1.5	,				null,					null,			null	,null	union all
+select			63,				63,			2.5	,				null,					null,			null	,null	union all
+select			65,				65,			2.5	,				null,					null,			null	,null	union all
+select			67,				67,			2.5	,				null,					null,			null	,null	union all
+select			10,				10,			1	,				null,					null,			null	,null	union all --N'Asteroidenfeld'
+select			11,				11,			1	,				null,					null,			null	,null	union all --'dichtes Asteroidenfeld'
+select			13,				13,			1	,				null,					null,			null	,null	union all  --roter zwerg
+select			14,				14,			1	,				null,					null,			null	,null	union all
+select			15,				15,			1	,				null,					null,			null	,null	union all
+select			16,				16,			1	,				null,					null,			null	,null	union all
+select			24,				24,			1	,				 624,					  15,			   3	,17		union all   --earthlike
+select			25,				4000,     	1,					4500,					  15,				3	,17		union all	--earthlike		
+select			25,				4001,     	1,					4501,					  15,				3	,17		union all	--earthlike
+select			25,				4002,     	1,					4502,					  15,				3	,17		union all	--earthlike
+select			25,				4003,     	1,					4503,					  15,				3	,17		union all	--earthlike
+select			25,				4004,     	1,					4504,					  15,				3	,17		union all	--earthlike
+select			25,				4005,     	1,					4505,					  15,				3	,17		union all	--earthlike
+select			25,				4006,     	1,					4506,					  15,				3	,17		union all	--earthlike
+select			26,				26,			1	,				 626,					  15,			   3	,17		union all --Water
+select			27,				27,			1	,				 627,					   7,			   2	,17		union all --Desert
+select			28,				28,			1	,				 628,					   7,			   2	,17		union all --Ice
+select			29,				29,			1	,				 629,					   7,			   2	,17		union all --Barren
+select			30,				30,			1	,				 630,					   7,			   2	,17		union all --Volcano
+select			31,				31,			1	,				 631,					   7,			   2	,17		union all --Toxic
+select			32,				32,			1	,				 632,					   7,			   2	,null	union all --Gasgiant
+select			34,				34,			1	,				 634,					   6,			   2	,null	union all --M Mond
+select			35,				35,			1	,				 635,					   6,			   2	,null	union all --Wanderer
+select			36,				36,			1	,				 636,					   6,			   2	,null	union all --L  Mond
+select			37,				37,			1	,				 637,					   6,			   2	,null	union all --N  Mond
+select			38,				38,			1	,				 638,					   6,			   2	,null	union all --G
+select			39,				39,			1	,				 639,					   6,			   2	,null	union all -- K
+select			40,				40,			1	,				 640,					   6,			   2	,null	union all --H 
+select			41,				41,			1	,				 641,					   6,			   2	,null	union all --X
+select			42,				42,			1	,				 642,					   6,			   2	,null	union all --Toxic Mond
+select			44,				44,			1	,				 644,					   6,			   2	,null	union all --Asteroidenmond
+select			45,				45,			1	,				null,					null,			null	,null	union all
+select			46,				46,			1	,				null,					null,			null	,null	union all
+select			47,				47,			1	,				null,					null,			null	,null	union all
+select			48,				48,			1	,				null,					null,			null	,null	union all
+select			50,				50,			1	,				null,					null,			null	,null	union all
+select			51,				51,			1	,				null,					null,			null	,null	union all
+select			52,				52,			1	,				null,					null,			null	,null	union all
+select			53,				53,			1	,				null,					null,			null	,null	union all
+select			55,				55,			1	,				null,					null,			null	,null	union all
+select			59,				59,			2.5	,				null,					null,			null	,null	
+go
+
 
 
 insert into [ObjectWeaponModificators] (
@@ -495,16 +640,18 @@ update [ObjectWeaponModificators] set applyTo = 1 where objectId > 23 and object
 go
 
 go
-INSERT INTO [dbo].[SurfaceTiles] (id, [name], objectId) VALUES 
-(1,  'Gras', 101)
-,(2, 'Wald', 102)
-,(3, 'Wasser', 103)
-,(4, 'Gebirge', 104)
-,(5, 'Wüste', 105)
-,(6, 'Eis', 106);
+INSERT INTO [dbo].[SurfaceTiles] (id, [name], objectId, label) VALUES 
+(1,  'Gras', 101, 36)
+,(2, 'Wald', 102, 37)
+,(3, 'Wasser', 103, 38)
+,(4, 'Gebirge', 104, 39)
+,(5, 'Wüste', 105, 40)
+,(6, 'Eis', 106, 41)
+,(7, 'Barren', 107, 831)
+,(8, 'Asteroid', 108, 832)
+,(9, 'Vulcanic', 109, 833)
+,(10,'Toxic', 110, 834)
 go
-
-
 
 
 -- IMPORTANT: UPDATE FIELD baseResearch AFTER INSERTING
@@ -594,7 +741,7 @@ select 52, N'Arcology'			, N'1.gif',  N'Erlaubt den Bau des Kraftwerks'	, 640			
 --delete from [dbo].[Research]  where id = 2023 
 --INSERT into [dbo].[Research] 
 --	  ([id], [name],[objectimageUrl], [description]	, [cost], [label]	, [descriptionLabel], [researchType], [treeColumn]	, [treeRow]) 
-select 2023, N'Colonization II', N'1.gif', N'Colonization module.', 200, 468, 522, 2 , 9 , 0 union all
+--select 2023, N'Colonization II', N'1.gif', N'Colonization module.', 200, 468, 522, 2 , 9 , 0 union all
 
 
 --Level 10
@@ -1244,7 +1391,7 @@ INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (1
 --Hochofen
 INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (20, 6, -20) -- Hochofen energy
 INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (20, 8, -10) -- population
-INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (20, 5, -20) -- erz
+INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (20, 5, -10) -- erz
 INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (20, 10, 10) -- Stahl
 --delete from [dbo].[BuildingProductions] where [buildingId] = 20 ([buildingId], [goodsId], [amount]) VALUES (20, 10, 10) -- Stahl
 

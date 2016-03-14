@@ -168,14 +168,38 @@ AS
          damageprobability, 
          damageprobabilityreducablebyship, 
          defensebonus, 
-         fieldSize,
-		 drawSize,
-		 BackgroundObjectId, 
-		 BackgroundDrawSize, 
-		 TilestartingAt
+         fieldSize		,
+		 label	
   FROM   [objectonmap]; 
 
 go 
+
+
+IF EXISTS(SELECT 1 
+          FROM   sys.objects 
+          WHERE  NAME = N'v_ObjectImages' 
+                 AND type = N'V') 
+  BEGIN 
+      DROP VIEW [engine].[v_ObjectImages] 
+  END 
+
+go 
+
+CREATE VIEW [engine].[v_ObjectImages] 
+AS 
+  SELECT [objectId]
+      ,[imageId]
+      ,[drawSize]
+      ,[BackgroundObjectId]
+      ,[BackgroundDrawSize]
+      ,[TilestartingAt]
+      ,[surfaceDefaultMapId]
+  FROM [dbo].[ObjectImages]
+go 
+
+
+
+
 
 IF EXISTS(SELECT 1 
           FROM   sys.objects 
@@ -991,7 +1015,8 @@ CREATE VIEW [engine].[v_SurfaceTiles]
 AS 
   SELECT id, 
          NAME, 
-         objectid 
+         objectid,
+		 label
   FROM   [surfacetiles]; 
 
 go 
@@ -1680,10 +1705,7 @@ CREATE VIEW [engine].[v_ObjectDescription]
 AS 
   SELECT id,  
 		 name,
-         objectimageurl, 
-         movecost, 
-         damage, 
-         label 
+         objectimageurl 
   FROM   [objectdescription]; 
 
 go 

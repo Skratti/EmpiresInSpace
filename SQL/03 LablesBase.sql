@@ -1051,6 +1051,15 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (828, N'Mo
 
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (829, N'Toxic planet Colonization', N'', 1)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (830, N'Mostly found in the inner areas of solar systems, these worlds have only few ressources', N'', 1)
+
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (831, N'Barren', N'', 0)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (832, N'Rock', N'', 0)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (833, N'Volcanic', N'', 0)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (834, N'Toxic', N'', 0)
+
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (835, N'Create minor Colony', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (836, N'This colony will be part of colony {0}', N'', 7)
+
 --INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (818, N'To:', N'', 7) --226
 
 

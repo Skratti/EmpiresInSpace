@@ -177,10 +177,10 @@ INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (10, 1, 25
 
 --Colonizing Module I
 INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (13, 1, 60)
-INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (13, 2, 200)  -- Nahrung
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (13, 2, 50)  -- Nahrung
 INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (13, 7, 20)
 INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (13, 10, 20)  --metall
-
+--delete from [ModulesCosts] where [modulesId] = 13
 
 --Asteroid Miner
 /*
@@ -201,11 +201,11 @@ INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (17, 2, 10
 
 --Colonizing Module II
 INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (23, 1, 90)
-INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (23, 2, 300)  -- Nahrung
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (23, 2, 80)  -- Nahrung
 INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (23, 10, 50)
 INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (23, 7, 25)
 INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (23, 50, 10)
-
+--delete from [ModulesCosts] where [modulesId] = 23
 
 --stufe 2
 
@@ -421,11 +421,11 @@ INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (215, 60, 
 
 --Colonizing Module III
 INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (523, 1, 110)
-INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (523, 2, 400)  -- Nahrung
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (523, 2, 120)  -- Nahrung
 INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (523, 10, 60)
 INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (523, 7, 50)
 INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (523, 50, 40)
-
+--delete from [ModulesCosts] where [modulesId] = 523
 
 --Adv. Special Ressource 
 

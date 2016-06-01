@@ -82,6 +82,10 @@ drop table [dbo].[BuildingCosts]
 drop table [dbo].[Buildings]
 
 drop table [ResearchGain]
+
+drop table [SpecializationResearches]
+drop table [SpecializationGroups]
+
 drop table dbo.[Research]
 
 
@@ -308,7 +312,7 @@ go
 --alter table [Users] drop DF__Users__password1__3C00B29C
 CREATE TABLE [dbo].[Users]			  (
 	[id] int not null UNIQUE check ( id > -1 ),		
-	username nvarchar(63) DEFAULT '' NOT NULL,
+	username nvarchar(1000) DEFAULT '' NOT NULL,
 	--password1 nvarchar(63) DEFAULT '' NOT NULL,	
 	--email nvarchar(63),
 	--created datetime,	
@@ -393,7 +397,7 @@ update [Alliances] set id = aId
 
 CREATE   TABLE [dbo].[Alliances]			  (
 	[id] int not null,		
-	name nvarchar(300) DEFAULT '' NOT NULL,
+	name nvarchar(1000) DEFAULT '' NOT NULL,
 	[description] nvarchar(4000) DEFAULT '',
 	passwrd	nvarchar(63)  NOT NULL DEFAULT '',		
 	allianceOwner int references [dbo].[Users] (id) on update cascade on delete SET Default,		
@@ -657,9 +661,33 @@ go
 */
 
 go
+--drop table [SpecializationGroups]
+print '--- [Specialization] data ---'
+create TABLE [dbo].[SpecializationGroups] (
+	id int NOT NULL,	
+	[name] nvarchar(55),
+	picks int not null default 1,	
+	label int NOT NULL Default 1
+		references [dbo].LabelsBase (id) on update  NO ACTION on delete  NO ACTION,
+	constraint Specialization_primary primary key nonclustered (id)
+);
+print 'table [Specialization] created.'
+go
+create unique clustered index SpecializationGroup_index ON [SpecializationGroups](id);
+go
 
+create TABLE [dbo].[SpecializationResearches] (
+	SpecializationGroupId int NOT NULL Default 1
+		references [dbo].[SpecializationGroups] (id) on update cascade on delete cascade,
+	ResearchId SMALLINT NOT NULL Default 1
+		references [dbo].[Research] (id) on update cascade on delete cascade
+);
+print 'table [SpecializationResearches] created.'
+go
+create unique clustered index SpecializationResearches_index ON [SpecializationResearches](SpecializationGroupId,ResearchId);
+go
 
-
+go
 create TABLE [dbo].[UserResearch] 
 (
 	userId INT NOT NULL

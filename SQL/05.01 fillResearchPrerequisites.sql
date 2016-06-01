@@ -112,17 +112,55 @@ INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType
 -- Research
 --delete from [ResearchQuestPrerequisites] where sourcetype = 2 and sourceid = 40 and targetType = 3 and [TargetId] = 18
 
+
+
+
+
+
+--HIDDEN Techs:
+--Culture
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 1, 1, 9)   -- Ecosystem Adaption I 
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 1, 1, 152)  -- F erzmine
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 1, 1, 2000)  --F Space travel erlaubt F Modules  
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 1, 1, 400)  --Space travel 
+
+--Focus
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 211, 1, 2)	--Improved Building Material Production
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 210, 1, 10)	--Improved Farming
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 212, 1, 153)	--Improved Metal Refinement
+
+
+
+--Special Ressouces Mining/Refinery
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 220,	1, 1040) -- Special Ressource 
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 221,	1, 1041) -- Special Ressource 
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 222,	1, 1042) -- Special Ressource 
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 223,	1, 1043) -- Special Ressource 
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 224,	1, 1044) -- Special Ressource 
+
+--Special Ressouces Modules
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 230,	1, 1050) -- Special Ressource 
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 231,	1, 1051) -- Special Ressource 
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 232,	1, 1052) -- Special Ressource 
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 233,	1, 1053) -- Special Ressource 
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 234,	1, 1054) -- Special Ressource 
+
 --Level 0
 INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 1, 3, 11)		-- Water Power Plant
 INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 1, 3, 9)   -- Baumaterialfabrik
 INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 1, 3, 10)   -- Sonnenkraftwerk
 INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 1, 3, 19)   -- Montagehalle
 
+--Focus
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 1, 1, 2)		--Improved Building Material Production
 
-INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 1, 1, 9)   -- Ecosystem Adaption I 
-INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 1, 1, 152)  -- F erzmine
-INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 1, 1, 2000)  --F Space travel erlaubt F Modules  
-INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 1, 1, 400)  --Space travel 
+--Special Ressouces Mining/Refinery
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 1,	1, 1040) -- Special Ressource 
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 1,	1, 1041) -- Special Ressource 
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 1,	1, 1042) -- Special Ressource 
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 1,	1, 1043) -- Special Ressource 
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 1,	1, 1044) -- Special Ressource 
+
 
 --Level 1
 INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 9, 3, 18)   -- Häuser 
@@ -151,9 +189,29 @@ INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType
 INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 400, 1, 501) -- Outpost
 INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 400, 1, 4002)		--Fleet Command I
 
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 2,	3, 23)		--Improved BM
+
+--Focus
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 9,	1, 10)		--Improved Farming
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 152, 1, 153)		--Improved Metal Refinement
+
+
+--Special Ressouces
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 1040, 3, 1030) -- Special Ressource Analysis erlaubt Abbau
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 1041, 3, 1031) -- Special Ressource Analysis erlaubt Abbau
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 1042, 3, 1032) -- Special Ressource Analysis erlaubt Abbau
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 1043, 3, 1033) -- Special Ressource Analysis erlaubt Abbau
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 1044, 3, 1034) -- Special Ressource Analysis erlaubt Abbau
+
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 1040, 3, 1040) -- 1030  Special Ressource Processing erlaubt Verarbeitungsgebäude
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 1041, 3, 1041) -- 1030  Special Ressource Processing erlaubt Verarbeitungsgebäude
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 1042, 3, 1042) -- 1030  Special Ressource Processing erlaubt Verarbeitungsgebäude
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 1043, 3, 1043) -- 1030  Special Ressource Processing erlaubt Verarbeitungsgebäude
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 1044, 3, 1044) -- 1030  Special Ressource Processing erlaubt Verarbeitungsgebäude
+
 -- >3
 
-INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 152, 1, 1010)		--'Special Ressource Analysis',  I
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 152, 1, 3)		--Refinery  'Special Ressource Analysis',  I
 
 
 --Level 2
@@ -172,15 +230,20 @@ INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType
 INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 4002, 1, 2005)  -- Weapons 1
 
 
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 1040, 1, 1060)  -- Holmium Generator
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 1041, 1, 1061)  -- Terbium Factory
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 1042, 1, 1062)  -- Scandium Tools 
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 1043, 1, 1063)  -- Yttrium cloning lab
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 1044, 1, 1064)  -- lutetium Ecosystem Improvements
+
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 10,	3, 24)		--Improved Farming
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 153,  3, 25)		--Improved Metal Refinement
+
 --Level 3
 INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 51, 3, 51)	--Planetary Scanner
 INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 112, 3, 12)	--Lager
 -- administration I realized by researchGain
-INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 1010, 3, 1030) -- Special Ressource Analysis erlaubt Abbau
-INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 1010, 3, 1031) -- Special Ressource Analysis erlaubt Abbau
-INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 1010, 3, 1032) -- Special Ressource Analysis erlaubt Abbau
-INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 1010, 3, 1033) -- Special Ressource Analysis erlaubt Abbau
-INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 1010, 3, 1034) -- Special Ressource Analysis erlaubt Abbau
+
 -- Fleet Command I realized by researchGain
 
 INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 2003, 4, 4) --Shield 1
@@ -192,17 +255,27 @@ INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType
 
 
 INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 51, 1, 8)  --CommCenter
-INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 2003, 1, 402)  -- Space Marines
-INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 2005, 1, 402)  -- Space Marines
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 2005, 1, 415)  -- Heavy Fighter
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 2005, 1, 402)  -- Corvette
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 2003, 1, 402)  -- Corvette
+
+
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 1061, 1, 1051)		--Holmium Laser
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 1060, 1, 1050)		--Terbium Hull
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 1062, 1, 1052)  -- Scandium shield
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 1063, 1, 1053)  -- Yttrium ShipModules
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 1064, 1, 1054)  -- lutetium ShipModules
+
 
 
 -- >5
-INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 1010, 1, 1030) -- Special Ressource Analysis erlaubt Special Ressource Processing
+--INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 1010, 1, 1030) -- Special Ressource Analysis erlaubt Special Ressource Processing
 
 --Level 4
 -- Administration I
 INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 8, 3, 8)  --CommCenter
-INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 402, 5, 2)  -- Corvette
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 415, 5, 2)  -- Heavy Fighter hull
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 402, 5, 3)  -- Corvette hull
 
 --INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 3002, 1, 2)   -- Wasserkraft
 INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 3002,  1, 300)  -- Desert  Colonization
@@ -219,21 +292,13 @@ INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType
 -- level 5
 
 -- Superconductors
-INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 1030, 3, 1040) -- 1030  Special Ressource Processing erlaubt Verarbeitungsgebäude
-INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 1030, 3, 1041) -- 1030  Special Ressource Processing erlaubt Verarbeitungsgebäude
-INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 1030, 3, 1042) -- 1030  Special Ressource Processing erlaubt Verarbeitungsgebäude
-INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 1030, 3, 1043) -- 1030  Special Ressource Processing erlaubt Verarbeitungsgebäude
-INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 1030, 3, 1044) -- 1030  Special Ressource Processing erlaubt Verarbeitungsgebäude
 
 INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 410, 4, 17)  -- Space Marines
 
 
-INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 1030, 1, 1061)  -- Terbium Factory
-INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 1030, 1, 1060)  --Holmium Generator
-INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 1030, 1, 1062)  -- Scandium Tools 
-INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 1030, 1, 3)		-- Refinery: HydroCarbon
-INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 1030, 1, 1063)  -- Yttrium cloning lab
-INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 1030, 1, 1064)  -- lutetium Ecosystem Improvements
+
+--INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 1030, 1, 3)		-- Refinery: HydroCarbon
+
 
 INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 402,  1, 4003)  -- Fleet Command 2
 
@@ -247,10 +312,7 @@ INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType
 --Level 6
 
 INSERT into [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId])  select 1, 1060, 3, 180 	-- Holmium generator
-
-
-INSERT into [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId])
-select 1, 1062, 3, 182 	--  Scandium Tools
+INSERT into [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId])  select 1, 1062, 3, 182 	--  Scandium Tools
 INSERT into [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId])
 select 1, 1063, 3, 183 	union all-- Yttrium cloning lab
 select 1, 1064, 3, 184 	-- lutetium Ecosystem Improvements
@@ -258,11 +320,7 @@ select 1, 1064, 3, 184 	-- lutetium Ecosystem Improvements
 
 INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 3, 1, 50)  -- Adv Building materials
 
-INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 1061, 1, 1051)		--Holmium Laser
-INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 1060, 1, 1050)		--Terbium Hull
-INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 1062, 1, 1052)  -- Scandium shield
-INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 1063, 1, 1053)  -- Yttrium ShipModules
-INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 1064, 1, 1054)  -- lutetium ShipModules
+
 
 
 
@@ -336,7 +394,7 @@ INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType
 INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 55, 3, 52) --AquaFarm
 INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 502, 5, 200)  -- Space Station hull
 INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 502, 4, 500)  -- Space Station module
-INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 403, 5, 3)  --Frigatte hull
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 403, 5, 4)  --Frigatte hull
 
 
 INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 3004, 1, 3005)		--Administration 4
@@ -388,7 +446,7 @@ INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType
 INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 3005, 4, 523)		--Colonization II
 INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 80,  3, 53)  -- Neutronium Reactor / Superdense
 
-INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 404, 5, 4)		--destroyer ship hull
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 404, 5, 5)		--destroyer ship hull
 
 
 
@@ -461,7 +519,7 @@ INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType
 INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 405, 1, 4006)		--Fleet Command 5
 INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 405, 1, 406)		--Battleship
 
-
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 405, 5, 6)  -- Cruis hull
 
 --17
 
@@ -484,7 +542,7 @@ INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType
 INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 504, 5, 202)  -- Star Fortress hull
 INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 504, 4, 502)  -- Star Fortress module
 
-
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 406, 5, 7)  -- Battleship hull
 
 --
 -- Fleet Command 4
@@ -503,7 +561,7 @@ INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType
 -- Fleet Command 5
 -- Todo: Superbattleship
 
-
+INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 407, 5, 8)  -- SuperBattleship hull
 
 
 /*

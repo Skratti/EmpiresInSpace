@@ -138,7 +138,7 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (126, N'St
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (127, N'Star fortress', N'', 2)
 
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (128, N'Welcome to Empires in Space', N'', 2)
-INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (129, N'This Intro will show you the basics of the game. If you want to read a previously closed message, you find them with the Quests-Button in the upper right corner.', N'', 2)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (129, N'<p>Empires in Space is a turnbased multiplayer strategy game.<br>Each day has 6 turn evaluations.</p><br><br><p>The game is balanced in a such a way, that a single login per suffices to manage your realm.<br></p>', N'', 2)
 
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (130, N'Overview', N'', 2)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (131, 
@@ -1060,6 +1060,13 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (834, N'To
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (835, N'Create minor Colony', N'', 7)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (836, N'This colony will be part of colony {0}', N'', 7)
 
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (837, N'User borders / Alliance borders', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (838, N'Heavy Fighter', N'', 1)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (839, N'Slightly bigger than the scout, the heavy fighter exchanges agility for more firepower.', N'', 1)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (840, N'Heavy Fighter hull', N'', 5)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (841, N'Send message', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (842, N'Invite to alliance', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (843, N'Border Growth', N'', 7)
 --INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (818, N'To:', N'', 7) --226
 
 

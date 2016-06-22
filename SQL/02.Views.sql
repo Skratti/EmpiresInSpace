@@ -1872,3 +1872,41 @@ SELECT
   FROM [dbo].[GalacticEvents]
 
   go
+  
+IF EXISTS(SELECT 1 
+          FROM   sys.objects 
+          WHERE  NAME = N'v_SpecializationGroups' 
+                 AND type = N'V') 
+  BEGIN 
+      DROP VIEW [engine].[v_SpecializationGroups] 
+  END 
+
+go 
+CREATE VIEW [engine].[v_SpecializationGroups]
+AS 
+SELECT [id]
+      ,[name]
+      ,[picks]
+      ,[label]
+      ,[labelDescription]
+  FROM [dbo].[SpecializationGroups]
+
+  go
+  
+IF EXISTS(SELECT 1 
+          FROM   sys.objects 
+          WHERE  NAME = N'v_SpecializationResearches' 
+                 AND type = N'V') 
+  BEGIN 
+      DROP VIEW [engine].[v_SpecializationResearches] 
+  END 
+
+go 
+CREATE VIEW [engine].[v_SpecializationResearches]
+AS 
+SELECT  [SpecializationGroupId]
+      ,[ResearchId]
+      ,[SecondaryResearchId]
+  FROM [dbo].[SpecializationResearches]
+
+  go

@@ -676,15 +676,21 @@ go
 create unique clustered index SpecializationGroup_index ON [SpecializationGroups](id);
 go
 
-
---alter table [SpecializationResearches] add SecondaryResearchId SMALLINT references [dbo].[Research] (id) on update no action on delete no action
+-- drop table [dbo].[SpecializationResearches]
+-- alter table [SpecializationResearches] add Module3 SMALLINT references [dbo].[Modules](id) on update  no action on delete no action
 create TABLE [dbo].[SpecializationResearches] (
 	SpecializationGroupId int NOT NULL Default 1
 		references [dbo].[SpecializationGroups] (id) on update cascade on delete cascade,
 	ResearchId SMALLINT NOT NULL Default 1
 		references [dbo].[Research] (id) on update cascade on delete cascade,
-	SecondaryResearchId SMALLINT NOT NULL Default 1
-		references [dbo].[Research] (id) on update cascade on delete cascade,
+	SecondaryResearchId SMALLINT 
+		references [dbo].[Research] (id) on update no action on delete no action,
+	Building1 SMALLINT references [dbo].[Buildings] (id)  on update cascade on delete cascade,
+	Building2 SMALLINT references [dbo].[Buildings] (id)  on update no action on delete no action,
+	Building3 SMALLINT references [dbo].[Buildings] (id)  on update no action on delete no action,
+	Module1 SMALLINT references [dbo].[Modules](id)  on update no action on delete no action,
+	Module2 SMALLINT references [dbo].[Modules](id)  on update no action on delete no action,
+	Module3 SMALLINT references [dbo].[Modules](id)  on update no action on delete no action
 );
 print 'table [SpecializationResearches] created.'
 go

@@ -295,20 +295,20 @@ INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (1
 
 --Montagehalle
 --delete from [dbo].[BuildingProductions] where [buildingId] = 19
-INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (19, 6, -10) -- energy
-INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (19, 8, -15) -- population
+INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (19, 6, -15) -- energy
+INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (19, 8, -30) -- population
 INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (19, 7, 8)  --assembly points
 
 --Hochofen
 INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (20, 6, -20) -- Hochofen energy
 INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (20, 8, -10) -- population
-INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (20, 5, -5) -- erz
+INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (20, 5, -10) -- erz
 INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (20, 10, 8) -- Stahl
 --delete from [dbo].[BuildingProductions] where [buildingId] = 20 ([buildingId], [goodsId], [amount]) VALUES (20, 10, 10) -- Stahl
 
 INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (22, 6, -10) -- Synthetic material plant -  energy
 INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (22, 8, -6) -- population
-INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (22, 4, -10) -- erz
+INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (22, 4, -10) -- fuel
 INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (22, 11, 11) -- Synth. Material
 
 
@@ -325,7 +325,7 @@ INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (2
 -- Imp Hochofen
 INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (25, 6, -20) -- Hochofen energy
 INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (25, 8, -10) -- population
-INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (25, 5, -5) -- erz
+INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (25, 5, -10) -- erz
 INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (25, 10, 20) -- Stahl
 
 

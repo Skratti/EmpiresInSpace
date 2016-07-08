@@ -1907,6 +1907,12 @@ AS
 SELECT  [SpecializationGroupId]
       ,[ResearchId]
       ,[SecondaryResearchId]
+	  ,Building1
+	  ,Building2
+	  ,Building3
+	  ,Module1
+	  ,Module2
+	  ,Module3
   FROM [dbo].[SpecializationResearches]
 
   go

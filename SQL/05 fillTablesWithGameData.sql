@@ -1306,11 +1306,11 @@ INSERT into [dbo].[ShipHullsImages]
 select 0,		0 ,			440 ,			 501 ,					   0 ,						0 union all --Debris
 select 1,		1 ,			411 ,			 511 ,					   20 ,					   20 union all  --Scout 3
 select 3,		3 ,			402 ,			 512 ,					   0 ,					  -40 union all  --Corvette
-select 4,		4 ,			422 ,			 522 ,					  23 ,						0 union all  -- fregatte
-select 5,		5 ,			404 ,			 504 ,					  49 ,					   60 union all   -- destroyer
-select 6,		6 ,			441 ,			 541 ,					   0 ,						0 union all --Cruiser
-select 7,		7 ,			444 ,			 544 ,					   0 ,						0 union all --battleship
-select 8,		8 ,			447 ,			 547 ,					   0 ,						0 union all -- superbattleship
+select 4,		4 ,			422 ,			 522 ,					  79 ,					   80 union all  -- fregatte  360
+select 5,		5 ,			404 ,			 504 ,					  93 ,					   90 union all   -- destroyer 390
+select 6,		6 ,			441 ,			 541 ,					 109 ,					  115 union all --Cruiser 420
+select 7,		7 ,			444 ,			 544 ,					 124 ,				      115 union all --battleship
+select 8,		8 ,			447 ,			 547 ,					   99 ,						155 union all -- superbattleship
 --select 9,		8 ,			408 ,			 501 ,					   0 ,						0 union all
 select 10,	  200 ,			431 ,			 531 ,					  73 ,						0 union all
 select 11,    201 ,			434 ,			 534 ,					   0 ,						0 union all
@@ -1326,18 +1326,18 @@ select 19,      1 ,			414 ,			 516 ,					  20 ,					   20 union all --Scout blau
 select 20,      2 ,			416 ,			 517 ,					  19 ,					  -25 union all  --HeavyFighter
 select 21,      2 ,			417 ,			 518 ,					  19 ,					  -25 union all  --HeavyFighterGreen
 select 22,      2 ,			418 ,			 519 ,					  19 ,					  -25 union all  --HeavyFighterBlue
-select 23,      3 ,			420 ,			 520 ,					  0 ,					  -40 union all  --CorvetteGreen
-select 24,      3 ,			421 ,			 521 ,					  0 ,					  -40 union all  --CorvetteBlue
-select 25,      4 ,			423 ,			 523 ,					  0 ,					  -40 union all  --FrigateGreen
-select 26,      4 ,			424 ,			 524 ,					  0 ,					  -40 union all  --FrigateBlue
-select 27,      5 ,			426 ,			 526 ,					  0 ,					  -40 union all  --DestroyerGreen
-select 28,      5 ,			427 ,			 527 ,					  0 ,					  -40 union all  --DestroyerBlue
-select 29,      6 ,			442 ,			 542 ,					  0 ,					  -40 union all  --CruiserGreen
-select 30,      6 ,			443 ,			 543 ,					  0 ,					  -40 union all  --CruiserBlue
-select 31,      7 ,			445 ,			 545 ,					  0 ,					  -40 union all  --BattleshipGreen
-select 32,      7 ,			446 ,			 546 ,					  0 ,					  -40 union all  --BattleshipBlue
-select 33,      8 ,			448 ,			 548 ,					  0 ,					  -40 union all  --SuperBattleshipGreen
-select 34,      8 ,			449 ,			 549 ,					  0 ,					  -40			 --SuperBattleshipBlue
+select 23,      3 ,			420 ,			 520 ,					  63 ,					  30 union all  --CorvetteGreen
+select 24,      3 ,			421 ,			 521 ,					  63 ,					  30 union all  --CorvetteBlue
+select 25,      4 ,			423 ,			 523 ,					  79 ,					  80 union all  --FrigateGreen
+select 26,      4 ,			424 ,			 524 ,					  79 ,					  80 union all  --FrigateBlue
+select 27,      5 ,			426 ,			 526 ,					  93 ,					  90 union all  --DestroyerGreen
+select 28,      5 ,			427 ,			 527 ,					  93 ,					  90 union all  --DestroyerBlue
+select 29,      6 ,			442 ,			 542 ,				     109 ,					 115 union all  --CruiserGreen
+select 30,      6 ,			443 ,			 543 ,					 109 ,					 115 union all  --CruiserBlue
+select 31,      7 ,			445 ,			 545 ,					  124 ,					   115 union all  --BattleshipGreen
+select 32,      7 ,			446 ,			 546 ,					  124 ,					   115 union all  --BattleshipBlue
+select 33,      8 ,			448 ,			 548 ,					  99 ,					   155 union all  --SuperBattleshipGreen
+select 34,      8 ,			449 ,			 549 ,					  99 ,					   155			 --SuperBattleshipBlue
 
 
 
@@ -1409,8 +1409,61 @@ INSERT [dbo].[ShipHullsModulePositions] ([shipHullId], [posX], [posY]) VALUES (6
 INSERT [dbo].[ShipHullsModulePositions] ([shipHullId], [posX], [posY]) VALUES (6, 2, 5)
 INSERT [dbo].[ShipHullsModulePositions] ([shipHullId], [posX], [posY]) VALUES (6, 4, 5)
 -- battle ship  19
+INSERT [dbo].[ShipHullsModulePositions] ([shipHullId], [posX], [posY]) VALUES (7, 0, 3)
+INSERT [dbo].[ShipHullsModulePositions] ([shipHullId], [posX], [posY]) VALUES (7, 0, 4)
+INSERT [dbo].[ShipHullsModulePositions] ([shipHullId], [posX], [posY]) VALUES (7, 0, 5)
+INSERT [dbo].[ShipHullsModulePositions] ([shipHullId], [posX], [posY]) VALUES (7, 0, 6)
 
+INSERT [dbo].[ShipHullsModulePositions] ([shipHullId], [posX], [posY]) VALUES (7, 1, 4)
+INSERT [dbo].[ShipHullsModulePositions] ([shipHullId], [posX], [posY]) VALUES (7, 1, 5)
+
+INSERT [dbo].[ShipHullsModulePositions] ([shipHullId], [posX], [posY]) VALUES (7, 2, 1)
+INSERT [dbo].[ShipHullsModulePositions] ([shipHullId], [posX], [posY]) VALUES (7, 2, 2)
+INSERT [dbo].[ShipHullsModulePositions] ([shipHullId], [posX], [posY]) VALUES (7, 2, 3)
+INSERT [dbo].[ShipHullsModulePositions] ([shipHullId], [posX], [posY]) VALUES (7, 2, 4)
+INSERT [dbo].[ShipHullsModulePositions] ([shipHullId], [posX], [posY]) VALUES (7, 2, 5)
+INSERT [dbo].[ShipHullsModulePositions] ([shipHullId], [posX], [posY]) VALUES (7, 2, 6)
+
+INSERT [dbo].[ShipHullsModulePositions] ([shipHullId], [posX], [posY]) VALUES (7, 3, 4)																		   
+INSERT [dbo].[ShipHullsModulePositions] ([shipHullId], [posX], [posY]) VALUES (7, 3, 5)
+
+INSERT [dbo].[ShipHullsModulePositions] ([shipHullId], [posX], [posY]) VALUES (7, 4, 3)
+INSERT [dbo].[ShipHullsModulePositions] ([shipHullId], [posX], [posY]) VALUES (7, 4, 4)																   
+INSERT [dbo].[ShipHullsModulePositions] ([shipHullId], [posX], [posY]) VALUES (7, 4, 5)
+INSERT [dbo].[ShipHullsModulePositions] ([shipHullId], [posX], [posY]) VALUES (7, 4, 6)
 -- super battle 24
+
+INSERT [dbo].[ShipHullsModulePositions] ([shipHullId], [posX], [posY]) VALUES (8, 0, 5)
+
+
+INSERT [dbo].[ShipHullsModulePositions] ([shipHullId], [posX], [posY]) VALUES (8, 1, 4)
+INSERT [dbo].[ShipHullsModulePositions] ([shipHullId], [posX], [posY]) VALUES (8, 1, 5)
+INSERT [dbo].[ShipHullsModulePositions] ([shipHullId], [posX], [posY]) VALUES (8, 1, 6)
+	
+INSERT [dbo].[ShipHullsModulePositions] ([shipHullId], [posX], [posY]) VALUES (8, 2, 3)																		   
+INSERT [dbo].[ShipHullsModulePositions] ([shipHullId], [posX], [posY]) VALUES (8, 2, 4)
+INSERT [dbo].[ShipHullsModulePositions] ([shipHullId], [posX], [posY]) VALUES (8, 2, 5)
+INSERT [dbo].[ShipHullsModulePositions] ([shipHullId], [posX], [posY]) VALUES (8, 2, 6)
+																			   
+INSERT [dbo].[ShipHullsModulePositions] ([shipHullId], [posX], [posY]) VALUES (8, 3, 1)
+INSERT [dbo].[ShipHullsModulePositions] ([shipHullId], [posX], [posY]) VALUES (8, 3, 2)
+INSERT [dbo].[ShipHullsModulePositions] ([shipHullId], [posX], [posY]) VALUES (8, 3, 3)
+INSERT [dbo].[ShipHullsModulePositions] ([shipHullId], [posX], [posY]) VALUES (8, 3, 4)
+INSERT [dbo].[ShipHullsModulePositions] ([shipHullId], [posX], [posY]) VALUES (8, 3, 5)
+INSERT [dbo].[ShipHullsModulePositions] ([shipHullId], [posX], [posY]) VALUES (8, 3, 6)
+INSERT [dbo].[ShipHullsModulePositions] ([shipHullId], [posX], [posY]) VALUES (8, 3, 7)			
+	
+INSERT [dbo].[ShipHullsModulePositions] ([shipHullId], [posX], [posY]) VALUES (8, 4, 3)														   
+INSERT [dbo].[ShipHullsModulePositions] ([shipHullId], [posX], [posY]) VALUES (8, 4, 4)																		   
+INSERT [dbo].[ShipHullsModulePositions] ([shipHullId], [posX], [posY]) VALUES (8, 4, 5)
+INSERT [dbo].[ShipHullsModulePositions] ([shipHullId], [posX], [posY]) VALUES (8, 4, 6)
+																			   
+
+INSERT [dbo].[ShipHullsModulePositions] ([shipHullId], [posX], [posY]) VALUES (8, 5, 4)																   
+INSERT [dbo].[ShipHullsModulePositions] ([shipHullId], [posX], [posY]) VALUES (8, 5, 5)
+INSERT [dbo].[ShipHullsModulePositions] ([shipHullId], [posX], [posY]) VALUES (8, 5, 6)
+
+INSERT [dbo].[ShipHullsModulePositions] ([shipHullId], [posX], [posY]) VALUES (8, 6, 5)
 
 -- ?death star 30?
 
@@ -1426,25 +1479,34 @@ select		199	,	3,		3
 INSERT [dbo].[ShipHullsModulePositions] 
 ([shipHullId], [posX], [posY])  
 select		200	,	1,		3  union all
-select		200	,	1,		4  union all
-select		200	,	2,		2 union all
+select		200	,	1,		6  union all
 select		200	,	2,		3 union all
 select		200	,	2,		4 union all
+select		200	,	2,		6 union all
 select		200	,	3,		3 union all
-select		200	,	3,		4 
+select		200	,	3,		6 
 
 
 
 --star base 12 
 INSERT [dbo].[ShipHullsModulePositions] 
 ([shipHullId], [posX], [posY])  
-select		200	,	1,		3  union all
-select		200	,	1,		4  union all
-select		200	,	2,		2 union all
-select		200	,	2,		3 union all
-select		200	,	2,		4 union all
-select		200	,	3,		3 union all
-select		200	,	3,		4 
+select		201	,	0,		3  union all
+
+select		201	,	1,		2  union all
+select		201	,	1,		3  union all
+select		201	,	1,		4  union all
+select		201	,	1,		6  union all
+select		201	,	1,		7  union all
+
+select		201	,	2,		3 union all
+select		201	,	2,		4 union all
+select		201	,	2,		6 union all
+
+select		201	,	3,		3 union all
+select		201	,	3,		6 union all
+
+select		201	,	4,		3 
 
 --star fortress  18
 INSERT [dbo].[ShipHullsModulePositions] 
@@ -1635,8 +1697,8 @@ insert into [SpecializationResearches] (SpecializationGroupId, ResearchId, Secon
 	select 0, 203, 207 
 
 	insert into [SpecializationResearches] (SpecializationGroupId,	 ResearchId,		Building1)
-	select														1,			210,			   23	union all
-	select														1,			211,			   24	union all
+	select														1,			210,			   24	union all
+	select														1,			211,			   23	union all
 	select														1,			212,			   25 
 
 	insert into [SpecializationResearches] (SpecializationGroupId,	 ResearchId,   Building1,  Building2,	Building3)

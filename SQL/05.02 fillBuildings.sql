@@ -92,25 +92,28 @@ INSERT [dbo].[Buildings] ([id], [name], [objectId], [BuildingScript], [isBuildab
 -- truncate Table [dbo].[BuildOptions]    
 -- set which buildins are allowed per surfacetype
 --(1,  'Gras', 101);
+-- truncate Table [dbo].[BuildOptions]    
+
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (1, 1) --Koloniezentrale I
-INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (1, 3)  --Farm
-INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (1, 4)  -- Raumhafen
---INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (1, 5)
-INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (1, 6)  -- TreibstoffRaffinerie
---INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (1, 7)
+
+
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (1, 8)   -- Kommunikationszentrum
-INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (1, 9)  -- Baumaterialfabrik
-INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (1, 10) -- Sonnenkraftwerk
-INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (1, 12) -- Lager
-INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (1, 13) -- Kundschafter
-INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (1, 14) -- Kraftwerk
-INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (1, 15) -- Forschungslabor
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (1, 16) -- Modulfabrik
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (1, 17) -- Schiffswerft
-INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (1, 18) -- Häuser
+
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (1, 15) -- Forschungslabor
+
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (1, 51) -- PlanetaryScanner
+
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (1, 19) -- Montagehalle
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (1, 12) -- Lager
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (1, 18) -- Häuser
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (1, 3)  --Farm
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (1, 6)  -- TreibstoffRaffinerie
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (1, 9)  -- Baumaterialfabrik
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (1, 10) -- Sonnenkraftwerk
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (1, 14) -- Kraftwerk
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (1, 20) -- Hochofen
-INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (1, 21) -- DefSat
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (1, 22) -- synthetic materials plant
 
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (1, 23) -- Imp Baumaterialfabrik
@@ -120,6 +123,12 @@ INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (1, 25) -- Imp Hoc
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (1, 50) -- Verb. Baumaterialfabrik
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (1, 55) -- Arcology
 
+
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (1, 1030) -- Mine Holmium
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (1, 1031)	-- Mine Terbium
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (1, 1032)	-- Mine Scandium
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (1, 1033)	-- Mine Yttrium
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (1, 1034)	-- Mine Lutetium
 
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (1, 1040)  --Holmium Hütte
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (1, 1041)  -- Terbium Hütte
@@ -134,6 +143,8 @@ INSERT [dbo].[BuildOptions] ([objectId],[buildingId]) VALUES (1, 183)  --Yttrium
 INSERT [dbo].[BuildOptions] ([objectId],[buildingId]) VALUES (1, 184)  --LutEcosystem
 
 INSERT [dbo].[BuildOptions] ([objectId],[buildingId]) VALUES (1, 53)  --Neutronium Reactor
+
+
 
 --,(2, 'Wald', 102)
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (2, 9)
@@ -176,15 +187,21 @@ INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (4, 1034)	-- Mine 
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (4, 53)  --Neutronium Reactor
 
 --,(5, 'Wüste', 105)
-INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (5, 6)
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (5, 6)  --Kohlenwasserstoffe
 --INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (5, 7)
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (5, 8)
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (5, 9)
-INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (5, 10)
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (5, 10) --Sonnenkraftwerk
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (5, 12)
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (5, 21)
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (5, 50)
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (5, 51)
+
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (5, 1030) -- Mine Holmium
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (5, 1031)	-- Mine Terbium
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (5, 1032)	-- Mine Scandium
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (5, 1033)	-- Mine Yttrium
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (5, 1034)	-- Mine Lutetium
 
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (5, 1040)
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (5, 1041)
@@ -192,50 +209,134 @@ INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (5, 1042)
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (5, 1043)
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (5, 1044)
 
+
 INSERT [dbo].[BuildOptions] ([objectId],[buildingId]) VALUES (5, 53)  --Neutronium Reactor
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (5, 55)
 
 --,(6, 'Eis', 106)
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (6, 8)  --Kommunikationszentrum
-INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (6, 9)   --Baumaterialfabrik
-INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (6, 12)  --Lager
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (6, 17)  --Schiffswerft
-INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (6, 19)  --Montagehalle
+
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (6, 19) -- Montagehalle
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (6, 12) -- Lager
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (6, 9)  -- Baumaterialfabrik
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (6, 14) -- Kraftwerk
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (6, 20) -- Hochofen
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (6, 22) -- synthetic materials plant
 
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (6, 23) -- Imp Baumaterialfabrik
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (6, 25) -- Imp Hochofen
-
+															   
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (6, 50) -- Verb. Baumaterialfabrik
+															   
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (6, 1030) -- Mine Holmium
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (6, 1031)	-- Mine Terbium
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (6, 1032)	-- Mine Scandium
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (6, 1033)	-- Mine Yttrium
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (6, 1034)	-- Mine Lutetium
+															   
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (6, 1040)  --Holmium Hütte
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (6, 1041)  -- Terbium Hütte
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (6, 1042)  -- Scandium Hütte
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (6, 1043)  -- Yttrium  Hütte
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (6, 1044)  --Lutetium Hütte
+
 INSERT [dbo].[BuildOptions] ([objectId],[buildingId]) VALUES (6, 53)  --Neutronium Reactor
 
---,(7, 'Barren', 106)
-INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (7, 9)  -- Baumaterialfabrik
-INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (7, 12) -- Lager
-INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (7, 14) -- Kraftwerk
+
+--,(7, 'Barren', 106) -- 
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (7, 15) -- Forschungslabor
+
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (7, 8)  --Kommunikationszentrum
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (7, 17)  --Schiffswerft
+															   
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (7, 19) -- Montagehalle
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (7, 12) -- Lager
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (7, 9)  -- Baumaterialfabrik
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (7, 14) -- Kraftwerk
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (7, 20) -- Hochofen
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (7, 22) -- synthetic materials plant
+															   
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (7, 23) -- Imp Baumaterialfabrik
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (7, 25) -- Imp Hochofen
+															   
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (7, 50) -- Verb. Baumaterialfabrik
+															   
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (7, 1030) -- Mine Holmium
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (7, 1031)	-- Mine Terbium
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (7, 1032)	-- Mine Scandium
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (7, 1033)	-- Mine Yttrium
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (7, 1034)	-- Mine Lutetium
+															   
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (7, 1040)  --Holmium Hütte
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (7, 1041)  -- Terbium Hütte
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (7, 1042)  -- Scandium Hütte
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (7, 1043)  -- Yttrium  Hütte
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (7, 1044)  --Lutetium Hütte
+
 INSERT [dbo].[BuildOptions] ([objectId],[buildingId]) VALUES (7, 53)  --Neutronium Reactor
+
+
+
 
 -- 8 Asteroid
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (8, 2)  --Mine
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (8, 12) -- Lager
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (8, 10) -- Sonnenkraftwerk
+
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (8, 20) -- Hochofen
-INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (8, 23) -- Imp Baumaterialfabrik
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (8, 25) -- Imp Hochofen
 
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (8, 1030) -- Mine Holmium
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (8, 1031)	-- Mine Terbium
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (8, 1032)	-- Mine Scandium
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (8, 1033)	-- Mine Yttrium
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (8, 1034)	-- Mine Lutetium
+															   
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (8, 50) -- Verb. Baumaterialfabrik
+INSERT [dbo].[BuildOptions] ([objectId],[buildingId]) VALUES (8, 53)  --Neutronium Reactor
 
 --9	Vulcanic
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (9, 2)  --Mine
+
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (9, 19) -- Montagehalle
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (9, 12) -- Lager
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (9, 14) -- Kraftwerk
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (9, 20) -- Hochofen
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (9, 22) -- synthetic materials plant
+															   
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (9, 23) -- Imp Baumaterialfabrik
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (9, 25) -- Imp Hochofen
+															   
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (9, 50) -- Verb. Baumaterialfabrik
+															   
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (9, 1030) -- Mine Holmium
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (9, 1031)	-- Mine Terbium
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (9, 1032)	-- Mine Scandium
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (9, 1033)	-- Mine Yttrium
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (9, 1034)	-- Mine Lutetium
+															   
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (9, 1040)  --Holmium Hütte
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (9, 1041)  -- Terbium Hütte
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (9, 1042)  -- Scandium Hütte
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (9, 1043)  -- Yttrium  Hütte
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (9, 1044)  --Lutetium Hütte
+
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (9, 53)  --Neutronium Reactor
+
+
 
 --10	Toxic
-INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (10, 54)   -- Pressure Dome
-INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (10, 23) -- Imp Baumaterialfabrik
-INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (10, 25) -- Imp Hochofen
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (10, 6)  -- TreibstoffRaffinerie
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (10, 54) -- Pressure Dome
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (10, 14) -- Kraftwerk
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (10, 1030) -- Mine Holmium
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (10, 1031)	-- Mine Terbium
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (10, 1032)	-- Mine Scandium
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (10, 1033)	-- Mine Yttrium
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (10, 1034)	-- Mine Lutetium
+
+
 
 -- truncate  Table [dbo].[BuildingProductions]    
 --sets which goods are consumed and produced by active buildings

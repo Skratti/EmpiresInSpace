@@ -260,12 +260,14 @@ INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType
 INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 2003, 1, 402)  -- Corvette
 
 
+--delete from [dbo].[ResearchQuestPrerequisites] where [TargetType] = 1 and [TargetId] > 1049 and [TargetId] < 1055 and SourceId > 1000 and SourceId < 1070 and SourceType = 1
+/*
 INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 1061, 1, 1051)		--Holmium Laser
 INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 1060, 1, 1050)		--Terbium Hull
 INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 1062, 1, 1052)  -- Scandium shield
 INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 1063, 1, 1053)  -- Yttrium ShipModules
 INSERT [dbo].[ResearchQuestPrerequisites] ([SourceType], [SourceId], [TargetType], [TargetId]) VALUES (1, 1064, 1, 1054)  -- lutetium ShipModules
-
+*/
 
 
 -- >5

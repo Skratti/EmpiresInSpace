@@ -1141,7 +1141,13 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (904, N'Sp
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (905, N'Special ressources are needed for efficiency-raising buildings, as well as in the cosntruction of sophisticated ship modules', N'', 1)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (906, N'Special Ressource Ship Modules', N'', 1)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (907, N'Compared to the ship common modules, special ressource ship modules will simply be better', N'', 1)
-
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (908, N'Number of civilizations having this specialization', N'', 1)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (909, N'Civilizatory Traits ', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (910, N'Global Ranking ', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (911, N'?', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (912, N'Q', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (913, N'Chat', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (914, N'Commit', N'', 7)
 --INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (818, N'To:', N'', 7) --226
 
 

@@ -1299,6 +1299,7 @@ INSERT [dbo].[ShipHulls] ([id], [isStarBase], [typename], [labelName], [objectId
 INSERT [dbo].[ShipHulls] ([id], [isStarBase], [typename], [labelName], [objectId], [modulesCount], [templateImageUrl], [label]) VALUES (220, 1, N'Transcendence  Construct', 0, 460, 0, N'401Template.gif', 594)
 INSERT [dbo].[ShipHulls] ([id], [isStarBase], [typename], [labelName], [objectId], [modulesCount], [templateImageUrl], [label]) VALUES (221, 0, N'Transcendence  Builder', 0, 461, 50, N'401Template.gif', 595)
 
+--with data (	[id],[shipHullId], objectId , templateImageId, templateModulesXoffset, templateModulesYoffset) as(
 --truncate table [ShipHullsImages]
 INSERT into [dbo].[ShipHullsImages]
 					-- on map:		-- in designer:  
@@ -1313,8 +1314,8 @@ select 7,		7 ,			444 ,			 544 ,					 124 ,				      115 union all --battleship
 select 8,		8 ,			447 ,			 547 ,					   99 ,						155 union all -- superbattleship
 --select 9,		8 ,			408 ,			 501 ,					   0 ,						0 union all
 select 10,	  200 ,			431 ,			 531 ,					  73 ,						0 union all
-select 11,    201 ,			434 ,			 534 ,					   0 ,						0 union all
-select 12,    202 ,			437 ,			 537 ,					   0 ,						0 union all
+select 11,    201 ,			434 ,			 534 ,					 99 ,						60 union all
+select 12,    202 ,			437 ,			 537 ,					 124 ,						60 union all
 select 13,      1 ,			410 ,			 510 ,					   20 ,						20 union all	-- Scout 2
 select 14,    199 ,			430 ,			 530 ,					  49 ,						6 union all --spacestation 0 Outpost
 select 15,    220 ,			460 ,			 560 ,					  0 ,						0 union all
@@ -1338,7 +1339,16 @@ select 31,      7 ,			445 ,			 545 ,					  124 ,					   115 union all  --Battles
 select 32,      7 ,			446 ,			 546 ,					  124 ,					   115 union all  --BattleshipBlue
 select 33,      8 ,			448 ,			 548 ,					  99 ,					   155 union all  --SuperBattleshipGreen
 select 34,      8 ,			449 ,			 549 ,					  99 ,					   155			 --SuperBattleshipBlue
+/*
+)
+update toupdate 
+set toupdate.templateModulesXoffset = data.templateModulesXoffset,
+toupdate.templateModulesYoffset = data.templateModulesYoffset
 
+from [dbo].[ShipHullsImages] as toupdate
+inner join data
+on data.id = toupdate.id
+*/
 
 
 --scout 5 
@@ -1408,6 +1418,7 @@ INSERT [dbo].[ShipHullsModulePositions] ([shipHullId], [posX], [posY]) VALUES (6
 INSERT [dbo].[ShipHullsModulePositions] ([shipHullId], [posX], [posY]) VALUES (6, 0, 5)
 INSERT [dbo].[ShipHullsModulePositions] ([shipHullId], [posX], [posY]) VALUES (6, 2, 5)
 INSERT [dbo].[ShipHullsModulePositions] ([shipHullId], [posX], [posY]) VALUES (6, 4, 5)
+
 -- battle ship  19
 INSERT [dbo].[ShipHullsModulePositions] ([shipHullId], [posX], [posY]) VALUES (7, 0, 3)
 INSERT [dbo].[ShipHullsModulePositions] ([shipHullId], [posX], [posY]) VALUES (7, 0, 4)
@@ -1489,31 +1500,53 @@ select		200	,	3,		6
 
 
 --star base 12 
+--delete from [dbo].[ShipHullsModulePositions]  where [shipHullId] = 201
 INSERT [dbo].[ShipHullsModulePositions] 
 ([shipHullId], [posX], [posY])  
-select		201	,	0,		3  union all
+select		201	,	0,		2  union all
 
-select		201	,	1,		2  union all
-select		201	,	1,		3  union all
-select		201	,	1,		4  union all
-select		201	,	1,		6  union all
-select		201	,	1,		7  union all
+select		201	,	1,		2 union all
+select		201	,	1,		6 union all
 
-select		201	,	2,		3 union all
-select		201	,	2,		4 union all
-select		201	,	2,		6 union all
+select		201	,	2,		1  union all
+select		201	,	2,		2  union all
+select		201	,	2,		3  union all
+select		201	,	2,		4  union all
+select		201	,	2,		6  union all
+select		201	,	2,		7  union all
 
-select		201	,	3,		3 union all
+
+select		201	,	3,		2 union all
 select		201	,	3,		6 union all
 
-select		201	,	4,		3 
+select		201	,	4,		2 
 
 --star fortress  18
+--delete from [dbo].[ShipHullsModulePositions]  where [shipHullId] = 202
 INSERT [dbo].[ShipHullsModulePositions] 
 ([shipHullId], [posX], [posY])  
-select		199	,	1,		3  union all
-select		199	,	2,		2  union all
-select		199	,	3,		3
+select		202	,	0,		4  union all
+	
+select		202	,	1,		0 union all
+select		202	,	1,		3 union all			  
+select		202	,	1,		4 union all
+select		202	,	1,		7 union all
+	
+select		202	,	2,		0 union all		
+select		202	,	2,		1 union all				  
+select		202	,	2,		2  union all
+select		202	,	2,		3  union all
+select		202	,	2,		4  union all
+select		202	,	2,		5  union all
+select		202	,	2,		6  union all
+select		202	,	2,		7  union all
+			  
+select		202	,	3,		0 union all		  
+select		202	,	3,		3 union all
+select		202	,	3,		4 union all
+select		202	,	3,		7 union all
+			  
+select		202	,	4,		4 
 
 
 

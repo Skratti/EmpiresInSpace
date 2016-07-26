@@ -1148,6 +1148,21 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (911, N'?'
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (912, N'Q', N'', 7)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (913, N'Chat', N'', 7)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (914, N'Commit', N'', 7)
+
+
+-- Tooltip
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (915, N'Colony', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (916, N'Minor Colony', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (917, N'Owned by you', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (918, N'{0} Ship', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (919, N'Ship is hostile', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (920, N'Hostile ships present', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (921, N'Owner: {0}', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (922, N'{0} Ships', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (923, N'{0} Move Cost', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (924, N'Inactive', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (925, N'Empty Space', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (926, N'Outer Space', N'', 7)
 --INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (818, N'To:', N'', 7) --226
 
 

@@ -138,7 +138,7 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (126, N'St
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (127, N'Star fortress', N'', 2)
 
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (128, N'Welcome to Empires in Space', N'', 2)
-INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (129, N'<p>Empires in Space is a turnbased multiplayer strategy game.<br>Each day has 6 turn evaluations.</p><br><br><p>The game is balanced in a such a way, that a single login per suffices to manage your realm.<br></p>', N'', 2)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (129, N'<p>Empires in Space is a turnbased multiplayer strategy game.<br><br>Although each day has 6 turn evaluations, the game is balanced in a such a way, that a single login per day suffices to manage your realm.<br></p>', N'', 2)
 
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (130, N'Overview', N'', 2)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (131, 
@@ -641,7 +641,7 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (514, N'Sc
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (515, N'Yttrium Modules I Description', N'', 1)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (516, N'Lutetium Modules I Description', N'', 1)
 
-INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (517, N'Modules Description', N'', 1)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (517, N'Space ships are constructed from a ship hull and various ship modules. The modules can be constructed in the module plant or be acquired from other civilizations - either by trade or warfare.', N'', 1)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (518, N'Cargo Description', N'', 1)
 
 
@@ -1163,11 +1163,46 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (923, N'{0
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (924, N'Inactive', N'', 7)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (925, N'Empty Space', N'', 7)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (926, N'Outer Space', N'', 7)
+
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (927, N'Cost: ', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (928, N'Requires', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (929, N'Leads to', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (930, N'Enables', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (931, N'Research Now', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (932, N'Already researched', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (933, N'Can be researched', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (934, N'Not yet researchable', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (935, N'Needs a specific civilization trait', N'', 7)
+
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (936, N'Orbit', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (937, N'Antimatter', N'', 6)
+
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (938, N'Antimatter Collector', N'', 3)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (939, N'Space Lab', N'', 3)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (940, N'Control Center', N'', 3)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (941, N'Weather Control', N'', 3)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (942, N'Long Range Scanner', N'', 3)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (943, N'Space Habitat', N'', 3)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (944, N'Exotic Materials Lab', N'', 3)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (945, N'Antimatter Reactor', N'', 3)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (946, N'Exotic Materials Assembly Plant', N'', 3)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (947, N'Orbital Buildings', N'', 1)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (948, N'Antimatter Utilization', N'', 1)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (949, N'The orbit of the colony allows the gathering of antiprotons in the planets radiation belt. Other spacestations in the orbit may improve the overall productivity or grant a higher scan range in the surrounding space.', N'', 1)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (950, N'Antimatter may be used as power source for the colony, as a power source for microrobots in the assembly process, or consumed in the antimatter research lab, giving insights into the nature of quantum mechanics.', N'', 1)
+--INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (936, N'', N'', 7)
+--INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (937, N'', N'', 7)
+--INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (938, N'', N'', 7)
+--INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (939, N'', N'', 7)
+--INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (940, N'', N'', 7)
+
 --INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (818, N'To:', N'', 7) --226
 
 
 -- delete from [LabelsBase] where id = 818
--- delete from [LabelsBase] where id = 781
+-- delete from [LabelsBase] where id = 517
+
+--INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (517, N'Space ships are constructed from a ship hull and various ship modules. The modules can be constructed in the module plant or be acquired from other civilizations - either by trade or warfare.', N'', 1)
 
 /* module int not null default 0,
 0 Objects -> part of the objectDescriptin table.

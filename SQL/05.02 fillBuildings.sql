@@ -20,9 +20,23 @@ INSERT [dbo].[Buildings] ([id], [name], [objectId], [BuildingScript], [isBuildab
 INSERT [dbo].[Buildings] ([id], [name], [objectId], [BuildingScript], [isBuildable], [visibilityNeedsGoods], [groupId], [label], prodQueueLevel ,oncePerColony) VALUES (17, N'Schiffswerft', 154, N'SpaceportB.js', 1, 0, 1, 122, 4,1)
 
 --Focus
-INSERT [dbo].[Buildings] ([id], [name], [objectId], [BuildingScript], [isBuildable], [visibilityNeedsGoods], [groupId], [label], prodQueueLevel) VALUES (23, N'Imp Baumaterialfabrik', 189, NULL, 1, 0, 1, 897, 4)
-INSERT [dbo].[Buildings] ([id], [name], [objectId], [BuildingScript], [isBuildable], [visibilityNeedsGoods], [groupId], [label], prodQueueLevel) VALUES (24, N'Imp Landwirtschaft', 190, NULL, 1, 0, 1, 898, 3)
-INSERT [dbo].[Buildings] ([id], [name], [objectId], [BuildingScript], [isBuildable], [visibilityNeedsGoods], [groupId], [label], prodQueueLevel) VALUES (25, N'Imp Hochofen', 191, NULL, 1, 0, 1, 899, 5)
+INSERT [dbo].[Buildings] ([id], [name], [objectId], [BuildingScript], [isBuildable], [visibilityNeedsGoods], [groupId], [label], prodQueueLevel) VALUES (23, N'Imp Baumaterialfabrik', 140, NULL, 1, 0, 1, 897, 4)
+INSERT [dbo].[Buildings] ([id], [name], [objectId], [BuildingScript], [isBuildable], [visibilityNeedsGoods], [groupId], [label], prodQueueLevel) VALUES (24, N'Imp Landwirtschaft', 141, NULL, 1, 0, 1, 898, 3)
+INSERT [dbo].[Buildings] ([id], [name], [objectId], [BuildingScript], [isBuildable], [visibilityNeedsGoods], [groupId], [label], prodQueueLevel) VALUES (25, N'Imp Hochofen', 142, NULL, 1, 0, 1, 899, 5)
+
+
+--Orbitals
+INSERT [dbo].[Buildings] ([id], [name], [objectId], [BuildingScript], [isBuildable], [visibilityNeedsGoods], [groupId], [label], prodQueueLevel) VALUES (60, N'Antimatter Collector', 140, NULL, 1, 0, 2, 938, 4)
+INSERT [dbo].[Buildings] ([id], [name], [objectId], [BuildingScript], [isBuildable], [visibilityNeedsGoods], [groupId], [label], prodQueueLevel) VALUES (61, N'Space Lab'			, 141, NULL, 1, 0, 2, 939, 5)
+INSERT [dbo].[Buildings] ([id], [name], [objectId], [BuildingScript], [isBuildable], [visibilityNeedsGoods], [groupId], [label], prodQueueLevel, assemblyModifier, productionModifier) VALUES (62, N'Control Center'		, 142, NULL, 1, 0, 2, 940, 4, 10, 5)
+INSERT [dbo].[Buildings] ([id], [name], [objectId], [BuildingScript], [isBuildable], [visibilityNeedsGoods], [groupId], [label], prodQueueLevel, foodModifier) VALUES (63, N'Weather Control'		, 143, NULL, 1, 0, 2, 941, 5, 20)
+INSERT [dbo].[Buildings] ([id], [name], [objectId], [BuildingScript], [isBuildable], [visibilityNeedsGoods], [groupId], [label], prodQueueLevel) VALUES (64, N'Long Range Scanner'	, 144, NULL, 1, 0, 2, 942, 1)
+INSERT [dbo].[Buildings] ([id], [name], [objectId], [BuildingScript], [isBuildable], [visibilityNeedsGoods], [groupId], [label], prodQueueLevel) VALUES (65, N'Space Habitat'		, 145, NULL, 1, 0, 2, 943, 1)
+
+--Antimater Consumption
+INSERT [dbo].[Buildings] ([id], [name], [objectId], [BuildingScript], [isBuildable], [visibilityNeedsGoods], [groupId], [label], prodQueueLevel) VALUES (80, N'Exotic Materials Lab'			, 146, NULL, 1, 0, 2, 941, 5)
+INSERT [dbo].[Buildings] ([id], [name], [objectId], [BuildingScript], [isBuildable], [visibilityNeedsGoods], [groupId], [label], prodQueueLevel) VALUES (81, N'Antimatter Reactor'				, 147, NULL, 1, 0, 2, 942, 1)
+INSERT [dbo].[Buildings] ([id], [name], [objectId], [BuildingScript], [isBuildable], [visibilityNeedsGoods], [groupId], [label], prodQueueLevel) VALUES (82, N'Exotic Materials Assembly Plant'	, 148, NULL, 1, 0, 2, 943, 6)
 
 
 --II Specials
@@ -123,6 +137,9 @@ INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (1, 25) -- Imp Hoc
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (1, 50) -- Verb. Baumaterialfabrik
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (1, 55) -- Arcology
 
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (1, 80) -- Exotic Materials Lab			
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (1, 81) -- Antimatter Reactor				
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (1, 82) -- Exotic Materials Assembly Plant
 
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (1, 1030) -- Mine Holmium
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (1, 1031)	-- Mine Terbium
@@ -164,6 +181,10 @@ INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (2, 25) -- Imp Hoc
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (2, 50)
 INSERT [dbo].[BuildOptions] ([objectId],[buildingId]) VALUES (2, 53)  --Neutronium Reactor
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (2, 55)
+
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (2, 80) -- Exotic Materials Lab			
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (2, 81) -- Antimatter Reactor				
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (2, 82) -- Exotic Materials Assembly Plant
 
 --,(3, 'Wasser', 103)
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (3, 11)  --Wasserkraftwerk
@@ -337,7 +358,17 @@ INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (10, 1033)	-- Mine
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (10, 1034)	-- Mine Lutetium
 
 
+-- Orbit
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (11, 60)	-- Antimatter Collector
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (11, 61)	-- Space Lab
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (11, 62)	-- Control Center	
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (11, 63)	-- Weather Control		
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (11, 64)	-- Long Range Scanner	
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (11, 65)	-- Space Habitat		
 
+
+
+-- Production and Consumption
 -- truncate  Table [dbo].[BuildingProductions]    
 --sets which goods are consumed and produced by active buildings
 -- insert into ServerEvents (eventType) select 4
@@ -390,6 +421,7 @@ INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (1
 --Forschungslabor
 INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (15, 6, -10) --  Energie
 INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (15, 8, -35)  --  Population
+INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (15, 12, 1)  -- Research pints
 
 -- Häuser
 INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (18, 6, -10)	-- Häuser - energy
@@ -471,6 +503,40 @@ INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (5
 --Arcology
 INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (55, 6, -10)	-- Häuser - energy
 -- delete from [BuildingProductions] where [buildingId] = 55
+
+--Orbitals:
+-- Antimatter Collector
+INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (60, 8, -5)  --- Pop
+INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (60, 61, 2)  --- Antimatter
+
+--Space lab
+INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (61, 8, -10)  --- Pop
+
+-- Control Center
+INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (62, 8, -6)  --- Pop
+
+--Weather Control
+INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (63, 8, -4)  --- Pop
+
+--Long Range Scanner
+
+-- Space Habitat
+
+-- Antimatter Consumption
+-- Exotic Materials Lab
+INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (80, 6, -15)	-- - energy
+INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (80, 8, -12)  --- Pop
+INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (80, 61, -5)  --- Antimatter
+
+--Antimatter Reactor
+INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (81, 8, -10)  --- Pop
+INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (81, 6, 220)	-- - energy
+INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (81, 61, -5)  --- Antimatter
+
+-- Exotic Materials Assembly Plant
+INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (82, 8, -6)  --- Pop
+INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (82, 61, -5)  --- Antimatter
+INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (82, 7, 60)  --assemby points
 
 --special Ressources Mines
 INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (1030, 1030, 20) -- Mine Holmium	-> Erz Holmium	
@@ -673,6 +739,56 @@ INSERT [dbo].[BuildingCosts] ([buildingId], [goodsId], [amount]) VALUES (55, 7, 
 INSERT [dbo].[BuildingCosts] ([buildingId], [goodsId], [amount]) VALUES (55, 1,  30) --  -Baumaterial
 INSERT [dbo].[BuildingCosts] ([buildingId], [goodsId], [amount]) VALUES (55, 10, 70) --  -Stahl
 INSERT [dbo].[BuildingCosts] ([buildingId], [goodsId], [amount]) VALUES (55, 11, 40)  -- kunststoffe
+
+
+
+--Orbitals:
+-- Antimatter Collector
+INSERT [dbo].[BuildingCosts] ([buildingId], [goodsId], [amount]) VALUES (60, 7, 60)  --- assembly
+INSERT [dbo].[BuildingCosts] ([buildingId], [goodsId], [amount]) VALUES (60, 1, 30)  --- BM
+INSERT [dbo].[BuildingCosts] ([buildingId], [goodsId], [amount]) VALUES (60, 10, 45)  --- metal
+
+--Space lab
+INSERT [dbo].[BuildingCosts] ([buildingId], [goodsId], [amount]) VALUES (61, 7, 60)  --- assembly
+INSERT [dbo].[BuildingCosts] ([buildingId], [goodsId], [amount]) VALUES (61, 1, 30)  --- BM
+INSERT [dbo].[BuildingCosts] ([buildingId], [goodsId], [amount]) VALUES (61, 10, 45)  --- metal
+
+-- Control Center
+INSERT [dbo].[BuildingCosts] ([buildingId], [goodsId], [amount]) VALUES (62, 7, 60)  --- assembly
+INSERT [dbo].[BuildingCosts] ([buildingId], [goodsId], [amount]) VALUES (62, 1, 30)  --- BM
+INSERT [dbo].[BuildingCosts] ([buildingId], [goodsId], [amount]) VALUES (62, 10, 45)  --- metal
+
+--Weather Control
+INSERT [dbo].[BuildingCosts] ([buildingId], [goodsId], [amount]) VALUES (63, 7, 60)  --- assembly
+INSERT [dbo].[BuildingCosts] ([buildingId], [goodsId], [amount]) VALUES (63, 1, 30)  --- BM
+INSERT [dbo].[BuildingCosts] ([buildingId], [goodsId], [amount]) VALUES (63, 10, 45)  --- metal
+
+--Long Range Scanner
+INSERT [dbo].[BuildingCosts] ([buildingId], [goodsId], [amount]) VALUES (64, 7, 60)  --- assembly
+INSERT [dbo].[BuildingCosts] ([buildingId], [goodsId], [amount]) VALUES (64, 1, 30)  --- BM
+INSERT [dbo].[BuildingCosts] ([buildingId], [goodsId], [amount]) VALUES (64, 10, 45)  --- metal
+-- Space Habitat
+INSERT [dbo].[BuildingCosts] ([buildingId], [goodsId], [amount]) VALUES (65, 7, 60)  --- assembly
+INSERT [dbo].[BuildingCosts] ([buildingId], [goodsId], [amount]) VALUES (65, 1, 30)  --- BM
+INSERT [dbo].[BuildingCosts] ([buildingId], [goodsId], [amount]) VALUES (65, 10, 45)  --- metal
+
+
+-- Antimatter Consumption
+-- Exotic Materials Lab
+INSERT [dbo].[BuildingCosts] ([buildingId], [goodsId], [amount]) VALUES (80, 7, 60)  --- assembly
+INSERT [dbo].[BuildingCosts] ([buildingId], [goodsId], [amount]) VALUES (80, 1, 30)  --- BM
+INSERT [dbo].[BuildingCosts] ([buildingId], [goodsId], [amount]) VALUES (80, 10, 45)  --- metal
+
+--Antimatter Reactor
+INSERT [dbo].[BuildingCosts] ([buildingId], [goodsId], [amount]) VALUES (81, 7, 60)  --- assembly
+INSERT [dbo].[BuildingCosts] ([buildingId], [goodsId], [amount]) VALUES (81, 1, 30)  --- BM
+INSERT [dbo].[BuildingCosts] ([buildingId], [goodsId], [amount]) VALUES (81, 10, 45)  --- metal
+
+-- Exotic Materials Assembly Plant
+INSERT [dbo].[BuildingCosts] ([buildingId], [goodsId], [amount]) VALUES (82, 7, 60)  --- assembly
+INSERT [dbo].[BuildingCosts] ([buildingId], [goodsId], [amount]) VALUES (82, 1, 30)  --- BM
+INSERT [dbo].[BuildingCosts] ([buildingId], [goodsId], [amount]) VALUES (82, 10, 45)  --- metal
+
 
 
 

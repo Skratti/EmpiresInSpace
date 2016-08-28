@@ -1,7 +1,7 @@
 SET QUOTED_IDENTIFIER ON
 go
 /* module int not null default 0,
-0 Objects -> part of the objectDescriptin table.
+0 Objects -> part of the objectDescription table.
 1 Research - Forschung	 
 2 Quest		
 3 Buildings - Gebäude
@@ -485,7 +485,7 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (385, N'Te
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (386, N'Scandium Shield I', N'', 6)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (387, N'Holmium Laser I', N'', 6)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (388, N'Yttrium Cargo I', N'', 6)
-INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (389, N'Yttrium Engines I', N'', 6)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (389, N'Scandium Engines I', N'', 6)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (390, N'Lutetium Scanner I', N'', 6)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (391, N'Yttrium Modules I', N'', 6)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (392, N'Lutetium Modules I', N'', 6)
@@ -926,7 +926,7 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (732, N'Sk
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (733, N'Veteran', N'', 7)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (734, N'Expert', N'', 7)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (735, N'Elite', N'', 7)
-INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (736, N'Lutetium Engines I', N'', 6)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (736, N'Terbium Engines I', N'', 6)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (737, N'Chance to hit: ', N'', 6)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (738, N'Damage: ', N'', 6)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (739, N'Crew: ', N'', 6)
@@ -1190,6 +1190,33 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (947, N'Or
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (948, N'Antimatter Utilization', N'', 1)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (949, N'The orbit of the colony allows the gathering of antiprotons in the planets radiation belt. Other spacestations in the orbit may improve the overall productivity or grant a higher scan range in the surrounding space.', N'', 1)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (950, N'Antimatter may be used as power source for the colony, as a power source for microrobots in the assembly process, or consumed in the antimatter research lab, giving insights into the nature of quantum mechanics.', N'', 1)
+
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (951, N'A Transcendence Construct is already under construction on this field', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (952, N'Special Resource', N'', 7)
+
+--Starting Ships
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (953, N'Transporter', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (955, N'Fighter', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (956, N'Defense Station', N'', 7)
+
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (957, N'Holmium Modules I', N'', 6)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (958, N'Terbium Modules I', N'', 6)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (959, N'Scandium Modules I', N'', 6)
+
+--INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (391, N'Yttrium Modules I', N'', 6)
+--INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (392, N'Lutetium Modules I', N'', 6)
+
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (960, N'Holmium Modules II', N'', 6)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (961, N'Terbium Modules II', N'', 6)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (962, N'Scandium Modules II', N'', 6)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (963, N'Yttrium Modules II', N'', 6)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (964, N'Lutetium Modules II', N'', 6)
+
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (965, N'Holmium Modules II Description...', N'', 6)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (966, N'Terbium Modules II Description...', N'', 6)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (967, N'Scandium Modules II Description...', N'', 6)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (968, N'Yttrium Modules II Description...', N'', 6)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (969, N'Lutetium Modules II Description...', N'', 6)
 --INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (936, N'', N'', 7)
 --INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (937, N'', N'', 7)
 --INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (938, N'', N'', 7)
@@ -1199,8 +1226,10 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (950, N'An
 --INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (818, N'To:', N'', 7) --226
 
 
--- delete from [LabelsBase] where id = 818
--- delete from [LabelsBase] where id = 517
+-- delete from [LabelsBase] where id = 736
+-- delete from [LabelsBase] where id = 389
+--INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (736, N'Terbium Engines I', N'', 6)
+--INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (389, N'Scandium Engines I', N'', 6)
 
 --INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (517, N'Space ships are constructed from a ship hull and various ship modules. The modules can be constructed in the module plant or be acquired from other civilizations - either by trade or warfare.', N'', 1)
 

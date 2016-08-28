@@ -129,9 +129,9 @@ INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl]) VALUES (142, N
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl]) VALUES (143, N'Weather Control'		, N'Buildings/OrbitalWeatherControl.png')
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl]) VALUES (144, N'Long Range Scanner'	, N'Buildings/OrbitalWeatherControl.png')
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl]) VALUES (145, N'Space Habitat'			, N'Buildings/OrbitalWeatherControl.png')
-INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl]) VALUES (146, N'Exotic Materials Lab'	, N'Buildings/OrbitalWeatherControl.png')
-INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl]) VALUES (147, N'Antimatter Reactor'	, N'Buildings/OrbitalWeatherControl.png')
-INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl]) VALUES (148, N'Exotic Materials Assembly Plant'	, N'Buildings/OrbitalWeatherControl.png')
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl]) VALUES (146, N'Exotic Materials Lab'	, N'Buildings/AntimatterResearchLab.png')
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl]) VALUES (147, N'Antimatter Reactor'	, N'Buildings/AntimatterReactor.png')
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl]) VALUES (148, N'Exotic Materials Assembly Plant'	, N'Buildings/AntimatterAssemblyPlant.png')
 
 
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl]) VALUES (149, N'Koloniezentrale', N'Buildings/ColonyCenterSmall_60.png' )
@@ -823,11 +823,11 @@ select  501, N'Outpost'	,							10,		585,				585	,			2	,			2	,	13 union all
 select 4002, N'Fleet Command I',					30	,	553	,				558,			4,				2,		15  union all
 
 
-select 1060, N'Holmium Generator', 					40,		660,				512,			3,				2,		19 union all
-select 1061, N'Terbium Factory Improvements',		40,		661,				513,			3,				2,		21 	union all
-select 1062, N'Scandium Tools', 					60,		662,				514,			3,				2,		23  union all
-select 1063, N'Yttrium Cloning Lab',				60,		663,				515,			3,				2,		25 union all
-select 1064, N'Lutetium Ecosystem Improvements', 	60,		664,				516,			3,				2,		27  union all
+select 1060, N'Holmium Generator', 					40,		660,				512,			3,				7,		19 union all
+select 1061, N'Terbium Factory Improvements',		40,		661,				513,			3,				7,		21 	union all
+select 1062, N'Scandium Tools', 					60,		662,				514,			3,				7,		23  union all
+select 1063, N'Yttrium Cloning Lab',				60,		663,				515,			3,				7,		25 union all
+select 1064, N'Lutetium Ecosystem Improvements', 	60,		664,				516,			3,				7,		27  union all
 
 
 --INSERT into [dbo].[Research] 
@@ -883,20 +883,28 @@ select 410, N'SpaceMarines Center',				170,			686,		687				,1,				5,				15 union
 select 3003, N'Administration II', 									350	,		473		,	478,			4,			6,					3		 union all
 
 --INSERT into [dbo].[Research] 
---	  ([id], [name],							[objectimageUrl], [description]	, [cost], [label]	, [descriptionLabel], [researchType], [treeColumn]	, [treeRow]) 
-select 3, N'TreibstoffRaffinerie',				260, 93, 485,1,6,11  union all
-select 4003, N'Fleet Command II',				240	, 554		, 559				, 4				, 6				, 16		 union all
+--	  ([id], [name],						, [cost],	[label]	, [descriptionLabel], [researchType], [treeColumn]	, [treeRow]) 
+select 3, N'TreibstoffRaffinerie',				260,	93,			485,						1,			6,				11 union all
+select 4003, N'Fleet Command II',				240,	554,		559,						4,			6,				16 union all
 
 --Level 9
-select 302, N'Barren Colonization',				300,			823,		824,			1,					7,			2 union all
-select 303, N'Asteroid moon Colonization',		300,			825,		826,			1,					7,			4 union all
+select 302, N'Barren Colonization',				300,	823,		824,						1,			7,				2 union all
+select 303, N'Asteroid moon Colonization',		300,	825,		826,						1,			7,				4 union all
 
-select 50, N'Verb. Baumaterial', 				550,		350,		489,			1,					7,			6 union all
-select 52, N'Arcology'			,				540			, 715		, 716			, 1				, 7			, 12 union all
+select 50, N'Verb. Baumaterial', 				550,	350,		489,						1,			7,				6 union all
+select 52, N'Arcology'			,				540,	715,		716,						1,			7,				12 union all
 
+--SET IDENTITY_INSERT [dbo].[Research] ON
+--INSERT into [dbo].[Research] 
+--	  ([id],		[name],						 [cost],	[label]	, [descriptionLabel], [researchType], [treeColumn]	, [treeRow]) 
+select 1070, N'Holmium Laser II',   				700,	960,		965,						3,			11,				19 union all
+select 1071, N'Terbium Hull II',    				600,	961,		966,						3,			11,				21 union all
+select 1072, N'Scandium Shield II', 				480,	962,		967,						3,			11,				23 union all
+select 1073, N'Yttrium Modules II', 				360,	963,		968,						3,			11,				25 union all
+select 1074, N'Lutetium Modules II',				330,	964,		969,						3,			11,				27 union all
+--SET IDENTITY_INSERT [dbo].[Research] OFF
 
-
---delete from [dbo].[Research]  where id = 2023 
+--delete from [dbo].[Research]  where id in (2500, 2501, 2502, 2503)
 --INSERT into [dbo].[Research] 
 --	  ([id], [name],[objectimageUrl], [description]	, [cost], [label]	, [descriptionLabel], [researchType], [treeColumn]	, [treeRow]) 
 --select 2023, N'Colonization II', N'1.gif', N'Colonization module.', 200, 468, 522, 2 , 9 , 0 union all
@@ -949,11 +957,11 @@ select 4005, N'Fleet Command VI',			2100		, 556		, 561					, 4				, 12				, 16 u
 
 --INSERT into [dbo].[Research] 
 --	  ([id], [name],			[objectimageUrl], [description]			, [cost]		, [label]	, [descriptionLabel]		, [researchType]	, [treeColumn]	, [treeRow]) 
-select 2500, N'Special Ressources Modules',		1100			, 718		, 719						,2					, 13			, 6 union all
+--select 2500, N'Special Ressources Modules',		1100			, 718		, 719						,2					, 13			, 6 union all
 select	2202, N'Scanner III',					1500			, 712		, 775						, 2					, 13			, 8 union all
 select	2201, N'Cargo III',						1100			, 708		, 774						, 2					, 13			, 10 union all
-select	2205, N'Ship Weapons III',				2200			, 168		, 777						, 2					, 13			, 12 union all
-select	2203, N'Ship Defenses III',				1800			, 167		, 776						, 2					, 13			, 14 union all
+select	2205, N'Ship Weapons III',				2200			, 774		, 777						, 2					, 13			, 12 union all
+select	2203, N'Ship Defenses III',				1800			, 773		, 776						, 2					, 13			, 14 union all
 
 
 
@@ -961,9 +969,9 @@ select	2203, N'Ship Defenses III',				1800			, 167		, 776						, 2					, 13			, 
 --INSERT into [dbo].[Research] 
 --	  ([id], [name],							 [cost]		, [label]	, [descriptionLabel], [researchType]	, [treeColumn]		, [treeRow]) 
 
-select 2501, N'SR Auxilliary Modules',			900				, 780		, 783				,2					, 14				, 4 union all
-select 2502, N'SR Attack Modules',				1700				, 781		, 784				,2					, 14				, 6 union all
-select 2503, N'SR Defense Modules',				1300				, 782		, 785				,2					, 14				, 8 union all
+--select 2501, N'SR Auxilliary Modules',			900				, 780		, 783				,2					, 14				, 4 union all
+--select 2502, N'SR Attack Modules',				1700				, 781		, 784				,2					, 14				, 6 union all
+--select 2503, N'SR Defense Modules',				1300				, 782		, 785				,2					, 14				, 8 union all
 select 503	, N'Star base'		,				1200			, 584		, 559				, 2					, 14				, 11  union all
 select 405, N'Cruiser',							2000			, 58		, 497				, 2					, 14				, 16  union all
 	

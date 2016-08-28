@@ -1,5 +1,5 @@
 The files should be 
-Unicode , tab-separated and Text-Divider " (double quotation mark)
+Unicode (UTF-16) , tab-separated and Text-Divider " (double quotation mark)
 
 
 I am using Libre Office Calc to modify the file(s). 

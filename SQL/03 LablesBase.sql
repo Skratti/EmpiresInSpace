@@ -141,8 +141,10 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (128, N'We
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (129, N'<p>Empires in Space is a turnbased multiplayer strategy game.<br><br>Although each day has 6 turn evaluations, the game is balanced in a such a way, that a single login per day suffices to manage your realm.<br></p>', N'', 2)
 
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (130, N'Overview', N'', 2)
+
+delete from [dbo].[LabelsBase] where id = 131
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (131, 
-	N'<p>These Intro-Quests will show you the basics of the game. <br> - Colonize a planet <br> - Construct Buildings and spaceships <br> - Meet other nations <br><br>Then it is your choice if your empires grows through trade and diplomacy, or by brute force.<br><br> The current view shows a solar system. You can open the galaxy-view with the button in the upper left corner. This map appears empty, since you have not moved a ship outside of you solar system yet. If you scroll the galaxy map and want to return to your home system, press the h-key. <br> Click on the sun to switch the view back to the solar system.</p>', N'', 2)
+	N'<p>These Intro-Quests will show you the basics of the game. <br> - Colonize a planet <br> - Construct Buildings and spaceships <br> - Meet other nations <br><br>Then it is your choice if your empires grows through trade and diplomacy, or by brute force.<br><br> The current view shows the solar system where you arrived with your colony ship.</p>', N'', 2)
 
 
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (132, N'Movement of units', N'', 2)
@@ -294,12 +296,12 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (239, N'<p
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (240, N'Switch to the planet surface', N'', 2) --Wechsel zur Planetenoberfläche
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (241, N'<p>Click or touch on the planet to switch to the surface view.</p>', N'', 2) --Klicke oder tippe den gerade besiedelten Planeten an um zur Oberflächenansicht zu wechseln.
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (242, N'The planet surface', N'', 2) --Die Planetenoberfläche
-INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (243, N'To the left are the currently available buildings, in the lower left are major statistics, in the lower center ships in the orbit of this colony will be shown and the lower right shows your ressources on this colony.', N'', 2) --Rechts unten werden Güter angezeigt.Im Baumenü am rechten Rand können die zur Zeit verfügbaren Gebäude zum Bau ausgewählt werden...
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (243, N'<p>To the left are the currently available buildings.<br>The lower left has major statistics.<br> The bottom center area shows ships in the orbit of this colony<br> and the lower right shows your ressources at this location</p>', N'', 2) --Rechts unten werden Güter angezeigt.Im Baumenü am rechten Rand können die zur Zeit verfügbaren Gebäude zum Bau ausgewählt werden...
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (244, N'Construction of buildings', N'', 2) --Gebäudebau
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (245, N'<p>Build a Building material plant and a solar energy plant. Use the menu to the left to select a building, then select a location on the planet surface to place the building.</p>', N'', 2) --<p>Baue eine Baumaterialfabrik, ein Sonnenkraftwerk und ein Montagewerk. Wähle im Menü auf der linken Seite das Gebäude aus und klicke auf eine freie Fläche auf der Planetenoberfläche um das Gebäude zu bauen</p>
---delete from  [LabelsBase] where id in (245)
+--delete from  [LabelsBase] where id in (243)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (246, N'The scout', N'', 2)
-INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (247, N'<p>The mothership deployed a scout vessel before landing. Click on it in the middle lower area of the colony view to select it.</p>', N'', 2) --Das Mutterschiff hatte genug Schiffsmodule an Bord um einen Kundschafter zu bauen. Baue ihn über das Baumenü der Kolonie. Sobald er gebaut ist, wähle ihn auf der Planetenoberfläche an und starte das Schiff.
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (247, N'<p>A Pirate ship has been seen over another planet in this solar system.<br><div style="position:relative;left:45%;background: url(images/ScoutPirate60.png);background-size: 60px 60px;width: 60px;height: 60px;"></div><br>Fortunately, your colony owns a small defense station. You even have a fighter and a transport nearby.<br>Click on one of the ships in the lower area to select it.<br><div style="position:relative;left:45%;background: url(images/Ships/HeavyFighter60.png);background-size: 60px 60px;width: 60px;height: 60px;"></div><br></p>', N'', 2) --Das Mutterschiff hatte genug Schiffsmodule an Bord um einen Kundschafter zu bauen. Baue ihn über das Baumenü der Kolonie. Sobald er gebaut ist, wähle ihn auf der Planetenoberfläche an und starte das Schiff.
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (248, N'Now switch to the scout ship. You can do this by clicking on the scout in the lower area, by opening the ship view (left button in the upper right menu bar) or by switching to the systemview (upper left corner) and clicking on the ship that is above your colony.', N'', 2) --Der System-Kundschafter kann über die Schaltfläche unten ausgewählt werden, über das Schiffsmenü oben rechts, oder indem von der Planetenansicht auf die Systemansicht gewechselt wird (links oben), und dann das Schiff über der Kolonie ausgewählt wird.
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (249, N'<p>Now start your ship and explore the star system.<br></p>', N'', 2) --<p>Gut. Fliege los und erkunde das System.<br> (demnächst wird es auf den Asteroiden und unbesiedelten Planeten eine Rohstoffe abzuholen geben)</p>
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (250, N'To design and construct your own vessels, you need a shipyard. You can build it now the same way as the other buildings. Do this now...', N'', 2) --Der Systemscout kann das Sonnensystem nicht verlassen. Mit ihm kannst du aber in den Asteroidenfeldern und den Planeten einige Ressourcen abbauen (noch nicht implementiert). Um das Sonnensystem zu verlassen brauchst du einen Raumhafen in dem fortschrittliche Raumschiffe gebaut werden können. Baue einen solchen...
@@ -320,7 +322,8 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (262, N'Bu
 
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (263, N'<p>In the lower left corner are some main statistics of the current colony. The population is needed to support buildings as long as they are set to active. Population will grow slowly, as long as enough food and housing is present.<br>Energy is produced each turn and consumed by active buildings – keep the value always positive, else some buildings will be deactivated during turn summary.<br>Construction points are produces by construction plants. The construction points are needed for all buildings tasks, be it buildings, shipmodules or spaceships.<br><br>Each turn takes a few hours, depending on the game parameters. You can see the time when the new turn starts in the settings screen</p>', N'', 2)
 
-INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (264, N'<p>Select the research center in the buildings menu and place at last one on the surface.</p>', N'', 2)
+--delete from [LabelsBase] where id = 264
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (264, N'<p>Select the research center in the buildings menu and place it on the surface.<br>Your population can support only one research center at the moment.<br></p>', N'', 2)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (265, N'Space travel', N'', 2)
 
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (266, N'<p>Research points are generated per turn. You can see your current amount in the research screen in the upper area. <br>New technologies enable more buildings, goods and ship moduls, and also better ship hulls.<br>To get more spaceships you will need to research the technology "Space travel".<br><br>Switch to the research screen and select "Space travel" as the first technology to focus onto. It may take a few turns to complete the research.</p>', N'', 2)
@@ -716,10 +719,11 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (570, N'Ra
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (571, N'Points', N'', 7)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (572, N'Invite player: ID', N'', 7)
 
-INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (573, N'<p>Each research center produces one research point, so it may take several turns to complete this mission.</p>', N'', 2)
+--delete from [LabelsBase] where id = 573
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (573, N'<p>Research the technology Space travel.<br> You can do this via the research tree (reachable from the upper toolbar).</p>', N'', 2)
 
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (574, N'Drag the scout to the outside of your solar system to fly out of it:', N'', 2)
-INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (575, N'Then travel to the next spacestation:', N'', 2)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (575, N'Then travel to the next spacestation', N'', 2)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (576, N'at the coordinates: ', N'', 2)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (577, N'Press r to see a raster an c for coordinates, or activate raster and coordinates in your user settings.', N'', 2)
 
@@ -786,8 +790,8 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (625, N'De
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (626, N'Do you really want to declare war?', N'', 7)--Relation verschlechtern?
 
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (627, N'Deploy star base', N'', 7)--Relation verschlechtern?
-INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (628, N'Ship will be converted to a star base.', N'', 7)--Relation verschlechtern?
-
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (628, N'Deploying a star base takes a while, during which your ship is defenseless.', N'', 7)--Relation verschlechtern?
+-- update [LabelsBase] set [value] = N'Deploying a star base takes a while, during which your ship is defenseless.' where id = 628
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (629, N'Colony limit reached', N'', 7)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (630, N'Research more administration technologies to increase this limit.', N'', 7)
 
@@ -1001,10 +1005,10 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (794, N'Ad
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (795, N'Adv. Rocket', N'', 6)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (796, N'Adv. Mass Driver', N'', 6)
 
-
+--  update [LabelsBase] set [value] = N'The {0} of {1} fights off the {2} of {3} at {4}' where id = 799
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (797, N' (previously {0})', N'', 9)
-INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (798, N'The {0} ({1}) destroys the {2} ({3})', N'', 9)
-INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (799, N'The {0} ({1}) fights off the {2} ({3})', N'', 9)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (798, N'The {0} of {1} destroys the {2} of {3} at {4}', N'', 9)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (799, N'The {0} of {1} fights off the {2} of {3} at {4}', N'', 9)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (800, N'{0} arrives with a colonyship in this galaxy', N'', 9)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (801, N'{0} is the first one to discover the technology {1}', N'', 9)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (802, N'Colony {0} is besieged by {1}', N'', 9)
@@ -1012,7 +1016,7 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (803, N'Co
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (804, N'Colony {0} was abandoned by {1}', N'', 9)
 
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (805, N'{2} {0} declared war on {3} {1}', N'', 9)
--- delete from [LabelsBase] where id > 796
+-- delete from [LabelsBase] where id > 971
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (806, N'{2} {0} opens hostilities on {3} {1}', N'', 9)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (807, N'{2} {0} and {3} {1} switch to "Hostile" ', N'', 9)
 
@@ -1217,6 +1221,23 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (966, N'Te
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (967, N'Scandium Modules II Description...', N'', 6)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (968, N'Yttrium Modules II Description...', N'', 6)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (969, N'Lutetium Modules II Description...', N'', 6)
+
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (970, N'You can customize your profile...', N'', 6)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (971, N'[deleted alliance (id:{0})]', N'', 9)
+
+
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (972, N'Mark as target', N'', 7)
+
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (973, N'Tablet of Kek', N'', 6)
+
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (974, N'The {0} of {1} destroys the {2} of {3} in {4} ({5}) ', N'', 9)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (975, N'The {0} of {1} fights off the {2} of {3} in {4} ({5})', N'', 9)
+
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (976, N'Operating', N'', 6)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (977, N'Construction cost', N'', 6)
+--delete from [LabelsBase] where id > 972
+--update [dbo].[LabelsBase] set [value] =  N'Construction cost' where id = 977
+ 
 --INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (936, N'', N'', 7)
 --INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (937, N'', N'', 7)
 --INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (938, N'', N'', 7)

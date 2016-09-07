@@ -5,7 +5,7 @@ truncate table dbo.Labels
 BULK
 INSERT dbo.Labels
 --FROM 'D:\EmpiresInSpace\Labelfiles\DE.csv'
-FROM 'C:\Github\EmpiresInSpace\Labelfiles\DE.csv'
+FROM 'C:\EmpiresInSpace\Labelfiles\DE.csv'
 WITH
 (
 ROWTERMINATOR = '\n'

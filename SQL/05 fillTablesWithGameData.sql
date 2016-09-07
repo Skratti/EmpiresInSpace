@@ -388,6 +388,9 @@ INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [d
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (1054, N'Lutetium', N'LutetiumBars.png', 1, 0, 73)
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (1060, N'Adamantium', N'ore.png', 1, 0, 74)
 
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl]) VALUES (1200, N'TabletOfKer', N'Goods/TabletOfKer.png')
+
+
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (2001, N'Crew I', N'Crew1.png', 1, 0, 76)
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (2002, N'Reactor I', N'Reactor.png', 1, 0, 77)
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (2003, N'Hull I', N'Hull.png', 1, 0, 78)
@@ -1090,6 +1093,8 @@ INSERT [dbo].[Goods] ([id], [name], [objectDescriptionId], [goodsType], [label],
 INSERT [dbo].[Goods] ([id], [name], [objectDescriptionId], [goodsType], [label], prodLevel) VALUES (1044, N'Lutetium', 1054, 1, 73, 8)
 INSERT [dbo].[Goods] ([id], [name], [objectDescriptionId], [goodsType], [label], prodLevel) VALUES (1045, N'Adamantium', 1060, 1, 74, 9) -- 'Adamantium'
 
+INSERT [dbo].[Goods] ([id], [name], [objectDescriptionId], [goodsType], [label], prodLevel) VALUES (1200, N'TabletOfKer', 1200, 1, 973, 9) -- 'Tablet of Kek'
+
 --INSERT [dbo].[Goods] ([id], [name], [objectDescriptionId], [goodsType], [label]) VALUES (40, N'Hydrocarbon', 2015, 1, 89)
 --INSERT [dbo].[Goods] ([id], [name], [objectDescriptionId], [goodsType], [label]) VALUES (41, N'Carbon fiber', 2015, 1, 89)
 
@@ -1760,29 +1765,30 @@ delete from [SpecializationResearches];
 
 insert into [SpecializationResearches] (SpecializationGroupId, ResearchId, SecondaryResearchId)
 	select 0, 200, 204 union all
-	select 0, 201, 205 union all
-	select 0, 202, 206 union all
-	select 0, 203, 207 
+	select 1, 201, 205 union all
+	select 2, 202, 206 --union all
+	--select 3, 203, 207 
 
 	insert into [SpecializationResearches] (SpecializationGroupId,	 ResearchId,		Building1)
 	select														1,			210,			   24	union all
 	select														1,			211,			   23	union all
 	select														1,			212,			   25 
 
-	insert into [SpecializationResearches] (SpecializationGroupId,	 ResearchId,   Building1,  Building2,	Building3)
-	select														2,			220,		1030,       1040,         180   union all
-	select														2,			221,		1031,       1041,         181   union all
-	select														2,			222,		1032,       1042,         182   union all
-	select														2,			223,		1033,       1043,         183   union all
-	select														2,			224,		1034,       1044,         184   
-
+	insert into [SpecializationResearches] (SpecializationGroupId,	 ResearchId,   Building1,   Module1,	 Module2)
+	select														2,			220,		 180,	   1105,		null	   union all
+	select														2,			221,		 181,	   1103,		1109	   union all
+	select														2,			222,		 182,	   1104,		1110	   union all
+	select														2,			223,		 183,	   1101,		1108	   union all
+	select														2,			224,		 184,	   1102,		1115   
+	
+	/*
 	insert into [SpecializationResearches] (SpecializationGroupId,	 ResearchId,	  Module1,	 Module2,	Module3 )
 	select														3,	 	    230,		 1105,		null,		null		union all
 	select														3,	 	    231,		 1103,		null,		null		union all
 	select														3,	 	    232,		 1104,		null,		null		union all
 	select														3,	 	    233,		 1101,		1108,		1110		union all
 	select														3,	 	    234,		 1102,		1109,		1115		
-
+	*/
 
 	--special ressource 1
 INSERT into [dbo].[Modules] ([id], [level], [name], [descriptionLabel], [goodsId], [label]) 

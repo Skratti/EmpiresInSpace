@@ -123,6 +123,22 @@ INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl]) VALUES (111, N
 
 --update [ObjectDescription] set [objectimageUrl] = N'Buildings/' + [objectimageUrl]  where id >= 149 and id <= 188
 
+  insert into [SculptorA].[dbo].[ObjectDescription] 
+  select 130, N'BlastFurnaceHolmium',  N'Buildings/BlastFurnaceHolmium.png', 1 union all
+ select 131, N'BlastFurnaceTerbium',  N'Buildings/BlastFurnaceTerbium.png', 1 union all
+ select 132, N'BlastFurnaceScandium',  N'Buildings/BlastFurnaceScandium.png', 1 union all
+ select 133, N'BlastFurnaceYttrium',  N'Buildings/BlastFurnaceYttrium.png', 1 union all
+ select 134, N'BlastFurnaceLutetium',  N'Buildings/BlastFurnaceLutetium.png', 1 
+
+
+
+   insert into [SculptorA].[dbo].[ObjectDescription] 
+  select 135, N'BlastFurnaceHolmium',  N'Buildings/HeadframeHolmium.png', 1 union all
+ select 136, N'BlastFurnaceTerbium',  N'Buildings/HeadframeTerbium.png', 1 union all
+ select 137, N'BlastFurnaceScandium',  N'Buildings/HeadframeScandium.png', 1 union all
+ select 138, N'BlastFurnaceYttrium',  N'Buildings/HeadframeYttrium.png', 1 union all
+ select 139, N'BlastFurnaceLutetium',  N'Buildings/HeadframeLutetium.png', 1 
+
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl]) VALUES (140, N'Antimatter Collector'  , N'Buildings/OrbitalWeatherControl.png')
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl]) VALUES (141, N'Space Lab'				, N'Buildings/OrbitalWeatherControl.png')
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl]) VALUES (142, N'Control Center'		, N'Buildings/OrbitalWeatherControl.png')
@@ -373,12 +389,14 @@ INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [d
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (1010, N'Neutronium', N'Neutronium.png', 1, 0, 714)
 
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl]) VALUES (1011, N'Antimatter', N'Goods/Antimatter.png')
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl]) VALUES (1012, N'Research', N'Goods/Research.png.png')
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl]) VALUES (1013, N'Adv BM', N'Goods/AdvBm.png')
 
-INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (1030, N'Holmium', N'ore.png', 1, 0, 69)
-INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (1031, N'Terbium', N'ore.png', 1, 0, 70)
-INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (1032, N'Scandium', N'ore.png', 1, 0, 71)
-INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (1033, N'Yttrium ', N'ore.png', 1, 0, 72)
-INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (1034, N'Lutetium', N'ore.png', 1, 0, 73)
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (1030, N'Holmium', N'Goods/HolmiumOre.png.png', 1, 0, 69)
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (1031, N'Terbium', N'Goods/TerbiumOre.png.png', 1, 0, 70)
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (1032, N'Scandium', N'Goods/ScandiumOre.png.png', 1, 0, 71)
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (1033, N'Yttrium ', N'Goods/YttriumOre.png.png', 1, 0, 72)
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (1034, N'Lutetium', N'Goods/LutetiumOre.png.png', 1, 0, 73)
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (1040, N'Adamantium', N'ore.png', 1, 0, 74)
 
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (1050, N'Holmium', N'HolmiumBars.png', 1, 0, 69)
@@ -1620,11 +1638,11 @@ select		6,		-8,		-9,			400,			   20,				0,				350,		60,				0,				0,				0,				0,	
 select		7,		-10,	-11,		450,			   10,				0,				400,		50,				0,				0,				0,				0,			0,				0 ,			0.4		union all -- starship
 --
 select		8,		-15,	-18,		500,			    5,				0,				500,		50,				0,				0,				0,				0,			0,				0 ,			0.3  	union all -- battle
-select		199,	3,		4,			450,				0,				0,				500,		100,			0,				0,				0,				0,			0,				1 ,			0.0		union all  
-select		200,	5,		6,			700,			    0,				0,				100,		100,			0,				0,				0,				0,			0,				1 ,			0.0		union all
-select		201,	8,		10,			1000,			    0,				0,				200,		200,			0,				0,				0,				0,			0,				1 ,			0.0		union all
-select		202,	13,		16,			1400,			    0,				0,				400,		400,			0,				0,				0,				0,			0,				1 ,			0.0     union all
-select		220,	1,		100,		3000,				0,				50,				0,			0,				0,				0,				0,				0,			0,				1 ,			0.0     union all
+select		199,	3,		4,			450,				0,				0,				500,		100,			0,				0,				0,				0,			3,				1 ,			0.0		union all  
+select		200,	5,		6,			700,			    0,				0,				100,		100,			0,				0,				0,				0,			3,				1 ,			0.0		union all
+select		201,	8,		10,			1000,			    0,				0,				200,		200,			0,				0,				0,				0,			3,				1 ,			0.0		union all
+select		202,	13,		16,			1400,			    0,				0,				400,		400,			0,				0,				0,				0,			3,				1 ,			0.0     union all
+select		220,	1,		100,		3000,				0,				50,				0,			0,				0,				0,				0,				0,			3,				1 ,			0.0     union all
 select		221,	1,		10,			100,				0,				5,				0,			0,				1,				6,				1,				15,			0,				0 ,			1.0
 
 /****** Object:  Table [dbo].[ShipHullsCosts]    Script Date: 12/06/2013 21:56:05 ******/

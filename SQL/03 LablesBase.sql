@@ -1005,14 +1005,14 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (794, N'Ad
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (795, N'Adv. Rocket', N'', 6)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (796, N'Adv. Mass Driver', N'', 6)
 
---  update [LabelsBase] set [value] = N'The {0} of {1} fights off the {2} of {3} at {4}' where id = 799
+--  update [LabelsBase] set [value] = N'Colony {0} is conquered by {1}' where id = 803
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (797, N' (previously {0})', N'', 9)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (798, N'The {0} of {1} destroys the {2} of {3} at {4}', N'', 9)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (799, N'The {0} of {1} fights off the {2} of {3} at {4}', N'', 9)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (800, N'{0} arrives with a colonyship in this galaxy', N'', 9)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (801, N'{0} is the first one to discover the technology {1}', N'', 9)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (802, N'Colony {0} is besieged by {1}', N'', 9)
-INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (803, N'Colony {0} is occupied by {1}', N'', 9)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (803, N'Colony {0} is conquered by {1}', N'', 9)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (804, N'Colony {0} was abandoned by {1}', N'', 9)
 
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (805, N'{2} {0} declared war on {3} {1}', N'', 9)
@@ -1235,6 +1235,12 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (975, N'Th
 
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (976, N'Operating', N'', 6)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (977, N'Construction cost', N'', 6)
+
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (978, N'Drag&Drop to create fleets', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (979, N'Occupied storage space per unit: {0}', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (980, N'Neutral, cannot be entered', N'', 7)  --Deprecated
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (981, N'Rioting: {0} turns', N'', 6)
+
 --delete from [LabelsBase] where id > 972
 --update [dbo].[LabelsBase] set [value] =  N'Construction cost' where id = 977
  

@@ -441,6 +441,7 @@ AS
 	  ,aiId
 	  ,aiRelation
 	  ,lastReadGalactivEvent
+	  ,ProfileUrl
   /*id, 
          username,                   
          activity, 

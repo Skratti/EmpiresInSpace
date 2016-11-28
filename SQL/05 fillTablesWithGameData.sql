@@ -175,15 +175,15 @@ INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl]) VALUES (170, N
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl]) VALUES (171, N'Verb.Baumaterialfabrik', N'Buildings/AdvBuildingMaterial.png')
 
 
-
-
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (172, N'Administration I', N'Buildings/Houses.png', 1, 0, 482)
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (173, N'Administration II', N'Buildings/Houses.png', 1, 0, 482)
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (174, N'Administration III', N'Buildings/Houses.png', 1, 0, 482)
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (175, N'Administration IV', N'Buildings/Houses.png', 1, 0, 482)
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (176, N'Administration V', N'Buildings/Houses.png', 1, 0, 483)
 
-INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (177, N'Synthetic Materials plant', N'Buildings/AssemblyPlant.png', 1, 0, 621)
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (177, N'Synthetic Materials plant', N'Buildings/SynthMaterialPlant.png', 1, 0, 621)
+
+
 
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (180, N'HolmiumGenerator', N'Buildings/HolmiumGenerator.png', 1, 0, 660)
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (181, N'ScandTools', N'Buildings/ScandTools.png', 1, 0, 661)
@@ -191,11 +191,13 @@ INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [d
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (183, N'YttriumCloning', N'Buildings/YttriumCloning.png', 1, 0, 663)
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (184, N'LutEcosystem', N'Buildings/LutEcosystem.png', 1, 0, 664)
 
+--update [dbo].[ObjectDescription] set versionNo =  3 where id = 171
+--update [dbo].[ObjectDescription] set versionNo =  2 where id = 140
+--update [dbo].[ObjectDescription] set [objectimageUrl] =  N'Buildings/SynthMaterialPlant.png' where id = 177
+--update [dbo].[ObjectDescription] set [objectimageUrl] =  N'Buildings/NeutroniumReactor.png' where id = 186
 
---update [dbo].[ObjectDescription] set [objectimageUrl] =  N'Aquafarm.png' where id = 185
---update [dbo].[ObjectDescription] set [objectimageUrl] =  N'PressureDome.png' where id = 187
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (185, N'Aqua Farm', N'Buildings/Aquafarm.png', 1, 0, 692)
-INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (186, N'Neutronium reactor', N'Buildings/AdvBuildingMaterial.png', 1, 0, 711)
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (186, N'Neutronium reactor', N'Buildings/NeutroniumReactor.png', 1, 0, 711)
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (187, N'Pressure Dome', N'Buildings/PressureDome.png', 1, 0, 698)
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (188, N'Arcology', N'Buildings/Houses2.png', 1, 0, 717)
 
@@ -211,6 +213,9 @@ INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [d
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (202, N'Fregatte', N'Fregatte.png', 1, 0, 567)
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (203, N'Destroyer', N'Fregatte.png', 1, 0, 568)
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (204, N'Cruiser', N'Fregatte.png', 1, 0, 569)
+
+
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl]) VALUES (230, N'Administration V', N'Buildings/Houses.png')
 
 --delete  [ObjectDescription] where id = 404
 --update  [dbo].[ObjectDescription] set [objectimageUrl] = 'Ships/Destroyer60.png' where id =  404
@@ -603,12 +608,12 @@ go
 INSERT INTO [dbo].[ObjectOnMap]
            (
 				[id],	[moveCost],		[damage],	[damageType],	[damageProbability],	[damageProbabilityReducableByShip], [defenseBonus],	fieldSize,  	label)         
-select			1,				1,			100,				1,					100,									0,				0,			1,		3	union all --Oranger Zwerg
-select			2,				1,			100,				1,					100,									0,				0,			1,		3	union all  --Gelber Zwerg
-select			3,				1,			100,				1,					100,									0,				0,			1,		3	union all  --GelbOranger Zwerg
-select			4,				1,			100,				1,					100,									0,				0,			1,		3	union all
-select			5,				1,			100,				1,					100,									0,				0,			1,		3	union all
-select			6,				1,			100,				1,					100,									0,				0,			1,		3	union all
+select			1,				10,			100,				1,					100,									0,				0,			1,		3	union all --Oranger Zwerg
+select			2,				10,			100,				1,					100,									0,				0,			1,		3	union all  --Gelber Zwerg
+select			3,				10,			100,				1,					100,									0,				0,			1,		3	union all  --GelbOranger Zwerg
+select			4,				10,			100,				1,					100,									0,				0,			1,		3	union all
+select			5,				10,			100,				1,					100,									0,				0,			1,		3	union all
+select			6,				10,			100,				1,					100,									0,				0,			1,		3	union all
 select			63,				1,			100,				1,					100,									0,				0,			2,		3	union all
 select			65,				1,			100,				1,					100,									0,				0,			2,		3	union all
 select			67,				1,			100,				1,					100,									0,				0,			2,		3	union all
@@ -651,7 +656,7 @@ select			56,				1,			100,				1,					100,									0,				0,			0,		3	union all
 select			57,				1,			100,				1,					100,									0,				0,			0,		3	union all
 select			58,				1,			100,				1,					100,									0,				0,			0,		3	union all
 select			59,				1,			100,				1,					100,									0,				0,			2,		3	union all
-select			80,				8,			0,				null,					0,										0,				10,			10,		3			--nebula
+select		  5000,				3,			0,				 null,					0,										0,				10,			10,		3			--nebula
 go
 
 
@@ -865,16 +870,22 @@ select   11, N'Orbital Buildings',					12	,	947	,				949,			4,				3,		12  union 
 select 2005, N'Ship Weapons I',						32,		98,					520,			2 ,				3 ,		14 union all
 select 2003, N'Ship Defenses I', 					30,		99,					519,			2 ,				3 ,		16 union all
 
-
+--delete from Research where id = 8
+-- update [Research] set hidden = 1 where id= 8
 --Level 4
 --INSERT into [dbo].[Research] 
 --	  ([id], [name],[objectimageUrl], [description]								, [cost]	, [label]	, [descriptionLabel], [researchType], [treeColumn]	, [treeRow]) 
-select 3002, N'Administration I', 					150,	472		,		477				, 4				, 4				, 3	 union all
-select 8, N'Kommunikation Center',					100,	53		,		488				, 1				, 4				, 7	 union all
+select 3002, N'Administration I', 					150,	472		,		477				, 4				, 4				, 3	 
 
-select   12, N'Antimatter Utilization'		,		25 ,	948		,		950				, 4				, 4				, 12  union all
-select 415, N'Heavy Fighter',						80,		838		,		839				, 2				, 4				, 14 union all
-select 402, N'Corvette',							150,	173		,		494				, 2				, 4				, 16 union all
+INSERT into [dbo].[Research] 
+	  ([id], [name],[objectimageUrl], 		, [cost]	, [label]	, [descriptionLabel], [researchType], [treeColumn]	, [treeRow] , hidden) 
+select 8, N'Kommunikation Center',					100,	53		,		488				, 1				, 4				, 7		,	1
+
+INSERT into [dbo].[Research] 
+	  ([id], [name],[objectimageUrl]			, [cost]	, [label]	, [descriptionLabel], [researchType], [treeColumn]	, [treeRow]) 
+select   12, N'Antimatter Utilization'		,		25 ,		948		,	950				, 4				, 4				, 12  union all
+select 415, N'Heavy Fighter',						80,			838		,	839				, 2				, 4				, 14 union all
+select 402, N'Corvette',							150,		173		,	494				, 2				, 4				, 16 union all
 
 select 1050, N'Holmium Laser I',   					700,		387,		512,			3,				4,				19 union all
 select 1051, N'Terbium Hull I',    					600,		385,		513,			3,				4,				21 union all
@@ -913,6 +924,7 @@ select 302, N'Barren Colonization',				300,	823,		824,						1,			7,				2 union a
 select 303, N'Asteroid moon Colonization',		300,	825,		826,						1,			7,				4 union all
 
 select 50, N'Verb. Baumaterial', 				550,	350,		489,						1,			7,				6 union all
+select 5000, N'Transcendence Collab',			800,	592,		593,						4,			7,				9 union all
 select 52, N'Arcology'			,				540,	715,		716,						1,			7,				12 union all
 
 --SET IDENTITY_INSERT [dbo].[Research] ON
@@ -948,11 +960,14 @@ select 2100, N'Modules II',  1200, 171, 523,2,9,11 union all
 select 4004	, N'Fleet Command III',  1200		, 555		, 560					, 4				, 9			,	15  union all
 
 --Level 12
-select 5000, N'Transcendence Collab',	800		, 592		, 593				, 4				, 10				, 6		union all
-select 2102, N'Scanner II',				475, 381, 525, 2 , 10 , 8 union all
-select 2101, N'Cargo II',				450, 376, 524,  2 , 10 , 10 union all
-select 2105, N'Ship Weapons II',		520, 168, 527, 2 , 10 , 12 union all
-select 2103, N'Ship Defenses II',		520, 167, 526, 2 , 10 , 14 union all
+--update Research set treeColumn = 10, treeRow = 6 where id = 5001
+
+select 5001, N'Transcendence',				3000,		590,		591,	4,		10,			6 union all
+
+select 2102, N'Scanner II',					475,		381,		525,	2,		10,			8 union all
+select 2101, N'Cargo II',					450,		376,		524,	2,		10,			10 union all
+select 2105, N'Ship Weapons II',			520,		168,		527,	2,		10,			12 union all
+select 2103, N'Ship Defenses II',			520,		167,		526,	2,		10,			14 union all
 
 --Level 13
 --INSERT into [dbo].[Research] 
@@ -1005,10 +1020,13 @@ select 4006, N'Fleet Command V',				4000		, 557		, 562				, 4				, 15				, 13 un
 select 406, N'Battleship',						2700		, 124		, 498				, 2				, 15				, 16  union all
 
 --level 18
+--SET IDENTITY_INSERT [dbo].[Research] ON
 --INSERT into [dbo].[Research] 
 --	  ([id], [name],							[cost]	, [label]	, [descriptionLabel], [researchType], [treeColumn]	, [treeRow]) 
-select 5001, N'Transcendence',					12000	, 590			, 591				, 4				, 16				, 11 union all
-select 407, N'Superbattleship',					3500	, 125			, 499				, 2				, 16				, 16
+select 3010, N'Future Tech',					5000	, 984			, 985				, 4				, 16				, 11 union all
+select 407, N'Superbattleship',					3500	, 125			, 499				, 2				, 16				, 16 union all
+
+--
 
 /*
 with toUpdate ([id], [name],				[cost]		, [label]	, [descriptionLabel], [researchType]	, [treeColumn]	, [treeRow])  as (
@@ -1056,6 +1074,7 @@ select 3003		  ,10			,0			,0			, 0			,10				,10				,0		,0				,0			,173		union al
 select 3004		  ,20			,0			,0			, 0			,20				,20				,0		,0				,0			,174		union all
 select 3005		  ,20			,0			,0			, 0			,20				,20				,0		,0				,0			,175		union all
 select 3006		  ,20			,0			,0			, 0			,20				,20				,0		,0				,0			,176		union all
+select 3010		  ,5			,5			,0			, 0			,5				,5				,0		,0				,0			,230		union all
 select 4002		  ,0			,0			,0			, 0			,0				,0				,0		,0				,75			,200		union all
 select 4003		  ,0			,0			,0			, 0			,0				,0				,0		,0				,75			,201		union all
 select 4004		  ,0			,0			,0			, 0			,-10			,-10			,0		,0				,100		,202		union all
@@ -1355,7 +1374,7 @@ INSERT [dbo].[ShipHulls] ([id], [isStarBase], [typename], [labelName], [objectId
 INSERT [dbo].[ShipHulls] ([id], [isStarBase], [typename], [labelName], [objectId], [modulesCount], [templateImageUrl], [label]) VALUES (201, 1, N'Starbase', 0, 434, 12, N'401Template.gif', 126)
 INSERT [dbo].[ShipHulls] ([id], [isStarBase], [typename], [labelName], [objectId], [modulesCount], [templateImageUrl], [label]) VALUES (202, 1, N'Star Fortress', 0, 437, 21, N'401Template.gif', 127)
 INSERT [dbo].[ShipHulls] ([id], [isStarBase], [typename], [labelName], [objectId], [modulesCount], [templateImageUrl], [label]) VALUES (220, 1, N'Transcendence  Construct', 0, 460, 0, N'401Template.gif', 594)
-INSERT [dbo].[ShipHulls] ([id], [isStarBase], [typename], [labelName], [objectId], [modulesCount], [templateImageUrl], [label]) VALUES (221, 0, N'Transcendence  Builder', 0, 461, 50, N'401Template.gif', 595)
+INSERT [dbo].[ShipHulls] ([id], [isStarBase], [typename], [labelName], [objectId], [modulesCount], [templateImageUrl], [label]) VALUES (221, 0, N'Transcendence  Builder', 0, 461, 30, N'401Template.gif', 595)
 
 --with data (	[id],[shipHullId], objectId , templateImageId, templateModulesXoffset, templateModulesYoffset) as(
 --truncate table [ShipHullsImages]
@@ -1643,7 +1662,7 @@ select		200,	5,		6,			700,			    0,				0,				100,		100,			0,				0,				0,				0,		
 select		201,	8,		10,			1000,			    0,				0,				200,		200,			0,				0,				0,				0,			3,				1 ,			0.0		union all
 select		202,	13,		16,			1400,			    0,				0,				400,		400,			0,				0,				0,				0,			3,				1 ,			0.0     union all
 select		220,	1,		100,		3000,				0,				50,				0,			0,				0,				0,				0,				0,			3,				1 ,			0.0     union all
-select		221,	1,		10,			100,				0,				5,				0,			0,				1,				6,				1,				15,			0,				0 ,			1.0
+select		221,	1,		10,			100,				0,				5,				0,			0,				3,				6,				3,				15,			0,				0 ,			1.0
 
 /****** Object:  Table [dbo].[ShipHullsCosts]    Script Date: 12/06/2013 21:56:05 ******/
 

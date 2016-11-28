@@ -1706,7 +1706,8 @@ CREATE VIEW [engine].[v_ObjectDescription]
 AS 
   SELECT id,  
 		 name,
-         objectimageurl 
+         objectimageurl ,
+		 versionNo
   FROM   [objectdescription]; 
 
 go 

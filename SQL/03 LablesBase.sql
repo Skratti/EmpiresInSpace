@@ -1241,6 +1241,12 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (979, N'Oc
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (980, N'Neutral, cannot be entered', N'', 7)  --Deprecated
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (981, N'Rioting: {0} turns', N'', 6)
 
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (982, N'Repair costs', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (983, N'Repair', N'', 7)
+
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (984, N'Future Tech', N'', 1)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (985, N'New technological breakthroughs advance your civilization into the unknown future.', N'', 1)
+
 --delete from [LabelsBase] where id > 972
 --update [dbo].[LabelsBase] set [value] =  N'Construction cost' where id = 977
  

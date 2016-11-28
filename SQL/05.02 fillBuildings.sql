@@ -3,9 +3,9 @@
 
 --I Level 0-1
 --delete from [dbo].[Buildings] 
-INSERT [dbo].[Buildings] ([id], [name], [objectId], [BuildingScript], [isBuildable], [visibilityNeedsGoods], [groupId], [label], prodQueueLevel, housing, storage) VALUES (1, N'Koloniezentrale I', 151, NULL, 0, 0, 1, 43, 0, 140, 6000)
-INSERT [dbo].[Buildings] ([id], [name], [objectId], [BuildingScript], [isBuildable], [visibilityNeedsGoods], [groupId], [label], prodQueueLevel, housing, storage) VALUES (30, N'Koloniezentrale II', 149, NULL, 0, 0, 1, 43, 0, 40, 5000)
-INSERT [dbo].[Buildings] ([id], [name], [objectId], [BuildingScript], [isBuildable], [visibilityNeedsGoods], [groupId], [label], prodQueueLevel, housing, storage) VALUES (31, N'Koloniezentrale III', 150, NULL, 0, 0, 1, 43, 0, 70, 5000)
+INSERT [dbo].[Buildings] ([id], [name], [objectId], [BuildingScript], [isBuildable], [visibilityNeedsGoods], [groupId], [label], prodQueueLevel, housing, storage) VALUES (1, N'Koloniezentrale I', 151, NULL, 0, 0, 1, 43, 0, 140, 3000)
+INSERT [dbo].[Buildings] ([id], [name], [objectId], [BuildingScript], [isBuildable], [visibilityNeedsGoods], [groupId], [label], prodQueueLevel, housing, storage) VALUES (30, N'Koloniezentrale II', 149, NULL, 0, 0, 1, 43, 0, 40, 1000)
+INSERT [dbo].[Buildings] ([id], [name], [objectId], [BuildingScript], [isBuildable], [visibilityNeedsGoods], [groupId], [label], prodQueueLevel, housing, storage) VALUES (31, N'Koloniezentrale III', 150, NULL, 0, 0, 1, 43, 0, 70, 2000)
 INSERT [dbo].[Buildings] ([id], [name], [objectId], [BuildingScript], [isBuildable], [visibilityNeedsGoods], [groupId], [label], prodQueueLevel) VALUES (15, N'Forschungslabor', 165, NULL, 1, 0, 1, 120, 6)
 
 INSERT [dbo].[Buildings] ([id], [name], [objectId], [BuildingScript], [isBuildable], [visibilityNeedsGoods], [groupId], [label], prodQueueLevel) VALUES (9, N'Baumaterialfabrik', 158, NULL, 1, 0, 1, 50, 4)
@@ -31,7 +31,7 @@ INSERT [dbo].[Buildings] ([id], [name], [objectId], [BuildingScript], [isBuildab
 INSERT [dbo].[Buildings] ([id], [name], [objectId], [BuildingScript], [isBuildable], [visibilityNeedsGoods], [groupId], [label], prodQueueLevel, assemblyModifier, productionModifier) VALUES (62, N'Control Center'		, 142, NULL, 1, 0, 2, 940, 4, 10, 5)
 INSERT [dbo].[Buildings] ([id], [name], [objectId], [BuildingScript], [isBuildable], [visibilityNeedsGoods], [groupId], [label], prodQueueLevel, foodModifier) VALUES (63, N'Weather Control'		, 143, NULL, 1, 0, 2, 941, 5, 20)
 INSERT [dbo].[Buildings] ([id], [name], [objectId], [BuildingScript], [isBuildable], [visibilityNeedsGoods], [groupId], [label], prodQueueLevel) VALUES (64, N'Long Range Scanner'	, 144, NULL, 1, 0, 2, 942, 1)
-INSERT [dbo].[Buildings] ([id], [name], [objectId], [BuildingScript], [isBuildable], [visibilityNeedsGoods], [groupId], [label], prodQueueLevel, [housing]) VALUES (65, N'Space Habitat'		, 145, NULL, 1, 0, 2, 943, 1, 180)
+INSERT [dbo].[Buildings] ([id], [name], [objectId], [BuildingScript], [isBuildable], [visibilityNeedsGoods], [groupId], [label], prodQueueLevel, [housing]) VALUES (65, N'Space Habitat'		, 145, NULL, 1, 0, 2, 943, 1, 80)
 
 INSERT [dbo].[Buildings] ([id], [name], [objectId], [BuildingScript], [isBuildable], [visibilityNeedsGoods], [groupId], [label], prodQueueLevel) VALUES (80, N'Exotic Materials Lab'			, 146, NULL, 1, 0, 2, 944, 5)
 INSERT [dbo].[Buildings] ([id], [name], [objectId], [BuildingScript], [isBuildable], [visibilityNeedsGoods], [groupId], [label], prodQueueLevel) VALUES (81, N'Antimatter Reactor'				, 147, NULL, 1, 0, 2, 945, 1)
@@ -506,11 +506,11 @@ INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (5
 --Orbitals:
 -- Antimatter Collector
 INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (60, 8, -5)  --- Pop
-INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (60, 61, 2)  --- Antimatter
+INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (60, 61, 3)  --- Antimatter
 
 --Space lab
-INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (61, 8, -10)  --- Pop
-INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (61, 12, 4)  -- Research points
+INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (61, 8, -6)  --- Pop
+INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (61, 12, 1)  -- Research points
 
 -- Control Center
 INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (62, 8, -6)  --- Pop
@@ -521,8 +521,7 @@ INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (6
 --Long Range Scanner
 
 -- Space Habitat
-INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (65, 2, 18) --Food
-
+INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (65, 2, 10) --Food
 
 
 -- Antimatter Consumption
@@ -530,12 +529,12 @@ INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (6
 INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (80, 6, -15)	-- - energy
 INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (80, 8, -12)  --- Pop
 INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (80, 61, -5)  --- Antimatter
-INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (80, 12, 12)  -- Research points
+INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (80, 12, 9)  -- Research points
 
 --Antimatter Reactor
 INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (81, 8, -10)  --- Pop
-INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (81, 6, 220)	-- - energy
-INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (81, 61, -5)  --- Antimatter
+INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (81, 6, 95)	-- - energy
+INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (81, 61, -2)  --- Antimatter
 
 -- Exotic Materials Assembly Plant
 INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (82, 8, -6)  --- Pop

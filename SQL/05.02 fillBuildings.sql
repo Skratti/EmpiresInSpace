@@ -700,7 +700,7 @@ INSERT [dbo].[BuildingCosts] ([buildingId], [goodsId], [amount]) VALUES (14, 1, 
 INSERT [dbo].[BuildingCosts] ([buildingId], [goodsId], [amount]) VALUES (14, 7, 120)  --Produktion
 INSERT [dbo].[BuildingCosts] ([buildingId], [goodsId], [amount]) VALUES (14, 10, 30)  --metall
 INSERT [dbo].[BuildingCosts] ([buildingId], [goodsId], [amount]) VALUES (14, 11, 30)  -- kunststoffe
-
+INSERT [dbo].[BuildingCosts] ([buildingId], [goodsId], [amount]) VALUES (14, 50, 70)  -- Verb. Baumaterial
 
 
 --Verb. Baumaterialfabrik

@@ -1668,49 +1668,49 @@ select		221,	1,		10,			100,				0,				5,				0,			0,				3,				6,				3,				15,			0,
 
 
 -- standard Ship hulls
--- delete from [dbo].[ShipHullsCosts] where [shipHullId]  > 1 and shipHullId] < 10
+--delete from [dbo].[ShipHullsCosts] --where [shipHullId]  > 1 and shipHullId] < 10
 INSERT [dbo].[ShipHullsCosts] 
 ([shipHullId],	[goodsId], [amount]) 
-select		1,			1,		80	union all --Scout : 80 BM, 40 PP,  50 metal
-select		1,			7,		40	union all  -- Assembly points 
-select		1,			10,		50	union all  --  metal
+select		1,			1,		40	union all --Scout : 80 BM, 40 PP,  50 metal
+select		1,			7,		20	union all  -- Assembly points 
+select		1,			10,		40	union all  --  metal
 
-select		2,			1,		100	union all --Scout : 80 BM, 40 PP,  50 metal
-select		2,			7,		60	union all  -- Assembly points 
-select		2,			10,		80	union all  --  metal
+select		2,			1,		60	union all --Scout : 80 BM, 40 PP,  50 metal
+select		2,			7,		30	union all  -- Assembly points 
+select		2,			10,		50	union all  --  metal
 
-select		3,			1,		170	union all --Corvette : 30 BM, 50 PP, 
-select		3,			7,		70	union all  -- Assembly points 
-select		3,			10,		90	union all  --  metal
+select		3,			1,		80	union all --Corvette : 30 BM, 50 PP, 
+select		3,			7,		40	union all  -- Assembly points 
+select		3,			10,		7	union all  --  metal
 
-select		4,			1,		250	union all --Fregatte : 30 BM, 50 PP, 
-select		4,			7,		110	union all
-select		4,			10,		220	union all  --  metal
-select		4,			11,		80	union all -- synth
+select		4,			1,		120	union all --Fregatte : 30 BM, 50 PP, 
+select		4,			7,		60	union all
+select		4,			10,		100	union all  --  metal
+select		4,			11,		40	union all -- synth
 
-select		5,			1,		200	union all --Destroyer : 30 BM, 50 PP, 
-select		5,			7,		160	union all
-select		5,			10,		280	union all  --  metal
-select		5,			11,		120	union all -- synth
-select		5,			50,		100	union all -- adv building
+select		5,			1,		100	union all --Destroyer : 30 BM, 50 PP, 
+select		5,			7,		80	union all
+select		5,			10,		140	union all  --  metal
+select		5,			11,		60	union all -- synth
+select		5,			50,		50	union all -- adv building
 
-select		6,			1,		300	union all --Cruiser : 30 BM, 50 PP, 
-select		6,			7,		220	union all
-select		6,			10,		400	union all  --  metal
-select		6,			11,		220	union all -- synth
-select		6,			50,		160	union all -- adv building
+select		6,			1,		150	union all --Cruiser : 30 BM, 50 PP, 
+select		6,			7,		110	union all
+select		6,			10,		20	union all  --  metal
+select		6,			11,		110	union all -- synth
+select		6,			50,		80	union all -- adv building
 
-select		7,			1,		400	union all --battleship : 30 BM, 50 PP, 
-select		7,			7,		290	union all
-select		7,			10,		550	union all  --  metal
-select		7,			11,		320	union all -- synth
-select		7,			50,		220	union all -- adv building
+select		7,			1,		200	union all --battleship : 30 BM, 50 PP, 
+select		7,			7,		140	union all
+select		7,			10,		270	union all  --  metal
+select		7,			11,		160	union all -- synth
+select		7,			50,		110	union all -- adv building
 
-select		8,			1,		600	union all --superbattleship : 30 BM, 50 PP, 
-select		8,			7,		400	union all
-select		8,			10,		680	union all  --  metal
-select		8,			11,		400	union all -- synth
-select		8,			50,		280	        -- adv building
+select		8,			1,		300	union all --superbattleship : 30 BM, 50 PP, 
+select		8,			7,		200	union all
+select		8,			10,		340	union all  --  metal
+select		8,			11,		200	union all -- synth
+select		8,			50,		140	        -- adv building
 
 
 
@@ -1718,54 +1718,56 @@ select		8,			50,		280	        -- adv building
 
 INSERT [dbo].[ShipHullsCosts] 
 ([shipHullId],	[goodsId], [amount]) 
-select		199,			1,		80	union all --Outpost : 30 BM, 50 PP, 
-select		199,			7,		50	union all
-select		199,			10,		120	union all  --  metal
+select		199,			1,		40	union all --Outpost : 30 BM, 50 PP, 
+select		199,			7,		25	union all
+select		199,			10,		60	union all  --  metal
 
 
-select		200,			1,		220	union all --Spacestation : 30 BM, 50 PP, 
-select		200,			7,		120 union all
-select		200,			10,		280	union all  --  metal
-select		200,			11,		80	union all --synth     union all --Adv. Building Materials	
+select		200,			1,		110	union all --Spacestation : 30 BM, 50 PP, 
+select		200,			7,		60 union all
+select		200,			10,		140	union all  --  metal
+select		200,			11,		40	union all --synth     union all --Adv. Building Materials	
 
-select			201,		1,		300		union all   --bm
-select			201,		7,		200		union all   -- ASSEMBLY
-select			201,		10,		340		union all   --metal
-select			201,		11,		180		union all   --synth
-select			201,		50,		120		union all   --Adv. Building Materials
+select			201,		1,		150		union all   --bm
+select			201,		7,		100		union all   -- ASSEMBLY
+select			201,		10,		170		union all   --metal
+select			201,		11,		90		union all   --synth
+select			201,		50,		60		union all   --Adv. Building Materials
 
 
-select			202,		1,		500		union all   --bm
-select			202,		7,		400		union all   -- ASSEMBLY
-select			202,		10,		500		union all   --metal
-select			202,		11,		300		union all   --synth
-select			202,		50,		200		   --Adv. Building Materials
+select			202,		1,		250		union all   --bm
+select			202,		7,		200		union all   -- ASSEMBLY
+select			202,		10,		250		union all   --metal
+select			202,		11,		150		union all   --synth
+select			202,		50,		100		   --Adv. Building Materials
 
 
 
 --Transcendence Construct:
 INSERT [dbo].[ShipHullsCosts] 
 		([shipHullId],	[goodsId], [amount]) 
-select			220,		1,		900		union all
-select			220,		7,		500		union all
-select			220,		10,		680	union all  --  metal
-select			220,		11,		400	union all -- synth
-select			220,		50,		400		union all --Adv. Building Materials
-select			220,		1040,		100		union all
-select			220,		1041,		100		union all
-select			220,		1042,		100		union all
-select			220,		1043,		100		union all
-select			220,		1044,		100		
+select			220,		1,		500		union all
+select			220,		2,		500		union all
+select			220,		7,		200		union all
+select			220,		10,		500	union all  --  metal
+select			220,		11,		200	union all -- synth
+select			220,		50,		100		union all --Adv. Building Materials
+select			220,		1040,		150		union all
+select			220,		1041,		150		union all
+select			220,		1042,		150		union all
+select			220,		1043,		150		union all
+select			220,		1044,		150		
 
 
 --Transcendence Builder
 INSERT [dbo].[ShipHullsCosts] 
 ([shipHullId],	[goodsId], [amount]) 
-select		221,			1,		300		union all -- 30 BM, 50 PP, 
-select		221,			7,		300	union all --Assembly
-select		221,			10,		600		union all  --Steel
-select		221,			11,		160		union all -- synth
-select		221,			50,		100		union all --Adv. Building Materials
+select		221,			1,		200		union all -- 30 BM, 50 PP, 
+select		221,			2,		50		union all  --nahrung
+select		221,			7,		100	union all --Assembly
+select		221,			10,		200		union all  --Steel
+select		221,			11,		80		union all -- synth
+select		221,			50,		50		union all --Adv. Building Materials
 select		221,			1040,	40    union all --Specials
 select		221,			1041,	40    union all
 select		221,			1042,	40    union all

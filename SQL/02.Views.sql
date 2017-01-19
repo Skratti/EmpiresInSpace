@@ -1517,7 +1517,7 @@ go
 
 CREATE VIEW [engine].[v_StarMap] 
 AS 
-  SELECT id, 
+  SELECT  id, 
          positionX as posX, 
 		 positionY as posY,
          systemname, 
@@ -1525,7 +1525,8 @@ AS
          size, 
          startsystem, 
          settled, 
-         ressourceid 
+         ressourceid ,
+		 startingRegion
   FROM   [starmap]; 
 
 go 

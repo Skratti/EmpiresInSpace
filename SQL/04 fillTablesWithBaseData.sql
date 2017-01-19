@@ -335,7 +335,8 @@ AS
 BEGIN
 	insert into [dbo].StarMap 
 	(id
-	,[position]
+	,[positionX]
+    ,[positionY]
 	,[systemname]
 	,[objectId]
   
@@ -343,14 +344,13 @@ BEGIN
 	,[startSystem]
 	,[settled])
 	values ( @id
-	 ,geometry::STGeomFromText('POINT (' + convert(varchar(15), @X) + ' ' + convert(varchar(15), @Y) + ')',0)
+	 ,@X, @Y
 	 ,''
 	 ,@objectId
 	 ,@size
 	 ,@startSystem
 	 ,0)
 END
-GO
 
 
 drop proc [dbo].[insertSolarSystemInstances] 

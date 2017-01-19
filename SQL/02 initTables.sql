@@ -145,6 +145,12 @@ print 'tables dropped'
 go
 drop function [dbo].[randomFunc]
 go
+
+
+
+
+
+
 CREATE function [dbo].[randomFunc] ( @maxRandomValue int ,  @minRandomValue int) 
 returns int
 as
@@ -354,7 +360,8 @@ CREATE TABLE [dbo].[Users]			  (
 	aiId  int not null default 0,
 	aiRelation  int not null default 1,
 	lastReadGalactivEvent int not null default 0,
-	-- alter table [Users] add 	[lastReadGalactivEvent]  int not null default 0
+	[ProfileUrl] [nvarchar](300) NOT NULL DEFAULT (N'images/interface/defaultprofile.png'),
+	-- alter table [Users] add 	[ProfileUrl] [nvarchar](300) NOT NULL DEFAULT (N'images/interface/defaultprofile.png')
 	--researchSpent int not null default 0,  -- redundant, can be calculated by summing all researches of that user
 	constraint Users_primary primary key nonclustered (id)
 );
@@ -509,6 +516,18 @@ print 'table [ResearchPrerequisites] created.'
 go
 */
 
+
+
+
+
+
+
+
+
+
+
+
+
 CREATE TABLE [dbo].[ResearchQuestPrerequisites] (
 	SourceType SMALLINT NOT NULL 	
 	, SourceId SMALLINT NOT NULL 	
@@ -626,7 +645,7 @@ Nach der initialisierung kommen in diesen Tabllen keine neuen Einträge hinzu
 --------------------------------------------------- */ 
 
 
--- alter table  [dbo].[Research]  add baseCost smallint not null default 10
+-- alter table  [dbo].[Research]  add [hidden] [bit] NULL DEFAULT ((0))
 -- update  [dbo].[Research] set baseCost = cost
 print '--- Research data ---'
 create TABLE [dbo].[Research] (
@@ -643,6 +662,7 @@ create TABLE [dbo].[Research] (
 	researchType tinyint not null default 1,
 	treeColumn 	tinyint not null default 1,
 	treeRow tinyint not null default 1,
+	[hidden] [bit] NULL DEFAULT ((0))
 	constraint Research_primary primary key nonclustered (id)
 );
 print 'table [Research] created.'
@@ -660,42 +680,7 @@ print 'table [ResearchPrerequisites] created.'
 go
 */
 
-go
---drop table [SpecializationGroups]
-print '--- [Specialization] data ---'
-create TABLE [dbo].[SpecializationGroups] (
-	id int NOT NULL,	
-	[name] nvarchar(55),
-	picks int not null default 1,	
-	label int NOT NULL Default 1
-		references [dbo].LabelsBase (id) on update  NO ACTION on delete  NO ACTION,
-	constraint Specialization_primary primary key nonclustered (id)
-);
-print 'table [Specialization] created.'
-go
-create unique clustered index SpecializationGroup_index ON [SpecializationGroups](id);
-go
 
--- drop table [dbo].[SpecializationResearches]
--- alter table [SpecializationResearches] add Module3 SMALLINT references [dbo].[Modules](id) on update  no action on delete no action
-create TABLE [dbo].[SpecializationResearches] (
-	SpecializationGroupId int NOT NULL Default 1
-		references [dbo].[SpecializationGroups] (id) on update cascade on delete cascade,
-	ResearchId SMALLINT NOT NULL Default 1
-		references [dbo].[Research] (id) on update cascade on delete cascade,
-	SecondaryResearchId SMALLINT 
-		references [dbo].[Research] (id) on update no action on delete no action,
-	Building1 SMALLINT references [dbo].[Buildings] (id)  on update cascade on delete cascade,
-	Building2 SMALLINT references [dbo].[Buildings] (id)  on update no action on delete no action,
-	Building3 SMALLINT references [dbo].[Buildings] (id)  on update no action on delete no action,
-	Module1 SMALLINT references [dbo].[Modules](id)  on update no action on delete no action,
-	Module2 SMALLINT references [dbo].[Modules](id)  on update no action on delete no action,
-	Module3 SMALLINT references [dbo].[Modules](id)  on update no action on delete no action
-);
-print 'table [SpecializationResearches] created.'
-go
-create unique clustered index SpecializationResearches_index ON [SpecializationResearches](SpecializationGroupId,ResearchId);
-go
 
 go
 create TABLE [dbo].[UserResearch] 
@@ -713,6 +698,30 @@ go
 create unique clustered index UserResearch_index ON [UserResearch](userId,researchId);
 go	
 		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 print ''
 print '--- Colony data ---'
@@ -844,6 +853,29 @@ create unique clustered index ObjectOnMap_index ON [ObjectOnMap](id);
 go	
 
 
+
+
+
+-- surfaceDefaultMap
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 --drop table [ObjectImages]
 -- alter table ObjectImages add surfaceDefaultMapId SMALLINT default null 
 CREATE TABLE [dbo].[ObjectImages] (
@@ -854,7 +886,7 @@ CREATE TABLE [dbo].[ObjectImages] (
 	BackgroundObjectId SMALLINT references [dbo].[ObjectDescription](id) on update no action on delete no action  ,	
 	BackgroundDrawSize tinyint, --	 DEFAULT 15, -- Background size forPlanet/Colony View
 	TilestartingAt tinyint , --DEFAULT 3,  --offset of the tiles on Planet/Colony View
-	surfaceDefaultMapId SMALLINT default null references [dbo].surfaceDefaultMap(id) on update no action on delete no action ,		
+	surfaceDefaultMapId SMALLINT default null ,		
 	constraint ObjectImages_primary primary key nonclustered (objectId, imageId)
 );
 print 'table [ObjectOnMap] created.'
@@ -960,6 +992,11 @@ CREATE TABLE  [dbo].[BuildingProductions]
 );
 print 'table [BuildingProductions] created.'
 go
+
+
+
+
+
 -- alter table [dbo].[SurfaceTiles] add   label int NOT NULL Default 1
 --		references [dbo].LabelsBase (id) on update NO ACTION on delete NO ACTION
 CREATE TABLE  [dbo].[SurfaceTiles]
@@ -1059,6 +1096,55 @@ go
 print 'table [ModulesGain] created.'
 
 
+go
+--drop table [SpecializationGroups]
+print '--- [Specialization] data ---'
+create TABLE [dbo].[SpecializationGroups] (
+	[id] [int] NOT NULL,
+	[name] [nvarchar](55) NULL,
+	[picks] [int] NOT NULL DEFAULT ((1)),
+	[label] [int] NOT NULL DEFAULT ((1)),
+	[labelDescription] [int] NOT NULL DEFAULT ((1))
+	constraint Specialization_primary primary key nonclustered (id)
+);
+print 'table [Specialization] created.'
+go
+create unique clustered index SpecializationGroup_index ON [SpecializationGroups](id);
+go
+ALTER TABLE [dbo].[SpecializationGroups]  WITH CHECK ADD FOREIGN KEY([label])
+REFERENCES [dbo].[LabelsBase] ([id])
+GO
+
+ALTER TABLE [dbo].[SpecializationGroups]  WITH CHECK ADD FOREIGN KEY([labelDescription])
+REFERENCES [dbo].[LabelsBase] ([id])
+GO
+
+
+-- drop table [dbo].[SpecializationResearches]
+-- alter table [SpecializationResearches] add Module3 SMALLINT references [dbo].[Modules](id) on update  no action on delete no action
+create TABLE [dbo].[SpecializationResearches] (
+	SpecializationGroupId int NOT NULL Default 1
+		references [dbo].[SpecializationGroups] (id) on update cascade on delete cascade,
+	ResearchId SMALLINT NOT NULL Default 1
+		references [dbo].[Research] (id) on update cascade on delete cascade,
+	SecondaryResearchId SMALLINT 
+		references [dbo].[Research] (id) on update no action on delete no action,
+	Building1 SMALLINT references [dbo].[Buildings] (id)  on update cascade on delete cascade,
+	Building2 SMALLINT references [dbo].[Buildings] (id)  on update no action on delete no action,
+	Building3 SMALLINT references [dbo].[Buildings] (id)  on update no action on delete no action,
+	Module1 SMALLINT references [dbo].[Modules](id)  on update no action on delete no action,
+	Module2 SMALLINT references [dbo].[Modules](id)  on update no action on delete no action,
+	Module3 SMALLINT references [dbo].[Modules](id)  on update no action on delete no action
+);
+print 'table [SpecializationResearches] created.'
+go
+create unique clustered index SpecializationResearches_index ON [SpecializationResearches](SpecializationGroupId,ResearchId);
+go
+
+
+
+
+
 /* ---------------------------------------------------
 die Sternenkartenobjekte, hole die entsprechenden ID's aus der Sternenkarte
 ToDo: Default 1 -> Funktion die ein Default-Wert berechnet...
@@ -1125,15 +1211,16 @@ go
 
 CREATE TABLE  [dbo].[StarMap]
 (
-	id INT NOT NULL,
-	position geometry NOT NULL,
-	systemname nvarchar(63),					
-	objectId SMALLINT NOT NULL DEFAULT 1
-		references [ObjectDescription](id) on update cascade on delete cascade,
-	size smallint not null default 20,	
-	startSystem tinyint not null default 0,
-	settled tinyint not null default 0	,
-	ressourceId tinyint NOT NULL default 0
+	[id] [int] NOT NULL,
+	[systemname] [nvarchar](63) NULL,
+	[objectId] [smallint] NOT NULL DEFAULT ((1)),
+	[size] [smallint] NOT NULL DEFAULT ((20)),
+	[startSystem] [tinyint] NOT NULL DEFAULT ((0)),
+	[settled] [tinyint] NOT NULL DEFAULT ((0)),
+	[ressourceId] [tinyint] NOT NULL DEFAULT ((0)),
+	[positionY] [int] NOT NULL DEFAULT ((5000)),
+	[positionX] [int] NOT NULL DEFAULT ((5000)),
+	[startingRegion] [nvarchar](10) NULL,
 	constraint starMap_primary primary key clustered (id)
 );
 
@@ -1627,41 +1714,6 @@ END
 go
 print 'trigger [dbo].[TRIGGER_Ships_Delete_FKs] created.'
 go
-CREATE TRIGGER [dbo].[TRIGGER_ShipUpdate] ON [dbo].[Ships]
-AFTER Update
-AS
-BEGIN	
-	
-	delete from dbo.[ShipTranscension]
-	from dbo.[ShipTranscension]
-	inner join inserted
-	on inserted.id = dbo.[ShipTranscension].shipId
-	where inserted.userId = 0
-
-
-	delete from dbo.[ShipTranscensionUsers]
-	from dbo.[ShipTranscensionUsers]
-	inner join inserted
-	on inserted.id = dbo.[ShipTranscensionUsers].shipId
-	where inserted.userId = 0
-	
-END
-go
-CREATE TRIGGER [dbo].[TRIGGER_ShipCreated] ON [dbo].[Ships]
-AFTER Insert
-AS
-BEGIN	
-	
-	insert into dbo.[ShipTranscension](shipId, ressourceCount)
-	select 
-		inserted.id as shipId,		
-		1
-	from inserted
-	where inserted.hullId = 220
-				
-END
-
-GO
 
 
 --1 to 1 to ships, always joined on ships to increment the ships versionId after the  update
@@ -1763,34 +1815,6 @@ go
 go
 --drop TRIGGER TRIGGER_ShipCreated
 go
-CREATE TRIGGER TRIGGER_ShipCreated ON dbo.[Ships]
-AFTER Insert
-AS
-BEGIN	
-	
-	insert into dbo.[ShipTranscension](shipId, ressourceCount)
-	select 
-		inserted.id as shipId,		
-		1
-	from inserted
-	where inserted.hullId = 220
-			
-/*
-	insert into dbo.shipModules
-	select 
-		inserted.id,
-		ShipTemplateModulePositions.moduleId,
-		ShipTemplateModulePositions.posX,
-		ShipTemplateModulePositions.posY,
-		20,
-		1
-	from inserted
-	inner join dbo.ShipTemplateModulePositions
-	on  ShipTemplateModulePositions.shipTemplateId = inserted.templateId
-*/			
-END
-go
-
 
 
 CREATE TABLE [dbo].[shipStock](	
@@ -1962,8 +1986,10 @@ CREATE TABLE [dbo].[Colonies]  (
 	[construction] int not null default 0	,
 	turnsOfRioting smallInt not null default 0,
 	versionId bigint not null default 1,
+	[TurnsOfSiege] [smallint] NOT NULL DEFAULT ((10)),
 	[besiegedBy] int not null default 0,	  --userId besieging
 	Influence int not null default 0
+
 	constraint colonies_primary primary  key clustered (id)		
 );
 create index colonies_userIndex ON colonies(userId);
@@ -1972,26 +1998,6 @@ create index colonies_starIndex ON colonies(starId);
 print 'table [dbo].[colonies] created.'
 go
 
-CREATE TRIGGER TRIGGER_CreatePlanetSurface ON dbo.Colonies
-AFTER Insert
-AS
-BEGIN	
-
-		
-	insert into [PlanetSurface]		
-	select 	
-		(select inserted.[planetId] from inserted) as planetId,
-		defaultMap.X,
-		defaultMap.Y,
-		defaultMap.surfaceObjectId,
-		null as surfaceBuildingId
-		--case when defaultMap.X = 3 and defaultMap.Y = 2 then 1 else 
-		-- null end as surfaceBuildingId
-		from dbo.surfaceDefaultMap as defaultMap
-		where defaultMap.id = ((select inserted.[planetId] from inserted) % 15) + 1
-			
-END
-go
 
 --can only be created after the colonies...
 create view TradeOffersWithUsers as
@@ -2483,21 +2489,6 @@ create view [dbo].[StarNames] as
 go
 
 
-
-CREATE SPATIAL INDEX [StarMap_position]  
-   ON [dbo].[StarMap]([position])
-   USING GEOMETRY_GRID
-   --WITH ( BOUNDING_BOX = ( -10000, -10000, 10000, 10000 ) );
-   WITH ( 
-   BOUNDING_BOX = ( 4000, 4000, 6000, 6000 ),
-   GRIDS =(LEVEL_1 =   HIGH,LEVEL_2 = HIGH,LEVEL_3 = HIGH,LEVEL_4 = HIGH),  
-   CELLS_PER_OBJECT = 64, PAD_INDEX  = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF,   ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
-
-print 'table [dbo].[StarMap] created.'
-go
-ALTER INDEX [StarMap_position] ON [dbo].[StarMap]
-REBUILD;
-go
 /*
 CREATE SPATIAL INDEX [Ships_position]  
    ON [dbo].[Ships]([position])
@@ -2524,14 +2515,6 @@ REBUILD;
 go
 */
 
-CREATE SPATIAL INDEX [CommunicationNode_position] 
-   ON [dbo].CommunicationNode([position])
-   USING GEOMETRY_GRID
-   WITH ( BOUNDING_BOX = ( -10000, -10000, 10000, 10000 ) );
-   
- 
- go
- 
 create function [dbo].[getLabel](	 @labelId int, @userId int )
 returns NVARCHAR(MAX)
 as

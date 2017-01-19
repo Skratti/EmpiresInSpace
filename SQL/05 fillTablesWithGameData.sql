@@ -271,7 +271,7 @@ INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl]) VALUES (449, N
 ---------------------
 
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl]) VALUES (450, N'Satellit', N'DefSat2.png')
-
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl]) VALUES (451, N'PirateFrigate', N'Ships/FrigateRed60.png')
 
 
 
@@ -341,6 +341,8 @@ INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl]) VALUES (549, N
 
 
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (550, N'Satellit', N'DefSat2B.png', 1, 0, 61)
+
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl]) VALUES (551, N'FrigateGreen360', N'Ships/FrigateRed360.png')
 
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (560, N'Transcendence Construct', N'TranscendenceConstruct300.png', 1, 0, 594)
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl], [moveCost], [damage], [label]) VALUES (561, N'Transcendence Builder', N'TranscendenceBuildert300.png', 1, 0, 595)
@@ -1368,6 +1370,7 @@ INSERT [dbo].[ShipHulls] ([id], [isStarBase], [typename], [labelName], [objectId
 INSERT [dbo].[ShipHulls] ([id], [isStarBase], [typename], [labelName], [objectId], [modulesCount], [templateImageUrl], [label]) VALUES (6, 0, N'Cruiser'		, 0	, 441, 15, N'401Template.gif', 58)
 INSERT [dbo].[ShipHulls] ([id], [isStarBase], [typename], [labelName], [objectId], [modulesCount], [templateImageUrl], [label]) VALUES (7, 0, N'Battleship'		, 0	, 444, 19, N'401Template.gif', 124)
 INSERT [dbo].[ShipHulls] ([id], [isStarBase], [typename], [labelName], [objectId], [modulesCount], [templateImageUrl], [label]) VALUES (8, 0, N'Superbattleship', 0	, 447, 24, N'401Template.gif', 125)
+INSERT [dbo].[ShipHulls] ([id], [isStarBase], [typename], [labelName], [objectId], [modulesCount], [templateImageUrl], [label]) VALUES (9, 0, N'Scumm'			, 0	, 451,  5, N'401Template.gif', 55)
 
 INSERT [dbo].[ShipHulls] ([id], [isStarBase], [typename], [labelName], [objectId], [modulesCount], [templateImageUrl], [label]) VALUES (199, 1, N'Outpost', 0, 430, 3, N'401Template.gif', 585)
 INSERT [dbo].[ShipHulls] ([id], [isStarBase], [typename], [labelName], [objectId], [modulesCount], [templateImageUrl], [label]) VALUES (200, 1, N'Spacestation', 0, 431, 7, N'SpaceStation1_60.png', 59)
@@ -1380,7 +1383,7 @@ INSERT [dbo].[ShipHulls] ([id], [isStarBase], [typename], [labelName], [objectId
 --truncate table [ShipHullsImages]
 INSERT into [dbo].[ShipHullsImages]
 					-- on map:		-- in designer:  
-(	[id],[shipHullId], objectId , templateImageId, templateModulesXoffset, templateModulesYoffset) 
+(	[id],[shipHullId], objectId , templateImageId, templateModulesXoffset, templateModulesYoffset)   
 select 0,		0 ,			440 ,			 501 ,					   0 ,						0 union all --Debris
 select 1,		1 ,			411 ,			 511 ,					   20 ,					   20 union all  --Scout 3
 select 3,		3 ,			402 ,			 512 ,					   0 ,					  -40 union all  --Corvette
@@ -1397,8 +1400,10 @@ select 13,      1 ,			410 ,			 510 ,					   20 ,						20 union all	-- Scout 2
 select 14,    199 ,			430 ,			 530 ,					  49 ,						6 union all --spacestation 0 Outpost
 select 15,    220 ,			460 ,			 560 ,					  0 ,						0 union all
 select 16,    221 ,			461 ,			 561 ,					  0 ,						0 union all
-select 17,      8 ,			412 ,			 514 ,					  0 ,					  -40 
-union all
+
+--Pirate scout
+select 17,      9 ,			412 ,			 514 ,					  0 ,					  -40 union all
+
 select 18,      1 ,			413 ,			 515 ,					  20 ,					   20 union all --Scout grün
 select 19,      1 ,			414 ,			 516 ,					  20 ,					   20 union all --Scout blau
 select 20,      2 ,			416 ,			 517 ,					  19 ,					  -25 union all  --HeavyFighter
@@ -1415,7 +1420,9 @@ select 30,      6 ,			443 ,			 543 ,					 109 ,					 115 union all  --CruiserBlu
 select 31,      7 ,			445 ,			 545 ,					  124 ,					   115 union all  --BattleshipGreen
 select 32,      7 ,			446 ,			 546 ,					  124 ,					   115 union all  --BattleshipBlue
 select 33,      8 ,			448 ,			 548 ,					  99 ,					   155 union all  --SuperBattleshipGreen
-select 34,      8 ,			449 ,			 549 ,					  99 ,					   155			 --SuperBattleshipBlue
+select 34,      8 ,			449 ,			 549 ,					  99 ,					   155 union all--SuperBattleshipBlue
+
+select 35,      4 ,			451 ,			 551 ,					  79 ,					  80 
 /*
 )
 update toupdate 
@@ -1555,6 +1562,22 @@ INSERT [dbo].[ShipHullsModulePositions] ([shipHullId], [posX], [posY]) VALUES (8
 
 -- ?death star 30?
 
+
+-- pirate fregatte 9
+INSERT [dbo].[ShipHullsModulePositions] ([shipHullId], [posX], [posY]) VALUES (9, 1, 3)
+INSERT [dbo].[ShipHullsModulePositions] ([shipHullId], [posX], [posY]) VALUES (9, 1, 4)
+INSERT [dbo].[ShipHullsModulePositions] ([shipHullId], [posX], [posY]) VALUES (9, 2, 2)
+INSERT [dbo].[ShipHullsModulePositions] ([shipHullId], [posX], [posY]) VALUES (9, 2, 3)
+INSERT [dbo].[ShipHullsModulePositions] ([shipHullId], [posX], [posY]) VALUES (9, 2, 4)
+INSERT [dbo].[ShipHullsModulePositions] ([shipHullId], [posX], [posY]) VALUES (9, 3, 3)
+INSERT [dbo].[ShipHullsModulePositions] ([shipHullId], [posX], [posY]) VALUES (9, 3, 4)
+																			   
+INSERT [dbo].[ShipHullsModulePositions] ([shipHullId], [posX], [posY]) VALUES (9, 0, 4)
+INSERT [dbo].[ShipHullsModulePositions] ([shipHullId], [posX], [posY]) VALUES (9, 4, 4)
+
+
+
+
 --outpost 3 
 INSERT [dbo].[ShipHullsModulePositions] 
 ([shipHullId], [posX], [posY])  
@@ -1645,6 +1668,7 @@ INSERT [dbo].[ShipHullsGain] ([shipHullId], [crew], [energy], [hitpoints], [dama
 */
 insert [dbo].[ShipHullsGain] 
 ([shipHullId], [crew], [energy], [hitpoints], [damagereduction], [damageoutput], [cargoroom], [fuelroom], [inSpaceSpeed], [inSystemSpeed], [maxSpaceMoves], [maxSystemMoves], [special], [scanRange], [speedFactor])
+
 select		0,		0,		0,			   0,				0,				0,				0,			0,				0,				0,				0,				0,			0,				0 ,			1		union all
 select		1,		-1,		-1,			200,			   80,				0,			   80,			80,				0,			    0,				0,			    0,			0,				2 ,			1.0		union all -- Scout
 select		2,		-1,		-2,			220,			   70,				0,			   70,			80,				0,			    0,				0,			    0,			0,				1 ,			0.9		union all -- Scout
@@ -1657,6 +1681,10 @@ select		6,		-8,		-9,			400,			   20,				0,				350,		60,				0,				0,				0,				0,	
 select		7,		-10,	-11,		450,			   10,				0,				400,		50,				0,				0,				0,				0,			0,				0 ,			0.4		union all -- starship
 --
 select		8,		-15,	-18,		500,			    5,				0,				500,		50,				0,				0,				0,				0,			0,				0 ,			0.3  	union all -- battle
+
+select		9,		-4,		-3,			300,			   45,				0,			   200,			60,				0,				0,				0,				0,			0,				1 ,			0.7		union all --fregatte
+
+
 select		199,	3,		4,			450,				0,				0,				500,		100,			0,				0,				0,				0,			3,				1 ,			0.0		union all  
 select		200,	5,		6,			700,			    0,				0,				100,		100,			0,				0,				0,				0,			3,				1 ,			0.0		union all
 select		201,	8,		10,			1000,			    0,				0,				200,		200,			0,				0,				0,				0,			3,				1 ,			0.0		union all

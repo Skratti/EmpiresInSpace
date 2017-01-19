@@ -1247,7 +1247,18 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (983, N'Re
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (984, N'Future Tech', N'', 1)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (985, N'New technological breakthroughs advance your civilization into the unknown future.', N'', 1)
 
---delete from [LabelsBase] where id > 972
+
+
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (986, N'Your available goods', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (987, N'Trade payout location: ', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (988, N'Overloaded!', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (989, N'Create Trade', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (990, N'Offer Created', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (991, N'Your offer was created and is now available on the trading network.', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (992, N'Your offer:', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (993, N'Your demand:', N'', 7)
+
+--delete from [LabelsBase] where id > 990
 --update [dbo].[LabelsBase] set [value] =  N'Construction cost' where id = 977
  
 --INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (936, N'', N'', 7)

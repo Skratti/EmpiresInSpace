@@ -4,8 +4,15 @@ go
 
 
 /* USER GENERATED DATA: */
-drop function [dbo].[getLabel];
-drop view TradeOffersWithUsers
+
+IF EXISTS(SELECT * 
+          FROM   sys.objects 
+          WHERE  NAME = N'getLabel' 
+                 AND type = N'FN') 
+  BEGIN 
+      drop function [dbo].[getLabel];
+
+--Todo: each table should have its own "If Exists Drop" - Statement 
 drop table TradeOfferDetails
 drop table TradeOffers
 
@@ -19,7 +26,7 @@ drop TRIGGER TRIGGER_Users_Delete_FKs
 drop table [dbo].[colonyStock]
 drop table [dbo].[ColoniesBuildQueue]
 
-drop trigger TRIGGER_CreatePlanetSurface		
+	
 drop table [dbo].[ColonyBuildings]
 drop table [dbo].[Colonies]				-- Kolonien
 drop table [dbo].[shipStock]
@@ -34,7 +41,6 @@ drop table [ShipTemplateModulePositions]
 drop table ShipTemplateCosts
 drop table [ShipTemplate]
 
-
 drop table [ShipHullsModulePositions]
 drop table [dbo].[planetStock]
 
@@ -45,7 +51,6 @@ drop table dbo.[activeUsers]
 
 drop table dbo.[UserResearch]
 drop table [UserQuests]
-
 
 drop table CommNodeDefaultRights
 drop table CommNodeUsers
@@ -65,7 +70,6 @@ drop table [dbo].[Users]
 
 drop table [dbo].[PlanetSurface]
 
-
 /*Game-Specific Data*/
 drop TABLE [dbo].[ShipTemplateBlueprints]
 drop table ShipHullsGain
@@ -73,6 +77,8 @@ drop table [ShipHullsCosts]
 drop table [dbo].[ShipHullsImages]
 drop table [dbo].[ShipHulls]
 
+drop table [SpecializationResearches]
+drop table [SpecializationGroups]
 
 
 drop table [dbo].[BuildOptions]
@@ -83,12 +89,9 @@ drop table [dbo].[Buildings]
 
 drop table [ResearchGain]
 
-drop table [SpecializationResearches]
-drop table [SpecializationGroups]
+
 
 drop table dbo.[Research]
-
-
 
 drop table ModulesGain
 drop table ModulesCosts
@@ -96,8 +99,6 @@ drop table Modules
 drop table Quests
 			
 drop table [dbo].[Goods]
-
-
 
 drop table [dbo].[SurfaceTiles]
 drop table [dbo].[SolarSystemInstances]
@@ -115,6 +116,7 @@ drop table [dbo].[numbers]
 
 
 drop table [dbo].[ObjectWeaponModificators]
+drop table dbo.ObjectImages
 drop table [dbo].[ObjectOnMap]
 drop TABLE [dbo].[surfaceDefaultMap]
 drop table [dbo].[SurfaceImages]
@@ -126,15 +128,20 @@ drop table [dbo].Labels
 drop table [dbo].LabelsBase
 drop table [dbo].Languages
 
+drop table CombatRounds
+drop table Combat
+
+drop table dbo.ResearchQuestPrerequisites
+drop table dbo.UserRelations
+
+drop table dbo.GalacticEvents
 print 'general data end'
 
 drop table dbo.greekAlphabet
-drop table dbo.ResearchQuestPrerequisites
 drop table dbo.resultMessages
-drop table dbo.UserRelations
+
 drop table dbo.starnamesBlueprint
 drop table dbo.starnamesCombinations
-
 
 drop table gameNewTurnLog;
 drop table gameNewTurns;
@@ -142,8 +149,12 @@ drop table game;
 drop table [dbo].[defaultMap]
 drop table [dbo].[Log]
 print 'tables dropped'
-go
+
 drop function [dbo].[randomFunc]
+
+END 
+go
+
 go
 
 
@@ -1998,20 +2009,6 @@ create index colonies_starIndex ON colonies(starId);
 print 'table [dbo].[colonies] created.'
 go
 
-
---can only be created after the colonies...
-create view TradeOffersWithUsers as
-select [TradeOffers].*,
-	ISNULL(Ships.userId, Colonies.userId) as userId   
-FROM [dbo].[TradeOffers]
-left join dbo.Ships
-	on	TradeOffers.spaceObjectType = 0
-	and TradeOffers.spaceObjectId = Ships.id
-left join dbo.Colonies	
-	on	TradeOffers.spaceObjectType = 1
-	and TradeOffers.spaceObjectId = Colonies.id
-go
---select * from TradeOffersWithUsers 
 
 /*
 

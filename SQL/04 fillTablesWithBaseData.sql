@@ -326,7 +326,15 @@ INSERT [dbo].[defaultMap] ([X], [Y], [surfaceObjectId]) VALUES (10, 7, 4)
 
 
 go
-drop proc [dbo].[insertStarMap] 
+IF EXISTS(SELECT * 
+          FROM   sys.objects 
+          WHERE  NAME = N'insertStarMap' 
+                 AND type = N'P') 
+  BEGIN 
+     drop proc [dbo].[insertStarMap] 
+  END 
+
+
 go
 CREATE procedure [dbo].[insertStarMap] 
 	@X int, @Y int, @objectId smallint,
@@ -351,9 +359,15 @@ BEGIN
 	 ,@startSystem
 	 ,0)
 END
+go
+IF EXISTS(SELECT * 
+          FROM   sys.objects 
+          WHERE  NAME = N'insertSolarSystemInstances' 
+                 AND type = N'P') 
+  BEGIN 
+     drop proc [dbo].[insertSolarSystemInstances] 
+  END 
 
-
-drop proc [dbo].[insertSolarSystemInstances] 
 go
 create procedure [dbo].[insertSolarSystemInstances]
 	@X int, 
@@ -377,9 +391,13 @@ INSERT INTO [dbo].[SolarSystemInstances]
 
 GO
 
-
-go
-drop procedure [dbo].[saveSurface]
+IF EXISTS(SELECT * 
+          FROM   sys.objects 
+          WHERE  NAME = N'saveSurface' 
+                 AND type = N'P') 
+  BEGIN 
+     drop proc [dbo].saveSurface 
+  END 
 go
 CREATE procedure [dbo].[saveSurface] 
 	@name nvarchar(55),
@@ -400,8 +418,14 @@ BEGIN
 	 
 END	 
 GO
+IF EXISTS(SELECT * 
+          FROM   sys.objects 
+          WHERE  NAME = N'saveSurfaceDefaultMap' 
+                 AND type = N'P') 
+  BEGIN 
+     drop proc [dbo].saveSurfaceDefaultMap 
+  END 
 
-drop  proc [dbo].[saveSurfaceDefaultMap]
 go
 CREATE procedure [dbo].[saveSurfaceDefaultMap]
  @id int,

@@ -1,3 +1,12 @@
+-- README
+-- 3 places in this file have to be adjusted before execution:
+-- 1) @DBServerName has to get your SQL server name
+-- 2) @DBName has to get your database name
+-- 3) @FilePath has to get the folder where this file (andf the others) are in
+-- If those things are given, you can just execute with F5
+-- The only evaluation script is at the moment at the end of file "05.04 fillShipModuleData.sql"
+-- All other facts have to be fetched manually out of the tables
+-- More evaluation scripts will come later
 
 EXEC master.dbo.sp_configure 'show advanced options', 1 
 RECONFIGURE 

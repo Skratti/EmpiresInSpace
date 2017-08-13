@@ -47,7 +47,6 @@ drop table [dbo].[planetStock]
 drop table dbo.[DiplomaticEntityState]
 drop table dbo.[UserTargetRelations]
 drop table [dbo].[UserContacts]
-drop table dbo.[activeUsers]
 
 drop table dbo.[UserResearch]
 drop table [UserQuests]
@@ -109,9 +108,6 @@ drop view [dbo].[possibleStarNames]
 drop table [dbo].[StarMap]
 drop table [GalaxyMap]
 
-
-drop table [dbo].[Move]
-
 drop table [dbo].[numbers]
 
 
@@ -122,7 +118,6 @@ drop TABLE [dbo].[surfaceDefaultMap]
 drop table [dbo].[SurfaceImages]
 drop table [dbo].[ObjectDescription]
 drop table [dbo].[DamageTypes]
-
 
 drop table [dbo].Labels
 drop table [dbo].LabelsBase
@@ -143,8 +138,8 @@ drop table dbo.resultMessages
 drop table dbo.starnamesBlueprint
 drop table dbo.starnamesCombinations
 
-drop table gameNewTurnLog;
-drop table gameNewTurns;
+drop table [TurnEvaluation]
+
 drop table game;
 drop table [dbo].[defaultMap]
 drop table [dbo].[Log]
@@ -156,7 +151,6 @@ END
 go
 
 go
-
 
 
 
@@ -185,6 +179,16 @@ create TABLE [dbo].[Log]  (
 );
 go
 -- 
+create TABLE [dbo].[TurnEvaluation](
+	turnNumber int not null default 0,
+	evaluationDuration int not null default 0,
+	evaluationDate datetime NOT NULL DEFAULT GETDATE(),
+	playerCount  int not null default 0,
+	shipCount  bigint not null default 0,
+	colonyCount  bigint not null default 0,
+	tradesCount  bigint not null default 0
+);
+go
 
 
 go
@@ -209,48 +213,9 @@ create unique clustered index [game_index] ON [game](name);
 go
 
 
-CREATE TABLE [dbo].gameNewTurns			  (
-	[id] int not null UNIQUE identity(0,1),		
-	targetTime datetime NOT NULL,
-	turnStatus tinyint not null default 0 -- 0: open , 1: done , 2: skipped 
-);
-print 'table [gameNewTurns] created.'
-go
-create unique clustered index [gameNewTurns_index] ON gameNewTurns([id]);
-go
-
--- insert into gameNewTurns(targetTime) select GETDATE()
-
-CREATE TABLE [dbo].gameNewTurnLog			  (
-	[gameNewTurnsId] int not null 
-		references [dbo].gameNewTurns (id) on delete cascade,		
-	newTurnBegin datetime NOT NULL,
-	newTurnEnd datetime NOT NULL,
-	newTurnRuntime int not null default 1
-);
-print 'table [gameNewTurnLog] created.'
-go
-
-create unique clustered index [gameNewTurnLog_index] ON gameNewTurnLog([gameNewTurnsId]);
-go
-
-
-
-
-
 
 -- Helper
 
-CREATE TABLE [dbo].[Move] (
-	[moveId] int not null,
-	[x] int not null,
-	[y] int not null
-);
-go
-create clustered index [Move_index] ON [Move]([moveId]);
-go
-
-print ''
 print '--- general data ---'
 
 
@@ -624,20 +589,6 @@ create index CommNodeUsers_bycommNodeId ON CommNodeUsers(commNodeId);
 go
 
 
-
---used to detect which Users are currently onLine - Not Implemented atm
-CREATE TABLE [dbo].[activeUsers](
-	userId int not null
-		references [dbo].[Users] (id) on delete cascade,
-loginTime datetime,
-lastMessageTransferred int	
-);
-print 'table [activeUsers] created.'
-go
-create unique clustered index activeUsers_index ON [activeUsers](userId);
-go
-
-
 /*
 alter table [Users]
 add homeCoordY int
@@ -1008,7 +959,7 @@ go
 
 
 
--- alter table [dbo].[SurfaceTiles] add   label int NOT NULL Default 1
+-- alter table [dbo].[SurfaceTiles] add  borderId SMALLINT
 --		references [dbo].LabelsBase (id) on update NO ACTION on delete NO ACTION
 CREATE TABLE  [dbo].[SurfaceTiles]
 (
@@ -1018,6 +969,7 @@ CREATE TABLE  [dbo].[SurfaceTiles]
 		references [dbo].[ObjectDescription](id) on update cascade on delete cascade,	
     label int NOT NULL Default 1
 		references [dbo].LabelsBase (id) on update NO ACTION on delete NO ACTION,
+	borderId SMALLINT,
 	constraint Surface_primary primary key clustered (id)
 );
 go
@@ -1653,8 +1605,14 @@ print '--- user data ---'
 Schiffsliste
 herkunft ist doppelt belegt (und nicht hier drin). einmal für den Sektorein- bzw. ausflug, zum anderen bei der Schiffserstellung :(alter table [Ships] 
 
-alter table [Ships] 
-add experience int not null default 0
+
+alter table [Ships] add
+
+
+
+
+	movementroute nvarchar(100)
+
 
 add shipHullsImage int not null default 1 
 		references	[dbo].ShipHullsImages (id) on update no action on delete no action
@@ -1704,7 +1662,14 @@ CREATE TABLE [dbo].[Ships]  (
 	versionId bigint not null default 0, 
 	shipStockVersionId bigint not null default 0, 
 	shipModulesVersionId bigint not null default 0, 
-	experience int not null default 0
+	experience int not null default 0,
+
+	fleetId int,
+	sentry BIT NOT NULL DEFAULT 0,
+	targetX INT not null DEFAULT 0,
+	targetY INT not null DEFAULT 0,
+	movementroute nvarchar(100),
+	 
 	constraint ships_primary primary key clustered (id)
 );
 create nonclustered index ShipsIdKey on [dbo].[Ships](userId);
@@ -1729,11 +1694,14 @@ go
 
 --1 to 1 to ships, always joined on ships to increment the ships versionId after the  update
 -- insert into [ShipTranscension] select 1738 , 1,  GETDATE(), 100
+--alter table [ShipTranscension]  add constructionTurn int not null default 1 
+
 CREATE TABLE [dbo].[ShipTranscension]  (
 	shipId INT references dbo.Ships on update cascade on delete cascade,
 	helperMinimumRelation tinyint default 1,
 	constructionDate datetime not null default GETDATE(),
-	ressourceCount int not null default 100
+	ressourceCount int not null default 100,
+	constructionTurn int not null default 1
 );
 
 go

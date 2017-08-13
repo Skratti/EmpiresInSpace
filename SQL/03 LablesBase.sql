@@ -155,7 +155,7 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (134, N'Co
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (135, N'Messages', N'', 7)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (136, N'Contacts', N'', 7)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (137, N'Communication', N'', 7)
-INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (138, N'Researches', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (138, N'Research', N'', 7)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (139, N'Alliances', N'', 7)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (140, N'Statistics', N'', 7)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (141, N'Settings', N'', 7)
@@ -1258,7 +1258,23 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (991, N'Yo
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (992, N'Your offer:', N'', 7)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (993, N'Your demand:', N'', 7)
 
---delete from [LabelsBase] where id > 990
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (994, N'Scrap', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (995, N'Recycle', N'', 7)
+
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (996, N'Are you sure you want to logout?', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (997, N'Logout', N'', 7)
+
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (998, N'Population: {0}', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (999, N'Ships: {0}', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (1000, N'Research: {0}', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (1001, N'Transcendence: {0}', N'', 7)
+
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (1002, N'Sentry <d>', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (1003, N'Ship remains stationary until it is again activated', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (1004, N'Move/Done <Space>', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (1005, N'Ship will continue its movement if possible, then the next ship is selected.', N'', 7)
+
+--delete from [LabelsBase] where id > 1001
 --update [dbo].[LabelsBase] set [value] =  N'Construction cost' where id = 977
  
 --INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (936, N'', N'', 7)

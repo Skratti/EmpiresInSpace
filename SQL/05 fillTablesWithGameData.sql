@@ -209,6 +209,9 @@ INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl]) VALUES (204, N
 
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl]) VALUES (230, N'Administration V', N'Buildings/Houses.png')
 
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl]) VALUES (300, N'Scrap', N'Interface/TrashCan.png')
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl]) VALUES (301, N'Recycle V', N'Interface/Recycling.png')
+
 --delete  [ObjectDescription] where id = 404
 --update  [dbo].[ObjectDescription] set [objectimageUrl] = 'Ships/Destroyer60.png' where id =  404
 --update  [dbo].[ObjectDescription] set [objectimageUrl] = 'Ships/Destroyer390.png' where id =  504
@@ -507,20 +510,22 @@ INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl]) VALUES (4506, 
 
 INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl]) VALUES (5000, N'NebulaTileset', N'NebulaTileset.png'		)
 
-INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl]) VALUES (5200, N'BorderLightGreyTileset', N'BorderLightGreyTileset.png'		)
 
-INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl]) VALUES (5400, N'BorderDarkBlueTileset', N'BorderDarkBlueTileset.png'		)
-INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl]) VALUES (5600, N'BorderLightBlueTileset', N'BorderLightBlueTileset.png'		)
-INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl]) VALUES (5800, N'BorderDarkGreenTileset', N'BorderDarkGreenTileset.png'		)
-INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl]) VALUES (6000, N'BorderLightGreenTileset', N'BorderLightGreenTileset.png'	)
-INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl]) VALUES (6200, N'BorderDarkRedTileset', N'BorderDarkRedTileset.png'			)
-INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl]) VALUES (6400, N'BorderLightRedTileset', N'BorderLightRedTileset.png'		)
-INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl]) VALUES (6600, N'BorderOrangeTileset', N'BorderOrangeTileset.png'			)
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl]) VALUES (5200, N'BorderLightGreyTileset',		N'Borders/BorderLightGreyTileset.png'		)
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl]) VALUES (5400, N'BorderDarkBlueTileset',		N'Borders/BorderDarkBlueTileset.png'		)
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl]) VALUES (5600, N'BorderLightBlueTileset',		N'Borders/BorderLightBlueTileset.png'		)
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl]) VALUES (5800, N'BorderDarkGreenTileset',		N'Borders/BorderDarkGreenTileset.png'		)
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl]) VALUES (6000, N'BorderLightGreenTileset',		N'Borders/BorderLightGreenTileset.png'		)
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl]) VALUES (6200, N'BorderDarkRedTileset',		N'Borders/BorderDarkRedTileset.png'			)
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl]) VALUES (6400, N'BorderLightRedTileset',		N'Borders/BorderLightRedTileset.png'		)
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl]) VALUES (6600, N'BorderOrangeTileset',			N'Borders/BorderOrangeTileset.png'			)
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl]) VALUES (6800, N'BorderYellowTileset',			N'Borders/BorderYellowTileset.png'			)
 
-INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl]) VALUES (6800, N'BorderYellowTileset', N'BorderYellowTileset.png'			)
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl]) VALUES (7000, N'BorderYellowGreenTileset',	N'Borders/BorderYellowGreenTileset.png'		)
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl]) VALUES (7200, N'BorderWhiteTileset',			N'Borders/BorderWhiteTileset.png'			)
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl]) VALUES (7400, N'BorderDarkGreyTileset',		N'Borders/BorderDarkGreyTileset.png'		)
 
-
-
+INSERT [dbo].[ObjectDescription] ([id], [name], [objectimageUrl]) VALUES (8000, N'PlanetSurface',				N'Planet_01.png'		)
 
 --delete from [dbo].[ObjectDescription] where id > 5000
 

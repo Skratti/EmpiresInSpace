@@ -29,20 +29,24 @@ go
 
 IF EXISTS(SELECT 1 
           FROM   sys.objects 
-          WHERE  NAME = N'v_gameNewTurns' 
+          WHERE  NAME = N'v_TurnEvaluation' 
                  AND type = N'V') 
   BEGIN 
-      DROP VIEW engine.[v_gameNewTurns] 
+      DROP VIEW engine.[v_TurnEvaluation] 
   END 
 
 go 
 
-CREATE VIEW [engine].[v_gameNewTurns] 
+CREATE VIEW [engine].[v_TurnEvaluation] 
 AS 
-  SELECT id, 
-         targettime, 
-         turnstatus 
-  FROM   [gamenewturns]; 
+ SELECT [turnNumber]
+      ,[evaluationDuration]
+      ,[evaluationDate]
+      ,[playerCount]
+      ,[shipCount]
+      ,[colonyCount]
+      ,[tradesCount]
+  FROM [TurnEvaluation]
 
 go 
 
@@ -1017,7 +1021,8 @@ AS
   SELECT id, 
          NAME, 
          objectid,
-		 label
+		 label,
+		 borderId
   FROM   [surfacetiles]; 
 
 go 
@@ -1229,6 +1234,11 @@ AS
 		  , refitCounter
 		  , noMovementCounter
 		  , experience
+		  , fleetId
+		  , sentry
+		  , targetX
+		  , targetY
+		  , movementroute
   FROM   [ships]; 
 
 go 

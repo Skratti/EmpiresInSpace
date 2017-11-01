@@ -3,14 +3,14 @@
 
 --I Level 0-1
 --delete from [dbo].[Buildings] 
-INSERT [dbo].[Buildings] ([id], [name], [objectId], [BuildingScript], [isBuildable], [visibilityNeedsGoods], [groupId], [label], prodQueueLevel, housing, storage) VALUES (1, N'Koloniezentrale I', 151, NULL, 0, 0, 1, 43, 0, 140, 3000)
-INSERT [dbo].[Buildings] ([id], [name], [objectId], [BuildingScript], [isBuildable], [visibilityNeedsGoods], [groupId], [label], prodQueueLevel, housing, storage) VALUES (30, N'Koloniezentrale II', 149, NULL, 0, 0, 1, 43, 0, 40, 1000)
-INSERT [dbo].[Buildings] ([id], [name], [objectId], [BuildingScript], [isBuildable], [visibilityNeedsGoods], [groupId], [label], prodQueueLevel, housing, storage) VALUES (31, N'Koloniezentrale III', 150, NULL, 0, 0, 1, 43, 0, 70, 2000)
+INSERT [dbo].[Buildings] ([id], [name], [objectId], [BuildingScript], [isBuildable], [visibilityNeedsGoods], [groupId], [label], prodQueueLevel, housing, storage, allowedMines, allowedFuel, allowedChemicals) VALUES (1, N'Koloniezentrale I', 151, NULL, 0, 0, 1, 43, 0, 140, 3000,  4, 4, 1)
+INSERT [dbo].[Buildings] ([id], [name], [objectId], [BuildingScript], [isBuildable], [visibilityNeedsGoods], [groupId], [label], prodQueueLevel, housing, storage, allowedMines, allowedFuel, allowedChemicals) VALUES (30, N'Koloniezentrale II', 149, NULL, 0, 0, 1, 43, 0, 40, 1000, 4, 4, 1)
+INSERT [dbo].[Buildings] ([id], [name], [objectId], [BuildingScript], [isBuildable], [visibilityNeedsGoods], [groupId], [label], prodQueueLevel, housing, storage, allowedMines, allowedFuel, allowedChemicals) VALUES (31, N'Koloniezentrale III', 150, NULL, 0, 0, 1, 43, 0, 70, 2000,4, 4, 1)
 INSERT [dbo].[Buildings] ([id], [name], [objectId], [BuildingScript], [isBuildable], [visibilityNeedsGoods], [groupId], [label], prodQueueLevel) VALUES (15, N'Forschungslabor', 165, NULL, 1, 0, 1, 120, 6)
 
 INSERT [dbo].[Buildings] ([id], [name], [objectId], [BuildingScript], [isBuildable], [visibilityNeedsGoods], [groupId], [label], prodQueueLevel) VALUES (9, N'Baumaterialfabrik', 158, NULL, 1, 0, 1, 50, 4)
 INSERT [dbo].[Buildings] ([id], [name], [objectId], [BuildingScript], [isBuildable], [visibilityNeedsGoods], [groupId], [label], prodQueueLevel) VALUES (10, N'Sonnenkraftwerk', 159, NULL, 1, 0, 1, 51, 1)
-INSERT [dbo].[Buildings] ([id], [name], [objectId], [BuildingScript], [isBuildable], [visibilityNeedsGoods], [groupId], [label], prodQueueLevel, oncePerColony, assemblyModifier) VALUES (19, N'Montagehalle', 163, NULL, 1, 0, 2, 153, 4, 1, 20)
+INSERT [dbo].[Buildings] ([id], [name], [objectId], [BuildingScript], [isBuildable], [visibilityNeedsGoods], [groupId], [label], prodQueueLevel) VALUES (19, N'Montagehalle', 163, NULL, 1, 0, 2, 153, 4)
 
 INSERT [dbo].[Buildings] ([id], [name], [objectId], [BuildingScript], [isBuildable], [visibilityNeedsGoods], [groupId], [label], prodQueueLevel ,oncePerColony) VALUES (16, N'Modulfabrik', 169, N'ShipModulesSimple.js', 1, 0, 1, 121, 4,1)
 INSERT [dbo].[Buildings] ([id], [name], [objectId], [BuildingScript], [isBuildable], [visibilityNeedsGoods], [groupId], [label], prodQueueLevel) VALUES (3, N'Farm', 153, NULL, 1, 0, 1, 45, 3)
@@ -20,9 +20,9 @@ INSERT [dbo].[Buildings] ([id], [name], [objectId], [BuildingScript], [isBuildab
 INSERT [dbo].[Buildings] ([id], [name], [objectId], [BuildingScript], [isBuildable], [visibilityNeedsGoods], [groupId], [label], prodQueueLevel ,oncePerColony) VALUES (17, N'Schiffswerft', 154, N'SpaceportB.js', 1, 0, 1, 122, 4,1)
 
 --Focus
-INSERT [dbo].[Buildings] ([id], [name], [objectId], [BuildingScript], [isBuildable], [visibilityNeedsGoods], [groupId], [label], prodQueueLevel) VALUES (23, N'Imp Baumaterialfabrik', 140, NULL, 1, 0, 1, 897, 4)
-INSERT [dbo].[Buildings] ([id], [name], [objectId], [BuildingScript], [isBuildable], [visibilityNeedsGoods], [groupId], [label], prodQueueLevel) VALUES (24, N'Imp Landwirtschaft', 141, NULL, 1, 0, 1, 898, 3)
-INSERT [dbo].[Buildings] ([id], [name], [objectId], [BuildingScript], [isBuildable], [visibilityNeedsGoods], [groupId], [label], prodQueueLevel) VALUES (25, N'Imp Hochofen', 142, NULL, 1, 0, 1, 899, 5)
+INSERT [dbo].[Buildings] ([id], [name], [objectId], [BuildingScript], [isBuildable], [visibilityNeedsGoods], [groupId], [label], prodQueueLevel) VALUES (23, N'Imp Baumaterialfabrik', 189, NULL, 1, 0, 1, 897, 4)
+INSERT [dbo].[Buildings] ([id], [name], [objectId], [BuildingScript], [isBuildable], [visibilityNeedsGoods], [groupId], [label], prodQueueLevel) VALUES (24, N'Imp Landwirtschaft', 190, NULL, 1, 0, 1, 898, 3)
+INSERT [dbo].[Buildings] ([id], [name], [objectId], [BuildingScript], [isBuildable], [visibilityNeedsGoods], [groupId], [label], prodQueueLevel) VALUES (25, N'Imp Hochofen', 191, NULL, 1, 0, 1, 899, 5)
 
 
 --Orbitals
@@ -36,6 +36,16 @@ INSERT [dbo].[Buildings] ([id], [name], [objectId], [BuildingScript], [isBuildab
 INSERT [dbo].[Buildings] ([id], [name], [objectId], [BuildingScript], [isBuildable], [visibilityNeedsGoods], [groupId], [label], prodQueueLevel) VALUES (80, N'Exotic Materials Lab'			, 146, NULL, 1, 0, 2, 944, 5)
 INSERT [dbo].[Buildings] ([id], [name], [objectId], [BuildingScript], [isBuildable], [visibilityNeedsGoods], [groupId], [label], prodQueueLevel) VALUES (81, N'Antimatter Reactor'				, 147, NULL, 1, 0, 2, 945, 1)
 INSERT [dbo].[Buildings] ([id], [name], [objectId], [BuildingScript], [isBuildable], [visibilityNeedsGoods], [groupId], [label], prodQueueLevel) VALUES (82, N'Exotic Materials Assembly Plant'	, 148, NULL, 1, 0, 2, 946, 6)
+
+
+--Colony centers
+INSERT [dbo].[Buildings] ([id], [name],		[objectId], [BuildingScript], [isBuildable], [visibilityNeedsGoods], [groupId], [label], prodQueueLevel, housing, storage, allowedMines, allowedFuel, allowedChemicals, energyModifier, assemblyModifier, researchModifier)
+					select 300, N'Desert I',	150,			NULL,		0,					0,				1,			43,			0,				50,		1000,    2,				12,				3,				20,				0,				   20 union all
+					select 301, N'Ice I',		150,			NULL,		0,					0,				1,			43,			0,				50,		3000,    4,				 2,				1,				 0,			   40,				    0 union all
+					select 302, N'Barren I',	150,			NULL,		0,					0,				1,			43,			0,				50,		2000,    4,				 2,				1,				 0,				0,				   30 union all
+					select 303, N'Volcanic I',	150,			NULL,		0,					0,				1,			43,			0,				50,		1000,   12,				 0,				2,				 0,			    0,				   20 union all
+					select 304, N'Toxic I',		150,			NULL,		0,					0,				1,			43,			0,				50,		1000,    6,				 2,				6,				 0,			    0,				   50 
+
 
 
 --II Specials
@@ -78,6 +88,10 @@ INSERT [dbo].[Buildings] ([id], [name], [objectId], [BuildingScript], [isBuildab
 
 INSERT [dbo].[Buildings] ([id], [name], [objectId], [BuildingScript], [isBuildable], [visibilityNeedsGoods], [groupId], [label], prodQueueLevel) VALUES (52, N'Aqua Farm', 185, NULL, 1, 0, 3, 692, 3)
 
+INSERT [dbo].[Buildings] ([id], [name], [objectId], [BuildingScript], [isBuildable], [visibilityNeedsGoods], [groupId], [label], prodQueueLevel) VALUES (192, N'FarmingDome', 192, NULL, 1, 0, 3, 1006, 3)
+INSERT [dbo].[Buildings] ([id], [name], [objectId], [BuildingScript], [isBuildable], [visibilityNeedsGoods], [groupId], [label], prodQueueLevel, housing) VALUES (193, N'HousingDome', 193, NULL, 1, 0, 3, 1007, 3, 45)
+
+
 
 -- IV Level 11...
 INSERT [dbo].[Buildings] ([id], [name], [objectId], [BuildingScript], [isBuildable], [visibilityNeedsGoods], [groupId], [label], prodQueueLevel, housing) VALUES (55, N'Arcology', 188, NULL, 1, 0, 4, 717, 2, 70)
@@ -106,7 +120,7 @@ INSERT [dbo].[Buildings] ([id], [name], [objectId], [BuildingScript], [isBuildab
 -- set which buildins are allowed per surfacetype
 --(1,  'Gras', 101);
 -- truncate Table [dbo].[BuildOptions]    
-
+--Gras
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (1, 1) --Koloniezentrale I
 
 
@@ -207,12 +221,14 @@ INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (4, 1034)	-- Mine 
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (4, 53)  --Neutronium Reactor
 
 --,(5, 'Wüste', 105)
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (5, 2)  --Mine
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (5, 6)  --Kohlenwasserstoffe
 --INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (5, 7)
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (5, 8)
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (5, 9)
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (5, 10) --Sonnenkraftwerk
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (5, 12)
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (5, 15) -- Forschungslabor
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (5, 21)
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (5, 50)
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (5, 51)
@@ -233,7 +249,14 @@ INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (5, 1044)
 INSERT [dbo].[BuildOptions] ([objectId],[buildingId]) VALUES (5, 53)  --Neutronium Reactor
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (5, 55)
 
+INSERT [dbo].[BuildOptions] ([objectId],[buildingId]) VALUES (5, 192)  -- FarmingDome 
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (5, 193) -- HousingDome
+
+
+
 --,(6, 'Eis', 106)
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (6, 2)  --Mine
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (6, 6)  --Kohlenwasserstoffe
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (6, 8)  --Kommunikationszentrum
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (6, 17)  --Schiffswerft
 
@@ -241,6 +264,7 @@ INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (6, 19) -- Montage
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (6, 12) -- Lager
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (6, 9)  -- Baumaterialfabrik
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (6, 14) -- Kraftwerk
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (6, 15) -- Forschungslabor
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (6, 20) -- Hochofen
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (6, 22) -- synthetic materials plant
 
@@ -263,8 +287,12 @@ INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (6, 1044)  --Lutet
 
 INSERT [dbo].[BuildOptions] ([objectId],[buildingId]) VALUES (6, 53)  --Neutronium Reactor
 
+INSERT [dbo].[BuildOptions] ([objectId],[buildingId]) VALUES (6, 192)  -- FarmingDome 
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (6, 193) -- HousingDome
 
 --,(7, 'Barren', 106) -- 
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (7, 2)  --Mine
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (7, 6)  --Kohlenwasserstoffe
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (7, 15) -- Forschungslabor
 
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (7, 8)  --Kommunikationszentrum
@@ -297,12 +325,15 @@ INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (7, 1044)  --Lutet
 INSERT [dbo].[BuildOptions] ([objectId],[buildingId]) VALUES (7, 53)  --Neutronium Reactor
 
 
+INSERT [dbo].[BuildOptions] ([objectId],[buildingId]) VALUES (7, 192)  -- FarmingDome 
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (7, 193) -- HousingDome
 
 
 -- 8 Asteroid
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (8, 2)  --Mine
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (8, 12) -- Lager
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (8, 10) -- Sonnenkraftwerk
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (8, 15) -- Forschungslabor
 
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (8, 20) -- Hochofen
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (8, 25) -- Imp Hochofen
@@ -316,12 +347,17 @@ INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (8, 1034)	-- Mine 
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (8, 50) -- Verb. Baumaterialfabrik
 INSERT [dbo].[BuildOptions] ([objectId],[buildingId]) VALUES (8, 53)  --Neutronium Reactor
 
+INSERT [dbo].[BuildOptions] ([objectId],[buildingId]) VALUES (8, 192)  -- FarmingDome 
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (8, 193) -- HousingDome
+
+
 --9	Vulcanic
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (9, 2)  --Mine
 
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (9, 19) -- Montagehalle
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (9, 12) -- Lager
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (9, 14) -- Kraftwerk
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (9, 15) -- Forschungslabor
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (9, 20) -- Hochofen
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (9, 22) -- synthetic materials plant
 															   
@@ -344,17 +380,24 @@ INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (9, 1044)  --Lutet
 
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (9, 53)  --Neutronium Reactor
 
+INSERT [dbo].[BuildOptions] ([objectId],[buildingId]) VALUES (9, 192)  -- FarmingDome 
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (9, 193) -- HousingDome
 
 
 --10	Toxic
-INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (10, 6)  -- TreibstoffRaffinerie
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (10, 2)  --Mine
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (10, 6)  -- Kohlenwasserstoff
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (10, 54) -- Pressure Dome
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (10, 14) -- Kraftwerk
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (10, 15) -- Forschungslabor
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (10, 1030) -- Mine Holmium
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (10, 1031)	-- Mine Terbium
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (10, 1032)	-- Mine Scandium
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (10, 1033)	-- Mine Yttrium
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (10, 1034)	-- Mine Lutetium
+
+INSERT [dbo].[BuildOptions] ([objectId],[buildingId]) VALUES (10, 192)  -- FarmingDome 
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (10, 193) -- HousingDome
 
 
 -- Orbit
@@ -391,6 +434,10 @@ INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (3
 
 --INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (4, 4, -3) --Raumhafen
 
+--Farming Dome
+INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (192, 2, 4) 
+INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (192, 6, -12) -- energy
+INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (192, 8, -7)  -- population
 
 --Treibstoffraffinerie
 INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (6, 4, 10)  --Treibstoffraffinerie erzeugt Fuel
@@ -424,6 +471,10 @@ INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (1
 
 -- Häuser
 INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (18, 6, -10)	-- Häuser - energy
+
+--Housing Dome
+INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (193, 6, -15)	-- Häuser - energy
+
 
 --Montagehalle
 --delete from [dbo].[BuildingProductions] where [buildingId] = 19
@@ -522,6 +573,37 @@ INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (6
 
 -- Space Habitat
 INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (65, 2, 10) --Food
+
+--Planet Colony Centers
+--desert
+INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (300, 1, 20) --  building material
+INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (300, 2, 12) -- food
+INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (300, 6, 20) -- energy
+INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (300, 7, 30)  --assemby points
+
+--ice
+INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (301, 1, 20) --  building material
+INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (301, 2, 12) -- food
+INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (301, 6, 20) -- energy
+INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (301, 7, 30)  --assemby points
+
+--barren
+INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (302, 1, 20) --  building material
+INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (302, 2, 12) -- food
+INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (302, 6, 20) -- energy
+INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (302, 7, 30)  --assemby points
+
+-- Volcanic
+INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (303, 1, 20) --  building material
+INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (303, 2, 12) -- food
+INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (303, 6, 20) -- energy
+INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (303, 7, 30)  --assemby points
+
+-- Toxic
+INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (304, 1, 20) --  building material
+INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (304, 2, 12) -- food
+INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (304, 6, 20) -- energy
+INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (304, 7, 30)  --assemby points
 
 
 -- Antimatter Consumption
@@ -647,9 +729,24 @@ INSERT [dbo].[BuildingCosts] ([buildingId], [goodsId], [amount]) VALUES (18, 1, 
 INSERT [dbo].[BuildingCosts] ([buildingId], [goodsId], [amount]) VALUES (18, 7, 15)
 
 
+--Housing Dome
+--delete from [BuildingCosts] where [buildingId] = 18
+INSERT [dbo].[BuildingCosts] ([buildingId], [goodsId], [amount]) VALUES (193, 1, 80) --BM
+INSERT [dbo].[BuildingCosts] ([buildingId], [goodsId], [amount]) VALUES (193, 10, 30) --metal
+INSERT [dbo].[BuildingCosts] ([buildingId], [goodsId], [amount]) VALUES (193, 7, 25) --Comnstruction
+
+
 --Farm
 INSERT [dbo].[BuildingCosts] ([buildingId], [goodsId], [amount]) VALUES (3, 1, 45) 
 INSERT [dbo].[BuildingCosts] ([buildingId], [goodsId], [amount]) VALUES (3, 7, 15)
+
+--Farming Dome
+--delete from [BuildingCosts] where [buildingId] = 18
+INSERT [dbo].[BuildingCosts] ([buildingId], [goodsId], [amount]) VALUES (192, 1, 70) --BM
+INSERT [dbo].[BuildingCosts] ([buildingId], [goodsId], [amount]) VALUES (192, 10, 20) --metal
+INSERT [dbo].[BuildingCosts] ([buildingId], [goodsId], [amount]) VALUES (192, 7, 20) --Comnstruction
+
+
 
 --INSERT [dbo].[BuildingCosts] ([buildingId], [goodsId], [amount]) VALUES (3, 2, 5)  --Nahrung
 
@@ -892,3 +989,15 @@ INSERT [dbo].[BuildingCosts] ([buildingId], [goodsId], [amount]) VALUES (184,  1
 INSERT [dbo].[BuildingCosts] ([buildingId], [goodsId], [amount]) VALUES (184, 10, 140)  --metall
 INSERT [dbo].[BuildingCosts] ([buildingId], [goodsId], [amount]) VALUES (184, 7, 90) -- construction
 INSERT [dbo].[BuildingCosts] ([buildingId], [goodsId], [amount]) VALUES (184, 1044, 10)  --Lutetium
+
+
+go
+--delete from [PlanetTypes]
+insert into  [dbo].[PlanetTypes] 
+		  (id,          name,          label,          [description],          objectId,          researchRequired,          colonyCenter)
+	select	1,	  'Earthlike',			25,					25,						24,					1,					    1 union all
+	select	2,	  'Desert',				28,					28,						27,					300,				  300 union all
+	select	3,	  'Ice',				29,					29,						28,					301,			      301 union all
+	select	4,	  'Barren',				30,					30,						29,					302,				  302 union all
+	select	5,	  'Volcanic',			31,					31,						30,					304,				  303 union all
+	select	6,	  'Toxic',				32,					32,						31,					305,				  304 

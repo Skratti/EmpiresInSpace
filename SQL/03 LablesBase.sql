@@ -437,7 +437,7 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (345, N' L
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (346, N'Lost a colony: ', N'', 7)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (347, N'Lost a colony to an attacker...', N'', 7)
 
-INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (348, N'Research', N'', 7)
+
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (349, N'Activate and deactivate buildings', N'', 7)
 
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (350, N'Adv. building material', N'', 6)
@@ -526,10 +526,12 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (415, N'Pr
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (416, N'Hit', N'', 8)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (417, N'yes', N'', 8)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (418, N'no', N'', 8)
-INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (419, N'The [%AttackerName] attacks:', N'', 8)
-INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (420, N'The [%DefenderName] got [%DefDamageReceived] damage and was destroyed.', N'', 8)
-INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (421, N'The [%AttackerName] got [%AttDamageReceived] damage, [%AttHitPointsRemain] hitpoints remain.', N'', 8)
-INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (422, N'The [%AttackerName] destroyed in [%SystemName] ([%StarX]/[%StarY]) the [%DefenderName]', N'', 8)
+
+--delete from [LabelsBase] where id > 418 and id < 435
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (419, N'The {0} attacks:', N'', 8)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (420, N'The {0} got {1} damage and was destroyed.', N'', 8)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (421, N'The {0} got {1} damage, {2} hitpoints remain.', N'', 8)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (422, N'The {0} destroyed in {1} ({2}/{3}) the {4}', N'', 8)
 
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (423, N'Your ship, the [%DefenderName], was destroyed at ([%StarX]/[%StarY])', N'', 8)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (424, N'The [%AttackerName] destroyed at ([%StarX]/[%StarY]) the [%DefenderName]', N'', 8)
@@ -537,14 +539,14 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (424, N'Th
 
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (425, N'The [%AttackerName] battled at ([%StarX]/[%StarY]) the [%DefenderName]', N'', 8)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (426, N'The [%AttackerName] battled in [%SystemName] ([%StarX]/[%StarY]) the [%DefenderName]', N'', 8)
-INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (427, N'Your ship, the [%AttackerName], was destroyed in [%SystemName] ([%StarX]/[%StarY]) at ([%SystemX]/[%SystemX])', N'', 8)
-INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (428, N'Your ship, the [%AttackerName], was destroyed at ([%StarX]/[%StarY])', N'', 8)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (427, N'Your ship, the {0}, was destroyed in {1} ({2}/{3}) at ({4}/{5})', N'', 8)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (428, N'Your ship, the {0}, was destroyed at ({1}/{2})', N'', 8)
 
-INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (429, N'The [%AttackerName] destroyed the [%DefenderName]', N'', 8)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (429, N'The {0} destroyed the {1}', N'', 8)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (430, N'The [%AttackerName] destroyed in [%SystemName] the [%DefenderName]', N'', 8)
 
-INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (431, N'The [%AttackerName] got [%AttDamageReceived] damage and was destroyed.', N'', 8)
-INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (432, N'The [%DefenderName] got [%DefDamageReceived] damage, [%DefHitPointsRemain] hitpoints remain.', N'', 8)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (431, N'The {0} got {1} damage and was destroyed', N'', 8)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (432, N'The {0} got {1} damage, {2} hitpoints remain', N'', 8)
 
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (433, N'The [%DefenderName] destroyed in [%SystemName] ([%StarX]/[%StarY]) at ([%SystemX]/[%SystemX]) the [%AttackerName]', N'', 8)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (434, N'The [%DefenderName] destroyed at ([%StarX]/[%StarY]) the [%AttackerName]', N'', 8)
@@ -1273,6 +1275,12 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (1002, N'S
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (1003, N'Ship remains stationary until it is again activated', N'', 7)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (1004, N'Move/Done <Space>', N'', 7)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (1005, N'Ship will continue its movement if possible, then the next ship is selected.', N'', 7)
+--
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (1006, N'Farming Dome', N'', 3)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (1007, N'Housing Dome', N'', 3)
+
+
+
 
 --delete from [LabelsBase] where id > 1001
 --update [dbo].[LabelsBase] set [value] =  N'Construction cost' where id = 977

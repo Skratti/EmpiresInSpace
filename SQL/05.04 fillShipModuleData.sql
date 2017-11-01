@@ -25,9 +25,9 @@ select		17,	   -19,		 -11,		 0,					 0,				 0,			 0,			 0,					0,				 0,				 0,	
 
 INSERT [dbo].[ModulesGain] 
 ([modulesId],	[crew], [energy], [hitpoints], [damagereduction], [damageoutput], [cargoroom], [fuelroom], [inSpaceSpeed], [inSystemSpeed], [maxSpaceMoves], [maxSystemMoves], [special], [scanRange], [population]) 
-select		13,		-5,		 -2,		 0,					 0,				 0,			 0,			 0,					0,				 0,				 0,				0,			1,			0	,200000000 union all  -- colonisation
-select		23,	   -10,		 -5,		 0,					 0,				 0,			 0,			 0,					0,				 0,				 0,				0,			1,			0	,400000000 union all	 -- colonisation
-select		523,   -20,		-10,		 0,					 0,				 0,			 0,			 0,					0,				 0,				 0,				0,			1,			0	,700000000			-- colonisation
+select		13,		-5,		 -2,		 0,					 0,				 0,			 0,			 0,					0,				 0,				 0,				0,			1,			0	,		200000000 union all  -- colonisation
+select		23,	   -10,		 -5,		 0,					 0,				 0,			 0,			 0,					0,				 0,				 0,				0,			1,			0	,		400000000 union all	 -- colonisation
+select		523,   -20,		-10,		 0,					 0,				 0,			 0,			 0,					0,				 0,				 0,				0,			1,			0	,		800000000			-- colonisation
 
 --specail Res 1
 INSERT into [dbo].[ModulesGain] (

@@ -892,13 +892,13 @@ go
 create unique clustered index Goodsindex ON [Goods](id);
 go	
 /*
-alter table [dbo].[Buildings] add storage int not null default 0, researchModifier int not null default 0,
-	assemblyModifier int not null default 0,
-	energyModifier int not null default 0,
-	housingModifier int not null default 0,
-	foodModifier int not null default 0,
-	productionModifier int not null default 0,
-	growthModifier int not null default 0
+alter table [dbo].[Buildings] drop COLUMN allowedMines int  not null default 0,
+	allowedChemicals int  not null default 0,
+	allowedFuel int  not null default 0
+
+alter table [dbo].[Buildings] add allowedMines int  not null default 0,
+	allowedChemicals int  not null default 0,
+	allowedFuel int  not null default 0
 	*/
 CREATE TABLE [dbo].[Buildings]  (
 	id SMALLINT NOT NULL UNIQUE,	
@@ -922,6 +922,9 @@ CREATE TABLE [dbo].[Buildings]  (
 	foodModifier int not null default 0,
 	productionModifier int not null default 0,
 	growthModifier int not null default 0,
+	allowedMines int  not null default 0,
+	allowedChemicals int  not null default 0,
+	allowedFuel int  not null default 0,
 	constraint buildings_primary primary key clustered (id)
 );
 go
@@ -955,7 +958,29 @@ CREATE TABLE  [dbo].[BuildingProductions]
 print 'table [BuildingProductions] created.'
 go
 
-
+go	
+/*
+alter table [dbo].[Buildings] drop COLUMN allowedMines int  not null default 0,
+	allowedChemicals int  not null default 0,
+	allowedFuel int  not null default 0
+	*/
+--drop table [PlanetTypes]
+CREATE TABLE [dbo].[PlanetTypes]  (
+	id SMALLINT NOT NULL UNIQUE,	
+	name nvarchar(55),
+	label int NOT NULL Default 1
+		references [dbo].LabelsBase (id) on update NO ACTION on delete NO ACTION,
+	[description]	int NOT NULL Default 1
+		references [dbo].LabelsBase (id) on update NO ACTION on delete NO ACTION,
+	objectId SMALLINT NOT NULL
+		references [ObjectDescription](id) on update cascade on delete cascade,
+	researchRequired SMALLINT NOT NULL
+		references [Research](id) on update no action on delete no action,
+	colonyCenter  SMALLINT NOT NULL
+		references [Buildings](id) on update no action on delete no action
+	constraint PlanetTypes_primary primary key clustered (id)
+);
+go
 
 
 
@@ -1694,14 +1719,16 @@ go
 
 --1 to 1 to ships, always joined on ships to increment the ships versionId after the  update
 -- insert into [ShipTranscension] select 1738 , 1,  GETDATE(), 100
---alter table [ShipTranscension]  add constructionTurn int not null default 1 
+--alter table [ShipTranscension]  add finishedInTurn int 
 
 CREATE TABLE [dbo].[ShipTranscension]  (
 	shipId INT references dbo.Ships on update cascade on delete cascade,
 	helperMinimumRelation tinyint default 1,
 	constructionDate datetime not null default GETDATE(),
 	ressourceCount int not null default 100,
-	constructionTurn int not null default 1
+	constructionTurn int not null default 1,
+	finishedInTurn int,
+	finishingNumber int
 );
 
 go

@@ -96,26 +96,6 @@ go
 
 IF EXISTS(SELECT 1 
           FROM   sys.objects 
-          WHERE  NAME = N'v_gameNewTurnLog' 
-                 AND type = N'V') 
-  BEGIN 
-      DROP VIEW [engine].[v_gameNewTurnLog] 
-  END 
-
-go 
-
-CREATE VIEW [engine].[v_gameNewTurnLog] 
-AS 
-  SELECT gamenewturnsid, 
-         newturnbegin, 
-         newturnend, 
-         newturnruntime 
-  FROM   [gamenewturnlog]; 
-
-go 
-
-IF EXISTS(SELECT 1 
-          FROM   sys.objects 
           WHERE  NAME = N'v_Languages' 
                  AND type = N'V') 
   BEGIN 
@@ -650,7 +630,10 @@ AS
 		 housingModifier ,
 		 foodModifier ,
 		 productionModifier,
-		 growthModifier
+		 growthModifier,
+		 allowedMines,
+		 allowedChemicals,
+		 allowedFuel
   FROM   [buildings]; 
 
 go 
@@ -1259,6 +1242,8 @@ AS
       ,[helperMinimumRelation]
       ,[constructionDate]
       ,[ressourceCount]
+	  ,finishedInTurn 
+	  ,finishingNumber
   FROM   [ShipTranscension]; 
 
 go 
@@ -1495,6 +1480,32 @@ AS
   FROM   [research]; 
 
 go 
+
+IF EXISTS(SELECT 1 
+          FROM   sys.objects 
+          WHERE  NAME = N'v_PlanetTypes' 
+                 AND type = N'V') 
+  BEGIN 
+      DROP VIEW [engine].[v_PlanetTypes] 
+  END 
+
+go  
+
+CREATE VIEW [engine].[v_PlanetTypes] 
+AS 
+  SELECT id, 
+         name, 
+         label, 
+         [description], 
+         objectId, 
+         researchRequired, 
+         colonyCenter
+  FROM   [PlanetTypes]; 
+go 
+
+
+
+
 
 IF EXISTS(SELECT 1 
           FROM   sys.objects 

@@ -2,7 +2,7 @@
 --delete from [SpecializationGroups] where id = 3
 insert into [SpecializationGroups] select 0, 'Culture', 1, 900,901
 insert into [SpecializationGroups] select 1, 'Focus', 1, 902,903
-insert into [SpecializationGroups] select 2, 'Ressource Excavation', 3, 904,905
+insert into [SpecializationGroups] select 2, 'Ressource Excavation', 1, 904,905
 --insert into [SpecializationGroups] select 3, 'Ressource Refinement', 1, 906,907
 
 

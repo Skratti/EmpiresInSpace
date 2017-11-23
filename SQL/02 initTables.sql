@@ -553,10 +553,9 @@ print 'table [CommunicationNode] created.'
 go
 create index CommunicationNode_byUser ON CommunicationNode(userId);
 go
-
-
+--drop table [dbo].[CommunicationNodeMessages]
 CREATE TABLE [dbo].[CommunicationNodeMessages]  (
-	id INT NOT NULL UNIQUE identity(1,1),
+	id INT NOT NULL UNIQUE,
 	commNodeId int 	not null 
 		references [dbo].CommunicationNode (id) on delete cascade,			
 	sender int 
@@ -2244,16 +2243,15 @@ inner join dbo.MessageHeads as head
 on head.id = body.headerId
 */
 go
-
-CREATE TABLE [dbo].[MessageBody]  (
-	headerId INT NOT NULL UNIQUE 
-		references [MessageHeads](id) on update no action on delete no action,		
-	messagePart int not null default 0,
-	sender int references users(id) on update cascade on delete SET NULL,
-	sendingDate datetime not null default GETDATE(),
-	[message] nvarchar (4000) DEFAULT 'message' NOT NULL,				
-	constraint MessageBody_primary primary key clustered (headerId)		
-);
+--drop table  [dbo].[MessageBody]
+CREATE TABLE [dbo].[MessageBody](
+	[headerId] [int] NOT NULL,
+	[message] [nvarchar](4000) NOT NULL DEFAULT ('message'),
+	[messagePart] [int] NOT NULL DEFAULT ((0)),
+	[sender] [int] references users(id) on update cascade on delete SET NULL,
+	[sendingDate] [datetime] NOT NULL DEFAULT (getdate()),
+	constraint MessageBody_primary primary key clustered (headerId, [messagePart])
+	);	
 print 'table [dbo].[MessageBody] created.'
 
 go

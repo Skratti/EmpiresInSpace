@@ -229,6 +229,10 @@ INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (5, 9)
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (5, 10) --Sonnenkraftwerk
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (5, 12)
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (5, 15) -- Forschungslabor
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (5, 16) -- Modulfabrik
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (5, 17)  --Schiffswerft
+
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (5, 20) -- Hochofen
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (5, 21)
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (5, 50)
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (5, 51)
@@ -258,6 +262,8 @@ INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (5, 193) -- Housin
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (6, 2)  --Mine
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (6, 6)  --Kohlenwasserstoffe
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (6, 8)  --Kommunikationszentrum
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (6, 10) -- Sonnenkraftwerk
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (6, 16) -- Modulfabrik
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (6, 17)  --Schiffswerft
 
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (6, 19) -- Montagehalle
@@ -294,6 +300,8 @@ INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (6, 193) -- Housin
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (7, 2)  --Mine
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (7, 6)  --Kohlenwasserstoffe
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (7, 15) -- Forschungslabor
+
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (7, 16) -- Modulfabrik
 
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (7, 8)  --Kommunikationszentrum
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (7, 17)  --Schiffswerft
@@ -358,6 +366,8 @@ INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (9, 19) -- Montage
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (9, 12) -- Lager
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (9, 14) -- Kraftwerk
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (9, 15) -- Forschungslabor
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (9, 16) -- Modulfabrik
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (9, 17)  --Schiffswerft
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (9, 20) -- Hochofen
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (9, 22) -- synthetic materials plant
 															   
@@ -390,6 +400,9 @@ INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (10, 6)  -- Kohlen
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (10, 54) -- Pressure Dome
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (10, 14) -- Kraftwerk
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (10, 15) -- Forschungslabor
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (10, 16) -- Modulfabrik
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (10, 17)  --Schiffswerft
+INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (10, 20) -- Hochofen
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (10, 1030) -- Mine Holmium
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (10, 1031)	-- Mine Terbium
 INSERT [dbo].[BuildOptions] ([objectId], [buildingId]) VALUES (10, 1032)	-- Mine Scandium

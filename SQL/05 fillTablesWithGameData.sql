@@ -572,6 +572,7 @@ go
 
 -- IMPORTANT: UPDATE FIELD baseResearch AFTER INSERTING
 SET IDENTITY_INSERT [dbo].[Research] ON
+
 --delete from [Research]
 
 -- Hidden Researches:
@@ -1231,9 +1232,9 @@ on data.id = toupdate.id
 
 --scout 5 
 INSERT [dbo].[ShipHullsModulePositions] ([shipHullId], [posX], [posY]) VALUES (1, 1, 3)
+INSERT [dbo].[ShipHullsModulePositions] ([shipHullId], [posX], [posY]) VALUES (1, 2, 1)
 INSERT [dbo].[ShipHullsModulePositions] ([shipHullId], [posX], [posY]) VALUES (1, 2, 2)
 INSERT [dbo].[ShipHullsModulePositions] ([shipHullId], [posX], [posY]) VALUES (1, 2, 3)
-INSERT [dbo].[ShipHullsModulePositions] ([shipHullId], [posX], [posY]) VALUES (1, 2, 4)
 INSERT [dbo].[ShipHullsModulePositions] ([shipHullId], [posX], [posY]) VALUES (1, 3, 3)
 
 --heavy fighter 6

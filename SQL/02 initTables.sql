@@ -537,7 +537,7 @@ CREATE TABLE [dbo].[CommunicationNode] (
 	[id] int not null UNIQUE identity(0,1), 
 	userId  int  --owner 
 		references [dbo].[Users] (id) on delete set null,
-	position geometry NOT NULL,	
+	--position geometry NOT NULL,	
 	name nvarchar(300) not null default '',
 	unformattedName nvarchar(30) not null default '',
 	positionX	int not null default 100,	
@@ -962,6 +962,10 @@ go
 alter table [dbo].[Buildings] drop COLUMN allowedMines int  not null default 0,
 	allowedChemicals int  not null default 0,
 	allowedFuel int  not null default 0
+
+alter table [PlanetTypes] add 
+shipModuleId SMALLINT NOT NULL
+		references [dbo].[Modules](id) on update no action on delete no action default 13
 	*/
 --drop table [PlanetTypes]
 CREATE TABLE [dbo].[PlanetTypes]  (
@@ -975,6 +979,8 @@ CREATE TABLE [dbo].[PlanetTypes]  (
 		references [ObjectDescription](id) on update cascade on delete cascade,
 	researchRequired SMALLINT NOT NULL
 		references [Research](id) on update no action on delete no action,
+	shipModuleId SMALLINT NOT NULL
+		references [dbo].[Modules](id) on update no action on delete no action ,
 	colonyCenter  SMALLINT NOT NULL
 		references [Buildings](id) on update no action on delete no action
 	constraint PlanetTypes_primary primary key clustered (id)
@@ -1182,7 +1188,7 @@ alter table [GalaxyMap] add winningTranscendenceConstruct int smallint not null 
 create TABLE  [dbo].[GalaxyMap]
 (
 	id INT NOT NULL UNIQUE,			
-	position geometry NOT NULL,
+	--position geometry NOT NULL,
 	galaxyName nvarchar(63),					
 	objectId SMALLINT NOT NULL DEFAULT 1,
 	size smallint not null default 10000,	
@@ -1980,7 +1986,7 @@ CREATE TABLE [dbo].[Colonies]  (
 	[name] character varying(63) DEFAULT 'Colony' NOT NULL,		
 	storage SMALLINT DEFAULT 0 NOT NULL,
 	scanRange TINYINT DEFAULT 2 NOT NULL,
-	scanBox geometry,		
+	--scanBox geometry,		
 	starId INT NOT NULL
 		references [dbo].[StarMap](id) on update no action on delete no action,
 	planetId INT  NOT NULL
@@ -2553,3 +2559,16 @@ REBUILD WITH (FILLFACTOR = 80, SORT_IN_TEMPDB = ON,
               ALTER INDEX [StarMap_position] ON [dbo].[StarMap]
 REBUILD; 
 */
+
+  CREATE TRIGGER [dbo].[TRIGGER_ShipCreated] ON [dbo].[Ships]
+AFTER Insert
+AS
+BEGIN	
+	
+	insert into dbo.[ShipTranscension](shipId, ressourceCount)
+	select 
+		inserted.id as shipId,		
+		1
+	from inserted
+	where inserted.hullId = 220					
+END

@@ -1441,8 +1441,8 @@ go
 CREATE VIEW [engine].[v_GalaxyMap] 
 AS 
   SELECT id, 
-         position.STX as posX, 
-		 position.STY as posY,
+       --  position.STX as posX, 
+		-- position.STY as posY,
          galaxyname, 
          objectid, 
          size, 
@@ -1499,7 +1499,8 @@ AS
          [description], 
          objectId, 
          researchRequired, 
-         colonyCenter
+         colonyCenter,
+		 shipModuleId
   FROM   [PlanetTypes]; 
 go 
 

@@ -356,6 +356,9 @@ select 3209, N'Adv. System Engines', N'Impuls.png', 1 union all
 select 3210, N'Adv. Hyper Engines', N'Hyper.png', 1 union all
 select 3215, N'Adv. Scanner', N'Scanner.png', 1 union all
 select 3500, N'Nebula', N'Nebula240.png', 1 union all
+select 3510, N'Nebula Blue', 'NebulaBlue240.png', 1 union all
+select 3520, N'Nebula Cyan', 'NebulaCyan240.png', 1 union all
+select 3530, N'Nebula Yellow', 'NebulaYellow240.png', 1 union all
 select 4000, N'Land Planet', N'SolarSystems/world/Land00.png', 1 union all
 select 4001, N'Land Planet', N'SolarSystems/world/Land01.png', 1 union all
 select 4002, N'Land Planet', N'SolarSystems/world/Land02.png', 1 union all
@@ -717,7 +720,7 @@ select 4003, N'Fleet Command II',				240,	554,		559,						4,			6,				16 union al
 
 --Level 9
 select 302, N'Barren Colonization',				300,	823,		824,						1,			7,				2 union all
-select 303, N'Asteroid moon Colonization',		300,	825,		826,						1,			7,				4 union all
+--select 303, N'Asteroid moon Colonization',		300,	825,		826,						1,			7,				4 union all
 
 select 50, N'Verb. Baumaterial', 				550,	350,		489,						1,			7,				6 union all
 select 5000, N'Transcendence Collab',			800,	592,		593,						4,			7,				9 union all
@@ -885,7 +888,7 @@ insert into dbo.ResearchGain
 select 300		  ,0			,0			,0			, 0			,0				,0				,0		,0				,0			,27		union all
 select 301		  ,0			,0			,0			, 0			,0				,0				,0		,0				,0			,28		union all
 select 302		  ,0			,0			,0			, 0			,0				,0				,0		,0				,0			,29		union all
-select 303		  ,0			,0			,0			, 0			,0				,0				,0		,0				,0			,44		union all
+--select 303		  ,0			,0			,0			, 0			,0				,0				,0		,0				,0			,44		union all
 select 304		  ,0			,0			,0			, 0			,0				,0				,0		,0				,0			,30		union all
 select 305		  ,0			,0			,0			, 0			,0				,0				,0		,0				,0			,31		
 
@@ -1011,7 +1014,7 @@ INSERT [dbo].[Goods] ([id], [name], [objectDescriptionId], [goodsType], [label])
 
 INSERT [dbo].[Goods] ([id], [name], [objectDescriptionId], [goodsType], [label]) VALUES (2520, N'Transcendence Construct', 460, 2, 594)
 
-INSERT [dbo].[Goods] ([id], [name], [objectDescriptionId], [goodsType], [label]) VALUES (2523, N'Colonizing Module II', 2013, 2, 713)
+INSERT [dbo].[Goods] ([id], [name], [objectDescriptionId], [goodsType], [label]) VALUES (2523, N'Colonizing Module III', 2523, 2, 713)
 --update [dbo].[Goods] set [objectDescriptionId] = 2523 where id = 2523
 
 go 
@@ -1100,7 +1103,7 @@ select	208, 3, N'Cargo III'			, 8				, 2208		, 708 union all
 select	209, 3, N'System Engines III'	, 9				, 2209		, 709 union all
 select	210, 3, N'Hyper Engines III'	, 10			, 2210		, 710 union all
 select	215, 3, N'Scanner III'			, 15			, 2215		, 712 union all
-select	523, 3, N'Colonizing Module III', 13			, 2523		, 88
+select	523, 3, N'Colonizing Module III', 13			, 2523		, 713
 
 --update [dbo].[Modules] set [level] = 2 where id = 23
 

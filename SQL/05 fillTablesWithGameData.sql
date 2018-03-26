@@ -19,7 +19,7 @@ go
 [objectimageUrl] the url of the image.
 */
 INSERT [dbo].[ObjectDescription] 
-	([id], [name], [objectimageUrl], [versionNo])
+	([id], [name], [objectimageUrl], [versionNo])  
 select 1, N'Oranger Zwerg', N'SunOrange.png', 1 union all
 select 2, N'Gelber Zwerg', N'SunYellow.png', 1 union all
 select 3, N'Blauer Zwerg', N'SunBlue.png', 1 union all
@@ -247,11 +247,11 @@ select 561, N'Transcendence Builder', N'TranscendenceBuildert300.png', 1 union a
 select 624, N'EarthLike', N'51_Background.png', 1 union all
 select 625, N'Land', N'51_Background.png', 1 union all
 select 626, N'Water', N'51_Background.png', 1 union all
-select 627, N'Desert', N'Desert_Planet_Surface.png', 1 union all
-select 628, N'Ice', N'55.png', 1 union all
-select 629, N'Barren', N'56.png', 1 union all
-select 630, N'Volcano', N'VulcanoPlanet1.png', 1 union all
-select 631, N'Toxic ', N'58.png', 1 union all
+select 627, N'Desert', N'SolarSystems/colony/Desert_Planet_Surface.png', 1 union all
+select 628, N'Ice', N'SolarSystems/colony/Ice_Planet_Surface.png', 1 union all
+select 629, N'Barren', N'SolarSystems/colony/Barren_Planet_Surface.png', 1 union all
+select 630, N'Volcano', N'SolarSystems/colony/Vulcano_Planet_Surface.png', 1 union all
+select 631, N'Toxic ', N'SolarSystems/colony/Toxic_Planet_Surface.png', 1 union all
 select 632, N'Gasgiant', N'GasPlanet.png', 1 union all
 select 634, N'M Mond', N'EarthMoon.png', 1 union all
 select 635, N'O', N'EarthMoon.png', 1 union all
@@ -373,7 +373,10 @@ select 4503, N'Land Planet Surface', N'SolarSystems/colony/Land03.png', 1 union 
 select 4504, N'Land Planet Surface', N'SolarSystems/colony/Land04.png', 1 union all
 select 4505, N'Land Planet Surface', N'SolarSystems/colony/Land05.png', 1 union all
 select 4506, N'Land Planet Surface', N'SolarSystems/colony/Land06.png', 1 union all
-select 5000, N'NebulaTileset', N'NebulaTileset.png', 1 union all
+select 5000, N'NebulaTileset', N'Starmap/Nebula240.png', 1 union all
+select 5001, N'Nebula Blue', N'Starmap/NebulaBlue240.png', 1 union all
+select 5002, N'Nebula Cyan', N'Starmap/NebulaCyan240.png', 1 union all
+select 5003, N'Nebula Yellow', N'Starmap/NebulaYellow240.png', 1 union all
 select 5200, N'BorderLightGreyTileset', N'BorderLightGreyTileset.png', 1 union all
 select 5400, N'BorderDarkBlueTileset', N'BorderDarkBlueTileset.png', 1 union all
 select 5600, N'BorderLightBlueTileset', N'BorderLightBlueTileset.png', 1 union all
@@ -450,7 +453,10 @@ select 59,		1,			100,		1,			100,						0, 0, 2, 14 union all
 select 63,		1,			100,		1,			100,						0, 0, 2, 3 union all
 select 65,		1,			100,		1,			100,						0, 0, 2, 3 union all
 select 67,		1,			100,		1,			100,						0, 0, 2, 3 union all
-select 5000,	3,			0,			NULL,		0,							0, 50, 1, 4
+select 5000,	3,			0,			NULL,		0,							0, 50, 1, 4 union all
+select 5001,	3,			0,			NULL,		0,							0, 50, 1, 1008 union all
+select 5002,	3,			0,			NULL,		0,							0, 50, 1, 1009 union all
+select 5003	,	3,			0,			NULL,		0,							0, 50, 1, 8
 
 go
 
@@ -870,11 +876,11 @@ select 9		  ,10			,0			,0			, 0			,10				,10				,0		,0				,0			,172		union all
 select 71		  ,0			,10			,0			, 0			,0				,0				,0		,0				,0			,671		union all
 select 72		  ,0			,20			,0			, 0			,0				,0				,0		,0				,0			,671		union all
 select 3002		  ,10			,0			,0			, 0			,10				,10				,0		,0				,0			,172		union all
-select 3003		  ,10			,0			,0			, 0			,10				,10				,0		,0				,0			,173		union all
-select 3004		  ,20			,0			,0			, 0			,20				,20				,0		,0				,0			,174		union all
-select 3005		  ,20			,0			,0			, 0			,20				,20				,0		,0				,0			,175		union all
-select 3006		  ,20			,0			,0			, 0			,20				,20				,0		,0				,0			,176		union all
-select 3010		  ,5			,5			,0			, 0			,5				,5				,0		,0				,0			,230		union all
+select 3003		  ,15			,0			,0			, 0			,15				,15				,0		,0				,0			,173		union all
+select 3004		  ,20			,0			,0			, 0			,25				,25				,0		,0				,0			,174		union all
+select 3005		  ,25			,0			,0			, 0			,25				,25				,0		,0				,0			,175		union all
+select 3006		  ,25			,0			,0			, 0			,25				,25				,0		,0				,0			,176		union all
+select 3010		  ,10			,10			,0			, 0			,10				,10				,0		,0				,0			,230		union all
 select 4002		  ,0			,0			,0			, 0			,0				,0				,0		,0				,75			,200		union all
 select 4003		  ,0			,0			,0			, 0			,0				,0				,0		,0				,75			,201		union all
 select 4004		  ,0			,0			,0			, 0			,-10			,-10			,0		,0				,100		,202		union all

@@ -463,6 +463,35 @@ go
 
 IF EXISTS(SELECT 1 
           FROM   sys.objects 
+          WHERE  NAME = N'v_UsersHistory' 
+                 AND type = N'V') 
+  BEGIN 
+      DROP VIEW [engine].[v_UsersHistory] 
+  END 
+
+go 
+-- select * from [engine].[v_UsersHistory] 
+CREATE VIEW [engine].[v_UsersHistory] 
+AS 
+  SELECT 
+		[userId],
+		turnId
+
+      ,[researchPoints]
+
+      ,[popVicPoints]
+      ,[researchVicPoints]
+      ,[goodsVicPoints]
+      ,[shipVicPoints]
+      ,[overallVicPoints]
+      ,[overallRank]
+	  
+  FROM   [UsersHistory]; 
+
+go 
+
+IF EXISTS(SELECT 1 
+          FROM   sys.objects 
           WHERE  NAME = N'v_ShipHullsGain' 
                  AND type = N'V') 
   BEGIN 

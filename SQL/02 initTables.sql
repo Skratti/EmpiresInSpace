@@ -361,6 +361,25 @@ END
 --create unique index LabelsBase_Unique ON LabelsBase(value);
 go
 
+--drop table [UsersHistory]
+CREATE TABLE [dbo].[UsersHistory]			  (
+	[userId] int not null,		
+	turnId int not null,
+
+	researchPoints int not null default 0,
+	
+	popVicPoints  int not null default 0,
+	researchVicPoints  int not null default 0,
+	goodsVicPoints  int not null default 0,
+	shipVicPoints  int not null default 0,
+	overallVicPoints  int not null default 0,
+	overallRank	int not null default 1000	
+);
+print 'table [UsersHistory] created.'
+go
+create clustered index Users_index ON [UsersHistory](turnId ,[userId]);
+go
+
 /*
 
 alter table [Alliances] add aId int 

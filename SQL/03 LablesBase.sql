@@ -1280,7 +1280,8 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (1005, N'S
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (1006, N'Farming Dome', N'', 3)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (1007, N'Housing Dome', N'', 3)
 
-
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (1008, N'Hydrogen Nebula', N'', 0)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (1009, N'Ionized Nebula', N'', 0)
 
 
 --delete from [LabelsBase] where id > 1001

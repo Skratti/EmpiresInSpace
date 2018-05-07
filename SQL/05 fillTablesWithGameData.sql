@@ -19,7 +19,7 @@ go
 [objectimageUrl] the url of the image.
 */
 INSERT [dbo].[ObjectDescription] 
-	([id], [name], [objectimageUrl], [versionNo])  
+	([id], [name], [objectimageUrl], [versionNo]) 
 select 1, N'Oranger Zwerg', N'SunOrange.png', 1 union all
 select 2, N'Gelber Zwerg', N'SunYellow.png', 1 union all
 select 3, N'Blauer Zwerg', N'SunBlue.png', 1 union all
@@ -264,6 +264,13 @@ select 641, N'X Mond', N'VulcanoMoon.png', 1 union all
 select 642, N'Toxic  Mond', N'68.png', 1 union all
 select 644, N'Asteroidenmond', N'70.png', 1 union all
 select 671, N'Supraconductors', N'Buildings/SolarPanels.png', 1 union all
+
+select 700, N'Plasma', N'Goods/Plasma.png', 2 union all
+select 701, N'Hydrogen', N'Goods/Hydrogen.png', 2 union all
+select 702, N'IonizedHydrogen', N'Goods/IonizedHydrogen.png', 2 union all
+select 703, N'Nitrogen', N'Goods/Nitrogen.png', 2 union all
+select 704, N'Helium', N'Goods/Helium.png', 2 union all
+
 select 1000, N'Energy', N'Energy.png', 1 union all
 select 1001, N'BM', N'BM.png', 1 union all
 select 1002, N'Nahrung', N'Food.png', 1 union all
@@ -309,6 +316,7 @@ select 2014, N'Asteroid Mining', N'Engine.png', 1 union all
 select 2015, N'Scanner I', N'Scanner.png', 1 union all
 select 2016, N'Defense satellite', N'ScoutModules.png', 1 union all
 select 2017, N'Space Marines', N'SpaceMarines.png', 1 union all
+select 2018, N'Gravity Generator', N'ShipModules/GravityGenerator.png', 1 union all
 select 2023, N'Colonizing Module II', N'Colonization_II.png', 1 union all
 select 2101, N'Crew II', N'Crew1.png', 1 union all
 select 2102, N'Reactor II', N'Reactor.png', 1 union all
@@ -340,6 +348,8 @@ select 3102, N'Lutetium Reactor I', N'Reactor.png', 1 union all
 select 3103, N'Terbium Hull I', N'Hull.png', 1 union all
 select 3104, N'Scandium Shield I', N'Shield.png', 1 union all
 select 3105, N'Holmium Laser I', N'WeaponLaser.png', 1 union all
+select 3106, N'Yttrium Laser', N'WeaponRocket.png', 1 union all
+select 3107, N'Lutetium Laser', N'WeaponMassDriver.png', 1 union all
 select 3108, N'Yttrium Car I', N'Car.png', 1 union all
 select 3109, N'Lutetium System Engines I', N'Impuls.png', 1 union all
 select 3110, N'Yttrium Hyper Engines I', N'Hyper.png', 1 union all
@@ -355,10 +365,6 @@ select 3208, N'Adv. Car', N'Car.png', 1 union all
 select 3209, N'Adv. System Engines', N'Impuls.png', 1 union all
 select 3210, N'Adv. Hyper Engines', N'Hyper.png', 1 union all
 select 3215, N'Adv. Scanner', N'Scanner.png', 1 union all
-select 3500, N'Nebula', N'Nebula240.png', 1 union all
-select 3510, N'Nebula Blue', 'NebulaBlue240.png', 1 union all
-select 3520, N'Nebula Cyan', 'NebulaCyan240.png', 1 union all
-select 3530, N'Nebula Yellow', 'NebulaYellow240.png', 1 union all
 select 4000, N'Land Planet', N'SolarSystems/world/Land00.png', 1 union all
 select 4001, N'Land Planet', N'SolarSystems/world/Land01.png', 1 union all
 select 4002, N'Land Planet', N'SolarSystems/world/Land02.png', 1 union all
@@ -377,6 +383,7 @@ select 5000, N'NebulaTileset', N'Starmap/Nebula240.png', 1 union all
 select 5001, N'Nebula Blue', N'Starmap/NebulaBlue240.png', 1 union all
 select 5002, N'Nebula Cyan', N'Starmap/NebulaCyan240.png', 1 union all
 select 5003, N'Nebula Yellow', N'Starmap/NebulaYellow240.png', 1 union all
+select 5004, N'Nebula Red', N'Starmap/NebulaRed240.png', 1 union all
 select 5200, N'BorderLightGreyTileset', N'BorderLightGreyTileset.png', 1 union all
 select 5400, N'BorderDarkBlueTileset', N'BorderDarkBlueTileset.png', 1 union all
 select 5600, N'BorderLightBlueTileset', N'BorderLightBlueTileset.png', 1 union all
@@ -391,7 +398,8 @@ select 7200, N'BorderWhiteTileset', N'Borders/BorderWhiteTileset.png', 1 union a
 select 7400, N'BorderDarkGreyTileset', N'Borders/BorderDarkGreyTileset.png', 1 union all
 select 8000, N'PlanetSurface', N'Planet_01.png', 1;
 go
---delete from [dbo].[ObjectDescription] where id > 5000
+--delete from [dbo].[ObjectDescription] where id > 3499 and id < 3550
+
 print '[ObjectDescription] Done'
 go
 
@@ -417,10 +425,10 @@ select 5,		3,			100,		1,			100,						0, 0, 1, 3 union all
 select 6,		3,			100,		1,			100,						0, 0, 1, 3 union all
 select 10,		2,			200,		3,			100,						1, 20, 1, 10 union all
 select 11,		3,			400,		3,			150,						1, 20, 1, 11 union all
-select 13,		1,			100,		1,			100,						0, 0, 1, 15 union all
-select 14,		1,			100,		1,			100,						0, 0, 1, 13 union all
-select 15,		1,			100,		1,			100,						0, 0, 1, 14 union all
-select 16,		1,			100,		1,			100,						0, 0, 1, 17 union all
+select 13,		3,			100,		1,			100,						0, 0, 1, 15 union all
+select 14,		3,			100,		1,			100,						0, 0, 1, 13 union all
+select 15,		3,			100,		1,			100,						0, 0, 1, 14 union all
+select 16,		3,			100,		1,			100,						0, 0, 1, 17 union all
 select 24,		1,			0,			NULL,		0,							0, 60, 1, 25 union all
 select 25,		1,			0,			NULL,		0,							0, 60, 1, 26 union all
 select 26,		1,			0,			NULL,		0,							0, 60, 1, 27 union all
@@ -453,10 +461,11 @@ select 59,		1,			100,		1,			100,						0, 0, 2, 14 union all
 select 63,		1,			100,		1,			100,						0, 0, 2, 3 union all
 select 65,		1,			100,		1,			100,						0, 0, 2, 3 union all
 select 67,		1,			100,		1,			100,						0, 0, 2, 3 union all
-select 5000,	3,			0,			NULL,		0,							0, 50, 1, 4 union all
-select 5001,	3,			0,			NULL,		0,							0, 50, 1, 1008 union all
-select 5002,	3,			0,			NULL,		0,							0, 50, 1, 1009 union all
-select 5003	,	3,			0,			NULL,		0,							0, 50, 1, 8
+select 5000,	3,			0,			NULL,		0,							0, 50, 1, 1008 union all       -- purple	- Hydrogen / Wasserstoff 
+select 5001,	3,			0,			NULL,		0,							0, 50, 1, 1010 union all    -- blue		- Helium
+select 5002,	3,			0,			NULL,		0,							0, 50, 1, 1009 union all    -- cyan		- Ionized Hydrogen	
+select 5003	,	3,			0,			NULL,		0,							0, 50, 1, 1011 union all		-- yellow	- Nitrogen
+select 5004	,	3,			0,			NULL,		0,							0, 50, 1, 8				-- red		- Plasma   / Plasma	
 
 go
 
@@ -512,9 +521,7 @@ select			55,				55,			2.5	,				null,					null,			null	,null	union all
 select			59,				59,			2.5	,				null,					null,			null	,null	union all
 select			63,				63,			2.5	,				null,					null,			null	,null	union all
 select			65,				65,			2.5	,				null,					null,			null	,null	union all
-select			67,				67,			2.5	,				null,					null,			null	,null	union all
-select			5000,		3500,			1	,				null,					null,			null	,null	union all
-select			5000,		5000,			1	,				null,					null,			null	,null	
+select			67,				67,			2.5	,				null,					null,			null	,null	
 go
 
 
@@ -586,250 +593,194 @@ SET IDENTITY_INSERT [dbo].[Research] ON
 
 -- Hidden Researches:
 INSERT into [dbo].[Research] 
-	  ([id], [name],				[cost], [label], [descriptionLabel], [researchType], [treeColumn],	[treeRow],	hidden) 
+	  ([id], [name],				[cost], [label], [descriptionLabel], [researchType],		[treeColumn],	[treeRow],	hidden) 
 
 --Culture*
-select 200, N'Scientist',					 0,		844,				845,			10,				0,			16, 1 union all
-select 201, N'Industrialist',				 0,		846,				847,			10,				0,			16, 1 union all
-select 202, N'Militarist',					 0,		848,				849,			10,				0,			16, 1 union all
-select 203, N'Ecologist',					 0,		850,				851,			10,				0,			16, 1 union all
+select 200, N'Scientist',					 0,		844,				845,			10,				0,			16,		1 union all
+select 201, N'Industrialist',				 0,		846,				847,			10,				0,			16,		1 union all
+select 202, N'Militarist',					 0,		848,				849,			10,				0,			16,		1 union all
+select 203, N'Ecologist',					 0,		850,				851,			10,				0,			16,		1 union all
 
 --minor culture
-select 204, N'Minor Scientist',				 0,		852,				853,			10,				0,			16, 1 union all
-select 205, N'Minor Industrialist',			 0,		854,				855,			10,				0,			16, 1 union all
-select 206, N'Minor Militarist',			 0,		856,				857,			10,				0,			16, 1 union all
-select 207, N'Minor Ecologist',				 0,		858,				859,			10,				0,			16, 1 union all
+select 204, N'Minor Scientist',				 0,		852,				853,			10,				0,			16,		1 union all
+select 205, N'Minor Industrialist',			 0,		854,				855,			10,				0,			16,		1 union all
+select 206, N'Minor Militarist',			 0,		856,				857,			10,				0,			16,		1 union all
+select 207, N'Minor Ecologist',				 0,		858,				859,			10,				0,			16,		1 union all
 
 --Focus
-select 210, N'Efficient Farming',			 0,		860,				861,			10,				0,			16, 1 union all
-select 211, N'Eff Prod Mat Prod',			 0,		862,				863,			10,				0,			16, 1 union all
-select 212, N'Eff Metal Prod',				 0,		864,				865,			10,				0,			16, 1 union all
+select 210, N'Efficient Farming',			 0,		860,				861,			10,				0,			16,		1 union all
+select 211, N'Eff Prod Mat Prod',			 0,		862,				863,			10,				0,			16,		1 union all
+select 212, N'Eff Metal Prod',				 0,		864,				865,			10,				0,			16,		1 union all
 
 --Ressource available
-select 220, N'Holmium',						 0,		69,					867,			10,				0,			16, 1 union all
-select 221, N'Terbium',						 0,		70,					869,			10,				0,			16, 1 union all
-select 222, N'Scandium',					 0,		71,					871,			10,				0,			16, 1 union all
-select 223, N'Yttrium',						 0,		72,					873,			10,				0,			16, 1 union all
-select 224, N'Lutetium',					 0,		73,					875,			10,				0,			16, 1 union all
+select 220, N'Holmium',						 0,		69,					867,			10,				0,			16,		1 union all
+select 221, N'Terbium',						 0,		70,					869,			10,				0,			16,		1 union all
+select 222, N'Scandium',					 0,		71,					871,			10,				0,			16,		1 union all
+select 223, N'Yttrium',						 0,		72,					873,			10,				0,			16,		1 union all
+select 224, N'Lutetium',					 0,		73,					875,			10,				0,			16,		1 union all
 
 -- Sophisticated Knowledge of ressource (pick 1):
-select 230, N'Holmium modules',				 0,		876,				877,			10,				0,			16, 1 union all
-select 231, N'Terbium modules',				 0,		878,				879,			10,				0,			16, 1 union all
-select 232, N'Scandium modules',			 0,		880,				881,			10,				0,			16, 1 union all
-select 233, N'Yttrium modules',				 0,		882,				883,			10,				0,			16, 1 union all
-select 234, N'Lutetium modules',			 0,		884,				885,			10,				0,			16, 1
+select 230, N'Holmium modules',				 0,		876,				877,			10,				0,			16,		1 union all
+select 231, N'Terbium modules',				 0,		878,				879,			10,				0,			16,		1 union all
+select 232, N'Scandium modules',			 0,		880,				881,			10,				0,			16,		1 union all
+select 233, N'Yttrium modules',				 0,		882,				883,			10,				0,			16,		1 union all
+select 234, N'Lutetium modules',			 0,		884,				885,			10,				0,			16,		1
 
 
 
 INSERT into [dbo].[Research] 
 	  ([id], [name]	,							[cost], [label], [descriptionLabel], [researchType], [treeColumn], [treeRow]) 
 
-select 1, N'Base research', 						3,		402,				166,			0,				0,		8 union all
+--Level 0
+select 1 as id, N'Base research' as [name],	3 as cost, 402 as label, 166 as descriptionLabels, 0 as researchType, 0 as [treeColumn],		6 as [treeRow] union all
 
 --Level 1
-select 9, N'Ecosytem Adaption I',					2,		623,				624,			1,				1,		2 union all
-select 2000, N'Modules'					,			8,		164,				517,			2,				1,		5 union all
-
-select  2, N'Improved Building Material Production',8,		886,				887,			1,				1,		8 union all
-
-select 152, N'BluePrints: Metal Working', 			6,		158,				492,			1,				1,		11 union all
-select 400, N'Space travel', 						5,		265,				493,			2 ,				1 ,		14 union all
-
-
-select 1040, N'Holmium',				 			10,		69,					892,			3,				1,		19 union all
-select 1041, N'Terbium',				 			10,		70,					893,			3,				1,		21 union all	
-select 1042, N'Scandium',				 			10,		71,					894,			3,				1,		23 union all
-select 1043, N'Yttrium',				 			10,		72,					895,			3,				1,		25 union all
-select 1044, N'Lutetium',				 			10,		73,					896,			3,				1,		27 union all
+select 9, N'Ecosytem Adaption I',					2,		623,				624,			1,				1,		4 union all
+select 152, N'Ore Mine', 							6,		158,				492,			1,				1,		9 union all
 
 --Level 2
-select 10,  N'Improved Farming ',					8,		888,				889,			1,				2,		1 union all	
-select  2013, N'Colonization I',					15,		88,					521,			2 ,				2 ,		3 union all
-select  2001, N'Cargo',								22,		220,				518,			2 ,				2 ,		5 union all
-select  2002, N'Scanner', 							60,		222,				528,			2 ,				2 ,		7 union all
-select	153, N'Improved Metal Refinement',			8,		890,				891,			1,				2,		10 union all
-select  501, N'Outpost'	,							10,		585,				585	,			2	,			2	,	13 union all
---INSERT into [dbo].[Research] 
-	  --([id],  [description]	,				[cost], [label]	, [descriptionLabel], [researchType], [treeColumn]	, [treeRow]) 
-select 4002, N'Fleet Command I',					30	,	553	,				558,			4,				2,		15  union all
+select  2, N'Improved Building Material Production',8,		886,				887,			1,				2,		2 union all
+select	153, N'Improved Metal Refinement',			8,		890,				891,			1,				2,		2 union all
+select  10,  N'Improved Farming ',					8,		888,				889,			1,				2,		2 union all	
 
+select  2013, N'Colonization I',					15,		88,					521,			2 ,				2 ,		4 union all
+select 112, N'Warehouse construction plan',			30,		162,				491,			1,				2,		6  union all
+select 400, N'Space travel', 						5,		265,				493,			2 ,				2 ,		9 union all
 
-select 1060, N'Holmium Generator', 					40,		660,				512,			3,				7,		19 union all
-select 1061, N'Terbium Factory Improvements',		40,		661,				513,			3,				7,		21 	union all
-select 1062, N'Scandium Tools', 					60,		662,				514,			3,				7,		23  union all
-select 1063, N'Yttrium Cloning Lab',				60,		663,				515,			3,				7,		25 union all
-select 1064, N'Lutetium Ecosystem Improvements', 	60,		664,				516,			3,				7,		27  union all
-
-
---INSERT into [dbo].[Research] 
---	  ([id], [name]							, [cost],	[label]	, [descriptionLabel], [researchType], [treeColumn]	, [treeRow]) 
 
 --Level 3
-select 112, N'Warehouse construction plan',			30,		162,				491,			1,				3,		5  union all
-select 51, N'PlaneteryScanner',						45,		382,				490,			1,				3,		7 union all
---select 1010, N'Special Ressource Analysis', 					 12,	667,				669,			1,				3,		11 union all
-
-select   11, N'Orbital Buildings',					12	,	947	,				949,			4,				3,		12  union all
+select   11, N'Orbital Buildings',					12	,	947	,				949,			4,				3,		4  union all
+select  501, N'Outpost'	,							10,		585,				585	,			2	,			3	,	7 union all
+select 2000, N'Modules'					,			8,		164,				517,			2,				3,		12 union all
 
 
-select 2005, N'Ship Weapons I',						32,		98,					520,			2 ,				3 ,		14 union all
-select 2003, N'Ship Defenses I', 					30,		99,					519,			2 ,				3 ,		16 union all
-
---delete from Research where id = 8
--- update [Research] set hidden = 1 where id= 8
 --Level 4
---INSERT into [dbo].[Research] 
---	  ([id], [name],[objectimageUrl], [description]								, [cost]	, [label]	, [descriptionLabel], [researchType], [treeColumn]	, [treeRow]) 
-select 3002, N'Administration I', 					150,	472		,		477				, 4				, 4				, 3	 
+select   12, N'Antimatter Utilization'		,		25 ,	948		,			950,			4,				4,		4  union all
+select  2002, N'Scanner', 							60,		222,				528,			2 ,				4 ,		7 union all
+select 2005, N'Ship Weapons I',						32,		98,					520,			2 ,				4 ,		10 union all
+select 2003, N'Ship Defenses I', 					30,		99,					519,			2 ,				4 ,		12 union all
+select  2001, N'Cargo',								22,		220,				518,			2 ,				4 ,		14 union all
+select  2006, N'Gravity Generator',					30,		1017,				1017,			2 ,				4 ,		17 union all
 
---INSERT into [dbo].[Research] 
---	  ([id], [name], 							[cost],		[label]		, [descriptionLabel], [researchType], [treeColumn]	, [treeRow] , hidden) 
---select 8,	 N'Kommunikation Center',			100,			53		,		488				, 1				, 4				, 7		,	1
+--Level 5
+select 51, N'PlaneteryScanner',						45,		382,				490,			1,				5,		7 union all
+select 4002, N'Fleet Command I',					30	,	553	,				558,			4,				5,		10  union all
 
-INSERT into [dbo].[Research] 
-	  ([id], [name]							, [cost]	, [label]	, [descriptionLabel], [researchType], [treeColumn]	, [treeRow]) 
-select   12, N'Antimatter Utilization'		,		25 ,		948		,	950				, 4				, 4				, 12  union all
-select 415, N'Heavy Fighter',						80,			838		,	839				, 2				, 4				, 14 union all
-select 402, N'Corvette',							150,		173		,	494				, 2				, 4				, 16 union all
-
-select 1050, N'Holmium Laser I',   					700,		387,		512,			3,				4,				19 union all
-select 1051, N'Terbium Hull I',    					600,		385,		513,			3,				4,				21 union all
-select 1052, N'Scandium Shield I', 					480,		386,		514,			3,				4,				23 union all
-select 1053, N'Yttrium Modules I', 					360,		391,		515,			3,				4,				25 union all
-select 1054, N'Lutetium Modules I',					330,		392,		516,			3,				4,				27 union all
-
---Level 5  delete from [dbo].[Research]  where id = 2
---select 2, N'Wasserkraftwerk', N'1.gif', N'Erlaubt den Bau des Wasserkraftwerkes', 220, 92, 484,1,5,0 union all
-select 300, N'Desert Colonization',				90,				819,		820,			1,				5,				2 union all
-select 301, N'Arctic Colonization',				100,			821,		822,			1,				5,				4 union all
-
-select 71, N'Superconductors',					160,			656,		657,			1,				5,				6 union all
---select 1030, N'Special Ressource Processing', N'1.gif', N''						, 16,			668,		670,			1,				5,				11 union all
-select 410, N'SpaceMarines Center',				170,			686,		687				,1,				5,				15 union all
+select 1060, N'Plasma Generator', 					40,		660,				512,			3,				5,		13 union all
+select 1061, N'Nitrogen Processing',				40,		661,				513,			3,				5,		15 	union all
+select 1062, N'Helium Processing', 					60,		662,				514,			3,				5,		17  union all
+select 1063, N'Hydrogen Terraforimg Lab',			60,		663,				515,			3,				5,		19 union all
+select 1064, N'Ionized Hydrogen Terraforimg Lab', 	60,		664,				516,			3,				5,		21  union all
 
 --Level 6
-
+select 3002, N'Administration I', 					150,	472		,			477			,	4,				6,		4 union all
+select 410, N'SpaceMarines Center',					170,	686,				687			,	1,				6,		8 union all
+select 403, N'Frigatte',							80,		174,				495,			2,				6,	    10 union all
+select 405, N'Cruiser',								100,	 58,				497,			2,				6,		12  union all
 
 
 --Level 7
---INSERT into [dbo].[Research] 
---	  ([id], [name]	, [cost], [label]	, [descriptionLabel], [researchType], [treeColumn]	, [treeRow]) 
+
+select 1040, N'Holmium',				 			50,		69,					892,			3,				7,		1 union all
+select 1041, N'Terbium',				 			50,		70,					893,			3,				7,		1 union all	
+select 1042, N'Scandium',				 			50,		71,					894,			3,				7,		1 union all
+select 1043, N'Yttrium',				 			50,		72,					895,			3,				7,		1 union all
+select 1044, N'Lutetium',				 			50,		73,					896,			3,				7,		1 union all
+
+select 300, N'Desert Colonization',					90,		819,				820,			1,				7,		3 union all
+select 301, N'Arctic Colonization',					100,	821,				822,			1,				7,		5 union all
+select 71, N'Superconductors',						160,	656,				657,			1,				7,		7 union all
 
 
 --Level 8
-select 3003, N'Administration II', 									350	,		473		,	478,			4,			6,					3		 union all
 
---INSERT into [dbo].[Research] 
---	  ([id], [name],						, [cost],	[label]	, [descriptionLabel], [researchType], [treeColumn]	, [treeRow]) 
-select 3, N'TreibstoffRaffinerie',				260,	93,			485,						1,			6,				11 union all
-select 4003, N'Fleet Command II',				240,	554,		559,						4,			6,				16 union all
+select 1050, N'Holmium Modules',   					330,	387,				512,			3,				8,		1 union all
+select 1051, N'Terbium Hull I',    					330,	385,				513,			3,				8,		1 union all
+select 1052, N'Scandium Shield I', 					330,	386,				514,			3,				8,		1 union all
+select 1053, N'Yttrium Modules I', 					330,	1021,				515,			3,				8,		1 union all
+select 1054, N'Lutetium Modules I',					330,	1022,				516,			3,				8,		1 union all
+
+select 3, N'TreibstoffRaffinerie',					260,	93,					485,			1,				8,		3 union all
+select 4003, N'Fleet Command II',					240,	554,				559,			4,				8,		10 union all
 
 --Level 9
-select 302, N'Barren Colonization',				300,	823,		824,						1,			7,				2 union all
---select 303, N'Asteroid moon Colonization',		300,	825,		826,						1,			7,				4 union all
-
-select 50, N'Verb. Baumaterial', 				550,	350,		489,						1,			7,				6 union all
-select 5000, N'Transcendence Collab',			800,	592,		593,						4,			7,				9 union all
-select 52, N'Arcology'			,				540,	715,		716,						1,			7,				12 union all
-
---SET IDENTITY_INSERT [dbo].[Research] ON
---INSERT into [dbo].[Research] 
---	  ([id],		[name],						 [cost],	[label]	, [descriptionLabel], [researchType], [treeColumn]	, [treeRow]) 
-select 1070, N'Holmium Laser II',   				700,	960,		965,						3,			11,				19 union all
-select 1071, N'Terbium Hull II',    				600,	961,		966,						3,			11,				21 union all
-select 1072, N'Scandium Shield II', 				480,	962,		967,						3,			11,				23 union all
-select 1073, N'Yttrium Modules II', 				360,	963,		968,						3,			11,				25 union all
-select 1074, N'Lutetium Modules II',				330,	964,		969,						3,			11,				27 union all
---SET IDENTITY_INSERT [dbo].[Research] OFF
-
---delete from [dbo].[Research]  where id in (2500, 2501, 2502, 2503)
---INSERT into [dbo].[Research] 
---	  ([id], [name],[objectimageUrl], [description]	, [cost], [label]	, [descriptionLabel], [researchType], [treeColumn]	, [treeRow]) 
---select 2023, N'Colonization II', N'1.gif', N'Colonization module.', 200, 468, 522, 2 , 9 , 0 union all
+select 3003, N'Administration II', 					350	,	473	,				478,			4,				9,		3 union all
+select 50, N'Verb. Baumaterial', 					550,	350,				489,			1,				9,		7 union all
 
 
---Level 10
---INSERT into [dbo].[Research] 
---	  ([id], [name],[objectimageUrl], [description]						, [cost],	[label]	, [descriptionLabel], [researchType], [treeColumn]	, [treeRow]) 
-select 3004, N'Administration III',			900,		474		, 479				, 4				, 8				, 3  union all
-select 5, N'Kraftwerk',						430,		95,		487,1,8,5 union all
-select 55, N'Aquafarming',					370,		690,	691,1,8,7 union all
-select 502, N'Space station'	,			680,		59,		558				, 2					, 8			, 10	 union all
-select 403, N'Frigatte',					900,		174,	495, 2 , 8 , 16  union all
+--level 10
+select 52, N'Arcology'			,					540,	715,				716,			1,				10,		4 union all
+select 55, N'Aquafarming',							370,	690,				691,			1,				10,		6 union all
+select 5, N'Kraftwerk',								430,	95,					487,			1,				10,		8 union all
+select 5000, N'Transcendence Collab',				800,	592,				593,			4,				10,		10 union all
+select 402, N'Corvette',							650,	173		,			494			,	2,				10,		16 union all
+
 
 --Level 11
---INSERT into [dbo].[Research] 
---	  ([id], [name]			, [cost]		, [label]	, [descriptionLabel], [researchType], [treeColumn]	, [treeRow]) 
-select 72, N'Superconductors II',  520, 666, 657, 1, 9, 5 union all
-select 2100, N'Modules II',  1200, 171, 523,2,9,11 union all
-select 4004	, N'Fleet Command III',  1200		, 555		, 560					, 4				, 9			,	15  union all
+select 302, N'Barren Colonization',					300,	823,				824,			1,				11,		3 union all
+select 72, N'Superconductors II',					520,	666,				657,			1,				11,		6 union all
+select 502, N'Space station'	,					680,	59,					558	,			2,				11,		10	 union all
+select 4004	, N'Fleet Command III',					1000,	555	,				560	,			4,				11,		14  union all
 
 --Level 12
---update Research set treeColumn = 10, treeRow = 6 where id = 5001
 
-select 5001, N'Transcendence',				3000,		590,		591,	4,		10,			6 union all
 
-select 2102, N'Scanner II',					475,		381,		525,	2,		10,			8 union all
-select 2101, N'Cargo II',					450,		376,		524,	2,		10,			10 union all
-select 2105, N'Ship Weapons II',			520,		168,		527,	2,		10,			12 union all
-select 2103, N'Ship Defenses II',			520,		167,		526,	2,		10,			14 union all
+select 3004, N'Administration III',					800,	474,				479,			4,				12,		3  union all
+select 2100, N'Modules II',							1200,	171,				523,			2,				12,		11 union all
 
 --Level 13
---INSERT into [dbo].[Research] 
---	  ([id], [name],[objectimageUrl], [description]		, [cost], [label]	, [descriptionLabel], [researchType], [treeColumn]	, [treeRow]) 
-select 3005, N'Administration VI',  1600	, 475		, 480				, 4				, 11				, 3			union all
-select 80, N'Superdense Materials',  1000	, 693		, 694				, 4				, 11				, 6			union all
-select 404, N'Destroyer', 1400	,118		, 496				, 2				, 11				, 16		union all
+select 1070, N'Holmium Laser II',   				600,	960,				965,			3,				13,		1 union all
+select 1071, N'Terbium Hull II',    				500,	961,				966,			3,				13,		1 union all
+select 1072, N'Scandium Shield II', 				480,	962,				967,			3,				13,		1 union all
+select 1073, N'Yttrium Modules II', 				360,	963,				968,			3,				13,		1 union all
+select 1074, N'Lutetium Modules II',				330,	964,				969,			3,				13,		1 union all
+
+select 5001, N'Transcendence',						2000,	590,				591,			4,				13,		6 union all
+select 2102, N'Scanner II',							475,	381,				525,			2,				13,		8 union all
+select 2101, N'Cargo II',							450,	376,				524,			2,				13,		10 union all
+select 2105, N'Ship Weapons II',					520,	168,				527,			2,				13,		12 union all
+select 2103, N'Ship Defenses II',					520,	167,				526,			2,				13,		14 union all
 
 --Level 14
 --INSERT into [dbo].[Research] 
---	  ([id]	, [name],[objectimageUrl], [description]						, [cost]	, [label]	, [descriptionLabel]	, [researchType], [treeColumn]	, [treeRow]) 
---delete from [dbo].[Research]  where id = 2033 
---select 2033	, N'Colonization III', N'1.gif', N'Colonization module.'	, 600		, 713		, 695					, 2				, 14			,	0 union all
-select 304, N'Volcanic Colonization',		1500,		827,		828,					1,				12,				2 union all
-select 305, N'Toxic  planet Colonization',  1500,		829,		830,					1,				12,				4 union all
-
-select 81	, N'Pressure Dome',				1800		, 696		, 697					, 2				, 12			,	6 union all
-select 2200	, N'Modules III',				2400		, 699		, 700					,2				, 12			,	11 union all
-select 4005, N'Fleet Command VI',			2100		, 556		, 561					, 4				, 12				, 16 union all
+--	  ([id], [name],[objectimageUrl], [description]		, [cost], [label]	, [descriptionLabel], [researchType], [treeColumn]	, [treeRow]) 
+select 3005, N'Administration VI',					1600,	475,				480,			4,				14,		3	union all
+select 80, N'Superdense Materials',					1000,	693,				694,			4,				14,		6	union all
+select 406, N'Battleship',							900	,   124		,		498				,2,				14,		16 union all
 
 
 --Level 15
-
---INSERT into [dbo].[Research] 
---	  ([id], [name],			[objectimageUrl], [description]			, [cost]		, [label]	, [descriptionLabel]		, [researchType]	, [treeColumn]	, [treeRow]) 
---select 2500, N'Special Ressources Modules',		1100			, 718		, 719						,2					, 13			, 6 union all
-select	2202, N'Scanner III',					1500			, 712		, 777						, 2					, 13			, 8 union all
-select	2201, N'Cargo III',						1100			, 708		, 774						, 2					, 13			, 10 union all
-select	2205, N'Ship Weapons III',				2200			, 774		, 777						, 2					, 13			, 12 union all
-select	2203, N'Ship Defenses III',				1800			, 773		, 776						, 2					, 13			, 14 union all
+select 304, N'Volcanic Colonization',				1500,	827,				828,			1,				15,		2 union all
+select 305, N'Toxic  planet Colonization',			1500,	829,				830,			1,				15,		4 union all
+select 81	, N'Pressure Dome',						1800	, 696,				697,			2,				15,		6 union all
+select 2200	, N'Modules III',						2400	, 699,				700,			2,				15,		11 union all
+select 4005, N'Fleet Command VI',					2100	, 556,				561,			4,				15,		14 union all
 
 
+--Level 16
+select	2202, N'Scanner III',						1500,	712,				777,			2,				16,		8 union all
+select	2201, N'Cargo III',							1100,	708,				774,			2,				16,		10 union all
+select	2205, N'Ship Weapons III',					2200,	774,				777,			2,				16,		12 union all
+select	2203, N'Ship Defenses III',					1800,	773,				776,			2,				16,		14 union all
+select 404, N'Destroyer',							2200,	118,				496,			2,				16,		16	union all
 
---level 16
---INSERT into [dbo].[Research] 
---	  ([id], [name],							 [cost]		, [label]	, [descriptionLabel], [researchType]	, [treeColumn]		, [treeRow]) 
 
---select 2501, N'SR Auxilliary Modules',			900				, 780		, 783				,2					, 14				, 4 union all
---select 2502, N'SR Attack Modules',				1700				, 781		, 784				,2					, 14				, 6 union all
---select 2503, N'SR Defense Modules',				1300				, 782		, 785				,2					, 14				, 8 union all
-select 503	, N'Star base'		,				1200			, 584		, 559				, 2					, 14				, 11  union all
-select 405, N'Cruiser',							2000			, 58		, 497				, 2					, 14				, 16  union all
-	
 --level 17
---INSERT into [dbo].[Research] 
---	  ([id], [name],							[cost]	, [label]	, [descriptionLabel], [researchType], [treeColumn]	, [treeRow]) 
-select 3006, N'Administration V',				4000		, 476		, 481				, 4				, 15				, 3		union all
-select 504, N'Star fortress'	,				1700		, 127		, 560				, 2				, 15				, 11 union all
-select 4006, N'Fleet Command V',				4000		, 557		, 562				, 4				, 15				, 13 union all
-select 406, N'Battleship',						2700		, 124		, 498				, 2				, 15				, 16  union all
+select 503	, N'Star base'		,					1600,	584,				559,			2,				17,		11  union all
+select 415, N'Heavy Fighter',						1800,	838	,				839	,			2,				17,		16 union all
 
+	
 --level 18
+select 3006, N'Administration V',					4000	, 476		,		481				, 4				, 18,	3 union all
+select 504, N'Star fortress'	,					2400	, 127		,		560				, 2				, 18,	11 union all
+select 4006, N'Fleet Command V',					4000	, 557		,		562				, 4				, 18,	14 union all
+select 407, N'Superbattleship',						3500	, 125		,		499				, 2				, 18,	16 union all
+
+--level 19
 --SET IDENTITY_INSERT [dbo].[Research] ON
 --INSERT into [dbo].[Research] 
 --	  ([id], [name],							[cost]	, [label]	, [descriptionLabel], [researchType], [treeColumn]	, [treeRow]) 
-select 3010, N'Future Tech',					5000	, 984			, 985				, 4				, 16				, 11 union all
-select 407, N'Superbattleship',					3500	, 125			, 499				, 2				, 16				, 16;
+select 3010, N'Future Tech',					5000	, 984			, 985				, 4				, 19				, 11;
 
 --
 
@@ -924,6 +875,12 @@ INSERT [dbo].[Goods] ([id], [name], [objectDescriptionId], [goodsType], [label],
 
 INSERT [dbo].[Goods] ([id], [name], [objectDescriptionId], [goodsType], [label], prodLevel) VALUES (61, N'Antimatter', 1011, 1, 937, 7)
 
+INSERT [dbo].[Goods] ([id], [name], [objectDescriptionId], [goodsType], [label], prodLevel) VALUES (700, N'Plasma', 700, 1, 1012, 7)
+INSERT [dbo].[Goods] ([id], [name], [objectDescriptionId], [goodsType], [label], prodLevel) VALUES (701, N'Hydrogen', 701, 1, 1013, 7)
+INSERT [dbo].[Goods] ([id], [name], [objectDescriptionId], [goodsType], [label], prodLevel) VALUES (702, N'InonizedHydrogen', 702, 1, 1014, 7)
+INSERT [dbo].[Goods] ([id], [name], [objectDescriptionId], [goodsType], [label], prodLevel) VALUES (703, N'Nitrogen', 703, 1, 1015, 7)
+INSERT [dbo].[Goods] ([id], [name], [objectDescriptionId], [goodsType], [label], prodLevel) VALUES (704, N'Helium', 704, 1, 1016, 7)
+
 INSERT [dbo].[Goods] ([id], [name], [objectDescriptionId], [goodsType], [label], prodLevel) VALUES (1030, N'Holmium Erz', 1030, 1, 530, 7)
 INSERT [dbo].[Goods] ([id], [name], [objectDescriptionId], [goodsType], [label], prodLevel) VALUES (1040, N'Holmium', 1050, 1, 69, 8)
 INSERT [dbo].[Goods] ([id], [name], [objectDescriptionId], [goodsType], [label], prodLevel) VALUES (1031, N'Terbium Erz', 1031, 1, 531, 7)
@@ -960,6 +917,7 @@ INSERT [dbo].[Goods] ([id], [name], [objectDescriptionId], [goodsType], [label])
 INSERT [dbo].[Goods] ([id], [name], [objectDescriptionId], [goodsType], [label]) VALUES (2015, N'Scanner I', 2015, 2, 89)
 INSERT [dbo].[Goods] ([id], [name], [objectDescriptionId], [goodsType], [label]) VALUES (2016, N'Defense satellite', 2016, 2, 343)
 INSERT [dbo].[Goods] ([id], [name], [objectDescriptionId], [goodsType], [label]) VALUES (2017, N'Space Marines', 2017, 2, 686)
+INSERT [dbo].[Goods] ([id], [name], [objectDescriptionId], [goodsType], [label]) VALUES (2018, N'Gravity Generator', 2018, 2, 1017)
 INSERT [dbo].[Goods] ([id], [name], [objectDescriptionId], [goodsType], [label]) VALUES (2023, N'Colonizing Module II', 2023, 2, 720)
 
 --update [dbo].[Goods] set [objectDescriptionId] = 2023 where id = 2023
@@ -991,15 +949,17 @@ INSERT [dbo].[Goods] ([id], [name], [objectDescriptionId], [goodsType], [label])
 INSERT [dbo].[Goods] ([id], [name], [objectDescriptionId], [goodsType], [label]) VALUES (2215, N'Scanner III',			2215, 2, 712)
 
 
-INSERT [dbo].[Goods] ([id], [name], [objectDescriptionId], [goodsType], [label]) VALUES (3101, N'Yttrium Crew I', 3101, 2, 383)
-INSERT [dbo].[Goods] ([id], [name], [objectDescriptionId], [goodsType], [label]) VALUES (3102, N'Lutetium Reactor I', 3102, 2, 384)
-INSERT [dbo].[Goods] ([id], [name], [objectDescriptionId], [goodsType], [label]) VALUES (3103, N'Terbium Hull I', 3103, 2, 385)
-INSERT [dbo].[Goods] ([id], [name], [objectDescriptionId], [goodsType], [label]) VALUES (3104, N'Scandium Shield I', 3104, 2, 386)
-INSERT [dbo].[Goods] ([id], [name], [objectDescriptionId], [goodsType], [label]) VALUES (3105, N'Holmium Laser I', 3105, 2, 387)
-INSERT [dbo].[Goods] ([id], [name], [objectDescriptionId], [goodsType], [label]) VALUES (3108, N'Yttrium Cargo I', 3108, 2, 388)
-INSERT [dbo].[Goods] ([id], [name], [objectDescriptionId], [goodsType], [label]) VALUES (3109, N'Lutetium System Engines I', 3109, 2, 736)
-INSERT [dbo].[Goods] ([id], [name], [objectDescriptionId], [goodsType], [label]) VALUES (3110, N'Yttrium Hyper Engines I', 3110, 2, 389)
-INSERT [dbo].[Goods] ([id], [name], [objectDescriptionId], [goodsType], [label]) VALUES (3115, N'Lutetium Scanner I', 3115, 2, 390)
+INSERT [dbo].[Goods] ([id], [name], [objectDescriptionId], [goodsType], [label]) VALUES (3101, N'Yttrium Crew I',				3101, 2, 383)
+INSERT [dbo].[Goods] ([id], [name], [objectDescriptionId], [goodsType], [label]) VALUES (3102, N'Lutetium Reactor I',			3102, 2, 384)
+INSERT [dbo].[Goods] ([id], [name], [objectDescriptionId], [goodsType], [label]) VALUES (3103, N'Terbium Hull I',				3103, 2, 385)
+INSERT [dbo].[Goods] ([id], [name], [objectDescriptionId], [goodsType], [label]) VALUES (3104, N'Scandium Shield I',			3104, 2, 386)
+INSERT [dbo].[Goods] ([id], [name], [objectDescriptionId], [goodsType], [label]) VALUES (3105, N'Holmium Laser I',				3105, 2, 387)
+INSERT [dbo].[Goods] ([id], [name], [objectDescriptionId], [goodsType], [label]) VALUES (3106, N'Yttrium Rocket'	,			3106, 2, 1019)
+INSERT [dbo].[Goods] ([id], [name], [objectDescriptionId], [goodsType], [label]) VALUES (3107, N'Lutetium MassDriver',			3107, 2, 1020)
+INSERT [dbo].[Goods] ([id], [name], [objectDescriptionId], [goodsType], [label]) VALUES (3108, N'Yttrium Cargo I',				3108, 2, 388)
+INSERT [dbo].[Goods] ([id], [name], [objectDescriptionId], [goodsType], [label]) VALUES (3109, N'Lutetium System Engines I',	3109, 2, 736)
+INSERT [dbo].[Goods] ([id], [name], [objectDescriptionId], [goodsType], [label]) VALUES (3110, N'Yttrium Hyper Engines I',		3110, 2, 389)
+INSERT [dbo].[Goods] ([id], [name], [objectDescriptionId], [goodsType], [label]) VALUES (3115, N'Lutetium Scanner I',			3115, 2, 390)
 
 INSERT [dbo].[Goods] ([id], [name], [objectDescriptionId], [goodsType], [label]) VALUES (3201, N'Adv. Crew'				, 3201, 2, 786)
 INSERT [dbo].[Goods] ([id], [name], [objectDescriptionId], [goodsType], [label]) VALUES (3202, N'Adv. Reactor'			, 3202, 2, 787)
@@ -1075,7 +1035,7 @@ INSERT [dbo].[Modules] ([id], [name], [descriptionLabel], [goodsId], [label]) VA
 --INSERT [dbo].[Modules] ([id], [name], [descriptionLabel], [goodsId], [label]) VALUES (14, N'Asteroid Miner', 14, 2014, 90)
 INSERT [dbo].[Modules] ([id], [name], [descriptionLabel], [goodsId], [label]) VALUES (15, N'Scanner I', 15, 2015, 89)
 INSERT [dbo].[Modules] ([id], [name], [descriptionLabel], [goodsId], [label]) VALUES (17, N'Space Marines', 686, 2017, 686)
-
+INSERT [dbo].[Modules] ([id], [name], [descriptionLabel], [goodsId], [label]) VALUES (18, N'Gravity Generator', 1018, 2018, 1017)
 
 
 --delete from [dbo].[Modules] where id = 523
@@ -1130,6 +1090,8 @@ select 1102, 4, N'Lutetium Reactor I', 2, 3102, 384 union all
 select 1103, 4, N'Terbium Hull I', 3, 3103, 385 union all
 select 1104, 4, N'Scandium Shield I', 4, 3104, 386 union all
 select 1105, 4, N'Holmium Laser I', 5, 3105, 387 union all
+select 1106, 4, N'Yttrium Rocket', 5, 3106, 1019 union all
+select 1107, 4, N'Lutetium MD', 5, 3107, 1020 union all
 select 1108, 4, N'Yttrium Cargo I', 8, 3108, 388 union all
 select 1109, 4, N'Lutetium Engines I', 8, 3109, 736 union all
 select 1110, 4, N'Yttrium Hyper Engines I', 10, 3110, 389 union all
@@ -1166,14 +1128,14 @@ SET IDENTITY_INSERT [dbo].[Modules] off
 --insert into ServerEvents (eventType) select 4
 --delete from   [ShipHulls] where id = 4
 INSERT [dbo].[ShipHulls] ([id], [isStarBase], [typename], [labelName], [objectId], [modulesCount], [templateImageUrl], [label]) VALUES (0, 0, N'Debris'			, 0	, 440, 0, N'', 60)
-INSERT [dbo].[ShipHulls] ([id], [isStarBase], [typename], [labelName], [objectId], [modulesCount], [templateImageUrl], [label]) VALUES (1, 0, N'Scout'			, 0	, 410, 5, N'ScoutHull.png', 55)
-INSERT [dbo].[ShipHulls] ([id], [isStarBase], [typename], [labelName], [objectId], [modulesCount], [templateImageUrl], [label]) VALUES (2, 0, N'HeavyFighter'	, 0	, 416, 6, N'401Template.gif', 838)
-INSERT [dbo].[ShipHulls] ([id], [isStarBase], [typename], [labelName], [objectId], [modulesCount], [templateImageUrl], [label]) VALUES (3, 0, N'Corvette'		, 0	, 402, 7, N'401Template.gif', 100)
-INSERT [dbo].[ShipHulls] ([id], [isStarBase], [typename], [labelName], [objectId], [modulesCount], [templateImageUrl], [label]) VALUES (4, 0, N'Fregatte'		, 0	, 422, 9, N'401Template.gif', 101)
-INSERT [dbo].[ShipHulls] ([id], [isStarBase], [typename], [labelName], [objectId], [modulesCount], [templateImageUrl], [label]) VALUES (5, 0, N'Destroyer'		, 0	, 404, 12, N'401Template.gif', 118)
-INSERT [dbo].[ShipHulls] ([id], [isStarBase], [typename], [labelName], [objectId], [modulesCount], [templateImageUrl], [label]) VALUES (6, 0, N'Cruiser'		, 0	, 441, 15, N'401Template.gif', 58)
-INSERT [dbo].[ShipHulls] ([id], [isStarBase], [typename], [labelName], [objectId], [modulesCount], [templateImageUrl], [label]) VALUES (7, 0, N'Battleship'		, 0	, 444, 19, N'401Template.gif', 124)
-INSERT [dbo].[ShipHulls] ([id], [isStarBase], [typename], [labelName], [objectId], [modulesCount], [templateImageUrl], [label]) VALUES (8, 0, N'Superbattleship', 0	, 447, 24, N'401Template.gif', 125)
+INSERT [dbo].[ShipHulls] ([id], [isStarBase], [typename], [labelName], [objectId], [modulesCount], [templateImageUrl], [label]) VALUES (1, 0, N'Scout S 1'			, 0	, 410, 5, N'ScoutHull.png', 55)
+INSERT [dbo].[ShipHulls] ([id], [isStarBase], [typename], [labelName], [objectId], [modulesCount], [templateImageUrl], [label]) VALUES (2, 0, N'HeavyFighter S 3'	, 0	, 416, 6, N'401Template.gif', 838)
+INSERT [dbo].[ShipHulls] ([id], [isStarBase], [typename], [labelName], [objectId], [modulesCount], [templateImageUrl], [label]) VALUES (3, 0, N'Corvette S 3'		, 0	, 402, 7, N'401Template.gif', 100)
+INSERT [dbo].[ShipHulls] ([id], [isStarBase], [typename], [labelName], [objectId], [modulesCount], [templateImageUrl], [label]) VALUES (4, 0, N'Fregatte M 1'		, 0	, 422, 9, N'401Template.gif', 101)
+INSERT [dbo].[ShipHulls] ([id], [isStarBase], [typename], [labelName], [objectId], [modulesCount], [templateImageUrl], [label]) VALUES (5, 0, N'Destroyer M 3'		, 0	, 404, 12, N'401Template.gif', 118)
+INSERT [dbo].[ShipHulls] ([id], [isStarBase], [typename], [labelName], [objectId], [modulesCount], [templateImageUrl], [label]) VALUES (6, 0, N'Cruiser H 1'		, 0	, 441, 15, N'401Template.gif', 58)
+INSERT [dbo].[ShipHulls] ([id], [isStarBase], [typename], [labelName], [objectId], [modulesCount], [templateImageUrl], [label]) VALUES (7, 0, N'Battleship H 2'		, 0	, 444, 19, N'401Template.gif', 124)
+INSERT [dbo].[ShipHulls] ([id], [isStarBase], [typename], [labelName], [objectId], [modulesCount], [templateImageUrl], [label]) VALUES (8, 0, N'Superbattleship H 3', 0	, 447, 24, N'401Template.gif', 125)
 INSERT [dbo].[ShipHulls] ([id], [isStarBase], [typename], [labelName], [objectId], [modulesCount], [templateImageUrl], [label]) VALUES (9, 0, N'Scumm'			, 0	, 451,  5, N'401Template.gif', 55)
 
 INSERT [dbo].[ShipHulls] ([id], [isStarBase], [typename], [labelName], [objectId], [modulesCount], [templateImageUrl], [label]) VALUES (199, 1, N'Outpost', 0, 430, 3, N'401Template.gif', 585)
@@ -1474,25 +1436,25 @@ insert [dbo].[ShipHullsGain]
 ([shipHullId], [crew], [energy], [hitpoints], [damagereduction], [damageoutput], [cargoroom], [fuelroom], [inSpaceSpeed], [inSystemSpeed], [maxSpaceMoves], [maxSystemMoves], [special], [scanRange], [speedFactor])
 
 select		0,		0,		0,			   0,				0,				0,				0,			0,				0,				0,				0,				0,			0,				0 ,			1		union all
-select		1,		-1,		-1,			200,			   80,				0,			   80,			80,				0,			    0,				0,			    0,			0,				2 ,			1.0		union all -- Scout
-select		2,		-1,		-2,			220,			   70,				0,			   70,			80,				0,			    0,				0,			    0,			0,				1 ,			0.9		union all -- Scout
+select		1,		-1,		-1,			200,			   80,				0,			   80,			80,				0,			    0,				0,			    0,			0,				2 ,			1.0		union all -- Scout S 1
+select		2,		-1,		-2,			220,			   75,				0,			   70,			80,				0,			    0,				0,			    0,			0,				1 ,			1.0		union all -- Scout S 3
 
-select		3,		-2,		-2,			250,			   60,				0,			   120,			20,				0,				0,				0,				0,			0,				1 ,			0.8		union all
-select		4,		-4,		-3,			300,			   45,				0,			   200,			60,				0,				0,				0,				0,			0,				1 ,			0.7		union all --fregatte
-select		5,		-6,		-5,			350,			   30,				0,				300,		60,				0,				0,				0,				0,			0,				1 ,			0.6		union all  -- destr
-select		6,		-8,		-9,			400,			   20,				0,				350,		60,				0,				0,				0,				0,			0,				1 ,			0.5		union all  -- cruiser
+select		3,		-2,		-2,			250,			   60,				0,			   120,			20,				0,				0,				0,				0,			0,				1 ,			0.8		union all  -- Corvette S 2
+select		4,		-4,		-3,			300,			   30,				0,			   200,			60,				0,				0,				0,				0,			0,				1 ,			0.6		union all --fregatte M 1
+select		5,		-6,		-5,			350,			   45,				0,				300,		60,				0,				0,				0,				0,			0,				1 ,			0.7		union all  -- destr M 23
+select		6,		-8,		-9,			400,			    0,				0,				350,		60,				0,				0,				0,				0,			0,				1 ,			0.3		union all  -- cruiser 
 --
-select		7,		-10,	-11,		450,			   10,				0,				400,		50,				0,				0,				0,				0,			0,				0 ,			0.4		union all -- starship
+select		7,		-10,	-11,		450,			    5,				0,				400,		50,				0,				0,				0,				0,			0,				0 ,			0.35	union all -- starship
 --
-select		8,		-15,	-18,		500,			    5,				0,				500,		50,				0,				0,				0,				0,			0,				0 ,			0.3  	union all -- battle
+select		8,		-15,	-18,		500,			   10,				0,				500,		50,				0,				0,				0,				0,			0,				0 ,			0.4  	union all -- battle
 
 select		9,		-4,		-3,			300,			   45,				0,			   200,			60,				0,				0,				0,				0,			0,				1 ,			0.7		union all --fregatte
 
 
-select		199,	3,		4,			450,				0,				0,				500,		100,			0,				0,				0,				0,			3,				1 ,			0.0		union all  
-select		200,	5,		6,			700,			    0,				0,				100,		100,			0,				0,				0,				0,			3,				1 ,			0.0		union all
-select		201,	8,		10,			1000,			    0,				0,				200,		200,			0,				0,				0,				0,			3,				1 ,			0.0		union all
-select		202,	13,		16,			1400,			    0,				0,				400,		400,			0,				0,				0,				0,			3,				1 ,			0.0     union all
+select		199,	3,		4,			450,				0,				0,				300,		100,			0,				0,				0,				0,			3,				1 ,			0.0		union all  
+select		200,	5,		6,			700,			    0,				0,				600,		100,			0,				0,				0,				0,			3,				1 ,			0.0		union all
+select		201,	8,		10,			1000,			    0,				0,				1000,		200,			0,				0,				0,				0,			3,				1 ,			0.0		union all
+select		202,	13,		16,			1400,			    0,				0,				1500,		400,			0,				0,				0,				0,			3,				1 ,			0.0     union all
 select		220,	1,		100,		3000,				0,				50,				0,			0,				0,				0,				0,				0,			3,				1 ,			0.0     union all
 select		221,	1,		10,			100,				0,				5,				0,			0,				3,				6,				3,				15,			0,				0 ,			1.0
 
@@ -1507,30 +1469,33 @@ select		1,			1,		40	union all --Scout : 80 BM, 40 PP,  50 metal
 select		1,			7,		20	union all  -- Assembly points 
 select		1,			10,		40	union all  --  metal
 
-select		2,			1,		60	union all --Scout : 80 BM, 40 PP,  50 metal
-select		2,			7,		30	union all  -- Assembly points 
+select		2,			1,		30	union all --Heavy Fighter : 80 BM, 40 PP,  50 metal
+select		2,			7,		70	union all  -- Assembly points 
 select		2,			10,		50	union all  --  metal
+select		2,			11,		40	union all -- synth
+select		2,			50,		60	union all -- adv building
+select		2,			60,		20	union all -- Neutronium
 
 select		3,			1,		80	union all --Corvette : 30 BM, 50 PP, 
 select		3,			7,		40	union all  -- Assembly points 
 select		3,			10,		7	union all  --  metal
+select		3,			11,		20	union all -- synth
+select		3,			50,		30	union all -- adv building
 
 select		4,			1,		120	union all --Fregatte : 30 BM, 50 PP, 
 select		4,			7,		60	union all
 select		4,			10,		100	union all  --  metal
-select		4,			11,		40	union all -- synth
 
 select		5,			1,		100	union all --Destroyer : 30 BM, 50 PP, 
 select		5,			7,		80	union all
 select		5,			10,		140	union all  --  metal
 select		5,			11,		60	union all -- synth
 select		5,			50,		50	union all -- adv building
+select		5,			60,		60	union all -- Neutronium
 
-select		6,			1,		150	union all --Cruiser : 30 BM, 50 PP, 
+select		6,			1,		100	union all --Cruiser : 30 BM, 50 PP, 
 select		6,			7,		110	union all
-select		6,			10,		20	union all  --  metal
-select		6,			11,		110	union all -- synth
-select		6,			50,		80	union all -- adv building
+select		6,			10,		150	union all  --  metal
 
 select		7,			1,		200	union all --battleship : 30 BM, 50 PP, 
 select		7,			7,		140	union all
@@ -1542,7 +1507,8 @@ select		8,			1,		300	union all --superbattleship : 30 BM, 50 PP,
 select		8,			7,		200	union all
 select		8,			10,		340	union all  --  metal
 select		8,			11,		200	union all -- synth
-select		8,			50,		140	        -- adv building
+select		8,			50,		140	union all -- adv building
+select		8,			60,		120	 -- Neutronium
 
 
 
@@ -1564,14 +1530,17 @@ select			201,		1,		150		union all   --bm
 select			201,		7,		100		union all   -- ASSEMBLY
 select			201,		10,		170		union all   --metal
 select			201,		11,		90		union all   --synth
-select			201,		50,		60		union all   --Adv. Building Materials
+select			201,		50,		60		union all -- adv building
+select			201,		60,		40		union all-- Neutronium
+
 
 
 select			202,		1,		250		union all   --bm
 select			202,		7,		200		union all   -- ASSEMBLY
 select			202,		10,		250		union all   --metal
 select			202,		11,		150		union all   --synth
-select			202,		50,		100		   --Adv. Building Materials
+select			202,		50,		100		union all -- adv building
+select			202,		60,		120	 -- Neutronium
 
 
 

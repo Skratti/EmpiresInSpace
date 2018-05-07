@@ -18,8 +18,8 @@ select 0,					203,					207,			NULL,		NULL,		NULL,		 NULL,		NULL,		 NULL union al
 select 1,					210,					NULL,			24,			NULL,		NULL,		 NULL,		NULL,		 NULL union all
 select 1,					211,					NULL,			23,			NULL,		NULL,		 NULL,		NULL,		 NULL union all
 select 1,					212,					NULL,			25,			NULL,		NULL,		 NULL,		NULL,		 NULL union all
-select 2,					220,					NULL,			180,		NULL,		NULL,		 1105,		NULL,		 NULL union all
-select 2,					221,					NULL,			181,		NULL,		NULL,		 1103,		1109,		 NULL union all
-select 2,					222,					NULL,			182,		NULL,		NULL,		 1104,		1110,		 NULL union all
-select 2,					223,					NULL,			183,		NULL,		NULL,		 1101,		1108,		 NULL union all
-select 2,					224,					NULL,			184,		NULL,		NULL,		 1102,		1115,		 NULL
+select 2,					220,					NULL,			NULL,		NULL,		NULL,		 1105,		1108,		 1115 union all
+select 2,					221,					NULL,			NULL,		NULL,		NULL,		 1103,		1109,		 NULL union all
+select 2,					222,					NULL,			NULL,		NULL,		NULL,		 1104,		1110,		 NULL union all
+select 2,					223,					NULL,			NULL,		NULL,		NULL,		 1101,		1106,		 NULL union all
+select 2,					224,					NULL,			NULL,		NULL,		NULL,		 1102,		1107,		 NULL

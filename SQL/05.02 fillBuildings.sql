@@ -626,9 +626,10 @@ INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (3
 
 
 --Verb. Baumaterialfabrik
-INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (50, 6, -20) -- Verb. Baumaterialfabrik
+--delete from [BuildingProductions] where [buildingId] = 50
+INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (50, 6, -20) -- Energy
 INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (50, 8, -10) -- population
-INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (50, 1, -20) --  -Baumaterial
+INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (50, 1, -30) --  -Baumaterial
 INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (50, 10,-20) --  -Stahl
 INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (50, 50, 20) --  +Verb. Baumaterial
 
@@ -830,12 +831,13 @@ INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (1
 INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (1044, 1044, 8)	-- Hütte Lutetium	-> +  Lutetium	
 INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (1044, 6,   -15)  -- energy
 
---SPecial Ressource buildings:
-INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (180, 1040, -8)  --Holmium
-INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (181, 1041, -8)  --Holmium
-INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (182, 1042, -8)  --Holmium
-INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (183, 1043, -8)  --Holmium
-INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (184, 1044, -8)  --Holmium
+--Nebula buildings:
+--delete from [BuildingProductions] where [buildingId] > 179 and [buildingId] < 185
+INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (180, 700, -10)  --Plasma
+INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (181, 703, -10)  --Nitrogen
+INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (182, 704, -10)  --Helium
+INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (183, 701, -10)  --Hydrogen
+INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (184, 702, -10)  --InonizedHydrogen
 
 
 -- truncate Table [dbo].[BuildingCosts]

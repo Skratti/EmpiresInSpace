@@ -1251,6 +1251,7 @@ AS
 		  , targetX
 		  , targetY
 		  , movementroute
+		  , harvesting
   FROM   [ships]; 
 
 go 

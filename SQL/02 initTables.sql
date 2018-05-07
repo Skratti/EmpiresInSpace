@@ -1655,7 +1655,7 @@ Schiffsliste
 herkunft ist doppelt belegt (und nicht hier drin). einmal für den Sektorein- bzw. ausflug, zum anderen bei der Schiffserstellung :(alter table [Ships] 
 
 
-alter table [Ships] add
+alter table [Ships] add harvesting  TINYINT NOT NULL DEFAULT 0
 
 
 
@@ -1718,7 +1718,7 @@ CREATE TABLE [dbo].[Ships]  (
 	targetX INT not null DEFAULT 0,
 	targetY INT not null DEFAULT 0,
 	movementroute nvarchar(100),
-	 
+	harvesting  TINYINT NOT NULL DEFAULT 0,
 	constraint ships_primary primary key clustered (id)
 );
 create nonclustered index ShipsIdKey on [dbo].[Ships](userId);

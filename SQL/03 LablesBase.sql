@@ -51,8 +51,8 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (43, N'Col
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (44, N'Mining sector', N'', 0)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (45, N'Agriculture', N'', 0)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (46, N'Barracks', N'', 0)
-INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (47, N'Fuel generation', N'', 0)
-INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (48, N'Fuel store', N'', 0)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (47, N'Hydrocarbon generation', N'', 0)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (48, N'Hydrocarbon storage', N'', 0)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (49, N'Gras', N'', 0)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (50, N'Building material plant', N'', 0)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (51, N'Solar power plant', N'', 0)
@@ -98,7 +98,7 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (90, N'Ast
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (91, N'Database recovery', N'', 1)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (92, N'Water power plant', N'', 1)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (93, N'Refinery', N'', 1)
-INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (94, N'Fuel tank', N'', 1)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (94, N'Hydrocarbon tank', N'', 1)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (95, N'Power plant', N'', 1)
 --INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (96, N'Supplies', N'', 1)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (97, N'Scout hull', N'', 1)
@@ -268,7 +268,7 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (218, N'Hi
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (219, N'Shield', N'', 7)
 
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (220, N'Storage', N'', 7)
-INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (221, N'Fuel tank', N'ShipDetail', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (221, N'Hydrocarbon tank', N'ShipDetail', 7)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (222, N'Scanner', N'ShipDetail', 7)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (223, N'Hull', N'ShipDetail', 7)
 
@@ -488,9 +488,9 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (384, N'Lu
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (385, N'Terbium Hull I', N'', 6)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (386, N'Scandium Shield I', N'', 6)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (387, N'Holmium Laser I', N'', 6)
-INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (388, N'Yttrium Cargo I', N'', 6)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (388, N'Holmium Cargo I', N'', 6)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (389, N'Scandium Engines I', N'', 6)
-INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (390, N'Lutetium Scanner I', N'', 6)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (390, N'Holmium Scanner I', N'', 6)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (391, N'Yttrium Modules I', N'', 6)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (392, N'Lutetium Modules I', N'', 6)
 
@@ -612,8 +612,8 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (483, N' +
 ---
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (484, N'Hydroelectric power plants will help us increase the energy output of our colonies', N'', 1)  -- research 2
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (485, N'The refinery provides fuel for power plants and ships', N'', 1) --3
-INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (486, N'This allows as to store huge amounts of fuel', N'', 1)
-INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (487, N'The power plant consumes fuel and provides huge amounts of energy', N'', 1)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (486, N'This allows as to store huge amounts of hydrocarbon', N'', 1)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (487, N'The power plant consumes hydrocarbons and provides huge amounts of energy', N'', 1)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (488, N'The communication center creates a forum for all foreign contacts, as long as these have visited the location where the comm center is built', N'', 1)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (489, N'Advanced building materials allow the construction of sophisticated buildings, shipmodules and shiphulls', N'', 1)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (490, N'Planetery scanner greatly increases the scan range of colonies', N'', 1)
@@ -838,11 +838,11 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (658, N'+1
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (659, N'from Fleet Upkeep', N'', 7)
 
 
-INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (660, N'Holmium Generator', N'', 1)
-INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (661, N'Terbium Factory Improvements', N'', 1)
-INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (662, N'Scandium Tools', N'', 1)
-INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (663, N'Yttrium Cloning Lab', N'', 1)
-INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (664, N'Lutetium Ecosystem Improvements', N'', 1)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (660, N'Plasma Generator', N'', 1)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (661, N'Nitrogen Processing', N'', 1)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (662, N'Helium Processing', N'', 1)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (663, N'Hydrogen Terraforimg Lab', N'', 1)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (664, N'Ionized Hydrogen Terraforimg Lab', N'', 1)
 
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (665, N'Energy Harvesting', N'', 1)
 
@@ -1282,8 +1282,20 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (1007, N'H
 
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (1008, N'Hydrogen Nebula', N'', 0)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (1009, N'Ionized Nebula', N'', 0)
-
-
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (1010, N'Helium Nebula', N'', 0)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (1011, N'Nitrogen Nebula', N'', 0)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (1012, N'Plasma ', N'', 0)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (1013, N'Hydrogen ', N'', 0)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (1014, N'Ionized Hydrogen', N'', 0)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (1015, N'Nitrogen', N'', 0)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (1016, N'Helium ', N'', 0)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (1017, N'Gravity Generator', N'', 4)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (1018, N'Collects material from nebula areas', N'', 4)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (1019, N'Yttrium Rocket', N'', 4)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (1020, N'Lutetium MassDriver', N'', 4)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (1021, N'Yttrium Module', N'', 4)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (1022, N'Lutetium Module', N'', 4)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (1023, N'Collect material from nebula', N'', 4)
 --delete from [LabelsBase] where id > 1001
 --update [dbo].[LabelsBase] set [value] =  N'Construction cost' where id = 977
  

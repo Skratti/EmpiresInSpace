@@ -21,7 +21,8 @@ select		8,		-1,		 -1,		 0,					 0,				 0,		   200,			50,					0,				 0,				 0,			
 select		9,		-1,		 -1,		 0,					 0,				 0,			 0,			 0,					0,			   70,				 0,			   70,			0,			0	union all	 --system Enginge
 select		10,		-1,		 -1,		 0,					 0,				 0,			 0,			 0,					20,				 0,				20,				0,			0,			0	union all		 --star engines
 select		15,		-1,		 -3,		 0,					 0,				 0,			 0,			 0,					0,				 0,				 0,				0,			0,			1 	union all		 --scanner
-select		17,	   -19,		 -11,		 0,					 0,				 0,			 0,			 0,					0,				 0,				 0,				0,			2,			0 			--space marines
+select		17,	   -19,		 -11,		 0,					 0,				 0,			 0,			 0,					0,				 0,				 0,				0,			2,			0 	union all		--space marines
+select		18,	   -8,		 -12,		 0,					 0,				 0,			 0,			 0,					0,				 0,				 0,				0,			3,			0 			--gravity Generator
 
 INSERT [dbo].[ModulesGain] 
 ([modulesId],	[crew], [energy], [hitpoints], [damagereduction], [damageoutput], [cargoroom], [fuelroom], [inSpaceSpeed], [inSystemSpeed], [maxSpaceMoves], [maxSystemMoves], [special], [scanRange], [population]) 
@@ -37,6 +38,8 @@ select 1102, -2,	25,					0,						0,				0,			0,		0,				0,					0,				0,		0,					0,
 select 1103, 0,		0,					140,					0,				0,			0,		0,				0,					0,				0,		0,					0,			0,				0,		0	union all   --hull
 select 1104, -3,	-4,					0,					   33,				0,			0,		0,				0,					0,				0,		0,					0,			0,				0,		0	union all  --shield
 select 1105, -3,	-5,					0,						0,			   24,			0,		0,				0,					0,				0,		0,					0,			0,				1,	  140	union all    --laser
+select 1106, -3,	-5,					0,						0,			   48,			0,		0,				0,					0,				0,		0,					0,			0,				2,	   90	union all    --laser
+select 1107, -3,	-5,					0,						0,			   96,			0,		0,				0,					0,				0,		0,					0,			0,				3,	   60	union all    --laser
 select 1108, -2,	-2,					0,						0,				0,			400,	50,				0,					0,				0,		0,					0,			0,				0,		0	union all   -- cargo
 select 1109, -3,	-2,					0,						0,				0,			0,		0,				0,				  100,				0,	  100,					0,			0,				0,		0	union all   -- cargo
 select 1110, -3,	-4,					0,						0,				0,			0,		0,				24,					0,				24,		0,					0,			0,				0,		0	union all    --star engines
@@ -229,11 +232,15 @@ INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (4, 1, 30)
 
 
 --Space Marines
-INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (17, 7, 25)
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (17, 7, 25)  -- Assembly points
 INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (17, 10, 40)  --metall
 INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (17, 1, 10)  -- bm
 INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (17, 2, 20)  -- Nahrung
 
+--Gravity Generator
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (18, 7, 25)  -- Assembly points
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (18, 10, 40)  --metall
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (18, 1, 100)  -- bm
 
 --Colonizing Module I 20 (100 goods  / 40 assembly)
 INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (13, 1, 30)
@@ -470,11 +477,24 @@ INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (523, 60, 
 
 --Special Res 1
 
+--Holmium
 --laser
 INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1105, 1, 5)		-- bm
 INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1105, 7, 5)
 INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1105, 1040, 20)  --Holmium
 INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1105, 10, 5)  --metall
+
+--scanner
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1115, 1, 5)		-- bm
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1115, 7, 8)
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1115, 1040, 60)  --Holmium
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1115, 10, 5)  --metall
+
+--cargo
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1108, 1, 5)		-- bm
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1108, 7, 5)
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1108, 1040, 60)  --Yttrium
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1108, 10, 5)  --metall
 
 
 --Terbium
@@ -513,11 +533,11 @@ INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1101, 7, 
 INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1101, 10, 5)  --metall
 INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1101, 1043, 30)  --Yttrium
 
---cargo
-INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1108, 1, 5)		-- bm
-INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1108, 7, 5)
-INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1108, 1043, 60)  --Yttrium
-INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1108, 10, 5)  --metall
+--Rocket
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1106, 1, 5)		-- bm
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1106, 7, 5)
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1106, 1043, 20)  --Yttrium
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1106, 10, 5)  --metall
 
 
 --Lutetium
@@ -528,11 +548,11 @@ INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1102, 7, 
 INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1102, 1044, 30)  --Lutetium
 INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1102, 10, 5)  --metall
 
---scanner
-INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1115, 1, 5)		-- bm
-INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1115, 7, 8)
-INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1115, 1044, 60)  --Lutetium
-INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1115, 10, 5)  --metall
+--Rocket
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1107, 1, 5)		-- bm
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1107, 7, 5)
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1107, 1044, 20)  --Lutetium
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1107, 10, 5)  --metall
 
 
 
@@ -649,7 +669,7 @@ INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1208, 104
 
 --Lutetium
 --Adv. Reactor
-INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1202, 1, 15)
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1202, 1, 15)	 -- bm
 INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1202, 7, 15)
 INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1202, 50, 5)  -- adv bm 2
 INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (1202, 10, 10)  --metall

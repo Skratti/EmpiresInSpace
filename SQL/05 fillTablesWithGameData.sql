@@ -2,13 +2,8 @@ SET QUOTED_IDENTIFIER ON
 
 delete from GalaxyMap;
 go
-  insert into GalaxyMap (id,[position],[galaxyName],[objectId],[size])
-  select 
-	1,
-	geometry::STGeomFromText('POINT (' + convert(varchar(15),3 ) + ' ' + convert(varchar(15),3) + ')',0),
-	'Centaurus A',
-	1,
-	10000;
+  insert into GalaxyMap (id,[galaxyName],[objectId],[size], gameState)
+  select 	1,	'Centaurus A',	1,	10000,	2
 go
 print '------------------'
 go
@@ -146,8 +141,8 @@ select 189, N'Imp Baumaterialfabrik', N'Buildings/ImpBuildingMaterialPlant.png',
 select 190, N'Landwirtschaft', N'Buildings/ImpFarm.png', 1 union all
 select 191, N'Hochofen', N'Buildings/ImpBlastFurnace.png', 1 union all
 
-select 192, N'FarmingDome', N'Buildings/FarmingDome.png' union all
-select 193, N'HousingDome', N'Buildings/HousingDome.png' union all
+select 192, N'FarmingDome', N'Buildings/FarmingDome.png', 1 union all
+select 193, N'HousingDome', N'Buildings/HousingDome.png', 1 union all
 
 select 200, N'FleetCommand1', N'Scout2G.png', 1 union all
 select 201, N'Corvette', N'Corvette.png', 1 union all

@@ -2,7 +2,7 @@ SET QUOTED_IDENTIFIER ON
 go
 
 
-
+--Msg 156, Level 15, State 1, Server EMPIRES-AKR\SQLEXPRESS, Procedure getLabel, Line 78
 /* USER GENERATED DATA: */
 
 IF EXISTS(SELECT * 
@@ -64,9 +64,10 @@ drop table [dbo].[AllianceInvites]
 drop table [dbo].[AllianceMembers]
 drop table [dbo].[AllianceTargetRelations]
 drop table [dbo].[Alliances]
-
+drop table [UsersHistory]
 drop table [dbo].[Users]
 
+drop table [PlanetTypes]
 drop table [dbo].[PlanetSurface]
 
 /*Game-Specific Data*/
@@ -977,34 +978,7 @@ print 'table [BuildingProductions] created.'
 go
 
 go	
-/*
-alter table [dbo].[Buildings] drop COLUMN allowedMines int  not null default 0,
-	allowedChemicals int  not null default 0,
-	allowedFuel int  not null default 0
 
-alter table [PlanetTypes] add 
-shipModuleId SMALLINT NOT NULL
-		references [dbo].[Modules](id) on update no action on delete no action default 13
-	*/
---drop table [PlanetTypes]
-CREATE TABLE [dbo].[PlanetTypes]  (
-	id SMALLINT NOT NULL UNIQUE,	
-	name nvarchar(55),
-	label int NOT NULL Default 1
-		references [dbo].LabelsBase (id) on update NO ACTION on delete NO ACTION,
-	[description]	int NOT NULL Default 1
-		references [dbo].LabelsBase (id) on update NO ACTION on delete NO ACTION,
-	objectId SMALLINT NOT NULL
-		references [ObjectDescription](id) on update cascade on delete cascade,
-	researchRequired SMALLINT NOT NULL
-		references [Research](id) on update no action on delete no action,
-	shipModuleId SMALLINT NOT NULL
-		references [dbo].[Modules](id) on update no action on delete no action ,
-	colonyCenter  SMALLINT NOT NULL
-		references [Buildings](id) on update no action on delete no action
-	constraint PlanetTypes_primary primary key clustered (id)
-);
-go
 
 
 
@@ -1153,6 +1127,36 @@ go
 create unique clustered index SpecializationResearches_index ON [SpecializationResearches](SpecializationGroupId,ResearchId);
 go
 
+
+
+/*
+alter table [dbo].[Buildings] drop COLUMN allowedMines int  not null default 0,
+	allowedChemicals int  not null default 0,
+	allowedFuel int  not null default 0
+
+alter table [PlanetTypes] add 
+shipModuleId SMALLINT NOT NULL
+		references [dbo].[Modules](id) on update no action on delete no action default 13
+	*/
+--drop table [PlanetTypes]
+CREATE TABLE [dbo].[PlanetTypes]  (
+	id SMALLINT NOT NULL UNIQUE,	
+	name nvarchar(55),
+	label int NOT NULL Default 1
+		references [dbo].LabelsBase (id) on update NO ACTION on delete NO ACTION,
+	[description]	int NOT NULL Default 1
+		references [dbo].LabelsBase (id) on update NO ACTION on delete NO ACTION,
+	objectId SMALLINT NOT NULL
+		references [ObjectDescription](id) on update cascade on delete cascade,
+	researchRequired SMALLINT NOT NULL
+		references [Research](id) on update no action on delete no action,
+	shipModuleId SMALLINT NOT NULL
+		references [dbo].[Modules](id) on update no action on delete no action ,
+	colonyCenter  SMALLINT NOT NULL
+		references [Buildings](id) on update no action on delete no action
+	constraint PlanetTypes_primary primary key clustered (id)
+);
+go
 
 
 
@@ -2550,7 +2554,7 @@ begin
 				
 end
   
-
+  go
 --gets an entry each time an action was done which may affect other users...
 -- sendmail, shipMovement and so on...
 --

@@ -20,7 +20,7 @@ BEGIN TRAN
 
 --DECLARE @DBServerName   VARCHAR(100) = 'MyServer\Example'  
 DECLARE @DBServerName   VARCHAR(100) = '.'  
-DECLARE @DBName VARCHAR(100) = 'SculptorDwarf_Live'  
+DECLARE @DBName VARCHAR(100) = 'test'  
 
 DECLARE @FilePath   VARCHAR(200) = 'C:\temp\SQL\' 
 
@@ -36,7 +36,7 @@ INSERT INTO @FileList VALUES ('05.01 fillResearchPrerequisites.sql')
 INSERT INTO @FileList VALUES ('05.02 fillBuildings.sql') 
 INSERT INTO @FileList VALUES ('05.03 fillSpecializations.sql') 
 INSERT INTO @FileList VALUES ('05.04 fillShipModuleData.sql') 
---INSERT INTO @FileList VALUES ('06 fillLables.sql') 
+INSERT INTO @FileList VALUES ('06 fillLables.sql') 
 
 WHILE (SELECT COUNT(Files) FROM @FileList) > 0  
 BEGIN  

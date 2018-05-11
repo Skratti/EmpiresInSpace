@@ -730,8 +730,7 @@ select			520,		1044,		150
 go
 
 /*
-Evaluation Statement:
-*/
+--Evaluation Statement:
 
 with RareResourceCosts as (
 	select 
@@ -780,3 +779,4 @@ select
 from CostsPerModules
 left join CostsPerModules as OneLevelbeforeCosts
 on OneLevelbeforeCosts.id + 100 = CostsPerModules.id
+*/

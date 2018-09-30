@@ -1971,3 +1971,95 @@ SELECT  [SpecializationGroupId]
   FROM [dbo].[SpecializationResearches]
 
   go
+
+IF EXISTS(SELECT 1 
+          FROM   sys.objects 
+          WHERE  NAME = N'v_Routes' 
+                 AND type = N'V') 
+  BEGIN 
+      DROP VIEW [engine].[v_Routes] 
+  END 
+
+go 
+CREATE VIEW [engine].[v_Routes]
+AS
+	SELECT  [routeId]
+      ,[tradeRoute]
+      ,[userid]
+      ,[name]
+  FROM [dbo].[Routes]
+go
+IF EXISTS(SELECT 1 
+          FROM   sys.objects 
+          WHERE  NAME = N'v_RouteElements' 
+                 AND type = N'V') 
+  BEGIN 
+      DROP VIEW [engine].[v_RouteElements] 
+  END 
+
+go 
+CREATE VIEW [engine].[v_RouteElements]
+AS
+SELECT [routeId]
+      ,[stepId]
+      ,[starX]
+      ,[starY]
+      ,[systemX]
+      ,[systemY]
+      ,[stopNo]
+  FROM [dbo].[RouteElements]
+go
+
+IF EXISTS(SELECT 1 
+          FROM   sys.objects 
+          WHERE  NAME = N'v_RouteStopActions' 
+                 AND type = N'V') 
+  BEGIN 
+      DROP VIEW [engine].[v_RouteStopActions] 
+  END 
+
+go 
+CREATE VIEW [engine].[v_RouteStopActions] 
+AS
+SELECT  [routeId]
+      ,[stepId]
+      ,[goodId]
+      ,[amount]
+  FROM [dbo].[RouteStopActions]
+
+go
+IF EXISTS(SELECT 1 
+          FROM   sys.objects 
+          WHERE  NAME = N'v_RouteShips' 
+                 AND type = N'V') 
+  BEGIN 
+      DROP VIEW [engine].[v_RouteShips]
+  END 
+
+go
+CREATE VIEW [engine].[v_RouteShips] 
+AS
+SELECT [routeId]
+      ,[shipId]
+      ,[FleetId]
+	  ,stepId 
+  FROM [dbo].[RouteShips]
+go
+go
+IF EXISTS(SELECT 1 
+          FROM   sys.objects 
+          WHERE  NAME = N'v_ChatLog' 
+                 AND type = N'V') 
+  BEGIN 
+      DROP VIEW [engine].[v_ChatLog]
+  END 
+
+go
+CREATE VIEW [engine].[v_ChatLog] 
+AS
+SELECT id
+	  ,userId
+      ,chatMessage
+      ,eventDatetime
+  FROM [dbo].ChatLog
+go

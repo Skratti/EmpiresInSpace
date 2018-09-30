@@ -16,11 +16,18 @@ IF EXISTS(SELECT *
 drop table TradeOfferDetails
 drop table TradeOffers
 
+drop table [dbo].[ChatLog]
 drop table [dbo].[ServerEvents]
 
 drop table [dbo].[MessageBody]
 drop table [dbo].[MessageParticipants]
 drop table [dbo].[MessageHeads]
+
+drop TABLE [dbo].[RouteShips]
+drop TABLE [dbo].[RouteStopActions] 
+drop TABLE [dbo].[RouteElements] 
+drop TABLE [dbo].[Routes]
+
 drop TRIGGER TRIGGER_Alliances_Delete_FKs
 drop TRIGGER TRIGGER_Users_Delete_FKs
 drop table [dbo].[colonyStock]
@@ -58,6 +65,7 @@ drop table CommunicationNodeMessages
 drop table dbo.[CommunicationNode]
 
 drop table [dbo].[UserStarMap]			
+
 
 drop table [dbo].[AllianceContacts]
 drop table [dbo].[AllianceInvites]	
@@ -2212,6 +2220,84 @@ go
 print 'trigger [dbo].[TRIGGER_Users_Delete_FKs] created.'
 go
 
+
+
+/*
+[Routes]
+route    trade  player  name
+   1       1      123    unnamed
+
+RouteElements
+routeId	 stepId	  X    Y    Stop
+	1		1	5131  5021   0
+	1		2	5131  5022   0
+	1		3	5132  5023   1
+
+
+  RouteStopActions
+  route  stopId   good   amount
+    1       1      3        40
+    1       1      4        40
+	1       1      7       -100
+*/
+-- insert into Routes select 1,1,157,'FirstTradeRoute'
+CREATE TABLE [dbo].[Routes]  (
+	routeId INT NOT NULL UNIQUE,
+	tradeRoute bit not null,
+	userid int references users(id) on update cascade on delete cascade,
+	[name] nvarchar(255)
+	constraint Routes_primary primary key (routeId)		
+);
+
+print 'table [dbo].[Routes] created.'
+go
+
+-- insert into RouteElements select 1,1,5005,5004,null, null, 1 union all select  1,2,5005,5005,null, null, 0 union all select  1,3,5005,5006,null, null, 2
+CREATE TABLE [dbo].[RouteElements]  (
+	routeId INT NOT NULL references [Routes](routeId) on update cascade on delete cascade,
+	stepId smallint not null,
+	starX int not null,
+	starY int not null,
+	systemX int,
+	systemY int,
+	stopNo INT not null
+
+	constraint RouteElements_primary primary key (routeId, stepId)		
+);
+
+print 'table [dbo].[RouteElements] created.'
+go
+
+--- insert into RouteStopActions select 1,1,10,80 union all select  1,2,10,-80
+CREATE TABLE [dbo].[RouteStopActions]  (
+	routeId INT NOT NULL references [Routes](routeId) on update cascade on delete cascade,
+	stepId smallint not null,
+	goodId smallint not null references [Goods](id) on update cascade on delete cascade,
+	amount int not null
+);
+go
+create clustered index RouteStopActions_Index ON [RouteStopActions](routeId,stepId );
+go
+print 'table [dbo].[RouteStopActions] created.'
+go
+--drop  TABLE [dbo].[RouteShips]
+--   insert into RouteShips select 1, 66, null, null
+CREATE TABLE [dbo].[RouteShips]  (
+	routeId INT NOT NULL references [Routes](routeId) on update cascade on delete cascade,
+	shipId int,
+	FleetId int,
+	stepId smallint
+);
+go
+create clustered index RouteShips_Index ON RouteShips(routeId );
+go
+print 'table [dbo].[RouteShips] created.'
+go
+
+--RouteShips
+--RouteId ShipId FleetId
+go
+
 --ALTER TABLE [MessageHeads] ADD CONSTRAINT DF_DT_MessageHeads DEFAULT GETDATE() FOR sendingDate
 CREATE TABLE [dbo].[MessageHeads]  (
 	id INT NOT NULL UNIQUE identity(1,1),		
@@ -2352,7 +2438,15 @@ go
 print 'table [dbo].[ServerEvents] created.'
 go
 
-
+create table [ChatLog]
+(
+id int not null,
+userId int 
+		references users(id) on update cascade on delete cascade,
+chatMessage nvarchar(255) not null,
+eventDatetime datetime not null default GETDATE(),
+)
+go
 
 CREATE TABLE [dbo].[numbers](
 	[number] [int] NOT NULL

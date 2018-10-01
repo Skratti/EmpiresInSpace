@@ -224,8 +224,8 @@ AS
          comment, 
          module 
   FROM   [labelsbase]; 
-
 go 
+
 
 IF EXISTS(SELECT 1 
           FROM   sys.objects 
@@ -263,10 +263,22 @@ go
 
 CREATE VIEW [engine].[v_Labels] 
 AS 
-  SELECT id, 
-         languageid, 
-         label 
-  FROM   [labels]; 
+	select
+		LabelsBase.id,
+		LabelsBase.[value] as label,
+		0 as languageId
+	from dbo.LabelsBase
+	union all 
+	select
+		LabelsBase.id,
+		ISNULL(Labels.label,LabelsBase.[value]) as label,
+		Languages.id
+	from dbo.LabelsBase
+	inner join dbo.Languages
+		on Languages.id > 0
+	left join dbo.Labels
+		on  LabelsBase.id = Labels.id
+		and Labels.languageId = dbo.Languages.id 
 
 go 
 

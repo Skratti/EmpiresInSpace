@@ -562,7 +562,7 @@ go
 
 --alter table dbo.[CommunicationNode] add  unformattedName nvarchar(30) not null default ''
 CREATE TABLE [dbo].[CommunicationNode] (
-	[id] int not null UNIQUE identity(0,1), 
+	[id] int not null UNIQUE, 
 	userId  int  --owner 
 		references [dbo].[Users] (id) on delete set null,
 	--position geometry NOT NULL,	
@@ -783,7 +783,7 @@ go
 --drop TABLE [dbo].[SurfaceImages]
 go
 CREATE TABLE [dbo].[SurfaceImages] (
-	id SMALLINT NOT NULL UNIQUE identity(1,1),	
+	id SMALLINT NOT NULL,	
 	[name] nvarchar(55),		
 	seed int not null,
 	objectimageUrl nvarchar(128) DEFAULT ''
@@ -798,7 +798,7 @@ go
 --drop TABLE [dbo].[surfaceDefaultMap]
 go
 CREATE TABLE [dbo].[surfaceDefaultMap](
-	id SMALLINT NOT NULL references [dbo].[SurfaceImages](id) on update cascade on delete cascade ,	
+	id SMALLINT NOT NULL ,	
 	[X] [int] NULL,
 	[Y] [int] NULL,
 	[surfaceObjectId] [int] NULL
@@ -1953,7 +1953,7 @@ go
 
 CREATE TABLE  [dbo].TradeOffers
 (
-	id INT UNIQUE identity (1,1),		 
+	id INT UNIQUE,		 
 	commNodeId int 	not null 
 		references [dbo].CommunicationNode (id) on delete cascade,
 	spaceObjectId Int NOT NULL,-- CHECK ((spaceObjectType = 0 and (select top(1) shipId from Ships where Ships.id = spaceObjectId) = 1) or spaceObjectType = 1) ,

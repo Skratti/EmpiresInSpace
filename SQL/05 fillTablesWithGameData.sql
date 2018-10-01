@@ -20,7 +20,7 @@ select 2, N'Gelber Zwerg', N'SunYellow.png', 1 union all
 select 3, N'Blauer Zwerg', N'SunBlue.png', 1 union all
 select 4, N'SunDeepPink', N'SunDeepPink.png', 1 union all
 select 5, N'SunGreenYellow', N'SunGreenYellow.png', 1 union all
-select 6, N'SunIndi', N'SunIndi.png', 1 union all
+select 6, N'SunIndigo', N'SunIndigo.png', 1 union all
 select 10, N'Asteroidenfeld', N'11.png', 1 union all
 select 11, N'dichtes Asteroidenfeld', N'12.png', 1 union all
 select 13, N'Roter Zwerg', N'SunRed.png', 1 union all
@@ -301,7 +301,7 @@ select 2004, N'Shield I', N'Shield.png', 1 union all
 select 2005, N'Laser I', N'WeaponLaser.png', 1 union all
 select 2006, N'Missile I', N'WeaponRocket.png', 1 union all
 select 2007, N'Mass Driver I', N'WeaponMassDriver.png', 1 union all
-select 2008, N'Car I', N'Car.png', 1 union all
+select 2008, N'Cargo I', N'Cargo.png', 1 union all
 select 2009, N'System Engines I', N'Impuls.png', 1 union all
 select 2010, N'Hyper Engines I', N'Hyper.png', 1 union all
 select 2011, N'System Batteries I', N'Engine.png', 1 union all
@@ -320,7 +320,7 @@ select 2104, N'Shield II', N'Shield.png', 1 union all
 select 2105, N'Laser II', N'WeaponLaser.png', 1 union all
 select 2106, N'Missile II', N'WeaponRocket.png', 1 union all
 select 2107, N'Mass Driver II', N'WeaponMassDriver.png', 1 union all
-select 2108, N'Car II', N'Car.png', 1 union all
+select 2108, N'Cargo II', N'Cargo.png', 1 union all
 select 2109, N'System Engines II', N'Impuls.png', 1 union all
 select 2110, N'Hyper Engines II', N'Hyper.png', 1 union all
 select 2111, N'System Batteries II', N'Engine.png', 1 union all
@@ -333,7 +333,7 @@ select 2204, N'Shield III', N'Shield.png', 1 union all
 select 2205, N'Laser III', N'WeaponLaser.png', 1 union all
 select 2206, N'Missile III', N'WeaponRocket.png', 1 union all
 select 2207, N'Mass Driver III', N'WeaponMassDriver.png', 1 union all
-select 2208, N'Car III', N'Car.png', 1 union all
+select 2208, N'Car III', N'Cargo.png', 1 union all
 select 2209, N'System Engines III', N'Impuls.png', 1 union all
 select 2210, N'Hyper Engines III', N'Hyper.png', 1 union all
 select 2215, N'Scanner III', N'Scanner.png', 1 union all
@@ -345,7 +345,7 @@ select 3104, N'Scandium Shield I', N'Shield.png', 1 union all
 select 3105, N'Holmium Laser I', N'WeaponLaser.png', 1 union all
 select 3106, N'Yttrium Laser', N'WeaponRocket.png', 1 union all
 select 3107, N'Lutetium Laser', N'WeaponMassDriver.png', 1 union all
-select 3108, N'Yttrium Car I', N'Car.png', 1 union all
+select 3108, N'Yttrium Car I', N'Cargo.png', 1 union all
 select 3109, N'Lutetium System Engines I', N'Impuls.png', 1 union all
 select 3110, N'Yttrium Hyper Engines I', N'Hyper.png', 1 union all
 select 3115, N'Lutetium Scanner I', N'Scanner.png', 1 union all
@@ -356,7 +356,7 @@ select 3204, N'Adv. Shield', N'Shield.png', 1 union all
 select 3205, N'Adv. Laser', N'WeaponLaser.png', 1 union all
 select 3206, N'Adv. Laser', N'WeaponRocket.png', 1 union all
 select 3207, N'Adv. Laser', N'WeaponMassDriver.png', 1 union all
-select 3208, N'Adv. Car', N'Car.png', 1 union all
+select 3208, N'Adv. Car', N'Cargo.png', 1 union all
 select 3209, N'Adv. System Engines', N'Impuls.png', 1 union all
 select 3210, N'Adv. Hyper Engines', N'Hyper.png', 1 union all
 select 3215, N'Adv. Scanner', N'Scanner.png', 1 union all
@@ -379,15 +379,15 @@ select 5001, N'Nebula Blue', N'Starmap/NebulaBlue240.png', 1 union all
 select 5002, N'Nebula Cyan', N'Starmap/NebulaCyan240.png', 1 union all
 select 5003, N'Nebula Yellow', N'Starmap/NebulaYellow240.png', 1 union all
 select 5004, N'Nebula Red', N'Starmap/NebulaRed240.png', 1 union all
-select 5200, N'BorderLightGreyTileset', N'BorderLightGreyTileset.png', 1 union all
-select 5400, N'BorderDarkBlueTileset', N'BorderDarkBlueTileset.png', 1 union all
-select 5600, N'BorderLightBlueTileset', N'BorderLightBlueTileset.png', 1 union all
-select 5800, N'BorderDarkGreenTileset', N'BorderDarkGreenTileset.png', 1 union all
-select 6000, N'BorderLightGreenTileset', N'BorderLightGreenTileset.png', 1 union all
-select 6200, N'BorderDarkRedTileset', N'BorderDarkRedTileset.png', 1 union all
-select 6400, N'BorderLightRedTileset', N'BorderLightRedTileset.png', 1 union all
-select 6600, N'BorderOrangeTileset', N'BorderOrangeTileset.png', 1 union all
-select 6800, N'BorderYellowTileset', N'BorderYellowTileset.png', 1 union all
+select 5200, N'BorderLightGreyTileset', N'Borders/BorderLightGreyTileset.png', 1 union all
+select 5400, N'BorderDarkBlueTileset', N'Borders/BorderDarkBlueTileset.png', 1 union all
+select 5600, N'BorderLightBlueTileset', N'Borders/BorderLightBlueTileset.png', 1 union all
+select 5800, N'BorderDarkGreenTileset', N'Borders/BorderDarkGreenTileset.png', 1 union all
+select 6000, N'BorderLightGreenTileset', N'Borders/BorderLightGreenTileset.png', 1 union all
+select 6200, N'BorderDarkRedTileset', N'Borders/BorderDarkRedTileset.png', 1 union all
+select 6400, N'BorderLightRedTileset', N'Borders/BorderLightRedTileset.png', 1 union all
+select 6600, N'BorderOrangeTileset', N'Borders/BorderOrangeTileset.png', 1 union all
+select 6800, N'BorderYellowTileset', N'Borders/BorderYellowTileset.png', 1 union all
 select 7000, N'BorderYellowGreenTileset', N'Borders/BorderYellowGreenTileset.png', 1 union all
 select 7200, N'BorderWhiteTileset', N'Borders/BorderWhiteTileset.png', 1 union all
 select 7400, N'BorderDarkGreyTileset', N'Borders/BorderDarkGreyTileset.png', 1 union all

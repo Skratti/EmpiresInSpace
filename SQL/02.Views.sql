@@ -1076,6 +1076,47 @@ go
 
 IF EXISTS(SELECT 1 
           FROM   sys.objects 
+          WHERE  NAME = N'v_MessageParticipants' 
+                 AND type = N'V') 
+  BEGIN 
+      DROP VIEW [engine].[v_MessageParticipants] 
+  END 
+
+go 
+
+CREATE VIEW [engine].[v_MessageParticipants] 
+AS 
+  SELECT headerId, 
+         participant, 
+         [read]
+  FROM   [MessageParticipants]; 
+
+go 
+
+
+IF EXISTS(SELECT 1 
+          FROM   sys.objects 
+          WHERE  NAME = N'v_MessageBody' 
+                 AND type = N'V') 
+  BEGIN 
+      DROP VIEW [engine].[v_MessageBody] 
+  END 
+
+go 
+
+CREATE VIEW [engine].[v_MessageBody] 
+AS 
+  SELECT headerid, 
+         [message],
+		 messagePart,
+		 sender,
+		 sendingDate
+  FROM   [messagebody]; 
+
+go 
+
+IF EXISTS(SELECT 1 
+          FROM   sys.objects 
           WHERE  NAME = N'v_BuildOptions' 
                  AND type = N'V') 
   BEGIN 
@@ -1155,23 +1196,7 @@ AS
 
 go 
 
-IF EXISTS(SELECT 1 
-          FROM   sys.objects 
-          WHERE  NAME = N'v_MessageBody' 
-                 AND type = N'V') 
-  BEGIN 
-      DROP VIEW [engine].[v_MessageBody] 
-  END 
 
-go 
-
-CREATE VIEW [engine].[v_MessageBody] 
-AS 
-  SELECT headerid, 
-         message 
-  FROM   [messagebody]; 
-
-go 
 
 IF EXISTS(SELECT 1 
           FROM   sys.objects 

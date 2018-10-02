@@ -2015,7 +2015,7 @@ CREATE TABLE [dbo].[Colonies]  (
 	userId int NOT NULL
 		references users(id) on update cascade on delete cascade,	
 	[name] character varying(63) DEFAULT 'Colony' NOT NULL,		
-	storage SMALLINT DEFAULT 0 NOT NULL,
+	storage INT DEFAULT 0 NOT NULL,
 	scanRange TINYINT DEFAULT 2 NOT NULL,
 	--scanBox geometry,		
 	starId INT NOT NULL

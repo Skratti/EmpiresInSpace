@@ -1461,17 +1461,36 @@ begin
 end
 go
 
-IF OBJECT_ID('[engine].MessageMerge', 'P') IS NOT NULL  DROP procedure [engine].MessageMerge;
 
+
+IF OBJECT_ID('[engine].MessagePartMerge', 'P') IS NOT NULL  DROP procedure [engine].MessagePartMerge;
+IF OBJECT_ID('[engine].[MessageParticipantMerge]', 'P') IS NOT NULL  DROP procedure [engine].[MessageParticipantMerge];
+IF OBJECT_ID('[engine].MessageMerge', 'P') IS NOT NULL  DROP procedure [engine].MessageMerge;
+IF type_id('[engine].[MessageBodyType]') IS NOT NULL  DROP TYPE [engine].[MessageBodyType]; 
+IF type_id('[engine].[MessageParticipantType]') IS NOT NULL  DROP TYPE [engine].[MessageParticipantType]; 
 go
--- is alwys called only for one template. TYBLE TYPES are just used to encapsulate the fields
--- Merge is used to detect if update or insert is needed.
+
+CREATE TYPE [engine].[MessageParticipantType] AS TABLE
+     ( headerId int ,
+	participant int ,
+	[read] bit)
+go
+
+CREATE TYPE [engine].[MessageBodyType] AS TABLE
+    ( [headerId] int ,
+	[message] [nvarchar](4000),
+	[messagePart] [int],
+	[sender] [int] ,
+	[sendingDate] [datetime])
+go
+
 create procedure [engine].MessageMerge
 	(@messageId int,
-	@sender int,
-	@receiver int,
+	@sender int,	
 	@header nvarchar(127),
-	@body nvarchar(4000))
+	@dateTime datetime,
+	@messageParticipants [engine].[MessageParticipantType] READONLY,
+	@messageParts [engine].[MessageBodyType] READONLY)
 as
 begin	
 	/*
@@ -1482,31 +1501,95 @@ begin
 		rollback tran
 	*/
 	
-	with messageHead as ( select @messageId as messageId, @sender as sender , @receiver as receiver , @header as header) 
+	with messageHead as ( select @messageId as messageId, @sender as sender, @header as header, @dateTime as messageDT) 
 	MERGE  [dbo].[MessageHeads]
 	USING messageHead
 	ON ( [dbo].[MessageHeads].id = messageHead.messageId )
 	WHEN MATCHED
-		THEN UPDATE SET 			 			
-		  [sender] = messageHead.sender,
-		  [addressee] = messageHead.receiver,
+		THEN UPDATE SET 			 				  
 		  [headline] = messageHead.header
 		WHEN NOT MATCHED  
-			THEN INSERT   (id, [sender], [addressee], [headline])
-			 VALUES ( messageHead.messageId , messageHead.sender, messageHead.receiver, messageHead.header);
+			THEN INSERT   (id, [sender], [headline], sendingDate)
+			 VALUES ( messageHead.messageId , messageHead.sender, messageHead.header, messageHead.messageDT );
 
-	with messageBodyCTE as ( select @messageId as messageId, @body as messageBody) 
+	MERGE  [dbo].MessageParticipants
+	USING @messageParticipants AS messageParticipantsInput
+	ON ( [dbo].MessageParticipants.headerId = messageParticipantsInput.headerId and [dbo].MessageParticipants.participant = messageParticipantsInput.participant )
+	WHEN MATCHED
+		THEN UPDATE SET 			 
+			[dbo].MessageParticipants.[read]  = messageParticipantsInput.[read] 
+	WHEN NOT MATCHED
+		THEN INSERT  (
+				headerId  ,		
+				participant  ,
+				[read] )
+			 VALUES ( 
+				messageParticipantsInput.headerId,
+				messageParticipantsInput.participant ,
+				messageParticipantsInput.[read] );
+
 	MERGE  [dbo].[MessageBody]
-	USING messageBodyCTE
-	ON ( [dbo].[MessageBody].[headerId] = messageBodyCTE.messageId )
+	USING @messageParts as messageParts
+	ON ( [dbo].[MessageBody].[headerId] = messageParts.[headerId] AND  [dbo].[MessageBody].[messagePart] =  messageParts.[messagePart] )
 	WHEN MATCHED
 		THEN UPDATE SET 			 			
-		  [message] = messageBodyCTE.messageBody
+		  [message] = messageParts.[message]
 		WHEN NOT MATCHED  
-			THEN INSERT   ([headerId], [message])
-			 VALUES ( messageBodyCTE.messageId , messageBodyCTE.messageBody);
+			THEN INSERT   ([headerId], [messagePart], [message], [sender], [sendingDate])
+			 VALUES ( messageParts.[headerId] , 
+				messageParts.[messagePart],
+				messageParts.[message],
+				messageParts.[sender],
+				messageParts.[sendingDate]);
+
 end
 go
+
+create procedure [engine].[MessageParticipantMerge]
+	(@messageParticipants [engine].[MessageParticipantType] READONLY)
+as
+begin	
+
+	MERGE  [dbo].MessageParticipants
+	USING @messageParticipants AS messageParticipantsInput
+	ON ( [dbo].MessageParticipants.headerId = messageParticipantsInput.headerId and [dbo].MessageParticipants.participant = messageParticipantsInput.participant )
+	WHEN MATCHED
+		THEN UPDATE SET 			 
+			[dbo].MessageParticipants.[read]  = messageParticipantsInput.[read] 
+	WHEN NOT MATCHED
+		THEN INSERT  (
+				headerId  ,		
+				participant  ,
+				[read] )
+			 VALUES ( 
+				messageParticipantsInput.headerId,
+				messageParticipantsInput.participant ,
+				messageParticipantsInput.[read] );
+
+
+end
+go
+
+create procedure [engine].MessagePartMerge
+	(@messageParts [engine].[MessageBodyType] READONLY)
+as
+begin	
+	MERGE  [dbo].[MessageBody]
+	USING @messageParts as messageParts
+	ON ( [dbo].[MessageBody].[headerId] = messageParts.[headerId] AND  [dbo].[MessageBody].[messagePart] =  messageParts.[messagePart] )
+	WHEN MATCHED
+		THEN UPDATE SET 			 			
+		  [message] = messageParts.[message]
+		WHEN NOT MATCHED  
+			THEN INSERT   ([headerId], [messagePart], [message], [sender], [sendingDate])
+			 VALUES ( messageParts.[headerId] , 
+				messageParts.[messagePart],
+				messageParts.[message],
+				messageParts.[sender],
+				messageParts.[sendingDate]);
+end
+go
+
 
 IF OBJECT_ID('[engine].CommNodeMessageMerge', 'P') IS NOT NULL  DROP procedure [engine].CommNodeMessageMerge;
 

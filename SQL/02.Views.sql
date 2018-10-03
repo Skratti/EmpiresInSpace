@@ -1065,9 +1065,7 @@ CREATE VIEW [engine].[v_MessageHeads]
 AS 
   SELECT id, 
          sender, 
-         addressee, 
          headline, 
-         [read], 
          messagetype, 
          sendingdate 
   FROM   [messageheads]; 

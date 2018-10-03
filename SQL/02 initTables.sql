@@ -2300,26 +2300,23 @@ go
 
 --ALTER TABLE [MessageHeads] ADD CONSTRAINT DF_DT_MessageHeads DEFAULT GETDATE() FOR sendingDate
 CREATE TABLE [dbo].[MessageHeads]  (
-	id INT NOT NULL UNIQUE identity(1,1),		
+	id INT NOT NULL UNIQUE,		
 	sender int 
-		references users(id) on update cascade on delete SET NULL,
-	addressee int NOT NULL,			
-	[headline] nvarchar(127) DEFAULT 'Headline' NOT NULL,		
-	[read] bit DEFAULT 0 NOT NULL,			
+		references users(id) on update cascade on delete SET NULL,		
+	[headline] nvarchar(127) DEFAULT 'Headline' NOT NULL,				
 	messageType smallInt not null default 1,  -- 10 Allgemein , 20 Produktion ,  30 Handel , 40 Diplomatie , 50 Kampf 
 	sendingDate datetime not null default GETDATE()
 	constraint MessageHeads_primary primary key (id)		
 );
 create index MessageHeads_sender ON [MessageHeads](sender);
-create index MessageHeads_addressee ON [MessageHeads](addressee);
 print 'table [dbo].[MessageHeads] created.'
 go
 
 --drop table  [dbo].[MessageParticipants]
 CREATE TABLE [dbo].[MessageParticipants]  (
-	headerId INT NOT NULL 	references [MessageHeads](id) on update no action on delete cascade,
-	participant INT NOT NULL references users(id) on update cascade on delete cascade,	
-	[read] bit DEFAULT 0 NOT NULL
+		headerId INT NOT NULL 	references [MessageHeads](id) on update no action on delete cascade,
+		participant INT NOT NULL references users(id) on update cascade on delete cascade,	
+		[read] bit DEFAULT 0 NOT NULL
 		
 );
 create index MessageParticipants_Head ON [MessageParticipants](headerId);

@@ -561,7 +561,7 @@ INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (1
 
 --Forschungslabor
 INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (15, 6, -10) --  Energie
-INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (15, 8, -35)  --  Population
+INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (15, 8, -40)  --  Population
 INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (15, 12, 1)  -- Research pints
 
 -- Häuser

@@ -20,7 +20,7 @@ BEGIN TRAN
 
 --DECLARE @DBServerName   VARCHAR(100) = 'MyServer\Example'  
 DECLARE @DBServerName   VARCHAR(100) = '.'  
-DECLARE @DBName VARCHAR(100) = 'Game2018'  
+DECLARE @DBName VARCHAR(100) = 'game2018test'  
 
 DECLARE @FilePath   VARCHAR(200) = 'C:\temp\SQL\' 
 --DECLARE @FilePath   VARCHAR(200) = 'C:\Users\Admin\Documents\GitHub\EmpiresInSpace\SQL\'

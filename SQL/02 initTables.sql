@@ -2300,7 +2300,7 @@ go
 
 --ALTER TABLE [MessageHeads] ADD CONSTRAINT DF_DT_MessageHeads DEFAULT GETDATE() FOR sendingDate
 CREATE TABLE [dbo].[MessageHeads]  (
-	id INT NOT NULL UNIQUE,		
+	id INT NOT NULL,		
 	sender int 
 		references users(id) on update cascade on delete SET NULL,		
 	[headline] nvarchar(127) DEFAULT 'Headline' NOT NULL,				

@@ -1296,6 +1296,16 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (1020, N'L
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (1021, N'Yttrium Module', N'', 4)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (1022, N'Lutetium Module', N'', 4)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (1023, N'Collect material from nebula', N'', 4)
+
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (1024, N'Colony Goods', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (1025, N'Build Ship Modules', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (1026, N'Order', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (1027, N'Build', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (1028, N'Select Ship modules to build', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (1029, N'', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (1030, N'', N'', 7)
+
+
 --delete from [LabelsBase] where id > 1001
 --update [dbo].[LabelsBase] set [value] =  N'Construction cost' where id = 977
  

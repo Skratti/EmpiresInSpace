@@ -1302,8 +1302,14 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (1025, N'B
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (1026, N'Order', N'', 7)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (1027, N'Build', N'', 7)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (1028, N'Select Ship modules to build', N'', 7)
-INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (1029, N'', N'', 7)
-INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (1030, N'', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (1029, N'Did you know?', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (1030, N'You can create fleets by dragging one ship upon another in the lower units area.', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (1031, N'When you have a ship selected, you can use the space key to finish its order for this turn.', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (1032, N'When you have a ship selected, you can use the d key to have the ship guard the current position.', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (1033, N'Ship shields reduce the damage by a certain percentage.', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (1034, N'Lasers are best versus small fast vessels, mass drivers are best fighting big slow ships or even space stations.', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (1035, N'You can customize your profile by selecting youself in the contacts list.', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (1036, N'Keep an eye on your production and research modifiers. Overextension might cripple your economy.', N'', 7)
 
 
 --delete from [LabelsBase] where id > 1001

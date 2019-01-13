@@ -1484,7 +1484,7 @@ CREATE TYPE [engine].[MessageBodyType] AS TABLE
 	[sendingDate] [datetime])
 go
 
-create procedure [engine].MessageMerge
+create procedure [engine].[MessageMerge]
 	(@messageId int,
 	@sender int,	
 	@header nvarchar(127),
@@ -1509,8 +1509,8 @@ begin
 		THEN UPDATE SET 			 				  
 		  [headline] = messageHead.header
 		WHEN NOT MATCHED  
-			THEN INSERT   (id, [sender], [headline], sendingDate)
-			 VALUES ( messageHead.messageId , messageHead.sender, messageHead.header, messageHead.messageDT );
+			THEN INSERT   (id, [sender], [headline], sendingDate, messageType)
+			 VALUES ( messageHead.messageId , messageHead.sender, messageHead.header, messageHead.messageDT, 10 );
 
 	MERGE  [dbo].MessageParticipants
 	USING @messageParticipants AS messageParticipantsInput

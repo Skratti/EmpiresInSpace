@@ -346,6 +346,9 @@ CREATE TABLE [dbo].[Users]			  (
 	aiRelation  int not null default 1,
 	lastReadGalactivEvent int not null default 0,
 	[ProfileUrl] [nvarchar](300) NOT NULL DEFAULT (N'images/interface/defaultprofile.png'),
+	showCombatPopup int default 1,
+	showCombatFast int default 0,
+
 	-- alter table [Users] add 	[ProfileUrl] [nvarchar](300) NOT NULL DEFAULT (N'images/interface/defaultprofile.png')
 	--researchSpent int not null default 0,  -- redundant, can be calculated by summing all researches of that user
 	constraint Users_primary primary key nonclustered (id)

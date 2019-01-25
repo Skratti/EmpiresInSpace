@@ -438,6 +438,8 @@ AS
 	  ,aiRelation
 	  ,lastReadGalactivEvent
 	  ,ProfileUrl
+	  ,showCombatPopup
+	  ,showCombatFast
   /*id, 
          username,                   
          activity, 

@@ -1310,7 +1310,9 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (1033, N'S
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (1034, N'Lasers are best versus small fast vessels, mass drivers are best fighting big slow ships or even space stations.', N'', 7)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (1035, N'You can customize your profile by selecting youself in the contacts list.', N'', 7)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (1036, N'Keep an eye on your production and research modifiers. Overextension might cripple your economy.', N'', 7)
-
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (1037, N'Trading can get you powerful ship modules', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (1100, N'Show combat popup when attacking', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (1101, N'Show fast combat evaluation', N'', 7)
 
 --delete from [LabelsBase] where id > 1001
 --update [dbo].[LabelsBase] set [value] =  N'Construction cost' where id = 977

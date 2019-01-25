@@ -641,7 +641,9 @@ CREATE TYPE [engine].userMergeType AS TABLE
 	player_ip nvarchar(55),
 	[description] nvarchar(4000),
 	lastReadGalactivEvent int ,
-	ProfileUrl nvarchar(300)
+	ProfileUrl nvarchar(300),
+	showCombatPopup int,
+	showCombatFast int
 	)
 
 go
@@ -699,6 +701,8 @@ begin
 		  ,[description]			= sourceUsers.[description]
 		  ,lastReadGalactivEvent	= sourceUsers.lastReadGalactivEvent
 		  ,ProfileUrl				= sourceUsers.ProfileUrl
+		  ,showCombatPopup			= sourceUsers.showCombatPopup
+		  ,showCombatFast			= sourceUsers.showCombatFast
 		WHEN NOT MATCHED  
 			THEN INSERT  (
 			id, [username]		,[activity]			,[locked]		,[user_session]		
@@ -802,6 +806,29 @@ end
 
 go
 
+create procedure [engine].UserResearchDoneMerge
+	(
+	@UserResearches [engine].UserResearchType READONLY,
+	@User [engine].userMergeType READONLY,
+	@UserQuests [engine].UserQuestsType READONLY)
+as
+begin	
+    exec  [engine].UserResearchMerge @UserResearches
+	
+	update dbUsers set 
+		dbUsers.researchPoints = updatedUser.researchPoints, 
+		dbUsers.versionId = updatedUser.versionId 
+	from [dbo].Users as dbUsers
+	inner join @User as updatedUser
+		on	dbUsers.id = updatedUser.id
+		and dbUsers.versionId < updatedUser.versionId
+	
+	exec  [engine].UserQuestsMerge @UserQuests 	
+end
+go
+
+
+
 
 IF OBJECT_ID('[engine].UserQuestsMerge', 'P') IS NOT NULL  DROP procedure [engine].UserQuestsMerge;
 IF type_id('[engine].UserQuestsType') IS NOT NULL  DROP TYPE [engine].UserQuestsType; 
@@ -898,27 +925,6 @@ begin
 			 sourceUserResearchs.isCompleted, 
 			 sourceUserResearchs.investedResearchpoints, 
 			 sourceUserResearchs.researchPriority);
-end
-go
-
-create procedure [engine].UserResearchDoneMerge
-	(
-	@UserResearches [engine].UserResearchType READONLY,
-	@User [engine].userMergeType READONLY,
-	@UserQuests [engine].UserQuestsType READONLY)
-as
-begin	
-    exec  [engine].UserResearchMerge @UserResearches
-	
-	update dbUsers set 
-		dbUsers.researchPoints = updatedUser.researchPoints, 
-		dbUsers.versionId = updatedUser.versionId 
-	from [dbo].Users as dbUsers
-	inner join @User as updatedUser
-		on	dbUsers.id = updatedUser.id
-		and dbUsers.versionId < updatedUser.versionId
-	
-	exec  [engine].UserQuestsMerge @UserQuests 	
 end
 go
 

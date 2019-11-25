@@ -634,7 +634,7 @@ INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (5
 INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (50, 50, 20) --  +Verb. Baumaterial
 
 --Aqua farm
-INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (52, 2, 7) --Farm
+INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (52, 2, 5) --Farm
 INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (52, 6, -15)
 INSERT [dbo].[BuildingProductions] ([buildingId], [goodsId], [amount]) VALUES (52, 8, -10)  -- population
 
@@ -1005,11 +1005,12 @@ INSERT [dbo].[BuildingCosts] ([buildingId], [goodsId], [amount]) VALUES (54, 60,
 
 
 --Arcology 
+--delete from [BuildingCosts] where [buildingId] = 55
 INSERT [dbo].[BuildingCosts] ([buildingId], [goodsId], [amount]) VALUES (55, 7,  70) -- Assembly
-INSERT [dbo].[BuildingCosts] ([buildingId], [goodsId], [amount]) VALUES (55, 1,  30) --  -Baumaterial
-INSERT [dbo].[BuildingCosts] ([buildingId], [goodsId], [amount]) VALUES (55, 10, 70) --  -Stahl
+INSERT [dbo].[BuildingCosts] ([buildingId], [goodsId], [amount]) VALUES (55, 1,  80) --  -Baumaterial
+INSERT [dbo].[BuildingCosts] ([buildingId], [goodsId], [amount]) VALUES (55, 10, 30) --  -Stahl
 INSERT [dbo].[BuildingCosts] ([buildingId], [goodsId], [amount]) VALUES (55, 11, 40)  -- kunststoffe
-
+INSERT [dbo].[BuildingCosts] ([buildingId], [goodsId], [amount]) VALUES (55, 50,  40) --  -Verb. Baumaterial
 
 
 --Orbitals:

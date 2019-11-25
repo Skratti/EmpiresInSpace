@@ -1313,6 +1313,7 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (1036, N'K
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (1037, N'Trading can get you powerful ship modules', N'', 7)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (1100, N'Show combat popup when attacking', N'', 7)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (1101, N'Show fast combat evaluation', N'', 7)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (1102, N'Combat history', N'', 7)
 
 --delete from [LabelsBase] where id > 1001
 --update [dbo].[LabelsBase] set [value] =  N'Construction cost' where id = 977

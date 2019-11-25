@@ -352,12 +352,12 @@ INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (104, 1041
 INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (104, 11, 20)  -- kunststoffe
 
 --Colonizing Module II 
+--delete from [ModulesCosts] where [modulesId] = 23
 INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (23, 1, 60)
 INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (23, 2, 80)  -- Nahrung
 INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (23, 7, 60)
 INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (23, 10, 30)  --metall
-INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (23, 11, 20)  -- kunststoffe
-INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (23, 50, 30)  -- adv bm 2	
+INSERT [dbo].[ModulesCosts] ([modulesId], [goodsId], [amount]) VALUES (23, 11, 40)  -- kunststoffe
 --delete from [ModulesCosts] where [modulesId] = 23
 
 

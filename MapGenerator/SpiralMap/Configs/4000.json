@@ -1,0 +1,39 @@
+﻿{
+
+  //each circle from 1 - 15 is provided with several possible moos, their probability summ up to 100
+  //public enum moonTypes { VeryVolcanic = 0, Volcanic = 1, Desert = 2, Water = 3, Land = 4, Earthlike = 5, Jungle = 6, Barren = 7, Ice = 8, NoAtmosphere = 9, StonyMountain = 10, ThickPosinousAtmosphere = 11 };
+
+  /*
+  public int starsPerArm = 1000;
+        public int nebulaPerArm = 1000;
+        public int Arms = 8;
+        public int starAmount = 8000;
+        public float spin = 1.8f;
+        public double armspread = 0.03d;
+        public double nebulaspread = 0.03d;
+        public double starsAtCenterRatio = 0.6d;
+        public double nebulaAtCenterRatio = 0.6d;
+
+        public float DrawAreaSize = 500.0f;
+        public float NebulaSize = 300.0f;
+  */
+
+  "StarsPerPlayer": 5,
+  "minDistance": 4, //minimum distance between stars. Should be at least 3
+  "distanceBetweenSuns": 6,
+  "starsInRow": 103, // leads to starsInRow^2 suns
+  "xAxis": 618, // 6 * 103 distanceBetweenSuns * starsInRow
+
+  "starsPerArm": 1000,
+  "nebulaPerArm": 1000,
+  "Arms": 8,
+  "starAmount": 8000,
+  "spin": 1.8,
+  "armspread": 0.03,
+  "nebulaspread": 0.03,
+  "starsAtCenterRatio": 0.6,
+  "nebulaAtCenterRatio": 0.6,
+  "DrawAreaSize": 1200,
+  "NebulaSize": 300
+
+}

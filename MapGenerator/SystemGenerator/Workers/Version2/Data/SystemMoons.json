@@ -1,0 +1,473 @@
+﻿{
+
+  //each circle from 1 - 15 is provided with several possible moos, their probability summ up to 100
+  //public enum moonTypes { VeryVolcanic = 0, Volcanic = 1, Desert = 2, Water = 3, Land = 4, Earthlike = 5, Jungle = 6, Barren = 7, Ice = 8, NoAtmosphere = 9, StonyMountain = 10, ThickPosinousAtmosphere = 11 };
+    
+
+
+  "moons": [
+
+     //1: vulcanic 0, toxic 1
+    {
+      "moon": {
+        "planetType": 0,
+        "circle": 1,
+        "probability": 50
+      }
+    },
+    {
+      "moon": {
+        "planetType": 1,
+        "circle": 1,
+        "probability": 50
+      }
+    },
+
+    //2
+     {
+      "moon": {
+        "planetType": 0,
+        "circle": 2,
+        "probability": 50
+      }
+    },
+    {
+      "moon": {
+        "planetType": 1,
+        "circle": 2,
+        "probability": 50
+      }
+    },
+    //3: toxic 1, desert 2 , earthlike 5, NoAtmosphere = 10
+    {
+      "moon": {
+        "planetType": 1,
+        "circle": 3,
+        "probability": 20
+      }
+    },
+    {
+      "moon": {
+        "planetType": 2,
+        "circle": 3,
+        "probability": 20
+      }
+    },
+    {
+      "moon": {
+        "planetType": 5,
+        "circle": 3,
+        "probability": 10
+      }
+    },
+    {
+      "moon": {
+        "planetType": 10,
+        "circle": 3,
+        "probability": 50
+      }
+    },
+
+    //4  desert 2 , earthlike 5 , barren 7, NoAtmosphere = 10
+    {
+      "moon": {
+        "planetType": 2,
+        "circle": 4,
+        "probability": 20
+      }
+    },
+    {
+      "moon": {
+        "planetType": 5,
+        "circle": 4,
+        "probability": 20
+      }
+    },
+    {
+      "moon": {
+        "planetType": 7,
+        "circle": 4,
+        "probability": 20
+      }
+    },
+    {
+      "moon": {
+        "planetType": 10,
+        "circle": 4,
+        "probability": 40
+      }
+    },
+
+    //5  desert 2 , earthlike 5 , barren 7, vulcanic, ice, NoAtmosphere = 10
+    {
+      "moon": {
+        "planetType": 2, //desert
+        "circle": 5,
+        "probability": 15
+      }
+    },
+    {
+      "moon": {
+        "planetType": 5, //earthlike
+        "circle": 5,
+        "probability": 15
+      }
+    },
+    {
+      "moon": {
+        "planetType": 7, //barren
+        "circle": 5,
+        "probability": 15
+      }
+    },
+    {
+      "moon": {
+        "planetType": 0, //vulcan
+        "circle": 5,
+        "probability": 15
+      }
+    },
+    {
+      "moon": {
+        "planetType": 8, //ice
+        "circle": 5,
+        "probability": 15
+      }
+    },
+    {
+      "moon": {
+        "planetType": 10,
+        "circle": 5,
+        "probability": 25
+      }
+    },
+
+    //6  desert 2 , earthlike 5 , barren 7, vulcanic, ice, NoAtmosphere = 10
+    {
+      "moon": {
+        "planetType": 2, //desert
+        "circle": 6,
+        "probability": 15
+      }
+    },
+    {
+      "moon": {
+        "planetType": 5, //earthlike
+        "circle": 6,
+        "probability": 15
+      }
+    },
+    {
+      "moon": {
+        "planetType": 7, //barren
+        "circle": 6,
+        "probability": 15
+      }
+    },
+    {
+      "moon": {
+        "planetType": 0, //vulcan
+        "circle": 6,
+        "probability": 15
+      }
+    },
+    {
+      "moon": {
+        "planetType": 8, //ice
+        "circle": 6,
+        "probability": 15
+      }
+    },
+    {
+      "moon": {
+        "planetType": 10,
+        "circle": 6,
+        "probability": 25
+      }
+    },
+
+    //7  desert 2 ,  barren 7, vulcanic, ice, NoAtmosphere = 10
+    {
+      "moon": {
+        "planetType": 2, //desert
+        "circle": 7,
+        "probability": 20
+      }
+    },
+    {
+      "moon": {
+        "planetType": 7, //barren
+        "circle": 7,
+        "probability": 20
+      }
+    },
+    {
+      "moon": {
+        "planetType": 0, //vulcan
+        "circle": 7,
+        "probability": 20
+      }
+    },
+    {
+      "moon": {
+        "planetType": 8, //ice
+        "circle": 7,
+        "probability": 20
+      }
+    },
+    {
+      "moon": {
+        "planetType": 10, //NoAtmosphere
+        "circle": 7,
+        "probability": 20
+      }
+    },
+
+    //8 , barren 7, vulcanic, ice, NoAtmosphere = 10
+    {
+      "moon": {
+        "planetType": 7, //barren
+        "circle": 8,
+        "probability": 30
+      }
+    },
+    {
+      "moon": {
+        "planetType": 0, //vulcan
+        "circle": 8,
+        "probability": 10
+      }
+    },
+    {
+      "moon": {
+        "planetType": 8, //ice
+        "circle": 8,
+        "probability": 20
+      }
+    },
+    {
+      "moon": {
+        "planetType": 10, //NoAtmosphere
+        "circle": 8,
+        "probability": 40
+      }
+    }
+
+
+
+
+
+    ,
+
+    //9 , barren 7, vulcanic, ice, NoAtmosphere = 10
+    {
+      "moon": {
+        "planetType": 7, //barren
+        "circle": 9,
+        "probability": 30
+      }
+    },
+    {
+      "moon": {
+        "planetType": 0, //vulcan
+        "circle": 9,
+        "probability": 10
+      }
+    },
+    {
+      "moon": {
+        "planetType": 8, //ice
+        "circle": 9,
+        "probability": 20
+      }
+    },
+    {
+      "moon": {
+        "planetType": 10, //NoAtmosphere
+        "circle": 9,
+        "probability": 40
+      }
+    },
+
+    //10 , barren 7, vulcanic, ice, NoAtmosphere = 10
+    {
+      "moon": {
+        "planetType": 7, //barren
+        "circle": 10,
+        "probability": 30
+      }
+    },
+    {
+      "moon": {
+        "planetType": 0, //vulcan
+        "circle": 10,
+        "probability": 10
+      }
+    },
+    {
+      "moon": {
+        "planetType": 8, //ice
+        "circle": 10,
+        "probability": 20
+      }
+    },
+    {
+      "moon": {
+        "planetType": 10, //NoAtmosphere
+        "circle": 10,
+        "probability": 40
+      }
+    },
+
+    //11 , barren 7, vulcanic, ice, NoAtmosphere = 10
+    {
+      "moon": {
+        "planetType": 7, //barren
+        "circle": 11,
+        "probability": 30
+      }
+    },
+    {
+      "moon": {
+        "planetType": 0, //vulcan
+        "circle": 11,
+        "probability": 10
+      }
+    },
+    {
+      "moon": {
+        "planetType": 8, //ice
+        "circle": 1,
+        "probability": 20
+      }
+    },
+    {
+      "moon": {
+        "planetType": 10, //NoAtmosphere
+        "circle": 11,
+        "probability": 40
+      }
+    },
+
+    //12 , barren 7, vulcanic, ice, NoAtmosphere = 10
+    {
+      "moon": {
+        "planetType": 7, //barren
+        "circle": 12,
+        "probability": 30
+      }
+    },
+    {
+      "moon": {
+        "planetType": 0, //vulcan
+        "circle": 12,
+        "probability": 10
+      }
+    },
+    {
+      "moon": {
+        "planetType": 8, //ice
+        "circle": 12,
+        "probability": 20
+      }
+    },
+    {
+      "moon": {
+        "planetType": 10, //NoAtmosphere
+        "circle": 12,
+        "probability": 40
+      }
+    },
+
+    //13 , barren 7, vulcanic, ice, NoAtmosphere = 10
+    {
+      "moon": {
+        "planetType": 7, //barren
+        "circle": 13,
+        "probability": 30
+      }
+    },
+    {
+      "moon": {
+        "planetType": 0, //vulcan
+        "circle": 13,
+        "probability": 10
+      }
+    },
+    {
+      "moon": {
+        "planetType": 8, //ice
+        "circle": 13,
+        "probability": 20
+      }
+    },
+    {
+      "moon": {
+        "planetType": 10, //NoAtmosphere
+        "circle": 13,
+        "probability": 40
+      }
+    },
+
+    //14 , barren 7, vulcanic, ice, NoAtmosphere = 10
+    {
+      "moon": {
+        "planetType": 7, //barren
+        "circle": 14,
+        "probability": 30
+      }
+    },
+    {
+      "moon": {
+        "planetType": 0, //vulcan
+        "circle": 14,
+        "probability": 10
+      }
+    },
+    {
+      "moon": {
+        "planetType": 8, //ice
+        "circle": 14,
+        "probability": 20
+      }
+    },
+    {
+      "moon": {
+        "planetType": 10, //NoAtmosphere
+        "circle": 14,
+        "probability": 40
+      }
+    },
+
+    //15 , barren 7, vulcanic, ice, NoAtmosphere = 10
+    {
+      "moon": {
+        "planetType": 7, //barren
+        "circle": 15,
+        "probability": 30
+      }
+    },
+    {
+      "moon": {
+        "planetType": 0, //vulcan
+        "circle": 15,
+        "probability": 10
+      }
+    },
+    {
+      "moon": {
+        "planetType": 8, //ice
+        "circle": 15,
+        "probability": 20
+      }
+    },
+    {
+      "moon": {
+        "planetType": 10, //NoAtmosphere
+        "circle": 15,
+        "probability": 40
+      }
+    }
+
+  ]
+}

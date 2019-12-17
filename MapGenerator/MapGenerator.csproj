@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{44E6784D-464B-40E6-9FC2-D33F9FA1B1B3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MapGenerator</RootNamespace>
+    <AssemblyName>MapGenerator</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DBWriter\DBWriter.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GalaxyMap.cs" />
+    <Compile Include="Helpers.cs" />
+    <Compile Include="Map.cs" />
+    <Compile Include="NebulaFields\NebulaField.cs" />
+    <Compile Include="NebulaFields\NebulaFieldsController.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NebulaFields\NebulaFieldsController.Designer.cs">
+      <DependentUpon>NebulaFieldsController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NebulaFields\NebulaFieldsWorker.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="SpiralMap\SpiralController.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SpiralMap\SpiralController.Designer.cs">
+      <DependentUpon>SpiralController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SpiralMap\SpiralWorker.cs" />
+    <Compile Include="Star.cs" />
+    <Compile Include="StarGenerator.cs" />
+    <Compile Include="SystemGenerator\SolarSystem.cs" />
+    <Compile Include="SystemGenerator\SystemGeneratorController.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystemGenerator\SystemGeneratorController.Designer.cs">
+      <DependentUpon>SystemGeneratorController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemGenerator\Workers\Version1\SystemGeneratorWorker.cs" />
+    <Compile Include="SystemGenerator\Workers\Version2\SystemgeneratorWorker2.cs" />
+    <Compile Include="SystemGenerator\Workers\Worker.cs" />
+    <Compile Include="WellSpreadMap\SpreadController.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WellSpreadMap\SpreadController.Designer.cs">
+      <DependentUpon>SpreadController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WellSpreadMap\SpreadWorker.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NebulaFields\NebulaFieldsController.resx">
+      <DependentUpon>NebulaFieldsController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="SpiralMap\SpiralController.resx">
+      <DependentUpon>SpiralController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemGenerator\SystemGeneratorController.resx">
+      <DependentUpon>SystemGeneratorController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WellSpreadMap\SpreadController.resx">
+      <DependentUpon>SpreadController.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Settings\4000.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Settings\60.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="SpiralMap\Configs\60.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="SpiralMap\Configs\4000.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="SystemGenerator\Workers\Version2\Data\SystemMoons.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="SystemGenerator\Workers\Version2\Data\SystemTwoGasGiant.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="SystemGenerator\Workers\Version2\Data\SystemNoGasGiant.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="SystemGenerator\Workers\Version2\Data\SystemTypes.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

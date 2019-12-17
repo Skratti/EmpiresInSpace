@@ -804,34 +804,12 @@ begin
 			 */	
 end
 
+
 go
-
-create procedure [engine].UserResearchDoneMerge
-	(
-	@UserResearches [engine].UserResearchType READONLY,
-	@User [engine].userMergeType READONLY,
-	@UserQuests [engine].UserQuestsType READONLY)
-as
-begin	
-    exec  [engine].UserResearchMerge @UserResearches
-	
-	update dbUsers set 
-		dbUsers.researchPoints = updatedUser.researchPoints, 
-		dbUsers.versionId = updatedUser.versionId 
-	from [dbo].Users as dbUsers
-	inner join @User as updatedUser
-		on	dbUsers.id = updatedUser.id
-		and dbUsers.versionId < updatedUser.versionId
-	
-	exec  [engine].UserQuestsMerge @UserQuests 	
-end
-go
-
-
-
 
 IF OBJECT_ID('[engine].UserQuestsMerge', 'P') IS NOT NULL  DROP procedure [engine].UserQuestsMerge;
 IF type_id('[engine].UserQuestsType') IS NOT NULL  DROP TYPE [engine].UserQuestsType; 
+go
 
 go 
 CREATE TYPE [engine].UserQuestsType AS TABLE
@@ -841,6 +819,8 @@ CREATE TYPE [engine].UserQuestsType AS TABLE
 		isCompleted  bit 
 		 )
 go
+
+
 -- is always called only for one user. TABLE TYPES are just used to encapsulate the fields
 -- Merge is used to detect if update or insert is needed.
 create procedure [engine].UserQuestsMerge
@@ -877,10 +857,12 @@ begin
 end
 go
 
+
 IF OBJECT_ID('[engine].UserResearchMerge', 'P') IS NOT NULL  DROP procedure [engine].UserResearchMerge;
 IF type_id('[engine].UserResearchType') IS NOT NULL  DROP TYPE [engine].UserResearchType; 
+
 go
- 
+
 CREATE TYPE [engine].UserResearchType AS TABLE
     (	userId int,	
 		researchId smallint,
@@ -890,6 +872,8 @@ CREATE TYPE [engine].UserResearchType AS TABLE
 		 )
 
 go
+ 
+
 -- is always called only for one user. TABLE TYPES are just used to encapsulate the fields
 -- Merge is used to detect if update or insert is needed.
 create procedure [engine].UserResearchMerge
@@ -926,6 +910,34 @@ begin
 			 sourceUserResearchs.investedResearchpoints, 
 			 sourceUserResearchs.researchPriority);
 end
+go
+
+
+create procedure [engine].UserResearchDoneMerge
+	(
+	@UserResearches [engine].UserResearchType READONLY,
+	@User [engine].userMergeType READONLY,
+	@UserQuests [engine].UserQuestsType READONLY)
+as
+begin	
+    exec  [engine].UserResearchMerge @UserResearches
+	
+	update dbUsers set 
+		dbUsers.researchPoints = updatedUser.researchPoints, 
+		dbUsers.versionId = updatedUser.versionId 
+	from [dbo].Users as dbUsers
+	inner join @User as updatedUser
+		on	dbUsers.id = updatedUser.id
+		and dbUsers.versionId < updatedUser.versionId
+	
+	exec  [engine].UserQuestsMerge @UserQuests 	
+end
+go
+
+
+
+
+
 go
 
 

@@ -1,4 +1,5 @@
 SET QUOTED_IDENTIFIER ON
+print '06 fillLables.sql'
 go
 --1 copy Label file to server, since this script will look in the server file system
 truncate table dbo.Labels

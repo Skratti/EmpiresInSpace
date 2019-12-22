@@ -1,12 +1,14 @@
 SET QUOTED_IDENTIFIER ON
 go
+print '03 LabelsBase.sql'
+
 /* module int not null default 0,
 0 Objects -> part of the objectDescription table.
 1 Research - Forschung	 
 2 Quest		
-3 Buildings - Gebäude
+3 Buildings - GebÃ¤ude
 4 Shipmodudules - Schiffsmodule
-5 Shiphulls- Schiffsrümpfe
+5 Shiphulls- SchiffsrÃ¼mpfe
 6 Goods
 7 Game User Interface
 8 Combat
@@ -189,7 +191,7 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (161, N'Bl
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (162, N'Warehouse construction plan', N'', 1) 
 --delete from LabelsBase where id = 154
 
-INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (163, N'Raze building', N'', 7) --Abreißen
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (163, N'Raze building', N'', 7) --AbreiÃŸen
 
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (164, N'Modules', N'', 2)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (165, N'Modules are the main components of spaceships and sometimes needed to construct special buildings.', N'', 2) 
@@ -288,23 +290,23 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (233, N'Di
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (234, N'Combat', N'Messages', 7)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (235, N'Sent', N'Messages', 7)
 
-INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (236, N'<p>Drag a ship to move it around. Try it out now...</p>', N'', 2) --Um ein Schiff zu bewegen ziehe mit gedrückter Maustaste oder dem Finger vom Schiff auf ein benachbartes Feld. Tue dies nun...
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (236, N'<p>Drag a ship to move it around. Try it out now...</p>', N'', 2) --Um ein Schiff zu bewegen ziehe mit gedrÃ¼ckter Maustaste oder dem Finger vom Schiff auf ein benachbartes Feld. Tue dies nun...
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (237, N'Colonize a world', N'', 2)--Kolonisiere eine Welt
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (238, N'<p>Fly your starship to a colonizable planet in this starsystem.</p>', N'', 2) --Finde einen kolonisierbaren Planeten und fliege das Schiff dorthin.
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (239, N'<p>Use the button in the lower left corner to colonize the planet.</p>', N'', 2) --Benutze nun das Icon links unten um den Planeten zu kolonisieren.
 
-INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (240, N'Switch to the planet surface', N'', 2) --Wechsel zur Planetenoberfläche
-INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (241, N'<p>Click or touch on the planet to switch to the surface view.</p>', N'', 2) --Klicke oder tippe den gerade besiedelten Planeten an um zur Oberflächenansicht zu wechseln.
-INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (242, N'The planet surface', N'', 2) --Die Planetenoberfläche
-INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (243, N'<p>To the left are the currently available buildings.<br>The lower left has major statistics.<br> The bottom center area shows ships in the orbit of this colony<br> and the lower right shows your ressources at this location</p>', N'', 2) --Rechts unten werden Güter angezeigt.Im Baumenü am rechten Rand können die zur Zeit verfügbaren Gebäude zum Bau ausgewählt werden...
-INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (244, N'Construction of buildings', N'', 2) --Gebäudebau
-INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (245, N'<p>Build a Building material plant and a solar energy plant. Use the menu to the left to select a building, then select a location on the planet surface to place the building.</p>', N'', 2) --<p>Baue eine Baumaterialfabrik, ein Sonnenkraftwerk und ein Montagewerk. Wähle im Menü auf der linken Seite das Gebäude aus und klicke auf eine freie Fläche auf der Planetenoberfläche um das Gebäude zu bauen</p>
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (240, N'Switch to the planet surface', N'', 2) --Wechsel zur PlanetenoberflÃ¤che
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (241, N'<p>Click or touch on the planet to switch to the surface view.</p>', N'', 2) --Klicke oder tippe den gerade besiedelten Planeten an um zur OberflÃ¤chenansicht zu wechseln.
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (242, N'The planet surface', N'', 2) --Die PlanetenoberflÃ¤che
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (243, N'<p>To the left are the currently available buildings.<br>The lower left has major statistics.<br> The bottom center area shows ships in the orbit of this colony<br> and the lower right shows your ressources at this location</p>', N'', 2) --Rechts unten werden GÃ¼ter angezeigt.Im BaumenÃ¼ am rechten Rand kÃ¶nnen die zur Zeit verfÃ¼gbaren GebÃ¤ude zum Bau ausgewÃ¤hlt werden...
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (244, N'Construction of buildings', N'', 2) --GebÃ¤udebau
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (245, N'<p>Build a Building material plant and a solar energy plant. Use the menu to the left to select a building, then select a location on the planet surface to place the building.</p>', N'', 2) --<p>Baue eine Baumaterialfabrik, ein Sonnenkraftwerk und ein Montagewerk. WÃ¤hle im MenÃ¼ auf der linken Seite das GebÃ¤ude aus und klicke auf eine freie FlÃ¤che auf der PlanetenoberflÃ¤che um das GebÃ¤ude zu bauen</p>
 --delete from  [LabelsBase] where id in (243)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (246, N'The scout', N'', 2)
-INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (247, N'<p>A Pirate ship has been seen over another planet in this solar system.<br><div style="position:relative;left:45%;background: url(images/ScoutPirate60.png);background-size: 60px 60px;width: 60px;height: 60px;"></div><br>Fortunately, your colony owns a small defense station. You even have a fighter and a transport nearby.<br>Click on one of the ships in the lower area to select it.<br><div style="position:relative;left:45%;background: url(images/Ships/HeavyFighter60.png);background-size: 60px 60px;width: 60px;height: 60px;"></div><br></p>', N'', 2) --Das Mutterschiff hatte genug Schiffsmodule an Bord um einen Kundschafter zu bauen. Baue ihn über das Baumenü der Kolonie. Sobald er gebaut ist, wähle ihn auf der Planetenoberfläche an und starte das Schiff.
-INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (248, N'Now switch to the scout ship. You can do this by clicking on the scout in the lower area, by opening the ship view (left button in the upper right menu bar) or by switching to the systemview (upper left corner) and clicking on the ship that is above your colony.', N'', 2) --Der System-Kundschafter kann über die Schaltfläche unten ausgewählt werden, über das Schiffsmenü oben rechts, oder indem von der Planetenansicht auf die Systemansicht gewechselt wird (links oben), und dann das Schiff über der Kolonie ausgewählt wird.
-INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (249, N'<p>Now start your ship and explore the star system.<br></p>', N'', 2) --<p>Gut. Fliege los und erkunde das System.<br> (demnächst wird es auf den Asteroiden und unbesiedelten Planeten eine Rohstoffe abzuholen geben)</p>
-INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (250, N'To design and construct your own vessels, you need a shipyard. You can build it now the same way as the other buildings. Do this now...', N'', 2) --Der Systemscout kann das Sonnensystem nicht verlassen. Mit ihm kannst du aber in den Asteroidenfeldern und den Planeten einige Ressourcen abbauen (noch nicht implementiert). Um das Sonnensystem zu verlassen brauchst du einen Raumhafen in dem fortschrittliche Raumschiffe gebaut werden können. Baue einen solchen...
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (247, N'<p>A Pirate ship has been seen over another planet in this solar system.<br><div style="position:relative;left:45%;background: url(images/ScoutPirate60.png);background-size: 60px 60px;width: 60px;height: 60px;"></div><br>Fortunately, your colony owns a small defense station. You even have a fighter and a transport nearby.<br>Click on one of the ships in the lower area to select it.<br><div style="position:relative;left:45%;background: url(images/Ships/HeavyFighter60.png);background-size: 60px 60px;width: 60px;height: 60px;"></div><br></p>', N'', 2) --Das Mutterschiff hatte genug Schiffsmodule an Bord um einen Kundschafter zu bauen. Baue ihn Ã¼ber das BaumenÃ¼ der Kolonie. Sobald er gebaut ist, wÃ¤hle ihn auf der PlanetenoberflÃ¤che an und starte das Schiff.
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (248, N'Now switch to the scout ship. You can do this by clicking on the scout in the lower area, by opening the ship view (left button in the upper right menu bar) or by switching to the systemview (upper left corner) and clicking on the ship that is above your colony.', N'', 2) --Der System-Kundschafter kann Ã¼ber die SchaltflÃ¤che unten ausgewÃ¤hlt werden, Ã¼ber das SchiffsmenÃ¼ oben rechts, oder indem von der Planetenansicht auf die Systemansicht gewechselt wird (links oben), und dann das Schiff Ã¼ber der Kolonie ausgewÃ¤hlt wird.
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (249, N'<p>Now start your ship and explore the star system.<br></p>', N'', 2) --<p>Gut. Fliege los und erkunde das System.<br> (demnÃ¤chst wird es auf den Asteroiden und unbesiedelten Planeten eine Rohstoffe abzuholen geben)</p>
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (250, N'To design and construct your own vessels, you need a shipyard. You can build it now the same way as the other buildings. Do this now...', N'', 2) --Der Systemscout kann das Sonnensystem nicht verlassen. Mit ihm kannst du aber in den Asteroidenfeldern und den Planeten einige Ressourcen abbauen (noch nicht implementiert). Um das Sonnensystem zu verlassen brauchst du einen Raumhafen in dem fortschrittliche Raumschiffe gebaut werden kÃ¶nnen. Baue einen solchen...
 
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (251, N'Research 2', N'', 2)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (252, N'First research task', N'', 2)
@@ -320,7 +322,7 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (260, N'Co
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (261, N'Colony tutorial', N'', 2)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (262, N'Build a research center', N'', 2)
 
-INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (263, N'<p>In the lower left corner are some main statistics of the current colony. The population is needed to support buildings as long as they are set to active. Population will grow slowly, as long as enough food and housing is present.<br>Energy is produced each turn and consumed by active buildings – keep the value always positive, else some buildings will be deactivated during turn summary.<br>Construction points are produces by construction plants. The construction points are needed for all buildings tasks, be it buildings, shipmodules or spaceships.<br><br>Each turn takes a few hours, depending on the game parameters. You can see the time when the new turn starts in the menu bar.</p>', N'', 2)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (263, N'<p>In the lower left corner are some main statistics of the current colony. The population is needed to support buildings as long as they are set to active. Population will grow slowly, as long as enough food and housing is present.<br>Energy is produced each turn and consumed by active buildings Â– keep the value always positive, else some buildings will be deactivated during turn summary.<br>Construction points are produces by construction plants. The construction points are needed for all buildings tasks, be it buildings, shipmodules or spaceships.<br><br>Each turn takes a few hours, depending on the game parameters. You can see the time when the new turn starts in the menu bar.</p>', N'', 2)
 
 --delete from [LabelsBase] where id = 264
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (264, N'<p>Select the research center in the buildings menu and place it on the surface.<br>Your population can support only one research center at the moment.<br></p>', N'', 2)
@@ -329,7 +331,7 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (265, N'Sp
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (266, N'<p>Research points are generated per turn. You can see your current amount in the research screen in the upper area. <br>New technologies enable more buildings, goods and ship moduls, and also better ship hulls.<br>To get more spaceships you will need first to research the technology "Ore mine construction plan"  and then "Space travel".<br><br>Switch to the research screen and select "Ore mine construction plan" as soon as you have enough research points (which may take a few turns).</p>', N'', 2)
 
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (267, N'Starship construction ...', N'', 2)
-INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (268, N'<p>You need a module plant to produce the basic elements of ships – the ship modules.Research the construction plans and build one of those</p>', N'', 2)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (268, N'<p>You need a module plant to produce the basic elements of ships Â– the ship modules.Research the construction plans and build one of those</p>', N'', 2)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (269, N'<p>Give an order to produce ship modules. As long as enough construction points are present, these are build instantaneously. If you do not have enough production points , the build orders are put into the construction queue.</p>', N'', 2)
 
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (270, N'Shipyard intro', N'', 2)
@@ -340,10 +342,10 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (273, N' <
 
 --update [LabelsBase] set [value] = N'<p>The star base you just arrived also functions as a trade node. Select your ship and click this<br><br><div style="width: 30px;height: 30px;background: url(images/Icons.png?v=1) no-repeat -180px -1px;" /><br>button to open the trade menu. If your ship has any goods on board, you can offer them here and define which goods you demand in exchange. You can also see any trades from other players, and accept them if you have enough goods on board.</p>' where id = 274
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (274, N'<p>The star base you just arrived also functions as a trade node. Select your ship and click this<br><br><div style="width: 30px;height: 30px;background: url(images/Icons.png?v=1) no-repeat -180px -1px;" /><br>button to open the trade menu. If your ship has any goods on board, you can offer them here and define which goods you demand in exchange. You can also see any trades from other players, and accept them if you have enough goods on board.</p>', N'', 2)
-INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (275, N'<p>Congratulations, you finished the tutorial...</p>', N'', 2) --<p>Herzlichen Glückwunsch, du hast das Intro abgeschlossen...</p>
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (275, N'<p>Congratulations, you finished the tutorial...</p>', N'', 2) --<p>Herzlichen GlÃ¼ckwunsch, du hast das Intro abgeschlossen...</p>
 
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (276, N'Level', N'', 2)  -- Stufe
-INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (277, N'Build orders', N'', 2) --Bauaufträge
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (277, N'Build orders', N'', 2) --BauauftrÃ¤ge
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (278, N'Assembly', N'', 2)  -- Konstruktion
 --delete from [LabelsBase] where id = 272
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (279, N'Rename colony', N'', 2)  -- Kolonie umbenennen
@@ -353,13 +355,13 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (280, N'Na
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (281, N'Amount', N'Building Order amount', 2)  -- Name
 
 
-INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (282, N'Primary systems', N'', 2)  -- Primärsysteme
-INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (283, N'Secondary systems', N'', 2)  -- Sekundärsysteme
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (282, N'Primary systems', N'', 2)  -- PrimÃ¤rsysteme
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (283, N'Secondary systems', N'', 2)  -- SekundÃ¤rsysteme
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (284, N'Auxiliary systems', N'', 2)  -- Hilfssysteme
 
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (285, N'New', N'Designer', 2)  -- 
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (286, N'Copy', N'Designer', 2)  -- Kopieren
-INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (287, N'Delete', N'Designer', 2)  -- Löschen
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (287, N'Delete', N'Designer', 2)  -- LÃ¶schen
 
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (288, N'Save', N'Designer', 2) --Speichern
 
@@ -414,7 +416,7 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (331, N'Ke
 
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (332, N'Skip', N'', 7) --	Skip
 
-INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (333, N'Remember Login? (you can then again login to this demo user for up to 12 hours)', N'', 7) --	Anmeldung merken (erneuter Aufruf dieses Demousers innerhalb einiger Stunden ist dann möglich)?
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (333, N'Remember Login? (you can then again login to this demo user for up to 12 hours)', N'', 7) --	Anmeldung merken (erneuter Aufruf dieses Demousers innerhalb einiger Stunden ist dann mÃ¶glich)?
 
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (334, N'The following buildings were deactivated due to a shortage of workers.', N'', 7) --	
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (335, N'Worker shortage on colony ', N'', 7) --	
@@ -508,8 +510,8 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (400, N'Sp
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (401, N'The right planet is highlighted by a green arrow', N'', 2)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (402, N'Base research', N'', 6)
 
-INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (403, N'<p>Drag the scout to the outside of your solar system. This will let him leave the system and switch the map to the starmap.<br> Find one of the neutral space stations. The next one will be at ', N'', 2)--<p> Erkunde deine Umgebung und treffe deine Nachbarn.<br> Finde eine neutrale Raumstation. Die nächste ist bei 
-INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (404, N'.<br>Press r to see a raster an c for coordinates, or activate raster and coordinates in your user settings.<br> The neutral space station works as a communication node and as trade station - as soon as you arrive there you may contact all other players that visited the station.</p>', N'', 2)--.<br> Drücke r für ein Raster und c für Koordinatenangaben oder aktiviere das Raster oder die Koordinaten in den Einstellungen.<br> Die neutrale Raumstation dient als Kommunikationszentrale und Handelszentrum - sobald du dort ankommst kannst du alle Siedler anschreiben die diese Station schon besucht haben.</p>
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (403, N'<p>Drag the scout to the outside of your solar system. This will let him leave the system and switch the map to the starmap.<br> Find one of the neutral space stations. The next one will be at ', N'', 2)--<p> Erkunde deine Umgebung und treffe deine Nachbarn.<br> Finde eine neutrale Raumstation. Die nÃ¤chste ist bei 
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (404, N'.<br>Press r to see a raster an c for coordinates, or activate raster and coordinates in your user settings.<br> The neutral space station works as a communication node and as trade station - as soon as you arrive there you may contact all other players that visited the station.</p>', N'', 2)--.<br> DrÃ¼cke r fÃ¼r ein Raster und c fÃ¼r Koordinatenangaben oder aktiviere das Raster oder die Koordinaten in den Einstellungen.<br> Die neutrale Raumstation dient als Kommunikationszentrale und Handelszentrum - sobald du dort ankommst kannst du alle Siedler anschreiben die diese Station schon besucht haben.</p>
 
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (405, N'Scan range brightness', N'', 7)
 
@@ -627,7 +629,7 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (496, N'Th
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (497, N'Cruiser Description', N'', 1)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (498, N'Battleship Description', N'', 1)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (499, N'Superbattleship Description', N'', 1)
-INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (500, N'Kolonieren Wüste Description', N'', 1)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (500, N'Kolonieren WÃ¼ste Description', N'', 1)
 
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (501, N'The analysis of holmium ore enables us to find holmium rich areas and thus mining those', N'', 1)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (502, N'The analysis of terbium ore enables us to find holmium rich areas and thus mining those', N'', 1)
@@ -654,7 +656,7 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (518, N'Ca
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (519, N'Ship Defenses I Description' , N'', 1)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (520, N'Ship Weapons I Description', N'', 1)
 
-INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (521, N'Außenposten I Description', N'', 1)
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (521, N'AuÃŸenposten I Description', N'', 1)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (522, N'Colonization I Description ', N'', 1)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (523, N'Modules II Description ', N'', 1)
 INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (524, N'Cargo II Description', N'', 1)
@@ -1338,9 +1340,9 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (1102, N'C
 0 Objects -> part of the objectDescriptin table.
 1 Research - Forschung	 
 2 Quest		
-3 Buildings - Gebäude
+3 Buildings - GebÃ¤ude
 4 Shipmodules - Schiffsmodule
-5 Shiphulls- Schiffsrümpfe
+5 Shiphulls- SchiffsrÃ¼mpfe
 6 Goods
 7 Game User Interface
 8 Combat
@@ -1351,8 +1353,8 @@ INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (1102, N'C
 --delete from [LabelsBase] where id > 758
 --296
 /*
-INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (403, N'<p>Drag the scout to the outside of your solar system. This will let him leave the system and switch the map to the starmap.<br> Find one of the neutral space stations. The next one will be at ', N'', 2)--<p> Erkunde deine Umgebung und treffe deine Nachbarn.<br> Finde eine neutrale Raumstation. Die nächste ist bei 
-INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (404, N'.<br>Press r to see a raster an c for coordinates, or activate raster and coordinates in your user settings.<br> The neutral space station works as a communication node and as trade station - as soon as you arrive there you may contact all other players that visited the station.</p>', N'', 2)--.<br> Drücke r für ein Raster und c für Koordinatenangaben oder aktiviere das Raster oder die Koordinaten in den Einstellungen.<br> Die neutrale Raumstation dient als Kommunikationszentrale und Handelszentrum - sobald du dort ankommst kannst du alle Siedler anschreiben die diese Station schon besucht haben.</p>
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (403, N'<p>Drag the scout to the outside of your solar system. This will let him leave the system and switch the map to the starmap.<br> Find one of the neutral space stations. The next one will be at ', N'', 2)--<p> Erkunde deine Umgebung und treffe deine Nachbarn.<br> Finde eine neutrale Raumstation. Die nÃ¤chste ist bei 
+INSERT [dbo].[LabelsBase] ([id], [value], [comment], [module]) VALUES (404, N'.<br>Press r to see a raster an c for coordinates, or activate raster and coordinates in your user settings.<br> The neutral space station works as a communication node and as trade station - as soon as you arrive there you may contact all other players that visited the station.</p>', N'', 2)--.<br> DrÃ¼cke r fÃ¼r ein Raster und c fÃ¼r Koordinatenangaben oder aktiviere das Raster oder die Koordinaten in den Einstellungen.<br> Die neutrale Raumstation dient als Kommunikationszentrale und Handelszentrum - sobald du dort ankommst kannst du alle Siedler anschreiben die diese Station schon besucht haben.</p>
 
 */
 

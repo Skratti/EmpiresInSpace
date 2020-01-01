@@ -4,7 +4,9 @@
 
 Database/.vs
 Database/obj
-
+Database/EmpiresInSpaceDatabase.dbmdl
+Database/EmpiresInSpaceDatabase.jfm
+Database/EmpiresInSpaceDatabase.sqlproj.user
 
 EmpiresInSpace/bin
 EmpiresInSpace/js/*.js
@@ -40,8 +42,7 @@ UnitTestProject/bin
 UnitTestProject/obj
 
 MapGenerator/bin
-MapGenerator/obj	
-
+MapGenerator/obj
 
 node_modules
 packages

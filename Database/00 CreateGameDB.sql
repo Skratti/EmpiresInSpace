@@ -3,10 +3,7 @@
 -- 1) @DBServerName has to get your SQL server name
 -- 2) @DBName has to get your database name
 -- 3) @FilePath has to get the folder where this file (and the others) are in. The script will be executes by the sql server service user, which will probably do not have access to your windows home folders. So copy the files to be executed somewhere else where the service has access to (c:\temp for example).
--- If those things are given, you can just execute the script  (F5 in sql management studio, Ctrl+Shift+E in visual studio)
--- The only evaluation script is at the moment at the end of file "05.04 fillShipModuleData.sql"
--- All other facts have to be fetched manually out of the tables
--- More evaluation scripts will come later
+-- If those things are given, you can just execute the script  (F5 in sql management studio, Ctrl+Shift+E in visual studio). The cisual studio project might also need the database connection in its debug tab page.
 
 EXEC master.dbo.sp_configure 'show advanced options', 1;
 go
@@ -21,7 +18,7 @@ BEGIN TRAN
 
 --DECLARE @DBServerName   VARCHAR(100) = 'MyServer\Example'  
 DECLARE @DBServerName   VARCHAR(100) = '(localdb)\MSSQLLocalDB'  
-DECLARE @DBName VARCHAR(100) = 'Andromeda2'  
+DECLARE @DBName VARCHAR(100) = 'Andromeda'  
 
 DECLARE @FilePath   VARCHAR(200) = 'C:\Github\EmpiresInSpace\Database\' 
 --DECLARE @FilePath   VARCHAR(200) = 'C:\Users\Admin\Documents\GitHub\EmpiresInSpace\SQL\'

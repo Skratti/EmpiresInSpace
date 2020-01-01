@@ -72,7 +72,6 @@
     <Content Include="images\favicon\favicons %281%29.zip" />
     <Content Include="images\favicon\favicons.zip" />
     <None Include="packages.config" />
-    <None Include="Properties\PublishProfiles\EmpiresIndex.pubxml" />
     <Compile Include="i18n\referenceLabels.ts" />
     <Content Include="images\favicon\android-chrome-144x144.png" />
     <Content Include="images\favicon\android-chrome-192x192.png" />
@@ -239,13 +238,11 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Properties\PublishProfiles\1und1.pubxml" />
-  </ItemGroup>
-  <ItemGroup>
     <TypeScriptCompile Include="index\recovery.ts" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="compiled\" />
+    <Folder Include="Properties\PublishProfiles\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

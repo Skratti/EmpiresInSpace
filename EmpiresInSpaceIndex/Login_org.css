@@ -1,0 +1,336 @@
+﻿body
+{
+    
+	/*color: #DDD;*/
+	background-color:Black;
+	
+	background-repeat:no-repeat;
+    font-family:'Trebuchet MS';
+
+   overflow:auto;
+}
+
+
+#header{
+
+    position:relative;
+	/*top:0px; left:0px; right:0px;*/
+	/*background:#eeeeee;*/
+	
+	text-align:center;
+	/*padding:10px;*/
+	z-index: 100;
+	/*width:950px;*/
+	width:100%;
+	height:100px;
+	/*height:95px;*/
+	margin:  auto;  		
+}
+
+#rightHeader
+{   
+    position:absolute;
+    top:0px;
+    left:0px;    
+    text-align:center;      
+}
+
+#mainBackGround{ 
+    
+    min-width: 1300px;
+    position:absolute;
+    top:0px;
+    bottom:0px;
+    left:0px;
+    right:0px;
+    background-image:url('images/BackGround2.png');
+    background-repeat:repeat;
+}
+
+#main{
+    /*opacity: 0.85;*/
+   
+    position:absolute;
+    top:30px;
+    width: 1200px;  
+    left: 50%;
+    margin-left: -600px;
+    /*bottom:150px;*/
+    height: 800px;		
+	text-align:left;
+	z-index: 100;
+	
+	overflow:auto;
+	color: Black;
+
+     background-image: -webkit-gradient(
+	    linear,
+	    left bottom,
+	    left top,
+	    color-stop(0, #FFF),
+	    color-stop(1, #CCC)
+	);
+	background-image: -webkit-linear-gradient(center bottom, #FFF 0%, #CCC 100%);
+	background-image: -ms-linear-gradient(center bottom, #FFF 0%, #CCC 100%);
+	background-image: -o-linear-gradient(center bottom, #FFF 0%, #CCC 100%);
+	background-image: -moz-linear-gradient(center bottom, #FFF 0%, #CCC 100%);
+	background-image: linear-gradient(center bottom, #FFF 0%, #CCC 100%);
+	
+	-webkit-box-shadow: inset 2px 2px 5px #666;
+	-moz-box-shadow: inset 1px 1px 5px #000;
+	-o-box-shadow: inset 1px 1px 5px #000;
+	-ms-box-shadow: inset 1px 1px 5px #000;
+	box-shadow: inset 1px 1px 5px #000;
+}
+
+#mainUpper{
+    width:1200px;
+    height:300px;
+    
+}
+
+#mainUpperStartTab{
+    display:block;
+}
+
+#mainUpperInfo{
+    position:absolute;
+    width:600px;
+    height:300px;
+    
+
+     background-image: -webkit-gradient(
+	    linear,
+	    left bottom,
+	    left top,
+	    color-stop(0, #EEE),
+	    color-stop(1, #CCC)
+	);
+	background-image: -webkit-linear-gradient(center bottom, #EEE 0%, #CCC 100%);
+	background-image: -ms-linear-gradient(center bottom, #EEE 0%, #CCC 100%);
+	background-image: -o-linear-gradient(center bottom, #EEE 0%, #CCC 100%);
+	background-image: -moz-linear-gradient(center bottom, #EEE 0%, #CCC 100%);
+	background-image: linear-gradient(center bottom, #EEE 0%, #CCC 100%);
+	
+	-webkit-box-shadow: inset 2px 2px 5px #666;
+	-moz-box-shadow: inset 1px 1px 5px #000;
+	-o-box-shadow: inset 1px 1px 5px #000;
+	-ms-box-shadow: inset 1px 1px 5px #000;
+	box-shadow: inset 1px 1px 5px #000;
+
+}
+
+#mainUpperLogin {
+    position:absolute;
+    top:0px;
+    left:600px;
+    width:600px;
+    height:300px;
+    
+    font-size:24px;
+
+    background-image: -webkit-gradient(
+	    linear,
+	    left bottom,
+	    left top,
+	    color-stop(0, #BBB),
+	    color-stop(1, #777)
+	);
+	background-image: -webkit-linear-gradient(center bottom, #BBB 0%, #777 100%);
+	background-image: -ms-linear-gradient(center bottom, #BBB 0%, #777 100%);
+	background-image: -o-linear-gradient(center bottom, #BBB 0%, #777 100%);
+	background-image: -moz-linear-gradient(center bottom, #BBB 0%, #777 100%);
+	background-image: linear-gradient(center bottom, #BBB 0%, #777 100%);
+	
+	-webkit-box-shadow: inset 2px 2px 5px #666;
+	-moz-box-shadow: inset 1px 1px 5px #000;
+	-o-box-shadow: inset 1px 1px 5px #000;
+	-ms-box-shadow: inset 1px 1px 5px #000;
+	box-shadow: inset 1px 1px 5px #000;
+}
+
+#loginButton{
+    float: right;
+    font-size: large;
+}
+
+#logout{
+    display:none;
+}
+
+#loginFail{
+    display:none;
+    font-weight:bold;
+}
+
+#mainUpperTextTab{
+    opacity: 1;
+    display:none;
+}
+
+#mainUpperScreenShotsTab{
+
+    display:none;
+}
+
+#mainRegister{
+    text-align:center;
+    height:60px;
+    border:5px solid grey;
+  
+}
+
+#mainGames{
+
+}
+
+#mainGamesDemo{
+
+}
+
+#mainGamesSelection{
+
+   
+}
+
+.gameImage {
+    display: inline-block;
+    width:320px;
+    height:200px;
+    padding: 2px 2px;
+    margin: 5px;
+}
+
+.gameButtons {
+    display: inline-block;   
+}
+
+.gameIsPlayed{
+    border-style:solid;
+    border-color:green;
+}
+
+.gameFont{
+    color:white;
+    margin: 5px;
+    font-size:larger;
+}
+
+.gameFontMed{
+    color:white;
+    margin: 5px;
+    font-size:medium;
+}
+
+#demoBackground{
+
+    margin:20px 20px 20px 20px;
+    background-image:url('images/BackGround2.png');
+    background-repeat:no-repeat;
+    background-size:cover;
+    width: 600px;
+    height:400px;
+    position:absolute;
+}
+
+#demoCaption{
+    color:white;
+    margin:10px;
+}
+
+#demoLogin{
+    position:absolute;
+    bottom:40px;
+    right:40px;
+}
+
+#registerPage{
+
+    display:none;
+
+    opacity: 0.85;
+    background-color: #DDDDDD;
+    position:absolute;
+    top:30px;
+    width: 1200px;  
+    left: 50%;
+    margin-left: -600px;   
+    bottom:0px;    				
+	text-align:left;
+	z-index: 100;
+	
+	overflow:auto;
+	color: Black;
+}
+
+.buttonUl
+{
+    position: absolute;
+    bottom:10px;
+    right:20px;
+    margin: 0; padding: 0.8em;
+    text-align: left; 
+}
+
+li
+{
+    list-style: none;
+    display: inline;
+    margin: 1em;
+    font-size: 14px;
+    padding: 5px;
+    border: 1px solid #777;
+    font-weight: bold;
+    
+	background-image: -webkit-gradient(
+	    linear,
+	    left bottom,
+	    left top,
+	    color-stop(0, #FFF),
+	    color-stop(1, #CCC)
+	);
+	background-image: -webkit-linear-gradient(center bottom, #FFF 0%, #CCC 100%);
+	background-image: -ms-linear-gradient(center bottom, #FFF 0%, #CCC 100%);
+	background-image: -o-linear-gradient(center bottom, #FFF 0%, #CCC 100%);
+	background-image: -moz-linear-gradient(center bottom, #FFF 0%, #CCC 100%);
+	background-image: linear-gradient(center bottom, #FFF 0%, #CCC 100%);
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-o-border-radius: 5px;
+	-ms-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-box-shadow: inset 2px 2px 5px #666;
+	-moz-box-shadow: inset 1px 1px 5px #000;
+	-o-box-shadow: inset 1px 1px 5px #000;
+	-ms-box-shadow: inset 1px 1px 5px #000;
+	box-shadow: inset 1px 1px 5px #000;
+}
+
+.registerButton{
+
+    display:block;
+}
+
+.OKbutton
+{
+    list-style: none;
+    display: inline;
+    position:absolute;
+    /*bottom:17px;
+    right:135px;
+    width: 60px;     */
+}
+
+.Cancelbutton
+{
+    list-style: none;
+    display: inline;
+    position:absolute;
+    bottom:17px;
+    right:65px;
+    width: 60px;     
+}
+
+.margin20{
+    margin:20px;
+}

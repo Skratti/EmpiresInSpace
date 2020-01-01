@@ -1,0 +1,31 @@
+﻿
+.relPopup {
+    width: 667px;
+top: 74px;  
+}
+
+
+.relPopupContent.relPopupHeaderFixed .relPopupHeader {
+        width: 667px;
+}
+
+div.relPopupContent.SpaceTheme.relPopupHeaderFixed > div.relPopupPanel {
+    width: 667px;
+}
+
+div.relPopupContent.SpaceTheme.relPopupHeaderFixed>div.relPopupFooter.panelFooterBackground {
+    width: 667px;
+}
+
+div.relPopupContent.SpaceTheme.relPopupHeaderFixed>div.relPopupPanel.trBlack{
+    width: 667px;
+}
+
+.relPopupHeader h2{
+
+}
+
+.researchPoints
+{
+    font-size: 10px;
+}

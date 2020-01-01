@@ -1,0 +1,581 @@
+﻿input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+
+
+body
+{
+	background-color:Black;
+	background-repeat:no-repeat;
+    font-family:'Trebuchet MS';
+    overflow:auto;
+    font-size: 15px;
+
+    background-image: url('images/game08.png');
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+select {
+    font-size: medium;
+}
+
+*:focus {
+    outline: 0;
+}
+
+input:required {
+    border-color: #F00 !important;    
+}
+
+input[type='checkbox']{
+/*    width: 1em;
+height: 1em;*/
+}
+
+#loader 
+{
+    top:0px; left:0px; right:0px;
+    width:100%; height:100%; 
+
+    background-color:rgb(30,30,30);
+    /*background-image:url('http://ajax.googleapis.com/ajax/libs/dojo/1.4/dojox/image/resources/images/loading.gif');*/
+    background-image:url(images/loading.gif);
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    background-position:center; 
+        
+	opacity: 0.8;
+
+    position:absolute;
+    display:none;     
+    z-index:10000;
+}
+
+#mainBackGround{ 
+    
+    width: 100%;    
+    
+}
+
+#main{  
+    opacity: 0.9;
+    position: relative;
+    top: 35px;
+    width: 790px;
+  /* left: 50%; */
+  /* margin-left: -200px; */
+    margin: 0 auto;
+ 
+    /*height: 800px;		*/
+	text-align:left;
+	z-index: 100;
+
+	color: Black;
+    background-color:lightgray;
+     background-image: -webkit-gradient(
+	    linear,
+	    left bottom,
+	    left top,
+	    color-stop(0, #FFF),
+	    color-stop(1, #CCC)
+	);
+	background-image: -webkit-linear-gradient(center bottom, #FFF 0%, #CCC 100%);
+	background-image: -ms-linear-gradient(center bottom, #FFF 0%, #CCC 100%);
+	background-image: -o-linear-gradient(center bottom, #FFF 0%, #CCC 100%);
+	background-image: -moz-linear-gradient(center bottom, #FFF 0%, #CCC 100%);
+	background-image: linear-gradient(center bottom, #FFF 0%, #CCC 100%);
+	
+}
+
+#mainUpper{
+    width:750px;
+    height:340px;
+    
+}
+#mainGames{
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 25px;
+}
+
+.blog {
+    margin-bottom: 10px;
+    margin-left: 5px;
+    margin-top: 10px;
+}
+
+.oldPanelBackground{
+     background-image: -webkit-gradient(
+	    linear,
+	    left bottom,
+	    left top,
+	    color-stop(0, #EEE),
+	    color-stop(1, #CCC)
+	);
+	background-image: -webkit-linear-gradient(center bottom, #EEE 0%, #CCC 100%);
+	background-image: -ms-linear-gradient(center bottom, #EEE 0%, #CCC 100%);
+	background-image: -o-linear-gradient(center bottom, #EEE 0%, #CCC 100%);
+	background-image: -moz-linear-gradient(center bottom, #EEE 0%, #CCC 100%);
+	background-image: linear-gradient(center bottom, #EEE 0%, #CCC 100%);
+	
+	-webkit-box-shadow: inset 2px 2px 5px #666;
+	-moz-box-shadow: inset 1px 1px 5px #000;
+	-o-box-shadow: inset 1px 1px 5px #000;
+	-ms-box-shadow: inset 1px 1px 5px #000;
+	box-shadow: inset 1px 1px 5px #000;
+}
+
+#mainUpperInfo{
+  /*
+    width:700px;
+    height:220px;
+    float:left;
+    border-right: black 1px solid;
+    margin-right: 15px;
+    */
+}
+
+
+#mainUpperLogin {
+   
+    /*height:220px;  */
+    font-size:24px;    
+}
+
+#loginArea .input_text{
+    font-size: 20px;
+    margin-bottom: 9px;
+    padding: 4px;
+    width: 220px;
+    display:block;
+}
+
+#newLanguageSelect {
+    float:right;
+    font-size: medium;
+}
+
+#loginButton{
+    /*float: right;*/
+    font-size: large;
+    width: 234px;
+}
+
+#logout{
+    display:none;
+    
+}
+
+#loginFail{
+    display:none;
+    font-weight:bold;
+}
+
+#mainRegister{
+    text-align:center;
+    height:60px;
+  
+}
+
+
+#mainGamesDemo{
+  
+}
+
+#mainGamesSelection{
+
+   
+}
+
+.gameImage {
+    display: inline-block;
+    width: 230px;
+    height: 200px;
+    padding: 2px 2px;
+    margin: 5px;
+    position: relative;
+}
+
+.gameButtons {
+    display: inline-block;   
+}
+
+.gameIsPlayed{
+    border-style:solid;
+    border-color:green;
+}
+
+.gameFont{
+    color:white;
+    margin: 5px;
+    font-size:larger;
+}
+
+.gameFontMed{
+    color:white;
+    margin: 5px;
+    font-size:medium;
+}
+
+.demoBackground{
+    float:left;
+    margin:20px 20px 20px 20px;
+    background-image:url('images/BackGround2.png');
+    background-repeat:no-repeat;
+    background-size:cover;
+    width: 550px;
+    height: 360px;
+ 
+}
+
+#demo1{
+    float:left;     
+}
+
+#demo2{
+    float:left;     
+}
+
+
+.demoCaption{
+    color:white;
+    margin:10px;
+}
+
+.demoLogin{
+    position: relative;
+    bottom: -250px;
+    right: -240px;
+}
+
+#registerPage{
+
+    display:none;
+
+    opacity: 0.85;
+    background-color: #DDDDDD;
+    position:absolute;
+    top:30px;
+    width: 1200px;  
+    left: 50%;
+    margin-left: -600px;   
+    bottom:0px;    				
+	text-align:left;
+	z-index: 100;
+	
+	overflow:auto;
+	color: Black;
+}
+
+.buttonUl
+{
+    position: absolute;
+    bottom:10px;
+    right:20px;
+    margin: 0; padding: 0.8em;
+    text-align: left; 
+}
+
+.registerButton{
+
+    display:block;
+}
+
+.OKbutton
+{
+    list-style: none;
+    display: inline;
+    position:absolute;  
+}
+
+.Cancelbutton
+{
+    list-style: none;
+    display: inline;
+    position:absolute;
+    bottom:17px;
+    right:65px;
+    width: 60px;     
+}
+
+.closure {
+    position: fixed;
+    bottom: 0px;
+    right: 10px;
+    font-size: 11px;
+    line-height: 25px;
+    color: lightgrey;
+}
+
+.closure a {
+    color: lightgrey;
+}
+
+
+/*!
+ * jQuery UI Tabs 1.10.3
+ * http://jqueryui.com
+ *
+ * Copyright 2013 jQuery Foundation and other contributors
+ * Released under the MIT license.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Tabs#theming
+ */
+.ui-tabs {
+	position: relative;/* position: relative prevents IE scroll bug (element with position: relative inside container with overflow: auto appear as "fixed") */
+	padding: .2em;
+}
+.ui-tabs .ui-tabs-nav {
+	margin: 0;
+	padding: 0 .2em 0;
+}
+.ui-tabs .ui-tabs-nav li {
+	list-style: none;
+	float: left;
+	position: relative;
+	top: 0;
+	margin: 1px .2em 0 0;
+	border-bottom-width: 0;
+	padding: 0;
+	white-space: nowrap;
+}
+.ui-tabs .ui-tabs-nav li a {
+	float: left;
+	padding: .5em 1em;
+	text-decoration: none;
+}
+.ui-tabs .ui-tabs-nav li.ui-tabs-active {
+	margin-bottom: -1px;
+	padding-bottom: 1px;
+}
+.ui-tabs .ui-tabs-nav li.ui-tabs-active a,
+.ui-tabs .ui-tabs-nav li.ui-state-disabled a,
+.ui-tabs .ui-tabs-nav li.ui-tabs-loading a {
+	cursor: text;
+}
+.ui-tabs .ui-tabs-nav li a, /* first selector in group seems obsolete, but required to overcome bug in Opera applying cursor: text overall if defined elsewhere... */
+.ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-active a {
+	cursor: pointer;
+}
+.ui-tabs .ui-tabs-panel {
+	display: block;
+	border-width: 0;
+    /*border-color:black;*/
+	padding: 1em 1.4em;
+	background: none;
+}
+
+
+
+.tabs-nohdr { 
+    padding: 0px; 
+    background: none; 
+    border-width: 0px; 
+} 
+
+.tabs-nohdr .ui-tabs-nav { 
+    padding-left: 0px; 
+    background: transparent; 
+    border-width: 0px 0px 1px 0px; 
+    -moz-border-radius: 0px; 
+    -webkit-border-radius: 0px; 
+    border-radius: 0px; 
+} 
+.tabs-nohdr .ui-tabs-panel { 
+    /*background: #f5f3e5 url(http://code.jquery.com/ui/1.8.23/themes/south-street/images/ui-bg_highlight-hard_100_f5f3e5_1x100.png) repeat-x scroll 50% top; */
+    border-width: 0px 1px 1px 1px; 
+
+}
+
+.style-tabs .ui-tabs-nav li .icon {
+    color: #787878;
+    background-position: center 3px;
+    padding-top: 40px;
+    font-weight: bold;
+    font-size: 12px;
+    text-align: center;
+    width: 80px;
+}
+
+#tabs.ui-widget-content {
+    border:none;
+}
+
+
+/*!
+ * jQuery UI Button 1.10.3
+ * http://jqueryui.com
+ *
+ * Copyright 2013 jQuery Foundation and other contributors
+ * Released under the MIT license.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Button#theming
+ */
+.ui-button {
+	display: inline-block;
+	position: relative;
+	padding: 0;
+	line-height: normal;
+	margin-right: .1em;
+	cursor: pointer;
+	vertical-align: middle;
+	text-align: center;
+	overflow: visible; /* removes extra width in IE */
+}
+.ui-button,
+.ui-button:link,
+.ui-button:visited,
+.ui-button:hover,
+.ui-button:active {
+	text-decoration: none;
+}
+/* to make room for the icon, a width needs to be set here */
+.ui-button-icon-only {
+	width: 2.2em;
+}
+/* button elements seem to need a little more width */
+button.ui-button-icon-only {
+	width: 2.4em;
+}
+.ui-button-icons-only {
+	width: 3.4em;
+}
+button.ui-button-icons-only {
+	width: 3.7em;
+}
+
+/* button text element */
+.ui-button .ui-button-text {
+	display: block;
+	line-height: normal;
+}
+.ui-button-text-only .ui-button-text {
+	padding: .4em 1em;
+}
+.ui-button-icon-only .ui-button-text,
+.ui-button-icons-only .ui-button-text {
+	padding: .4em;
+	text-indent: -9999999px;
+}
+.ui-button-text-icon-primary .ui-button-text,
+.ui-button-text-icons .ui-button-text {
+	padding: .4em 1em .4em 2.1em;
+}
+.ui-button-text-icon-secondary .ui-button-text,
+.ui-button-text-icons .ui-button-text {
+	padding: .4em 2.1em .4em 1em;
+}
+.ui-button-text-icons .ui-button-text {
+	padding-left: 2.1em;
+	padding-right: 2.1em;
+}
+/* no icon support for input elements, provide padding by default */
+input.ui-button {
+	padding: .4em 1em;
+}
+
+/* button icon element(s) */
+.ui-button-icon-only .ui-icon,
+.ui-button-text-icon-primary .ui-icon,
+.ui-button-text-icon-secondary .ui-icon,
+.ui-button-text-icons .ui-icon,
+.ui-button-icons-only .ui-icon {
+	position: absolute;
+	top: 50%;
+	margin-top: -8px;
+}
+.ui-button-icon-only .ui-icon {
+	left: 50%;
+	margin-left: -8px;
+}
+.ui-button-text-icon-primary .ui-button-icon-primary,
+.ui-button-text-icons .ui-button-icon-primary,
+.ui-button-icons-only .ui-button-icon-primary {
+	left: .5em;
+}
+.ui-button-text-icon-secondary .ui-button-icon-secondary,
+.ui-button-text-icons .ui-button-icon-secondary,
+.ui-button-icons-only .ui-button-icon-secondary {
+	right: .5em;
+}
+
+/* button sets */
+.ui-buttonset {
+	margin-right: 7px;
+}
+.ui-buttonset .ui-button {
+	margin-left: 0;
+	margin-right: -.3em;
+}
+
+/* workarounds */
+/* reset extra padding in Firefox, see h5bp.com/l */
+input.ui-button::-moz-focus-inner,
+button.ui-button::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+
+
+#languageSelector{float:left;}
+
+#newLanguageSelect ul{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    display: inline-block;
+    vertical-align: top;
+    
+}
+
+li#settingsList  {	
+    background: url(images/Icons.png) no-repeat -270px 0px;           
+    width: 30px;
+	height: 30px;pointer-events:all;
+	cursor: pointer;
+	float: left;	
+	margin-left: 3px;
+    background-color: darkslategrey;
+    display:none;
+}
+
+.help .ui-button-text, .userSettings .ui-button-text{
+    padding: 0.1em 0.5em;
+    font-size:smaller;
+}
+
+.tdAlignRight{
+    text-align:right;
+}
+
+.semiTransOverlay 
+{   
+    top:0px; left:0px; right:0px;
+    width:100%; height:100%; 
+
+    background-color:rgb(30,30,30);      
+	opacity: 0.8;
+
+    position:absolute;   
+    z-index:10000;
+
+}
+
+#rememberCheckBox{
+    float: right;
+    margin-left: 10px;
+    margin-top: 10px;
+    transform: scale(2.5);
+  /* Webkit browsers*/
+  -webkit-transform: scale(2.5);
+}
+.nameSpan {
+    /*border-style: solid;
+    border-width: thin;*/
+    float: left;
+    text-align :right;
+}

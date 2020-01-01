@@ -298,6 +298,14 @@ namespace MapGenerator
             var generator = new SystemGenerator.SystemGeneratorWorker2();
             var writer = new DBWriter(map.stars, generator);
             writer.bulkInsert(textBox1);
+            writer.UpdateAfterCopy(textBox1);
+            button3.Enabled = false;
+
+            /*
+            to recreate execute:         
+            delete from SolarSystemInstances
+            delete from StarMap
+             * */
         }
 
         private void panel1_Resize(object sender, EventArgs e)

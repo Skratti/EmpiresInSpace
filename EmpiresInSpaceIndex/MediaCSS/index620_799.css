@@ -1,0 +1,75 @@
+﻿body {
+}
+
+#Top {
+    z-index: 0;
+    background: none;
+}
+
+#newLanguageSelect {
+    position: absolute;
+    right: 5px;
+}
+
+#MainMenu {
+    padding-left: 50px;
+    font-size: 22px;
+}
+
+.MainMenuFullLine {
+    width: 314px;
+}
+
+#MainMenu div#MainMenuRight {
+    width: 314px;
+}
+
+#MainMenu #MainMenuRight > div {
+    margin-bottom: 14px;
+}
+
+#Login {
+    width: 150px;
+    height: 58px;
+    line-height: 60px;
+}
+#NewAccount {
+    width: 150px;
+    height: 58px;
+    line-height: 28px;  
+}
+
+#LoginSpacer {
+    width: 0px;
+}
+
+#UserLine {
+    font-size: 20px;
+}
+
+#Logo {
+    position: fixed;
+    right: 0px;
+    width: 220px;
+    height: 180px;
+}
+
+.Screen { 
+    padding-left: 50px;
+    width: 320px;
+}
+
+.Screen.Show {
+    display: block;
+}
+div.ScreenRight {
+    padding-top: 30px;
+}
+
+#GalleryScreen img {
+    width: 130px;
+}
+
+.closure {
+    right: 3px;  
+}

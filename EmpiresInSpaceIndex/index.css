@@ -1,0 +1,453 @@
+﻿input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+*:focus {
+    outline: none;
+}
+
+textarea, input { 
+    outline: none; 
+    background-color: #444444;
+    border: 3px solid #444444;
+    color: #dddddd;
+}
+
+html {
+    overflow-y: scroll;
+}
+
+
+
+body {
+    background-color:Black;	
+    font-family:'Trebuchet MS';
+    overflow:auto;
+    font-size: 15px;
+    margin: 0px;
+    /*background-image: url('images/background.png');*/
+    
+    color: #cccccc;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    -webkit-user-select: none;
+}
+
+@media screen and (max-height: 300px) {
+
+    #myinputtext {
+        position: absolute;
+        top: 50px;
+    }
+}
+
+#Top{    
+    position: fixed;
+    height: 28px;
+    width: 100%;
+    background: rgba(50, 50, 60, 0.55);
+    z-index: 1;
+}
+
+#MainMenuRight{margin-left: -500px;}
+
+
+#Logo{
+    height: 267px;
+    background-image: url('images/Logo-2016.png');
+    background-size: 100% 100%;
+}
+
+div.MainMenuTopSpace{
+    height:300px;
+    background: none;
+    width: 300px;
+}
+
+div.ScreenTopSpace{
+    height:200px;
+    background: none;
+    width: 0%;
+}
+
+#MainMenu{
+    width: 360px;
+    font-size:28px;
+    position: relative;
+    line-height: 150%;
+    text-align: center; 
+    
+    text-shadow: -3px 3px 4px black;
+
+    display: inline-block;
+    padding-left:100px
+}
+
+#LoginSpacer {
+    cursor:default;
+}
+
+
+#loginFail{
+    display:none;
+}
+
+#rememberCheckBox{
+    width: 2em;
+    height: 2em;
+    max-width: none;
+    margin: 0;
+    margin-right: 0.4em;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.MainMenuEntry{
+    cursor: pointer; cursor: hand;
+}
+
+.MainMenuEntry:hover{
+    color:#ffff77;
+}
+
+.MainMenuEntry a:hover {
+    color: #ffff77;
+}
+
+.MainMenuEntry.TextDisabled:hover{
+    color:#555555;
+}
+
+.window-close:hover{
+    color:#ffff77;
+}
+
+#MainMenu div#MainMenuRight{
+    position: relative;
+    width: 360px;
+}
+
+
+
+#MainMenu #MainMenuRight>div{  
+    margin-bottom: 25px;
+}
+
+.MainMenuFullLine{
+    width: 360px;
+}
+
+div.ScreenRight{
+    padding: 20px;
+    padding-top: 0px;
+    border: 1px solid lightgray;
+    border-radius: 3px;
+    position: relative;
+}
+
+#UserLine{
+    font-size:24px;
+}
+
+#Login{
+    display: inline-block;
+    height: 68px;
+    width: 170px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 68px;
+}
+
+#LoginSpacer{
+    width:5px;
+    display:inline-block;
+}
+
+#NewAccount{
+    display: inline-block;
+    height: 68px;
+    width: 170px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 32px;
+}
+
+#Logout {display:none;}
+
+.Screen{
+    display:none;        
+    vertical-align: top;
+    padding-left: 100px;
+    width: 420px;
+    margin-bottom: 8px;
+}
+
+.Screen.Show {
+    display: inline-block;
+}
+
+    .closure {
+        position: fixed;
+        bottom: 15px;
+        right: 30px;
+        font-size: 11px;
+        line-height: 25px;
+        color: #cccccc;
+    }
+
+.closure a {
+    color: #cccccc;
+}
+
+
+#loginArea .input_text {
+    font-size: 20px;
+    margin-bottom: 9px;
+    padding: 4px;
+    width: 220px;
+    display: block;
+}
+
+#loginButton {
+    /* float: right; */
+    font-size: large;
+    /*width: 234px;*/
+}
+
+.TextDisabled{
+    color: #555555;
+}
+
+.NormalBackground{
+    background: rgba(50, 50, 60, 0.55)
+}
+
+
+.BottomButtons{
+    margin-top: 20px;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.BottomButtons button{
+    font-size: 24px;
+}
+
+.BottomButtons button.Right{
+    right: 0px;
+    position: absolute;
+}
+
+#JoinGameScreen div.ScreenRight, #JoinGameDescriptionScreen div.ScreenRight  {
+    padding:20px;
+    padding-top: 0px;
+}
+
+#JoinGameScreenTitle{
+   
+}
+
+
+.ScreenTitle{
+    position: relative;
+    height: 32px;
+    line-height: 32px;  
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: -2px 2px 3px black;   
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;   
+}
+
+.gameImage{
+    background-size: cover;
+    background-position: 50% 50%;
+    width: 160px;
+    height: 160px;            
+    display: inline-block;
+    margin: 10px;
+    padding: 2px 2px;
+    position:relative;
+}
+
+
+.window-close {
+    right: 6px;
+    top: 6px;
+    height: 21px;
+    width: 22px;
+    /*background: transparent url("../gui/window_sprite.png?v=726") no-repeat -32px -21px;*/
+    display: block;
+    position: absolute;
+}
+
+
+
+a:link {
+    color: #cccccc;
+    text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+    color:#cccccc;
+    text-decoration: none;
+}
+
+/* mouse over link */
+a:hover {
+    color: #e4e4e4;
+    text-decoration: none;
+}
+
+/* selected link */
+a:active {
+    color: #a4a4a4;
+    text-decoration: none;
+}
+
+
+#JoinGameScreen p {
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+}
+
+
+#GalleryScreen img{
+    width:180px;
+}
+
+div#HelpScreen div.ScreenRight{
+    padding-top:20px;
+}
+
+#SpaceBackground{
+    position: fixed;
+    left: 50%;
+    background-image: url('images/intro-fin3.jpg');
+    margin-left: -960px;
+    width: 1920px;
+    height: 1080px;
+    background-repeat:no-repeat;
+}
+
+#ForgotForm{
+    display:none;
+    font-size: large;
+}
+
+#recoveryEmail{
+    font-size: large;
+}
+
+#recoveryButton{
+    font-size: large;
+}
+
+#SettingsPasswordMissing{
+    display:none;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #353535;
+    border: 1px solid #554D3B;
+    border-radius: 2px;
+}
+*::-webkit-scrollbar {
+    background: rgb(35, 33, 33);
+}
+*::-webkit-scrollbar {
+    width: 12px;
+}
+
+#ForgotPassword {
+    text-decoration:underline;
+}
+#ForgotPassword:hover {
+    text-decoration: none;
+}
+
+#Logout {
+    text-decoration:underline;
+}
+#Logout:hover {
+    text-decoration: none;
+}
+
+
+.styled-select {
+   /*background: url(http://i62.tinypic.com/15xvbd5.png) no-repeat 95% 62%;
+   background: url(images/selectArrow.png) no-repeat 95% 62%;*/
+   
+    height: 20px;
+    overflow: hidden;
+    width: 117px;
+    margin-top: 4px;
+    margin-left: 7px;
+    border: 1px solid #858585;
+}
+
+.styled-select select {
+   background: transparent;
+    border: none;
+    font-size: 12px;
+    height: 21px;
+
+    padding: 2px;
+    padding-left: 5px;
+    width: 116px;
+    /*
+    -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;
+   */
+   font-weight: bold;
+}
+
+.selectorColor    { background-color: #444444; }
+
+.selectorColor select    { color: #dddddd;background-color: #444444;}
+
+#PasswordResetRequest{display:none;}
+
+/*
+.blue select  option  { background-color: #444444; -webkit-appearance:none;outline:none; }    
+
+.blue select  option  { background-color: #444444; -webkit-appearance:none; }    
+*/
+
+#reCapInput2{
+        max-height: 126px;
+}
+
+#JoinGameDescriptionScreen{
+
+    padding-bottom: 140px;
+}
+
+
+#JoinGameDescriptionScreen table{
+    width:100%
+}
+
+#JoinGameDescriptionScreen table td{
+    padding-right: 10px;
+}
+
+#JoinGameDescriptionScreen table td.tdAlignRight input {
+    width:100%
+}
+
+td.tdAlignRight {
+    text-align:right;
+}
+
+td.tdAlignRight input{
+    text-align:right;
+    padding-right: 2px;
+}

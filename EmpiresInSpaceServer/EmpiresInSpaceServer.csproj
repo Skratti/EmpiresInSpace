@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0CC07013-EF64-4C06-8FE5-756B102D9350}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SpacegameServer</RootNamespace>
+    <AssemblyName>SpacegameServer</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BC\Alliance.cs" />
+    <Compile Include="BC\Building.cs" />
+    <Compile Include="BC\Colony.cs" />
+    <Compile Include="BC\CommNode.cs" />
+    <Compile Include="BC\GameData.cs" />
+    <Compile Include="BC\Message.cs" />
+    <Compile Include="BC\Modules.cs" />
+    <Compile Include="BC\Ship.cs" />
+    <Compile Include="BC\ShipRename.cs" />
+    <Compile Include="BC\Colonize.cs" />
+    <Compile Include="BC\ShipSelfdestruct.cs" />
+    <Compile Include="BC\ShipBuild.cs" />
+    <Compile Include="BC\ShipMove.cs" />
+    <Compile Include="BC\ShipTemplates.cs" />
+    <Compile Include="BC\Trade.cs" />
+    <Compile Include="BC\Transfer.cs" />
+    <Compile Include="BC\User.cs" />
+    <Compile Include="BC\XMLGroups\AllianceFullData.cs" />
+    <Compile Include="BC\XMLGroups\AllianceInvites.cs" />
+    <Compile Include="BC\XMLGroups\Base.cs" />
+    <Compile Include="BC\XMLGroups\Colonize.cs" />
+    <Compile Include="BC\XMLGroups\ColonyBuilding.cs" />
+    <Compile Include="BC\XMLGroups\ColonySurface.cs" />
+    <Compile Include="BC\XMLGroups\CombatMessages.cs" />
+    <Compile Include="BC\XMLGroups\CommNodeData.cs" />
+    <Compile Include="BC\XMLGroups\GameDataTree.cs" />
+    <Compile Include="BC\XMLGroups\KnownAlliances.cs" />
+    <Compile Include="BC\XMLGroups\Messages.cs" />
+    <Compile Include="BC\XMLGroups\MoveResultTree.cs" />
+    <Compile Include="BC\XMLGroups\QuestCompleted.cs" />
+    <Compile Include="BC\XMLGroups\ResearchDone.cs" />
+    <Compile Include="BC\XMLGroups\shipBuild.cs" />
+    <Compile Include="BC\XMLGroups\StarSystemMap.cs" />
+    <Compile Include="BC\XMLGroups\Trade.cs" />
+    <Compile Include="BC\XMLGroups\UserContacts.cs" />
+    <Compile Include="BC\XMLGroups\userData.cs" />
+    <Compile Include="BusinessConnector.cs" />
+    <Compile Include="Core\Classes\Alliance.cs" />
+    <Compile Include="Core\Classes\Colony.cs" />
+    <Compile Include="Core\Classes\ColonyBuildBuilding.cs" />
+    <Compile Include="Core\Classes\Combat.cs" />
+    <Compile Include="Core\Classes\CommNodeMap.cs" />
+    <Compile Include="Core\Classes\CommNodes.cs" />
+    <Compile Include="Core\Classes\Config.cs" />
+    <Compile Include="Core\Classes\GalacticEvents.cs" />
+    <Compile Include="Core\Classes\Modules.cs" />
+    <Compile Include="Core\Classes\Research.cs" />
+    <Compile Include="Core\Classes\ResearchQuestPrerequisite.cs" />
+    <Compile Include="Core\Classes\ShipBuild.cs" />
+    <Compile Include="Core\Classes\ShipStatistics.cs" />
+    <Compile Include="Core\Classes\ShipTemplates.cs" />
+    <Compile Include="Core\Classes\SocketOut.cs" />
+    <Compile Include="Core\Classes\TradeGoods.cs" />
+    <Compile Include="Core\Classes\TransferGoods.cs" />
+    <Compile Include="Core\Classes\User.cs" />
+    <Compile Include="Core\Classes\UserQuest.cs" />
+    <Compile Include="Core\Classes\UserRelations.cs" />
+    <Compile Include="Core\Classes\UserResearch.cs" />
+    <Compile Include="Core\Data\Combat.cs" />
+    <Compile Include="Core\Data\CoreClasses.cs" />
+    <Compile Include="Core\Classes\TurnSummary.cs" />
+    <Compile Include="Core\Classes\TurnSummaryTimer.cs" />
+    <Compile Include="Core\Data\Colony.cs" />
+    <Compile Include="Core\Data\InfluenceManager.cs" />
+    <Compile Include="Core\Data\Messages.cs" />
+    <Compile Include="Core\Data\Routes.cs" />
+    <Compile Include="Core\Data\Ships.cs" />
+    <Compile Include="Core\Data\SpecializationGroups.cs" />
+    <Compile Include="Core\Data\User.cs" />
+    <Compile Include="Core\Classes\GeometryIndex.cs" />
+    <Compile Include="Core\Classes\Ships.cs" />
+    <Compile Include="Core\LockingManager.cs" />
+    <Compile Include="DataConnectors\GetAll.cs" />
+    <Compile Include="DataConnectors\GetSingleData.cs" />
+    <Compile Include="DataConnectors\TurnSummary.cs" />
+    <Compile Include="DataConnectors\WriteBuffers.cs" />
+    <Compile Include="DataConnector.cs" />
+    <Compile Include="SpaceServer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SpaceServerCore.cs" />
+    <Compile Include="SqlConnector.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

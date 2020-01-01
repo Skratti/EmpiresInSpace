@@ -1,0 +1,1134 @@
+﻿/*
+    CSS that is needed by various special purpose panels
+    and not shared between them!
+ */
+
+.messageTextarea              { 
+    border: none; 
+    resize: none; 
+    width: 100%; 
+    height: 100%;    
+    font-size: 16px;  
+    border-radius: 0; 
+    -webkit-appearance: none; 
+    -moz-appearance: none; 
+    padding: 0px; 
+    line-height: 150%; 
+    -ms-user-select: text; 
+    -moz-user-select: text; 
+    -webkit-user-select: text; 
+    user-select: text;
+    background-color: #DDD;
+    background: rgba(0,0,0,0.4);
+    color: lightgray;
+    border: thin solid lightgray;
+}
+
+.commMessageMaxHeight textarea {      
+    max-width: 690px;
+    min-height: 230px;
+}
+
+.messageHeaderInputDiv{
+    width: 703px;
+}
+
+/*
+.CommMessage a{
+    color:blue;
+    font-weight:bold;
+}
+.CommMessage a:hover{
+    text-shadow: 0px 0px 1px white; 
+}
+
+.CommMessage a:active{ 
+    color:red;
+}
+*/
+.CommMessageLayout{
+    line-height: 120%;
+    padding: 0px 40px 3px 4px;
+}
+
+.relPopupPanel .allCommMessages input{
+    width: 100%;
+    text-align: left; 
+}
+
+#panels .panel
+{
+    height: 100%;  
+	width: 100%;
+    
+    top: 0px;
+    position:absolute;       
+    
+    -webkit-box-shadow: 1px 1px 5px #000;
+	-moz-box-shadow: 1px 1px 5px #000;
+	-o-box-shadow: 1px 1px 5px #000;
+	-ms-box-shadow: 1px 1px 5px #000;
+	/*padding: 5px;*/
+	border-left: 1px solid #EEE;
+	
+	/*
+	background-image: -webkit-gradient(
+	    linear,
+	    left top,
+	    right top,
+	    color-stop(0, #CCC),
+	    color-stop(1, #AAA)
+	);
+	background-image: -webkit-linear-gradient(left, #CCC 0%, #AAA 100%);
+	background-image: -ms-linear-gradient(left, #CCC 0%, #AAA 100%);
+	background-image: -o-linear-gradient(left, #CCC 0%, #AAA 100%);
+	background-image: -moz-linear-gradient(left, #CCC 0%, #AAA 100%);
+	background-image: linear-gradient(left, #CCC 0%, #AAA 100%);
+    */
+    display:none;  
+    z-index:1500;   
+        
+    
+    
+    background: #DDDDDD;
+    background: -webkit-gradient(linear, left top, left bottom, from(#888888), to(#DDDDDD));
+    background: -webkit-linear-gradient(#888888, #DDDDDD);
+    background: -moz-linear-gradient(top, #888888, #DDDDDD);
+    background: -ms-linear-gradient(#888888, #DDDDDD);
+    background: -o-linear-gradient(#888888, #DDDDDD);
+    background: linear-gradient(#888888, #DDDDDD);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#888888', endColorstr='#DDDDDD');
+    zoom: 1;
+
+
+    
+}
+
+
+
+#panels ul { list-style: none; margin: 0px; padding: 0px; z-index: 1500; }
+/*#panels ul li */
+.panelLi
+{
+    z-index: 1500;
+	margin-top: 5px;
+	padding: 5px;
+	border: 1px solid #777;
+	background-image: -webkit-gradient(
+	    linear,
+	    left bottom,
+	    left top,
+	    color-stop(0, #FFF),
+	    color-stop(1, #CCC)
+	);
+	background-image: -webkit-linear-gradient(center bottom, #FFF 0%, #CCC 100%);
+	background-image: -ms-linear-gradient(center bottom, #FFF 0%, #CCC 100%);
+	background-image: -o-linear-gradient(center bottom, #FFF 0%, #CCC 100%);
+	background-image: -moz-linear-gradient(center bottom, #FFF 0%, #CCC 100%);
+	background-image: linear-gradient(center bottom, #FFF 0%, #CCC 100%);
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-o-border-radius: 5px;
+	-ms-border-radius: 5px;
+	border-radius: 5px;
+	
+	-webkit-box-shadow: inset 2px 2px 5px #666;
+	-moz-box-shadow: inset 1px 1px 5px #000;
+	-o-box-shadow: inset 1px 1px 5px #000;
+	-ms-box-shadow: inset 1px 1px 5px #000;
+	box-shadow: inset 1px 1px 5px #000;
+}
+#panels ul li:hover, #ui #panel ul li:active {
+	cursor: pointer;
+	background: #FFF;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	-o-box-shadow: none;
+	-ms-box-shadow: none;
+	box-shadow: none;
+}
+
+
+
+
+#panels ul li h2 { padding: 0px; margin: 0px; font-size: 12px; }
+#panels ul li p { padding-top: 3px; margin: 0px; font-size: 11px; }
+
+/* Transfer Goods */
+
+.buttonUpperLeft
+{
+    position: absolute;
+    top:20px;
+    left:20px;
+    margin: 0; padding: 0.8em;
+    text-align: left; 
+}
+
+
+
+
+
+#panels #transferLeftShips
+{
+    position:absolute;
+    left:15px;
+    /*height:100%;*/
+    width:160px;
+    
+}
+
+#panels #transferRightShips
+{
+    position:absolute;
+    right:15px;
+    /*height:100%;*/
+    width:160px;
+   
+}
+
+#panels #transferMiddle
+{
+    position:absolute;
+    right:160px;
+    left:160px;
+    /*height:100%;   */
+}
+
+.transferLi
+{
+    width:135px;
+    height:30px;
+    position: relative;
+}
+
+.transferLiActive
+{
+   border:thin solid blue;
+   cursor: pointer;
+	background: #FFF;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	-o-box-shadow: none;
+	-ms-box-shadow: none;
+	box-shadow: none;
+}
+
+.transferLi div
+{
+    padding: 5px;
+}
+
+
+#panels #transferMiddle #leftSide
+{
+    position:absolute;
+    left:5px;
+    width:50%;
+    /*height:100%;   */
+   
+}
+
+#panels #transferMiddle #rightSide
+{
+    position:absolute;    
+    right:5px;
+    width:50%;
+    /*height:100%;*/
+    
+}
+  
+#panels #GoodsTransfer2
+{
+    position: absolute;
+    width:720px;
+    min-height: 480px;
+    height:auto;
+    overflow:auto;
+    left: 50%;
+    top:50%;
+    margin-left: -360px;
+    margin-top: -240px;
+    padding:0px;
+    z-index:11000;
+    opacity: 1;
+}
+
+
+
+#panels #GoodsTransfer2 #transferRightSideSelector
+{
+    right:15px;
+    position:absolute
+}
+
+#panels #GoodsTransfer2 #transferButtons
+{
+    width: 100%;
+	height: 50px;
+	/*position: fixed;*/
+	position: absolute;
+	bottom: 10px;
+}
+
+
+#panels .panelsPadding
+{        
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-top:10px;
+    padding-bottom:45px;
+}
+
+
+
+#panels #messageList .panelsPadding
+{
+   padding-top:60px; 
+}
+
+.relPopup.MessagePanel {
+    position: fixed;
+}
+
+.MessagePanel .messageTableBorder {
+    border-spacing: 0 5px; 
+}
+
+.messageTable {
+    table-layout: fixed;
+    cursor: pointer;
+    width: 100%;
+    border-spacing: 0;
+    padding: 0;
+    
+    
+    border-collapse: collapse;
+    display: table;
+    border-color: gray;
+
+    font-family: arial,sans-serif;
+
+}
+
+.colSender
+{
+    width:200px;
+}
+
+.colEmpty
+{
+    width:25px;
+}
+
+.colDateTime
+{
+    width: 10ex;
+}
+
+.messageTR
+{
+    color: #222;
+    cursor: pointer;
+    /*padding: 4 1ex;*/
+    padding: 3px;
+    min-height: 42px;
+
+    text-align: left;
+}
+
+.messageNotReadTRBackground
+{
+    color: white;
+    /*background: rgba(255, 255, 255, .9);*/
+}
+
+.messageReadTRBackground
+{
+    background: rgba(243, 243, 243, .85);
+    color: #222;
+}
+
+.messagePaddingSenderColumn
+{
+    padding-right: 6px;
+    padding-left: 10px;
+    
+}
+
+.messagePaddingLbR
+{
+    padding-right: 20px;
+    padding-left: 10px;
+    text-align: right;
+}
+
+
+.messageTD
+{
+    padding-top: 7px;
+    padding-bottom: 7px;
+    border-bottom: 1px #BBBBBB solid;
+    font-size: 110%;
+    outline: none;
+    overflow: hidden;
+    padding: 3px 0 1px;
+    vertical-align: middle;
+    /*white-space: nowrap;*/
+   
+    height: 3.5ex;
+}
+
+.messageTDinnerDiv
+{
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.heightOverflow1
+{
+    position:relative;
+    top:40px;
+    bottom:40px;
+}
+
+.heightOverflow
+{
+     height:100%; 
+     overflow-y:scroll;
+     
+}
+
+.panelsFooter
+{
+    position: absolute; 
+    height: 45px;
+    bottom:0px; 
+    width:100%;
+        
+	border-left: 1px solid #EEE;
+	background: #DDDDDD;
+        
+    z-index:1600; 
+}
+
+.panelsFooter .buttonUl .panelLi
+{
+    font-size: 16px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.messageListHeader
+{    
+    width:100%;        
+    padding-right: 25px;
+    padding-left: 25px;
+    padding-top:8px;
+    padding-bottom:5px;
+    
+}
+
+.mLHLeftSide
+{
+    white-space: nowrap;
+    float:left;
+}
+
+.mLHRightSide
+{
+    float: none;
+    text-align: right;
+    white-space: nowrap;
+    padding-right: 40px;
+}
+
+.mLHRightSideText
+{
+    position: relative;
+    display: inline-block;
+    text-align: left;
+    vertical-align: top;
+}
+
+.mLHSpan
+{
+    padding-right: 0;
+    white-space: nowrap;
+    padding: .3em 8px 0 0;
+    text-align: left;
+}
+
+.mLHAmount
+{
+    -webkit-user-select: none;
+    border: 1px solid transparent;
+    padding: 0 3px 1px 3px;
+    margin-top: -1px;
+    margin-bottom: -2px;
+    margin-left: 4px;
+    margin-right: 4px;
+    position: relative;
+    display: inline-block;
+    white-space: nowrap;
+    text-align: left;
+}
+
+.MLHButton
+{
+    -webkit-user-select: none;
+    color: #B8B8B8;
+    background-color: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin-right: 0;
+    background: white;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    min-width: 34px;
+    padding: 0;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    cursor: default;
+    font-size: 11px;
+    font-weight: bold;
+    text-align: center;
+    height: 27px;
+    line-height: 27px;
+    outline: 0;
+    margin: 0;
+    position: relative;
+    display: inline-block;
+    white-space: nowrap;
+
+}
+
+.mLHButtons
+{
+    width:30px;
+    height:20px;
+}
+
+.messageReadHead
+{
+    position: relative;
+    left:20px;
+    width:600px;
+    border: 1px solid rgba(0, 0, 0, 0.1);   
+    /*background-color:White;*/
+}
+.messageReadBody
+{
+    position: relative;
+    left:20px;
+    width:600px;
+    top:5px;
+    bottom:100px;
+    /*width:600px;
+    height:500px;     
+    overflow-y:scroll;    */
+    border: 1px solid rgba(0, 0, 0, 0.1);   
+    display: inline-block;        
+    /*background-color:White;*/
+}
+
+.messageWriteHead
+{
+    position: relative;
+    left:100px;
+    width:600px;
+    border: 1px solid rgba(0, 0, 0, 0.1);   
+    background-color:White;
+}
+.messageWriteBody
+{    
+    width:600px;
+    height:900px;         
+}
+/*
+.communicationBody
+{
+    position: relative;
+    top:50px;
+    left:100px;
+    width:600px;
+    height:500px;     
+    border: 1px solid rgba(0, 0, 0, 0.1);   
+    display: inline-block;    
+    overflow-y:scroll;
+    background-color:White;
+}
+*/
+
+.communicationBody
+{
+    position:absolute;
+    top:50px;
+    left:100px;
+    width:600px;
+    bottom:50px;     
+    border: 1px solid rgba(0, 0, 0, 0.1);   
+    display: inline-block;    
+    overflow-y:scroll;
+    background-color:White;
+}
+
+.buttonUpperLeft li
+{
+    display: inline;
+}
+
+.colUserId
+{
+    width:75px;
+    text-align:left;
+}
+
+.colUserName
+{
+    width:200px;
+}
+
+.colUserAllianceId
+{
+    width:200px;
+}
+
+.colCurrentRelation {
+    width:50px;
+}
+
+.colTargetRelation {
+    width:50px;
+}
+
+.colHisTargetRelation {
+    width:50px;
+}
+
+
+.colMail
+{
+       width:30px;
+}
+
+.colWar
+{
+       width:30px;
+}
+
+.userLine
+{
+    
+    border-width:medium;
+}
+.mailPic
+{
+    /*background-image:url(images/mail.png);
+    background-repeat:no-repeat;*/
+    height:30px;
+    width:40px;
+}
+
+.warPic
+{
+    /*background-image:url(images/war.png);
+    background-repeat:no-repeat;*/
+    height:30px;
+    width:30px;
+}
+
+.semiTransOverlay 
+{   
+    position:fixed;   
+
+    top:0px; left:0px; right:0px;bottom:0px;
+   
+
+    background-color:rgb(30,30,30);      
+	opacity: 0.8;
+
+    
+    z-index:10000;
+
+}
+
+.popupContainer  {
+    z-index:11000;
+    width:100%; height:100%; 
+}
+
+
+
+
+.popupSpaceportShips 
+{
+    position:relative;
+}
+
+
+
+
+.ShipTemplateTable {
+    padding:5px;
+}
+
+.ShipTemplateTable tr {
+    
+}
+.ShipTemplateShipList.fullscreenTable td{
+    background-color: transparent;
+}
+.ShipTemplateShipList td{
+    border-top: thin solid;
+    border-bottom: thin solid;
+    text-align: center;
+    background-color: transparent;
+ }
+
+.ShipTemplateTable td {
+    padding:5px;
+    border-top: thin solid black;
+    border-bottom: thin solid black;
+   
+}
+.ShipTemplateTable td:first-child {
+    border-left: thin solid black; 
+    border-radius: 5px 0px 0px 5px / 5px 0px 0px 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-bottomleft: 5px;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-bottom-left-radius: 5px;
+
+}
+
+.ShipTemplateTable td:last-child {
+    border-right: thin solid black;
+    border-radius:   0px 5px 5px 0px / 0px 5px 5px 0px;
+    -moz-border-radius-topright: 5px;
+    -moz-border-radius-bottomright: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -webkit-border-bottom-right-radius: 5px;
+}
+
+.shipTemplateCostGif{
+
+    padding:3px;
+}
+
+.popupSpaceportShipBuild {
+    height: 30px;
+   
+    border: thin solid black;
+    border-radius:  5px
+}
+
+hr {
+  border: 0;
+  width: 97%;
+  height: 1px;
+  color:black;
+  background-color: black;
+}
+
+.goodsOverflow {
+        line-height: 100%;
+}
+
+.goodsAmount {
+    height: 12px;
+    text-align: center;
+    font-size: small;
+    margin-top: -3px;
+    margin-bottom: 1px;
+    font-weight: bold;
+}
+.goodsAmount.WithChange {
+    height: 25px;
+    line-height: 110%;
+}
+.positiveChange {
+    color: rgb(0,255,0);  
+}
+
+.negativeChange {
+    color: rgb(255,0,0);    
+}
+
+.goodsBorderBlack {
+    border : thin solid #444444;    
+    padding: 3px;
+    border-radius:  3px
+}
+.goodsBorderBlack{
+    border-color : #444444;
+}
+
+.floatLeft {
+    float: left;
+}
+
+.floatRight {
+    float: right;
+}
+
+
+.marginLeft3 {
+    margin-left:3px;
+}
+
+.borderColorRed {
+    border-color:red;
+}
+
+.tableBorderBlack{
+    border : thin solid black; 
+    margin: 0px 0px 10px 0px;    
+    padding: 1px;
+    border-radius:  3px
+}
+
+.CommMessageWriteContainer{
+
+    margin-top: 20px;
+    width: 700px;
+    position: relative;
+}
+
+.CommMessageWriteButtons{
+
+    height: 45px;
+    padding-top: 10px;
+}
+.commMessageMaxHeight {
+
+    padding: 2px;
+    width: 690px;
+   
+
+    border: 1px;
+    border-color: black;
+    border-style: solid;
+}
+
+.commMessageMaxHeight .messageWriteBody {
+
+    width: 100%;
+}
+
+
+.allCommMessages{
+    text-align: left;
+    color: #d3d3d3;
+}
+.newMessageButtons{
+    left:auto;
+    right: 0px;
+    display: inline-block;
+    margin: 5px;
+    }
+
+.informNewComMMessage{
+    background: url(images/MailT.png) no-repeat;
+    background-position: center;
+    height: 20px;
+}
+
+td.goodsDisplay {
+    padding: 4px;
+    max-width:300px;
+    vertical-align: top;
+}
+
+.researchTree svg{
+    min-height: 900px;
+}
+
+.tabDivWithScroll{
+    position: absolute;
+    top: 60px;
+    height: 370px;  
+    left: 10px;
+    right: 10px;
+    overflow-y: auto;
+    overflow-x: auto;
+}
+
+.researchTreePanel{
+    position: absolute;
+    top: 25px;    
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    overflow-y: auto;
+    overflow-x: auto;
+}
+
+
+.combatLogTable td{
+    text-align:center;
+}
+
+.highlightTableRow tr th {
+    background-color:#888888;
+    /*border-right: 1px solid black;*/
+    padding: 5px 5px;
+    text-align: center;
+}
+
+.allianceLine td {
+    padding: 10px 5px;
+}
+
+.allianceLine .invite{
+    background:url(images/design/IconsTransparent.png) no-repeat -120px 0px;
+    width:30px;
+    height:30px;
+    margin-left:10px;
+}
+
+.highlightTableRow tr th:last-child {
+ border-right: none;
+}
+.highlightTableRow tr:hover {
+          background-color: #e5e5e5;
+    }
+
+.trDarkGrey {
+    background-color:#888888;
+}
+/*
+.highlightTableRow tr:hover td{
+   background-color: transparent ;
+}
+
+*/
+
+
+
+
+/*Trade Offers and Requests*/
+#tradeOfferDiv{    
+    top: 260px; 
+}
+
+
+/*Alliance List and Details Page*/
+.allAlliancesDiv{    
+    top: 100px; 
+}
+
+/*Tables with fixed headers and scrollable tbody  */
+
+
+.ownAlliance td
+{
+    background: rgba(30, 130, 230, .3) !important;
+}
+
+.ownAlliance td span
+{
+    background: initial;
+}
+
+.highlightTable:hover tr{
+          background-color: #e5e5e5;
+    }
+
+
+.tableBorderBlack.highlightTableRow.fullscreenTable {
+    padding:1px;
+}
+
+.spanFixedWidth {
+    /*word-break: break-all;*/
+    font-size: small;
+}
+
+.buildingImage {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #666;
+}
+
+.buildingListDiv{
+    background-color: #444444;
+    border: thin solid #606060;
+   
+    margin: 0px;
+    padding: 1px;
+    border-radius: 4px;
+    margin-bottom: 4px;
+    /*max-width: 284px;*/
+    padding-left: 3px;
+    padding-top: 3px;
+}
+
+.BuildingListBuildingDiv{
+    display: inline-block;
+}
+
+.buildingListDiv .buildingImage {
+    width: 42px;
+    height: 42px; 
+    
+}
+
+.buildingListDiv .buildingListMargin {
+    margin-right: 3px;
+    border: thin solid #666;
+}
+
+.buildingListDiv .selected {
+    cursor: pointer;
+	background: #FFF;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	-o-box-shadow: none;
+	-ms-box-shadow: none;
+	box-shadow: none;
+}
+
+
+ .buildingListDiv .tdGreen {
+    border: thin solid green;       
+}
+
+.buildingListDiv  .tdRed {
+    border: thin solid red;      
+}
+
+.buildingListDiv .buildingImage{
+    border:none;
+}
+
+.selectText{
+    -webkit-user-select:text;
+    -khtml-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+}
+
+#abandonColonyButton{
+    position:absolute;
+    right:5px;
+    font-size: 0.5em;
+    padding: 1px 0px 2px 2px;      
+}
+
+.fullscreenTable td.contactStateWarBgColor{
+    background-color: #ff6666;
+}
+
+.fullscreenTable td.contactState{
+    width: 30px;
+	height: 30px;
+    padding:0px;
+}
+
+.contactState.War      {  background: url(images/DiplomacyStates.png) no-repeat 0px 0px;background-color: lightgrey;}
+.contactState.Hostile  {	background: url(images/DiplomacyStates.png) no-repeat -60px 0px;background-color: lightgrey;}
+.contactState.Neutral  {	background: url(images/DiplomacyStates.png) no-repeat -120px 0px;background-color: lightgrey;}
+.contactState.Trade    {	background: url(images/DiplomacyStates.png) no-repeat -180px 0px;background-color: lightgrey;}
+.contactState.Pact     {	background: url(images/DiplomacyStates.png) no-repeat -240px 0px;background-color: lightgrey;}
+.contactState.Allied   {	background: url(images/DiplomacyStates.png) no-repeat -300px 0px;background-color: lightgrey;}
+
+.contactState.WarSmall      , .fullscreenTable tr:hover td.contactState.warSmall { background: url(images/DiplomacyStates.png)   0px 0px  / 180px 30px no-repeat;background-color: rgba(99,99,99,0.65);}
+.contactState.HostileSmall  , .fullscreenTable tr:hover td.contactState.hostileSmall {	background: url(images/DiplomacyStates.png) -30px 0px  / 180px 30px no-repeat;background-color: rgba(99,99,99,0.65);}
+.contactState.NeutralSmall  , .fullscreenTable tr:hover td.contactState.neutralSmall {	background: url(images/DiplomacyStates.png) -60px 0px / 180px 30px no-repeat; background-color: rgba(99,99,99,0.65);}
+.contactState.TradeSmall    , .fullscreenTable tr:hover td.contactState.tradeSmall {	background: url(images/DiplomacyStates.png) -90px 0px / 180px 30px no-repeat; background-color: rgba(99,99,99,0.65);}
+.contactState.PactSmall     , .fullscreenTable tr:hover td.contactState.pactSmall {	background: url(images/DiplomacyStates.png) -120px 0px / 180px 30px no-repeat;background-color: rgba(99,99,99,0.65);}
+.contactState.AlliedSmall   , .fullscreenTable tr:hover td.contactState.alliedSmall {	background: url(images/DiplomacyStates.png) -150px 0px / 180px 30px no-repeat;background-color: rgba(99,99,99,0.65);}
+
+.messageFromToDiv{
+    position:absolute;
+    width: 70px;
+}
+
+.messageFromNames{
+    position:relative;
+    left:70px;
+    width: 530px;
+}
+
+.messageTimeDiv{
+    position:absolute;
+    right: 14px;
+}
+
+.MessageRowContainer{
+    /*font-family: Drakolomb;*/   
+    
+}
+
+.MessageUnread{
+    background-color:blue;
+    color:#3881ff;
+}
+
+.buttonSmallPadding{
+    padding: 0px 3px 0px 3px;
+    
+}
+
+.buttonSpecialChar {
+    font-family: Arial;
+}
+
+.modifiers{
+    float: right;
+    padding-right: 35px;
+    font-size: 17px;
+    font-weight: lighter;
+}
+
+.relPanelBody.tradePanel{
+      background: darkgray;
+    color: black;
+    line-height: 100%;
+}
+
+table.DefenderRightSide{
+    display: inline-block;
+}
+
+div.DefenderRightSide{
+    text-align: right;
+}
+
+.Trade button.ui-state-default,.Trade  .ui-widget-content button.ui-state-default,.Trade  .ui-widget-header button.ui-state-default{
+    padding: 0px 10px 0px 10px;
+}
+
+.Trade tr button span.ui-button-text{
+    padding: .4em 0.2em;
+    font-size: 14px;
+}
+
+.Trade table{
+    width:100%;
+}
+
+
+.commMessageP{
+    overflow: auto;
+    word-wrap: break-word;
+    width: 530px;
+    margin-left: 10px;
+}
+
+.ShipTemplateShipList tr{
+    background: rgba(60,60,60,0.65) !important;
+}
+
+#ColonyInfo .ui-accordion-header {
+    font-size: 16px; 
+    border: 0px;
+}
+
+.WorsenRelationIconContainer{
+        padding-right: 5px;
+    width: 35px;
+    height: 35px;
+    float: left;
+}

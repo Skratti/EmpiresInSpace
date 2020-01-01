@@ -1,0 +1,1029 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FAF6FA72-7EC1-41E3-A8E7-1181B1F9BF91}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EmpiresInSpace</RootNamespace>
+    <AssemblyName>EmpiresInSpace</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44300</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TypeScriptToolsVersion>3.7</TypeScriptToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.AspNet.SignalR.Core, Version=2.4.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.Core.2.4.1\lib\net45\Microsoft.AspNet.SignalR.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.SystemWeb, Version=2.4.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.SystemWeb.2.4.1\lib\net45\Microsoft.AspNet.SignalR.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.2.1.0\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.2.1.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.2.1.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\DarkUI.css" />
+    <Content Include="css\game.css" />
+    <Content Include="css\gamePanels.css" />
+    <Content Include="css\generatedElements.css" />
+    <Content Include="css\images\design\button-mouse-over.png" />
+    <Content Include="css\images\design\button-on-click.png" />
+    <Content Include="css\images\design\button-uni-red.png" />
+    <Content Include="css\images\design\button-uni.png" />
+    <Content Include="css\images\design\button.png" />
+    <Content Include="css\images\design\IconsTransparent.png" />
+    <Content Include="css\images\design\table-content.bg.png" />
+    <Content Include="css\images\design\table-footer.png" />
+    <Content Include="css\images\design\table-header.png" />
+    <Content Include="css\images\design\table-header2.png" />
+    <Content Include="css\images\design\Tooltip_B_L.png" />
+    <Content Include="css\images\design\Tooltip_B_L_G.png" />
+    <Content Include="css\images\design\Tooltip_B_M.png" />
+    <Content Include="css\images\design\Tooltip_B_M_G.png" />
+    <Content Include="css\images\design\Tooltip_B_R.png" />
+    <Content Include="css\images\design\Tooltip_B_R_G.png" />
+    <Content Include="css\images\design\Tooltip_M_L.png" />
+    <Content Include="css\images\design\Tooltip_M_L_G.png" />
+    <Content Include="css\images\design\Tooltip_M_M.png" />
+    <Content Include="css\images\design\Tooltip_M_M_G.png" />
+    <Content Include="css\images\design\Tooltip_M_R.png" />
+    <Content Include="css\images\design\Tooltip_M_R_G.png" />
+    <Content Include="css\images\design\Tooltip_T_L.png" />
+    <Content Include="css\images\design\Tooltip_T_L_G.png" />
+    <Content Include="css\images\design\Tooltip_T_M.png" />
+    <Content Include="css\images\design\Tooltip_T_M_G.png" />
+    <Content Include="css\images\design\Tooltip_T_R.png" />
+    <Content Include="css\images\design\Tooltip_T_R_G.png" />
+    <Content Include="css\images\Fullscreen.png" />
+    <Content Include="css\images\Icons.png" />
+    <Content Include="css\images\loading.gif" />
+    <Content Include="css\images\StarImageTest600px.gif" />
+    <Content Include="css\images\ZoomInZoomOut.png" />
+    <Content Include="css\MediaCSS\gameMedia000_683.css" />
+    <Content Include="css\MediaCSS\gameMedia684_719.css" />
+    <Content Include="css\MediaCSS\gameMedia720_730.css" />
+    <Content Include="css\MediaCSS\gameMedia731_739.css" />
+    <Content Include="css\MediaCSS\gameMedia740_799.css" />
+    <Content Include="css\MediaCSS\gamePanelsMedia000_683.css" />
+    <Content Include="css\MediaCSS\gamePanelsMedia684_719.css" />
+    <Content Include="css\MediaCSS\gamePanelsMedia720_730.css" />
+    <Content Include="css\MediaCSS\gamePanelsMedia731_739.css" />
+    <Content Include="css\MediaCSS\gamePanelsMedia740_799.css" />
+    <Content Include="css\MediaCSS\generatedElementsMedia000_683.css" />
+    <Content Include="css\MediaCSS\generatedElementsMedia684_719.css" />
+    <Content Include="css\MediaCSS\generatedElementsMedia720_730.css" />
+    <Content Include="css\MediaCSS\generatedElementsMedia731_739.css" />
+    <Content Include="css\MediaCSS\generatedElementsMedia740_799.css" />
+    <Content Include="docs\Research\152.png" />
+    <Content Include="docs\Research\AdvBuildingMaterial.png" />
+    <Content Include="docs\Research\Ammunition.png" />
+    <Content Include="docs\Research\AssemblyPlant.png" />
+    <Content Include="docs\Research\AssemblyPoints.png" />
+    <Content Include="docs\Research\BlastFurnace.png" />
+    <Content Include="docs\Research\BM.png" />
+    <Content Include="docs\Research\BuildingMaterialPlant.png" />
+    <Content Include="docs\Research\Cargo.png" />
+    <Content Include="docs\Research\Colonizer2_60.png" />
+    <Content Include="docs\Research\ColonyCenterMedium_60.png" />
+    <Content Include="docs\Research\ColonyCenterSmall_60.png" />
+    <Content Include="docs\Research\ColonyCenter_60.png" />
+    <Content Include="docs\Research\CommCenter.png" />
+    <Content Include="docs\Research\Corvette.png" />
+    <Content Include="docs\Research\CorvetteG.png" />
+    <Content Include="docs\Research\Crew1.png" />
+    <Content Include="docs\Research\DefSat.png" />
+    <Content Include="docs\Research\DefSat2.png" />
+    <Content Include="docs\Research\DefSat2B.png" />
+    <Content Include="docs\Research\DefSat2K.png" />
+    <Content Include="docs\Research\DefSatBig.png" />
+    <Content Include="docs\Research\DefSatBig2.png" />
+    <Content Include="docs\Research\Depot.png" />
+    <Content Include="docs\Research\Destroyer_1_60.png" />
+    <Content Include="docs\Research\DummyDebris.png" />
+    <Content Include="docs\Research\DummySpaceStation.png" />
+    <Content Include="docs\Research\Energy.png" />
+    <Content Include="docs\Research\Engine.png" />
+    <Content Include="docs\Research\Farm.png" />
+    <Content Include="docs\Research\Food.png" />
+    <Content Include="docs\Research\Fregatte.png" />
+    <Content Include="docs\Research\FregatteG.png" />
+    <Content Include="docs\Research\Fuel.png" />
+    <Content Include="docs\Research\greenBorder.png" />
+    <Content Include="docs\Research\greenBorder2.png" />
+    <Content Include="docs\Research\Headframe.png" />
+    <Content Include="docs\Research\HolmiumBars.png" />
+    <Content Include="docs\Research\HolmiumGenerator.png" />
+    <Content Include="docs\Research\HolmiumOre.png" />
+    <Content Include="docs\Research\House.png" />
+    <Content Include="docs\Research\Houses.png" />
+    <Content Include="docs\Research\Hull.png" />
+    <Content Include="docs\Research\Hyper.png" />
+    <Content Include="docs\Research\Impuls.png" />
+    <Content Include="docs\Research\InkScapeResearch.svg" />
+    <Content Include="docs\Research\LutEcosystem.png" />
+    <Content Include="docs\Research\LutetiumBars.png" />
+    <Content Include="docs\Research\LutetiumOre.png" />
+    <Content Include="docs\Research\Mail.bmp" />
+    <Content Include="docs\Research\menuShip.png" />
+    <Content Include="docs\Research\MetallBars.png" />
+    <Content Include="docs\Research\MetallOre.png" />
+    <Content Include="docs\Research\Mine.png" />
+    <Content Include="docs\Research\Mine2.png" />
+    <Content Include="docs\Research\ModulePlant.png" />
+    <Content Include="docs\Research\OilTank.png" />
+    <Content Include="docs\Research\OilWell2.png" />
+    <Content Include="docs\Research\ore.png" />
+    <Content Include="docs\Research\PlanetaryScanner.png" />
+    <Content Include="docs\Research\Population.png" />
+    <Content Include="docs\Research\PowerPlant.png" />
+    <Content Include="docs\Research\QuestionMark.png" />
+    <Content Include="docs\Research\R1.svg" />
+    <Content Include="docs\Research\R2.svg" />
+    <Content Include="docs\Research\R3.svg" />
+    <Content Include="docs\Research\R4.svg" />
+    <Content Include="docs\Research\R5.svg" />
+    <Content Include="docs\Research\R6.svg" />
+    <Content Include="docs\Research\R7.svg" />
+    <Content Include="docs\Research\Reactor.png" />
+    <Content Include="docs\Research\Research.png" />
+    <Content Include="docs\Research\ResearchBuilding.png" />
+    <Content Include="docs\Research\ScandiumBars.png" />
+    <Content Include="docs\Research\ScandiumOre.png" />
+    <Content Include="docs\Research\ScandTools.png" />
+    <Content Include="docs\Research\Scanner.png" />
+    <Content Include="docs\Research\Scout2G.png" />
+    <Content Include="docs\Research\Scout2K.png" />
+    <Content Include="docs\Research\Scout2XK.png" />
+    <Content Include="docs\Research\Scout3_200.png" />
+    <Content Include="docs\Research\Scout3_60.png" />
+    <Content Include="docs\Research\ScoutModules.png" />
+    <Content Include="docs\Research\Shield.png" />
+    <Content Include="docs\Research\ship.gif" />
+    <Content Include="docs\Research\shipM.gif" />
+    <Content Include="docs\Research\Solar.png" />
+    <Content Include="docs\Research\SolarPanels.png" />
+    <Content Include="docs\Research\Spaceport.png" />
+    <Content Include="docs\Research\SpaceStation0_1_300.png" />
+    <Content Include="docs\Research\SpaceStation0_1_60.png" />
+    <Content Include="docs\Research\SpaceStation1_1_300.png" />
+    <Content Include="docs\Research\SpaceStation1_1_350.png" />
+    <Content Include="docs\Research\SpaceStation1_1_60.png" />
+    <Content Include="docs\Research\SpaceStation2_1_300.png" />
+    <Content Include="docs\Research\SpaceStation2_1_400.png" />
+    <Content Include="docs\Research\SpaceStation2_1_60.png" />
+    <Content Include="docs\Research\SpaceStation3_1_300.png" />
+    <Content Include="docs\Research\SpaceStation3_1_450.png" />
+    <Content Include="docs\Research\SpaceStation3_1_60.png" />
+    <Content Include="docs\Research\SynthMat.png" />
+    <Content Include="docs\Research\TerbiumBars.png" />
+    <Content Include="docs\Research\TerbiumFact.png" />
+    <Content Include="docs\Research\TerbiumOre.png" />
+    <Content Include="docs\Research\TranscendenceBuildert300.png" />
+    <Content Include="docs\Research\TranscendenceBuildert60.png" />
+    <Content Include="docs\Research\TranscendenceConstruct300.png" />
+    <Content Include="docs\Research\TranscendenceConstruct60.png" />
+    <Content Include="docs\Research\Warehouse.png" />
+    <Content Include="docs\Research\WeaponLaser.png" />
+    <Content Include="docs\Research\WeaponmassDriver.png" />
+    <Content Include="docs\Research\WeaponRocket.png" />
+    <Content Include="docs\Research\YellowSunN.png" />
+    <Content Include="docs\Research\YttriumBars.png" />
+    <Content Include="docs\Research\YttriumCloning.png" />
+    <Content Include="docs\Research\YttriumOre.png" />
+    <Content Include="Galaxy.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="images\11.png" />
+    <Content Include="images\12.png" />
+    <Content Include="images\51.png" />
+    <Content Include="images\51_Background.png" />
+    <Content Include="images\52.png" />
+    <Content Include="images\52_Background.png" />
+    <Content Include="images\53.png" />
+    <Content Include="images\53_Background.png" />
+    <Content Include="images\54.png" />
+    <Content Include="images\55.png" />
+    <Content Include="images\56.png" />
+    <Content Include="images\56n.gif" />
+    <Content Include="images\58.png" />
+    <Content Include="images\61.png" />
+    <Content Include="images\62.png" />
+    <Content Include="images\63 %282%29.png" />
+    <Content Include="images\63.png" />
+    <Content Include="images\64.png" />
+    <Content Include="images\65.png" />
+    <Content Include="images\68.png" />
+    <Content Include="images\70.png" />
+    <Content Include="images\Ammunition.png" />
+    <Content Include="images\ArrowToLowerLeft.png" />
+    <Content Include="images\AssemblyPoints.png" />
+    <Content Include="images\AsteroidSurfaceTile.png" />
+    <Content Include="images\background.jpg" />
+    <Content Include="images\background.png" />
+    <Content Include="images\backgroundalt.jpg" />
+    <Content Include="images\background_Current.jpg" />
+    <Content Include="images\BarrenMoon.png" />
+    <Content Include="images\BarrenSurfaceTile.png" />
+    <Content Include="css\images\BlackIcons.png" />
+    <Content Include="images\BlueSun.png" />
+    <Content Include="images\BM.png" />
+    <Content Include="images\Borders\BorderDarkBlueTileset.png" />
+    <Content Include="images\Borders\BorderDarkGreenTileset.png" />
+    <Content Include="images\Borders\BorderDarkGreyTileset.png" />
+    <Content Include="images\Borders\BorderDarkRedTileset.png" />
+    <Content Include="images\Borders\BorderLightBlueTileset.png" />
+    <Content Include="images\Borders\BorderLightGreenTileset.png" />
+    <Content Include="images\Borders\BorderLightGreyTileset.png" />
+    <Content Include="images\Borders\BorderLightRedTileset.png" />
+    <Content Include="images\Borders\BorderOrangeTileset.png" />
+    <Content Include="images\Borders\BorderWhiteTileset.png" />
+    <Content Include="images\Borders\BorderYellowGreenTileset.png" />
+    <Content Include="images\Borders\BorderYellowTileset.png" />
+    <Content Include="images\Buildings\AdvBuildingMaterial.png" />
+    <Content Include="images\Buildings\AntimatterAssemblyPlant.png" />
+    <Content Include="images\Buildings\AntimatterReactor.png" />
+    <Content Include="images\Buildings\AntimatterResearchLab.png" />
+    <Content Include="images\Buildings\Aquafarm.png" />
+    <Content Include="images\Buildings\AssemblyPlant.png" />
+    <Content Include="images\Buildings\BlastFurnace.png" />
+    <Content Include="images\Buildings\BlastFurnaceHolmium.png" />
+    <Content Include="images\Buildings\BlastFurnaceLutetium.png" />
+    <Content Include="images\Buildings\BlastFurnaceScandium.png" />
+    <Content Include="images\Buildings\BlastFurnaceTerbium.png" />
+    <Content Include="images\Buildings\BlastFurnaceYttrium.png" />
+    <Content Include="images\Buildings\BuildingMaterialPlant.png" />
+    <Content Include="images\Buildings\ColonyCenterMedium_60.png" />
+    <Content Include="images\Buildings\ColonyCenterSmall_60.png" />
+    <Content Include="images\Buildings\ColonyCenter_60.png" />
+    <Content Include="images\Buildings\CommCenter.png" />
+    <Content Include="images\Buildings\Depot.png" />
+    <Content Include="images\Buildings\Farm.png" />
+    <Content Include="images\Buildings\FarmingDome.png" />
+    <Content Include="images\Buildings\Headframe.png" />
+    <Content Include="images\Buildings\HeadframeHolmium.png" />
+    <Content Include="images\Buildings\HeadframeLutetium.png" />
+    <Content Include="images\Buildings\HeadframeScandium.png" />
+    <Content Include="images\Buildings\HeadframeTerbium.png" />
+    <Content Include="images\Buildings\HeadframeYttrium.png" />
+    <Content Include="images\Buildings\HolmiumGenerator.png" />
+    <Content Include="images\Buildings\Houses.png" />
+    <Content Include="images\Buildings\Houses2.png" />
+    <Content Include="images\Buildings\HousingDome.png" />
+    <Content Include="images\Buildings\ImpBlastFurnace.png" />
+    <Content Include="images\Buildings\ImpBuildingMaterialPlant.png" />
+    <Content Include="images\Buildings\ImpFarm.png" />
+    <Content Include="images\Buildings\LutEcosystem.png" />
+    <Content Include="images\Buildings\ModulePlant.png" />
+    <Content Include="images\Buildings\NeutroniumReactor.png" />
+    <Content Include="images\Buildings\OilTank.png" />
+    <Content Include="images\Buildings\OilWell2.png" />
+    <Content Include="images\Buildings\OrbitalAntimatterCollector.png" />
+    <Content Include="images\Buildings\OrbitalControlCenter.png" />
+    <Content Include="images\Buildings\OrbitalLongRangeScanner.png" />
+    <Content Include="images\Buildings\OrbitalSpaceHabitat.png" />
+    <Content Include="images\Buildings\OrbitalSpaceLab.png" />
+    <Content Include="images\Buildings\OrbitalWeatherControl.png" />
+    <Content Include="images\Buildings\PlanetaryScanner.png" />
+    <Content Include="images\Buildings\PowerPlant.png" />
+    <Content Include="images\Buildings\PressureDome.png" />
+    <Content Include="images\Buildings\ResearchBuilding.png" />
+    <Content Include="images\Buildings\ScandTools.png" />
+    <Content Include="images\Buildings\Solar.png" />
+    <Content Include="images\Buildings\SolarPanels.png" />
+    <Content Include="images\Buildings\Spaceport.png" />
+    <Content Include="images\Buildings\SynthMaterialPlant.png" />
+    <Content Include="images\Buildings\TerbiumFact.png" />
+    <Content Include="images\Buildings\YttriumCloning.png" />
+    <Content Include="images\buttons\delete3.png" />
+    <Content Include="images\buttons\delete3click.png" />
+    <Content Include="images\buttons\delete3over.png" />
+    <Content Include="images\buttons\down3.png" />
+    <Content Include="images\buttons\down3click.png" />
+    <Content Include="images\buttons\down3over.png" />
+    <Content Include="images\buttons\up3.png" />
+    <Content Include="images\buttons\up3click.png" />
+    <Content Include="images\buttons\up3over.png" />
+    <Content Include="images\CarbonFibers.png" />
+    <Content Include="images\Cargo.png" />
+    <Content Include="images\Colonization_I.png" />
+    <Content Include="images\Colonization_II.png" />
+    <Content Include="images\Colonization_III.png" />
+    <Content Include="images\Colonizer2_60.png" />
+    <Content Include="images\Corvette.png" />
+    <Content Include="images\CorvetteG.png" />
+    <Content Include="images\Crew1.png" />
+    <Content Include="images\DefSat.png" />
+    <Content Include="images\DefSat2.png" />
+    <Content Include="images\DefSat2B.png" />
+    <Content Include="images\DefSat2K.png" />
+    <Content Include="images\DefSatBig.png" />
+    <Content Include="images\DefSatBig2.png" />
+    <Content Include="images\DesertTile.png" />
+    <Content Include="images\Desert_Planet_Surface.png" />
+    <Content Include="images\Destroyer_1_300.png" />
+    <Content Include="images\Destroyer_1_60.png" />
+    <Content Include="images\DiplomacyStates.png" />
+    <Content Include="images\down.png" />
+    <Content Include="images\down3.png" />
+    <Content Include="images\DummyDebris.png" />
+    <Content Include="images\DummySpaceStation.png" />
+    <Content Include="images\EarthMoon.png" />
+    <Content Include="images\Energy.png" />
+    <Content Include="images\Engine.png" />
+    <Content Include="images\favicon\android-chrome-144x144.png" />
+    <Content Include="images\favicon\android-chrome-192x192.png" />
+    <Content Include="images\favicon\android-chrome-36x36.png" />
+    <Content Include="images\favicon\android-chrome-48x48.png" />
+    <Content Include="images\favicon\android-chrome-72x72.png" />
+    <Content Include="images\favicon\android-chrome-96x96.png" />
+    <Content Include="images\favicon\apple-touch-icon-114x114.png" />
+    <Content Include="images\favicon\apple-touch-icon-120x120.png" />
+    <Content Include="images\favicon\apple-touch-icon-144x144.png" />
+    <Content Include="images\favicon\apple-touch-icon-152x152.png" />
+    <Content Include="images\favicon\apple-touch-icon-180x180.png" />
+    <Content Include="images\favicon\apple-touch-icon-57x57.png" />
+    <Content Include="images\favicon\apple-touch-icon-60x60.png" />
+    <Content Include="images\favicon\apple-touch-icon-72x72.png" />
+    <Content Include="images\favicon\apple-touch-icon-76x76.png" />
+    <Content Include="images\favicon\apple-touch-icon-precomposed.png" />
+    <Content Include="images\favicon\apple-touch-icon.png" />
+    <Content Include="images\favicon\browserconfig.xml" />
+    <Content Include="images\favicon\favicon-16x16.png" />
+    <Content Include="images\favicon\favicon-194x194.png" />
+    <Content Include="images\favicon\favicon-32x32.png" />
+    <Content Include="images\favicon\favicon-96x96.png" />
+    <Content Include="images\favicon\favicon.ico" />
+    <Content Include="images\favicon\mstile-144x144.png" />
+    <Content Include="images\favicon\mstile-150x150.png" />
+    <Content Include="images\favicon\mstile-310x150.png" />
+    <Content Include="images\favicon\mstile-310x310.png" />
+    <Content Include="images\favicon\mstile-70x70.png" />
+    <Content Include="images\favicon\safari-pinned-tab.svg" />
+    <Content Include="images\Food.png" />
+    <Content Include="images\Fregatte.png" />
+    <Content Include="images\FregatteG.png" />
+    <Content Include="images\Fuel.png" />
+    <Content Include="images\GasPlanet.png" />
+    <Content Include="images\Goods\AdvBm.png" />
+    <Content Include="images\Goods\Antimatter.png" />
+    <Content Include="images\Goods\ColonyStatistics.png" />
+    <Content Include="images\Goods\ColonyStatistics15.png" />
+    <Content Include="images\Goods\ColonyStatistics20.png" />
+    <Content Include="images\Goods\Helium.png" />
+    <Content Include="images\Goods\HolmiumOre.png" />
+    <Content Include="images\Goods\Hydrogen.png" />
+    <Content Include="images\Goods\IonizedHydrogen.png" />
+    <Content Include="images\Goods\LutetiumOre.png" />
+    <Content Include="images\Goods\Nitrogen.png" />
+    <Content Include="images\Goods\Plasma.png" />
+    <Content Include="images\Goods\Population.png" />
+    <Content Include="images\Goods\Research.png" />
+    <Content Include="images\Goods\ScandiumOre.png" />
+    <Content Include="images\Goods\TabletOfKer.png" />
+    <Content Include="images\Goods\TerbiumOre.png" />
+    <Content Include="images\Goods\YttriumOre.png" />
+    <Content Include="images\GrassTile.png" />
+    <Content Include="images\greenBorder.png" />
+    <Content Include="images\greenBorder2.png" />
+    <Content Include="images\HolmiumBars.png" />
+    <Content Include="images\HolmiumOre.png" />
+    <Content Include="images\Hull.png" />
+    <Content Include="images\Hyper.png" />
+    <Content Include="css\images\IconsWhite.png" />
+    <Content Include="images\Impuls.png" />
+    <Content Include="css\images\DefaultProfile.png" />
+    <Content Include="images\Interface\Recycling.png" />
+    <Content Include="css\images\Spanner.png" />
+    <Content Include="images\Interface\TrashCan.png" />
+    <Content Include="images\links.txt" />
+    <Content Include="images\loading.gif" />
+    <Content Include="images\LutetiumBars.png" />
+    <Content Include="images\LutetiumOre.png" />
+    <Content Include="images\Mail.bmp" />
+    <Content Include="images\Mail.png" />
+    <Content Include="images\MailT.png" />
+    <Content Include="images\mars3.png" />
+    <Content Include="images\MarsKlein.gif" />
+    <Content Include="images\menuContacts.png" />
+    <Content Include="images\menuMail.png" />
+    <Content Include="images\menuShip.png" />
+    <Content Include="images\MetallBars.png" />
+    <Content Include="images\MetallOre.png" />
+    <Content Include="images\MountainTile.png" />
+    <Content Include="images\Nebel Var 01.png" />
+    <Content Include="images\nebel01.png" />
+    <Content Include="images\nebel180.png" />
+    <Content Include="images\NebelKoernung600.png" />
+    <Content Include="images\NebelKörnung2.png" />
+    <Content Include="images\Nebula240.png" />
+    <Content Include="images\NebulaBlue240.png" />
+    <Content Include="images\NebulaCyan240.png" />
+    <Content Include="images\NebulaPurple01.png" />
+    <Content Include="images\NebulaPurple02.png" />
+    <Content Include="images\NebulaPurple03.png" />
+    <Content Include="images\NebulaPurple06.png" />
+    <Content Include="images\NebulaRed240.png" />
+    <Content Include="images\NebulaTileset.png" />
+    <Content Include="images\NebulaTileset2.png" />
+    <Content Include="images\NebulaTileset3.png" />
+    <Content Include="images\NebulaYellow240.png" />
+    <Content Include="images\Neutronium.png" />
+    <Content Include="images\OrangeSun.png" />
+    <Content Include="images\OrangeSun1.png" />
+    <Content Include="images\ore.png" />
+    <Content Include="images\Planet_01.png" />
+    <Content Include="images\Population.png" />
+    <Content Include="images\QuestionMark.png" />
+    <Content Include="images\raster31.png" />
+    <Content Include="images\Reactor.png" />
+    <Content Include="images\redBorder.png" />
+    <Content Include="images\RedSun - Kopie.png" />
+    <Content Include="images\RedSun.png" />
+    <Content Include="images\RedSunNew.png" />
+    <Content Include="images\render-quadratnebel_00004.png" />
+    <Content Include="images\render-quadratnebel_00004_1.png" />
+    <Content Include="images\Research.png" />
+    <Content Include="images\ScandiumBars.png" />
+    <Content Include="images\ScandiumOre.png" />
+    <Content Include="images\Scanner.png" />
+    <Content Include="images\Scout2G.png" />
+    <Content Include="images\Scout2K.png" />
+    <Content Include="images\Scout2XK.png" />
+    <Content Include="images\Scout3_200.png" />
+    <Content Include="images\Scout3_60.png" />
+    <Content Include="images\ScoutModules.png" />
+    <Content Include="images\ScoutPirate200.png" />
+    <Content Include="images\ScoutPirate60.png" />
+    <Content Include="images\seamless300.jpg" />
+    <Content Include="images\Seamless600.png" />
+    <Content Include="images\Settings.png" />
+    <Content Include="images\Shield.png" />
+    <Content Include="images\ShipModules\GravityGenerator.png" />
+    <Content Include="images\Ships\Battleship450.png" />
+    <Content Include="images\Ships\Battleship60.png" />
+    <Content Include="images\Ships\BattleshipBlue450.png" />
+    <Content Include="images\Ships\BattleshipBlue60.png" />
+    <Content Include="images\Ships\BattleshipGreen450.png" />
+    <Content Include="images\Ships\BattleshipGreen60.png" />
+    <Content Include="images\Ships\CorvetteBlue330.png" />
+    <Content Include="images\Ships\CorvetteBlue60.png" />
+    <Content Include="images\Ships\CorvetteGreen330.png" />
+    <Content Include="images\Ships\CorvetteGreen60.png" />
+    <Content Include="images\Ships\Cruiser420.png" />
+    <Content Include="images\Ships\Cruiser60.png" />
+    <Content Include="images\Ships\CruiserBlue420.png" />
+    <Content Include="images\Ships\CruiserBlue60.png" />
+    <Content Include="images\Ships\CruiserGreen420.png" />
+    <Content Include="images\Ships\CruiserGreen60.png" />
+    <Content Include="images\Ships\Destroyer390.png" />
+    <Content Include="images\Ships\Destroyer60.png" />
+    <Content Include="images\Ships\DestroyerBlue390.png" />
+    <Content Include="images\Ships\DestroyerBlue60.png" />
+    <Content Include="images\Ships\DestroyerGreen390.png" />
+    <Content Include="images\Ships\DestroyerGreen60.png" />
+    <Content Include="images\Ships\Frigate360.png" />
+    <Content Include="images\Ships\Frigate60.png" />
+    <Content Include="images\Ships\FrigateBlue360.png" />
+    <Content Include="images\Ships\FrigateBlue60.png" />
+    <Content Include="images\Ships\FrigateGreen360.png" />
+    <Content Include="images\Ships\FrigateGreen60.png" />
+    <Content Include="images\Ships\FrigateRed360.png" />
+    <Content Include="images\Ships\FrigateRed60.png" />
+    <Content Include="images\Ships\HeavyFighter240.png" />
+    <Content Include="images\Ships\HeavyFighter300.png" />
+    <Content Include="images\Ships\HeavyFighter60.png" />
+    <Content Include="images\Ships\HeavyFighterBlue240.png" />
+    <Content Include="images\Ships\HeavyFighterBlue300.png" />
+    <Content Include="images\Ships\HeavyFighterBlue60.png" />
+    <Content Include="images\Ships\HeavyFighterGreen240.png" />
+    <Content Include="images\Ships\HeavyFighterGreen300.png" />
+    <Content Include="images\Ships\HeavyFighterGreen60.png" />
+    <Content Include="images\Ships\Scout240.png" />
+    <Content Include="images\Ships\Scout60.png" />
+    <Content Include="images\Ships\ScoutBlue240.png" />
+    <Content Include="images\Ships\ScoutBlue300.png" />
+    <Content Include="images\Ships\ScoutBlue60.png" />
+    <Content Include="images\Ships\ScoutGreen240.png" />
+    <Content Include="images\Ships\ScoutGreen300.png" />
+    <Content Include="images\Ships\ScoutGreen60.png" />
+    <Content Include="images\Ships\Scout_2_240.png" />
+    <Content Include="images\Ships\Scout_2_60.png" />
+    <Content Include="images\Ships\SuperBattleship480.png" />
+    <Content Include="images\Ships\SuperBattleship60.png" />
+    <Content Include="images\Ships\SuperBattleshipBlue480.png" />
+    <Content Include="images\Ships\SuperBattleshipBlue60.png" />
+    <Content Include="images\Ships\SuperBattleshipGreen480.png" />
+    <Content Include="images\Ships\SuperBattleshipGreen60.png" />
+    <Content Include="images\Ships\TargetedShip.png" />
+    <Content Include="images\SnowTile.png" />
+    <Content Include="images\SolarSystems\colony\Barren_Planet_Surface.png" />
+    <Content Include="images\SolarSystems\colony\Desert_Planet_Surface.png" />
+    <Content Include="images\SolarSystems\colony\Ice_Planet_Surface.png" />
+    <Content Include="images\SolarSystems\colony\Land00.png" />
+    <Content Include="images\SolarSystems\colony\Land01.png" />
+    <Content Include="images\SolarSystems\colony\Land02.png" />
+    <Content Include="images\SolarSystems\colony\Land03.png" />
+    <Content Include="images\SolarSystems\colony\Land04.png" />
+    <Content Include="images\SolarSystems\colony\Land05.png" />
+    <Content Include="images\SolarSystems\colony\Land06.png" />
+    <Content Include="images\SolarSystems\colony\Toxic_Planet_Surface.png" />
+    <Content Include="images\SolarSystems\colony\Vulcano_Planet_Surface.png" />
+    <Content Include="images\SolarSystems\world\Land00.png" />
+    <Content Include="images\SolarSystems\world\Land01.png" />
+    <Content Include="images\SolarSystems\world\Land02.png" />
+    <Content Include="images\SolarSystems\world\Land03.png" />
+    <Content Include="images\SolarSystems\world\Land04.png" />
+    <Content Include="images\SolarSystems\world\Land05.png" />
+    <Content Include="images\SolarSystems\world\Land06.png" />
+    <Content Include="images\SpaceField.png" />
+    <Content Include="images\SpaceMarines.png" />
+    <Content Include="images\SpaceStation0_1_300.png" />
+    <Content Include="images\SpaceStation0_1_60.png" />
+    <Content Include="images\SpaceStation1_1_300.png" />
+    <Content Include="images\SpaceStation1_1_350.png" />
+    <Content Include="images\SpaceStation1_1_60.png" />
+    <Content Include="images\SpaceStation2_1_300.png" />
+    <Content Include="images\SpaceStation2_1_400.png" />
+    <Content Include="images\SpaceStation2_1_60.png" />
+    <Content Include="images\SpaceStation3_1_300.png" />
+    <Content Include="images\SpaceStation3_1_450.png" />
+    <Content Include="images\SpaceStation3_1_60.png" />
+    <Content Include="css\Sprites.png" />
+    <Content Include="images\star--background-seamless-repeating9.jpg" />
+    <Content Include="images\StarImage2.JPG" />
+    <Content Include="images\StarImage600.jpg" />
+    <Content Include="images\StarImageTest.JPG" />
+    <Content Include="images\StarImageTest2.GIF" />
+    <Content Include="images\StarImageTest3.gif" />
+    <Content Include="images\StarImageTest3.jpg" />
+    <Content Include="images\Starmap\Nebula240.png" />
+    <Content Include="images\Starmap\NebulaBlue240.png" />
+    <Content Include="images\Starmap\NebulaCyan240.png" />
+    <Content Include="images\Starmap\NebulaRed240.png" />
+    <Content Include="images\Starmap\NebulaYellow240.png" />
+    <Content Include="images\StarsSeamless600.png" />
+    <Content Include="images\SunBlue.png" />
+    <Content Include="images\SunDeepPink.png" />
+    <Content Include="images\SunGreenYellow.png" />
+    <Content Include="images\SunIndigo.png" />
+    <Content Include="images\SunOrange.png" />
+    <Content Include="images\sunRed.png" />
+    <Content Include="images\sunRedK.png" />
+    <Content Include="images\SunYellow.png" />
+    <Content Include="images\surfaceImage 1.png" />
+    <Content Include="images\surfaceImage 10.png" />
+    <Content Include="images\surfaceImage 11.png" />
+    <Content Include="images\surfaceImage 12.png" />
+    <Content Include="images\surfaceImage 13.png" />
+    <Content Include="images\surfaceImage 14.png" />
+    <Content Include="images\surfaceImage 15.png" />
+    <Content Include="images\surfaceImage 16.png" />
+    <Content Include="images\surfaceImage 2.png" />
+    <Content Include="images\surfaceImage 3.png" />
+    <Content Include="images\surfaceImage 4.png" />
+    <Content Include="images\surfaceImage 5.png" />
+    <Content Include="images\surfaceImage 6.png" />
+    <Content Include="images\surfaceImage 7.png" />
+    <Content Include="images\surfaceImage 8.png" />
+    <Content Include="images\surfaceImage 9.png" />
+    <Content Include="images\surfaceTest.png" />
+    <Content Include="images\SynthMat.png" />
+    <Content Include="images\TerbiumBars.png" />
+    <Content Include="images\TerbiumOre.png" />
+    <Content Include="images\Tololtip_M_M.png" />
+    <Content Include="images\ToxicSurfaceTile.png" />
+    <Content Include="images\TranscendenceBuildert300.png" />
+    <Content Include="images\TranscendenceBuildert60.png" />
+    <Content Include="images\TranscendenceConstruct300.png" />
+    <Content Include="images\TranscendenceConstruct60.png" />
+    <Content Include="images\triangle.png" />
+    <Content Include="images\Tutorial\003ShipMove.png" />
+    <Content Include="images\Tutorial\FlyOut.png" />
+    <Content Include="images\Tutorial\FlyOut2.png" />
+    <Content Include="images\Tutorial\FlyOut3.png" />
+    <Content Include="images\ui-icons.png" />
+    <Content Include="images\up.png" />
+    <Content Include="images\up2.png" />
+    <Content Include="images\VulcanoMoon.png" />
+    <Content Include="images\VulcanoPlanet1.png" />
+    <Content Include="images\VulcanoSurfaceTile.png" />
+    <Content Include="images\War.png" />
+    <Content Include="images\Warehouse.png" />
+    <Content Include="images\WaterTile.png" />
+    <Content Include="images\WeaponLaser.png" />
+    <Content Include="images\WeaponmassDriver.png" />
+    <Content Include="images\WeaponRocket.png" />
+    <Content Include="images\x.png" />
+    <Content Include="images\YellowSun.png" />
+    <Content Include="images\YellowSunN.png" />
+    <Content Include="images\YttriumBars.png" />
+    <Content Include="images\YttriumOre.png" />
+    <Content Include="JQuery\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="JQuery\images\ui-bg_flat_0_eeeeee_40x100.png" />
+    <Content Include="JQuery\images\ui-bg_flat_55_7f7f7f_40x100.png" />
+    <Content Include="JQuery\images\ui-bg_flat_55_ffffff_40x100.png" />
+    <Content Include="JQuery\images\ui-bg_flat_75_888888_40x100.png" />
+    <Content Include="JQuery\images\ui-bg_flat_75_cccccc_40x100.png" />
+    <Content Include="JQuery\images\ui-bg_highlight-hard_100_7d7878_1x100.png" />
+    <Content Include="JQuery\images\ui-bg_highlight-hard_75_cccccc_1x100.png" />
+    <Content Include="JQuery\images\ui-bg_highlight-soft_25_acacac_1x100.png" />
+    <Content Include="JQuery\images\ui-icons_0073ea_256x240.png" />
+    <Content Include="JQuery\images\ui-icons_454545_256x240.png" />
+    <Content Include="JQuery\images\ui-icons_666666_256x240.png" />
+    <Content Include="JQuery\images\ui-icons_7b8a9a_256x240.png" />
+    <Content Include="JQuery\images\ui-icons_a68e9a_256x240.png" />
+    <Content Include="JQuery\images\ui-icons_ff0084_256x240.png" />
+    <Content Include="JQuery\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="JQuery\jquery-2.0.3.min.js" />
+    <Content Include="JQuery\jquery-ui.min.css" />
+    <Content Include="JQuery\jquery-ui.min.js" />
+    <Content Include="JQuery\jquery-ui.structure.min.css" />
+    <Content Include="JQuery\jquery-ui.theme.min.css" />
+    <Content Include="JQuery\jquery.mousewheel.js" />
+    <Content Include="JQuery\jquery.signalR-2.0.2.js" />
+    <Content Include="JQuery\jquery.signalR-2.0.2.min.js" />
+    <Content Include="JQuery\jquery.sortElements.js" />
+    <Content Include="JQuery\jquery.textfill.min.js" />
+    <Content Include="Login.aspx" />
+    <Content Include="Server\60turns.aspx" />
+    <Content Include="Server\Alliances.aspx" />
+    <Content Include="Server\Buildings.aspx" />
+    <Content Include="Server\colonies.aspx" />
+    <Content Include="Server\initShips.aspx" />
+    <Content Include="Server\initStarMap.aspx" />
+    <Content Include="Server\mainObject.aspx" />
+    <Content Include="Server\Messages.aspx" />
+    <Content Include="Server\Quests.aspx" />
+    <Content Include="Server\Research.aspx" />
+    <Content Include="Server\ServerEvents.aspx" />
+    <Content Include="Server\Ships.aspx" />
+    <Content Include="Server\ShipTemplate.xml" />
+    <Content Include="Server\TradeTransfer.aspx" />
+    <Content Include="Server\transfer.xml" />
+    <Content Include="Server\User.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Galaxy.aspx.cs">
+      <DependentUpon>Galaxy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Galaxy.aspx.designer.cs">
+      <DependentUpon>Galaxy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Server\60turns.aspx.cs">
+      <DependentUpon>60turns.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Server\60turns.aspx.designer.cs">
+      <DependentUpon>60turns.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Server\Alliances.aspx.cs">
+      <DependentUpon>Alliances.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Server\Alliances.aspx.designer.cs">
+      <DependentUpon>Alliances.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Server\Buildings.aspx.cs">
+      <DependentUpon>Buildings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Server\Buildings.aspx.designer.cs">
+      <DependentUpon>Buildings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Server\colonies.aspx.cs">
+      <DependentUpon>colonies.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Server\colonies.aspx.designer.cs">
+      <DependentUpon>colonies.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Server\Helpers.cs" />
+    <Compile Include="Server\initShips.aspx.cs">
+      <DependentUpon>initShips.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Server\initShips.aspx.designer.cs">
+      <DependentUpon>initShips.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Server\initStarMap.aspx.cs">
+      <DependentUpon>initStarMap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Server\initStarMap.aspx.designer.cs">
+      <DependentUpon>initStarMap.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Server\mainObject.aspx.cs">
+      <DependentUpon>mainObject.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Server\mainObject.aspx.designer.cs">
+      <DependentUpon>mainObject.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Server\Messages.aspx.cs">
+      <DependentUpon>Messages.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Server\Messages.aspx.designer.cs">
+      <DependentUpon>Messages.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Server\Quests.aspx.cs">
+      <DependentUpon>Quests.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Server\Quests.aspx.designer.cs">
+      <DependentUpon>Quests.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Server\Research.aspx.cs">
+      <DependentUpon>Research.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Server\Research.aspx.designer.cs">
+      <DependentUpon>Research.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Server\ServerEvents.aspx.cs">
+      <DependentUpon>ServerEvents.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Server\ServerEvents.aspx.designer.cs">
+      <DependentUpon>ServerEvents.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Server\Ships.aspx.cs">
+      <DependentUpon>Ships.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Server\Ships.aspx.designer.cs">
+      <DependentUpon>Ships.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Server\TradeTransfer.aspx.cs">
+      <DependentUpon>TradeTransfer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Server\TradeTransfer.aspx.designer.cs">
+      <DependentUpon>TradeTransfer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Server\User.aspx.cs">
+      <DependentUpon>User.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Server\User.aspx.designer.cs">
+      <DependentUpon>User.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SocketServer\ConnectionManager.cs" />
+    <Compile Include="SocketServer\Game.cs" />
+    <Compile Include="SocketServer\IdleManager.cs" />
+    <Compile Include="SocketServer\RegisteredClient.cs" />
+    <Compile Include="SocketServer\RegistrationHandler.cs" />
+    <Compile Include="SocketServer\SocketOut.cs" />
+    <Compile Include="SocketServer\Startup.cs" />
+    <Compile Include="SocketServer\User.cs" />
+    <Compile Include="SocketServer\UserHandler.cs" />
+    <Compile Include="SpaceHub.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="images\favicon\favicons %281%29.zip" />
+    <Content Include="images\favicon\favicons.zip" />
+    <Content Include="images\favicon\manifest.json" />
+    <Content Include="images\nebel180.xcf" />
+    <Content Include="images\NebulaPurplel01.xcf" />
+    <Content Include="css\images\design\Drakolomb.otf" />
+    <Content Include="css\images\design\stormfaze.ttf" />
+    <Content Include="css\images\design\webfontkit-20150928-162706.zip" />
+    <Content Include="docs\Research\Thumbs.db" />
+    <Content Include="Labelfiles\DE.csv" />
+    <Content Include="Labelfiles\Readme.md" />
+    <None Include="packages.config" />
+    <Content Include="tsconfig.json" />
+    <None Include="Server\ShipRefit.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Server\ShipTemplate.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Server\transfer.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EmpiresInSpaceServer\EmpiresInSpaceServer.csproj">
+      <Project>{0cc07013-ef64-4c06-8fe5-756b102d9350}</Project>
+      <Name>EmpiresInSpaceServer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <TypeScriptCompile Include="JQuery\jqueryui.d.ts" />
+    <TypeScriptCompile Include="JQuery\signalr.d.ts" />
+    <TypeScriptCompile Include="js\Alliances.ts" />
+    <TypeScriptCompile Include="js\areaData.ts" />
+    <TypeScriptCompile Include="js\BaseData.ts" />
+    <TypeScriptCompile Include="js\Buildings.ts" />
+    <TypeScriptCompile Include="js\BuildModulesForm.ts" />
+    <TypeScriptCompile Include="js\Chat.ts" />
+    <TypeScriptCompile Include="js\colonies.ts" />
+    <TypeScriptCompile Include="js\CombatMessage.ts" />
+    <TypeScriptCompile Include="js\Communication.ts" />
+    <TypeScriptCompile Include="js\DialogWindows.ts" />
+    <TypeScriptCompile Include="js\Diplomacy.ts" />
+    <TypeScriptCompile Include="js\ElementGenerator.ts" />
+    <TypeScriptCompile Include="js\FogOfWar.ts" />
+    <TypeScriptCompile Include="js\GalacticEvents.ts" />
+    <TypeScriptCompile Include="js\gameOnload.ts" />
+    <TypeScriptCompile Include="js\globals.ts" />
+    <TypeScriptCompile Include="js\GoodsTransfer.ts" />
+    <TypeScriptCompile Include="js\helpers.ts" />
+    <TypeScriptCompile Include="js\ImageCanvasCache.ts" />
+    <TypeScriptCompile Include="js\interface.ts" />
+    <TypeScriptCompile Include="js\KeyMap.ts" />
+    <TypeScriptCompile Include="js\Labels.ts" />
+    <TypeScriptCompile Include="js\mainObject.ts" />
+    <TypeScriptCompile Include="js\messages.ts" />
+    <TypeScriptCompile Include="js\ModuleClassTemplate.ts" />
+    <TypeScriptCompile Include="js\objects.ts" />
+    <TypeScriptCompile Include="js\Pathfinder.ts" />
+    <TypeScriptCompile Include="js\Quests.ts" />
+    <TypeScriptCompile Include="js\RealmStatistics.ts" />
+    <TypeScriptCompile Include="js\References.ts" />
+    <TypeScriptCompile Include="js\Scripts\Alliances.ts" />
+    <TypeScriptCompile Include="js\Scripts\Buildings\CommCentre.ts" />
+    <TypeScriptCompile Include="js\Scripts\Buildings\DefenseSat.ts" />
+    <TypeScriptCompile Include="js\Scripts\Buildings\Scout.ts" />
+    <TypeScriptCompile Include="js\Scripts\Buildings\ShipModulesSimple.ts" />
+    <TypeScriptCompile Include="js\Scripts\Buildings\SpaceportB.ts" />
+    <TypeScriptCompile Include="js\Scripts\gameOver.ts" />
+    <TypeScriptCompile Include="js\Scripts\Quests\BuildInfrastructure.ts" />
+    <TypeScriptCompile Include="js\Scripts\Quests\BuildShipsGeneral.ts" />
+    <TypeScriptCompile Include="js\Scripts\Quests\BuildSpaceShip.ts" />
+    <TypeScriptCompile Include="js\Scripts\Quests\BuildSystemExplorer.ts" />
+    <TypeScriptCompile Include="js\Scripts\Quests\Colonize.ts" />
+    <TypeScriptCompile Include="js\Scripts\Quests\ColonyManagement.ts" />
+    <TypeScriptCompile Include="js\Scripts\Quests\ContactsDetail.ts" />
+    <TypeScriptCompile Include="js\Scripts\Quests\ExploreSystem.ts" />
+    <TypeScriptCompile Include="js\Scripts\Quests\FindColonizablePlanet.ts" />
+    <TypeScriptCompile Include="js\Scripts\Quests\FinishedIntro.ts" />
+    <TypeScriptCompile Include="js\Scripts\Quests\Movement.ts" />
+    <TypeScriptCompile Include="js\Scripts\Quests\OreMineCP.ts" />
+    <TypeScriptCompile Include="js\Scripts\Quests\PlanetSurface.ts" />
+    <TypeScriptCompile Include="js\Scripts\Quests\PlanetSurfaceOverview.ts" />
+    <TypeScriptCompile Include="js\Scripts\Quests\Reinforcements.ts" />
+    <TypeScriptCompile Include="js\Scripts\Quests\ResearchCenter.ts" />
+    <TypeScriptCompile Include="js\Scripts\Quests\ResearchDetails.ts" />
+    <TypeScriptCompile Include="js\Scripts\Quests\SearchSpaceStation.ts" />
+    <TypeScriptCompile Include="js\Scripts\Quests\ShipDesignerDetails.ts" />
+    <TypeScriptCompile Include="js\Scripts\Quests\ShipModulePlant.ts" />
+    <TypeScriptCompile Include="js\Scripts\Quests\ShipModulePlantDetails.ts" />
+    <TypeScriptCompile Include="js\Scripts\Quests\ShortOverview.ts" />
+    <TypeScriptCompile Include="js\Scripts\Quests\Spaceport.ts" />
+    <TypeScriptCompile Include="js\Scripts\Quests\SpaceportDetails.ts" />
+    <TypeScriptCompile Include="js\Scripts\Quests\TradeDetails.ts" />
+    <TypeScriptCompile Include="js\Scripts\Quests\Welcome.ts" />
+    <TypeScriptCompile Include="js\Scripts\Research.ts" />
+    <TypeScriptCompile Include="js\Scripts\ResearchTree.ts" />
+    <TypeScriptCompile Include="js\Scripts\scriptReference.ts" />
+    <TypeScriptCompile Include="js\Scripts\Scripts.ts" />
+    <TypeScriptCompile Include="js\Scripts\ShipDetails.ts" />
+    <TypeScriptCompile Include="js\Scripts\ShipTemplateDesigner.ts" />
+    <TypeScriptCompile Include="js\Scripts\TranscendenceList.ts" />
+    <TypeScriptCompile Include="js\serverEvents.ts" />
+    <TypeScriptCompile Include="js\ships.ts" />
+    <TypeScriptCompile Include="js\ShipTemplates.ts" />
+    <TypeScriptCompile Include="js\SpaceHub.ts" />
+    <TypeScriptCompile Include="js\StarMapQuadTree.ts" />
+    <TypeScriptCompile Include="js\TileMap.ts" />
+    <TypeScriptCompile Include="js\TradeCreateOffer.ts" />
+    <TypeScriptCompile Include="js\TradeOfferForm.ts" />
+    <TypeScriptCompile Include="js\TradeOffers.ts" />
+    <TypeScriptCompile Include="js\TradeOffersListPage.ts" />
+    <TypeScriptCompile Include="js\user.ts" />
+    <TypeScriptCompile Include="js\userInput.ts" />
+    <TypeScriptCompile Include="js\UserSpecifications.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50341</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44300/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

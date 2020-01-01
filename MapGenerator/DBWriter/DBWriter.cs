@@ -16,8 +16,8 @@ namespace MapGenerator
         MapGenerator.SystemGenerator.Workers.Worker SystemGenerator;
         //public static string connectionString = "Data Source=GK-PC\\SQLEXPRESS;Initial Catalog=FornaxA;Integrated Security=True";
         //public static string connectionString = "Data Source=EMPIRES-AKR\\SQLEXPRESS;Initial Catalog=SculptorDwarf_Live;Integrated Security=True";
-        public static string connectionString = "Data Source=.;Initial Catalog=Game2018test;Integrated Security=True";
-
+        public static string connectionString = "Data Source = (localdb)\\MSSQLLocalDB;Initial Catalog = Andromeda; Integrated Security = True; Connect Timeout = 30; Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+        
         public DBWriter(List<Star> stars, MapGenerator.SystemGenerator.Workers.Worker systemGenerator)
         {
             Stars = stars;
@@ -27,21 +27,24 @@ namespace MapGenerator
         public void bulkInsert(System.Windows.Forms.TextBox output)
         {
 
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+                    CopyData(connection, Stars, SystemGenerator, output);
+                }
+                catch (Exception)
+                {
+                    output.Text += "Error in bulkInsert()";
+                }
+            }
 
-            //string ConnectionString = "Data Source=.;Initial Catalog=Game02;Integrated Security=True";
-            SqlConnection dest = new SqlConnection(connectionString);
-
-            dest.Open();
-
-            // copy the data: 
-            CopyData(dest, Stars, SystemGenerator, output);
-
-            // close connections: 
-
-            dest.Close(); // See more at: http://www.sqlteam.com/article/use-sqlbulkcopy-to-quickly-load-data-from-your-client-to-sql-server#sthash.MRQfKJ44.dpuf
+            output.Text += "All data saved to the database." + Environment.NewLine;
         }
 
         // writes the starmap to DB, and generates for each star a systemmap which uis also written to DB
+        // See more at: http://www.sqlteam.com/article/use-sqlbulkcopy-to-quickly-load-data-from-your-client-to-sql-server#sthash.MRQfKJ44.dpuf
         static void CopyData(SqlConnection destConnection, List<Star> systemElements, MapGenerator.SystemGenerator.Workers.Worker systemGenerator, System.Windows.Forms.TextBox output)
         {
             using (SqlCommand ins = new SqlCommand("[engine].StarMapInsert", destConnection))
@@ -107,7 +110,6 @@ namespace MapGenerator
 
 
                     // create the system belonging to the star:
-
                     if (systemElements[i].StarNebulaType == 1)
                     {
                         tvpParam.Value = dataTable;
@@ -117,10 +119,8 @@ namespace MapGenerator
                         output.Refresh(); //this forces the label to redraw itself
                         dataTable.Clear();
 
-                        //List<MapGenerator.SystemGenerator.systemElement> systemElements2 = new List<SystemGenerator.systemElement>();
-                        
                         MapGenerator.SystemGenerator.SolarSystem x = systemGenerator.createSystem(false, false, systemElements[i].Type, systemElements[i].StartingSystem);
-                        SystemBulkInsert( i + 1, connectionString, x); //starIds begin at 1 ( it is not checked yet if 0 is supported by the javascript when starid is transfered there)
+                        SystemBulkInsert( i + 1, connectionString, x, output); //starIds begin at 1 ( it is not checked yet if 0 is supported by the javascript when starid is transfered there)
                     }
 
                     if (counter > 1000)
@@ -142,25 +142,29 @@ namespace MapGenerator
                     ins.ExecuteNonQuery();
                     counter = 0;
 
-                    output.Text = systemElements.Count.ToString() + " / " + systemElements.Count.ToString();
+                    output.Text = systemElements.Count.ToString() + " / " + systemElements.Count.ToString() + Environment.NewLine;
                     output.Refresh(); //this forces the label to redraw itself
                 }
             }
         }
 
-        public static void SystemBulkInsert(int starId, string ConnectionString, MapGenerator.SystemGenerator.SolarSystem x)
+        public static void SystemBulkInsert(int starId, string ConnectionString, MapGenerator.SystemGenerator.SolarSystem x, System.Windows.Forms.TextBox output)
         {
 
-            SqlConnection dest = new SqlConnection(ConnectionString);
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
 
-            dest.Open();
-
-            // copy the data: 
-            CopySystemData(dest, x, starId);
-
-            // close connections: 
-
-            dest.Close(); // See more at: http://www.sqlteam.com/article/use-sqlbulkcopy-to-quickly-load-data-from-your-client-to-sql-server#sthash.MRQfKJ44.dpuf
+                    // copy the data: 
+                    CopySystemData(connection, x, starId);
+                }
+                catch (Exception)
+                {
+                    output.Text += "Error in SystemBulkInsert()";
+                }
+            }
         }
 
         static void CopySystemData(SqlConnection destConnection, MapGenerator.SystemGenerator.SolarSystem system, int starId)
@@ -259,6 +263,31 @@ namespace MapGenerator
             }
 
         }
+
+        public void UpdateAfterCopy(System.Windows.Forms.TextBox output)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+
+                    using (SqlCommand ins = new SqlCommand("[dbo].UpdateAfterMapCreation", connection))
+                    {
+                        ins.CommandType = CommandType.StoredProcedure;
+                        ins.ExecuteNonQuery();
+                    }
+
+                }
+                catch (Exception)
+                {
+                    output.Text += "Error in UpdateAfterCopy()";
+                }
+            }
+
+            output.Text += "Stored procedure UpdateAfterMapCreation was executed." + Environment.NewLine;
+        }
+    
     }
 
     static class Extensions

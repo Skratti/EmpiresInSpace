@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<transfer>
+    <sender>
+        <shipId>3</shipId>
+        <goods>
+            <good>
+                <goodsId>1</goodsId>
+                <amount>20</amount>
+            </good>
+            <good>
+                <goodsId>2</goodsId>
+                <amount>40</amount>
+            </good>
+        </goods>
+    </sender>
+    <receiver>
+        <shipId>8</shipId>
+        <goods>
+            <good>
+                <goodsId>3</goodsId>
+                <amount>10</amount>
+            </good>
+            <good>
+                <goodsId>2</goodsId>
+                <amount>40</amount>
+            </good>
+        </goods>
+    </receiver>
+</transfer>

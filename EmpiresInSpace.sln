@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29613.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmpiresInSpace", "EmpiresInSpace\EmpiresInSpace.csproj", "{FAF6FA72-7EC1-41E3-A8E7-1181B1F9BF91}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmpiresInSpaceServer", "EmpiresInSpaceServer\EmpiresInSpaceServer.csproj", "{0CC07013-EF64-4C06-8FE5-756B102D9350}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject", "UnitTestProject\UnitTestProject.csproj", "{EC4D2019-8F9B-4847-B3CC-121BF4B0B7CF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MapGenerator", "MapGenerator\MapGenerator.csproj", "{44E6784D-464B-40E6-9FC2-D33F9FA1B1B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmpiresInSpaceIndex", "EmpiresInSpaceIndex\EmpiresInSpaceIndex.csproj", "{8B6B261D-799E-4880-A8DA-B45DCCE1B027}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "EmpiresInSpaceDatabase", "Database\EmpiresInSpaceDatabase.sqlproj", "{4CA25D10-4D6A-40AF-BDA2-5C1CA6FD0641}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FAF6FA72-7EC1-41E3-A8E7-1181B1F9BF91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAF6FA72-7EC1-41E3-A8E7-1181B1F9BF91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAF6FA72-7EC1-41E3-A8E7-1181B1F9BF91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAF6FA72-7EC1-41E3-A8E7-1181B1F9BF91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0CC07013-EF64-4C06-8FE5-756B102D9350}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CC07013-EF64-4C06-8FE5-756B102D9350}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CC07013-EF64-4C06-8FE5-756B102D9350}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CC07013-EF64-4C06-8FE5-756B102D9350}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC4D2019-8F9B-4847-B3CC-121BF4B0B7CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC4D2019-8F9B-4847-B3CC-121BF4B0B7CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC4D2019-8F9B-4847-B3CC-121BF4B0B7CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC4D2019-8F9B-4847-B3CC-121BF4B0B7CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44E6784D-464B-40E6-9FC2-D33F9FA1B1B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44E6784D-464B-40E6-9FC2-D33F9FA1B1B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44E6784D-464B-40E6-9FC2-D33F9FA1B1B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44E6784D-464B-40E6-9FC2-D33F9FA1B1B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B6B261D-799E-4880-A8DA-B45DCCE1B027}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B6B261D-799E-4880-A8DA-B45DCCE1B027}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B6B261D-799E-4880-A8DA-B45DCCE1B027}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B6B261D-799E-4880-A8DA-B45DCCE1B027}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4CA25D10-4D6A-40AF-BDA2-5C1CA6FD0641}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CA25D10-4D6A-40AF-BDA2-5C1CA6FD0641}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CA25D10-4D6A-40AF-BDA2-5C1CA6FD0641}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{4CA25D10-4D6A-40AF-BDA2-5C1CA6FD0641}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CA25D10-4D6A-40AF-BDA2-5C1CA6FD0641}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4CA25D10-4D6A-40AF-BDA2-5C1CA6FD0641}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2CB50FDA-7069-4959-8D79-DEC44B57383C}
+	EndGlobalSection
+EndGlobal

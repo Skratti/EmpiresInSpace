@@ -9,13 +9,13 @@
 The game targets players who want a multiplayer 4X strategy game, without the need to be online at the same time, and thus without the need to arrange a hours lasting multiplayer match. Also it is balanced so that the player may spend just a few minutes per day to keep his empire running. 
 
 
-## Contribute
+## Contribute without coding
 
-The repository contains the basic rules of Empires in Space, and all label files.
+The repository contains the whole game  
 * [Submit bugs](https://github.com/Skratti/EmpiresInSpace/issues) and help us verify fixes as they are checked in.
 * Add language files or improve the existing language files
-* Add game content (but better check beforehand which content will be accepted).
+* Add game content (but better check beforehand which content will be accepted)
 
-## Starmap generator, system map generator and planet surface generator
-
-If someone is interested in it, I could also upload the C# solution to create the starmap and solar systems, and the solution that I used to create the planet surfaces. The latter one uses an adaption of the perlin noise algorithm. Please inform me via my email adresse - I will then clean up the solutions so that they are a good base for enhancements of the community.
+## The source code
+* Check out the game and follow installation instructions in https://github.com/Skratti/The-Book 
+* The game can be up and running in 5 minutes (after you have visual studio and sql installed)

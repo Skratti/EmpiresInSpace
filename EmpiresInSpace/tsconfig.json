@@ -1,0 +1,107 @@
+{
+  "compilerOptions": {
+    "noImplicitAny": false,
+    "noEmitOnError": true,
+    "removeComments": false,
+    "sourceMap": true,
+    "target": "es5"
+  },
+  "files": [
+    "js/References.ts",
+    "js/helpers.ts",
+
+    "js/globals.ts",
+    "js/StarMapQuadTree.ts",
+    "js/serverEvents.ts",
+
+    "js/Labels.ts",
+
+    "js/RealmStatistics.ts",
+    "js/BaseData.ts",
+    "js/KeyMap.ts",
+    "js/ImageCanvasCache.ts",
+    "js/mainObject.ts",
+    "js/Communication.ts",
+    "js/user.ts",
+    "js/Alliances.ts",
+    "js/messages.ts",
+    "js/CombatMessage.ts",
+    "js/objects.ts",
+    "js/Buildings.ts",
+    "js/colonies.ts",
+
+    "js/interface.ts",
+    "js/userInput.ts",
+
+    "js/Diplomacy.ts",
+    "js/TileMap.ts",
+    "js/FogOfWar.ts",
+    "js/ships.ts",
+    "js/areaData.ts",
+    "js/ShipTemplates.ts",
+    "js/Quests.ts",
+    "js/TradeOffers.ts",
+
+    "js/ElementGenerator.ts",
+    "js/GoodsTransfer.ts",
+    "js/Pathfinder.ts",
+
+    "js/SpaceHub.ts",
+    "js/GalacticEvents.ts",
+    "js/Chat.ts",
+    "js/UserSpecifications.ts",
+    "js/DialogWindows.ts",
+
+    "js/gameOnload.ts",
+
+    "js/TradeOfferForm.ts",
+    "js/TradeCreateOffer.ts",
+    "js/TradeOffersListPage.ts",
+    "js/BuildModulesForm.ts",
+    "js/Scripts/Scripts.ts",
+
+
+    "js/Scripts/Buildings/CommCentre.ts",
+    "js/Scripts/Buildings/Scout.ts",
+    "js/Scripts/Buildings/SpaceportB.ts",
+    "js/Scripts/Buildings/ShipModulesSimple.ts",
+
+    "js/Scripts/Quests/Welcome.ts",
+    "js/Scripts/Quests/ShortOverview.ts",
+    "js/Scripts/Quests/Movement.ts",
+    "js/Scripts/Quests/FindColonizablePlanet.ts",
+    "js/Scripts/Quests/Colonize.ts",
+    "js/Scripts/Quests/PlanetSurface.ts",
+    "js/Scripts/Quests/PlanetSurfaceOverview.ts",
+    "js/Scripts/Quests/BuildInfrastructure.ts",
+    "js/Scripts/Quests/BuildSystemExplorer.ts",
+    "js/Scripts/Quests/ExploreSystem.ts",
+    "js/Scripts/Quests/ColonyManagement.ts",
+
+    "js/Scripts/Quests/SearchSpaceStation.ts",
+    "js/Scripts/Quests/ResearchCenter.ts",
+    "js/Scripts/Quests/ResearchDetails.ts",
+    "js/Scripts/Quests/OreMineCP.ts",
+    "js/Scripts/Quests/BuildShipsGeneral.ts",
+    "js/Scripts/Quests/ShipModulePlant.ts",
+    "js/Scripts/Quests/Spaceport.ts",
+    "js/Scripts/Quests/SpaceportDetails.ts",
+    "js/Scripts/Quests/BuildSpaceShip.ts",
+    "js/Scripts/Quests/ShipModulePlantDetails.ts",
+    "js/Scripts/Quests/ShipDesignerDetails.ts",
+    "js/Scripts/Quests/TradeDetails.ts",
+    "js/Scripts/Quests/ContactsDetail.ts",
+    "js/Scripts/Quests/FinishedIntro.ts",
+    "js/Scripts/Quests/Reinforcements.ts",
+    "js/Scripts/ShipDetails.ts",
+    "js/Scripts/ShipTemplateDesigner.ts",
+    "js/Scripts/Research.ts",
+    "js/Scripts/ResearchTree.ts",
+    "js/Scripts/Alliances.ts",
+    "js/Scripts/gameOver.ts",
+    "js/Scripts/TranscendenceList.ts"
+
+
+
+  ]
+}

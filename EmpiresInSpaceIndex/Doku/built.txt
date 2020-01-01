@@ -1,0 +1,78 @@
+﻿tsc References.ts --sourcemap 
+
+tsc References.ts  --out index.tsc.js --sourcemap --removeComments
+
+"C:\Program Files (x86)\Java\jre7\bin\java" -jar compiler.jar --js=index.tsc.js --js_output_file=index.min.js
+"C:\Program Files\Java\jre7\bin\java" -jar compiler.jar --js=index.tsc.js --js_output_file=index.min.js
+--compilation_level ADVANCED_OPTIMIZATIONS ^
+--externs UIexterns.js --externs jquery-1.9.js
+
+// ==ClosureCompiler==
+// @compilation_level SIMPLE_OPTIMIZATIONS
+// @output_file_name default.js
+// @externs_url https://closure-compiler.googlecode.com/git/contrib/externs/jquery-1.9.js
+// ==/ClosureCompiler==
+
+
+//Location of the js scripts in index.aspx might be changed!
+
+
+cd C:\Empires\EmpiresInSpace\SpacegameIndex
+tsc References.ts  --out index.min.js --removeComments
+tsc References.ts --removeComments
+
+tsc i18n\referenceLabels.ts  --removeComments
+
+"D:\Program Files\Java\jre7\bin\java" -jar compiler.jar ^
+"C:\Program Files (x86)\Java\jre1.8.0_25\bin\java" -jar compiler.jar ^
+"C:\Program Files (x86)\Java\jre7\bin\java" -jar compiler.jar ^
+--module main:1: --js index.min.js ^
+--module EN:1:main: --js i18n\EN.js ^
+--module FR:1:main: --js i18n\FR.js ^
+--module DE:1:main: --js i18n\DE.js ^
+--compilation_level ADVANCED_OPTIMIZATIONS ^
+--externs UIexterns.js --externs jquery-1.9.js ^
+--module_output_path_prefix .\Compiled\
+
+
+
+cd C:\SVN\Spacegame\EmpiresInSpace\SpacegameIndex
+
+tsc References.ts  --out index.min.js --removeComments
+
+tsc i18n\referenceLabels.ts  --removeComments
+
+//ADVANCED_OPTIMIZATIONS does not work anymore, since at least one method (open changelog)  isn't called by JS code (only aspx - page), and that method is deleted by the closure compiler
+"D:\Program Files\Java\jre7\bin\java" -jar compiler.jar ^
+"C:\Program Files (x86)\Java\jre1.8.0_25\bin\java" -jar compiler.jar ^
+"C:\Program Files (x86)\Java\jre7\bin\java" -jar compiler.jar ^
+--module main:1: --js index.min.js ^
+--module EN:1:main: --js i18n\EN.js ^
+--module FR:1:main: --js i18n\FR.js ^
+--module DE:1:main: --js i18n\DE.js ^
+--compilation_level ADVANCED_OPTIMIZATIONS ^
+--externs UIexterns.js --externs jquery-1.9.js ^
+--module_output_path_prefix .\Compiled\
+
+
+//PRETTY_PRINT
+"C:\Program Files (x86)\Java\jre7\bin\java" -jar compiler.jar ^
+--module main:1: --js index.min.js ^
+--module EN:1:main: --js i18n\EN.js ^
+--module FR:1:main: --js i18n\FR.js ^
+--module DE:1:main: --js i18n\DE.js ^
+--compilation_level ADVANCED_OPTIMIZATIONS ^
+--externs UIexterns.js --externs jquery-1.9.js ^
+--module_output_path_prefix .\Compiled\ ^
+--formatting=PRETTY_PRINT
+
+//SIMPLE_OPTIMIZATIONS
+"C:\Program Files (x86)\Java\jre7\bin\java" -jar compiler.jar ^
+--module main:1: --js index.min.js ^
+--module EN:1:main: --js i18n\EN.js ^
+--module FR:1:main: --js i18n\FR.js ^
+--module DE:1:main: --js i18n\DE.js ^
+--compilation_level SIMPLE_OPTIMIZATIONS ^
+--module_output_path_prefix .\Compiled\ 
+
+

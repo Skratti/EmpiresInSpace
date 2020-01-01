@@ -1,0 +1,19 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "noImplicitAny": false,
+    "noEmitOnError": true,
+    "removeComments": false,
+    "sourceMap": true,
+    "target": "es5"
+  },
+  "files": [
+    "index/reCaptcha.d.ts",
+    "index/objects.ts",
+    "i18n/SetLanguage.ts",
+    "index/index.ts",
+    "i18n/EN.ts",
+    "i18n/DE.ts",
+    "i18n/FR.ts"
+  ]
+}

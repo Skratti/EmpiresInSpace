@@ -13,58 +13,8 @@ namespace SpacegameIndex
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            //Response.Write("<script>alert('Hello')</script>");
 
-            /*
-            if (Session["secretOk"] == null || Session["secretOk"] != "jupp")
-                Response.Redirect("SecretSecurityPanel.aspx");
-             * */
-
-            if (Request.Params["action"] == null)
-                return;
-            string action = Request.Params["action"];
-
-            switch (action)
-            {
-                case "demo":
-                    openDemo();
-                    return;
-                case "demo2":
-                    openDemo2();
-                    return;
-            }
-        }
-
-        void openDemo()
-        {
-            Response.Clear();
-            Response.Expires = -1;
-            Response.ContentType = "text/html";
-
-            string resp = "demo";
-            Response.Write(resp);
-
-            string demoURL = System.Web.Configuration.WebConfigurationManager.AppSettings["demo"].ToString();
-            Response.Redirect(demoURL);            
-
-            return;
-        }
-
-        void openDemo2()
-        {
-            Response.Clear();
-            Response.Expires = -1;
-            Response.ContentType = "text/html";
-
-            string resp = "demo2";
-            Response.Write(resp);
-
-            string demoURL = System.Web.Configuration.WebConfigurationManager.AppSettings["demo2"].ToString();
-            Response.Redirect(demoURL);
-
-            return;
-        }
-                           
+        }               
 
         public string userLanguage()
         {

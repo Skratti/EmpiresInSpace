@@ -99,14 +99,14 @@ module EmpiresIndex {
 
     export class PageIndex {
 
-        //labels: Labels; //needed for setLanguages
+
         user: User;
         games: Game[] = [];
 
         registerCheck: registerChecks;
 
         constructor() {
-            //this.labels = new Labels();
+           
         }
 
         readIndexData(loginXML) {

@@ -6,7 +6,7 @@
 <head id="Head1" runat="server">
     <title>Empires in Space</title>
     <meta name="description" content="A huge universe awaits to be explored and settled by thousands of players in this 4X massive multiplayer online space strategy game" />
-    <meta name="keywords" content="massive multiplayer online space strategy game 4X Civilization">
+    <meta name="keywords" content="massive multiplayer online space strategy game 4X Civilization" />
     <meta name="google-site-verification" content="AYIg29aekWbpor7fC5E7OzGXGWuGIoe3CiNtiky3JBg" />
 
     <meta http-equiv="cache-control" content="no-cache, must-revalidate, post-check=0, pre-check=0" />
@@ -15,48 +15,37 @@
     <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
     <meta http-equiv="pragma" content="no-cache" />
 
-
-
-    <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-touch-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-touch-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-touch-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-touch-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-touch-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-touch-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-touch-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon-180x180.png">
-    <link rel="icon" type="image/png" href="images/favicon/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="images/favicon/favicon-194x194.png" sizes="194x194">
-    <link rel="icon" type="image/png" href="images/favicon/favicon-96x96.png" sizes="96x96">
-    <link rel="icon" type="image/png" href="images/favicon/android-chrome-192x192.png" sizes="192x192">
-    <link rel="icon" type="image/png" href="images/favicon/favicon-16x16.png" sizes="16x16">
-    <link rel="manifest" href="manifest.json">
-    <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#2b5797">
-    <meta name="msapplication-TileImage" content="images/favicon/mstile-144x144.png">
-    <meta name="theme-color" content="#ffffff">
-
-
-    <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, minimum-scale=1" />
-       
+    <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-touch-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon-180x180.png" />
+    <link rel="icon" type="image/png" href="images/favicon/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="images/favicon/favicon-194x194.png" sizes="194x194" />
+    <link rel="icon" type="image/png" href="images/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="images/favicon/android-chrome-192x192.png" sizes="192x192" />
+    <link rel="icon" type="image/png" href="images/favicon/favicon-16x16.png" sizes="16x16" /> 
+    <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#2b5797" />
+    <meta name="msapplication-TileImage" content="images/favicon/mstile-144x144.png" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, minimum-scale=1" />    
     <link rel="canonical" href="http://www.EmpiresInSpace.com" />
 
-    <asp:PlaceHolder runat="server">
+
     <link href="index.css?v=<%Response.Write(versionString());%>" media="all" rel="Stylesheet" type="text/css" />
-    </asp:PlaceHolder>
- 
-
-    <link rel="stylesheet" href="swipebox/css/swipebox.css">
-
+    <link rel="stylesheet" href="swipebox/css/swipebox.css" />
     <link rel="stylesheet" href="MediaCSS/index_619.css?version=<%= "" + versionString() %>" media="(min-width: 0px) and (max-width: 619px)" />
     <link rel="stylesheet" href="MediaCSS/index620_799.css?version=<%= "" + versionString() %>" media="(min-width: 620px) and (max-width: 799px)" />
 
-
-
     <%Response.Write(userLanguage());%>
-    <%Response.Write(setJSversionString());%>
+    <%Response.Write(setJSversionString());%>    
     <%Response.Write(recaptchaPublicString());%>
+
     <script type="text/javascript" src="//code.jquery.com/jquery-2.0.3.min.js"></script>
     
     <!--<script type="text/javascript" src="//www.google.com/recaptcha/api/js/recaptcha_ajax.js"></script>  
@@ -72,10 +61,9 @@
     <script type="text/javascript" src="index/objects.js?version=<%Response.Write(versionString());%>"></script>
     <script type="text/javascript" src="index/index.js?version=<%Response.Write(versionString());%>"></script>
         
-   <!--  
-     
-    <script type="text/javascript">i18nPath = 'compiled';</script>
-    <script type="text/javascript" src="compiled/main.js?version=<%Response.Write(versionString());%>"></script>
+   <!--   
+   <script type="text/javascript">i18nPath = 'compiled';</script>
+   <script type="text/javascript" src="compiled/main.js?version=<%Response.Write(versionString());%>"></script>
    -->
    
      
@@ -396,7 +384,7 @@
     </div>
     
     <div class="closure">
-        © 2016
+        © 2020
 			<a href="impressum/impressum.html" target="_blank">Impressum</a>
         · <a href="impressum/Datenschutz.html" target="_blank">Datenschutz</a>
         · <a href="javascript:void(pageIndex.openChangelog());" id="Changelog">Changelog</a>

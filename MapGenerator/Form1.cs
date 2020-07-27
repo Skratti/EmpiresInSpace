@@ -71,7 +71,7 @@ namespace MapGenerator
         public Settings readConfig()
         {
             string jsonString = File.ReadAllText("./Settings/60.json");
-
+            
             Newtonsoft.Json.Linq.JObject json = (Newtonsoft.Json.Linq.JObject)JsonConvert.DeserializeObject(jsonString);
             Settings settings = json.ToObject<Settings>();
 

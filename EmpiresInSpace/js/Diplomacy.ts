@@ -864,7 +864,7 @@ module DiplomacyModule
                         relationChanged(data.item.element.parent()[0], $(data.item.element).parent().data("userdata"));
                     }
                 });
-                $("select", buildTable).parent().click((e: JQuery.Event) => { e.preventDefault(); e.stopPropagation(); });
+                $("select", buildTable).parent().click((e: JQueryEventObject) => { e.preventDefault(); e.stopPropagation(); });
 
 
             }

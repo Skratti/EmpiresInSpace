@@ -401,7 +401,7 @@ module Ships {
             ElementGenerator.makeSmall(newNameContainer);
 
             $(".buttonUl", newNameContainer).css("right", "-10px")
-            $('.noButton', newNameContainer).click((e: JQuery.Event) => {
+            $('.noButton', newNameContainer).click((e: JQueryEventObject) => {
                 newNameContainer.remove();
             });
             $('.noButton span', newNameContainer).text('Abbrechen');
@@ -409,7 +409,7 @@ module Ships {
             newNameContainer.appendTo("body"); //attach to the <body> element
 
 
-            $('.yesButton', newNameContainer).click((e: JQuery.Event) => {
+            $('.yesButton', newNameContainer).click((e: JQueryEventObject) => {
                 var newName = newNameInput.val();
                 $.ajax("Server/Ships.aspx", {
                     type: "GET",
@@ -916,7 +916,7 @@ module Ships {
                 ////create major colony
                 var starSystemName = this.getCurrentTile().stars.parentArea.name;
                 var newNameContainer = ElementGenerator.renamePanel(starSystemName, i18n.label(341));
-                $('.yesButton', newNameContainer).click((e: JQuery.Event) => {
+                $('.yesButton', newNameContainer).click((e: JQueryEventObject) => {
                     var newName = $(".inputEl", newNameContainer).val();
                     $.ajax("Server/Ships.aspx", {
                         "type": "GET",
@@ -973,7 +973,7 @@ module Ships {
                 ////create major colony
                 var starSystemName = this.getCurrentTile().stars.parentArea.name;
                 var newNameContainer = ElementGenerator.renamePanel(starSystemName, i18n.label(341));
-                $('.yesButton', newNameContainer).click((e: JQuery.Event) => {
+                $('.yesButton', newNameContainer).click((e: JQueryEventObject) => {
                     var newName = $(".inputEl", newNameContainer).val();
                     $.ajax("Server/Ships.aspx", {
                         "type": "GET",
@@ -2110,7 +2110,7 @@ module Ships {
             windowHandle.setHeader(i18n.label(133));
             windowHandle.showNoButton(true);
             $('.noButton span', shipListPanel).text(i18n.label(224)); //Designer
-            $('.noButton', shipListPanel).click((e: JQuery.Event) => { shipListPanel.data("window").remove(); Scripts.scriptsAdmin.loadAndRun(3, 1, './ShipTemplateDesigner.js', false, () => { (<any>ShipTemplateDesigner).runTemplate(null); }); });
+            $('.noButton', shipListPanel).click((e: JQueryEventObject) => { shipListPanel.data("window").remove(); Scripts.scriptsAdmin.loadAndRun(3, 1, './ShipTemplateDesigner.js', false, () => { (<any>ShipTemplateDesigner).runTemplate(null); }); });
 
             var panelBody = $('.relPopupBody', windowHandle.element);
 
@@ -2180,7 +2180,7 @@ module Ships {
             var tableDataRead = $('<td/>', { "class": "lastchild" });            
             tableRow.append(tableDataRead);
             */
-            tableRow.click((e: JQuery.Event) => { ship.selectAndCenter(720); });
+            tableRow.click((e: JQueryEventObject) => { ship.selectAndCenter(720); });
             return tableRow;
         }
     }

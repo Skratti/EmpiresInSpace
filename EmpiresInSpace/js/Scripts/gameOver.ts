@@ -105,7 +105,7 @@ module GameOver {
             this.icon.button();
             this.icon.data("quest", this);
             this.icon.tooltip();
-            this.icon.click((e: JQuery.Event) => {
+            this.icon.click((e: JQueryEventObject) => {
                 this.showGameOver();
                 this.icon.css("display", "none");
             });

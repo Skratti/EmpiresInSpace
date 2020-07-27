@@ -199,7 +199,7 @@ function onLoadDoThis()
     $("#settingsList").click(PlayerData.showSettings);
     $("#quitList").click(userInputMethods.logOut);
 
-    $("#turnByUser").click((e: JQuery.Event) => { PlayerData.newTurn(); });
+    $("#turnByUser").click((e: JQueryEventObject) => { PlayerData.newTurn(); });
     if (!isDemo) $("#turnByUser").css("display", "none");
     $('#turnByUser').button();
 

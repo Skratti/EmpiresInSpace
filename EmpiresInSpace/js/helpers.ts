@@ -287,7 +287,7 @@ module Helpers {
         if (!lastPaddingRight) lastPaddingRight = 0;
 
         var $headCells = _table.find('thead tr th');
-        var colWidth: number[];
+        var colWidth: any;// number[];
         colWidth = $headCells.map(function () { return $(this).outerWidth(); }).get();
         _table.find('tbody tr').each(function (i, x) { $(x).find('td').each(function (index: number, elem: Element) { $(elem).width(colWidth[index] - 10); }); });        
         _table.find('tbody tr:last-child').width(function (i, w) { return w - lastPaddingRight; });

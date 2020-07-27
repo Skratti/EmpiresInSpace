@@ -153,7 +153,7 @@ module ResearchModule {
         $('.noButton', researchTreeContainer)[0].style.display = 'none';      
         $('.yesButton span', researchTreeContainer).text(i18n.label(206));     
        
-        $('.yesButton', researchTreeContainer).click((e: JQuery.Event) => { ResearchModule.researchTreeContainer.remove(); });
+        $('.yesButton', researchTreeContainer).click((e: JQueryEventObject) => { ResearchModule.researchTreeContainer.remove(); });
       
         //$('#loader')[0].style.display = 'none';
 

@@ -178,7 +178,7 @@ module Scripts {
         //overloaded - quest is not completed when a check is needed
         setYesButton(questContainer : JQuery) {
             $('.yesButton, .bX', questContainer).unbind('click').click(
-                (e: JQuery.Event) => {
+                (e: JQueryEventObject) => {
                     if (!this.quest.isCompleted) {
                         this.quest.introQuestCompleted();                        
                     }
@@ -228,7 +228,7 @@ module Scripts {
 
         
         setYesButton(questContainer: JQuery) {
-            $('.yesButton', questContainer).unbind('click').click((e: JQuery.Event) => {
+            $('.yesButton', questContainer).unbind('click').click((e: JQueryEventObject) => {
                 //questContainer.remove();                
                 this.questWindow.remove();                
             });
@@ -236,7 +236,7 @@ module Scripts {
         
 
         setNoButton(questContainer: JQuery) {
-            $('.noButton', questContainer).click((e: JQuery.Event) => {
+            $('.noButton', questContainer).click((e: JQueryEventObject) => {
                 this.finishQuest();
                 //questContainer.remove();
                 this.questWindow.remove();

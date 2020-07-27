@@ -57,8 +57,8 @@ module Ships {
 
         //spaceportContainer.appendTo($("#generatedPanel"));
         //checkSaveState(selectTemplate,e)
-        //$('.noButton', detailsContainer).click((e: JQuery.Event) => { });
-        $('.yesButton', detailsContainer).click((e: JQuery.Event) => { Ships.detailsContainer.remove(); });
+        //$('.noButton', detailsContainer).click((e: JQueryEventObject) => { });
+        $('.yesButton', detailsContainer).click((e: JQueryEventObject) => { Ships.detailsContainer.remove(); });
 
         //var but = $('<div/>', { "class": 'popupBody panelBody trLightGrey trHighlight' });     //content
         var selfDestruct : JQuery;

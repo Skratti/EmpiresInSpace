@@ -7,6 +7,7 @@ Database/obj
 Database/EmpiresInSpaceDatabase.dbmdl
 Database/EmpiresInSpaceDatabase.jfm
 Database/EmpiresInSpaceDatabase.sqlproj.user
+Database/bin
 
 EmpiresInSpace/bin
 EmpiresInSpace/js/*.js
@@ -25,6 +26,12 @@ EmpiresInSpace/obj
 EmpiresInSpace/Server/*.bak
 EmpiresInSpace/SocketServer/*.bak
 EmpiresInSpace/*.bak
+
+EmpiresInSpace2/bin
+EmpiresInSpace2/JavaScript/*.js
+EmpiresInSpace2/JavaScript/*.js.map
+EmpiresInSpace2/JavaScript/*.bak
+EmpiresInSpace2/obj
 
 EmpiresInSpaceIndex/*.js
 EmpiresInSpaceIndex/*.js.map

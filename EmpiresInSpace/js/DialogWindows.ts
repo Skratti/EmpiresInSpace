@@ -262,7 +262,7 @@ module DialogWindows {
 
 
         DetailPanel.appendTo("body"); //attach to the <body> element
-        //$('.yesButton', DetailPanel).click((e: JQuery.Event) => { DetailPanel.remove(); });
+        //$('.yesButton', DetailPanel).click((e: JQueryEventObject) => { DetailPanel.remove(); });
 
     }
 
@@ -362,7 +362,7 @@ module DialogWindows {
 
         $('.yesButton span', detailPanel).text('OK');
         detailPanel.appendTo("body"); //attach to the <body> element
-        //$('.yesButton', detailPanel).click((e: JQuery.Event) => { detailPanel.remove(); });
+        //$('.yesButton', detailPanel).click((e: JQueryEventObject) => { detailPanel.remove(); });
 
         //ElementGenerator.setLeftTopPosition(detailPanel);
     }
@@ -414,7 +414,7 @@ module DialogWindows {
             var activeCheckBox = $("<input/>", { type: "checkbox" });
             activeCheckBox.prop('checked', colonyBuilding.isActive);
             actionTable.append($("<tr/>").append($("<td/>", { text: i18n.label(298) })).append($("<td/>").append(activeCheckBox)));
-            activeCheckBox.click((e: JQuery.Event) => {
+            activeCheckBox.click((e: JQueryEventObject) => {
 
                 $.ajax("Server/Buildings.aspx", {
                     type: "GET",
@@ -574,7 +574,7 @@ module DialogWindows {
             var activeCheckBox = $("<input/>", { type: "checkbox" });
             activeCheckBox.prop('checked', colonyBuilding.isActive);
             actionTable.append($("<tr/>").append($("<td/>", { text: i18n.label(298) })).append($("<td/>").append(activeCheckBox)));
-            activeCheckBox.click((e: JQuery.Event) => {
+            activeCheckBox.click((e: JQueryEventObject) => {
 
                 $.ajax("Server/Buildings.aspx", {
                     type: "GET",
@@ -624,7 +624,7 @@ module DialogWindows {
                 $('span', selfDestruct).text(i18n.label(163));
                 selfDestruct.css("display", "inline-block");
 
-                selfDestruct.click((e: JQuery.Event) => {
+                selfDestruct.click((e: JQueryEventObject) => {
 
                     $.ajax("Server/Buildings.aspx", {
                         type: "GET",
@@ -658,7 +658,7 @@ module DialogWindows {
 
         $('.yesButton span', detailPanel).text('OK');
         detailPanel.appendTo("body"); //attach to the <body> element
-        $('.yesButton', detailPanel).click((e: JQuery.Event) => { detailPanel.remove(); });
+        $('.yesButton', detailPanel).click((e: JQueryEventObject) => { detailPanel.remove(); });
 
         ElementGenerator.setLeftTopPosition(detailPanel);
     }

@@ -1,0 +1,50 @@
+﻿h3 {
+    display: block;
+    font-size: 1em;
+    margin-block-start: 1px;
+    margin-block-end: 1px;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+.relPopup {
+    width: 667px;
+    top: 74px;
+    line-height: 100%;
+}
+
+.relPopup button {
+    font-size:12px;
+}
+
+.relPopupContent.relPopupHeaderFixed .relPopupHeader {
+    width: 667px;
+}
+
+.relPopupPanel
+{
+    font-size:11px;
+}
+
+
+div.relPopupContent.SpaceTheme.relPopupHeaderFixed > div.relPopupPanel {
+    width: 667px;
+}
+
+div.relPopupContent.SpaceTheme.relPopupHeaderFixed>div.relPopupFooter.panelFooterBackground {
+    width: 667px;
+}
+
+div.relPopupContent.SpaceTheme.relPopupHeaderFixed>div.relPopupPanel.trBlack{
+    width: 667px;
+}
+
+.relPopupHeader h2{
+
+}
+
+.researchPoints
+{
+    font-size: 10px;
+}

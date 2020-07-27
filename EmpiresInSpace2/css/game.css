@@ -1,0 +1,1380 @@
+﻿
+
+/*
+    CSS to design the main view : Galaxy, Stars, Colonies, and all user interfaces that are overlayed over those screens
+
+    additionally, all CSS that are needed by JQuery UI
+    */
+
+/*set standards:*/
+
+img {
+    width:30px;
+}
+
+input[type="button"], input[type="submit"], input[type="reset"], input[type="file"]::-webkit-file-upload-button, button {
+padding: 1px 1px;
+}
+
+p{
+    margin: 0px;
+}
+
+html {
+    overflow-y: scroll;
+
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+input {
+      font-family: 'Trebuchet MS';
+
+  }
+*:focus {
+    outline: 0;
+}
+
+body { 
+	margin: 0px; 
+	padding: 0px;
+     font-family:'Trebuchet MS';
+	font-size: 12px;
+		
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    
+}
+/*
+html, body {
+    width: 100%;
+    min-width: 830px;
+    min-height: 620px !important;
+    height: 100% !important;
+    padding: 0 !important;
+}
+*/
+
+
+*::-webkit-scrollbar {
+    width: 12px;    
+}
+
+
+button{
+      font-family:'Trebuchet MS';
+      padding: 1px;
+      margin: 2px;
+	 -moz-appearance: none;
+}
+
+
+textarea{
+    overflow: auto;
+    vertical-align: top;
+    width: 100%;
+    height: 100%;
+}
+
+h2{
+    font-weight: normal;
+}
+
+.floatL{
+    float:left;
+}
+.floatR{
+    float:left;
+}
+
+.inlineBlockTopAlign{
+    display:inline-block;
+    vertical-align:top;
+}
+
+.interfaceCreatedToolbar
+{
+    margin:5px;
+}
+
+
+.trHighlight tr:hover {
+    cursor: pointer;
+    /*background: #FFF;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	-o-box-shadow: none;
+	-ms-box-shadow: none;
+	box-shadow: none;
+    */
+}
+/*
+.tdHighlight td:hover {
+    cursor: pointer;
+	background: #FFF;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	-o-box-shadow: none;
+	-ms-box-shadow: none;
+	box-shadow: none;
+}
+*/
+
+.canvasContainer{
+    position:fixed;
+    top:0px;
+    left:0px;
+    right:0px;
+    bottom:0px;
+
+}
+
+.hide { 
+    display: none; 
+}
+
+
+/*the menu onthe right side*/
+#ui #panel-container 
+{
+    z-index: 2000;
+	height: 100%;
+	width: 300px;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+}
+#ui #panel-container.hidden { width: 1px; }
+#ui #panel-container.hidden #panel { display: none; }
+
+#ui #panel-container #panel-ul-menu.hidden { display: none; }
+#ui #panel-container #panel-ul-buildings.hidden { display: none; }
+
+
+#ui #panel-container #panel-menu-toggle {
+	position: absolute;
+	z-index: 2000;
+	left: -50px;
+	/* center the toggle vertically */
+	top: 50%;
+	margin-top: -25px;
+	text-decoration: none;
+	font-size: 16px;
+	display: block;
+	width: 70px;
+	height: 30px;
+	padding: 5px;
+	text-align: center;
+	font-weight: bold;
+
+	/* Rotate the element 90 degrees CCW */
+	-webkit-transform: rotate(-90deg); 
+	-moz-transform: rotate(-90deg);	
+	-ms-transform: rotate(-90deg); 
+	-o-transform: rotate(-90deg);
+	transform: rotate(-90deg);
+	/*text-shadow: #F2F2F2 1px 1px 1px;*/
+}
+
+
+#ui #panel-container #panel-buildings-toggle{
+	position: absolute;
+	z-index: 2000;
+	left: -50px;
+	/* center the toggle vertically */
+	top: 100px;
+	margin-top: -25px;
+	text-decoration: none;
+	font-size: 16px;
+	display: block;
+	width: 70px;
+	height: 30px;
+	padding: 5px;
+	text-align: center;
+	font-weight: bold;
+
+	/* Rotate the element 90 degrees CCW */
+	-webkit-transform: rotate(-90deg); 
+	-moz-transform: rotate(-90deg);	
+	-ms-transform: rotate(-90deg); 
+	-o-transform: rotate(-90deg);
+	transform: rotate(-90deg);
+	/*text-shadow: #F2F2F2 1px 1px 1px;*/
+}
+
+#ui #panel {
+	height: 100%;
+    top:0px;
+   /* bottom:170px;
+	width: 190px;*/
+	overflow-y:auto;
+	padding: 5px;
+}
+
+#ui #panel ul,.colonyBuildQueue ul { list-style: none; margin: 0px; padding: 0px; z-index: 2000; }
+#ui #panel ul li,.colonyBuildQueue ul li 
+{
+    z-index: 2000;
+	margin-top: 5px;
+    margin-bottom: 5px;
+	padding: 5px;
+}
+
+#ui #panel ul li:hover, #ui #panel ul li:active, .buttonUl li:hover, .buttonUl li:active{
+	cursor: pointer;
+}
+
+#ui #panel ul li.selected, #ui tr.selected
+{
+    cursor: pointer;
+}
+
+#ui #panel ul li h2 { padding: 0px; margin: 0px; font-size: 12px; }
+#ui #panel ul li p { padding-top: 3px; margin: 0px; font-size: 11px; }
+
+
+.ulButtonList {
+     list-style: none; margin: 0px; padding: 0px; z-index: 2000;
+}
+
+.liButton {
+    z-index: 2000;
+	margin-top: 5px;
+	padding: 5px;
+}
+
+#ColonyInfoButtons{
+    position: absolute;
+    left: 2px;
+    width: 288px;
+    top: 68px;
+}
+
+
+#ColonyInfoButtons button{   
+    border-radius: 0px;
+    height: 30px;
+    padding: 0px;
+    width: 30px;
+}
+
+
+#ShowBuildings .ButtonBuildingImage{
+    height: 30px;
+    width: 30px;
+}
+
+#ShowModules .ButtonModulesImage{
+    height: 30px;
+    width: 30px;
+}
+
+#ui #ColonyInfo {
+    position:absolute;
+    left:0px;
+    bottom:195px;
+    width:288px;
+    top:100px;    
+    display:none;
+}
+#ui #ColonyInfo.openDetails{
+    display:block;
+}
+#ui #upperUI {
+    position:fixed;
+    left:0px;
+    right:0px;
+    top: 0px;
+}
+
+#ui #upperUI.openDetails {    
+    left:0px;
+    }
+
+#ui #tools {
+	width: 300px;
+	height: 50px;
+	/*position: fixed;*/
+	position: absolute;
+	bottom: 10px;
+    left:300px;
+    z-index:4000;
+    pointer-events:none;
+}
+
+#ui #zoomTools {
+	width: 120px;
+	height: 40px;
+	/*position: fixed;*/
+	position: absolute;
+	/*padding-top: 10px;
+    left:720px;*/
+    right: 0px;
+    z-index:4000;
+    pointer-events:none;
+}
+
+#ui #menuTools {
+	width: 720px;
+	height: 34px;
+    
+	position: fixed;
+	/*position: absolute;*/
+	top: 0px;
+    left:37px; /* push the menu a little bit to the right to make space for a open/close menu */
+    z-index:6000;
+    /*pointer-events:none;*/
+    
+    padding-top: 2px;
+    /*
+    border-bottom: 2px solid grey;
+    border-right: 2px solid grey;
+    border-bottom-right-radius: 3px;
+        */
+}
+
+#menuTools ul#menuToolsList{
+    left: 150px;
+    position: relative;
+}
+
+#ui #menuTools2{
+	width: 75px;
+	height: 34px;
+	position: fixed;
+	top: 0px;
+    
+    right:0px;
+    z-index:8000;
+    
+    /*pointer-events:none;*/
+    padding-top: 2px;
+    /*
+    border-bottom: 2px solid grey;
+    border-left: 2px solid grey;
+    border-bottom-left-radius: 3px;
+        */
+}
+
+#ui #menuTools.openDetails,#ui #menuTools2.openDetails {
+    bottom: 125px;    
+    }
+
+#ui #tools.openDetails {
+    bottom: 105px;
+    left:332px;
+    }
+
+
+#ui #alerts {	
+	/*position: fixed;*/
+	position: fixed;
+	top: 50px;
+    left: 720px;
+}
+
+#ui #tools ul, #ui #alerts ul,  #ui #zoomTools ul, #ui #menuTools  ul,  #ui #zoomTools2 ul, #ui #menuTools2  ul {
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+#ui #tools li, #ui #alerts li,  #ui #zoomTools li, #ui #menuTools  li, #ui #menuTools2  li {
+    pointer-events:all;
+	cursor: pointer;
+	float: left;	
+	margin-left: 3px;
+}
+
+#ui #tools li{
+    width: 30px;
+	height: 30px;
+}
+
+#ui #alerts li {
+    width: 34px;
+	height: 36px;
+}
+ #menuToolsUl li,  #zoomToolsList li {
+    width: 30px;
+	height: 30px;
+}
+
+
+
+#ui #tools li#design {  display:none }
+#ui #tools li#toolTransfer {  display:none;}
+#ui #tools li#toolTransfer {  display:none;}
+#ui #tools li#toolTrade {  display:none; }
+#ui #tools li#rotate {display:none; }
+#ui #tools li#demolish {  display:none }
+#ui #tools li#harvestNebula {  display:none }
+#ui #tools li#createSpaceStation {  display:none }
+#ui #tools li#attackTarget {  display:none }
+#ui #tools li#addTranscendence {  display:none }
+#ui #tools li#sentry {  display:none }
+#ui #tools li#continue {  display:none }
+
+.IconButton, button.IconButton.ui-button{
+    width: 32px;
+    height: 33px;
+    padding: 1px 0px 0px 1px !important;
+}
+
+.IconButton span, button.IconButton span.ui-icon{
+    width: 31px;
+    height: 34px;
+    margin-top: 0px;
+    position: initial !important;
+    left: 0px;
+    top: 0px;
+}
+
+body div.ui-progressbar.ProgressBar{
+    margin: 5px;
+    height: 21px;
+    position: relative;
+}
+
+div.ProgressBar .progress-label {
+    position: absolute;
+    top: 2px;
+    margin-left: 3px;
+    text-shadow: 1px 1px 2px black;
+    font-size: 14px;
+    font-family: sans-serif;
+    zoom: 1;
+    letter-spacing: normal;
+    word-spacing: normal;
+    font-weight: normal;
+  }
+
+
+
+#ui #alerts .transcendenceButton {
+    width: 32px;
+    height: 33px;
+    padding: 1px 0px 0px 1px;
+}
+#ui #alerts .transcendence {background: url(images/Icons.png?v=2) no-repeat -450px 0px; }
+#ui #alerts .transcendence.ui-icon {
+    width: 30px;
+    height: 34px;
+    margin-top:0px;
+    position:initial !important;
+}
+
+#ui #alerts .messageButton, div.relPopup .relPopupBody .messageButton, #ui #tools .messageButton {
+    width: 32px;
+    height: 33px;   
+}
+
+#ui #tools .messageButton {
+    width: 29px;
+    height: 29px;   
+}
+
+#ui #alerts .messageButton, div.relPopup .relPopupBody .messageButton, #ui #tools .messageButton {
+    padding: 1px 0px 0px 1px;
+}
+
+ #ui #tools .messageButton {
+    padding: 0px 0px 0px 0px;
+}
+
+
+#ui #alerts .message.ui-icon,  div.relPopup .relPopupBody .message.ui-icon,  #ui #tools .message.ui-icon {
+    width: 30px;
+    height: 34px;
+    margin-top:0px;
+    position:initial !important;
+    left:0px;
+    top:0px;
+}
+
+
+#ui #alerts li#alertMessage { display:none }
+#ui #alerts li#alertCommNode { display:none }
+
+
+#loader 
+{
+    top:0px; left:0px; right:0px;
+    width:100%; height:100%; 
+
+    opacity: 0.8;
+
+    position:absolute;
+    display:block;     
+    z-index:30000;
+}
+
+#semitransparentOverlay 
+{
+    top:0px; left:0px; right:0px;
+    width:100%; height:100%; 
+
+	opacity: 0.8;
+
+    position:absolute;
+    display:none;     
+    z-index:7000;
+}
+
+#NavigationBar
+{
+    position:absolute; 
+    top:3px;    
+    left:762px;
+    z-index:5000;
+}
+
+#NavigationBar ul
+{
+    margin: 0; padding: 0.8em;
+    text-align: left; 
+}
+
+#NavigationBar ul li
+{
+    list-style: none;
+    display: inline;
+    margin: 1em;
+    font-size: 14px;
+    padding: 5px;
+}
+
+#NavigationBar ul li:hover, #ui #panel ul li:active {
+	cursor: pointer;
+	background: #FFF;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	-o-box-shadow: none;
+	-ms-box-shadow: none;
+	box-shadow: none;
+}
+
+#NavigationBar button {
+    padding: 0px 3px 0px 3px;
+    letter-spacing: 1px;
+    font-weight: lighter;
+}
+/*
+QuickInfo
+*/
+#ui #quickInfo-container 
+{
+    z-index: 2100;
+	height: 183px;
+	/*width: 310px;*/
+    left:0px;
+    right:0px;
+	/*width:100%;*/
+	position: fixed;
+	/*right: 0px;*/
+	bottom: 0px;
+	
+}
+#ui #quickInfo-container.menuOpen {	
+	right: 300px;	
+}
+
+#ui #quickInfo-container.hidden { height: 1px; }
+#ui #quickInfo-container.hidden #quickInfo { display: none; }
+#ui #quickInfo-container.hidden #quickInfoList { display: none; }
+#ui #quickInfo-container.hidden #quickInfoDetails { display: none; }
+/*
+#ui #quickInfo-container #quickInfo-goods-toggle {	
+	right: 120px;	
+}
+#ui #quickInfo-container #quickInfo-goods-toggle.menuOpen {	
+	right: 320px;	
+}
+
+#ui #quickInfo-container #quickInfo-modules-toggle {
+	right: 30px;		
+}
+#ui #quickInfo-container #quickInfo-modules-toggle.menuOpen {
+	right: 230px;	
+    	
+}
+*/
+/*
+#ui #quickInfo-container .toggles
+{
+    position: absolute;
+	z-index: 2000;
+	top: -5px;
+	margin-top: -25px;
+	text-decoration: none;
+	color: black;
+	font-size: 14px;
+	display: block;
+	width: 70px;
+	height: 20px;
+	padding: 9px;
+	text-align: center;
+	font-weight: bold;
+	background-color: #CCC;
+
+	-moz-border-radius-topright: 5px;
+	-webkit-border-top-right-radius: 5px;
+	border-top-right-radius: 5px;
+	
+	-moz-border-radius-topleft: 5px;
+	-webkit-border-top-left-radius: 5px;
+	border-top-left-radius: 5px;
+}
+*/
+
+
+/*
+#goodsToggle{
+display:none;
+}
+#goodsToggle.menuOpen{
+    right:200px;
+}
+*/
+#ui #quickInfoList 
+{
+    position: absolute;
+    height: 183px;
+	width: 320px;
+	/*height:100%;
+	width:100%;*/
+	bottom: 0px;
+	left:0px;
+	padding-left: 5px;
+    padding-right: 5px;
+    font-size: 15px;
+
+    text-shadow: 1px 1px 2px black;
+    font-size: 14px;
+    font-family: sans-serif;
+
+}
+#ui #quickInfoDetails 
+{
+    position: absolute;
+    height: 120px;
+    bottom:0px;
+    left: 330px;
+    right:300px;
+    overflow-y: auto;
+      
+}
+
+.toolTipDataPosition{
+    float:right;
+}
+
+
+.OuterShipListDiv, #ui #quickInfoDetails .OuterShipListDiv, #ui #TransferShips .OuterShipListDiv,#ui #TransferShipSelection .OuterShipListDiv{
+    display: block;
+    float: left;
+    margin: 3px; 
+
+    box-sizing: border-box;
+    width: 34px;
+    height: 51px;
+}
+
+.DivVertInlineBlock{
+    display: block;
+    float: left;
+    height: 20px;
+    vertical-align: middle;
+    font-size: 14px;
+    padding: 14px;
+}
+
+#TransferButtonX {
+    right: 2px;
+    position: absolute;
+}
+
+#ui #quickInfoDetails .ShipListDiv{
+    position:relative;
+        /* margin: 3px; */
+}
+
+#ui #quickInfoDetails.menuOpen {
+    right:500px;
+}
+
+#quickInfo.menuOpen{
+    right:200px;
+}
+
+ #quickInfo 
+ {
+    position: absolute;
+	height: 200px;
+	width: 300px;
+	bottom:0px;
+	right:0px;		
+}
+
+ #quickInfo .goodsOverflow,#TransferPanel .goodsOverflow
+ {
+    overflow-y: auto;
+    height:170px;
+ }
+
+
+
+#TransferPanel
+ {
+    position: absolute;
+    bottom:210px;
+    width: 300px;
+    right: 0px;
+ }
+
+.ShipSelectionLine{
+    width: 300px;              
+}
+
+#TransferShips{
+    width: 300px;
+    max-height: 125px;
+        
+    margin-bottom:6px;
+
+    overflow-y: auto;
+}
+
+#TransferShipSelection{
+    width: 300px;
+    height: 48px;
+        
+}
+
+#TransferButtons{
+    margin-top:10px;
+    box-sizing:border-box;
+    width: 300px;
+    height: 40px;
+
+}
+
+#TransferButtons button.ui-state-default{
+        font-size: 18px;
+        padding: 0px 0px 0px 3px;
+        height: 30px;
+        min-width: 40px;
+}
+
+#ui #quickInfo-container.hidden #TransferPanel {
+    display: none;
+}
+
+
+#ui #quickInfo ul { list-style: none; margin: 0px; padding: 0px; z-index: 2000; }
+#ui #quickInfo ul li 
+{
+    z-index: 2000;
+	margin-top: 5px;	
+}
+
+#ui #quickInfo ul li:hover, #ui #quickInfo ul li:active {
+	cursor: pointer;
+}
+
+#ui #quickInfo ul li.selected 
+{
+    cursor: pointer;
+}
+
+td.ColonyStatisticsIcon{
+    width: 25px;
+    height: 25px;
+}
+
+td.ColonyStatisticsIcon div{
+    width: 20px;
+    height: 20px;
+}
+
+#ui #quickInfo ul li h2 { padding: 0px; margin: 0px; font-size: 12px; }
+#ui #quickInfo ul li p { padding-top: 3px; margin: 0px; font-size: 11px; }
+
+
+
+#ui table 
+{
+    padding: 5px;
+}
+
+
+
+#ui #QuestList{
+    position:fixed;
+    right:0px;    
+    top:100px;
+    padding-right:2px;
+}
+
+#ui #QuestList div{
+    /*
+    margin-right: 10px;
+    margin-top: 10px;*/
+    padding: 0px 0px 0px 0px;
+    width: 32px;
+    height: 33px;
+}
+
+#ui #QuestList div button{
+    z-index: 5000;
+    width: 30px;
+    height: 30px;
+    padding: 0px;
+    margin: 1px;
+    border: none;
+}
+
+
+
+*.ui-tooltip {  
+    min-width: 140px;
+}
+
+
+.TRspacer {
+    height: 3px;
+}
+
+#panel-ul-buildings .ui-accordion-content {
+max-height: 450px;
+}
+
+.toolTipResearchGain {
+    width:  170px !important;
+    max-width: 170px !important;
+  }
+
+
+body .ui-progressbar.ui-widget-content {
+     background: none;
+     border-color: black;
+     margin: 5px
+  }
+
+body .ui-progressbar {
+	height: 1em;	
+}
+
+
+
+
+
+
+/*QJUERY UI ADAPTIONS*/
+.ui-front{z-index:20000 !important;}
+
+
+#quickMessageDiv{
+    position: absolute;
+    top: 50px;
+    left: 810px;
+    font-size: 14px;
+    z-index: 21000;
+}
+
+#quickMessage{
+    list-style-type: none;
+}
+
+
+#nextTurnTime{
+    position: absolute;
+    left: 358px;
+    color: white;
+    top: 7px;
+    font-size: 17px;
+    font-family: stormfaze, Helvetica, Arial;
+}
+
+.UnreadGalacticEvents {    
+}
+
+.UnreadMarker {
+    position: relative;
+    left: 10px;
+    top: -12px;
+    float: left;
+    margin: 6px;
+    font: 11px/12px stormfaze, Helvetica, Verdana, Tahoma;
+    height: 16px;
+    padding: 4px 3px 0 3px;
+    text-align: center;
+    min-width: 14px;
+    display:none;
+}
+
+#chat{
+    position: fixed  !important;
+    right: 10px;
+    bottom: 210px;
+    width: 300px;
+    min-width: 300px;
+    height: 220px;
+    min-height: 220px;
+    padding: 9px;
+    z-index: 100;
+
+    font-size: 13px;
+}
+/*
+#chatParticipants{
+    width: 30%;
+    min-width: 120px;
+    max-width: 200px;
+    height: 190px;
+    float: left;
+    padding: 5px;
+    padding-bottom: 25px;
+    margin-right: 5px;
+    overflow-x: hidden;
+    position: relative;
+}
+*/
+#chatParticipants{
+    position: absolute;
+    top: 9px;
+    bottom: 40px;
+    width: 150px;
+
+    padding: 5px;
+    padding-bottom: 25px;
+
+    overflow-x: hidden;
+}
+/*
+#chatWindow{
+    min-width: 155px;
+    height: 60px;
+    float: left;
+    overflow: auto;
+    padding: 5px;
+    color: white;
+    word-wrap:break-word;
+}
+*/
+
+#chatWindow{
+    position: absolute;
+    left: 175px;
+    right: 9px;
+    bottom: 40px;
+    top: 9px;
+
+    overflow: auto;
+    padding: 5px;
+    word-wrap:break-word;
+    line-height: 130%;
+}
+
+#chatInputContainer {
+    display: block;
+    overflow: hidden;
+    padding: 0;
+}
+
+#chatInputDiv {
+    position: absolute;
+    bottom: 8px;    
+    left: 9px;
+    right: 9px;
+}
+
+#chatInput {
+    width: 100%;
+    height: 25px;
+    border: none;
+    box-sizing: border-box;
+    margin-top: 5px;
+    padding: 3px 5px;
+}
+
+#QuestList ul{
+    list-style: none;
+    /*margin-right: 8px;*/
+    padding: 0px;
+}
+#QuestList ul li{
+    width: 30px;
+    height: 31px;
+    margin-top: 10px;
+    position: relative;
+}
+#QuestList ul li button{
+    width: 31px;
+    height: 32px;
+    padding: 0px 0px 0px 0px;
+    margin: 0px;    
+}
+
+#QuestList ul li button .imageSpeak{
+    width: 30px;
+    height: 34px;
+    margin-top: 0px;
+    position: initial !important;
+    left:0px;
+    top:0px;
+}
+
+#QuestList ul li button span.ui-button-text{
+        padding:0px;
+}
+
+
+.clearBoth {
+    clear: both;
+}
+
+
+.liButton2{
+    width: 30px;
+    height: 34px;
+    margin-top: 0px;
+    position: initial !important;
+}
+
+#chat .ui-resizable-nw {
+    cursor: nw-resize;
+    width: 14px;
+    height: 14px;
+    left: 0px;
+    top: 0px;
+}
+
+#ui #QuestList div.UnreadMarker{
+    position: absolute;
+    top: -12px;
+    height: 16px;
+    margin: 6px;
+    padding: 4px 3px 0 3px;
+    width: initial;
+}
+
+
+
+
+
+/*  -------------------  */
+
+.ui-tabs{
+    padding:0px;
+}
+
+
+.ui-tabs .ui-tabs-nav li.ui-tabs-active{
+    margin-bottom: 5px !important;
+    padding-bottom: 0px !important;
+}
+
+
+.ui-selectmenu-button span{
+    font-family: Trebuchet MS;
+}
+
+.ui-state-default .ui-icon {
+    width: 16px;
+    height: 16px;
+}
+.ui-selectmenu-open{
+    font-size: 1.1em;
+}
+
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus {
+    font-weight: bold;
+}
+
+.ui-accordion{
+    font-family: Trebuchet MS;
+}
+
+
+.ui-accordion-header{
+    font-family: stormfaze, Trebuchet MS, Arial;
+    letter-spacing: 1px;
+    font-weight: lighter;
+}
+
+.ui-accordion .ui-accordion-content { 
+    padding: 10px 5px !important;
+}
+
+a.UserLink{
+    display: inline;
+    font-weight: bold;
+    cursor: pointer; 
+    cursor: hand; 
+}
+
+a.UserLink:hover{
+    text-shadow: 0px 0px 1px white; 
+}
+
+a.UserLink:active{ 
+    color:red;
+}
+
+
+#QuestList button span.ui-button-text {
+    padding: .1em 0.4em;
+}
+
+#NavigationBar button{
+    padding: .1em 0.4em;
+}
+
+#QuestList  button{
+    font-family: stormfaze, Helvetica, Arial;
+    font-size: 20px;    
+    text-decoration: none;
+    border: none;
+    letter-spacing: 2px;    
+    border-radius: 0px;
+}
+
+#QuestList  button span {
+    font-size: 27px;
+}
+
+
+#CanvasTooltipContainer {
+    font-size:14px;
+}
+
+#CanvasTooltip {
+    display:none;
+    left: 300px; 
+    top: 300px; 
+    opacity: 1; 
+    position: absolute; 
+    width: auto; 
+    max-width: 400px;
+}
+
+.CanvasTooltip_T_L{
+    width: 7px; 
+}
+
+
+.CanvasTooltip_T_R{
+    width: 11px;
+}
+
+
+
+.CanvasTooltip_M_L{
+    width: 7px;
+}
+
+.CanvasTooltip_M_M{
+    width: auto;
+}
+
+.CanvasTooltip_M_R{
+    width: 11px;
+}
+
+
+
+.CanvasTooltip_B_L{
+    width: 7px;
+}
+
+.CanvasTooltip_B_R{
+    width: 11px;
+}
+
+.ui-spinner {
+        border: 1px solid #323f4f; 
+}
+
+div.Fleet{
+    display: inline-block;
+    margin: 5px;
+}
+
+.dot{
+  width:0;
+  height:0;
+}
+.bar{
+  position:absolute;
+  width:24px;
+  height:0;
+}
+.health{
+  position:absolute;
+  bottom:2px;
+  right:2px;
+}
+.damage{
+  position:absolute;
+  bottom:2px;
+  left:2px;
+}
+.life{
+  position:absolute;
+  top:-1px;
+  left:-1px;
+}
+.hyper{
+  position:absolute;
+  top:2px;
+  right:2px;
+}
+.system{
+  position:absolute;
+  top:2px;
+  right:7px;
+}
+.dot.cargo{
+  position:absolute;
+  top:2px;
+  left:2px;
+}
+.ShipContainer .name{
+  position:absolute;
+  bottom:5px;
+  left:2px;
+  font-size:8px;
+  font-family:monospace;
+  width:26px;
+  text-align:center;
+  text-transform: uppercase;
+  text-overflow: clip;
+  overflow: hidden;
+  white-space: nowrap;
+  line-height: 100%;
+}
+.attack{
+  position:absolute;
+  bottom:5px;
+  right:2px;
+  font-size:7px;
+}
+.ShipListDiv{
+  position:relative;
+  display:inline-block;
+}
+.ShipContainer{
+
+  display:inline-block;
+  position:relative;
+   width: 30px; 
+   height: 44px; 
+}
+.ShipContainer img{
+  position:absolute;
+  top:4px;
+   width: 30px; 
+   height: 30px;
+}
+
+#SettingsUl{
+    width: 15px;
+    display: inline-block;
+}
+
+#settingsList{
+    height: 15px;
+    width: 15px;
+    line-height: 15px;
+    margin-bottom: 2px;
+}
+
+#quitList{
+    height: 15px;
+    width: 15px;
+    line-height: 15px;
+}
+
+#Rank {
+    width: 120px;
+    height: 23px;
+    position: fixed;    
+    top: 0px;
+    right: 0px;
+    padding-top: 2px;
+    padding-left: 8px;
+    z-index: 6000;
+    font-size: 17px;
+    font-family: stormfaze, Helvetica, Arial;
+}
+
+.SelectmenuHeight {
+      max-height: 250px;
+    }
+
+option.ShipModule {
+      padding-left: 20px;
+    }
+
+
+input[type="checkbox"] + #menuTools {
+    height: 0;
+    transform-origin: left;
+    transition: transform .2s ease-out;
+    transform: scaleX(0);
+}
+
+input[type="checkbox"]:checked + #menuTools {
+    height: 100%;
+    transform-origin: left;
+    transition: transform .2s ease-out;
+    transform: scaleX(1);
+}
+
+#burgerButton {
+    width: 37px;
+    height: 34px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 6000;
+    padding-top: 2px;
+}
+
+#burgerButton label {
+    display: block;
+    width: 37px;
+    height: 37px;
+    cursor: pointer;
+    padding-top: 9px;
+    text-align: center;
+}
+
+#loadingProgressbar {
+   
+}
+
+#progressDYK {
+    position: relative;
+    text-align: center;
+    top: 50%;
+    margin-top: 30px;
+}
+
+input[type=checkbox].big {
+    /* Double-sized Checkboxes */
+    -ms-transform: scale(2); /* IE */
+    -moz-transform: scale(2); /* FF */
+    -webkit-transform: scale(2); /* Safari and Chrome */
+    -o-transform: scale(2); /* Opera */
+    padding: 10px;
+}

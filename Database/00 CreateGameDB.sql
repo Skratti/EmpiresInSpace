@@ -20,7 +20,7 @@ BEGIN TRAN
 DECLARE @DBServerName   VARCHAR(100) = '(localdb)\MSSQLLocalDB'  
 DECLARE @DBName VARCHAR(100) = 'Andromeda'  
 
-DECLARE @FilePath   VARCHAR(200) = 'C:\Github\EmpiresInSpace\Database\' 
+DECLARE @FilePath   VARCHAR(200) = 'C:\EmpiresInSpace\Database\' 
 --DECLARE @FilePath   VARCHAR(200) = 'C:\Users\Admin\Documents\GitHub\EmpiresInSpace\SQL\'
 
 DECLARE @FileList TABLE (Files NVARCHAR(MAX), id int identity(1,1))  

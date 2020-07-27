@@ -57,7 +57,7 @@ module Scripts {
             $('.yesButton span', scoutContainer).text(i18n.label(206));
             scoutContainer.appendTo("body"); //attach to the <body> element
 
-            $('.yesButton', scoutContainer).click((e: JQuery.Event) => { scoutContainer.remove(); });
+            $('.yesButton', scoutContainer).click((e: JQueryEventObject) => { scoutContainer.remove(); });
         }
     }
 

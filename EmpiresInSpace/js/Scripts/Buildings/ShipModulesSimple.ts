@@ -7,8 +7,8 @@ module SMSModule {
         Helpers.Log("showModulesPanel()");
         var windowHandle = ElementGenerator.MainPanel();
         var modulePanel = windowHandle.element;
-        $('.yesButton', modulePanel).click((e: JQuery.Event) => { doColonyModuleProduction(); modulePanel.remove(); });
-        $('.noButton', modulePanel).click((e: JQuery.Event) => { modulePanel.remove(); });
+        $('.yesButton', modulePanel).click((e: JQueryEventObject) => { doColonyModuleProduction(); modulePanel.remove(); });
+        $('.noButton', modulePanel).click((e: JQueryEventObject) => { modulePanel.remove(); });
         //$('.noButton', modulePanel)[0].style.display = 'none';
         $('.yesButton span', modulePanel).text(i18n.label(206));
         $('.noButton span', modulePanel).text(i18n.label(207));

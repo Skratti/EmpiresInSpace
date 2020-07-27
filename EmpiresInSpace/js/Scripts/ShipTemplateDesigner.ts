@@ -106,7 +106,7 @@ module ShipTemplateDesigner {
             
             DesignerContainer.appendTo("body"); //attach to the <body> element
 
-            $('.yesButton', DesignerContainer).click((e: JQuery.Event) => { this.checkSaveState(ShipTemplateDesigner.designerPanel.close, null); });
+            $('.yesButton', DesignerContainer).click((e: JQueryEventObject) => { this.checkSaveState(ShipTemplateDesigner.designerPanel.close, null); });
             
             this.calcCostsAndRefresh();         
             //DesignerContainer.zIndex(30000);
@@ -155,7 +155,7 @@ module ShipTemplateDesigner {
             templateName.css("vertical-align", "middle");
             templateName.append(content);
             templateRow.append(templateName);
-            templateRow.click((e: JQuery.Event) => { ShipTemplateDesigner.designerPanel.checkSaveState(ShipTemplateDesigner.designerPanel.selectTemplate, e) });   //selectTemplate(e); });
+            templateRow.click((e: JQueryEventObject) => { ShipTemplateDesigner.designerPanel.checkSaveState(ShipTemplateDesigner.designerPanel.selectTemplate, e) });   //selectTemplate(e); });
             return templateRow;
         }
 
@@ -293,7 +293,7 @@ module ShipTemplateDesigner {
                 }
             });
             
-            //selectorHull.parent().click((e: JQuery.Event) => { e.preventDefault(); e.stopPropagation(); });
+            //selectorHull.parent().click((e: JQueryEventObject) => { e.preventDefault(); e.stopPropagation(); });
 
 
             var statButtonsDiv = $("<div/>");
@@ -749,7 +749,7 @@ module ShipTemplateDesigner {
             this.leftSideTemplateSelection();
             this.refreshTemplateList();
             $('.noButton span', DesignerContainer).text(i18n.label(288));
-            $('.noButton', DesignerContainer).click((e: JQuery.Event) => { ShipTemplateDesigner.designerPanel.setSave(true); ShipTemplateDesigner.designerPanel.save(); });                       
+            $('.noButton', DesignerContainer).click((e: JQueryEventObject) => { ShipTemplateDesigner.designerPanel.setSave(true); ShipTemplateDesigner.designerPanel.save(); });                       
         }
 
         copyTemplate() {
@@ -1224,7 +1224,7 @@ module ShipTemplateDesigner {
                 ElementGenerator.makeSmall(scrapTemplate);
                 scrapTemplate.appendTo("body"); //attach to the <body> element                
             });
-            $('.noButton', DesignerContainer).click((e: JQuery.Event) => { ShipTemplateDesigner.designerPanel.RepairRefitClick(); });
+            $('.noButton', DesignerContainer).click((e: JQueryEventObject) => { ShipTemplateDesigner.designerPanel.RepairRefitClick(); });
 
 
             this.SetRepairRefitButton();
@@ -1257,7 +1257,7 @@ module ShipTemplateDesigner {
 
                 if (CanRepair) {
                     $('.noButton span', DesignerContainer).text(i18n.label(983)); //Refit
-                   // $('.noButton', DesignerContainer).click((e: JQuery.Event) => { ShipTemplateDesigner.designerPanel.save(); });
+                   // $('.noButton', DesignerContainer).click((e: JQueryEventObject) => { ShipTemplateDesigner.designerPanel.save(); });
                 } else {
                     $('.noButton', DesignerContainer).css("display", "none");
                 }
@@ -1266,7 +1266,7 @@ module ShipTemplateDesigner {
             else {
                 //Refit
                 $('.noButton span', DesignerContainer).text(i18n.label(612)); //Refit
-              /*  $('.noButton', DesignerContainer).click((e: JQuery.Event) => {
+              /*  $('.noButton', DesignerContainer).click((e: JQueryEventObject) => {
                     var scrapTemplate = ElementGenerator.createNoYesPopup(
                         (e) => { e.preventDefault(); ShipTemplateDesigner.designerPanel.setSave(true); ShipTemplateDesigner.designerPanel.save(); scrapTemplate.remove(); },
                         (e) => { e.preventDefault(); scrapTemplate.remove(); },

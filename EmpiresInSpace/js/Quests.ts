@@ -115,7 +115,7 @@ module QuestModule {
 
 
             this.icon.data("quest", this);            
-            button.click((e: JQuery.Event) =>
+            button.click((e: JQueryEventObject) =>
             {
                 readNextLoadedQuest = true;
                 this.loadScript();
@@ -246,7 +246,7 @@ module QuestModule {
         //commNodesPanel = ElementGenerator.createFullScreenPanel();
 
         questPanel = ElementGenerator.createPopup();
-        $('.yesButton', questPanel).click((e: JQuery.Event) => { questPanel.remove(); });
+        $('.yesButton', questPanel).click((e: JQueryEventObject) => { questPanel.remove(); });
         $('.noButton span', questPanel)[0].style.display = 'none';
 
 
@@ -334,7 +334,7 @@ module QuestModule {
 
         var tableRow = $('<tr/>');
               
-        //tableRow.click((e: JQuery.Event) => { e.stopPropagation(); commNode.showCommMessages(_caller); messages.text(commNode.readAndUnreadCount()); });
+        //tableRow.click((e: JQueryEventObject) => { e.stopPropagation(); commNode.showCommMessages(_caller); messages.text(commNode.readAndUnreadCount()); });
 
         var tableDataId = $('<td/>', { text: quest.id.toString() });
         if (!quest.isCompleted) tableDataId.addClass("firstchildGreen");
@@ -345,7 +345,7 @@ module QuestModule {
         if (!quest.isCompleted) tableDataRead.addClass("lastchildGreen");
 
         var readComm = $('<div/>', {  text: i18n.label(quest.label) });
-        readComm.click((e: JQuery.Event) => { window.scrollTo(0, 0); readNextLoadedQuest = true; quest.loadScript(); });
+        readComm.click((e: JQueryEventObject) => { window.scrollTo(0, 0); readNextLoadedQuest = true; quest.loadScript(); });
         tableDataRead.append(readComm);
         
 
@@ -367,7 +367,7 @@ module QuestModule {
         if (!quest.isCompleted) tableDataRead.addClass("lastchildGreen");
 
         var readComm = $('<div/>', { "class": "fullscreenTableButton", text: i18n.label(quest.label) });
-        readComm.click((e: JQuery.Event) => { readNextLoadedQuest = true; quest.loadScript(); });
+        readComm.click((e: JQueryEventObject) => { readNextLoadedQuest = true; quest.loadScript(); });
         tableDataRead.append(readComm);
 
 

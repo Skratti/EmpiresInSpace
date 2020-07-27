@@ -199,7 +199,7 @@ module TradeOffersModule {
             var SuccessPanel = ElementGenerator.createPopupWindow(1, false, null);
             
             var SuccessPanelElement = SuccessPanel.element;
-            $('.yesButton', SuccessPanelElement).click((e: JQuery.Event) => { SuccessPanelElement.remove(); });
+            $('.yesButton', SuccessPanelElement).click((e: JQueryEventObject) => { SuccessPanelElement.remove(); });
 
             var panelHeader = $('.relPopupHeader', SuccessPanelElement);
             var caption = $('<h2/>', { text: i18n.label(990), style: "float:left" }); //Offer Created

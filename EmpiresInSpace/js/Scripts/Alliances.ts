@@ -69,7 +69,7 @@ module AllianceModule {
                 relationChangedTowardsAlliance(data.item.element.parent()[0], $(data.item.element).parent().data("alliance"));
             }
         });
-        $("select", panelBody).parent().click((e: JQuery.Event) => { e.preventDefault(); e.stopPropagation();});
+        $("select", panelBody).parent().click((e: JQueryEventObject) => { e.preventDefault(); e.stopPropagation();});
     }   
 
     function leaveAlliance() {
@@ -112,7 +112,7 @@ module AllianceModule {
 
     function createAlliance() {
         var newNameContainer = ElementGenerator.renamePanel('', i18n.label(452));
-        $('.yesButton', newNameContainer).click((e: JQuery.Event) => {
+        $('.yesButton', newNameContainer).click((e: JQueryEventObject) => {
             var newName = $(".inputEl", newNameContainer).val();
             $.ajax("Server/Alliances.aspx", {
                 type: "GET",
@@ -295,7 +295,7 @@ module AllianceModule {
         
         var buttonYes = $('<button/>');
         buttonYes.text(i18n.label(452)); //Allianz erstellen
-        buttonYes.click((e: JQuery.Event) => { createAlliance(); });
+        buttonYes.click((e: JQueryEventObject) => { createAlliance(); });
         buttonYes.button();
 
         return buttonYes;
@@ -306,7 +306,7 @@ module AllianceModule {
         
         var buttonYes = $('<button/>');
         buttonYes.text(i18n.label(452)); //Allianz erstellen
-        buttonYes.click((e: JQuery.Event) => { createAlliance(); });
+        buttonYes.click((e: JQueryEventObject) => { createAlliance(); });
         buttonYes.button();
 
         return buttonYes;

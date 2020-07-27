@@ -903,7 +903,7 @@ module ColonyModule {
 
         renameColony() {
             var newNameContainer = ElementGenerator.renamePanel(this.name, i18n.label(279) + ' '  );
-            $('.yesButton', newNameContainer).click((e: JQuery.Event) => {
+            $('.yesButton', newNameContainer).click((e) => {
                 var newName = $(".inputEl", newNameContainer).val();
                 $.ajax("Server/colonies.aspx", {
                     type: "GET",
@@ -1373,7 +1373,7 @@ module ColonyModule {
         var starPath = mainObject.imageObjects[colony.parentArea.typeId].texture.src;
 
         var tableDataStarGif = $('<td/>', { style: "background-image:url(" + starPath + ");width:34px;height:30px;background-repeat:no-repeat;background-size: contain;" });
-        tableDataStarGif.click((e: JQuery.Event) => {
+        tableDataStarGif.click((e : JQueryEventObject) => {
             e.preventDefault();
             DrawInterface.switchToArea(colony.parentArea.parentArea); 
 
@@ -1387,7 +1387,7 @@ module ColonyModule {
         var tableDataPlanetGif = $('<td/>', { style: "background-image:url(" + planetPath + ");width:34px;height:30px;background-repeat:no-repeat;background-size: contain;" });
 
         //var tableDataPlanetGif = $('<td/>', { style: "background-image:url(images/51.png);width:34px;height:30px;background-repeat:no-repeat;background-size: contain;" });
-        tableDataPlanetGif.click((e: JQuery.Event) => { e.preventDefault(); colony.openSystemMap(); _caller.remove(); });
+        tableDataPlanetGif.click((e: JQueryEventObject) => { e.preventDefault(); colony.openSystemMap(); _caller.remove(); });
         tableRow.append(tableDataPlanetGif);
  
         var tableDataId = $('<td/>', { text: colony.id.toString() });
@@ -1425,7 +1425,7 @@ module ColonyModule {
        // var tableDataRead = $('<td/>', { "class" : "lastchild" });
         //tableRow.append(tableDataRead);
 
-        tableRow.click((e: JQuery.Event) => { colony.selectAndCenter(); _caller.remove(); });
+        tableRow.click((e: JQueryEventObject) => { colony.selectAndCenter(); _caller.remove(); });
         return tableRow;
     }    
 

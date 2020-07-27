@@ -17,7 +17,7 @@ module UserSpecifications {
         //icon.tooltip();
         ElementGenerator.Button(icon, 911, 909);  // label = '?', tooltip =  'Global Ranking'
 
-        icon.click((e: JQuery.Event) => {            
+        icon.click((e: JQueryEventObject) => {            
             UserSpecifications.showSpecifications();            
             $("#UserSpecs").css("display", "block");
             $("#UserSpecsRestore").css("display", "none");

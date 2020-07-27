@@ -557,7 +557,7 @@ module EmpiresIndex {
             $('#JoinGameDescriptionContent').empty();
             $('#JoinGameDescriptionContent').append($(labels.description1));
 
-            $('#JoinGameDescriptionScreen .yesButton').click((e: JQuery.Event) => { pageIndex.CloseScreens(); registerGame.register(); });
+            $('#JoinGameDescriptionScreen .yesButton').click((e: JQueryEventObject) => { pageIndex.CloseScreens(); registerGame.register(); });
             $('#JoinGameDescriptionScreen').css('display','inline-block');
             location.href = "#JoinGameDescriptionContent";
 
@@ -1224,7 +1224,7 @@ module EmpiresIndex {
 
             var YesButton = $('#SettingsScreen .yesButton');
            
-            YesButton.click((e: JQuery.Event) => { if (pageIndex.settingsDone()) this.CloseScreens(); });
+            YesButton.click((e: JQueryEventObject) => { if (pageIndex.settingsDone()) this.CloseScreens(); });
           
 
             //correct width of nameSpan and Language-Selector:
@@ -1263,9 +1263,9 @@ module EmpiresIndex {
             //buttonEvents
             var yesButton = $('.yesButton', registerPanel);
 
-            $('.yesButton', registerPanel).click((e: JQuery.Event) => { pageIndex.registerDone(); });
+            $('.yesButton', registerPanel).click((e: JQueryEventObject) => { pageIndex.registerDone(); });
             $('.yesButton span', registerPanel).text(labels.ButtonRegister);
-            $('.noButton', registerPanel).click((e: JQuery.Event) => { $('input', registerPanel).val(''); this.CloseScreens(); });
+            $('.noButton', registerPanel).click((e: JQueryEventObject) => { $('input', registerPanel).val(''); this.CloseScreens(); });
 
             //Fix for IE: password inputs do not have the same width as text input 
             //$("input[type='password']", registerPanel).height($("input[type='text']", registerPanel).height());

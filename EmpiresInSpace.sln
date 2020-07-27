@@ -15,6 +15,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmpiresInSpaceIndex", "Empi
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "EmpiresInSpaceDatabase", "Database\EmpiresInSpaceDatabase.sqlproj", "{4CA25D10-4D6A-40AF-BDA2-5C1CA6FD0641}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmpiresInSpace2", "EmpiresInSpace2\EmpiresInSpace2.csproj", "{76E08E6A-A708-48B5-BCA7-B5E942CF99EC}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0CC07013-EF64-4C06-8FE5-756B102D9350} = {0CC07013-EF64-4C06-8FE5-756B102D9350}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,6 +52,10 @@ Global
 		{4CA25D10-4D6A-40AF-BDA2-5C1CA6FD0641}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4CA25D10-4D6A-40AF-BDA2-5C1CA6FD0641}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4CA25D10-4D6A-40AF-BDA2-5C1CA6FD0641}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{76E08E6A-A708-48B5-BCA7-B5E942CF99EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76E08E6A-A708-48B5-BCA7-B5E942CF99EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76E08E6A-A708-48B5-BCA7-B5E942CF99EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76E08E6A-A708-48B5-BCA7-B5E942CF99EC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

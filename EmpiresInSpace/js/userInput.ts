@@ -24,17 +24,17 @@ class CanvasMouseListener {
     TooltipTimerId = 0;
 
     
-    public moveMouse: (e: JQuery.Event) => void;
-    public dragMouseBegin: (e: JQuery.Event) => void;
-    public dragMouse: (e: JQuery.Event) => void;
-    public dragMouseEnd: (e: JQuery.Event) => void;
-    public singleClick: (e: JQuery.Event) => void;
-    public dragOverForeground: (e: JQuery.Event) => void;
-    public mouseUpOverForeground: (e: JQuery.Event) => void;
+    public moveMouse: (e: JQueryEventObject) => void;
+    public dragMouseBegin: (e: JQueryEventObject) => void;
+    public dragMouse: (e: JQueryEventObject) => void;
+    public dragMouseEnd: (e: JQueryEventObject) => void;
+    public singleClick: (e: JQueryEventObject) => void;
+    public dragOverForeground: (e: JQueryEventObject) => void;
+    public mouseUpOverForeground: (e: JQueryEventObject) => void;
       
     constructor() {
 
-        this.moveMouse = (e: JQuery.Event) => {
+        this.moveMouse = (e: JQueryEventObject) => {
             if (!currentMap) return;
             var x = $(".canvasContainer").position().left;
 
@@ -82,7 +82,7 @@ class CanvasMouseListener {
         }
 
 
-        this.dragMouseBegin = (e: JQuery.Event) => {
+        this.dragMouseBegin = (e: JQueryEventObject) => {
             e.stopPropagation();
             //Helpers.Log('dragMouseBegin');
             //Helpers.Log($(".canvasContainer").position().left);
@@ -157,15 +157,15 @@ class CanvasMouseListener {
             return cancelEvent(e);
         }
 
-        this.dragOverForeground = (e: JQuery.Event) => {
+        this.dragOverForeground = (e: JQueryEventObject) => {
             this.dragMouse(e);
         }
 
-        this.mouseUpOverForeground = (e: JQuery.Event) => {
+        this.mouseUpOverForeground = (e: JQueryEventObject) => {
             this.dragMouseEnd(e);
         }
 
-        this.dragMouse = (e: JQuery.Event) => {
+        this.dragMouse = (e: JQueryEventObject) => {
             e.stopPropagation();
             e.preventDefault();          
 
@@ -255,7 +255,7 @@ class CanvasMouseListener {
 
 
        
-        this.dragMouseEnd = (e: JQuery.Event) => {
+        this.dragMouseEnd = (e: JQueryEventObject) => {
             DrawInterface.ScreenUpdate = true;
             Chat.toggleUsedOff();
 
@@ -319,7 +319,7 @@ class CanvasMouseListener {
         }
 
 
-        this.singleClick = (e: JQuery.Event) => {
+        this.singleClick = (e: JQueryEventObject) => {
             //Helpers.Log('singleClick');
             this.shipToMove = false;
             this.dragging = false;
@@ -474,7 +474,7 @@ function canvasMouseScrollListener(element)
         mainInterface.drawAll();
     }
 
-    function handleScroll(event, delta)
+    function handleScroll(event, delta): boolean
     {        
         if (delta > 0) {
             zoomIn();
@@ -494,7 +494,7 @@ function canvasMouseScrollListener(element)
         zoomOut();
     }
         
-    $(document.getElementById(element)).bind("mousewheel", handleScroll);
+    $(document.getElementById(element)).bind("mousewheel", <any>handleScroll);
     
 }
 

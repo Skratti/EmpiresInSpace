@@ -923,8 +923,8 @@ module BaseDataModule {
         image.addClass("buildingImage");
         buildingImage.append(image);
         buildingDiv.append(buildingImage);
-
-        buildingDiv.click((e: JQuery.Event) => { mainObject.buildingSelected(e); });
+        
+        buildingDiv.click((e) => { mainObject.buildingSelected(e); });
 
         buildingDiv.mousedown(function (event) {
             if (event.button == 2) {

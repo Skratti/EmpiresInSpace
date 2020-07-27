@@ -64,9 +64,9 @@ module ResearchModule {
         researchPanel.appendTo("body"); //attach to the <body> element
 
 
-        $('.yesButton', researchPanel).click((e: JQuery.Event) => { researchPanel.remove(); });
+        $('.yesButton', researchPanel).click((e: JQueryEventObject) => { researchPanel.remove(); });
         $('.noButton span', researchPanel).text(i18n.label(348)); //research tree
-        $('.noButton', researchPanel).click((e: JQuery.Event) => { researchPanel.remove(); Scripts.scriptsAdmin.loadAndRun(5, 1, "ResearchTree.js", true); });
+        $('.noButton', researchPanel).click((e: JQueryEventObject) => { researchPanel.remove(); Scripts.scriptsAdmin.loadAndRun(5, 1, "ResearchTree.js", true); });
 
         //var panelBody = $('.fullscreenPanelBody', commNodesPanel);
         var panelHeader = $('.relPopupHeader', researchPanel);
@@ -224,7 +224,7 @@ module ResearchModule {
 
         var researchPanel = ElementGenerator.createPopup();
         ElementGenerator.adjustPopupZIndex(researchPanel, 20000);
-        $('.yesButton', researchPanel).click((e: JQuery.Event) => { researchPanel.remove(); });
+        $('.yesButton', researchPanel).click((e: JQueryEventObject) => { researchPanel.remove(); });
         $('.noButton', researchPanel)[0].style.display = 'none';
         $('.yesButton span', researchPanel).text('OK');
 

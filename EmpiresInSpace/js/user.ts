@@ -1379,7 +1379,7 @@ module PlayerData {
         var settingsPanel: JQuery;
         settingsPanel = settingsWindow.element;
         settingsPanel.css("height","680px");
-        $('.yesButton', settingsPanel).click((e: JQuery.Event) => { settingsPanel.remove(); });
+        $('.yesButton', settingsPanel).click((e: JQueryEventObject) => { settingsPanel.remove(); });
         $('.noButton', settingsPanel)[0].style.display = 'none';       
 
         //var panelBody = $('.fullscreenPanelBody', commNodesPanel);
@@ -1564,7 +1564,7 @@ module PlayerData {
             buttonList.css("right", "inherit");
             var buttonListButton = $("<li/>", { text: i18n.label(409), "class": "panelLi" });
             buttonList.append(buttonListButton);
-            buttonListButton.click((e: JQuery.Event) => { newTurn(); settingsPanel.remove(); });
+            buttonListButton.click((e: JQueryEventObject) => { newTurn(); settingsPanel.remove(); });
             panelBody.append(buttonList);
         }
 

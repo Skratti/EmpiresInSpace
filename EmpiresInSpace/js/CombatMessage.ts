@@ -191,7 +191,7 @@
 
             var that = this;
             $('.yesButton  span', popupPanel).text(i18n.label(206)); //OK
-            $('.yesButton', popupPanel).click((e: JQuery.Event) => { popupPanel.remove(); });
+            $('.yesButton', popupPanel).click((e: JQueryEventObject) => { popupPanel.remove(); });
 
             
             $(".messageReadBody1", popupPanel).html(this.Body2().html);

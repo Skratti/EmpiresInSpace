@@ -9,7 +9,7 @@ module Chat {
         this.icon = $("<button>");
         this.icon.button({ "icons": { "primary": 'imageSpeak', "secondary": null } });
         this.icon.tooltip();
-        this.icon.click((e: JQuery.Event) => {
+        this.icon.click((e) => {
             IsOpen = true;
             newChatMessages = 0;
             $(".UnreadChats").css("display", "none");
@@ -27,7 +27,7 @@ module Chat {
         $("#QuestList ul").append(li);
 
         //the close button on the chat window
-        $("#chat button").click((e: JQuery.Event) => {
+        $("#chat button").click((e) => {
             IsOpen = false;
             $("#chatRestore").css("display", "block");     
             $("#chat").css("display", "none");

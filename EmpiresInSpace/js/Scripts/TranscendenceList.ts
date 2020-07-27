@@ -118,7 +118,7 @@ module TranscendenceList {
             tableRow.append(tableDataRead);
             */
 
-            tableRow.click((e: JQuery.Event) => { ship.selectAndCenter(); _caller.remove(); });
+            tableRow.click((e: JQueryEventObject) => { ship.selectAndCenter(); _caller.remove(); });
             return tableRow;
         }
 
@@ -131,7 +131,7 @@ module TranscendenceList {
             this.icon.button({ "icons": { "primary": 'transcendence', "secondary": null } });
             this.icon.data("quest", this);
             this.icon.tooltip();
-            this.icon.click((e: JQuery.Event) => {
+            this.icon.click((e: JQueryEventObject) => {
                 this.showTransList();
                 this.icon.css("display", "none");
             });

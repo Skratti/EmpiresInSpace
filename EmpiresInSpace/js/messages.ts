@@ -353,7 +353,7 @@ module MessageModule {
             panelBody.append(this.allMessages);
            
         
-            $('.noButton', popupPanel).click((e: JQuery.Event) => { popupPanel.remove();  });
+            $('.noButton', popupPanel).click((e: JQueryEventObject) => { popupPanel.remove();  });
             
 
             var that = this;
@@ -364,7 +364,7 @@ module MessageModule {
             $('.yesButton  span', popupPanel).text(i18n.label(228)); //senden
             
             $('.yesButton', popupPanel).unbind("click");
-            $('.yesButton', popupPanel).click((e: JQuery.Event) => { this.sendMessage(); popupPanel.remove(); });
+            $('.yesButton', popupPanel).click((e: JQueryEventObject) => { this.sendMessage(); popupPanel.remove(); });
 
             
             // bind action for deactivating / activating send-Button
@@ -685,7 +685,7 @@ module MessageModule {
             icon.css("display", "none");
             icon.button({ "icons": { "primary": 'message', "secondary": null } });
             icon.tooltip();
-            icon.click((e: JQuery.Event) => {
+            icon.click((e: JQueryEventObject) => {
                 this.showTransList();
                 this.icon.css("display", "none");
             });
@@ -772,7 +772,7 @@ module MessageModule {
             });
             tabDiv.addClass("MessageTabPage");
 
-            $('.yesButton', popupPanel).click((e: JQuery.Event) => { popupPanel.remove(); });          
+            $('.yesButton', popupPanel).click((e: JQueryEventObject) => { popupPanel.remove(); });          
             $('.noButton', popupPanel).css("display", "inline-block");
             $('.noButton span', popupPanel).text("More");
             $('.yesButton span', popupPanel).text('OK');
@@ -906,8 +906,8 @@ module MessageModule {
                 tableRow.addClass("CommMessageGray");
             }
 
-            //tableRow.click((e: JQuery.Event) => { MessageModule.userInterface.showMessageRead2(message.id, tableRow); });
-            tableRow.click((e: JQuery.Event) => { message.showMessage(_caller, tableRow); });
+            //tableRow.click((e: JQueryEventObject) => { MessageModule.userInterface.showMessageRead2(message.id, tableRow); });
+            tableRow.click((e: JQueryEventObject) => { message.showMessage(_caller, tableRow); });
             // onclick="userInputMethods.showMessageRead(' + allMessagesById[i].id + ');"  data-messageheadid="' + allMessagesById[i].id + '">';
             
             var messageFromToLabelDiv = $('<div/>', { "class": "messageFromToDiv" });  //abs, left , width 70

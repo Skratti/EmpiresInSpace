@@ -365,7 +365,7 @@ module ShipTemplateModule {
         Helpers.Log("showShipTemplatesPanel()");
 
         var templatesPanel = ElementGenerator.createPopup();
-        $('.yesButton', templatesPanel).click((e: JQuery.Event) => { templatesPanel.remove(); });
+        $('.yesButton', templatesPanel).click((e: JQueryEventObject) => { templatesPanel.remove(); });
         $('.noButton', templatesPanel)[0].style.display = 'none';
         $('.yesButton span', templatesPanel).text('OK');
 

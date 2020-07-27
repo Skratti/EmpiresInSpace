@@ -229,8 +229,8 @@ module ElementGenerator {
         $('.noButton', popup).css("padding", "0px 5px 0px 5px");
         $('.yesButton', popup).css("padding", "0px 5px 0px 5px");
 
-        $('.noButton', popup).click((event: JQuery.Event) => (noCallback(event)));
-        $('.yesButton', popup).click((event: JQuery.Event) => (yesCallback(event)));
+        $('.noButton', popup).click((event: JQueryEventObject) => (noCallback(event)));
+        $('.yesButton', popup).click((event: JQueryEventObject) => (yesCallback(event)));
         return popup;
 
 
@@ -340,7 +340,7 @@ module ElementGenerator {
         ElementGenerator.makeSmall(newNameContainer);
 
         $(".buttonUl", newNameContainer).css("right", "-10px")
-        $('.noButton', newNameContainer).click((e: JQuery.Event) => {
+        $('.noButton', newNameContainer).click((e: JQueryEventObject) => {
             newNameContainer.remove();
         });
         $('.noButton span', newNameContainer).text(i18n.label(207));
@@ -460,7 +460,7 @@ module ElementGenerator {
             var header = $('<div/>', { "class": 'relPopupHeader ui-state-default' });     // contains the scroll bar
             var buttonX = $('<button/>', { "class": 'ui-state-default bX', "text": "X" });
             header.append(buttonX);
-            buttonX.click((e: JQuery.Event) => { container.data("window").remove(); });
+            buttonX.click((e: JQueryEventObject) => { container.data("window").remove(); });
 
             header.addClass("panelHeaderBackground");
             var panel = $('<div/>', { "class": 'relPopupPanel' });     // contains the scroll bar of the body
@@ -493,13 +493,13 @@ module ElementGenerator {
             $('.yesButton span', container).text(i18n.label(440));
 
             /*
-            $('button .bX, button .yesButton', container).click((e: JQuery.Event) => { //allianceDetailsPage.remove(); });
+            $('button .bX, button .yesButton', container).click((e: JQueryEventObject) => { //allianceDetailsPage.remove(); });
                 //Helpers.Log("yeButton click");
                 container.data("window").remove();
             });
             */
             
-            buttonYes.click((e: JQuery.Event) => { //allianceDetailsPage.remove(); });
+            buttonYes.click((e: JQueryEventObject) => { //allianceDetailsPage.remove(); });
                 //Helpers.Log("yeButton click");
                 container.data("window").remove();
             });

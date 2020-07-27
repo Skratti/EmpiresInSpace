@@ -164,7 +164,7 @@
         ElementGenerator.makeSmall(newNameContainer);
 
         $(".buttonUl", newNameContainer).css("right", "-10px")
-            $('.noButton', newNameContainer).click((e: JQuery.Event) => {
+            $('.noButton', newNameContainer).click((e: JQueryEventObject) => {
             newNameContainer.remove();
         });
         $('.noButton', newNameContainer).css('display', 'none');
@@ -172,7 +172,7 @@
         newNameContainer.appendTo("body"); //attach to the <body> element
 
 
-        $('.yesButton', newNameContainer).click((e: JQuery.Event) => {
+        $('.yesButton', newNameContainer).click((e: JQueryEventObject) => {
 
             newNameContainer.remove();
 

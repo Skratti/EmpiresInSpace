@@ -1,0 +1,13 @@
+﻿.goodsAmount {
+    font-size: 11px;
+}
+
+svg{
+transform: scale(0.8);
+transform-origin: 3% -25%;
+}
+
+.modifiers{
+    transform: scale(0.8);
+    transform-origin: 94% -102%;
+}

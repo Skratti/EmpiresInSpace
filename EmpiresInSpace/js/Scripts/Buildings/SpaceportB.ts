@@ -56,7 +56,7 @@ module Scripts {
 
             //spaceportContainer.appendTo($("#generatedPanel"));
             $('.noButton', this.spacePortPopup).click(
-                (e: JQuery.Event) => {
+                (e: JQueryEventObject) => {
                     //Scripts.scriptsAdmin.loadAndRun(3, 1, 'ShipTemplateDesigner.js');
                     Scripts.scriptsAdmin.loadAndRun(3, 1, './ShipTemplateDesigner.js', false, () => { (<any>ShipTemplateDesigner).runTemplate(null); });
 
@@ -65,7 +65,7 @@ module Scripts {
                 });
 
             this.windowHandle.SetBottom();
-            //$('.noButton', body).click((e: JQuery.Event) => { Scripts.scriptsAdmin.loadAndRun(3, 1, 'ShipTemplateDesigner.js'); spaceportContainer.remove(); });
+            //$('.noButton', body).click((e: JQueryEventObject) => { Scripts.scriptsAdmin.loadAndRun(3, 1, 'ShipTemplateDesigner.js'); spaceportContainer.remove(); });
         }    
 
         refreshAll() {
@@ -284,13 +284,13 @@ module Scripts {
             /*
             var shipButtonText = i18n.label(552);
             var buildShip = $('<div/>', { "class": "popupSpaceportShipBuild", text: shipButtonText });
-            buildShip.click((e: JQuery.Event) => { this.spacePortBuildClicked(shipTemplate, true); });
+            buildShip.click((e: JQueryEventObject) => { this.spacePortBuildClicked(shipTemplate, true); });
 
             var buildShipTD = $('<td/>');
             buildShipTD.append(buildShip);
             tableRow.append(buildShipTD);
             */
-            tableRow.click((e: JQuery.Event) => { this.spacePortBuildClicked(shipTemplate, true); });
+            tableRow.click((e: JQueryEventObject) => { this.spacePortBuildClicked(shipTemplate, true); });
 
 
             return tableRow;

@@ -1,0 +1,126 @@
+﻿
+.tooltip, .ui-tooltip {
+    visibility: hidden;
+}
+
+#ui #menuTools {
+    width: 720px;
+}
+
+
+img {
+    width:20px;
+}
+
+h2{    
+    font-size: 1.2em;
+}
+
+#burgerButton{
+    display:none;
+}
+#ui #menuTools{
+    left:0px;
+}
+
+#ui #menuTools li#questList {
+    display:none;
+}
+
+#nextTurnTime{
+    display:none;
+}
+
+#Rank{
+    display:none;
+}
+
+#chat {
+    bottom: 10px;
+    max-width: 619px;
+    max-height: 300px;
+}
+#Rank {
+    top: 36px;
+    display: none;
+}
+/*
+#nextTurnTime {
+    left: 339px;
+    width: 160px;
+    top: -2px;
+}
+*/
+#NavigationBar {
+    top: 38px;
+    left: 5px;
+}
+
+#ui #alerts {
+    left: 600px;
+}
+
+#ui #ColonyInfo
+{
+    top: 78px;
+    bottom: 173px;
+    width: 211px;
+}
+
+#quickInfoList table{
+    padding:0px;    
+}
+
+#ui #quickInfoList {
+    font-size: 10px;
+    height: 120px;
+    width: 190px;
+}
+
+#ui #quickInfoDetails
+{
+    left: 201px;
+    right: 250px;
+}
+#ui #tools.openDetails {
+    left: 201px;
+    bottom: 42px;
+}
+
+.interfaceCreatedToolbar {
+    margin: 1px;
+}
+
+body div.ui-progressbar.ProgressBar{
+    height: 16px;
+    margin: 1px;
+}
+
+div.ProgressBar .progress-label {
+      font-size: 11px;
+      /*transform: scale(0.8); */
+}
+
+td.ColonyStatisticsIcon{
+    width: 21px;
+    height: 21px;
+}
+
+#quickInfo {
+    height: 112px;
+    width: 250px;
+}
+
+
+#quickInfo .goodsOverflow, #TransferPanel .goodsOverflow {
+    font-size: 11px;
+    height: 97px;
+}
+
+#chat {
+    height:250px;
+}
+
+#ui #quickInfoDetails {
+    height: 57px;
+}

@@ -335,7 +335,7 @@ module CommModule {
                 var writeMessageButton = $("<button/>", { text: i18n.label(543) }); //new message button
                 writeMessageButton.css("margin-left", "20px").css("margin-top", "20px");
 
-                writeMessageButton.click((e: JQuery.Event) => { if (isDemo) ElementGenerator.messagePopup(338); this.createUserMessageDiv(writeMessageButton) });
+                writeMessageButton.click((e: JQueryEventObject) => { if (isDemo) ElementGenerator.messagePopup(338); this.createUserMessageDiv(writeMessageButton) });
                 writeMessageButtonDiv.append(writeMessageButton);
                 messageListDiv1.append(writeMessageButtonDiv);
                 writeMessageButton.button();
@@ -376,7 +376,7 @@ module CommModule {
             getMoreMessagesButtonDiv.css("text-align","center");
             var getMoreMessagesButton = $("<button/>", { text: i18n.label(544) });
             getMoreMessagesButton.css("margin-left", "20px");
-            getMoreMessagesButton.click((e: JQuery.Event) => { this.getReceivedMessages(this.messageHighestToNr, this.messageHighestToNr + 10, allMessages)} );
+            getMoreMessagesButton.click((e: JQueryEventObject) => { this.getReceivedMessages(this.messageHighestToNr, this.messageHighestToNr + 10, allMessages)} );
 
             getMoreMessagesButtonDiv.append(getMoreMessagesButton);
             panelBody.append(getMoreMessagesButtonDiv);
@@ -1147,7 +1147,7 @@ module CommModule {
 
         var tableRow = $('<tr/>');
 
-        tableRow.click((e: JQuery.Event) => { e.stopPropagation(); commNode.showCommMessages(_caller); messages.text(commNode.readAndUnreadCount()); });
+        tableRow.click((e: JQueryEventObject) => { e.stopPropagation(); commNode.showCommMessages(_caller); messages.text(commNode.readAndUnreadCount()); });
 
         /*
         id  OK
@@ -1192,7 +1192,7 @@ module CommModule {
         /*
         var tableDataRead = $('<td/>');
         var readComm = $('<div/>', { "class" : "fullscreenTableButton", text: i18n.label(302) });
-        readComm.click((e: JQuery.Event) => { e.stopPropagation(); commNode.showCommMessages(_caller); messages.text(commNode.readAndUnreadCount());});
+        readComm.click((e: JQueryEventObject) => { e.stopPropagation(); commNode.showCommMessages(_caller); messages.text(commNode.readAndUnreadCount());});
         tableDataRead.append(readComm);
         tableRow.append(tableDataRead);      
         */
@@ -1206,7 +1206,7 @@ module CommModule {
             var tableDataAdmin = $('<td/>');
             var adminComm = $('<div/>', { "class": "fullscreenTableButton", text: i18n.label(537) });
             //adminComm.click(showCommAdministration(commNode));
-            adminComm.click((e: JQuery.Event) => { e.stopPropagation();  commNode.showCommAdministration(_caller); });
+            adminComm.click((e: JQueryEventObject) => { e.stopPropagation();  commNode.showCommAdministration(_caller); });
             tableDataAdmin.append(adminComm);
             tableRow.append(tableDataAdmin);
         }

@@ -1,0 +1,87 @@
+﻿
+#ui #menuTools {
+    width: 667px;
+}
+
+
+img {
+    width:20px;
+}
+
+h2{    
+    font-size: 1.2em;
+}
+
+#chat
+{
+        bottom: 10px;
+        max-width: 619px;
+        max-height: 300px;
+}
+#Rank {
+    top: 36px;
+    display: none;
+}
+/*
+#nextTurnTime {
+    left: 339px;
+    width: 160px;
+    top: -2px;
+}
+*/
+#NavigationBar {
+    top: 38px;
+    left: 5px;
+}
+
+#ui #alerts {
+    left: 600px;
+}
+
+#ui #ColonyInfo
+{
+    top: 78px;
+    bottom: 173px;
+    width: 211px;
+}
+
+#ui #quickInfoList {
+    font-size: 11px;
+    height: 160px;
+    width: 190px;
+}
+
+#ui #quickInfoDetails
+{
+    left: 201px;
+    right: 250px;
+}
+#ui #tools.openDetails{
+    left: 201px;
+}
+body div.ui-progressbar.ProgressBar{
+    height: 16px;
+}
+
+div.ProgressBar .progress-label {
+      font-size: 11px;
+      /*transform: scale(0.8); */
+}
+
+td.ColonyStatisticsIcon{
+    width: 21px;
+    height: 21px;
+}
+
+#quickInfo{
+    height: 163px;
+    width: 250px;
+}
+
+
+#quickInfo .goodsOverflow, #TransferPanel .goodsOverflow
+{
+        font-size: 11px;
+        height: 136px;
+}
+

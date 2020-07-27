@@ -1,0 +1,1688 @@
+﻿/*
+    all CSS that are needed by Views and Popups    
+    and shared between them!
+    */
+
+
+div .ui-tabs .ui-tabs-nav .ui-tabs-anchor {   
+    padding: .5em 0.6em;  
+}
+
+.WindowPanel .WindowLeftButton {
+     position: absolute; 
+     left: 0px;
+}
+
+.relPopupFooter button{
+    font-weight:normal;
+}
+.fullscreenPanel
+{
+    height: 100%;  
+	width: 100%;
+    
+    top: 0px;
+    position:absolute;       
+    
+    -webkit-box-shadow: 1px 1px 5px #000;
+	-moz-box-shadow: 1px 1px 5px #000;
+	-o-box-shadow: 1px 1px 5px #000;
+	-ms-box-shadow: 1px 1px 5px #000;	
+	border-left: 1px solid #EEE;
+	
+	
+    display:block;  
+    z-index:15000;   
+        
+    
+    
+    background: #DDDDDD;
+    background: -webkit-gradient(linear, left top, left bottom, from(#888888), to(#DDDDDD));
+    background: -webkit-linear-gradient(#888888, #DDDDDD);
+    background: -moz-linear-gradient(top, #888888, #DDDDDD);
+    background: -ms-linear-gradient(#888888, #DDDDDD);
+    background: -o-linear-gradient(#888888, #DDDDDD);
+    background: linear-gradient(#888888, #DDDDDD);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#888888', endColorstr='#DDDDDD');
+    zoom: 1;
+
+
+    
+}
+
+.fullscreenPanelBody
+{
+    position:absolute;
+    top:50px;
+    left:100px;
+    width:600px;
+    bottom:50px;     
+    border: 1px solid rgba(0, 0, 0, 0.1);   
+    display: inline-block;    
+    overflow-y:scroll;
+    background-color:White;
+    padding:20px;
+}
+
+
+.popupHeader {
+    font-size:15px;
+    position: fixed;
+    width:720px;
+    height: 40px;
+/*    height:auto;*/
+ 
+    left: 50%;
+    top:50%;
+    margin-left: -360px;
+    margin-top: -240px;
+    padding: 0px 0px 0px 5px;
+    z-index:11000;
+    opacity: 1;
+    background-color: #AAA;
+
+    border-left: 1px solid #777;
+    border-right: 1px solid #777;
+    border-top: 1px solid #777;
+
+    -webkit-border-radius: 5px 5px 0px 0px;
+	-moz-border-radius: 5px 5px 0px 0px;
+	-o-border-radius: 5px 5px 0px 0px;
+	-ms-border-radius: 5px 5px 0px 0px;
+	border-radius: 5px 5px 0px 0px;	
+}
+
+.popupHeader h2 {
+    margin-top:0px;
+}
+
+.popupPanel {
+    font-size: 1.3em;
+    position: fixed;
+    width:720px;
+    height: 410px;
+/*    height:auto;*/
+    overflow-y:auto; 
+    left: 50%;
+    top:50%;
+    margin-left: -360px;
+    margin-top: -200px;
+    padding: 0px 2px 0px 3px;
+    z-index:11000;
+    opacity: 1;
+    background-color: #CCC;
+
+    border-left: 1px solid #777;
+    border-right: 1px solid #777;
+}
+
+.popupPanel input{
+    background-color: #DDD;
+    width:50px;
+    text-align:center;
+}
+
+.popupPanel .messageWritePanel input{
+    background-color: #DDD;
+    width: 400px;
+    text-align:left;
+}
+
+.popupFooter {
+    position:fixed;
+    
+    height:50px;
+    top:50%;
+    margin-top: 210px;
+
+    width:720px;
+    left: 50%;
+    margin-left: -360px;
+    z-index:11000;
+    opacity: 1;
+    background-color: #AAA;
+    padding: 0px 0px 0px 5px;
+    border-left: 1px solid #777;
+    border-right: 1px solid #777;
+    border-bottom: 1px solid #777;
+    
+    -webkit-border-radius: 0px 0px 5px 5px;
+	-moz-border-radius: 0px 0px 5px 5px;
+	-o-border-radius: 0px 0px 5px 5px;
+	-ms-border-radius: 0px 0px 5px 5px;
+	border-radius: 0px 0px 5px 5px;	
+}
+
+.popupHeader.panelHeaderBackground{
+    background: url("images/Sprites.png") repeat-x 0px -0px;
+}
+
+.popupFooter.panelFooterBackground{
+    background: url("images/Sprites.png") repeat-x 0px -50px;
+}
+
+.popupHeaderSmall {
+     
+}
+
+.popupPanelSmall {
+    
+    min-height: 90px !important;
+}
+/*
+.popupFooterSmall {
+
+     margin-top: -50px !important;
+}
+*/
+.centered .relPopupPanel {
+    padding:5px;
+}
+
+.popupHeaderMedium {
+    
+}
+
+.popupPanelMedium {
+   
+    height: 170px !important;
+}
+
+.popupFooterMedium {
+    
+     margin-top: -30px !important;
+}
+
+.relPopupHeader.popupHeaderBig {
+    left: 50px;
+    right: 50px;
+    top:50px;       
+    margin-left: 0px;
+    margin-top: 0px;
+    width:auto;
+
+}
+
+.relPopupHeader.popupHeaderBig.popupHeaderFullHeight {
+    top:0px;
+}
+.relPopupHeader.popupHeaderBig.popupHeaderFullWidth {
+    left: 0px;
+    right: 0px;
+}
+.relPopupPanel.popupPanelBig {
+    position: absolute;
+    top: 40px;
+    width: 100%;
+    bottom: 50px;
+    height: auto;
+    background: rgba(0,0,0,0.9);
+}
+.relPopupPanel.popupPanelBig.popupHeaderFullHeight {
+    top:40px;
+    bottom:50px;
+}
+.relPopupPanel.popupPanelBig.popupHeaderFullWidth {
+    left: 0px;
+    right: 0px;
+}
+.relPopupFooter.popupFooterBig {
+     position: absolute;
+    width: 100%;
+    bottom: 0px;
+}
+.relPopupFooter.popupFooterBig.popupHeaderFullHeight {
+    bottom:0px;
+}
+.relPopupFooter.popupFooterBig.popupHeaderFullWidth {
+    left: 0px;
+    right: 0px;
+}
+
+
+.fullscreenPanel ul { list-style: none; margin: 0px; padding: 0px; }
+
+
+.fullscreenTable {
+    /* padding:5px; */
+    width: 100%;
+    border-spacing: 0px;
+    /*border-color:black;*/
+}
+
+.messages .fullscreenTable {
+
+    width:100%;
+}
+
+.width100 {
+    width:100%;
+}
+
+
+.fullscreenTable .trBottomBorder td{
+    border-bottom: 2px solid;
+    border-top: 0px;
+}
+
+.fullscreenTable .greenBorder {
+    border-color:green;
+}
+ 
+.tdTextLeft   {
+    text-align: left;
+}
+.fullscreenTable .tdTextRight   {
+    text-align: right;
+}
+.fullscreenTable td, .fullscreenTable li {
+    padding: 3px 5px 3px 5px;
+    /* border-top: thin solid; */
+    /* border-bottom: thin solid; */
+    /* text-align: center; */
+   
+}
+
+.fullscreenTable .firstchild {   
+    border-left: thin solid; 
+    border-radius: 5px 0px 0px 5px / 5px 0px 0px 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-bottomleft: 5px;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-bottom-left-radius: 5px;
+
+}
+
+.fullscreenTable  .tdGreen {
+    border-color:green;
+        border-top: thin solid green;
+        border-bottom: thin solid green;       
+        border-width:2px; 
+}
+
+.fullscreenTable  .tdRed {
+    border-color:red;
+        border-top: thin solid red;
+        border-bottom: thin solid red;        
+}
+
+.fullscreenTable  .firstchildGreen {
+    border-color:green;
+        border-left: thin solid green;
+        border-width:2px;
+        border-radius: 5px 0px 0px 5px / 5px 0px 0px 5px;
+        -moz-border-radius-topleft: 5px;
+        -moz-border-radius-bottomleft: 5px;
+        -webkit-border-top-left-radius: 5px;
+        -webkit-border-bottom-left-radius: 5px;
+}
+
+.fullscreenTable  .firstchildRed {
+        border-color:Red;
+        border-left: thin solid Red;
+        border-radius: 5px 0px 0px 5px / 5px 0px 0px 5px;
+        -moz-border-radius-topleft: 5px;
+        -moz-border-radius-bottomleft: 5px;
+        -webkit-border-top-left-radius: 5px;
+        -webkit-border-bottom-left-radius: 5px;
+}
+
+.fullscreenTable .lastchild {
+    border-right: thin solid;
+    border-radius:   0px 5px 5px 0px / 0px 5px 5px 0px;
+    -moz-border-radius-topright: 5px;
+    -moz-border-radius-bottomright: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -webkit-border-bottom-right-radius: 5px;
+}
+.fullscreenTable .lastchildGreen {
+    border-color:green;
+       border-right: thin solid green;
+       border-width:2px;
+       border-radius:   0px 5px 5px 0px / 0px 5px 5px 0px;
+        -moz-border-radius-topright: 5px;
+        -moz-border-radius-bottomright: 5px;
+        -webkit-border-top-right-radius: 5px;
+        -webkit-border-bottom-right-radius: 5px;
+    }
+
+.fullscreenTable .lastchildRed {
+    border-color:red;
+       border-right: thin solid red;
+       border-radius:   0px 5px 5px 0px / 0px 5px 5px 0px;
+        -moz-border-radius-topright: 5px;
+        -moz-border-radius-bottomright: 5px;
+        -webkit-border-top-right-radius: 5px;
+        -webkit-border-bottom-right-radius: 5px;
+    }
+
+.fullscreenTableButton {
+    height: 14px;
+    padding: 8px;
+    border: thin solid black;
+    border-radius:  5px
+}
+
+.fullscreenTableButton .right{
+    right : 0px;
+    width : 60px;
+}
+
+.fullScreenPanel2 {
+    z-index:16000;   
+}
+
+
+.marginClass {
+    /*margin: 10px 0 20px 68px;*/
+    margin: 20px;
+}
+
+.headerPadding {
+    /*
+    max-width: 424px;    
+    overflow: hidden;*/
+    padding: 8px 20px 5px 20px;
+}
+
+.headerTextAlign{
+    text-align: center;
+}
+
+.MessageHeaderTextAlign{
+    text-align: left;
+}
+
+.MessageHeaderPadding {    
+    padding: 4px 20px 7px 2px;
+}
+
+#tabs.MessageTabPage ul{
+    position: inherit;
+    font-size: 17px;
+    font-family: stormfaze, Helvetica, Arial;
+}
+/*
+.MessagesTabs{
+    top: 5px;
+    bottom: 5px;
+    left: 5px;
+    right: 5px;
+    font-size: 15px;
+    font-family: stormfaze, Helvetica, Arial;
+    font-weight: normal;
+}*/
+
+.CommMessage{
+    background: rgba(30,30,30,0.85);
+}
+
+.CommMessageGray {
+    background: rgba(55,55,55,0.85);
+}
+
+
+
+.ButtonBorder{
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #bbb;
+
+    -webkit-box-shadow: 3px 3px 1px 1px rgba(0,0,0,.06);
+    box-shadow: 3px 3px 1px 1px rgba(0,0,0,.06);
+
+}
+
+
+/*TRANSFER*/
+
+.transferPanel  h2 {
+    padding: 0px;
+    margin: 0px;
+    font-size: 12px;
+}
+
+.transferPanel ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    z-index: 1500;
+    position:absolute;
+}
+
+.transferSelectors
+{
+    width:95%;
+}
+
+.transferBars {
+    float: left;
+    padding-top:6px;
+    font-weight:bold;
+}
+
+
+.transferRightSideSelector
+{
+    right:15px;
+    position:absolute
+}
+
+.transferLeftShips
+{
+    position:absolute;
+    left:15px;
+    /*height:100%;*/
+    width:160px;
+    
+}
+
+.transferRightShips
+{
+    position:absolute;
+    right:15px;
+    /*height:100%;*/
+    width:160px;
+   
+}
+
+.transferMiddle
+{
+    position:absolute;
+    right:160px;
+    left:160px;
+    /*height:100%;   */
+}
+
+.transferLeftSide
+{
+    position:absolute;
+    left:5px;
+    width:50%;
+    /*height:100%;   */
+   
+}
+
+.transferRightSide
+{
+    position:absolute;    
+    right:5px;
+    width:50%;
+    /*height:100%;*/    
+}
+
+
+
+.shipDesignerModuleDiv{
+
+    position:absolute;
+    right:0px;
+    width:235px;
+    height:100%;
+    border-left:1px solid #333333;    
+
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.shipDesignerGoodsDiv{
+    position:absolute;
+    top:140px;
+    right:0px;
+    width:220px;    
+    bottom:0px;
+    border-top:1px solid #333333;    
+    border-left:1px solid #333333;    
+}
+
+
+.shipDesignerTemplateDiv{
+
+    position:absolute;
+    left:0px;
+    width:300px;
+    top:40px;
+    bottom:0px;
+    
+    /*height:100%;*/
+    overflow:auto;
+    
+}
+
+.shipDesignerTemplateButtonDiv{
+
+    position:absolute;        
+    height:40px;
+    top:2px;    
+    
+}
+.ShipTemplateDesigner .shipDesignerTemplateButtonDiv button{
+    font-size: 14px;
+    padding: 0px 0px 0px 0px;
+}
+.shipDesignerStatisticsDiv{
+    position:absolute;
+    left:300px;
+    right:220px;
+    top:0px;
+    height:140px;
+    border-bottom:1px solid #333333;
+    border-left:1px solid #333333;    
+}
+
+.shipDesignerStatisticDiv span.ui-selectmenu-button span.ui-selectmenu-text{
+    padding: 0.1em 2.1em 0.1em 1em;
+    width: 85px;
+}
+
+.shipDesignerModuleViewDiv{
+
+    position:absolute;
+    left:300px;
+    right:220px;
+    top:140px;
+    bottom:140px;
+    border-bottom:1px solid #333333;
+    border-left:1px solid #333333;    
+}
+
+.shipDesignerCostsDiv{
+    position:absolute;
+    left:300px;
+    right:220px;
+    bottom:0px;
+    height:140px;
+    border-left:1px solid #333333;    
+}
+
+.shipDesignerCostsDiv>div{
+    margin:2px;
+}
+
+
+.shipDesignerModuleViewDiv td{
+    width:35px;
+    height:35px;
+}
+
+.shipDesignerModuleViewDiv td.modulePosition {
+    background-color:green;
+}
+
+.shipDesignerModulePlace {   
+    position:absolute;width:36px;height:36px;
+
+    border: thin solid; 
+    border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-bottomleft: 5px;
+    -moz-border-radius-topright: 5px;
+    -moz-border-radius-bottomright: 5px;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-bottom-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -webkit-border-bottom-right-radius: 5px;
+}
+
+.shipDesignerModuleSize {   
+    width:36px;height:36px;   
+}
+
+.shipDesignerStatisticDiv{
+    float:left;
+    width:30%;   
+    margin:0.4em;  
+}
+
+.shipDetailTranscension .ui-selectmenu-open, 
+.shipDetailTranscension .ui-selectmenu-button {
+    width: 290px !important;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.shipDetailTranscension .ui-selectmenu-button.ui-state-disabled{
+    opacity:1;
+}
+
+.shipDetailTranscensionHelpers{
+    margin-left: 5px;
+    font-size: 12px;
+}
+.shipDetailTranscension .shipDesignerModuleViewDiv,
+.shipDetailTranscension .shipDesignerStatisticsDiv,
+.shipDetailTranscension .shipDesignerCostsDiv{
+    right:0px;
+}
+
+.shipDetailTranscension .shipDesignerTemplateDiv{
+    background-color: #CCC;
+}
+body .shipDesignerCostsDiv .ui-progressbar{
+    height: 30px;
+}
+
+.shipDesignerCostsDiv .text{
+    font-weight: bold;   
+    font-size: 20px;
+}
+.shipDesignerCostsDiv .progressLabel{
+    position: absolute;
+    left: 50%;
+    top: 18px;    
+}
+
+.shipDesignerCostsDiv .transAddCount{
+    margin-left: 15px;  
+    float: left;
+}
+
+.shipDesignerCostsDiv .overallCosts{
+    float: right;
+    margin-right: 15px;
+}
+
+
+
+.textColorGreen {
+    color:green;
+}
+
+
+
+.shipDetailsStatisticsDiv{
+    position:absolute;
+    left:0px;
+    right:0px;
+    top:0px;
+    height:140px;
+    border-bottom:1px solid black;    
+}
+
+.shipDetailsModuleViewDiv{
+
+    position:absolute;
+    left:0px;
+    right:0px;
+    top:140px;
+    bottom:140px;
+    border-bottom:1px solid black;    
+}
+
+.shipDetailsCostsDiv{
+    position:absolute;
+    left:0px;
+    right:0px;
+    bottom:0px;
+    height:140px;    
+}
+
+.buttonUl
+{
+    position: absolute;
+    bottom:10px;
+    right:20px;
+    margin: 0; padding: 0.8em;
+    text-align: left; 
+}
+
+/* Buttons */
+.buttonUl li
+{
+    list-style: none;
+    display: inline;
+    margin: 1em;
+    font-size: 14px;
+    padding: 5px;
+    border: 1px solid #777;
+    font-weight: bold;
+    
+	background-image: -webkit-gradient(
+	    linear,
+	    left bottom,
+	    left top,
+	    color-stop(0, #FFF),
+	    color-stop(1, #CCC)
+	);
+	background-image: -webkit-linear-gradient(center bottom, #FFF 0%, #CCC 100%);
+	background-image: -ms-linear-gradient(center bottom, #FFF 0%, #CCC 100%);
+	background-image: -o-linear-gradient(center bottom, #FFF 0%, #CCC 100%);
+	background-image: -moz-linear-gradient(center bottom, #FFF 0%, #CCC 100%);
+	background-image: linear-gradient(center bottom, #FFF 0%, #CCC 100%);
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-o-border-radius: 5px;
+	-ms-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-box-shadow: inset 2px 2px 5px #666;
+	-moz-box-shadow: inset 1px 1px 5px #000;
+	-o-box-shadow: inset 1px 1px 5px #000;
+	-ms-box-shadow: inset 1px 1px 5px #000;
+	box-shadow: inset 1px 1px 5px #000;
+}
+
+.OKbutton
+{
+    list-style: none;
+    display: inline;
+    position:absolute;
+    /*bottom:17px;
+    right:135px;
+    width: 60px;     */
+}
+
+.Cancelbutton
+{
+    list-style: none;
+    display: inline;
+    position:absolute;
+    bottom:17px;
+    right:65px;
+    width: 60px;     
+}
+
+.relPopup{
+    position: absolute;   
+    top: 36px;
+    width: 720px;
+    left:0px;    
+}
+
+.relPopup.PanelBig {   
+    margin-left: auto;    
+    left: 10px;
+    right: 10px;
+    top: 10px;
+    bottom:10px;
+    width: auto;
+    height:auto;
+}
+
+.relPopup.relTutorialPopup{
+    position: absolute;
+    left: 50%;
+    /*margin-left: -210px;*/
+    margin-left: 200px;
+
+    width: 480px;
+    top: 50px;
+    bottom:initial;
+}
+
+.relPopup.smallPopup{
+    position: absolute;
+    left: 50%; 
+    margin-left: 200px;
+    width: 480px;
+    top: 50px;
+    bottom:initial;
+}
+
+
+
+.relPopupContent{    
+    /*border: thin solid #333333;  */
+}
+
+.relPopupContent .ui-state-default {
+    border: none;
+}
+
+
+.relPopupHeader {
+    font-size:13px;
+    min-height: 40px;
+
+    padding: 0px 0px 0px 5px;
+
+    opacity: 1;
+    background-color: #AAA;
+    font-family: stormfaze, Helvetica, Arial;
+    position: relative;
+/*
+    position: fixed;
+    top: 49px;
+    width: 720px;
+*/
+
+}
+
+.relPopupHeader.popupHeaderBig {
+    left: 50px;
+    right: 50px;
+    top:50px;       
+    margin-left: 0px;
+    margin-top: 0px;
+    width:auto;
+
+}
+
+
+.relPopupHeader h2 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 10px;
+    height: 20px;
+    display: inline-block;
+    letter-spacing: 2px;
+}
+
+.relPopupPanel {
+
+    line-height: 150%;    
+    /*font-family: Drakolomb, Helvetica, Arial;*/
+    text-align: left;
+    font-size: 16px;
+    color: #EEEEEE;
+}
+
+.relPopupPanel.darkTransparent {
+    background: rgba(0,0,0,0.8) !important;
+}
+
+.relPopupPanel.mediumTransparent {
+    background: rgba(0,0,0,0.5) !important;
+}
+
+
+
+.relPopupPanel.NoHover tr:hover td {
+   background-color:transparent;   
+
+}
+
+
+.relPopupPanel table{
+    border-collapse: collapse;
+}
+
+.trBlack tr {
+    background: rgba(0,0,0,0.65);
+}
+.trBlack tr.TRspacer {
+    background: rgba(0,0,0,0.9);
+}
+.relPopupPanel tr.TRspacer:hover td {
+    background:inherit !important;
+}
+
+
+.relPopupContent.relPopupHeaderFixed{
+   /* top: 40px;*/
+}
+
+.relPopupContent.relPopupHeaderFixed .relPopupHeader{
+    position: fixed;   
+    padding: 0px 0px 0px 0px;
+    width: 720px;
+    border: none;
+}
+
+.relPopupContent.relPopupHeaderFixed .relPopupPanel /*, .relPopupContent.relPopupHeaderFixed .relPopupPanelBlack*/{
+    top: 40px;
+    position: relative;
+
+        box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border-left: 0px;
+    border-top: 0px;
+    border-bottom: 0px;
+    border-right: 1px;
+    border-color: #000033;
+    border-style: solid;
+}
+.relPopupContent.relPopupHeaderFixed .relPopupFooter{
+    top:40px;
+    position: relative;
+}
+
+.ScriptWithWindowBody{
+    font-size: 1.25em;
+}
+
+.relPopupPanel input{ 
+    width: 50px;
+    text-align: center;
+}
+
+.relPopupPanel .messageWritePanel input{
+    background-color: #DDD;
+    width: 400px;
+    text-align:left;
+}
+
+.relTutorialPopup .relPopupContent {
+    box-shadow: 1px 1px 5px #888888;
+}
+
+.relTutorialPopup .relPopupPanel{
+    padding:5px;
+}
+
+.relPopupFooter {
+    /*position: relative;*/
+    
+    height:50px;
+      
+  
+    opacity: 1;
+    background-color: #AAA;
+   /* padding: 0px 0px 0px 5px;
+    
+    border-left: 1px solid #777;
+    border-right: 1px solid #777;
+    border-bottom: 1px solid #777;
+    
+    -webkit-border-radius: 0px 0px 5px 5px;
+	-moz-border-radius: 0px 0px 5px 5px;
+	-o-border-radius: 0px 0px 5px 5px;
+	-ms-border-radius: 0px 0px 5px 5px;
+	border-radius: 0px 0px 5px 5px;	
+    */
+}
+
+/*Scrollable Table*/
+.scrollableTableDiv{
+    /*position: absolute;  */  
+    overflow-y: hidden;    
+        
+    left: 10px;    
+    bottom:5px;
+    top:5px;
+    padding-top:6px;
+
+}
+
+.scrollableTableDiv thead , .scrollableTableDiv tbody{
+   /* display: block;   */  
+}
+
+.scrollableTableDiv tbody{
+    /*overflow-y: auto;*/
+}
+
+.scrollableTableDiv tbody *.greyRow{
+    background-color: #888888;
+}
+.scrollableTableDiv thead th{
+    overflow: hidden;
+}
+
+.questStandardPicSize  {	
+    width:30px;
+    height:30px;   
+}
+
+.relPopupHeader.panelHeaderBackground{
+    background: url("images/design/table-header.png") repeat-x 0px -0px;
+    background-size: 100% 42px;
+    
+}
+.relPopupHeader.ui-state-default{
+    color: white;
+    text-align: center;
+}
+
+.relPopupFooter.panelFooterBackground{
+    background: url("images/design/table-header.png") repeat-x 0px -0px;
+    background-size: 100% 50px;
+}
+
+.questColonize  {	    
+    background:url(images/Interface/Icons.png) no-repeat -330px 0px;
+}
+
+.questResearchCenter  {	    
+    background:url(./images/Buildings/ResearchBuilding.png);
+    background-size: 30px 30px;
+}
+
+.questSystemScout {
+    background: url(./images/Ships/HeavyFighter60.png);
+    background-size: 30px 30px;
+}
+
+.questSpaceStation {
+    background: url(./images/SpaceStation1_60.png);
+    background-size: 30px 30px;
+}
+
+.questBuildInfra1 {
+    background: url(./images/BuildingMaterialPlant.png);
+    background-size: 30px 30px;
+}
+
+.questBuildInfra2 {
+    background: url(./images/AssemblyPlant.png);
+    background-size: 30px 30px;
+}
+
+.questBuildInfra3 {
+    background: url(./images/SolarPanels.png);
+    background-size: 30px 30px;
+}
+
+table.transcendenceList .transAddCount{
+    float: left;
+  margin-left: 20px;
+  margin-top: -10px;
+}
+
+table.transcendenceList .overallCosts{
+    float: right;  
+  margin-right: 20px;
+  margin-top: -10px;
+}
+
+.relPopup .ui-tabs .ui-tabs-panel {
+padding: 0.5em 0.1em;
+}
+
+.relPopup .ui-spinner a.ui-spinner-button{
+background: none;}
+
+.CombatOverview{
+    width:600px;
+}
+.CombatOverview tr{
+    background-image: none;
+    background: none;
+}
+
+.CombatOverview  td{
+    text-align:center;
+}
+
+.CombatOverview  td.overViewData{
+    width: 48%;
+}
+
+.CombatOverview div{
+    margin: auto;
+}
+
+.CombatOverview .DetailsTable{
+        width: 100%;
+}
+
+.CombatOverview .tdTextLeft   {
+    text-align: left;
+}
+.CombatOverview .tdTextRight   {
+    text-align: right;
+}
+
+.CombatAttacker {
+    position: absolute;
+    left: 0px;
+    width: 300px;
+    padding-left: 10px;
+}
+
+.CombatMiddle {
+    position: absolute;
+    left: 300px;
+    right: 300px;
+    height: 100%;
+}
+
+.CombatDefender {
+    position: absolute;
+    right: 0px;
+    width: 290px;
+    padding-left: 10px;
+}
+
+.CombatHPBar {
+    border: 1px solid gray;
+    height: 20px;
+    width: 280px;
+}
+
+.CombatHPBarState {
+    border-top: 10px solid hsl(120,100%,50%);
+    border-bottom: 10px solid hsl(120,100%,50%);
+}
+
+
+button.ui-state-default, .ui-widget-content button.ui-state-default, .ui-widget-header button.ui-state-default {
+    font-family: stormfaze, Helvetica, Arial;
+    font-size: 20px;
+    padding: 0px 20px 0px 20px;
+    text-decoration: none;
+    border: none;
+    letter-spacing: 2px;
+    border-radius: 0px;
+}
+
+
+
+.relPopupFooter div.ui-dialog-buttonset{
+    text-align: center;
+    padding-top: 2px;
+   
+}
+
+button.ui-state-default{
+     text-shadow: #333333 2px 2px 1px;
+    
+}
+
+button.ui-state-default:hover{
+    text-shadow: #FFFFFF 0 0 13px;    
+}
+
+button.ui-state-default.deactivate{
+    background: grey;
+}
+
+button.ui-state-default.deactivate:hover{
+    text-shadow: #333333 2px 2px 1px;
+}
+
+
+.relPopupHeader.ui-state-default.panelHeaderBackground h2{
+     text-shadow: #000000 2px 2px 1px;
+    
+}
+
+.bX{
+    cursor: pointer;
+}
+
+button.ui-state-default.bX{
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    padding: 1px 4px 1px 6px;
+    text-shadow: #333333 2px 2px 1px;
+
+    color: white;
+    font-family: stormfaze, Helvetica, Arial;
+    font-weight: normal; 
+    border: none;
+
+    
+}
+button.ui-state-default:active {
+     background: #c40000;
+    background-image: -webkit-linear-gradient(top, #c40000, #9c0000);
+    background-image: -moz-linear-gradient(top, #c40000, #9c0000);
+    background-image: -ms-linear-gradient(top, #c40000, #9c0000);
+    background-image: -o-linear-gradient(top, #c40000, #9c0000);
+    background-image: linear-gradient(to bottom, #c40000, #9c0000);
+}
+/*
+.relPopupFooter button {
+    margin: 3px;
+}
+*/
+
+.transcendenceList{
+    width: 100%;
+}
+
+.commNodesSectionHeader{
+    width: 100%;
+    background: rgba(0,0,0,0.5);
+    text-align: center;
+    font-size: large;
+}
+
+
+span.ui-selectmenu-button{
+    font-size: 12px;
+    background: #363636;
+    font-weight: bold;
+    color: white;
+}
+
+.centered{
+    /*position: relative;*/
+    top: 64px;
+    width: 720px;
+    left: 50%;
+    margin-left: -360px;
+}
+
+.centeredBig{
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    top: 20px;
+    bottom: 20px;
+    width: auto;
+}
+
+
+.centeredBig .relPopupHeader{
+    position:inherit;
+}
+
+.centered .relPopupContent   {
+    box-shadow: 2px 2px 5px #888888;
+}
+
+.centered .relPopupHeader h2{
+    font-size: 1.2em;
+}
+
+.popupSmallest {
+    height: 500px;
+    width: 230px;   
+}
+
+.popupSmall {
+    height: 500px;
+    width: 400px;   
+}
+
+.BackgroundDarkGray {
+        background: rgba(00,00,00,0.85);
+}
+
+.BackgroundMediumGray {
+        background: rgba(00,00,00,0.65);
+}
+
+.BackgroundLightGray {
+        background: rgba(50,50,50,0.5);
+}
+
+.MessagePanel .relPopupPanel{
+    background: rgba(00,00,00,0.85);
+}
+
+.PageRegionTitle{
+    position:relative;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 48px;
+    font-size: 22px;
+    font-weight: normal;
+    line-height: 125%;
+    padding: 12px;
+    padding-top: 8px;
+    box-sizing: border-box;
+}
+
+.PageRegionBackground{
+    padding: 8px;
+    box-sizing: border-box;   
+}
+
+.ContactDescr{
+    width: 589px;
+    min-height: 150px;
+}
+
+.AvatarCont{
+    height: 100px;
+    width: 100px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+}
+
+.Avatar{
+    position:relative;
+    left: 0px;
+    top: 0px;
+    width: 100px;
+    height: 100px;
+    margin: 0px 0 0 -21px;    
+}
+
+
+.SpecGroupName{
+    width:500px;
+}
+.SpecGroupPick{
+    width:100px;
+    text-align:right;
+  padding-top: 3px;
+
+}
+.SpecGroupOther{
+    width:50px;
+    height: 34px;
+    text-align:right;
+}
+
+.specResearchLine {
+    height: 34px;
+    font-size:14px;
+    padding-left: 8px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.specCircles {
+  border-radius: 50%;
+  width: 16px;
+  height: 16px; 
+  margin-right: 7px;
+}
+
+.SpecResearchName{
+    padding-left:150px;
+    width:350px;
+}
+
+.PageSpacer{
+    width:100%;
+    height:20px;
+}
+
+.SpecCommit{
+    width: 100%;
+    height: 30px;
+}
+
+.SpecCommitButton{
+    position: absolute;
+    right: 92px;
+    margin-top: 0px;
+}
+
+
+
+
+
+
+.ResearchDetailDialogBody
+{    
+    height:450px;
+    width:720px;
+    position:relative;
+}
+
+.LeftSide{
+    position: absolute;
+    height: 450px;
+    width: 470px;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.RightSide{
+  position:absolute;
+  height:450px;
+  width:250px;
+  left:470px;
+  box-sizing: border-box;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+
+.ResearchCostRow
+{    
+    position:absolute;
+    height:40px;
+    width:450px;    
+    
+}
+
+.ResearchCost
+{    
+
+}
+
+.ResearchRequiresRow
+{       
+    position:absolute;
+    top:60px;
+    height:70px;
+    width:450px;
+}
+
+.ResearchLeadsToRow
+{       
+    position:absolute;
+    top:140px;
+    height:110px;
+    width:450px;
+}
+
+.ResearchEnablesRow
+{    
+    position:absolute;
+    top:260px;
+    height:180px;
+    width:450px;  
+}
+
+.ResearchImageRow{  
+  height:190px;
+
+}
+.ResearchImage{
+  padding-top:15px;
+
+}
+.ResearchTextRow{
+  position:absolute;
+  top:210px;    
+  height:230px;
+  width: 240px;
+}
+.ResearchText{     
+  overflow:auto;
+}
+
+.DetailDialogFullHeight{
+    height: 100%;        
+}
+
+.ResearchBox {
+    box-sizing:border-box;
+    display:inline-block;
+    margin:5px;
+    padding-left:5px;
+    padding-right:5px;
+    background-clip:border-box;
+    font-size:13px;
+
+    border-radius:   3px;
+    -moz-border-radius-topright: 3px;
+    -moz-border-radius-bottomright: 3px;
+    -webkit-border-top-right-radius: 3px;
+    -webkit-border-bottom-right-radius: 3px;
+
+    cursor: pointer;
+}
+
+.RelationObjectIcon {
+    box-sizing:border-box;
+    display:inline-block;
+    margin:3px;
+    padding:3px;
+    background-clip:border-box;
+    line-height: 100%;
+
+    border-radius:   3px;
+    -moz-border-radius-topright: 3px;
+    -moz-border-radius-bottomright: 3px;
+    -webkit-border-top-right-radius: 3px;
+    -webkit-border-bottom-right-radius: 3px;
+
+
+}
+
+
+
+div.relPopupContent.SpaceTheme.relPopupHeaderFixed{}
+
+div.relPopupContent.SpaceTheme.relPopupHeaderFixed>div.relPopupPanel.trBlack {
+    position: absolute;
+    top: 40px;
+    bottom: 50px;
+    overflow-y: scroll;
+    width: 720px;
+    background-color: black;
+}
+
+div.relPopupContent.SpaceTheme.relPopupHeaderFixed>div.relPopupFooter.panelFooterBackground {
+    position: absolute;
+    top:auto;
+    top: initial;    
+    width: 720px;
+    background-color: black;
+    bottom: 0px;
+}
+
+.AllContactsPanel .AvatarCont{
+    height: 30px;
+    width: 30px;
+}
+
+
+.ShipsIconList{
+    width: 300px;
+    max-height: 125px;        
+    margin-bottom:6px;    
+    overflow-y: auto;
+}
+
+
+.BorderBox{
+    border-radius: 3px;
+    border-top: 2px solid grey;
+    border-left: 2px solid grey;
+    border-bottom: 2px solid grey;
+    border-right: 2px solid grey;
+}
+
+.LeftPanelBox{
+    width: 690px;
+    margin-bottom: 6px;
+}
+
+.TradeTradeAreaButtons   {
+        float: left;
+        margin-top: 10px;
+}
+
+.TradeAmountButtons button
+{
+    font-size: 18px;
+    padding: 0px 0px 0px 3px;
+    height: 30px;
+    min-width: 95px;
+}
+
+
+.TradeTradeArea  {
+    height: 224px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.TradeTradeAreaOffer , .TradeTradeAreaDemand{
+    width: 580px;
+    /* left: 100px; */
+    margin: 10px;
+    margin-left: 100px;
+    height: 78px;
+}
+
+.CreateModulesCosts, .CreateModulesOrder {
+    width: 682px;
+    margin: 10px;
+    margin-left: 2px;
+    height: 78px;
+}
+
+.CreateModulesColonyGoods {
+    width: 682px;
+    margin: 10px;
+    margin-left: 2px;
+    height: 78px;
+}
+
+.CreateModulesSelect {
+    height: 155px;
+    overflow-y: auto;
+}
+
+.TradeTradeAreaOfferText, .TradeTradeAreaDemandText, .TradeLine, .TradeGoodsText {
+    background-color: #262626;
+    padding-left: 4px;
+    text-align: center;
+}
+
+.TradeTradeAreaCommits{
+    text-align:right;
+}
+
+.TradeCreateInformation{
+    padding-right:30px;
+    display:none;           
+}
+
+.TradeTradeAreaCreate{
+    margin-right:13px;
+}
+
+
+
+.TradeGoodsSelect{       
+    height: 130px; 
+    overflow-y: auto;
+}
+
+.TradeGoods{
+    height: 100px;
+}
+
+
+.TradeGoodsSelect  .TradeGroupSelectGroup button.buttonActive, .TradeTradeArea  .TradeTradeAreaButtons button.buttonActive  {
+    background: #3aed32;
+    background-image: -moz-linear-gradient(top, #c40000, #9c0000);
+    background-image: -ms-linear-gradient(top, #c40000, #9c0000);
+    background-image: -o-linear-gradient(top, #c40000, #9c0000);
+    background-image: linear-gradient(to bottom, #4cfe3f, #006b02);
+}
+
+.TradeGoodsAtLocations{
+    min-height: 120px;
+    overflow-y: auto;
+    line-height: 100%;
+}
+
+.TradeSelectorDiv{
+    min-height: 37px;
+    line-height: 100%;
+}
+
+.TradeGoodsText>span.ui-selectmenu-button{
+    top: 6px;
+}
+
+.SpecializationPicksCount {
+    background: url(./images/goods/Population.png);
+    background-size: 40px 40px;
+    position: absolute;
+    top: 10px;
+    width: 50px;
+    height: 35px;
+    text-align: right;
+    display: inline-block;
+    vertical-align: top;
+    right: 20px;
+    width: 36px;
+}
+
+.header45 .relPopupHeader.popupHeaderBig {
+    min-height: 45px;
+    background-size: 100% 45px;
+}
+
+.header45 .relPopupPanel.popupPanelBig {
+    top: 45px;
+}

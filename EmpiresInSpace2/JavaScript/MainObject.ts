@@ -3,7 +3,8 @@
 }
 
 class MainObject {
-	planetTypes: PlanetType[] = [];
+    planetTypes: PlanetType[] = [];
+    //shipTemplates: ShipTemplate[] = [];
 }
 
 let mainObject = new MainObject();

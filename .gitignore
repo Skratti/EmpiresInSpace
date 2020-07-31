@@ -28,10 +28,20 @@ EmpiresInSpace/SocketServer/*.bak
 EmpiresInSpace/*.bak
 
 EmpiresInSpace2/bin
+EmpiresInSpace2/*.js
+EmpiresInSpace2/*.js.map
+EmpiresInSpace2/*.bak
 EmpiresInSpace2/JavaScript/*.js
 EmpiresInSpace2/JavaScript/*.js.map
 EmpiresInSpace2/JavaScript/*.bak
+EmpiresInSpace2/JavaScript/Classes/*.js
+EmpiresInSpace2/JavaScript/Classes/*.js.map
+EmpiresInSpace2/JavaScript/Classes/*.bak
+
+
 EmpiresInSpace2/obj
+EmpiresInSpace2/images/*.xcf
+
 
 EmpiresInSpaceIndex/*.js
 EmpiresInSpaceIndex/*.js.map

@@ -21,14 +21,11 @@ namespace EmpiresInSpace
                 return;
             }
 
-            var state = Request.Cookies["shootr.state"];
-            //string decoded = HttpUtility.UrlDecode(state.Value);
-            //var rc = JsonConvert.DeserializeObject<RegisteredClient>(decoded);
+            //Websocket: remember userId
+            var state = Request.Cookies["shootr.state"];  
             SocketKey = Guid.NewGuid().ToString();
             EmpiresInSpace.Users x = (EmpiresInSpace.Users)Session["user"];
             var rc = new RegisteredClient(SocketKey, x.id);
-
-            //rc.RegistrationID = (string)Session["user"];
             Game.Instance.RegistrationHandler.Register(rc);
 
         }

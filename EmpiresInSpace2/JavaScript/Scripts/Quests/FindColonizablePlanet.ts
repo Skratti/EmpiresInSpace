@@ -39,7 +39,7 @@ module Scripts {
                 for (var i = 0; i < this.map.map.length; i++) {
                     if (this.map.map[i] == null) continue;
                     for (var j = 0; j < this.map.map[i].length; j++) {
-                        if (this.map.map[i][j] != null && this.map.map[i][j].stars != null && this.map.map[i][j].stars.typeId > 23 && this.map.map[i][j].stars.typeId < 27)
+                        if (this.map.map[i][j] != null && this.map.map[i][j].astronomicalObject != null && this.map.map[i][j].astronomicalObject.typeId > 23 && this.map.map[i][j].astronomicalObject.typeId < 27)
                             this.map.map[i][j].drawArrow = true;
                     }
                 }
@@ -84,7 +84,7 @@ module Scripts {
             for (var i = 0; i < this.map.map.length; i++) {
                 if (this.map.map[i] == null) continue;
                 for (var j = 0; j < this.map.map[i].length; j++) {
-                    if (this.map.map[i][j] != null && this.map.map[i][j].stars != null && this.map.map[i][j].stars.typeId > 23 && this.map.map[i][j].stars.typeId < 27)
+                    if (this.map.map[i][j] != null && this.map.map[i][j].astronomicalObject != null && this.map.map[i][j].astronomicalObject.typeId > 23 && this.map.map[i][j].astronomicalObject.typeId < 27)
                         this.map.map[i][j].drawArrow = false;
                 }
             }          

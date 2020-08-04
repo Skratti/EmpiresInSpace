@@ -72,7 +72,14 @@
     <script type="text/javascript" src="JavaScript/UserClasses/messages.js"> </script>
     <script type="text/javascript" src="JavaScript/UserClasses/CombatMessage.js"> </script>
 
-    <script type="text/javascript" src="JavaScript/UserClasses/objects.js"> </script>
+    <script type="text/javascript" src="JavaScript/Map/SpaceObject.js"> </script>
+    <script type="text/javascript" src="JavaScript/Map/Tile.js"> </script>
+    <script type="text/javascript" src="JavaScript/Map/StarMapQuadTree.js"> </script>
+    <script type="text/javascript" src="JavaScript/Map/TileMap.js"> </script>
+    <script type="text/javascript" src="JavaScript/Map/FogOfWar.js"> </script> 
+    <script type="text/javascript" src="JavaScript/Map/areaData.js"> </script> 
+    <script type="text/javascript" src="JavaScript/Map/Pathfinder.js"> </script>
+
     <script type="text/javascript" src="JavaScript/UserClasses/Buildings.js"> </script>
     <script type="text/javascript" src="JavaScript/UserClasses/colonies.js"> </script>
 
@@ -82,11 +89,7 @@
 
     <script type="text/javascript" src="JavaScript/Panels/Diplomacy.js"> </script>
 
-    <script type="text/javascript" src="JavaScript/Deprecated/StarMapQuadTree.js"> </script>
-    <script type="text/javascript" src="JavaScript/Deprecated/TileMap.js"> </script>
-    <script type="text/javascript" src="JavaScript/Deprecated/FogOfWar.js"> </script> 
-    <script type="text/javascript" src="JavaScript/Deprecated/areaData.js"> </script> 
-    <script type="text/javascript" src="JavaScript/Deprecated/Pathfinder.js"> </script>
+
 
     <script type="text/javascript" src="JavaScript/UserClasses/ships.js"> </script>
     <script type="text/javascript" src="JavaScript/UserClasses/ShipTemplates.js"> </script>   

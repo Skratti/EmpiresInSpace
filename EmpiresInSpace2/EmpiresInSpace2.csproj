@@ -161,11 +161,12 @@
     <TypeScriptCompile Include="JavaScript\BaseClasses\BaseData.ts" />
     <TypeScriptCompile Include="JavaScript\BaseClasses\GalacticEvents.ts" />
     <TypeScriptCompile Include="JavaScript\BaseClasses\ImageCanvasCache.ts" />
-    <TypeScriptCompile Include="JavaScript\Deprecated\areaData.ts" />
-    <TypeScriptCompile Include="JavaScript\Deprecated\FogOfWar.ts" />
-    <TypeScriptCompile Include="JavaScript\Deprecated\Pathfinder.ts" />
-    <TypeScriptCompile Include="JavaScript\Deprecated\StarMapQuadTree.ts" />
-    <TypeScriptCompile Include="JavaScript\Deprecated\TileMap.ts" />
+    <TypeScriptCompile Include="JavaScript\Map\areaData.ts" />
+    <TypeScriptCompile Include="JavaScript\Map\FogOfWar.ts" />
+    <TypeScriptCompile Include="JavaScript\Map\Pathfinder.ts" />
+    <TypeScriptCompile Include="JavaScript\Map\StarMapQuadTree.ts" />
+    <TypeScriptCompile Include="JavaScript\Map\Tile.ts" />
+    <TypeScriptCompile Include="JavaScript\Map\TileMap.ts" />
     <TypeScriptCompile Include="JavaScript\Panels\BuildModulesForm.ts" />
     <TypeScriptCompile Include="JavaScript\Panels\Chat.ts" />
     <TypeScriptCompile Include="JavaScript\Panels\DialogWindows.ts" />
@@ -223,7 +224,7 @@
     <TypeScriptCompile Include="JavaScript\UserClasses\CombatMessage.ts" />
     <TypeScriptCompile Include="JavaScript\UserClasses\Communication.ts" />
     <TypeScriptCompile Include="JavaScript\UserClasses\messages.ts" />
-    <TypeScriptCompile Include="JavaScript\UserClasses\objects.ts" />
+    <TypeScriptCompile Include="JavaScript\Map\SpaceObject.ts" />
     <TypeScriptCompile Include="JavaScript\UserClasses\Quests.ts" />
     <TypeScriptCompile Include="JavaScript\UserClasses\ships.ts" />
     <TypeScriptCompile Include="JavaScript\UserClasses\ShipTemplates.ts" />

@@ -203,7 +203,7 @@ class AreaSpecifications extends SpaceObject {
         solarObject.size = XMLSolObj.getElementsByTagName("size")[0].childNodes[0].nodeValue;
         this.elementsInArea[objectId] = solarObject;
         //solarSystems.solarSystemsById[this.Id].findCreateTile(solarObject.colRow).stars.push(solarObject);
-        this.tilemap.findCreateTile(solarObject.colRow).stars = solarObject;
+        this.tilemap.findCreateTile(solarObject.colRow).astronomicalObject = solarObject;
         //galaxyMap.findCreateTile(starObject.colRow).stars.push(starObject);
     }
 
@@ -300,7 +300,7 @@ class GalaxyData extends AreaSpecifications {
 
         this.elementsInArea[objectId] = solarObject;
         //solarSystems.solarSystemsById[this.Id].findCreateTile(solarObject.colRow).stars.push(solarObject);
-        this.tilemap.findCreateTile(solarObject.colRow).stars = solarObject;
+        this.tilemap.findCreateTile(solarObject.colRow).astronomicalObject = solarObject;
         //galaxyMap.findCreateTile(starObject.colRow).stars.push(starObject);
 
         //check if one of the stars added has a colony - then update that colony
@@ -350,7 +350,7 @@ class StarData extends AreaSpecifications {
 
         this.elementsInArea[objectId] = solarObject;
         //solarSystems.solarSystemsById[this.Id].findCreateTile(solarObject.colRow).stars.push(solarObject);
-        this.tilemap.findCreateTile(solarObject.colRow).stars = solarObject;
+        this.tilemap.findCreateTile(solarObject.colRow).astronomicalObject = solarObject;
         //galaxyMap.findCreateTile(starObject.colRow).stars.push(starObject);    
     }
 
@@ -422,7 +422,7 @@ class StarData extends AreaSpecifications {
 
 }
 
-//Element in SolarSystemMap (planet, sun etc):
+//Element in SolarSystemMap (planet, sun, asteroids etc):
 class PlanetData extends AreaSpecifications {
    
     elementsInArea :SurfaceField[]= []; //holds SurfaceFields
@@ -623,9 +623,9 @@ class PlanetData extends AreaSpecifications {
         newSurfaceTile.update(XMLsurfaceTile);
         
         //solarSystems.solarSystemsById[this.Id].findCreateTile(solarObject.colRow).stars.push(solarObject);
-        this.tilemap.findCreateTile(newSurfaceTile.colRow).stars = newSurfaceTile;
+        this.tilemap.findCreateTile(newSurfaceTile.colRow).astronomicalObject = newSurfaceTile;
         //this.ColonyMap.findCreateTile(newSurfaceTile.colRow).stars = newSurfaceTile;
-        this.ColonyMap.findCreatePlanetTile(newSurfaceTile.colRow, this).stars = newSurfaceTile;
+        this.ColonyMap.findCreatePlanetTile(newSurfaceTile.colRow, this).astronomicalObject = newSurfaceTile;
     }
 
     createUpdateSurfaceFieldElement(XMLsurfaceField) {

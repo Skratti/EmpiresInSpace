@@ -350,15 +350,15 @@
                 var galaxyColrRow: ColRow = { col: CommModule.commNodes[i].positionX, row: CommModule.commNodes[i].positionY };
                 if (!galaxyMap.tilemap.tileExist(galaxyColrRow)) continue;
 
-                var galaxyTile = <StarsTile> galaxyMap.tilemap.findCreateTile(galaxyColrRow);
+                var galaxyTile = <GalaxyTile> galaxyMap.tilemap.findCreateTile(galaxyColrRow);
 
 
                 if (CommModule.commNodes[i].systemX != 0 && CommModule.commNodes[i].systemY != 0) {
-                    if (galaxyTile.stars == null) continue;
+                    if (galaxyTile.astronomicalObject == null) continue;
                     var systemColRow: ColRow = { col: CommModule.commNodes[i].systemX, row: CommModule.commNodes[i].systemY };
-                    if (!galaxyTile.stars.tilemap.tileExist(systemColRow)) continue;
+                    if (!galaxyTile.astronomicalObject.tilemap.tileExist(systemColRow)) continue;
 
-                    tileToCheck = galaxyTile.stars.tilemap.findCreateTile(systemColRow);
+                    tileToCheck = galaxyTile.astronomicalObject.tilemap.findCreateTile(systemColRow);
                 } else {
                     tileToCheck = galaxyTile;
                 }

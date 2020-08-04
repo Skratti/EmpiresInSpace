@@ -651,10 +651,10 @@ module Ships {
                 var currentTile = this.getCurrentTile();
 
                 if (currentTile != null) {
-                    if (currentTile.stars !== null) {
-                        if (currentTile.stars instanceof PlanetData) {
-                            if ((<PlanetData> currentTile.stars).colony != null) {
-                                var colonyToBesiege = (<PlanetData> currentTile.stars).colony;
+                    if (currentTile.astronomicalObject !== null) {
+                        if (currentTile.astronomicalObject instanceof PlanetData) {
+                            if ((<PlanetData> currentTile.astronomicalObject).colony != null) {
+                                var colonyToBesiege = (<PlanetData> currentTile.astronomicalObject).colony;
 
                                 if (colonyToBesiege.BesiegedBy == 0 && colonyToBesiege.owner != this.owner) {
                                     if (mainObject.user.otherUserFind(colonyToBesiege.owner).currentRelation == 0) {
@@ -749,7 +749,7 @@ module Ships {
 
                         //get the starData if it is not loaded yet
                         var tile = CurrentFleetShip.parentArea.tilemap.findCreateTile(targetPosition);
-                        if (result == 7) tile.stars.loadAndSwitchThisMap(); // für den Einflug wichtg, um das System zu laden
+                        if (result == 7) tile.astronomicalObject.loadAndSwitchThisMap(); // für den Einflug wichtg, um das System zu laden
 
 
 
@@ -912,9 +912,9 @@ module Ships {
             */
 
 
-            if (mainObject.imageObjects[currentTile.stars.typeId].isMainColony()) {
+            if (mainObject.imageObjects[currentTile.astronomicalObject.typeId].isMainColony()) {
                 ////create major colony
-                var starSystemName = this.getCurrentTile().stars.parentArea.name;
+                var starSystemName = this.getCurrentTile().astronomicalObject.parentArea.name;
                 var newNameContainer = ElementGenerator.renamePanel(starSystemName, i18n.label(341));
                 $('.yesButton', newNameContainer).click((e: JQueryEventObject) => {
                     var newName = $(".inputEl", newNameContainer).val();
@@ -959,8 +959,8 @@ module Ships {
             for (var i = 0; i < mainObject.colonies.length; i++) {
                 if (mainObject.colonies[i] == null) continue;
                 if (mainObject.colonies[i].owner == this.owner
-                    && mainObject.colonies[i].parentArea.Id == currentTile.stars.parentArea.Id) {
-                    Helpers.Log("Colony present OK " + currentTile.stars.parentArea.Id);
+                    && mainObject.colonies[i].parentArea.Id == currentTile.astronomicalObject.parentArea.Id) {
+                    Helpers.Log("Colony present OK " + currentTile.astronomicalObject.parentArea.Id);
                     MajorColony = mainObject.colonies[i];
                     break;
                 }
@@ -968,10 +968,10 @@ module Ships {
 
 
 
-            if (mainObject.imageObjects[currentTile.stars.typeId].isMainColony()
+            if (mainObject.imageObjects[currentTile.astronomicalObject.typeId].isMainColony()
                 && MajorColony == null) {
                 ////create major colony
-                var starSystemName = this.getCurrentTile().stars.parentArea.name;
+                var starSystemName = this.getCurrentTile().astronomicalObject.parentArea.name;
                 var newNameContainer = ElementGenerator.renamePanel(starSystemName, i18n.label(341));
                 $('.yesButton', newNameContainer).click((e: JQueryEventObject) => {
                     var newName = $(".inputEl", newNameContainer).val();
@@ -1052,7 +1052,7 @@ module Ships {
 
             //check that Ship is in Nebula
             var currentTile = this.getCurrentTile();
-            if (!(currentTile.stars.typeId > 4999 && currentTile.stars.typeId < 5005)) return;
+            if (!(currentTile.astronomicalObject.typeId > 4999 && currentTile.astronomicalObject.typeId < 5005)) return;
 
             //check that this is the only ship, if the ship is to be switched on 
             if (!this.Harvesting) {
@@ -1573,20 +1573,20 @@ module Ships {
 
             var currentTile = this.getCurrentTile();
             if (currentTile != null) {
-                if (currentTile.stars !== null) {
-                    if (currentTile.stars instanceof PlanetData) {
-                        var star = <PlanetData> currentTile.stars;
-                        var isAllowed = mainObject.imageObjects[currentTile.stars.typeId].isColonizable() && (star.colony == null);
+                if (currentTile.astronomicalObject !== null) {
+                    if (currentTile.astronomicalObject instanceof PlanetData) {
+                        var star = <PlanetData> currentTile.astronomicalObject;
+                        var isAllowed = mainObject.imageObjects[currentTile.astronomicalObject.typeId].isColonizable() && (star.colony == null);
                         if (!isAllowed) return false;
 
-                        if (!mainObject.imageObjects[currentTile.stars.typeId].isMainColony()) {
+                        if (!mainObject.imageObjects[currentTile.astronomicalObject.typeId].isMainColony()) {
                             //check that a colony of the player exists in this system
-                            Helpers.Log("Colony present ? " + currentTile.stars.parentArea.Id);
+                            Helpers.Log("Colony present ? " + currentTile.astronomicalObject.parentArea.Id);
                             for (var i = 0; i < mainObject.colonies.length; i++) {
                                 if (mainObject.colonies[i] == null) continue;
                                 if (mainObject.colonies[i].owner == this.owner
-                                    && mainObject.colonies[i].parentArea.Id == currentTile.stars.parentArea.Id) {
-                                    Helpers.Log("Colony present OK " + currentTile.stars.parentArea.Id);
+                                    && mainObject.colonies[i].parentArea.Id == currentTile.astronomicalObject.parentArea.Id) {
+                                    Helpers.Log("Colony present OK " + currentTile.astronomicalObject.parentArea.Id);
                                     return true;
                                 }
                             }
@@ -1639,7 +1639,7 @@ module Ships {
 
             //check that Ship is in Nebula
             var currentTile = this.getCurrentTile();
-            if (!(currentTile.stars.typeId > 4999 && currentTile.stars.typeId < 5005)) return false;
+            if (!(currentTile.astronomicalObject.typeId > 4999 && currentTile.astronomicalObject.typeId < 5005)) return false;
 
             //check that no other ships on this field do already harvest
 
@@ -1838,7 +1838,7 @@ module Ships {
 
                 //refresh planet data:
                 var xmlStars = resultXML.getElementsByTagName("PlanetData");
-                var solarObject = tile.stars;
+                var solarObject = tile.astronomicalObject;
                 solarObject.update(xmlStars[0]);
                 (<PlanetData>solarObject).colony = mainObject.coloniesById[newColonyId];
 

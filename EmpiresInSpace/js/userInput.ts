@@ -14,6 +14,7 @@ class CanvasMouseListener {
     shipToMove = false;
     //var listening = false;
     //var disposed = false;
+    isOverForeground = false;
 
     MouseDragBeginX = 0;
     MouseDragBeginY = 0;
@@ -162,6 +163,7 @@ class CanvasMouseListener {
         }
 
         this.mouseUpOverForeground = (e: JQueryEventObject) => {
+            this.isOverForeground = true;
             this.dragMouseEnd(e);
         }
 
@@ -359,7 +361,8 @@ class CanvasMouseListener {
                 if (currentMap instanceof TilemapModule.PlanetMap || currentMap instanceof TilemapModule.ColonyMap) return;
 
                 // remove mainObject.currentShip, currentStar, and so on
-                mainObject.deselectObject();
+                if (!this.isOverForeground) mainObject.deselectObject();
+                else this.isOverForeground = false;
                 mainInterface.drawAll();
 
                 return;

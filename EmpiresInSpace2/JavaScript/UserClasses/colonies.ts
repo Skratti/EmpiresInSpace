@@ -232,11 +232,11 @@ module ColonyModule {
                         && galaxyMap.elementsInArea[starId].tilemap.map
                         && galaxyMap.elementsInArea[starId].tilemap.map[starColRow.col]
                         && galaxyMap.elementsInArea[starId].tilemap.map[starColRow.col][starColRow.row]
-                        && galaxyMap.elementsInArea[starId].tilemap.map[starColRow.col][starColRow.row].stars) {
-                        (<PlanetData> galaxyMap.elementsInArea[starId].tilemap.map[starColRow.col][starColRow.row].stars).colony = this;
-                        galaxyMap.elementsInArea[starId].tilemap.map[starColRow.col][starColRow.row].stars.hasSubElements = true;
+                        && galaxyMap.elementsInArea[starId].tilemap.map[starColRow.col][starColRow.row].astronomicalObject) {
+                        (<PlanetData> galaxyMap.elementsInArea[starId].tilemap.map[starColRow.col][starColRow.row].astronomicalObject).colony = this;
+                        galaxyMap.elementsInArea[starId].tilemap.map[starColRow.col][starColRow.row].astronomicalObject.hasSubElements = true;
 
-                        this.planetArea = (<PlanetData> galaxyMap.elementsInArea[starId].tilemap.map[starColRow.col][starColRow.row].stars);
+                        this.planetArea = (<PlanetData> galaxyMap.elementsInArea[starId].tilemap.map[starColRow.col][starColRow.row].astronomicalObject);
                         if (this.planetArea.ColonyMap == null) {
                             this.planetArea.ColonyMap = new TilemapModule.ColonyMap(this.planetArea);
                         }

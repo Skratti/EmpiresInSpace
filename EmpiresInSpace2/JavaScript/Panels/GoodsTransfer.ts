@@ -100,9 +100,9 @@ module TransferModule {
 
 
             if (mainObject.currentColony == null) {
-                if (this.tile.stars != null) {
-                    if (this.tile.stars instanceof PlanetData) {
-                        var planet: PlanetData = <PlanetData> this.tile.stars;
+                if (this.tile.astronomicalObject != null) {
+                    if (this.tile.astronomicalObject instanceof PlanetData) {
+                        var planet: PlanetData = <PlanetData> this.tile.astronomicalObject;
                         if (planet.colony != null && planet.isMainColony() ) {
                             var outerColony = $("<div/>", { "class": "OuterShipListDiv" });
                             var innerColony = $("<div/>", { "class": "ShipListDiv" });
@@ -212,7 +212,7 @@ module TransferModule {
             if (this.Target instanceof ColonyModule.Colony)
             {
                 
-                var planet: PlanetData = <PlanetData> this.tile.stars;
+                var planet: PlanetData = <PlanetData> this.tile.astronomicalObject;
                 var outerColony = $("<div/>", { "class": "OuterShipListDiv" });
                 var innerColony = $("<div/>", { "class": "ShipListDiv" });
                 var colonyImage = $("<img/>", { src: mainObject.imageObjects[planet.typeId].texture.src, alt: "goods", width: "30px", height: "30px" });
@@ -233,7 +233,7 @@ module TransferModule {
                 !(this.Target instanceof Ships.Ship ||
                 this.Target instanceof ColonyModule.Colony)) {
 
-                var planet: PlanetData = <PlanetData> this.tile.stars;
+                var planet: PlanetData = <PlanetData> this.tile.astronomicalObject;
                 var outerColony = $("<div/>", { "class": "OuterShipListDiv" });
                 var innerColony = $("<div/>", { "class": "ShipListDiv" });
                 var colonyImage = $("<img/>", { src: mainObject.imageObjects[this.Target.ImageId].texture.src, alt: "goods", width: "30px", height: "30px" });
@@ -273,9 +273,9 @@ module TransferModule {
 
             //try set colony as target
             if (mainObject.currentColony == null) {
-                if (this.tile.stars != null) {
-                    if (this.tile.stars instanceof PlanetData) {
-                        var planet: PlanetData = <PlanetData> this.tile.stars;
+                if (this.tile.astronomicalObject != null) {
+                    if (this.tile.astronomicalObject instanceof PlanetData) {
+                        var planet: PlanetData = <PlanetData> this.tile.astronomicalObject;
                         if (planet.colony != null && planet.isMainColony()) {
                             this.Target = planet.colony;                                              
                         }
@@ -562,8 +562,8 @@ module TransferModule {
             //counter = _spaceObject.parentArea.tilemap.map[_spaceObject.colRow.col][_spaceObject.colRow.row].ships.length;
             counter = _spaceObject.getCurrentTile().ships.length;
 
-            if (_spaceObject.parentArea.tilemap.map[_spaceObject.colRow.col][_spaceObject.colRow.row].stars) {
-                var star = <PlanetData> _spaceObject.parentArea.tilemap.map[_spaceObject.colRow.col][_spaceObject.colRow.row].stars;
+            if (_spaceObject.parentArea.tilemap.map[_spaceObject.colRow.col][_spaceObject.colRow.row].astronomicalObject) {
+                var star = <PlanetData> _spaceObject.parentArea.tilemap.map[_spaceObject.colRow.col][_spaceObject.colRow.row].astronomicalObject;
                 if (star.colony && star.isMainColony()) counter+=2;
             }
         }

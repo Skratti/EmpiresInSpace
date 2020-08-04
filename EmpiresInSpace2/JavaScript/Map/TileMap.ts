@@ -197,26 +197,26 @@ module TilemapModule
     //contains all stars -> equals to a galaxy -> ToDo : Should be renamed
     export class StarMap extends Tilemap {
     
-        map: StarsTile[][] = [[], []];
+        map: GalaxyTile[][] = [[], []];
 
         constructor(public _correspondingArea: AreaSpecifications) {
             super(_correspondingArea);
             this.allowCoordinatesView = true;
         }
 
-        createTile(colRow: ColRow): StarsTile{
+        createTile(colRow: ColRow): GalaxyTile{
             if (this.map[mainObject.parseInt(colRow.col)] == null) {
                 this.map[mainObject.parseInt(colRow.col)] = [];
             }
-            var newTile = new StarsTile(colRow.col, colRow.row);
+            var newTile = new GalaxyTile(colRow.col, colRow.row);
             this.map[mainObject.parseInt(colRow.col)][mainObject.parseInt(colRow.row)] = newTile;
             return newTile;
         }
 
-        checkObjectClick(tile: StarsTile) : boolean
+        checkObjectClick(tile: GalaxyTile) : boolean
         {  
-            if (tile.stars !== null && tile.stars.typeId < 5000) {
-                tile.stars.loadAndSwitchThisMap();
+            if (tile.astronomicalObject !== null && tile.astronomicalObject.typeId < 5000) {
+                tile.astronomicalObject.loadAndSwitchThisMap();
                 return true;
             }
             return false;
@@ -241,9 +241,9 @@ module TilemapModule
         {
             //check if colony is present in this tile
             //Helpers.Log("SolarSystemMap.prototype.checkObjectClick"); 
-            if (tile.stars != null && tile.stars.colony != null && tile.stars.isMainColony())
+            if (tile.astronomicalObject != null && tile.astronomicalObject.colony != null && tile.astronomicalObject.isMainColony())
             {
-                DrawInterface.clickOnColony(tile.stars.colony);
+                DrawInterface.clickOnColony(tile.astronomicalObject.colony);
                 return true;                
             }
             return false;
@@ -274,7 +274,7 @@ module TilemapModule
         //does not need to check versus ships
         tileClick(colRow)
         {
-            var surfaceField = <SurfaceField> this.map[mainObject.parseInt(colRow.col)][mainObject.parseInt(colRow.row)].stars;
+            var surfaceField = <SurfaceField> this.map[mainObject.parseInt(colRow.col)][mainObject.parseInt(colRow.row)].astronomicalObject;
             //if (surfaceField.surfaceBuildingId != null && surfaceField.surfaceBuildingId > 0)
 
             if (surfaceField.building != null && mainObject.selectedBuilding != null && mainObject.selectedBuilding > 0) return;
@@ -545,7 +545,7 @@ module TilemapModule
 
         
         tileClick(colRow) {
-            var surfaceField = <SurfaceField> this.map[mainObject.parseInt(colRow.col)][mainObject.parseInt(colRow.row)].stars;
+            var surfaceField = <SurfaceField> this.map[mainObject.parseInt(colRow.col)][mainObject.parseInt(colRow.row)].astronomicalObject;
             //if (surfaceField.surfaceBuildingId != null && surfaceField.surfaceBuildingId > 0)
 
             if (surfaceField.building != null && mainObject.selectedBuilding != null && mainObject.selectedBuilding > 0) return;

@@ -1240,9 +1240,9 @@ module ShipTemplateDesigner {
                 var CanRepair = false;
                 var Tile = currentShip.parentArea.tilemap.findCreateTile({ col: mainObject.parseInt(currentShip.colRow.col), row: mainObject.parseInt(currentShip.colRow.row) });
                 //detect if ship is over a main colony belongign to player or allied
-                if (Tile.stars != null) {
-                    if (Tile.stars instanceof PlanetData) {
-                        var planet: PlanetData = <PlanetData> Tile.stars;
+                if (Tile.astronomicalObject != null) {
+                    if (Tile.astronomicalObject instanceof PlanetData) {
+                        var planet: PlanetData = <PlanetData> Tile.astronomicalObject;
                         if (planet.colony != null && planet.isMainColony()) {
 
                             //check if allied or own
@@ -1287,9 +1287,9 @@ module ShipTemplateDesigner {
                 var CanRepair = false;
                 var Tile = currentShip.parentArea.tilemap.findCreateTile({ col: mainObject.parseInt(currentShip.colRow.col), row: mainObject.parseInt(currentShip.colRow.row) });
                 //detect if ship is over a main colony belongign to player or allied
-                if (Tile.stars != null) {
-                    if (Tile.stars instanceof PlanetData) {
-                        var planet: PlanetData = <PlanetData> Tile.stars;
+                if (Tile.astronomicalObject != null) {
+                    if (Tile.astronomicalObject instanceof PlanetData) {
+                        var planet: PlanetData = <PlanetData> Tile.astronomicalObject;
                         if (planet.colony != null && planet.isMainColony()) {
 
                             //check if allied or own
@@ -1463,9 +1463,9 @@ module ShipTemplateDesigner {
             var colony: ColonyModule.Colony = null;
             var Tile = currentShip.parentArea.tilemap.findCreateTile({ col: mainObject.parseInt(currentShip.colRow.col), row: mainObject.parseInt(currentShip.colRow.row) });
             //detect if ship is over a main colony belongign to player or allied
-            if (Tile.stars != null) {
-                if (Tile.stars instanceof PlanetData) {
-                    var planet: PlanetData = <PlanetData> Tile.stars;
+            if (Tile.astronomicalObject != null) {
+                if (Tile.astronomicalObject instanceof PlanetData) {
+                    var planet: PlanetData = <PlanetData> Tile.astronomicalObject;
                     if (planet.colony != null && planet.isMainColony()) {
 
                         //check if allied or own

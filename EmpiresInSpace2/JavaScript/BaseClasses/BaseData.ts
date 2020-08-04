@@ -777,7 +777,7 @@ module BaseDataModule {
         for (var x = 0; x < 100; x++) {
             for (var y = 0; y < 100; y++) {
                 var tileToCheck: Tile =  (currentMap.map[x] && currentMap.map[x][y] || null);               
-                if (tileToCheck != null) surfaceFieldTypes[(<PlanetTile>tileToCheck).stars.surfaceFieldType] = true;
+                if (tileToCheck != null) surfaceFieldTypes[(<PlanetTile>tileToCheck).astronomicalObject.surfaceFieldType] = true;
             }
         }
 

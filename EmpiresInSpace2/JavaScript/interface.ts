@@ -189,7 +189,7 @@ module DrawInterface {
 
         //context.drawImage(objectTypes[1].texture, displayPositionX, displayPositionY, currentMap.tileSize, currentMap.tileSize);
         //context.drawImage(objectTypes[1].texture, displayPositionX, displayPositionY);        
-        if (mainObject.imageObjects[tileToDraw.stars.typeId] == null) return;
+        if (mainObject.imageObjects[tileToDraw.astronomicalObject.typeId] == null) return;
 
         
         //if (mainObject.objectOnMaps[tileToDraw.stars.typeId] == null) return;
@@ -203,7 +203,7 @@ module DrawInterface {
         //tile is  part of a multitileimage and not the upper left tile, so skip drawing of this part
         if (tileToDraw instanceof SystemTile) {
             var xyz: SystemTile = <SystemTile>tileToDraw;
-            if (xyz.stars && xyz.stars.fieldSize === 0) return;
+            if (xyz.astronomicalObject && xyz.astronomicalObject.fieldSize === 0) return;
         }
 
 
@@ -214,11 +214,11 @@ module DrawInterface {
             //context.drawImage(mainObject.imageObjects[tileToDraw.stars.typeId].texture, displayPositionX, displayPositionY, currentMap.tileSize * xyz.stars.fieldSize, currentMap.tileSize * xyz.stars.fieldSize);          
 
             //context.drawImage(mainObject.imageObjects[mainObject.objectOnMaps[tileToDraw.stars.typeId].ObjectImages[0].ImageId].texture, displayPositionX + (currentMap.tileSize * tileToDraw.stars.offset), displayPositionY + (currentMap.tileSize * tileToDraw.stars.offset), currentMap.tileSize * xyz.stars.drawsize, currentMap.tileSize * xyz.stars.drawsize);
-            var Image = tileToDraw.stars.GetImage();
+            var Image = tileToDraw.astronomicalObject.GetImage();
             var planetImage = Image.ImageId;
             var PlanetOffset = (1 - Image.Drawsize) / 2;
             var PlanetOffset = (currentMap.tileSize * PlanetOffset);
-            if (tileToDraw.stars.typeId > 45) PlanetOffset = -currentMap.tileSize / 2;
+            if (tileToDraw.astronomicalObject.typeId > 45) PlanetOffset = -currentMap.tileSize / 2;
 
             //context.drawImage(mainObject.imageObjects[tileToDraw.stars.typeId].texture, displayPositionX + (currentMap.tileSize * tileToDraw.stars.offset), displayPositionY + (currentMap.tileSize * tileToDraw.stars.offset), currentMap.tileSize * xyz.stars.drawsize, currentMap.tileSize * xyz.stars.drawsize);
             //context.drawImage(mainObject.imageObjects[planetImage].texture, displayPositionX + (currentMap.tileSize * tileToDraw.stars.offset), displayPositionY + (currentMap.tileSize * tileToDraw.stars.offset), currentMap.tileSize * xyz.stars.drawsize, currentMap.tileSize * xyz.stars.drawsize);
@@ -230,35 +230,35 @@ module DrawInterface {
         }
         
         //draw image of the star
-        if (tileToDraw instanceof StarsTile)
+        if (tileToDraw instanceof GalaxyTile)
         {     
-            var tileToDraw2: StarsTile = <StarsTile>tileToDraw;
-            var imageToDraw = mainObject.imageObjects[tileToDraw.stars.typeId];
+            var tileToDraw2: GalaxyTile = <GalaxyTile>tileToDraw;
+            var imageToDraw = mainObject.imageObjects[tileToDraw.astronomicalObject.typeId];
 
             if (imageToDraw.tileSheetCount == 1) {
                 //draw a star or anomaly
                 //context.drawImage(mainObject.imageObjects[tileToDraw.stars.typeId].texture, displayPositionX, displayPositionY, currentMap.tileSize * tileToDraw2.stars.drawSize, currentMap.tileSize * tileToDraw2.stars.drawSize);
-                var drawSizeFactor = (tileToDraw2.stars.Id % 50) * 0.01;  //between 0 and 0.5
+                var drawSizeFactor = (tileToDraw2.astronomicalObject.Id % 50) * 0.01;  //between 0 and 0.5
                 var starOffset = drawSizeFactor / 2;    //up to 0.25
                 drawSizeFactor = drawSizeFactor + 1;
                 starOffset = (currentMap.tileSize * starOffset);
                 //Helpers.Log(drawSizeFactor);
-                context.drawImage(mainObject.imageObjects[tileToDraw.stars.typeId].texture, displayPositionX - starOffset, displayPositionY - starOffset, currentMap.tileSize * drawSizeFactor, currentMap.tileSize * drawSizeFactor);                           
+                context.drawImage(mainObject.imageObjects[tileToDraw.astronomicalObject.typeId].texture, displayPositionX - starOffset, displayPositionY - starOffset, currentMap.tileSize * drawSizeFactor, currentMap.tileSize * drawSizeFactor);                           
             }
         }
 
         //Draw starname and/or ressource of the star
-        if (tileToDraw instanceof StarsTile  && tileToDraw.stars.typeId < 5000) {
+        if (tileToDraw instanceof GalaxyTile  && tileToDraw.astronomicalObject.typeId < 5000) {
             var systemNameRessource = '';
             if (mainObject.user.systemNames) {
-                systemNameRessource = tileToDraw.stars.name;
+                systemNameRessource = tileToDraw.astronomicalObject.name;
             }
 
             if (mainObject.user.showRessources) {
                 if (mainObject.user.systemNames) {
                     systemNameRessource += ' ';
                 }
-                systemNameRessource += i18n.label(721 + (<StarData>tileToDraw.stars).ressourceId);
+                systemNameRessource += i18n.label(721 + (<StarData>tileToDraw.astronomicalObject).ressourceId);
             }
 
             if (systemNameRessource != '') {
@@ -279,16 +279,16 @@ module DrawInterface {
             var currentPlanetTile = <PlanetTile> tileToDraw;
 
             //Draw Building or Placeholder
-            if (currentPlanetTile.stars.building != null) {
+            if (currentPlanetTile.astronomicalObject.building != null) {
                 var BuildingOffset = (currentMap.tileSize * 0.1);
-                context.drawImage(mainObject.imageObjects[mainObject.buildings[currentPlanetTile.stars.building.buildingId].buildingObjectId].texture,
+                context.drawImage(mainObject.imageObjects[mainObject.buildings[currentPlanetTile.astronomicalObject.building.buildingId].buildingObjectId].texture,
                     displayPositionX + BuildingOffset, displayPositionY + BuildingOffset,
                     currentMap.tileSize * 0.8, currentMap.tileSize * 0.8);
             }
             else {
                 //Draw building placeholder border:
                 var imageId = 5200 + 70; //Grey border  - O 
-                imageId = mainObject.surfaceTiles[currentPlanetTile.stars.surfaceFieldType].borderId + 70;
+                imageId = mainObject.surfaceTiles[currentPlanetTile.astronomicalObject.surfaceFieldType].borderId + 70;
 
                 //Helpers.Log("imageId " + imageId);
                 var z = mainObject.imageObjects[imageId].canvasCache;
@@ -301,9 +301,9 @@ module DrawInterface {
             //also draw the building over the field where the mouse is on
             if (mainObject.selectedBuilding != null && mainObject.selectedBuilding > 0) {
                 var fieldAllowedToBuild = false;
-                fieldAllowedToBuild = drawBuildingToBuiltGreyOut(displayPositionX, displayPositionY, currentMap.map[x][y].stars);
+                fieldAllowedToBuild = drawBuildingToBuiltGreyOut(displayPositionX, displayPositionY, currentMap.map[x][y].astronomicalObject);
 
-                if (fieldAllowedToBuild && currentPlanetTile.stars.building == null && currentMap.MouseOverField.col == x && currentMap.MouseOverField.row == y) {
+                if (fieldAllowedToBuild && currentPlanetTile.astronomicalObject.building == null && currentMap.MouseOverField.col == x && currentMap.MouseOverField.row == y) {
                     var BuildingOffset = (currentMap.tileSize * 0.1);
                     context.drawImage(mainObject.imageObjects[mainObject.buildings[mainObject.selectedBuilding].buildingObjectId].texture,
                         displayPositionX + BuildingOffset, displayPositionY + BuildingOffset,
@@ -311,27 +311,27 @@ module DrawInterface {
                 }
             }
 
-            drawBuildingInactivity(displayPositionX, displayPositionY, currentMap.map[x][y].stars);
+            drawBuildingInactivity(displayPositionX, displayPositionY, currentMap.map[x][y].astronomicalObject);
         }
 
         // draw border around star system if ships or colonies are present in it:
         var ownObjects = 0;
         var enemyObjects = 0;
-        if (tileToDraw.stars != null && tileToDraw.stars.shipsInArea != null && tileToDraw.stars.shipsInArea.length > 0) {
+        if (tileToDraw.astronomicalObject != null && tileToDraw.astronomicalObject.shipsInArea != null && tileToDraw.astronomicalObject.shipsInArea.length > 0) {
 
-            for (var shipNo = 0; shipNo < tileToDraw.stars.shipsInArea.length; shipNo++) {
-                if (mainObject.currentShip && mainObject.currentShip.id == tileToDraw.stars.shipsInArea[shipNo].id) continue;
+            for (var shipNo = 0; shipNo < tileToDraw.astronomicalObject.shipsInArea.length; shipNo++) {
+                if (mainObject.currentShip && mainObject.currentShip.id == tileToDraw.astronomicalObject.shipsInArea[shipNo].id) continue;
 
-                if (tileToDraw.stars.shipsInArea[shipNo].owner == mainObject.user.id) {
+                if (tileToDraw.astronomicalObject.shipsInArea[shipNo].owner == mainObject.user.id) {
                     ownObjects++;
                     lowestRelationCode = lowestRelationCode < 10 ? lowestRelationCode : 10;
                 }
                 else {
-                    if (tileToDraw.stars.shipsInArea[shipNo].owner != 0) {
+                    if (tileToDraw.astronomicalObject.shipsInArea[shipNo].owner != 0) {
                         enemyObjects++;
                         var shipRelationCode = 1; //ToDo: get the true relation code
-                        if (mainObject.user.otherUserExists(tileToDraw.stars.shipsInArea[shipNo].owner))
-                            shipRelationCode = mainObject.user.otherUserFind(tileToDraw.stars.shipsInArea[shipNo].owner).currentRelation;
+                        if (mainObject.user.otherUserExists(tileToDraw.astronomicalObject.shipsInArea[shipNo].owner))
+                            shipRelationCode = mainObject.user.otherUserFind(tileToDraw.astronomicalObject.shipsInArea[shipNo].owner).currentRelation;
                         lowestRelationCode = Math.min(lowestRelationCode, shipRelationCode);
                     }
                 }
@@ -339,7 +339,7 @@ module DrawInterface {
         }
 
         //check for tileToDraw instanceof starTile
-        for (var colonyCounter = 0; tileToDraw instanceof StarsTile && colonyCounter < mainObject.colonies.length; colonyCounter++) {
+        for (var colonyCounter = 0; tileToDraw instanceof GalaxyTile && colonyCounter < mainObject.colonies.length; colonyCounter++) {
             if (mainObject.colonies[colonyCounter].galaxyColRow.col == x && mainObject.colonies[colonyCounter].galaxyColRow.row == y) {
 
                 var currentColony: ColonyModule.Colony = mainObject.colonies[colonyCounter];
@@ -367,10 +367,10 @@ module DrawInterface {
         }
         //check if a colony is present on the systemTile
         if (tileToDraw instanceof SystemTile) {
-            if ((<SystemTile> tileToDraw).stars.colony != null) {
-                var colonyToCheck = (<SystemTile> tileToDraw).stars.colony;
+            if ((<SystemTile> tileToDraw).astronomicalObject.colony != null) {
+                var colonyToCheck = (<SystemTile> tileToDraw).astronomicalObject.colony;
 
-                var isMainColony = (<SystemTile> tileToDraw).stars.isMainColony();
+                var isMainColony = (<SystemTile> tileToDraw).astronomicalObject.isMainColony();
 
                 if (mainObject.user.colonyNames && isMainColony) {
                     drawString(x, y, colonyToCheck.name, drawLine);
@@ -984,7 +984,7 @@ module DrawInterface {
                     if (tileToDraw.drawArrow) tilesWithArrow.push({ tile: tileToDraw, displayPositionX: displayPositionX, displayPositionY: displayPositionY } );
 
                     //draw element of the map - star, planet, building...
-                    if (tileToDraw.stars != null && (<SystemTile>tileToDraw).stars.fieldSize !== 0) {
+                    if (tileToDraw.astronomicalObject != null && (<SystemTile>tileToDraw).astronomicalObject.fieldSize !== 0) {
                         drawTile(tileToDraw, displayPositionX, displayPositionY, x, y);
                     }                    
 
@@ -1250,12 +1250,12 @@ module DrawInterface {
 
         if (currentMap instanceof TilemapModule.SolarSystemMap) {
             if (currentMap.tileExist(endColRow)
-                && currentMap.findCreateTile(endColRow).stars
+                && currentMap.findCreateTile(endColRow).astronomicalObject
                 ) {
-                Helpers.Log(mainObject.imageObjects[currentMap.findCreateTile(endColRow).stars.typeId].moveCost.toString());
-                Helpers.Log(currentMap.findCreateTile(endColRow).stars.typeId.toString());
+                Helpers.Log(mainObject.imageObjects[currentMap.findCreateTile(endColRow).astronomicalObject.typeId].moveCost.toString());
+                Helpers.Log(currentMap.findCreateTile(endColRow).astronomicalObject.typeId.toString());
 
-                cost = mainObject.imageObjects[currentMap.findCreateTile(endColRow).stars.typeId].moveCost;
+                cost = mainObject.imageObjects[currentMap.findCreateTile(endColRow).astronomicalObject.typeId].moveCost;
             }
             
         }
@@ -2256,9 +2256,9 @@ module DrawInterface {
 
 
             
-            if (tile.stars != null) {
-                if (tile.stars instanceof PlanetData) {
-                    var planet: PlanetData = <PlanetData> tile.stars;
+            if (tile.astronomicalObject != null) {
+                if (tile.astronomicalObject instanceof PlanetData) {
+                    var planet: PlanetData = <PlanetData> tile.astronomicalObject;
                     if (planet.colony != null) {
                         var outerColony = $("<div/>", { "class": "OuterShipListDiv" });
                         var innerColony = $("<div/>", { "class": "ShipListDiv" });

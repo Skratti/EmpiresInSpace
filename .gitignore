@@ -49,9 +49,9 @@ EmpiresInSpace2/JavaScript/UserClasses/Tilemap/*.bak
 EmpiresInSpace2/JavaScript/Panels/*.js
 EmpiresInSpace2/JavaScript/Panels/*.js.map
 EmpiresInSpace2/JavaScript/Panels/*.bak
-EmpiresInSpace2/JavaScript/Deprecated/*.js
-EmpiresInSpace2/JavaScript/Deprecated/*.js.map
-EmpiresInSpace2/JavaScript/Deprecated/*.bak
+EmpiresInSpace2/JavaScript/Map/*.js
+EmpiresInSpace2/JavaScript/Map/*.js.map
+EmpiresInSpace2/JavaScript/Map/*.bak
 EmpiresInSpace2/JavaScript/Scripts/*.js
 EmpiresInSpace2/JavaScript/Scripts/*.js.map
 EmpiresInSpace2/JavaScript/Scripts/*.bak

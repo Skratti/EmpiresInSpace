@@ -711,7 +711,7 @@ module CommModule {
         var tileStarColRow: ColRow;       
         var tileSystemColRow: ColRow;      
 
-        if (tile instanceof StarsTile) {           
+        if (tile instanceof GalaxyTile) {           
             isSystemTile = false;
             tileStarColRow = tile.colRow;
             //Helpers.Log('isStarTile ' + tileStarColRow.col + ' ' + tileStarColRow.row);
@@ -749,7 +749,7 @@ module CommModule {
         var tileStarColRow: ColRow;
         var tileSystemColRow: ColRow;
 
-        if (tile instanceof StarsTile) {
+        if (tile instanceof GalaxyTile) {
             isSystemTile = false;
             tileStarColRow = tile.colRow;
             Helpers.Log('isStarTile ' + tileStarColRow.col + ' ' + tileStarColRow.row);

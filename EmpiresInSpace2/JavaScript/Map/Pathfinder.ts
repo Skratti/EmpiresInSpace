@@ -128,8 +128,8 @@
                 //top row               
                 var colRow = { col: cur_x, row: upY };
                 var insideOfSystem = upY >= 0 &&  upY < 24 && cur_x >= 0 && cur_x < 24;
-                if (currentMap.tileExist(colRow) && currentMap.findCreateTile(colRow).stars) {
-                    var cost = mainObject.imageObjects[currentMap.findCreateTile(colRow).stars.typeId].moveCost;
+                if (currentMap.tileExist(colRow) && currentMap.findCreateTile(colRow).astronomicalObject) {
+                    var cost = mainObject.imageObjects[currentMap.findCreateTile(colRow).astronomicalObject.typeId].moveCost;
                     neighbors.push(new Tile(cur_x, upY, cost));
                 } else {
                     neighbors.push(new Tile(cur_x, upY, insideOfSystem ? 1 : 50 ));
@@ -139,8 +139,8 @@
                 //bottom row
                 insideOfSystem = bottomY >= 0 && bottomY < 24 && cur_x >= 0 && cur_x < 24;
                 colRow = { col: cur_x, row: bottomY };
-                if (currentMap.tileExist(colRow) && currentMap.findCreateTile(colRow).stars) {
-                    var cost = mainObject.imageObjects[currentMap.findCreateTile(colRow).stars.typeId].moveCost;
+                if (currentMap.tileExist(colRow) && currentMap.findCreateTile(colRow).astronomicalObject) {
+                    var cost = mainObject.imageObjects[currentMap.findCreateTile(colRow).astronomicalObject.typeId].moveCost;
                     neighbors.push(new Tile(cur_x, bottomY, cost));
                 } else {
                     neighbors.push(new Tile(cur_x, bottomY, insideOfSystem ?  1 : 50 ));
@@ -154,8 +154,8 @@
                 //left column
                 var insideOfSystem = leftX >= 0 && leftX < 24 && cur_y >= 0 && cur_y < 24;
                 var colRow = { col: leftX, row: cur_y };
-                if (currentMap.tileExist(colRow) && currentMap.findCreateTile(colRow).stars) {
-                    var cost = mainObject.imageObjects[currentMap.findCreateTile(colRow).stars.typeId].moveCost;
+                if (currentMap.tileExist(colRow) && currentMap.findCreateTile(colRow).astronomicalObject) {
+                    var cost = mainObject.imageObjects[currentMap.findCreateTile(colRow).astronomicalObject.typeId].moveCost;
                     neighbors.push(new Tile(leftX, cur_y, cost));
                 } else {
                     neighbors.push(new Tile(leftX, cur_y, insideOfSystem ? 1 : 50));
@@ -164,8 +164,8 @@
                 //right column
                 insideOfSystem = rightX >= 0 && rightX < 24 && cur_y >= 0 && cur_y < 24;
                 colRow = { col: rightX, row: cur_y };
-                if (currentMap.tileExist(colRow) && currentMap.findCreateTile(colRow).stars) {
-                    var cost = mainObject.imageObjects[currentMap.findCreateTile(colRow).stars.typeId].moveCost;
+                if (currentMap.tileExist(colRow) && currentMap.findCreateTile(colRow).astronomicalObject) {
+                    var cost = mainObject.imageObjects[currentMap.findCreateTile(colRow).astronomicalObject.typeId].moveCost;
                     neighbors.push(new Tile(rightX, cur_y, cost));
                 } else {
                     neighbors.push(new Tile(rightX, cur_y, insideOfSystem ? 1 : 50));
@@ -198,12 +198,12 @@
         //set in solar system cost 
         if (currentMap instanceof TilemapModule.SolarSystemMap) {
             if (currentMap.tileExist(colRow)
-                && currentMap.findCreateTile(colRow).stars
+                && currentMap.findCreateTile(colRow).astronomicalObject
                 ) {
-                Helpers.Log(mainObject.imageObjects[currentMap.findCreateTile(colRow).stars.typeId].moveCost.toString());
-                Helpers.Log(currentMap.findCreateTile(colRow).stars.typeId.toString());
+                Helpers.Log(mainObject.imageObjects[currentMap.findCreateTile(colRow).astronomicalObject.typeId].moveCost.toString());
+                Helpers.Log(currentMap.findCreateTile(colRow).astronomicalObject.typeId.toString());
 
-                cost = mainObject.imageObjects[currentMap.findCreateTile(colRow).stars.typeId].moveCost;
+                cost = mainObject.imageObjects[currentMap.findCreateTile(colRow).astronomicalObject.typeId].moveCost;
             }
 
         }

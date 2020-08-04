@@ -158,6 +158,80 @@
     <Content Include="css\Sprites.png" />
     <Content Include="Galaxy.aspx" />
     <Content Include="Global.asax" />
+    <TypeScriptCompile Include="JavaScript\BaseClasses\BaseData.ts" />
+    <TypeScriptCompile Include="JavaScript\BaseClasses\GalacticEvents.ts" />
+    <TypeScriptCompile Include="JavaScript\BaseClasses\ImageCanvasCache.ts" />
+    <TypeScriptCompile Include="JavaScript\Deprecated\areaData.ts" />
+    <TypeScriptCompile Include="JavaScript\Deprecated\FogOfWar.ts" />
+    <TypeScriptCompile Include="JavaScript\Deprecated\Pathfinder.ts" />
+    <TypeScriptCompile Include="JavaScript\Deprecated\StarMapQuadTree.ts" />
+    <TypeScriptCompile Include="JavaScript\Deprecated\TileMap.ts" />
+    <TypeScriptCompile Include="JavaScript\Panels\BuildModulesForm.ts" />
+    <TypeScriptCompile Include="JavaScript\Panels\Chat.ts" />
+    <TypeScriptCompile Include="JavaScript\Panels\DialogWindows.ts" />
+    <TypeScriptCompile Include="JavaScript\Panels\Diplomacy.ts" />
+    <TypeScriptCompile Include="JavaScript\Panels\ElementGenerator.ts" />
+    <TypeScriptCompile Include="JavaScript\Panels\GoodsTransfer.ts" />
+    <TypeScriptCompile Include="JavaScript\interface.ts" />
+    <TypeScriptCompile Include="JavaScript\Panels\TradeCreateOffer.ts" />
+    <TypeScriptCompile Include="JavaScript\Panels\TradeOfferForm.ts" />
+    <TypeScriptCompile Include="JavaScript\Panels\TradeOffersListPage.ts" />
+    <TypeScriptCompile Include="JavaScript\Panels\UserSpecifications.ts" />
+    <TypeScriptCompile Include="JavaScript\Scripts\Alliances.ts" />
+    <TypeScriptCompile Include="JavaScript\Scripts\Buildings\CommCentre.ts" />
+    <TypeScriptCompile Include="JavaScript\Scripts\Buildings\DefenseSat.ts" />
+    <TypeScriptCompile Include="JavaScript\Scripts\Buildings\Scout.ts" />
+    <TypeScriptCompile Include="JavaScript\Scripts\Buildings\ShipModulesSimple.ts" />
+    <TypeScriptCompile Include="JavaScript\Scripts\Buildings\SpaceportB.ts" />
+    <TypeScriptCompile Include="JavaScript\Scripts\gameOver.ts" />
+    <TypeScriptCompile Include="JavaScript\Scripts\Quests\BuildInfrastructure.ts" />
+    <TypeScriptCompile Include="JavaScript\Scripts\Quests\BuildShipsGeneral.ts" />
+    <TypeScriptCompile Include="JavaScript\Scripts\Quests\BuildSpaceShip.ts" />
+    <TypeScriptCompile Include="JavaScript\Scripts\Quests\BuildSystemExplorer.ts" />
+    <TypeScriptCompile Include="JavaScript\Scripts\Quests\Colonize.ts" />
+    <TypeScriptCompile Include="JavaScript\Scripts\Quests\ColonyManagement.ts" />
+    <TypeScriptCompile Include="JavaScript\Scripts\Quests\ContactsDetail.ts" />
+    <TypeScriptCompile Include="JavaScript\Scripts\Quests\ExploreSystem.ts" />
+    <TypeScriptCompile Include="JavaScript\Scripts\Quests\FindColonizablePlanet.ts" />
+    <TypeScriptCompile Include="JavaScript\Scripts\Quests\FinishedIntro.ts" />
+    <TypeScriptCompile Include="JavaScript\Scripts\Quests\Movement.ts" />
+    <TypeScriptCompile Include="JavaScript\Scripts\Quests\OreMineCP.ts" />
+    <TypeScriptCompile Include="JavaScript\Scripts\Quests\PlanetSurface.ts" />
+    <TypeScriptCompile Include="JavaScript\Scripts\Quests\PlanetSurfaceOverview.ts" />
+    <TypeScriptCompile Include="JavaScript\Scripts\Quests\Reinforcements.ts" />
+    <TypeScriptCompile Include="JavaScript\Scripts\Quests\ResearchCenter.ts" />
+    <TypeScriptCompile Include="JavaScript\Scripts\Quests\ResearchDetails.ts" />
+    <TypeScriptCompile Include="JavaScript\Scripts\Quests\SearchSpaceStation.ts" />
+    <TypeScriptCompile Include="JavaScript\Scripts\Quests\ShipDesignerDetails.ts" />
+    <TypeScriptCompile Include="JavaScript\Scripts\Quests\ShipModulePlant.ts" />
+    <TypeScriptCompile Include="JavaScript\Scripts\Quests\ShipModulePlantDetails.ts" />
+    <TypeScriptCompile Include="JavaScript\Scripts\Quests\ShortOverview.ts" />
+    <TypeScriptCompile Include="JavaScript\Scripts\Quests\Spaceport.ts" />
+    <TypeScriptCompile Include="JavaScript\Scripts\Quests\SpaceportDetails.ts" />
+    <TypeScriptCompile Include="JavaScript\Scripts\Quests\TradeDetails.ts" />
+    <TypeScriptCompile Include="JavaScript\Scripts\Quests\Welcome.ts" />
+    <TypeScriptCompile Include="JavaScript\Scripts\Research.ts" />
+    <TypeScriptCompile Include="JavaScript\Scripts\ResearchTree.ts" />
+    <TypeScriptCompile Include="JavaScript\Scripts\scriptReference.ts" />
+    <TypeScriptCompile Include="JavaScript\Scripts\Scripts.ts" />
+    <TypeScriptCompile Include="JavaScript\Scripts\ShipDetails.ts" />
+    <TypeScriptCompile Include="JavaScript\Scripts\ShipTemplateDesigner.ts" />
+    <TypeScriptCompile Include="JavaScript\Scripts\TranscendenceList.ts" />
+    <TypeScriptCompile Include="JavaScript\UserClasses\Alliances.ts" />
+    <TypeScriptCompile Include="JavaScript\UserClasses\Buildings.ts" />
+    <TypeScriptCompile Include="JavaScript\UserClasses\colonies.ts" />
+    <TypeScriptCompile Include="JavaScript\UserClasses\CombatMessage.ts" />
+    <TypeScriptCompile Include="JavaScript\UserClasses\Communication.ts" />
+    <TypeScriptCompile Include="JavaScript\UserClasses\messages.ts" />
+    <TypeScriptCompile Include="JavaScript\UserClasses\objects.ts" />
+    <TypeScriptCompile Include="JavaScript\UserClasses\Quests.ts" />
+    <TypeScriptCompile Include="JavaScript\UserClasses\ships.ts" />
+    <TypeScriptCompile Include="JavaScript\UserClasses\ShipTemplates.ts" />
+    <TypeScriptCompile Include="JavaScript\UserClasses\Tilemap\Tilemap.ts" />
+    <TypeScriptCompile Include="JavaScript\Globals.ts" />
+    <TypeScriptCompile Include="JavaScript\Helpers.ts" />
+    <TypeScriptCompile Include="JavaScript\KeyMap.ts" />
+    <TypeScriptCompile Include="JavaScript\Labels.ts" />
     <TypeScriptCompile Include="JavaScript\MainObject.ts" />
     <Content Include="images\11.png" />
     <Content Include="images\12.png" />
@@ -605,10 +679,31 @@
     <Content Include="JQuery\jquery.signalR-2.0.2.min.js" />
     <Content Include="JQuery\jquery.sortElements.js" />
     <Content Include="JQuery\jquery.textfill.min.js" />
+    <Content Include="Server\60turns.aspx" />
+    <Content Include="Server\Alliances.aspx" />
+    <Content Include="Server\Buildings.aspx" />
+    <Content Include="Server\colonies.aspx" />
+    <Content Include="Server\initShips.aspx" />
+    <Content Include="Server\initStarMap.aspx" />
+    <Content Include="Server\mainObject.aspx" />
+    <Content Include="Server\Messages.aspx" />
+    <Content Include="Server\Quests.aspx" />
+    <Content Include="Server\Research.aspx" />
+    <Content Include="Server\ServerEvents.aspx" />
+    <Content Include="Server\Ships.aspx" />
+    <Content Include="Server\ShipTemplate.xml" />
+    <Content Include="Server\TradeTransfer.aspx" />
+    <Content Include="Server\transfer.xml" />
+    <Content Include="Server\User.aspx" />
     <Content Include="ThreeJS_ProofOfConcept.aspx" />
     <Content Include="Web.config" />
     <Content Include="Login.aspx" />
-    <TypeScriptCompile Include="JavaScript\SpaceHub.ts" />
+    <TypeScriptCompile Include="JavaScript\RealmStatistics.ts" />
+    <TypeScriptCompile Include="JavaScript\UserClasses\TradeOffers.ts" />
+    <TypeScriptCompile Include="JavaScript\UserClasses\user.ts" />
+    <TypeScriptCompile Include="JavaScript\userInput.ts" />
+    <TypeScriptCompile Include="JavaScript\Websocket\ServerEvents.ts" />
+    <TypeScriptCompile Include="JavaScript\Websocket\SpaceHub.ts" />
     <TypeScriptCompile Include="JavaScript\StartUp.ts" />
     <TypeScriptCompile Include="Scripts\typings\jquery\jquery.d.ts" />
     <TypeScriptCompile Include="ThreeJSPoC.ts" />
@@ -631,6 +726,63 @@
     </Compile>
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Server\60turns.aspx.cs">
+      <DependentUpon>60turns.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Server\Alliances.aspx.cs">
+      <DependentUpon>Alliances.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Server\Buildings.aspx.cs">
+      <DependentUpon>Buildings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Server\colonies.aspx.cs">
+      <DependentUpon>colonies.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Server\Helpers.cs" />
+    <Compile Include="Server\initShips.aspx.cs">
+      <DependentUpon>initShips.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Server\initStarMap.aspx.cs">
+      <DependentUpon>initStarMap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Server\mainObject.aspx.cs">
+      <DependentUpon>mainObject.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Server\Messages.aspx.cs">
+      <DependentUpon>Messages.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Server\Quests.aspx.cs">
+      <DependentUpon>Quests.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Server\Research.aspx.cs">
+      <DependentUpon>Research.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Server\ServerEvents.aspx.cs">
+      <DependentUpon>ServerEvents.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Server\Ships.aspx.cs">
+      <DependentUpon>Ships.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Server\TradeTransfer.aspx.cs">
+      <DependentUpon>TradeTransfer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Server\User.aspx.cs">
+      <DependentUpon>User.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="SocketServer\ConnectionManager.cs" />
     <Compile Include="SocketServer\Game.cs" />
@@ -657,9 +809,16 @@
     <Content Include="images\favicon\favicons %281%29.zip" />
     <Content Include="images\favicon\favicons.zip" />
     <Content Include="images\favicon\manifest.json" />
-    <Content Include="images\nebel180.xcf" />
-    <Content Include="images\NebulaPurplel01.xcf" />
     <None Include="packages.config" />
+    <None Include="Server\ShipRefit.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Server\ShipTemplate.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Server\transfer.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -668,7 +827,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="JavaScript\Classes\PlanetType.ts" />
     <TypeScriptCompile Include="JavaScript\Parser.ts" />
     <TypeScriptCompile Include="JavaScript\References.ts" />
     <TypeScriptCompile Include="JQuery\jqueryui.d.ts" />

@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ShipTemplate>
+  <ShipTemplateId>1</ShipTemplateId>
+  <ShipTemplateHullId>1</ShipTemplateHullId>
+  <name>testName</name>
+  <gif>scout.png</gif>
+  <modulePositions>
+    <modulePosition>
+      <posX>3</posX>
+      <posY>3</posY>
+      <moduleId>1</moduleId>
+    </modulePosition>
+    <modulePosition>
+      <posX>2</posX>
+      <posY>3</posY>
+      <moduleId>2</moduleId>
+    </modulePosition>
+    <modulePosition>
+      <posX>4</posX>
+      <posY>3</posY>
+      <moduleId>3</moduleId>
+    </modulePosition>
+    <modulePosition>
+      <posX>3</posX>
+      <posY>2</posY>
+      <moduleId>9</moduleId>
+    </modulePosition>
+    <modulePosition>
+      <posX>3</posX>
+      <posY>4</posY>
+      <moduleId>6</moduleId>
+    </modulePosition>
+  </modulePositions>
+</ShipTemplate>

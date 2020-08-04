@@ -123,15 +123,19 @@
     <script type="text/javascript" src="js/Labels.js"> </script>
    
     <script type="text/javascript" src="js/RealmStatistics.js"> </script>
+
     <script type="text/javascript" src="js/BaseData.js"> </script>
     <script type="text/javascript" src="js/KeyMap.js"> </script>
     <script type="text/javascript" src="js/ImageCanvasCache.js"> </script>
+
     <script type="text/javascript" src="js/mainObject.js"> </script>
+
     <script type="text/javascript" src="js/Communication.js"> </script>
     <script type="text/javascript" src="js/user.js"> </script>
     <script type="text/javascript" src="js/Alliances.js"> </script>
     <script type="text/javascript" src="js/messages.js"> </script>
     <script type="text/javascript" src="js/CombatMessage.js"> </script>
+
     <script type="text/javascript" src="js/objects.js"> </script>
     <script type="text/javascript" src="js/Buildings.js"> </script>
     <script type="text/javascript" src="js/colonies.js"> </script>

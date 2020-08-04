@@ -53,9 +53,67 @@
     <link rel="stylesheet" href="jQuery/jquery-ui.structure.min.css" />
     
 
-    <script type="text/javascript" src="JavaScript/Classes/PlanetType.js"> </script>
+    <% Response.Write(simplePaths()); %>
+    <script type="text/javascript" src="JavaScript/Labels.js"> </script>
+    <script type="text/javascript" src="JavaScript/Globals.js"> </script>
+    <script type="text/javascript" src="JavaScript/Helpers.js"> </script>
+    <script type="text/javascript" src="JavaScript/Websocket/ServerEvents.js"> </script>
+
+    <script type="text/javascript" src="JavaScript/RealmStatistics.js"> </script>
+
+    <script type="text/javascript" src="JavaScript/BaseClasses/BaseData.js"> </script>
+    <script type="text/javascript" src="JavaScript/KeyMap.js"> </script>
+    <script type="text/javascript" src="JavaScript/BaseClasses/ImageCanvasCache.js"> </script>
     <script type="text/javascript" src="JavaScript/MainObject.js"> </script>
-    <script type="text/javascript" src="JavaScript/SpaceHub.js"> </script>
+
+    <script type="text/javascript" src="JavaScript/UserClasses/Communication.js"> </script>
+    <script type="text/javascript" src="JavaScript/UserClasses/user.js"> </script>
+    <script type="text/javascript" src="JavaScript/UserClasses/Alliances.js"> </script>
+    <script type="text/javascript" src="JavaScript/UserClasses/messages.js"> </script>
+    <script type="text/javascript" src="JavaScript/UserClasses/CombatMessage.js"> </script>
+
+    <script type="text/javascript" src="JavaScript/UserClasses/objects.js"> </script>
+    <script type="text/javascript" src="JavaScript/UserClasses/Buildings.js"> </script>
+    <script type="text/javascript" src="JavaScript/UserClasses/colonies.js"> </script>
+
+    <script type="text/javascript" src="JavaScript/interface.js"> </script>
+    <script type="text/javascript" src="JavaScript/userInput.js"> </script>
+
+
+    <script type="text/javascript" src="JavaScript/Panels/Diplomacy.js"> </script>
+
+    <script type="text/javascript" src="JavaScript/Deprecated/StarMapQuadTree.js"> </script>
+    <script type="text/javascript" src="JavaScript/Deprecated/TileMap.js"> </script>
+    <script type="text/javascript" src="JavaScript/Deprecated/FogOfWar.js"> </script> 
+    <script type="text/javascript" src="JavaScript/Deprecated/areaData.js"> </script> 
+    <script type="text/javascript" src="JavaScript/Deprecated/Pathfinder.js"> </script>
+
+    <script type="text/javascript" src="JavaScript/UserClasses/ships.js"> </script>
+    <script type="text/javascript" src="JavaScript/UserClasses/ShipTemplates.js"> </script>   
+    <script type="text/javascript" src="JavaScript/UserClasses/Quests.js"> </script>
+    <script type="text/javascript" src="JavaScript/UserClasses/TradeOffers.js"> </script>
+
+
+    <script type="text/javascript" src="JavaScript/Panels/ElementGenerator.js"> </script>
+    <script type="text/javascript" src="JavaScript/Panels/GoodsTransfer.js"> </script>
+
+
+    <script type="text/javascript" src="JavaScript/Scripts/Scripts.js"> </script>
+
+
+    <script type="text/javascript" src="JavaScript/BaseClasses/GalacticEvents.js"> </script>
+    <script type="text/javascript" src="JavaScript/Panels/Chat.js"> </script>
+    <script type="text/javascript" src="JavaScript/Panels/UserSpecifications.js"> </script>
+    <script type="text/javascript" src="JavaScript/Panels/DialogWindows.js"> </script>
+
+    <script type="text/javascript" src="JavaScript/Panels/TradeOfferForm.js"></script>
+    <script type="text/javascript" src="JavaScript/Panels/TradeCreateOffer.js"></script>
+    <script type="text/javascript" src="JavaScript/Panels/TradeOffersListPage.js"></script>
+
+    <script type="text/javascript" src="JavaScript/Panels/BuildModulesForm.js?version=<%Response.Write(versionString());%>"></script> 
+
+
+    <script type="text/javascript" src="JavaScript/Websocket/SpaceHub.js"> </script>
     <script type="text/javascript" src="JavaScript/StartUp.js"> </script>
 
 </head>

@@ -34,9 +34,33 @@ EmpiresInSpace2/*.bak
 EmpiresInSpace2/JavaScript/*.js
 EmpiresInSpace2/JavaScript/*.js.map
 EmpiresInSpace2/JavaScript/*.bak
-EmpiresInSpace2/JavaScript/Classes/*.js
-EmpiresInSpace2/JavaScript/Classes/*.js.map
-EmpiresInSpace2/JavaScript/Classes/*.bak
+EmpiresInSpace2/JavaScript/Websocket/*.js
+EmpiresInSpace2/JavaScript/Websocket/*.js.map
+EmpiresInSpace2/JavaScript/Websocket/*.bak
+EmpiresInSpace2/JavaScript/BaseClasses/*.js
+EmpiresInSpace2/JavaScript/BaseClasses/*.js.map
+EmpiresInSpace2/JavaScript/BaseClasses/*.bak
+EmpiresInSpace2/JavaScript/UserClasses/*.js
+EmpiresInSpace2/JavaScript/UserClasses/*.js.map
+EmpiresInSpace2/JavaScript/UserClasses/*.bak
+EmpiresInSpace2/JavaScript/UserClasses/Tilemap/*.js
+EmpiresInSpace2/JavaScript/UserClasses/Tilemap/*.js.map
+EmpiresInSpace2/JavaScript/UserClasses/Tilemap/*.bak
+EmpiresInSpace2/JavaScript/Panels/*.js
+EmpiresInSpace2/JavaScript/Panels/*.js.map
+EmpiresInSpace2/JavaScript/Panels/*.bak
+EmpiresInSpace2/JavaScript/Deprecated/*.js
+EmpiresInSpace2/JavaScript/Deprecated/*.js.map
+EmpiresInSpace2/JavaScript/Deprecated/*.bak
+EmpiresInSpace2/JavaScript/Scripts/*.js
+EmpiresInSpace2/JavaScript/Scripts/*.js.map
+EmpiresInSpace2/JavaScript/Scripts/*.bak
+EmpiresInSpace2/JavaScript/Scripts/Buildings/*.js
+EmpiresInSpace2/JavaScript/Scripts/Buildings/*.js.map
+EmpiresInSpace2/JavaScript/Scripts/Buildings/*.bak
+EmpiresInSpace2/JavaScript/Scripts/Quests/*.js
+EmpiresInSpace2/JavaScript/Scripts/Quests/*.js.map
+EmpiresInSpace2/JavaScript/Scripts/Quests/*.bak
 
 
 EmpiresInSpace2/obj

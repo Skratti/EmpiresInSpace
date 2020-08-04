@@ -2,14 +2,9 @@
 
 
 
-//BaseData contains static data about the game, buildings, tiles, possible research and so on.
+//BaseData contains static data about the game: buildings, tiles, possible research and so on.
 //all user independent data should be stored here
 
-/*
-interface Node extends EventTarget {  
-    getElementsByTagName(name: string): NodeList;
-}
-*/
 
 
 //needed by the ObjectRelations class. equivalent to the sql types in table  [ResearchQuestPrerequisites]

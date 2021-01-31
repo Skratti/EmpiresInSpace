@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SpacegameServer.Core;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,12 +25,22 @@ namespace SpacegameServer.BC
         {
             SpacegameServer.Core.Core core = SpacegameServer.Core.Core.Instance;
 
+            if (core.GalaxyMap.useSolarSystems)
+                return this.colonizeSolarSystemPlanet();
+            else
+                return this.colonizeStarMapPlanet();
+        }
+
+        public string colonizeSolarSystemPlanet()
+        {
+            SpacegameServer.Core.Core core = SpacegameServer.Core.Core.Instance;
+
             //fetch user and ship objects
-            SpacegameServer.Core.Ship ship = core.ships[shipId];           
+            SpacegameServer.Core.Ship ship = core.ships[shipId];
             SpacegameServer.Core.User user = core.users[userId];
-            
+
             //create result data sctructure
-            string ret = "";                        
+            string ret = "";
             XMLGroups.MoveResultTree scan = new XMLGroups.MoveResultTree();
             scan.ships = new List<Core.Ship>();
             scan.stars = new List<Core.SystemMap>();
@@ -46,7 +57,7 @@ namespace SpacegameServer.BC
             Core.Colony newColony = null;
             if (!ship.colonize(user, newname, ref scan.ships, ref newColony, planet))
                 return ret;
-    
+
             scan.ships.Add(ship);
 
             string shipRet = "";
@@ -75,6 +86,62 @@ namespace SpacegameServer.BC
             return shipRet;
         }
 
+        public string colonizeStarMapPlanet()
+        {
+            SpacegameServer.Core.Core core = SpacegameServer.Core.Core.Instance;
 
+            //fetch user and ship objects
+            SpacegameServer.Core.Ship ship = core.ships[shipId];
+            SpacegameServer.Core.User user = core.users[userId];
+
+            //create result data sctructure
+            string ret = "";
+            XMLGroups.MoveResultTree scan = new XMLGroups.MoveResultTree();
+            scan.ships = new List<Core.Ship>();
+            scan.stars = new List<Core.SystemMap>();
+            scan.colonies = new List<Core.Colony>();
+
+            //fetch planet
+
+            if (ship.field.starId == null ) return ret;
+            if (!core.stars.ContainsKey((int)ship.field.starId)) return ret;
+            var planet = core.stars[(int)ship.field.starId];
+           
+            if (planet == null) return ret;
+            if (!user.CanColonize(planet)) return ret;
+            //var MajorColony = 
+
+            //create Colony
+            Core.Colony newColony = null;
+            if (!ship.colonize(user, newname, ref scan.ships, ref newColony, planet))
+                return ret;
+
+            scan.ships.Add(ship);
+
+            string shipRet = "";
+            /*
+            BusinessConnector.Serialize<List<SpacegameServer.Core.Ship>>(scan.ships, ref shipRet, true);
+            //shipRet += ret;
+
+            // remove </ArrayOfShip> , add ret , add </ArrayOfShip>
+            shipRet = shipRet.Substring(0, shipRet.Length - "</ArrayOfShip>".Length);
+            shipRet = shipRet + ret + "</ArrayOfShip>";
+            */
+            SpacegameServer.BC.XMLGroups.Colonize response = new XMLGroups.Colonize();
+            response.respCode = 1;
+            response.Colony = newColony;
+            response.ships = scan.ships;
+            //response.planet = planet;
+
+            response.ColonyPlanet = new XMLGroups.ColonyPlanet(planet.id, planet, planet.surfaceFields);
+            //response.planet2 = new XMLGroups.ColonyPlanets();
+            //response.planet2
+            //response.planets.AddRange(core.planets.Where(e => e.Value.colonyId == colonyId).Select(e => new XMLGroups.ColonyPlanet(e.Value.id, e.Value, e.Value.surfaceFields)));
+
+
+            BusinessConnector.Serialize<SpacegameServer.BC.XMLGroups.Colonize>(response, ref shipRet, true);
+
+            return shipRet;
+        }
     }
 }

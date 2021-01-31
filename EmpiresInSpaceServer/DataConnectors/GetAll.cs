@@ -204,7 +204,8 @@ namespace SpacegameServer.DataConnectors
                     gameState,
                     size,
                     winningTranscendenceConstruct,
-                    isdemo
+                    isdemo,
+                    useSolarSystems
                   FROM [engine].[v_GalaxyMap]",
                   connection);
 
@@ -226,6 +227,8 @@ namespace SpacegameServer.DataConnectors
                         galaxy.winningTranscendenceConstruct = reader.IsDBNull(6) ? 0 : reader.GetInt32(6);
 
                         galaxy.isdemo = reader.GetBoolean(7);
+                        galaxy.useSolarSystems = reader.GetBoolean(8);
+
                         _core.GalaxyMap = galaxy;
                     }
                     catch (Exception ex)
@@ -2079,6 +2082,7 @@ namespace SpacegameServer.DataConnectors
                       ,[settled]
                       ,[ressourceid]
                       ,startingRegion
+                      ,colonyId
                   FROM [engine].[v_StarMap]",
                   connection);
 
@@ -2094,12 +2098,13 @@ namespace SpacegameServer.DataConnectors
                         star.posX = reader.GetInt32(1);
                         star.posY = reader.GetInt32(2);
                         star.systemname = reader.GetString(3);
-                        star.objectid = reader.GetInt16(4);
+                        star.ObjectId = reader.GetInt16(4);
                         star.size = reader.GetInt16(5);
                         star.startsystem = reader.GetByte(6);
                         star.settled = reader.GetByte(7);
                         star.ressourceid = reader.GetByte(8);
                         star.startingRegion = reader.IsDBNull(9) ? null : reader.GetString(9);
+                        star.ColonyId = reader.IsDBNull(10) ? null : (int?)reader.GetInt32(10);
                         _core.stars[id] = star;
 
                         _core.addStarToField(star);
@@ -2145,9 +2150,9 @@ namespace SpacegameServer.DataConnectors
                         planet.x = reader.GetInt32(1);
                         planet.y = reader.GetInt32(2);
                         planet.systemid = reader.GetInt32(3);
-                        planet.objectid = reader.GetInt16(4);
+                        planet.ObjectId = reader.GetInt16(4);
                         planet.fieldSize = reader.GetByte(5);
-                        planet.colonyId = reader.IsDBNull(6) ? null : (int?)reader.GetInt32(6);
+                        planet.ColonyId = reader.IsDBNull(6) ? null : (int?)reader.GetInt32(6);
 
                         _core.planets[id] = planet;
                         _core.stars[planet.systemid].planets.Add(planet);
@@ -2198,11 +2203,22 @@ namespace SpacegameServer.DataConnectors
                        
                         _core.planetSurface[id] = surfaceField;
 
-                        if (!_core.planets.ContainsKey(surfaceField.planetid))
+                        if (_core.GalaxyMap.useSolarSystems)
                         {
-                            _core.writeToLog("bha");
+                            if (!_core.planets.ContainsKey(surfaceField.planetid))
+                            {
+                                _core.writeToLog("PlanetSurafeceFiled could not be added to planet");
+                            }
+                            _core.planets[surfaceField.planetid].surfaceFields.Add(surfaceField);
                         }
-                        _core.planets[surfaceField.planetid].surfaceFields.Add(surfaceField);
+                        else
+                        {                            
+                            if (!_core.stars.ContainsKey(surfaceField.planetid))
+                            {
+                                _core.writeToLog("PlanetSurafeceFiled could not be added to star/planet");
+                            }
+                            _core.stars[surfaceField.planetid].surfaceFields.Add(surfaceField);                            
+                        }
 
                         if (_core.identities.planetSurfaceId.id < id) _core.identities.planetSurfaceId.id = id;
                     }
@@ -3080,7 +3096,12 @@ namespace SpacegameServer.DataConnectors
 
                         _core.addColonyToField(colony);
                         _core.users[userid].colonies.Add(colony);
-                        colony.planet = _core.planets[colony.planetId];
+
+                        if (_core.GalaxyMap.useSolarSystems)
+                            colony.planet = _core.planets[colony.planetId];
+                        else
+                            colony.planet = _core.stars[colony.starId];
+                        
                         colony.planet.colony = colony;
 
                         if (_core.identities.colonyId.id < id) _core.identities.colonyId.id = id;

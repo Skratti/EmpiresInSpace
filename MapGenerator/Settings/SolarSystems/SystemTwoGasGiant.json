@@ -1,0 +1,171 @@
+﻿{
+  // public enum planetTypes { VeryVolcanic = 0, Volcanic = 1, Desert = 2, Water = 3, Land = 4, Earthlike = 5, Jungle = 6, Barren = 7, Ice = 8, NoAtmosphere = 9, HugeGasGiant = 10, SmallGasGiant = 11, StonyMountain = 12, ThickPosinousAtmosphere = 13, VerySparseAsteroids = 14, SparseAsteroids = 15, DenseAsteroids = 16, VeryDenseAsteroids = 17  };
+
+  // 2 gas giants, up to 4 planets, up to 4 asteroid circles
+  // the gas giants are obligatory, and between circle 5,6,7,8,9
+  // The asteroid circles are between  5-10
+  // 1P ,3P ,4P,5A,6G,7A,8G,9P,10P
+
+  "planets": [
+
+    //2 gas giants
+    {
+      "planet": {
+        "planetType": 11,
+        "circle": 6,
+        "probability": 85
+      }
+    },
+    {
+      "planet": {
+        "planetType": 11,
+        "circle": 8,
+        "probability": 85
+      }
+    },
+
+    //Asteroids
+    {
+      "planet": {
+        "planetType": 14,
+        "circle": 5,
+        "probability": 50
+      }
+    },
+    {
+      "planet": {
+        "planetType": 14,
+        "circle": 7,
+        "probability": 50
+      }
+    },
+    {
+      "planet": {
+        "planetType": 14,
+        "circle": 9,
+        "probability": 50
+      }
+    },
+    {
+      "planet": {
+        "planetType": 14,
+        "circle": 10,
+        "probability": 50
+      }
+    },
+    /*
+    //planets 1,3,4,10
+    //name typeId probability
+    //vulcanic 0 35%, toxic 1 15% 10%, desert 2 10% 15%, earthlike 5 25% 30%, barren 7 10% 20%, ice 8 30%
+    
+    //10% 0 planets
+    //20% 1
+    //35% 2
+    //25% 3
+    //10% 4
+    
+    //each spot should have an overall 50%-55% chance
+    */
+    //cirlce 1: vulcanic 0, toxic 1 , desert 2 
+    {
+      "planet": {
+        "planetType": 0,
+        "circle": 1,
+        "probability": 40
+      }
+    },
+    {
+      "planet": {
+        "planetType": 1,
+        "circle": 1,
+        "probability": 15
+      }
+    },
+    {
+      "planet": {
+        "planetType": 2,
+        "circle": 1,
+        "probability": 15
+      }
+    },
+    //2  desert 2 , earthlike 5 
+    {
+      "planet": {
+        "planetType": 2,
+        "circle": 2,
+        "probability": 20
+      }
+    },
+    {
+      "planet": {
+        "planetType": 5,
+        "circle": 2,
+        "probability": 55
+      }
+    },
+
+    //3:  earthlike 5, barren 7, ice 8       
+    {
+      "planet": {
+        "planetType": 5,
+        "circle": 3,
+        "probability": 25
+      }
+    },
+    {
+      "planet": {
+        "planetType": 7,
+        "circle": 3,
+        "probability": 25
+      }
+    },
+    {
+      "planet": {
+        "planetType": 8,
+        "circle": 3,
+        "probability": 25
+      }
+    },
+
+    //4  desert 2 , earthlike 5 , barren 7
+    {
+      "planet": {
+        "planetType": 2,
+        "circle": 4,
+        "probability": 10
+      }
+    },
+    {
+      "planet": {
+        "planetType": 5,
+        "circle": 4,
+        "probability": 35
+      }
+    },
+    {
+      "planet": {
+        "planetType": 7,
+        "circle": 4,
+        "probability": 10
+      }
+    },
+
+    //10  barren 7, ice 8
+    {
+      "planet": {
+        "planetType": 7,
+        "circle": 10,
+        "probability": 20
+      }
+    },
+    {
+      "planet": {
+        "planetType": 8,
+        "circle": 10,
+        "probability": 35
+      }
+    }
+
+
+  ]
+}

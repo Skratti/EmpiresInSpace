@@ -12,14 +12,17 @@ namespace MapGenerator
 
     class DBWriter
     {
+        private Settings settings;
+
         List<Star> Stars;
         MapGenerator.SystemGenerator.Workers.Worker SystemGenerator;
         //public static string connectionString = "Data Source=GK-PC\\SQLEXPRESS;Initial Catalog=FornaxA;Integrated Security=True";
         //public static string connectionString = "Data Source=EMPIRES-AKR\\SQLEXPRESS;Initial Catalog=SculptorDwarf_Live;Integrated Security=True";
-        public static string connectionString = "Data Source = (localdb)\\MSSQLLocalDB;Initial Catalog = Andromeda; Integrated Security = True; Connect Timeout = 30; Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+        public static string connectionString = "Data Source = (localdb)\\MSSQLLocalDB;Initial Catalog = Andromeda3; Integrated Security = True; Connect Timeout = 30; Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
         
-        public DBWriter(List<Star> stars, MapGenerator.SystemGenerator.Workers.Worker systemGenerator)
+        public DBWriter(List<Star> stars, MapGenerator.SystemGenerator.Workers.Worker systemGenerator, Settings _settings)
         {
+            settings = _settings;
             Stars = stars;
             SystemGenerator = systemGenerator;
         }
@@ -45,7 +48,7 @@ namespace MapGenerator
 
         // writes the starmap to DB, and generates for each star a systemmap which uis also written to DB
         // See more at: http://www.sqlteam.com/article/use-sqlbulkcopy-to-quickly-load-data-from-your-client-to-sql-server#sthash.MRQfKJ44.dpuf
-        static void CopyData(SqlConnection destConnection, List<Star> systemElements, MapGenerator.SystemGenerator.Workers.Worker systemGenerator, System.Windows.Forms.TextBox output)
+        private void CopyData(SqlConnection destConnection, List<Star> systemElements, MapGenerator.SystemGenerator.Workers.Worker systemGenerator, System.Windows.Forms.TextBox output)
         {
             using (SqlCommand ins = new SqlCommand("[engine].StarMapInsert", destConnection))
             {
@@ -110,7 +113,7 @@ namespace MapGenerator
 
 
                     // create the system belonging to the star:
-                    if (systemElements[i].StarNebulaType == 1)
+                    if (systemElements[i].StarNebulaType == 1 && settings.CreateSolarSystemOnDBWrite)
                     {
                         tvpParam.Value = dataTable;
                         ins.ExecuteNonQuery();

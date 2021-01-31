@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SpacegameServer.Core;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -1333,7 +1334,7 @@ namespace SpacegameServer.DataConnectors
             return;
         }
 
-        public void saveColonyFull(SpacegameServer.Core.SolarSystemInstance planet, SpacegameServer.Core.Colony colony, bool createSurfaceFiels = true)
+        public void saveColonyFull(Colonizable planet, SpacegameServer.Core.Colony colony, bool createSurfaceFiels = true)
         {
             if (colony == null) return;
 
@@ -1384,7 +1385,7 @@ namespace SpacegameServer.DataConnectors
 
                 SqlParameter tvpParam4 = cmd.Parameters.AddWithValue("@colonyId", colony.id);
 
-                SqlParameter tvpParam5 = cmd.Parameters.AddWithValue("@planetId", planet.id);
+                SqlParameter tvpParam5 = cmd.Parameters.AddWithValue("@planetId", planet.Id);
 
                 List<Task> asynctasks = new List<Task>();
                 asynctasks.Add(cmd.ExecuteNonQueryAsync());
@@ -3213,10 +3214,12 @@ namespace SpacegameServer.DataConnectors
                 command.CommandText =
                     "UPDATE [StarMap] set " +
                     "settled = @settled " +
+                    "colonyId = @colonyId " +
                     ",startingRegion = @startingRegion " +
                     "where [StarMap].[id] = @id ";
 
                 command.Parameters.AddWithValue("@settled", starMap.settled);
+                command.Parameters.AddWithValue("@colonyId", (object)starMap.ColonyId ?? DBNull.Value);
                 command.Parameters.AddWithValue("@startingRegion", (object)starMap.startingRegion ?? DBNull.Value);
                 command.Parameters.AddWithValue("@id", starMap.id);
 

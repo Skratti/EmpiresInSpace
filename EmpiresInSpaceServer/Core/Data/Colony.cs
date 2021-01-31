@@ -69,7 +69,7 @@ namespace SpacegameServer.Core
 
         [System.Web.Script.Serialization.ScriptIgnore]
         [System.Xml.Serialization.XmlIgnoreAttribute]
-        public SolarSystemInstance planet { get; set; }
+        public Colonizable planet { get; set; }
 
         private List<colonyStock> _good;
 
@@ -184,7 +184,17 @@ namespace SpacegameServer.Core
 
         public Tuple<byte, byte> systemXY()
         {
-            return new Tuple<byte, byte>((byte)(this.planet.x), (byte)(this.planet.y));
+            if (Core.Instance.GalaxyMap.useSolarSystems)
+            {
+                var planet = this.planet as SolarSystemInstance;
+                return new Tuple<byte, byte>((byte)(planet.x), (byte)(planet.y));
+            }
+            else
+            {
+                var planet = this.planet as SystemMap;
+                return new Tuple<byte, byte>((byte)(planet.posX), (byte)(planet.posY));
+            }
+            
         }
 
         /// <summary>
@@ -442,7 +452,9 @@ namespace SpacegameServer.Core
         {
             get
             {
-                return planet.x;
+                if (planet is SolarSystemInstance)
+                    return (planet as SolarSystemInstance).x;
+                return 0;
             }
             set
             {
@@ -453,7 +465,9 @@ namespace SpacegameServer.Core
         {
             get
             {
-                return planet.y;
+                if (planet is SolarSystemInstance)
+                    return (planet as SolarSystemInstance).y;
+                return 0;
             }
             set
             {

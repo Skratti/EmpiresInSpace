@@ -36,6 +36,8 @@ namespace MapGenerator.WellSpreadMap
             Settings = settings;
             InitializeComponent();
 
+            roundGalaxy.Checked = settings.MakeRound;
+
             StarGenerator = starGenerator;
             Map = map;
         }

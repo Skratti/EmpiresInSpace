@@ -21,9 +21,9 @@
   "StarsPerPlayer": 3,
   "minDistance": 4, //minimum distance between stars. Should be at least 3
   "distanceBetweenSuns": 6,
-  "starsInRow": 14, // leads to starsInRow^2 suns
-  "xAxis": 14, // stars on xaxis    6 * 103 distanceBetweenSuns * starsInRow
-  "starOffset": 4900,
+  "starsInRow": 8, // leads to starsInRow^2 suns, and leads to a width of ~ (starsInRow * distanceBetweenSuns) + 2 * starOffset
+
+  "starOffset": 20, // added to all stars x and y 
 
   //data for the spiral galaxie generator
   "starsPerArm": 0,
@@ -34,6 +34,10 @@
   "nebulaspread": 0.03, //how far away nebulas can be from the center of the arm
   "starsAtCenterRatio": 0.6,
   "nebulaAtCenterRatio": 0.7,
-  "nebulaAreaDistance": 20
+  "nebulaAreaDistance": 20,
+
+  "CreateSolarSystemOnDBWrite": "true",
+
+  "MakeRound": "true"
 
 }

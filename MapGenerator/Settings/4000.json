@@ -22,7 +22,7 @@
   "minDistance": 4, //minimum distance between stars. Should be at least 3
   "distanceBetweenSuns": 6,
   "starsInRow": 103, // leads to starsInRow^2 suns
-  "xAxis": 618, // 6 * 103 distanceBetweenSuns * starsInRow
+
   "starOffset": 4500,
 
   "starsPerArm": 0,
@@ -36,5 +36,9 @@
   "nebulaAtCenterRatio": 0.6,
   "DrawAreaSize": 1200,
   "NebulaSize": 300,
-  "nebulaAreaDistance": 20
+  "nebulaAreaDistance": 20,
+
+  "CreateSolarSystemOnDBWrite": "true",
+
+  "MakeRound": "true"
 }

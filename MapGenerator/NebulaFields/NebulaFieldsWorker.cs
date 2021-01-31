@@ -33,7 +33,7 @@ namespace MapGenerator
             minDistance = Contract.minDistance;
             distanceBetweenSuns = Contract.distanceBetweenSuns;
             starsInRow = Contract.starsInRow;
-            xAxis = Contract.xAxis;
+            //xAxis = Contract.xAxis;
 
             Textbox = textbox;
             Map = map;

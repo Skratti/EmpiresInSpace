@@ -18,7 +18,7 @@ BEGIN TRAN
 
 --DECLARE @DBServerName   VARCHAR(100) = 'MyServer\Example'  
 DECLARE @DBServerName   VARCHAR(100) = '(localdb)\MSSQLLocalDB'  
-DECLARE @DBName VARCHAR(100) = 'Andromeda'  
+DECLARE @DBName VARCHAR(100) = 'Andromeda3'  
 
 DECLARE @FilePath   VARCHAR(200) = 'C:\EmpiresInSpace\Database\' 
 --DECLARE @FilePath   VARCHAR(200) = 'C:\Users\Admin\Documents\GitHub\EmpiresInSpace\SQL\'

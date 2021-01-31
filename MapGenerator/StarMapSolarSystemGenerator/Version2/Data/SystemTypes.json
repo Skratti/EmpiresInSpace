@@ -1,0 +1,22 @@
+﻿{
+  "StandardTypes": [
+
+    {
+      "probability": 25,
+      "SystemType": "SystemNoGasGiant"
+    },
+    {
+      "probability": 25,
+      "SystemType": "SystemOneGasGiant"
+    },
+    {
+      "probability": 25,
+      "SystemType": "SystemTwoGasGiant"
+    },
+    {
+      "probability": 25,
+      "SystemType": "SystemThreeGasGiant"
+    }
+
+  ]
+}

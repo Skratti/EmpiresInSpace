@@ -456,7 +456,7 @@ class PlanetData extends AreaSpecifications {
         GalaxyData.prototype.update.call(this, XMLStar); //ToDO: 
 
         var X = XMLStar.getElementsByTagName("colonizable")[0].childNodes[0].nodeValue;
-        var colonyId = XMLStar.getElementsByTagName("colonyId")[0].childNodes.length > 0 && XMLStar.getElementsByTagName("colonyId")[0].childNodes[0].nodeValue || null;
+        var colonyId = XMLStar.getElementsByTagName("ColonyId")[0].childNodes.length > 0 && XMLStar.getElementsByTagName("ColonyId")[0].childNodes[0].nodeValue || null;
         if (colonyId != null) colonyId = parseInt(colonyId);
         this.isColonizable = X == 1 ? true : false;
 

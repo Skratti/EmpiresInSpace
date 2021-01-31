@@ -1,10 +1,8 @@
-﻿using Newtonsoft.Json;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,11 +20,11 @@ namespace MapGenerator
         
         GalaxyMap map;
 
-        private int MapSize = 1;
+        private int MapSize = 1; //not used atm
         
         private int DrawAreaSize;
         private int Zoom = 1;
-        private int FieldSize = 1;
+        private int FieldSize = 1; //amount of pixels to use when drawing per coordinate
 
         private int GridSize;
         private bool DrawGrid;
@@ -70,10 +68,13 @@ namespace MapGenerator
 
         public Settings readConfig()
         {
-            string jsonString = File.ReadAllText("./Settings/60.json");
-            
-            Newtonsoft.Json.Linq.JObject json = (Newtonsoft.Json.Linq.JObject)JsonConvert.DeserializeObject(jsonString);
-            Settings settings = json.ToObject<Settings>();
+            string settingsFile = "./Settings/700Flat.json";
+
+            Settings settings = Settings.readConfig(settingsFile);
+
+            settingsTextBox.Text = settingsFile;
+            MapSize = (settings.starOffset * 2) + ((settings.starsInRow - 1) * settings.distanceBetweenSuns);
+            textBox3.Text = MapSize.ToString();
 
             return settings;
         }
@@ -97,7 +98,7 @@ namespace MapGenerator
 
         private void CalcFieldSize()
         {
-            FieldSize = (int)(DrawAreaSize / MapSize) * Zoom;
+            //FieldSize = (int)(DrawAreaSize / MapSize) * Zoom;
             FieldSize = Zoom;           
         }
 
@@ -122,38 +123,77 @@ namespace MapGenerator
             Point screenPoint = new Point(x, y);
             g.FillRectangle(brush, new Rectangle(screenPoint, new Size(FieldSize, FieldSize)));
         }
+
+        private void renderGrid(Graphics g)
+        {
+            var currentGridSize = GridSize * FieldSize;
+            var xOffset = UpperLeftCorner.X % currentGridSize;
+            var yOffset = UpperLeftCorner.Y % currentGridSize;
+
+            using (Pen pen = new Pen(System.Drawing.Color.Gray))
+            {
+
+                for (var i = -xOffset; i < DrawAreaSize; i += currentGridSize)
+                {
+                    Point point1 = new Point(i, 0);
+                    Point point2 = new Point(i, DrawAreaSize);
+
+                    g.DrawLine(pen, point1, point2);
+                }
+
+                for (var j = -yOffset; j < DrawAreaSize; j += currentGridSize)
+                {
+                    Point point1 = new Point(0, j);
+                    Point point2 = new Point(DrawAreaSize, j);
+                    g.DrawLine(pen, point1, point2);
+                }
+
+                g.Flush();
+            }
+        }
+
+        private void renderGameBorder(Graphics g)
+        {
+            var currentGameBorderSize = MapSize * FieldSize;
+            var xOffset = -UpperLeftCorner.X ;
+            var yOffset = -UpperLeftCorner.Y ;
+
+            using (Pen pen = new Pen(System.Drawing.Color.Yellow))
+            {
+                //left up to left down
+                Point point1 = new Point(xOffset, yOffset);
+                Point point2 = new Point(xOffset, currentGameBorderSize - UpperLeftCorner.Y);
+                g.DrawLine(pen, point1, point2);
+
+                //left down to right down
+                point1 = new Point(xOffset, currentGameBorderSize - UpperLeftCorner.Y);
+                point2 = new Point(currentGameBorderSize - UpperLeftCorner.X, currentGameBorderSize - UpperLeftCorner.Y);
+                g.DrawLine(pen, point1, point2);
+
+                //left up to right up
+                point1 = new Point(xOffset, yOffset);
+                point2 = new Point(currentGameBorderSize - UpperLeftCorner.X, yOffset);
+                g.DrawLine(pen, point1, point2);
+
+                //right up to right down
+                point1 = new Point(currentGameBorderSize - UpperLeftCorner.X, yOffset);
+                point2 = new Point(currentGameBorderSize - UpperLeftCorner.X, currentGameBorderSize - UpperLeftCorner.Y);
+                g.DrawLine(pen, point1, point2);
+
+                g.Flush();
+            }
+        }
+
         private void RenderStars(Graphics g)
         {
             g.Clear(Color.Black);
 
             if (DrawGrid)
             {
-                var currentGridSize = GridSize * FieldSize;
-                var xOffset = UpperLeftCorner.X % currentGridSize;
-                var yOffset = UpperLeftCorner.Y % currentGridSize;
-
-                using (Pen pen = new Pen(System.Drawing.Color.Gray))
-                {
-
-                    for (var i =  -xOffset; i < DrawAreaSize; i += currentGridSize)
-                    {
-                        Point point1 = new Point(i, 0);
-                        Point point2 = new Point(i, DrawAreaSize);
-
-                        g.DrawLine(pen, point1, point2);
-                    }
-
-                    for (var j =  -yOffset; j < DrawAreaSize; j += currentGridSize)
-                    {
-                        Point point1 = new Point(0, j);
-                        Point point2 = new Point(DrawAreaSize, j);
-                        g.DrawLine(pen, point1, point2);
-                    }
-
-                    g.Flush();
-                }
+                renderGrid(g);
             }
 
+            renderGameBorder(g);
 
             //draw normal stars
             using (Brush brush = new SolidBrush(System.Drawing.Color.White))
@@ -270,7 +310,30 @@ namespace MapGenerator
 
             SpreadController.ShowDialog();
 
-            MapSize = settings.xAxis;
+            starsCount.Text = map.stars.Count().ToString();
+
+            if (!settings.CreateSolarSystemOnDBWrite)
+            {
+                MapGenerator.StarMapSolarSystemGenerator.SystemGeneratorWorker2 generator = new StarMapSolarSystemGenerator.SystemGeneratorWorker2();
+
+                List<Star> newPlants= new List<Star>();
+                foreach (var star in map.stars.Where(f => f.StarNebulaType == 1))
+                {
+                    StarMapSolarSystemGenerator.SolarSystem system = generator.createSystem( true, star.Type, star.StartingSystem, star);
+
+                    foreach (var planetOrAsteroid in system.systemElements.Where(f => f.type < 45))
+                    {
+                        newPlants.Add(starGenerator.MakePlanetFromSystem(planetOrAsteroid));                        
+                    }
+                }
+
+                foreach (var planet in newPlants)
+                {
+                    map.addStar(planet, false, false);
+                }
+            }
+
+            //MapSize = settings.xAxis;
 
             this.Refresh();
         }
@@ -294,9 +357,10 @@ namespace MapGenerator
 
         private void button3_Click(object sender, EventArgs e)
         {
-            //var generator = new SystemGenerator.SystemGeneratorWorker();
-            var generator = new SystemGenerator.SystemGeneratorWorker2();
-            var writer = new DBWriter(map.stars, generator);
+            
+            var solarSystemGenerator = new SystemGenerator.SystemGeneratorWorker2();
+            
+            var writer = new DBWriter(map.stars, solarSystemGenerator, settings);
             writer.bulkInsert(textBox1);
             writer.UpdateAfterCopy(textBox1);
             button3.Enabled = false;
@@ -545,7 +609,7 @@ namespace MapGenerator
 
             SpreadController.ShowDialog();
 
-            MapSize = settings.xAxis;
+            //MapSize = settings.xAxis;
 
             this.Refresh();
         }
@@ -553,6 +617,16 @@ namespace MapGenerator
         private void button6_Click(object sender, EventArgs eA)
         {
             map.CleanUp();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 

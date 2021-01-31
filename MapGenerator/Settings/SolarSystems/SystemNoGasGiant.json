@@ -1,0 +1,246 @@
+﻿{
+  // public enum planetTypes { VeryVolcanic = 0, Volcanic = 1, Desert = 2, Water = 3, Land = 4, Earthlike = 5, Jungle = 6, Barren = 7, Ice = 8, NoAtmosphere = 9, HugeGasGiant = 10, SmallGasGiant = 11, StonyMountain = 12, ThickPosinousAtmosphere = 13, VerySparseAsteroids = 14, SparseAsteroids = 15, DenseAsteroids = 16, VeryDenseAsteroids = 17  };
+  
+  "planets": [
+    {
+       //case planetTypes.VeryVolcanic:
+       //                 addPropabilities(0, 20, 50, planetType);
+       //                 addPropabilities(20, 30, 25, planetType);
+       //                 addPropabilities(30, 40, 10, planetType);
+      "planet": {
+        "planetType": 0,
+        "ringFrom": 0,
+        "ringTo": 20,
+        "propability": 50
+      }
+    },
+    {
+      "planet": {
+        "planetType": 0,
+        "ringFrom": 20,
+        "ringTo": 30,
+        "propability": 25
+      },
+      {
+       "planet": {
+          "planetType": 0,
+          "ringFrom": 30,
+          "ringTo": 40,
+          "propability": 10
+        }
+      },
+      
+      //case planetTypes.Volcanic: 1
+      //                  addPropabilities(0, 20, 15, planetType);
+      //                  addPropabilities(20, 30, 30, planetType);
+      //                  addPropabilities(30, 40, 25, planetType);
+      //                  addPropabilities(40, 50, 15, planetType);
+      {
+        "planet": {
+          "planetType": 1,
+          "ringFrom": 0,
+          "ringTo": 20,
+          "propability": 15
+        }
+      },{
+        "planet": {
+          "planetType": 1,
+          "ringFrom": 20,
+          "ringTo": 30,
+          "propability": 30
+        }
+      },{
+        "planet": {
+          "planetType": 1,
+          "ringFrom": 30,
+          "ringTo": 40,
+          "propability": 25
+        }
+      },{
+        "planet": {
+          "planetType": 1,
+          "ringFrom": 40,
+          "ringTo": 50,
+          "propability": 15
+        }
+      },
+      //              //
+      //              case planetTypes.Desert: 2
+      //                  addPropabilities(0, 20, 5, planetType);
+      //                  addPropabilities(20, 30, 20, planetType);
+      //                  addPropabilities(30, 40, 40, planetType);
+      //                  addPropabilities(40, 50, 30, planetType);
+      //                  addPropabilities(50, 60, 10, planetType);
+{
+        "planet": {
+          "planetType": 0,
+          "ringFrom": 30,
+          "ringTo": 40,
+          "propability": 10
+        }
+      },{
+        "planet": {
+          "planetType": 0,
+          "ringFrom": 30,
+          "ringTo": 40,
+          "propability": 10
+        }
+      },{
+        "planet": {
+          "planetType": 0,
+          "ringFrom": 30,
+          "ringTo": 40,
+          "propability": 10
+        }
+      },{
+        "planet": {
+          "planetType": 0,
+          "ringFrom": 30,
+          "ringTo": 40,
+          "propability": 10
+        }
+      },{
+        "planet": {
+          "planetType": 0,
+          "ringFrom": 30,
+          "ringTo": 40,
+          "propability": 10
+        }
+      },
+      //              case planetTypes.Water: 3
+      //                  addPropabilities(20, 30, 5, planetType);
+      //                  addPropabilities(30, 40, 10, planetType);
+      //                  addPropabilities(40, 50, 10, planetType);
+      //                  addPropabilities(50, 60, 5, planetType);
+{
+        "planet": {
+          "planetType": 0,
+          "ringFrom": 30,
+          "ringTo": 40,
+          "propability": 10
+        }
+      },{
+        "planet": {
+          "planetType": 0,
+          "ringFrom": 30,
+          "ringTo": 40,
+          "propability": 10
+        }
+      },{
+        "planet": {
+          "planetType": 0,
+          "ringFrom": 30,
+          "ringTo": 40,
+          "propability": 10
+        }
+      },{
+        "planet": {
+          "planetType": 0,
+          "ringFrom": 30,
+          "ringTo": 40,
+          "propability": 10
+        }
+      },
+      //              case planetTypes.Land: 4
+      //                  addPropabilities(20, 30, 10, planetType);
+      //                  addPropabilities(30, 40, 25, planetType);
+      //                  addPropabilities(40, 50, 25, planetType);
+      //                  addPropabilities(50, 60, 15, planetType);
+{
+        "planet": {
+          "planetType": 0,
+          "ringFrom": 30,
+          "ringTo": 40,
+          "propability": 10
+        }
+      },{
+        "planet": {
+          "planetType": 0,
+          "ringFrom": 30,
+          "ringTo": 40,
+          "propability": 10
+        }
+      },{
+        "planet": {
+          "planetType": 0,
+          "ringFrom": 30,
+          "ringTo": 40,
+          "propability": 10
+        }
+      },{
+        "planet": {
+          "planetType": 0,
+          "ringFrom": 30,
+          "ringTo": 40,
+          "propability": 10
+        }
+      },
+      //              case planetTypes.Earthlike:5
+      //                  addPropabilities(20, 30, 10, planetType);
+      //                  addPropabilities(30, 40, 25, planetType);
+      //                  addPropabilities(40, 50, 25, planetType);
+      //                  addPropabilities(50, 60, 15, planetType);
+{
+        "planet": {
+          "planetType": 0,
+          "ringFrom": 30,
+          "ringTo": 40,
+          "propability": 10
+        }
+      },{
+        "planet": {
+          "planetType": 0,
+          "ringFrom": 30,
+          "ringTo": 40,
+          "propability": 10
+        }
+      },{
+        "planet": {
+          "planetType": 0,
+          "ringFrom": 30,
+          "ringTo": 40,
+          "propability": 10
+        }
+      },{
+        "planet": {
+          "planetType": 0,
+          "ringFrom": 30,
+          "ringTo": 40,
+          "propability": 10
+        }
+      },
+      //              case planetTypes.Jungle:6
+      //                  addPropabilities(20, 60, 10, planetType);
+{
+        "planet": {
+          "planetType": 0,
+          "ringFrom": 30,
+          "ringTo": 40,
+          "propability": 10
+        }
+      },
+      //              case planetTypes.Barren:7
+      //                  addPropabilities(20, 60, 30, planetType);
+      //                  break;
+      //              case planetTypes.Ice:8
+      //                  addPropabilities(40, 70, 30, planetType);
+      //                  addPropabilities(70, 100, 50, planetType);
+      //                  break;
+      //              case planetTypes.NoAtmosphere:9
+      //                  addPropabilities(0, 100, 15, planetType);
+      //                  break;
+      //              case planetTypes.HugeGasGiant:10
+      //                  addPropabilities(50, 80, 20, planetType);
+      //                  break;
+      //              case planetTypes.SmallGasGiant:11
+      //                  addPropabilities(50, 100, 20, planetType);
+      //                  break;
+      //              case planetTypes.StonyMountain:12
+      //                  addPropabilities(0, 100, 15, planetType);
+      //                  break;
+      //              case planetTypes.ThickPosinousAtmosphere:13
+      //                  addPropabilities(10, 20, 15, planetType);
+      //                  break;
+
+  ]
+}

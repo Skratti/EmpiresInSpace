@@ -218,7 +218,7 @@ namespace SpacegameServer.Core
 
         public Field nextFreeNonSystem()
         {
-            int size = 20;
+            int size = Core.Instance.GalaxyMap.size;
 
             int targetRegionId;
 
@@ -428,10 +428,11 @@ namespace SpacegameServer.Core
     }
     public static class GeometryIndex 
     {
-        public static int startXY = 4000;   //the upper left ccordinates
+        
+        public static int startXY = 0; //0   //the upper left ccordinates
 
 
-        public static readonly int regionsInRow = 200;       // leads to 200^2 regions -> ~120000 suns //ToDo: this leads to a maximum siz of the world. Units should not leave the area...
+        public static readonly int regionsInRow = 41;// 41;       // leads to 200^2 regions -> ~120000 suns //ToDo: this leads to a maximum siz of the world. Units should not leave the area...
         public static readonly int regionSize = 10;
         public static List<int> neighbours = new List<int>(); //list of summands to get the ids of the 8 neighbouring regions
         public static Hashtable allFields = new Hashtable();

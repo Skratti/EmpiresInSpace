@@ -3,8 +3,8 @@ print '05 fillTablesWithGameData.sql'
 
 delete from GalaxyMap;
 go
-  insert into GalaxyMap (id,[galaxyName],[objectId],[size], gameState)
-  select 	1,	'Centaurus A',	1,	10000,	2
+  insert into GalaxyMap (id,[galaxyName],[objectId],[size], gameState, useSolarSystems)
+  select 	1,	'Andromeda',	1,	400,	2 , 1
 go
 print '------------------'
 go

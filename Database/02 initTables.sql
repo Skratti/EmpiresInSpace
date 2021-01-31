@@ -1230,7 +1230,8 @@ create TABLE  [dbo].[GalaxyMap]
 	colonyCount int not null default 0,
 	transcendenceRequirement int not null default 0,
 	gameState smallint not null default 1,   -- 0 : coming soon (with date) // 1: open for registration // 2: running // 3 : running and closed // 4: stopped-finished
-	winningTranscendenceConstruct int
+	winningTranscendenceConstruct int,
+	useSolarSystems bit not null default 1
 	constraint GalaxyMap_primary primary key clustered (id)
 );
 
@@ -1248,6 +1249,7 @@ CREATE TABLE  [dbo].[StarMap]
 	[positionY] [int] NOT NULL DEFAULT ((5000)),
 	[positionX] [int] NOT NULL DEFAULT ((5000)),
 	[startingRegion] [nvarchar](10) NULL,
+	colonyId int, 
 	constraint starMap_primary primary key clustered (id)
 );
 
@@ -1361,8 +1363,7 @@ update PlanetSurface set id = PlanetSurfaceId
 -- Planet Surface as terrainMap
 CREATE TABLE [dbo].[PlanetSurface]  (
 	id bigint not null ,	
-	planetId INT NOT NULL
-		references [dbo].[SolarSystemInstances](id), --on update cascade on delete cascade,
+	planetId INT NOT NULL,
 	X TINYINT NOT NULL,
 	Y TINYINT NOT NULL,
 	--position geometry NOT NULL,		
@@ -1964,8 +1965,7 @@ CREATE TABLE [dbo].[Colonies]  (
 	--scanBox geometry,		
 	starId INT NOT NULL
 		references [dbo].[StarMap](id) on update no action on delete no action,
-	planetId INT  NOT NULL
-		references [dbo].[SolarSystemInstances](id) on update no action on delete no action,
+	planetId INT  NOT NULL,
 	shipInConstruction int,
 	constructionDuration int not null default 0,	
 	[population] bigint not null default 1000000000,

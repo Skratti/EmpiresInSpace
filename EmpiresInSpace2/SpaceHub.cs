@@ -478,7 +478,7 @@ namespace EmpiresInSpace
                 {
                     int starId = (int)Ship.field.starId;
                     SpacegameServer.Core.SystemMap star = SpacegameServer.Core.Core.Instance.stars[starId];
-                    if (!(star.objectid > 4999 && star.objectid < 5005)) return;
+                    if (!(star.ObjectId > 4999 && star.ObjectId < 5005)) return;
                 }
 
                 //check that the gravity generator exists on ship

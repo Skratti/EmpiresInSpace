@@ -403,12 +403,12 @@ namespace SpacegameServer.Core
             if (Pirate == null) return;
 
             //check 10 sectors (20x20) from -4960 - 5060
-            for (int x = 0; x < 10; x++)
+            for (int x = 0; x < 20; x++)
             {
-                for (int y = 0; y < 10; y++)
+                for (int y = 0; y < 20; y++)
                 {
-                    var X = (x * 20) + 4900;
-                    var Y = (y * 20) + 4900;
+                    var X = (x * 20);
+                    var Y = (y * 20);
                     var width = 20;
 
                     //1/5 chance to generate a pirate per turn in this area:                    
@@ -431,8 +431,14 @@ namespace SpacegameServer.Core
                         areaX = Lockable.rnd.Next(0, 20);
                         areaY = Lockable.rnd.Next(0, 20);
 
+                        if (X + areaX > core.GalaxyMap.size || Y + areaY > core.GalaxyMap.size)
+                        {
+                            securityCounter--;
+                            continue;
+                        }
+
                         //check that the place is empty - no star, no ships
-                        var targetRegionId = GeometryIndex.calcRegionId(X + areaX, Y + areaY);
+                            var targetRegionId = GeometryIndex.calcRegionId(X + areaX, Y + areaY);
                         var targetField = GeometryIndex.regions[targetRegionId].findOrCreateField(X + areaX, Y + areaY);
                         if (targetField.starId == null || core.stars[(int)targetField.starId].size == 0)
                         {
@@ -695,9 +701,9 @@ namespace SpacegameServer.Core
                         short goodId = 1;
                         int starId = (int)ship.field.starId;
                         SpacegameServer.Core.SystemMap star = SpacegameServer.Core.Core.Instance.stars[starId];
-                        if (!(star.objectid > 4999 && star.objectid < 5005)) continue;
+                        if (!(star.ObjectId > 4999 && star.ObjectId < 5005)) continue;
 
-                        switch (star.objectid)
+                        switch (star.ObjectId)
                         {
                             case 5000:
                                 goodId = 701;

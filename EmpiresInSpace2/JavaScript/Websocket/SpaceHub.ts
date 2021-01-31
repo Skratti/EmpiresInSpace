@@ -21,6 +21,7 @@ interface SpaceServer {
     CreateTrade(shipId: number, Offered: any, Requested: any): any;
     DeleteMyTrade(tradeId: number);
     FetchRoutes(): any;
+    FetchAllData(): any;
 }
 
 interface HubProxy {
@@ -34,7 +35,7 @@ module SpaceHub {
     export function RegisterEvents() {
         $.connection.spaceHub.client.ServerRestart = ServerRestart;
 
-        /*
+        
         $.connection.spaceHub.client.newgalacticevent = GalacticEventsModule.NewGalacticEvent;
         $.connection.spaceHub.client.broadcastMessage = Chat.BroadcastMessage;
         $.connection.spaceHub.client.chatremoveuser = Chat.removeUserFromChat;
@@ -48,7 +49,7 @@ module SpaceHub {
         
         $.connection.spaceHub.client.NewTradeOffer = TradeOffersModule.SendNewTrade;          
         $.connection.spaceHub.client.DeleteTrade = TradeOffersModule.DeleteTrade;          
-        */
+        
         
     }
 

@@ -210,7 +210,7 @@ namespace SpacegameServer
         void removeInvite(int allianceId, int userId);
         void saveColonies(SpacegameServer.Core.Colony colony);
 
-        void saveColonyFull(SpacegameServer.Core.SolarSystemInstance planet, SpacegameServer.Core.Colony colony, bool createSurfaceFiels = true);
+        void saveColonyFull(SpacegameServer.Core.Colonizable planet, SpacegameServer.Core.Colony colony, bool createSurfaceFiels = true);
 
         void saveMinorColony(SpacegameServer.Core.SolarSystemInstance planet, int colonyId);
 

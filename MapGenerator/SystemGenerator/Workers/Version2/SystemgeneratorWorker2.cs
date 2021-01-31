@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 
 namespace MapGenerator.SystemGenerator
 {
+  
+
     //Both these classes are used to detect if, and what kind of type, a planet is on an orbit (circle) around  the sun
     public class PlanetChance
     {

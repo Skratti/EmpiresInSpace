@@ -114,73 +114,104 @@
       
     
     <% Response.Write(simplePaths()); %>
-    <script type="text/javascript" src="js/helpers.js"> </script>
+    <script type="text/javascript" src="JavaScript/Labels.js"> </script>
+    <script type="text/javascript" src="JavaScript/Globals.js"> </script>
+    <script type="text/javascript" src="JavaScript/Helpers.js"> </script>
+    <script type="text/javascript" src="JavaScript/Websocket/ServerEvents.js"> </script>
 
-    <script type="text/javascript" src="js/globals.js"> </script>
-    <script type="text/javascript" src="js/StarMapQuadTree.js"> </script>
-    <script type="text/javascript" src="js/serverEvents.js"> </script>
+    <script type="text/javascript" src="JavaScript/RealmStatistics.js"> </script>
 
-    <script type="text/javascript" src="js/Labels.js"> </script>
-   
-    <script type="text/javascript" src="js/RealmStatistics.js"> </script>
+    <script type="text/javascript" src="JavaScript/BaseClasses/BaseData.js"> </script>
+    <script type="text/javascript" src="JavaScript/KeyMap.js"> </script>
+    <script type="text/javascript" src="JavaScript/BaseClasses/ImageCanvasCache.js"> </script>
+    <script type="text/javascript" src="JavaScript/MainObject.js"> </script>
 
-    <script type="text/javascript" src="js/BaseData.js"> </script>
-    <script type="text/javascript" src="js/KeyMap.js"> </script>
-    <script type="text/javascript" src="js/ImageCanvasCache.js"> </script>
+    <script type="text/javascript" src="JavaScript/UserClasses/Communication.js"> </script>
+    <script type="text/javascript" src="JavaScript/UserClasses/user.js"> </script>
+    <script type="text/javascript" src="JavaScript/UserClasses/Alliances.js"> </script>
+    <script type="text/javascript" src="JavaScript/UserClasses/messages.js"> </script>
+    <script type="text/javascript" src="JavaScript/UserClasses/CombatMessage.js"> </script>
 
-    <script type="text/javascript" src="js/mainObject.js"> </script>
+    <script type="text/javascript" src="JavaScript/Map2/Data.js"> </script>
+    <script type="text/javascript" src="JavaScript/Map2/GeometryIndex.js"> </script>
+    <script type="text/javascript" src="JavaScript/Map2/Load.js"> </script>
 
-    <script type="text/javascript" src="js/Communication.js"> </script>
-    <script type="text/javascript" src="js/user.js"> </script>
-    <script type="text/javascript" src="js/Alliances.js"> </script>
-    <script type="text/javascript" src="js/messages.js"> </script>
-    <script type="text/javascript" src="js/CombatMessage.js"> </script>
 
-    <script type="text/javascript" src="js/objects.js"> </script>
-    <script type="text/javascript" src="js/Buildings.js"> </script>
-    <script type="text/javascript" src="js/colonies.js"> </script>
+    <script type="text/javascript" src="JavaScript/Map/SpaceObject.js"> </script>
+    <script type="text/javascript" src="JavaScript/Map/Tile.js"> </script>
+    <script type="text/javascript" src="JavaScript/Map/StarMapQuadTree.js"> </script>
+    <script type="text/javascript" src="JavaScript/Map/TileMap.js"> </script>
+    <script type="text/javascript" src="JavaScript/Map/FogOfWar.js"> </script> 
+    <script type="text/javascript" src="JavaScript/Map/areaData.js"> </script> 
+    <script type="text/javascript" src="JavaScript/Map/Pathfinder.js"> </script>
 
-    <script type="text/javascript" src="js/interface.js"> </script>
-    <script type="text/javascript" src="js/userInput.js"> </script>
+    <script type="text/javascript" src="JavaScript/UserClasses/Buildings.js"> </script>
+    <script type="text/javascript" src="JavaScript/UserClasses/colonies.js"> </script>
 
-    <script type="text/javascript" src="js/Diplomacy.js"> </script>
-    <script type="text/javascript" src="js/TileMap.js"> </script>
-    <script type="text/javascript" src="js/FogOfWar.js"> </script>
-    <script type="text/javascript" src="js/ships.js"> </script>
-    <script type="text/javascript" src="js/areaData.js"> </script>
-    <script type="text/javascript" src="js/ShipTemplates.js"> </script>   
-    <script type="text/javascript" src="js/Quests.js"> </script>
-    <script type="text/javascript" src="js/TradeOffers.js"> </script>
+    <script type="text/javascript" src="JavaScript/interface.js"> </script>
+    <script type="text/javascript" src="JavaScript/DrawCanvas.js"> </script>
+    <script type="text/javascript" src="JavaScript/userInput.js"> </script>
 
-    <script type="text/javascript" src="js/ElementGenerator.js"> </script>
-    <script type="text/javascript" src="js/GoodsTransfer.js"> </script>
-    <script type="text/javascript" src="js/Pathfinder.js"> </script>
 
-    <script type="text/javascript" src="js/Scripts/Scripts.js"> </script>
+    <script type="text/javascript" src="JavaScript/Panels/Diplomacy.js"> </script>
 
-    <script type="text/javascript" src="js/SpaceHub.js"> </script>
-    <script type="text/javascript" src="js/GalacticEvents.js"> </script>
-    <script type="text/javascript" src="js/Chat.js"> </script>
-    <script type="text/javascript" src="js/UserSpecifications.js"> </script>
-    <script type="text/javascript" src="js/DialogWindows.js"> </script>
 
-    <script type="text/javascript" src="js/TradeOfferForm.js"></script>
-    <script type="text/javascript" src="js/TradeCreateOffer.js"></script>
-    <script type="text/javascript" src="js/TradeOffersListPage.js"></script>
 
-    <script type="text/javascript" src="js/BuildModulesForm.js?version=<%Response.Write(versionString());%>"></script> 
+    <script type="text/javascript" src="JavaScript/UserClasses/ships.js"> </script>
+    <script type="text/javascript" src="JavaScript/UserClasses/ShipTemplates.js"> </script>   
+    <script type="text/javascript" src="JavaScript/UserClasses/Quests.js"> </script>
+    <script type="text/javascript" src="JavaScript/UserClasses/TradeOffers.js"> </script>
 
-    <script type="text/javascript" src="js/gameOnload.js"> </script>
+
+    <script type="text/javascript" src="JavaScript/Panels/ElementGenerator.js"> </script>
+    <script type="text/javascript" src="JavaScript/Panels/GoodsTransfer.js"> </script>
+
+
+    <script type="text/javascript" src="JavaScript/Scripts/Scripts.js"> </script>
+
+
+    <script type="text/javascript" src="JavaScript/BaseClasses/GalacticEvents.js"> </script>
+    <script type="text/javascript" src="JavaScript/Panels/Chat.js"> </script>
+    <script type="text/javascript" src="JavaScript/Panels/UserSpecifications.js"> </script>
+    <script type="text/javascript" src="JavaScript/Panels/DialogWindows.js"> </script>
+
+    <script type="text/javascript" src="JavaScript/Panels/TradeOfferForm.js"></script>
+    <script type="text/javascript" src="JavaScript/Panels/TradeCreateOffer.js"></script>
+    <script type="text/javascript" src="JavaScript/Panels/TradeOffersListPage.js"></script>
+
+    <script type="text/javascript" src="JavaScript/Panels/BuildModulesForm.js?version=<%Response.Write(versionString());%>"></script> 
+
+
+    <script type="text/javascript" src="JavaScript/Websocket/SpaceHub.js"> </script>
+    <script type="text/javascript" src="JavaScript/StartUp.js"> </script>
   
-  
-    
-         <!--    
-      
+    <script type="text/javascript" src="JQuery/three.min.js"></script>    
+    <script type="text/javascript" src="JavaScript/Renderer/ManageAreaObjects.js"> </script>
+    <script type="text/javascript" src="JavaScript/Renderer/Render.js"> </script>
+
+    <!--          
     <% Response.Write(compiledPaths()); %>              
-    <script type="text/javascript" src="Compiled/main.js?version=<%Response.Write(versionString());%>"></script>         
-       -->
+    <script type="text/javascript" src="Compiled/main.js?version=<%Response.Write(versionString());%>"></script>             
+    -->
+
 </head>
 <body oncontextmenu="return false;">
+
+    <div id="log"  style="position:fixed; right:0px; background-color:#333333; background-color:#333333aa; display:inline-block;color:white;padding:32px;">
+        <div id="fps">60</div>
+        <div id="mapSize">1000x1000</div>
+        <div id="elementsInMap">The amount of elements (each will be represented by a sprite) of the map</div>
+        <div id="areaSize">AreaSize: 100x100</div>
+        <div><a id="imageType" href="#" onclick="setImageType();return false;" style="color:white">Nebula image</a></div>
+        <div id="centeredOn">Centered on areaId - the center area and all surrounding ones are added to the scene</div>
+        <div id="AreasinScene">The number of areas added to the scene - near the border of the game area the number of areas in scene will be lower than 9</div>
+        <div id="elementsInScene">The amount of elements added to the scene</div>
+        <div id="tileSizeOnScreen">The tileSize (depending on zoom)</div>
+        <div id="cameraOverField">Center Coordinates:</div>
+        <div id="mouseOverPixel">Mouse over Pixel: X Y</div>
+        <div id="mouseOverField">Mouse over: X Y</div>
+    </div>
+
     <!--<form id="form1" runat="server">-->
     <div id="bodyOfAll">
         <div id="loader">
@@ -316,7 +347,7 @@
 			</div>
 
             
-            <div id="Rank" class="MenuBackground" title="x">
+            <div id="Rank" class="MenuBackground" title="x" onclick='switchRenderer();'>
 				
 			</div>      
             
@@ -396,5 +427,7 @@
         
 
     <!--</form>-->
-</body>
+    </body>
+
+    
 </html>

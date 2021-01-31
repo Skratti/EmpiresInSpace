@@ -1519,7 +1519,8 @@ AS
 		 colonyCount,
 		 transcendenceRequirement,
 		 gameState,
-		 winningTranscendenceConstruct
+		 winningTranscendenceConstruct,
+         useSolarSystems
   FROM   [galaxymap]; 
 
 go 
@@ -1617,7 +1618,8 @@ AS
          startsystem, 
          settled, 
          ressourceid ,
-		 startingRegion
+		 startingRegion,
+         colonyId
   FROM   [starmap]; 
 
 go 

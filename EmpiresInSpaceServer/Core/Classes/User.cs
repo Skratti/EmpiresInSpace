@@ -529,16 +529,16 @@ namespace SpacegameServer.Core
         }
 
 
-        public bool CanColonize(SolarSystemInstance planet){
-            if (planet.objectid == 24 ||
-                planet.objectid == 25 ||
-                planet.objectid == 26 ||
-                planet.objectid == 34 ||
-                planet.objectid == 35 ||
-                planet.objectid == 36) return true;
+        public bool CanColonize(Colonizable planet){
+            if (planet.ObjectId == 24 ||
+                planet.ObjectId == 25 ||
+                planet.ObjectId == 26 ||
+                planet.ObjectId == 34 ||
+                planet.ObjectId == 35 ||
+                planet.ObjectId == 36) return true;
 
             //desert
-            if (planet.objectid == 27 || planet.objectid == 38)
+            if (planet.ObjectId == 27 || planet.ObjectId == 38)
             {
                 if (this.hasResearch(300))
                 {
@@ -548,7 +548,7 @@ namespace SpacegameServer.Core
             }
 
             //arctic
-            if (planet.objectid == 28 || planet.objectid == 39)
+            if (planet.ObjectId == 28 || planet.ObjectId == 39)
             {
                 if (this.hasResearch(301))
                 {
@@ -558,7 +558,7 @@ namespace SpacegameServer.Core
             }
 
             //barren
-            if (planet.objectid == 29 || planet.objectid == 40)
+            if (planet.ObjectId == 29 || planet.ObjectId == 40)
             {
                 if (this.hasResearch(302))
                 {
@@ -568,7 +568,7 @@ namespace SpacegameServer.Core
             }
 
             //asteroid
-            if (planet.objectid == 44)
+            if (planet.ObjectId == 44)
             {
                 if (this.hasResearch(303))
                 {
@@ -578,7 +578,7 @@ namespace SpacegameServer.Core
             }
 
             //vulcanic
-            if (planet.objectid == 30 || planet.objectid == 41)
+            if (planet.ObjectId == 30 || planet.ObjectId == 41)
             {
                 if (this.hasResearch(304))
                 {
@@ -588,7 +588,7 @@ namespace SpacegameServer.Core
             }
 
             //toxic
-            if (planet.objectid == 31 || planet.objectid == 42)
+            if (planet.ObjectId == 31 || planet.ObjectId == 42)
             {
                 if (this.hasResearch(305))
                 {
@@ -984,21 +984,38 @@ namespace SpacegameServer.Core
         private static SystemMap FindStartingSystem(int x, int y)
         {
             SystemMap startingSystem = null;
-            
-            double distance = 5000 * 5000;
-            foreach (var entry in Core.Instance.stars)
+
+            if (Core.Instance.GalaxyMap.useSolarSystems)
             {
-                var star = entry.Value;
-                if (star.startsystem == 0) continue;
-                if (star.settled == 1) continue;
-                //var currentDistance = Math.Sqrt(((star.posX - x) * (star.posX - x)) + ((star.posY - y) * (star.posY - y)));
-                var currentDistance = Math.Max(Math.Abs(star.posX - x), Math.Abs(star.posY - y));
-                if (currentDistance < distance)
+                double distance = 5000 * 5000;
+                foreach (var entry in Core.Instance.stars.Where(e => e.Value.startsystem == 1 && e.Value.settled == 0))
                 {
-                    distance = currentDistance;
-                    startingSystem = star;
+                    var star = entry.Value;
+                    //var currentDistance = Math.Sqrt(((star.posX - x) * (star.posX - x)) + ((star.posY - y) * (star.posY - y)));
+                    var currentDistance = Math.Max(Math.Abs(star.posX - x), Math.Abs(star.posY - y));
+                    if (currentDistance < distance)
+                    {
+                        distance = currentDistance;
+                        startingSystem = star;
+                    }
                 }
             }
+            else
+            {
+                double distance = 5000 * 5000;
+                foreach (var entry in Core.Instance.stars.Where(e => e.Value.colonizable == 1 && e.Value.settled == 0))
+                {
+                    var star = entry.Value;
+                    //var currentDistance = Math.Sqrt(((star.posX - x) * (star.posX - x)) + ((star.posY - y) * (star.posY - y)));
+                    var currentDistance = Math.Max(Math.Abs(star.posX - x), Math.Abs(star.posY - y));
+                    if (currentDistance < distance)
+                    {
+                        distance = currentDistance;
+                        startingSystem = star;
+                    }
+                }
+            }
+
 
             return startingSystem;
         }
@@ -1014,7 +1031,8 @@ namespace SpacegameServer.Core
             
             if (String.IsNullOrEmpty(startingRegion))
             {
-                startingSystem = FindStartingSystem(5000, 5000); 
+                int centerOfMap = Core.Instance.GalaxyMap.size / 2;
+                startingSystem = FindStartingSystem(centerOfMap, centerOfMap); 
             }
             else
             {
@@ -1086,9 +1104,10 @@ namespace SpacegameServer.Core
 
             if (startingSystem == null) return false;
 
-
-            SpacegameServer.Core.NodeQuadTree.BoundarySouthWest boundarySouthWest = new SpacegameServer.Core.NodeQuadTree.BoundarySouthWest(5000 - 4, 5000 - 4);
-            SpacegameServer.Core.NodeQuadTree.Bounding NodeQuadTreeBounding = new SpacegameServer.Core.NodeQuadTree.Bounding(boundarySouthWest, 8);
+            //search for the central Node to add the user to it
+            int center = Core.Instance.GalaxyMap.size / 2;
+            SpacegameServer.Core.NodeQuadTree.BoundarySouthWest boundarySouthWest = new SpacegameServer.Core.NodeQuadTree.BoundarySouthWest(center - 10, center - 10);
+            SpacegameServer.Core.NodeQuadTree.Bounding NodeQuadTreeBounding = new SpacegameServer.Core.NodeQuadTree.Bounding(boundarySouthWest, 20);
             List<int> nearby = Core.Instance.nodeQuadTree.queryRange(NodeQuadTreeBounding);       
 
             //var node = Core.Instance.commNodes.First().Value;
@@ -1119,7 +1138,7 @@ namespace SpacegameServer.Core
 
             try
             {
-                //check after locking
+                //check again after locking
                 if (startingSystem.settled == 1)
                 {
                     LockingManager.unlockAll(elementsToLock);

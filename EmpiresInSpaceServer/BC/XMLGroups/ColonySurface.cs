@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SpacegameServer.Core;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -25,14 +26,14 @@ namespace SpacegameServer.BC.XMLGroups
 
         public int Id;
 
-        public Core.SolarSystemInstance PlanetData;
+        public Colonizable PlanetData;
 
         public ColonyPlanet()
         {
 
         }
 
-        public ColonyPlanet(int id, Core.SolarSystemInstance planetData, List<Core.PlanetSurface> surfaceTiles)
+        public ColonyPlanet(int id, Colonizable planetData, List<Core.PlanetSurface> surfaceTiles)
         {
             this.Id = id;
             this.PlanetData = planetData;

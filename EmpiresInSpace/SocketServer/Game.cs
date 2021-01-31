@@ -6,6 +6,11 @@ using Microsoft.AspNet.SignalR;
 
 namespace EmpiresInSpace
 {
+    /// <summary>
+    /// Singleton class 
+    /// Has a Registration handler which maps user GUIDs to their RegisteredClient object
+    /// and a User handler which does the same. 
+    /// </summary>
     public partial class Game
     {
         private readonly static Lazy<Game> _instance = new Lazy<Game>(() => new Game());

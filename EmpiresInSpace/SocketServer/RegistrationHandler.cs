@@ -8,7 +8,7 @@ namespace EmpiresInSpace
 {
     public class RegistrationHandler
     {
-        public static readonly TimeSpan TIMEOUT_AFTER = TimeSpan.FromSeconds(30);
+        public static readonly TimeSpan TIMEOUT_AFTER = TimeSpan.FromSeconds(120);
 
         private Timer _timeoutLoop;
 

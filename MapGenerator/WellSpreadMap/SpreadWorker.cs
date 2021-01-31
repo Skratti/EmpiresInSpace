@@ -39,7 +39,6 @@ namespace MapGenerator.WellSpreadMap
             minDistance = Contract.minDistance;
             distanceBetweenSuns = Contract.distanceBetweenSuns;
             starsInRow = Contract.starsInRow;
-            xAxis = Contract.xAxis;
 
             Textbox = textbox;
             Map = map;
@@ -66,8 +65,8 @@ namespace MapGenerator.WellSpreadMap
             {
                 for (int j = 0; j < starsInRow; j++)
                 {
-                    int x = (i * distanceBetweenSuns) + 2;
-                    int y = (j * distanceBetweenSuns) + 2;
+                    int x = (i * distanceBetweenSuns);
+                    int y = (j * distanceBetweenSuns);
                     var isPlayer = id % StarsPerPlayer == 0 ? true : false;
                     Star tempStar = StarGenerator.MakeStarXY(isPlayer, x, y);
                     
@@ -242,12 +241,12 @@ namespace MapGenerator.WellSpreadMap
         }
 
         //delete all playerstartingsystems that are not within a circle around the center of the galaxy
-        //then delete all non-player-owned systems (the 4 direct neightbours of a starting system are player-owned).
+        //then delete all non-player-owned systems (the 4 direct neighbours of a starting system are player-owned).
         public void MakeRound()
         {
-            int Center = (starsInRow * distanceBetweenSuns / 2);
-            int AllowedDistance = Center - 5;
-            
+            int Center = ((starsInRow - 1) * distanceBetweenSuns / 2);
+            int AllowedDistance = (starsInRow - 1) * distanceBetweenSuns / 2;
+
             List<Star> ToDelete = stars.Where(e => e.StartingSystem && BadDistanceToCenter(e, Center, AllowedDistance)).ToList();
 
             List<int> DirectNeighbourRules = new List<int>(); //to get the ids of the 8 neighbouring stars
@@ -259,13 +258,13 @@ namespace MapGenerator.WellSpreadMap
 
             List<Star> Directneighbours = new List<Star>();
 
-            foreach (var star in stars.Where(e => e.StartingSystem && !ToDelete.Contains(e)))
+            foreach (var star in stars.Where(e => e.StartingSystem && ToDelete.Contains(e)))
             {
                 findNeighbours(star, DirectNeighbourRules, Directneighbours, starsInRow);
                 Directneighbours.Add(star);
             }
 
-            stars.RemoveAll(e => !Directneighbours.Contains(e));
+            stars.RemoveAll(e => Directneighbours.Contains(e));
 
         }
        

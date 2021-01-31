@@ -49,6 +49,7 @@ interface SpaceServer {
     CreateTrade(shipId: number, Offered: any, Requested: any): any;
     DeleteMyTrade(tradeId: number);
     FetchRoutes(): any;
+    FetchAllData(): any;
 }
 
 interface HubProxy {
@@ -337,7 +338,7 @@ class OnLoadWorker {
 
             this.finished = true;
 
-            this.TryInitialize(this.ProcessInit);
+            //this.TryInitialize(this.ProcessInit);
             StarMapModule.CreateBorders();
 
             //var ret = $.connection.spaceHub.invoke("getUserScannedFields");

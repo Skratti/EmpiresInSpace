@@ -1,0 +1,28 @@
+﻿{
+  // Generates about 700 stars with an average distance of 7 to each other 
+  // Map size is 250 x 250
+
+
+  "StarsPerPlayer": 3,
+  "minDistance": 4, //minimum distance between stars. Should be at least 3
+  "distanceBetweenSuns": 12,
+  "starsInRow": 31, // leads to starsInRow^2 suns, and leads to a width of ~ (starsInRow * distanceBetweenSuns) + 2 * starOffset, First star on x =0, y = 0, last start on 210 210 
+
+  "starOffset": 20, // added to all stars x and y coordinated
+
+  //data for the spiral galaxie generator
+  "starsPerArm": 0,
+  "nebulaPerArm": 180,
+  "Arms": 4, //even numbered arms are stars, uneven numbered arms are nebula
+  "spin": 1.3, //the numbers of spins an arm makes around the center of the map
+  "armspread": 0.03, //how far away stars can be from the center of the arm
+  "nebulaspread": 0.03, //how far away nebulas can be from the center of the arm
+  "starsAtCenterRatio": 0.6,
+  "nebulaAtCenterRatio": 0.7,
+  "nebulaAreaDistance": 20,
+
+  "CreateSolarSystemOnDBWrite": "false",
+
+  "MakeRound": "true"
+
+}

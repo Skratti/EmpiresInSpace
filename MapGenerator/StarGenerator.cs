@@ -132,6 +132,16 @@ namespace MapGenerator
 
         }
 
+        public Star MakePlanetFromSystem(MapGenerator.StarMapSolarSystemGenerator.systemElement system)
+        {
+            
+            StarId++;
+            var star = new Star(system.type, StarId, system.x, system.y);
+
+            return star;
+
+        }
+
         private int getNebulaType()
         {
             currentNebulaType++;

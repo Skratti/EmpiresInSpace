@@ -1712,8 +1712,12 @@ namespace SpacegameServer.Core
         private int _transcendenceRequirement;
 
         private System.Nullable<int> _winningTranscendenceConstruct;
-        
+
+        private bool _useSolarSystems;
+
         public int TurnNumber { get; set; }
+
+
 
         private short _gameState;
         public GalaxyMap()
@@ -1922,7 +1926,23 @@ namespace SpacegameServer.Core
                 }
             }
         }
-      
+
+        public bool useSolarSystems
+        {
+            get
+            {
+                return this._useSolarSystems;
+            }
+            set
+            {
+                if ((this._useSolarSystems != value))
+                {
+                    this._useSolarSystems = value;
+                }
+            }
+        }
+        
+
     }
 
 
@@ -6399,448 +6419,6 @@ namespace SpacegameServer.Core
         }
     }
 
-    
-    public partial class SolarSystemInstance : Lockable
-    {
-
-        private int _id;
-
-        private int _x;
-
-        private int _y;
-
-        private int _systemid;
-
-        private short _objectid;
-
-        private int? _colonyId;
-
-        [System.Web.Script.Serialization.ScriptIgnore]
-        [System.Xml.Serialization.XmlIgnoreAttribute]
-        public Colony colony;
-
-        [System.Web.Script.Serialization.ScriptIgnore]
-        [System.Xml.Serialization.XmlIgnoreAttribute]
-        public List<PlanetSurface> surfaceFields;
-
-        public SolarSystemInstance()
-        {
-        }
-        public SolarSystemInstance(  int planetId, int planetx , int planety ,
-            int planetsystemid , short planetobjectid , byte planetdrawsize )
-        {
-            this.id = planetId;
-            this.x = planetx;
-            this.y = planety;
-            this.systemid = planetsystemid;
-            this.objectid = planetobjectid;
-            this.fieldSize = planetdrawsize;
-          
-        }
-
-
-        
-        public SolarSystemInstance(int _id)
-        {
-            id = _id;
-            surfaceFields = new List<PlanetSurface>();
-        }
-
-        public bool IsMajorPlanet()
-        {
-            if (this.objectid >= 24 &&
-                this.objectid <= 31) return true;
-            return false;
-        }
-
-
-        private short SurfaceTileId()
-        {
-            //desert
-            if (this.objectid >= 24 && this.objectid <= 26)
-            {
-                return 1;
-            }
-
-            //desert
-            if (this.objectid == 27 || this.objectid == 38)
-            {               
-                return 5;
-            }
-
-            //arctic
-            if (this.objectid == 28 || this.objectid == 39)
-            {        
-                return 6;
-            }
-
-            //barren
-            if (this.objectid == 29 || this.objectid == 40)
-            {
-                return 7;
-            }
-
-            //asteroid
-            if (this.objectid == 44)
-            {
-                return 8;
-            }
-
-            //vulcanic
-            if (this.objectid == 30 || this.objectid == 41)
-            {
-                return 9;
-            }
-
-            //toxic
-            if (this.objectid == 31 || this.objectid == 42)
-            {
-                return 10;
-            }
-
-            //fallback : gras
-            return 1;
-        }
-        
-        private void makePlanetSurface(short SurfaceTileId)
-        {
-            //row 0, ---xxx---
-            for (byte x = 3; x <= 5; x++)
-            {
-                this.createSurfaceTile(x, 0, SurfaceTileId);
-            }
-
-            //row 1, --xxxxx--
-            for (byte x = 2; x <= 6; x++)
-            {
-                this.createSurfaceTile(x, 1, SurfaceTileId);
-            }
-
-            //row 2, -xxxxxxx-
-            for (byte x = 1; x <= 7; x++)
-            {
-                this.createSurfaceTile(x, 2, SurfaceTileId);
-            }
-
-            //row 3,4,5, xxxxxxxxx
-            for (byte y = 3; y <= 5; y++)
-            {
-                for (byte x = 0; x <= 8; x++)
-                {
-                    this.createSurfaceTile(x, y, SurfaceTileId);
-                }
-            }
-
-            //row 6, -xxxxxxx-
-            for (byte x = 1; x <= 7; x++)
-            {
-                this.createSurfaceTile(x, 6, SurfaceTileId);
-            }
-
-            //row 7, --xxxxx--
-            for (byte x = 2; x <= 6; x++)
-            {
-                this.createSurfaceTile(x, 7, SurfaceTileId);
-            }
-
-            //row 8, ---xxx---
-            for (byte x = 3; x <= 5; x++)
-            {
-                this.createSurfaceTile(x, 8, SurfaceTileId);
-            }
-
-            //create orbit:
-            this.createSurfaceTile(10, 1, 11);
-        }
-
-        private void createSurfaceTile(byte x, byte y)
-        {
-            var newId = Core.Instance.identities.planetSurfaceId.getNext();
-            PlanetSurface surfaceTile = new PlanetSurface(newId);
-            surfaceTile.planetid = this.id;
-            surfaceTile.x = x;
-            surfaceTile.y = y;
-            surfaceTile.surfaceobjectid = this.SurfaceTileId();
-
-            Core.Instance.planetSurface.Add(newId, surfaceTile);
-            this.surfaceFields.Add(surfaceTile);
-        }
-
-        private void createSurfaceTile(byte x, byte y, short surfaceTileId)
-        {
-            var newId = Core.Instance.identities.planetSurfaceId.getNext();
-            PlanetSurface surfaceTile = new PlanetSurface(newId);
-            surfaceTile.planetid = this.id;
-            surfaceTile.x = x;
-            surfaceTile.y = y;
-            surfaceTile.surfaceobjectid = surfaceTileId;
-
-            Core.Instance.planetSurface.Add(newId, surfaceTile);
-            this.surfaceFields.Add(surfaceTile);
-        }
-
-        public void createPlanetSurface(bool majorColony )
-        {
-            if (this.objectid >= 24 && this.objectid <= 26)
-            {
-                short defaultMap = 17;
-
-                var surfaceImageCount = Core.Instance.ObjectsOnMap[this.objectid].ObjectImages.Count;
-                var defaultMapKey = (this.id % surfaceImageCount);
-                defaultMap = (short)Core.Instance.ObjectsOnMap[this.objectid].ObjectImages[defaultMapKey].SurfaceDefaultMapId;
-
-                foreach (var tile in Core.Instance.surfaceDefaultMaps.FindAll(tile => tile.id == defaultMap))
-                {
-                    var newId = Core.Instance.identities.planetSurfaceId.getNext();
-                    PlanetSurface surfaceTile = new PlanetSurface(newId);
-                    surfaceTile.planetid = this.id;
-                    surfaceTile.x = (byte)tile.x;
-                    surfaceTile.y = (byte)tile.y;
-                    surfaceTile.surfaceobjectid = (short)tile.surfaceobjectid;
-                    Core.Instance.planetSurface.Add(newId, surfaceTile);
-                    this.surfaceFields.Add(surfaceTile);
-                }
-            } else
-            {
-                short surfaceTileTpye = this.SurfaceTileId();
-                this.makePlanetSurface(surfaceTileTpye);
-
-                /*
-                if (this.objectid > 31)
-                {
-                    //create moon surface
-                    this.createSurfaceTile(0, 0);
-                    this.createSurfaceTile(1, 1);
-                }
-                else
-                {
-                    //create minor planet surface
-                    this.createSurfaceTile(0, 0);
-                    this.createSurfaceTile(1, 1);
-                    this.createSurfaceTile(1, 2);
-                    this.createSurfaceTile(2, 2);
-                }
-                */
-            }
-        }
-
-
-        //Todo: has to compare to a colony and its colonyBuildings
-        public PlanetSurface freeSurfaceField()
-        {
-            short surfaceTileTpye = this.SurfaceTileId();
-            PlanetSurface freeField = this.surfaceFields.FindAll(field => field.surfaceobjectid == surfaceTileTpye).OrderBy(x => Guid.NewGuid()).FirstOrDefault();
-            return freeField;
-        }
-
-         [XmlElement(ElementName = "starId")]        
-        public int id
-        {
-            get
-            {
-                return this._id;
-            }
-            set
-            {
-                if ((this._id != value))
-                {
-                    this._id = value;
-                }
-            }
-        }
-
-
-        [XmlElement(ElementName = "xpos")]          
-        public int x
-        {
-            get
-            {
-                return this._x;
-            }
-            set
-            {
-                if ((this._x != value))
-                {
-                    this._x = value;
-                }
-            }
-        }
-
-        [XmlElement(ElementName = "ypos")]          
-        public int y
-        {
-            get
-            {
-                return this._y;
-            }
-            set
-            {
-                if ((this._y != value))
-                {
-                    this._y = value;
-                }
-            }
-        }
-
-        [XmlElement(ElementName = "systemId")]        
-        public int systemid
-        {
-            get
-            {
-                return this._systemid;
-            }
-            set
-            {
-                if ((this._systemid != value))
-                {
-                    this._systemid = value;
-                }
-            }
-        }
-
-         [XmlElement(ElementName = "type")]          
-        public short objectid
-        {
-            get
-            {
-                return this._objectid;
-            }
-            set
-            {
-                if ((this._objectid != value))
-                {
-                    this._objectid = value;
-                }
-            }
-        }
-        /*
-        public byte fieldSize
-        {
-            get
-            {
-                return this._fieldsize;
-            }
-            set
-            {
-                if ((this._fieldsize != value))
-                {
-                    this._fieldsize = value;
-                }
-            }
-        }
-        */
-        public byte fieldSize
-        {
-            get
-            {
-                return Core.Instance.ObjectsOnMap.ContainsKey(this.objectid) ?
-                    Core.Instance.ObjectsOnMap[this.objectid].Fieldsize : (byte)1;
-            }
-            set
-            {
-            }
-        }
-        
-        public float drawsize
-        {
-            get
-            {
-                return Core.Instance.ObjectsOnMap.ContainsKey(this.objectid) ?
-                    Core.Instance.ObjectsOnMap[this.objectid].drawsize(this.id) : 1f;
-            }
-            set
-            {                
-            }
-        }
-
-        public short? BackgroundObjectId
-        {
-            get
-            {
-                return Core.Instance.ObjectsOnMap.ContainsKey(this.objectid) ?
-                    Core.Instance.ObjectsOnMap[this.objectid].BackgroundObjectId(this.id) : null;
-            }
-            set
-            {
-            }
-        }
-
-        public byte? BackgroundDrawSize
-        {
-            get
-            {
-                return Core.Instance.ObjectsOnMap.ContainsKey(this.objectid) ?
-                    Core.Instance.ObjectsOnMap[this.objectid].BackgroundDrawSize(this.id) : null;
-            }
-            set
-            {
-            }
-        }
-
-        public byte? TilestartingAt
-        {
-            get
-            {
-                return Core.Instance.ObjectsOnMap.ContainsKey(this.objectid) ?
-                    Core.Instance.ObjectsOnMap[this.objectid].TilestartingAt(this.id) : null;
-            }
-            set
-            {
-            }
-        }
-        
-
-        public string gif
-        {
-            get { return Core.Instance.ObjectDescriptions[Core.Instance.ObjectDescriptions[this.objectid].id].objectimageUrl; }
-            set {}
-        }
-
-        public string name
-        {
-            get { return Core.Instance.ObjectDescriptions[Core.Instance.ObjectDescriptions[this.objectid].id].name; }
-            set {}
-        }
-
-        public int size
-        {
-            get { return 100; }
-            set { }
-        }
-
-        public byte colonizable
-        {
-            get { return this.objectid > 23 && this.objectid < 30 ? (byte)1 : (byte)0; }
-            set {}
-        }
-
-        public int? colonyId
-        {
-            /*
-            get {
-                foreach (var colony in Core.Instance.colonies.Values)
-                {
-                    if (colony.planetId == this.id) return colony.id;
-                }
-                return -1;                
-            }
-            set {}
-            */
-            get
-            {
-                return this._colonyId;
-            }
-            set
-            {
-                if ((this._colonyId != value))
-                {
-                    this._colonyId = value;
-                }
-            }           
-        }
-    }
-
-
     public partial class ShipTemplate : Lockable , ShipStatistics
     {
 
@@ -8009,8 +7587,241 @@ namespace SpacegameServer.Core
         }
     }
 
+    //used for SystemMap and SolarSystemInstance
+    [XmlInclude(typeof(SystemMap)), XmlInclude(typeof(SolarSystemInstance))]
+    public abstract class Colonizable : spaceObject
+    {
+        private int? _colonyId;
 
-    public partial class SystemMap : spaceObject
+        [System.Web.Script.Serialization.ScriptIgnore]
+        [System.Xml.Serialization.XmlIgnoreAttribute]
+        public Colony colony;
+
+        [System.Web.Script.Serialization.ScriptIgnore]
+        [System.Xml.Serialization.XmlIgnoreAttribute]
+        public List<PlanetSurface> surfaceFields;
+
+        public abstract short ObjectId { get; set; }
+
+        public bool IsMajorPlanet()
+        {
+            if (this.ObjectId >= 24 &&
+                this.ObjectId <= 31) return true;
+            return false;
+        }
+
+        [System.Web.Script.Serialization.ScriptIgnore]
+        [System.Xml.Serialization.XmlIgnoreAttribute]
+        public abstract SystemMap Star { get; set; }
+
+        public int? ColonyId
+        {
+            get
+            {
+                return this._colonyId;
+            }
+            set
+            {
+                if ((this._colonyId != value))
+                {
+                    this._colonyId = value;
+                }
+            }
+        }
+
+
+        public void createPlanetSurface(bool majorColony)
+        {
+            if (this.ObjectId >= 24 && this.ObjectId <= 26)
+            {
+                short defaultMap = 17;
+
+                var surfaceImageCount = Core.Instance.ObjectsOnMap[this.ObjectId].ObjectImages.Count;
+                var defaultMapKey = (this.Id % surfaceImageCount);
+                defaultMap = (short)Core.Instance.ObjectsOnMap[this.ObjectId].ObjectImages[defaultMapKey].SurfaceDefaultMapId;
+
+                foreach (var tile in Core.Instance.surfaceDefaultMaps.FindAll(tile => tile.id == defaultMap))
+                {
+                    var newId = Core.Instance.identities.planetSurfaceId.getNext();
+                    PlanetSurface surfaceTile = new PlanetSurface(newId);
+                    surfaceTile.planetid = this.Id;
+                    surfaceTile.x = (byte)tile.x;
+                    surfaceTile.y = (byte)tile.y;
+                    surfaceTile.surfaceobjectid = (short)tile.surfaceobjectid;
+                    Core.Instance.planetSurface.Add(newId, surfaceTile);
+                    this.surfaceFields.Add(surfaceTile);
+                }
+            }
+            else
+            {
+                short surfaceTileTpye = this.SurfaceTileId();
+                this.makePlanetSurface(surfaceTileTpye);
+
+                /*
+                if (this.objectid > 31)
+                {
+                    //create moon surface
+                    this.createSurfaceTile(0, 0);
+                    this.createSurfaceTile(1, 1);
+                }
+                else
+                {
+                    //create minor planet surface
+                    this.createSurfaceTile(0, 0);
+                    this.createSurfaceTile(1, 1);
+                    this.createSurfaceTile(1, 2);
+                    this.createSurfaceTile(2, 2);
+                }
+                */
+            }
+        }
+
+
+        //Todo: has to compare to a colony and its colonyBuildings
+        public PlanetSurface freeSurfaceField()
+        {
+            short surfaceTileTpye = this.SurfaceTileId();
+            PlanetSurface freeField = this.surfaceFields.FindAll(field => field.surfaceobjectid == surfaceTileTpye).OrderBy(x => Guid.NewGuid()).FirstOrDefault();
+            return freeField;
+        }
+
+
+        private short SurfaceTileId()
+        {
+            //desert
+            if (this.ObjectId >= 24 && this.ObjectId <= 26)
+            {
+                return 1;
+            }
+
+            //desert
+            if (this.ObjectId == 27 || this.ObjectId == 38)
+            {
+                return 5;
+            }
+
+            //arctic
+            if (this.ObjectId == 28 || this.ObjectId == 39)
+            {
+                return 6;
+            }
+
+            //barren
+            if (this.ObjectId == 29 || this.ObjectId == 40)
+            {
+                return 7;
+            }
+
+            //asteroid
+            if (this.ObjectId == 44)
+            {
+                return 8;
+            }
+
+            //vulcanic
+            if (this.ObjectId == 30 || this.ObjectId == 41)
+            {
+                return 9;
+            }
+
+            //toxic
+            if (this.ObjectId == 31 || this.ObjectId == 42)
+            {
+                return 10;
+            }
+
+            //fallback : gras
+            return 1;
+        }
+
+        private void makePlanetSurface(short SurfaceTileId)
+        {
+            //row 0, ---xxx---
+            for (byte x = 3; x <= 5; x++)
+            {
+                this.createSurfaceTile(x, 0, SurfaceTileId);
+            }
+
+            //row 1, --xxxxx--
+            for (byte x = 2; x <= 6; x++)
+            {
+                this.createSurfaceTile(x, 1, SurfaceTileId);
+            }
+
+            //row 2, -xxxxxxx-
+            for (byte x = 1; x <= 7; x++)
+            {
+                this.createSurfaceTile(x, 2, SurfaceTileId);
+            }
+
+            //row 3,4,5, xxxxxxxxx
+            for (byte y = 3; y <= 5; y++)
+            {
+                for (byte x = 0; x <= 8; x++)
+                {
+                    this.createSurfaceTile(x, y, SurfaceTileId);
+                }
+            }
+
+            //row 6, -xxxxxxx-
+            for (byte x = 1; x <= 7; x++)
+            {
+                this.createSurfaceTile(x, 6, SurfaceTileId);
+            }
+
+            //row 7, --xxxxx--
+            for (byte x = 2; x <= 6; x++)
+            {
+                this.createSurfaceTile(x, 7, SurfaceTileId);
+            }
+
+            //row 8, ---xxx---
+            for (byte x = 3; x <= 5; x++)
+            {
+                this.createSurfaceTile(x, 8, SurfaceTileId);
+            }
+
+            //create orbit:
+            this.createSurfaceTile(10, 1, 11);
+        }
+
+        private void createSurfaceTile(byte x, byte y)
+        {
+            var newId = Core.Instance.identities.planetSurfaceId.getNext();
+            PlanetSurface surfaceTile = new PlanetSurface(newId);
+            surfaceTile.planetid = this.Id;
+            surfaceTile.x = x;
+            surfaceTile.y = y;
+            surfaceTile.surfaceobjectid = this.SurfaceTileId();
+
+            Core.Instance.planetSurface.Add(newId, surfaceTile);
+            this.surfaceFields.Add(surfaceTile);
+        }
+
+        private void createSurfaceTile(byte x, byte y, short surfaceTileId)
+        {
+            var newId = Core.Instance.identities.planetSurfaceId.getNext();
+            PlanetSurface surfaceTile = new PlanetSurface(newId);
+            surfaceTile.planetid = this.Id;
+            surfaceTile.x = x;
+            surfaceTile.y = y;
+            surfaceTile.surfaceobjectid = surfaceTileId;
+
+            Core.Instance.planetSurface.Add(newId, surfaceTile);
+            this.surfaceFields.Add(surfaceTile);
+        }
+
+        public byte colonizable
+        {
+            get { return this.ObjectId > 23 && this.ObjectId < 30 ? (byte)1 : (byte)0; }
+            set { }
+        }
+    }
+
+    /// <summary>
+    /// Astronomical object on starMap (Sun, planet, nebula...)
+    /// </summary>
+    public partial class SystemMap : Colonizable
     {
 
         private int _id;
@@ -8030,6 +7841,12 @@ namespace SpacegameServer.Core
         private byte _settled;
 
         private byte _ressourceid;
+
+        private int? _colonyId;
+
+        [System.Web.Script.Serialization.ScriptIgnore]
+        [System.Xml.Serialization.XmlIgnoreAttribute]
+        public Colony colony;
 
         [System.Web.Script.Serialization.ScriptIgnore]
         [System.Xml.Serialization.XmlIgnoreAttribute]
@@ -8051,7 +7868,8 @@ namespace SpacegameServer.Core
         public SystemMap(int _id)
         {
             id = _id;
-            this.planets = new List<SolarSystemInstance>(100);
+            this.planets = new List<SolarSystemInstance>();
+            surfaceFields = new List<PlanetSurface>();
         }
         public SystemMap()
         {
@@ -8126,6 +7944,18 @@ namespace SpacegameServer.Core
             }
         }
 
+        [System.Xml.Serialization.XmlIgnoreAttribute]
+        public override SystemMap Star
+        {
+            get
+            {
+                return this;
+            }
+            set
+            {
+            }
+        }
+
         [XmlElement(ElementName = "name")]        
         public string systemname
         {
@@ -8142,8 +7972,9 @@ namespace SpacegameServer.Core
             }
         }
 
-        [XmlElement(ElementName = "type")] 
-        public short objectid
+        [System.Web.Script.Serialization.ScriptIgnore]
+        [System.Xml.Serialization.XmlIgnoreAttribute]
+        public override short ObjectId
         {
             get
             {
@@ -8158,7 +7989,22 @@ namespace SpacegameServer.Core
             }
         }
 
-        
+        public short type
+        {
+            get
+            {
+                return this._objectid;
+            }
+            set
+            {
+                if ((this._objectid != value))
+                {
+                    this._objectid = value;
+                }
+            }
+        }
+
+
         public short size
         {
             get
@@ -8224,6 +8070,42 @@ namespace SpacegameServer.Core
             }
         }
 
+        public short? BackgroundObjectId
+        {
+            get
+            {
+                return Core.Instance.ObjectsOnMap.ContainsKey(this.ObjectId) ?
+                    Core.Instance.ObjectsOnMap[this.ObjectId].BackgroundObjectId(this.id) : null;
+            }
+            set
+            {
+            }
+        }
+
+        public byte? BackgroundDrawSize
+        {
+            get
+            {
+                return Core.Instance.ObjectsOnMap.ContainsKey(this.ObjectId) ?
+                    Core.Instance.ObjectsOnMap[this.ObjectId].BackgroundDrawSize(this.id) : null;
+            }
+            set
+            {
+            }
+        }
+
+        public byte? TilestartingAt
+        {
+            get
+            {
+                return Core.Instance.ObjectsOnMap.ContainsKey(this.ObjectId) ?
+                    Core.Instance.ObjectsOnMap[this.ObjectId].TilestartingAt(this.id) : null;
+            }
+            set
+            {
+            }
+        }
+
         //ToDo : get objectDesc.objectimageUrl 
         public string gif
         {
@@ -8240,8 +8122,8 @@ namespace SpacegameServer.Core
         {
             get
             {
-                return Core.Instance.ObjectsOnMap.ContainsKey(this.objectid) ?
-                    Core.Instance.ObjectsOnMap[this.objectid].Fieldsize : (byte)1;
+                return Core.Instance.ObjectsOnMap.ContainsKey(this.ObjectId) ?
+                    Core.Instance.ObjectsOnMap[this.ObjectId].Fieldsize : (byte)1;
             }
             set
             {               
@@ -8252,8 +8134,8 @@ namespace SpacegameServer.Core
         {
             get
             {
-                return Core.Instance.ObjectsOnMap.ContainsKey(this.objectid) ?
-                    Core.Instance.ObjectsOnMap[this.objectid].drawsize(this.id) : 1f;
+                return Core.Instance.ObjectsOnMap.ContainsKey(this.ObjectId) ?
+                    Core.Instance.ObjectsOnMap[this.ObjectId].drawsize(this.id) : 1f;
             }
             set
             {
@@ -8279,6 +8161,275 @@ namespace SpacegameServer.Core
             distanceToCenter = Math.Max(Math.Abs(posX - 5000), Math.Abs(posY - 5000));
         }
     }
+
+
+
+    public partial class SolarSystemInstance : Colonizable
+    {
+
+        private int _id;
+
+        private int _x;
+
+        private int _y;
+
+        private int _systemid;
+
+        private short _objectid;
+
+
+
+        public SolarSystemInstance()
+        {
+        }
+        public SolarSystemInstance(int planetId, int planetx, int planety,
+            int planetsystemid, short planetobjectid, byte planetdrawsize)
+        {
+            this.id = planetId;
+            this.x = planetx;
+            this.y = planety;
+            this.systemid = planetsystemid;
+            this.ObjectId = planetobjectid;
+            this.fieldSize = planetdrawsize;
+
+        }
+
+
+
+        public SolarSystemInstance(int _id)
+        {
+            id = _id;
+            surfaceFields = new List<PlanetSurface>();
+        }
+
+
+
+        [XmlElement(ElementName = "starId")]
+        public int id
+        {
+            get
+            {
+                return this._id;
+            }
+            set
+            {
+                if ((this._id != value))
+                {
+                    this._id = value;
+                }
+            }
+        }
+
+
+        public override int Id
+        {
+            get
+            {
+                return this._id;
+            }
+            set
+            {
+                if ((this._id != value))
+                {
+                    this._id = value;
+                }
+            }
+        }
+
+
+        [XmlElement(ElementName = "xpos")]
+        public int x
+        {
+            get
+            {
+                return this._x;
+            }
+            set
+            {
+                if ((this._x != value))
+                {
+                    this._x = value;
+                }
+            }
+        }
+
+        [XmlElement(ElementName = "ypos")]
+        public int y
+        {
+            get
+            {
+                return this._y;
+            }
+            set
+            {
+                if ((this._y != value))
+                {
+                    this._y = value;
+                }
+            }
+        }
+
+        [XmlElement(ElementName = "systemId")]
+        public int systemid
+        {
+            get
+            {
+                return this._systemid;
+            }
+            set
+            {
+                if ((this._systemid != value))
+                {
+                    this._systemid = value;
+                }
+            }
+        }
+
+        [System.Xml.Serialization.XmlIgnoreAttribute]
+        public override SystemMap Star
+        {
+            get
+            {
+                return Core.Instance.stars[this.systemid];
+            }
+            set
+            {
+            }
+        }
+
+
+        [System.Web.Script.Serialization.ScriptIgnore]
+        [System.Xml.Serialization.XmlIgnoreAttribute]
+        public override short ObjectId
+        {
+            get
+            {
+                return this._objectid;
+            }
+            set
+            {
+                if ((this._objectid != value))
+                {
+                    this._objectid = value;
+                }
+            }
+        }
+
+
+        public short type
+        {
+            get
+            {
+                return this._objectid;
+            }
+            set
+            {
+                if ((this._objectid != value))
+                {
+                    this._objectid = value;
+                }
+            }
+        }
+
+
+
+        /*
+        public byte fieldSize
+        {
+            get
+            {
+                return this._fieldsize;
+            }
+            set
+            {
+                if ((this._fieldsize != value))
+                {
+                    this._fieldsize = value;
+                }
+            }
+        }
+        */
+        public byte fieldSize
+        {
+            get
+            {
+                return Core.Instance.ObjectsOnMap.ContainsKey(this.ObjectId) ?
+                    Core.Instance.ObjectsOnMap[this.ObjectId].Fieldsize : (byte)1;
+            }
+            set
+            {
+            }
+        }
+
+        public float drawsize
+        {
+            get
+            {
+                return Core.Instance.ObjectsOnMap.ContainsKey(this.ObjectId) ?
+                    Core.Instance.ObjectsOnMap[this.ObjectId].drawsize(this.id) : 1f;
+            }
+            set
+            {
+            }
+        }
+
+        public short? BackgroundObjectId
+        {
+            get
+            {
+                return Core.Instance.ObjectsOnMap.ContainsKey(this.ObjectId) ?
+                    Core.Instance.ObjectsOnMap[this.ObjectId].BackgroundObjectId(this.id) : null;
+            }
+            set
+            {
+            }
+        }
+
+        public byte? BackgroundDrawSize
+        {
+            get
+            {
+                return Core.Instance.ObjectsOnMap.ContainsKey(this.ObjectId) ?
+                    Core.Instance.ObjectsOnMap[this.ObjectId].BackgroundDrawSize(this.id) : null;
+            }
+            set
+            {
+            }
+        }
+
+        public byte? TilestartingAt
+        {
+            get
+            {
+                return Core.Instance.ObjectsOnMap.ContainsKey(this.ObjectId) ?
+                    Core.Instance.ObjectsOnMap[this.ObjectId].TilestartingAt(this.id) : null;
+            }
+            set
+            {
+            }
+        }
+
+
+        public string gif
+        {
+            get { return Core.Instance.ObjectDescriptions[Core.Instance.ObjectDescriptions[this.ObjectId].id].objectimageUrl; }
+            set { }
+        }
+
+        public string name
+        {
+            get { return Core.Instance.ObjectDescriptions[Core.Instance.ObjectDescriptions[this.ObjectId].id].name; }
+            set { }
+        }
+
+        public int size
+        {
+            get { return 100; }
+            set { }
+        }
+
+    }
+
 
 
     public partial class TradeOffer : Lockable

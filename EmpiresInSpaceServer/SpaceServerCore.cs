@@ -936,8 +936,7 @@ namespace SpacegameServer.Core
 
 
             return scanned;
-        }
-     
+        }     
 
         public bool addShipToField(Ship _ship)
         {

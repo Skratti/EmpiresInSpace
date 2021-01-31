@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="StarMapSolarSystemGenerator\CreateSolarSystemsOnStarmap.cs" />
     <Compile Include="DBWriter\DBWriter.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -77,6 +78,8 @@
     <Compile Include="SpiralMap\SpiralWorker.cs" />
     <Compile Include="Star.cs" />
     <Compile Include="StarGenerator.cs" />
+    <Compile Include="StarMapSolarSystemGenerator\SolarSystem.cs" />
+    <Compile Include="StarMapSolarSystemGenerator\Version2\SystemgeneratorWorker2.cs" />
     <Compile Include="SystemGenerator\SolarSystem.cs" />
     <Compile Include="SystemGenerator\SystemGeneratorController.cs">
       <SubType>Form</SubType>
@@ -131,13 +134,34 @@
     <None Include="Settings\4000.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="Settings\700Flat.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="Settings\60.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Settings\SolarSystems\SystemNoGasGiant.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Settings\SolarSystems\SystemTwoGasGiant.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="SpiralMap\Configs\60.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="SpiralMap\Configs\4000.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="StarMapSolarSystemGenerator\Version2\Data\SystemMoons.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="StarMapSolarSystemGenerator\Version2\Data\SystemNoGasGiant.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="StarMapSolarSystemGenerator\Version2\Data\SystemTwoGasGiant.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="StarMapSolarSystemGenerator\Version2\Data\SystemTypes.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="SystemGenerator\Workers\Version2\Data\SystemMoons.json">

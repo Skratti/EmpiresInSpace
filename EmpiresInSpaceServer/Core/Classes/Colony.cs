@@ -470,7 +470,7 @@ namespace SpacegameServer.Core
         {
             get
             {
-                return this.planet.objectid;
+                return this.planet.ObjectId;
             }
             set
             {             

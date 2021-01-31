@@ -124,7 +124,7 @@ namespace SpacegameServer.Core
 
                 //set base values
                 newShip.userid = user.id;
-                newShip.initFromField(core.stars[(int)colonizer.systemid].field);
+                newShip.initFromField(colonizer.field);
                 newShip.NAME = name; 
                 newShip.systemX = colonizer.systemX;
                 newShip.systemY = colonizer.systemY;
@@ -258,25 +258,38 @@ namespace SpacegameServer.Core
 
                 colonizer.userid = user.id;
                 colonizer.FormerOwner = user.id;
-                colonizer.initFromField(star.field);
+
+                if (core.GalaxyMap.useSolarSystems)
+                {
+                    colonizer.initFromField(star.field);
+                    colonizer.systemX = 1;
+                    colonizer.systemY = 1;
+                    colonizer.hyper = 0;
+                    colonizer.impuls = 200;
+                    colonizer.max_hyper = 0;
+                    colonizer.max_impuls = 200;
+                }
+                else
+                {
+                    colonizer.initFromField(star.field.nextFreeNonSystem());
+                    colonizer.hyper = 30;
+                    colonizer.impuls = 200;
+                    colonizer.max_hyper = 10;
+                    colonizer.max_impuls = 200;
+                }
 
                 //colonizer.shipHullsImage = core.ShipHulls[this.hullid].ShipHullsImages[0].id;
                 colonizer.hullid = 1;
                 colonizer.objectid = 470;
-                colonizer.NAME = "Colonizer";
-                colonizer.systemX = 1;
-                colonizer.systemY = 1;                
+                colonizer.NAME = "Colonizer";               
                 colonizer.energy = 250;
                 colonizer.crew = 150;
                 colonizer.cargoroom = 1000;
                 colonizer.fuelroom = 50;
                 colonizer.population = 10000;
-                colonizer.scanRange = 1;
+                colonizer.scanRange = 3;
                 colonizer.colonizer = 1;
-                colonizer.hyper = 0;
-                colonizer.impuls = 200;
-                colonizer.max_hyper = 0;
-                colonizer.max_impuls = 200;
+                
 
                 //add Goods
                 colonizer.goods.Add(new shipStock(newShipId, 1, 360)); //BM
@@ -297,10 +310,15 @@ namespace SpacegameServer.Core
 
                 
                 //Set Modules:
-                colonizer.shipModules.Add(new ShipModule(newShipId, 102, 1, 3));
-                colonizer.shipModules.Add(new ShipModule(newShipId, 101, 2, 2));
-                colonizer.shipModules.Add(new ShipModule(newShipId, 109, 2, 3));
-                colonizer.shipModules.Add(new ShipModule(newShipId, 523, 2, 4));
+                colonizer.shipModules.Add(new ShipModule(newShipId, 102, 1, 3));    // Reactor II
+                colonizer.shipModules.Add(new ShipModule(newShipId, 101, 2, 2));       // Crew II          
+                colonizer.shipModules.Add(new ShipModule(newShipId, 523, 2, 4));    //Colonizing Module III
+                colonizer.shipModules.Add(new ShipModule(newShipId, 115, 3, 3));    //Scanner II
+
+                if (Core.Instance.GalaxyMap.useSolarSystems)
+                    colonizer.shipModules.Add(new ShipModule(newShipId, 109, 2, 3));    // System Engines II
+                else
+                    colonizer.shipModules.Add(new ShipModule(newShipId, 110, 2, 3));    // Hyper Engines II
 
                 StatisticsCalculator.calc(colonizer, Core.Instance);
 
@@ -395,17 +413,24 @@ namespace SpacegameServer.Core
 
                 if (startingColonizer != null)
                 {
-                    Pirate.initFromField(Core.Instance.stars[(int)startingColonizer.systemid].field);
-
-                    Pirate.systemX = 1;
-                    Pirate.systemY = 1;
-
-                    //find free world to place the pirate
-                    if (Core.Instance.stars[(int)startingColonizer.systemid].planets.Any(planet => planet.objectid > 26 && planet.objectid < 33))
+                    if (core.GalaxyMap.useSolarSystems)
                     {
-                        var PirateBasePlanet = Core.Instance.stars[(int)startingColonizer.systemid].planets.First(planet => planet.objectid > 26 && planet.objectid < 33);
-                        Pirate.systemX = (byte)PirateBasePlanet.x;
-                        Pirate.systemY = (byte)PirateBasePlanet.y;
+                        Pirate.initFromField(Core.Instance.stars[(int)startingColonizer.systemid].field);
+
+                        Pirate.systemX = 1;
+                        Pirate.systemY = 1;
+
+                        //find free world to place the pirate
+                        if (Core.Instance.stars[(int)startingColonizer.systemid].planets.Any(planet => planet.ObjectId > 26 && planet.ObjectId < 33))
+                        {
+                            var PirateBasePlanet = Core.Instance.stars[(int)startingColonizer.systemid].planets.First(planet => planet.ObjectId > 26 && planet.ObjectId < 33);
+                            Pirate.systemX = (byte)PirateBasePlanet.x;
+                            Pirate.systemY = (byte)PirateBasePlanet.y;
+                        }
+                    }
+                    else
+                    {
+                        Pirate.initFromField(startingColonizer.field.nextFreeNonSystem());
                     }
                     
                     Pirate.hitpoints = 80;                    
@@ -513,7 +538,7 @@ namespace SpacegameServer.Core
                     Pirate.initFromField(Core.Instance.stars[(int)startingColonizer.systemid].field);
 
                     //find free world:
-                    var PirateBasePlanet = Core.Instance.stars[(int)startingColonizer.systemid].planets.First(planet => planet.objectid > 26 && planet.objectid < 33);
+                    var PirateBasePlanet = Core.Instance.stars[(int)startingColonizer.systemid].planets.First(planet => planet.ObjectId > 26 && planet.ObjectId < 33);
                     Pirate.systemX = (byte)PirateBasePlanet.x;
                     Pirate.systemY = (byte)PirateBasePlanet.y;
                     Pirate.hitpoints = 80;
@@ -858,11 +883,11 @@ namespace SpacegameServer.Core
                     int moveCost = 1;
                     if (targetField.starId != null)
                     {
-                        moveCost = core.ObjectsOnMap[core.stars[(int)targetField.starId].objectid].Movecost;
+                        moveCost = core.ObjectsOnMap[core.stars[(int)targetField.starId].ObjectId].Movecost;
                         //moveCost = core.ObjectDescriptions[core.stars[(int)targetField.starId].objectid].moveCost;
-                        if (core.ObjectsOnMap.ContainsKey(core.stars[(int)targetField.starId].objectid))
+                        if (core.ObjectsOnMap.ContainsKey(core.stars[(int)targetField.starId].ObjectId))
                         {
-                            moveCost = core.ObjectsOnMap[core.stars[(int)targetField.starId].objectid].Movecost;
+                            moveCost = core.ObjectsOnMap[core.stars[(int)targetField.starId].ObjectId].Movecost;
                         }
                     }
 
@@ -883,9 +908,9 @@ namespace SpacegameServer.Core
                     if (targetField.systemObjects.Any(e=>e.x == systemXY.Item1 && e.y == systemXY.Item2))
                     {
                         var systemObject = targetField.systemObjects.First(e=>e.x == systemXY.Item1 && e.y == systemXY.Item2);
-                        if (core.ObjectsOnMap.ContainsKey(systemObject.objectid))
+                        if (core.ObjectsOnMap.ContainsKey(systemObject.ObjectId))
                         {
-                            moveCost = core.ObjectsOnMap[systemObject.objectid].Movecost;
+                            moveCost = core.ObjectsOnMap[systemObject.ObjectId].Movecost;
                         }
                     }                   
 
@@ -1186,11 +1211,11 @@ namespace SpacegameServer.Core
                     int moveCost = 1;
                     if (targetField.starId != null)
                     {
-                        moveCost = core.ObjectsOnMap[core.stars[(int)targetField.starId].objectid].Movecost;
+                        moveCost = core.ObjectsOnMap[core.stars[(int)targetField.starId].ObjectId].Movecost;
                         //moveCost = core.ObjectDescriptions[core.stars[(int)targetField.starId].objectid].moveCost;
-                        if (core.ObjectsOnMap.ContainsKey(core.stars[(int)targetField.starId].objectid))
+                        if (core.ObjectsOnMap.ContainsKey(core.stars[(int)targetField.starId].ObjectId))
                         {
-                            moveCost = core.ObjectsOnMap[core.stars[(int)targetField.starId].objectid].Movecost;
+                            moveCost = core.ObjectsOnMap[core.stars[(int)targetField.starId].ObjectId].Movecost;
                         }
                     }
 
@@ -1224,9 +1249,9 @@ namespace SpacegameServer.Core
                     if (targetField.systemObjects.Any(e => e.x == systemXY.Item1 && e.y == systemXY.Item2))
                     {
                         var systemObject = targetField.systemObjects.First(e => e.x == systemXY.Item1 && e.y == systemXY.Item2);
-                        if (core.ObjectsOnMap.ContainsKey(systemObject.objectid))
+                        if (core.ObjectsOnMap.ContainsKey(systemObject.ObjectId))
                         {
-                            moveCost = core.ObjectsOnMap[systemObject.objectid].Movecost;
+                            moveCost = core.ObjectsOnMap[systemObject.ObjectId].Movecost;
                         }
                     }
 
@@ -1328,10 +1353,10 @@ namespace SpacegameServer.Core
         /// <param name="ships"></param>
         /// <param name="newColony"></param>
         /// <param name="planet"></param>
-        private void createMajorColony(User _user, string _newname, ref List<Ship> ships, ref Colony newColony, SolarSystemInstance planet)
+        private void createMajorColony(User _user, string _newname, ref List<Ship> ships, ref Colony newColony, Colonizable planet)
         {
             Core core = Core.Instance;
-            var star = core.stars[planet.systemid];
+            var star = planet.Star;
 
             int newColonyId;
 
@@ -1342,8 +1367,8 @@ namespace SpacegameServer.Core
             colony.name = _newname;
             colony.population = this.shipModules.Sum(shipModule => shipModule.module.moduleGain.population);
             colony.storage = 20;
-            colony.starId = planet.systemid;
-            colony.planetId = planet.id;
+            colony.starId = star.Id;
+            colony.planetId = planet.Id;
             colony.planet = planet;
             colony.scanRange = 2;
            
@@ -1364,7 +1389,7 @@ namespace SpacegameServer.Core
             colony.addGood(7, 25, true); //add construction points
 
             planet.createPlanetSurface(true);
-            planet.colonyId = colony.id;
+            planet.ColonyId = colony.id;
 
             //ToDO: create colony HQ
             PlanetSurface surfaceField = planet.freeSurfaceField();
@@ -1374,30 +1399,30 @@ namespace SpacegameServer.Core
             if (colModule == 13) template = core.Buildings[30];
             if (colModule == 23) template = core.Buildings[31];
 
-            if (planet.objectid > 26)
+            if (planet.ObjectId > 26)
             {
-                template = core.Buildings[ core.PlanetTypes.First(e=>e.objectId == planet.objectid).colonyCenter ];
+                template = core.Buildings[ core.PlanetTypes.First(e=>e.objectId == planet.ObjectId).colonyCenter ];
             }
             
-            if (planet.objectid != 24)
+            if (planet.ObjectId != 24)
             {
-                var centerBuildingId = core.PlanetTypes.First(e => e.objectId == planet.objectid).colonyCenter;
+                var centerBuildingId = core.PlanetTypes.First(e => e.objectId == planet.ObjectId).colonyCenter;
                 template = core.Buildings[centerBuildingId];
             }
 
-            if (core.PlanetTypes.Any(e => e.objectId == planet.objectid && e.shipModuleId == colModule))
+            if (core.PlanetTypes.Any(e => e.objectId == planet.ObjectId && e.shipModuleId == colModule))
             {
-                template = core.Buildings[core.PlanetTypes.First(e => e.objectId == planet.objectid && e.shipModuleId == colModule).colonyCenter];
+                template = core.Buildings[core.PlanetTypes.First(e => e.objectId == planet.ObjectId && e.shipModuleId == colModule).colonyCenter];
             }
             var building = new ColonyBuilding(core, buildingId, colony, template, surfaceField.id, this.userid);
 
             colony.CalcStorage();
         }
 
-        private void colonizeHomeworld(User _user, string _newname, ref List<Ship> ships, ref Colony newColony, SolarSystemInstance planet)
+        private void colonizeHomeworld(User _user, string _newname, ref List<Ship> ships, ref Colony newColony, Colonizable planet)
         {
             Core core = Core.Instance;
-            var star = core.stars[planet.systemid];
+            var star =  planet.Star;
 
             this.createMajorColony(_user, _newname, ref ships, ref newColony, planet);
             newColony.scanRange = 4;
@@ -1436,10 +1461,10 @@ namespace SpacegameServer.Core
             
         }
 
-        private void colonizeMajorWorld(User _user, string _newname, ref List<Ship> ships, ref Colony newColony, SolarSystemInstance planet)
+        private void colonizeMajorWorld(User _user, string _newname, ref List<Ship> ships, ref Colony newColony, Colonizable planet)
         {
             Core core = Core.Instance;
-            var star = core.stars[planet.systemid];
+            var star = planet.Star;
 
             this.createMajorColony(_user, _newname, ref ships, ref newColony, planet);
 
@@ -1465,22 +1490,33 @@ namespace SpacegameServer.Core
 
             planet.createPlanetSurface(false);
 
-            planet.colonyId = colonyId;
+            planet.ColonyId = colonyId;
 
             //save surface
             Core.Instance.dataConnection.saveMinorColony(planet, colonyId);
         }
 
-        public bool colonize(User _user, string _newname, ref List<Ship> ships, ref Colony newColony, SolarSystemInstance planet)
+        public bool colonize(User _user, string _newname, ref List<Ship> ships, ref Colony newColony, Colonizable planet)
         {
             Core core = Core.Instance;
 
             if (this.userid != _user.id) return false;
             if (!this.colonizerBool) return false;
-            if (this.systemid == null || this.systemid == 0) return false;
-            if (planet.colony != null) return false;
+            if (core.GalaxyMap.useSolarSystems)
+            {
+                if (this.systemid == null || this.systemid == 0) return false;
+            }
+            
+            if(planet.colony != null) return false;
 
-            var star = core.stars[planet.systemid];
+            if (core.GalaxyMap.useSolarSystems)
+            {
+                
+            }
+
+            if (!(planet is SystemMap)) return false;
+
+            SystemMap star = planet.Star;
 
             //check that no other user has a colony in the system
             //var OtherColony = Core.Instance.colonies.Any(e => e.Value.starId == star.id && e.Value.userId != _user.id);
@@ -1499,10 +1535,10 @@ namespace SpacegameServer.Core
             if (!planet.IsMajorPlanet()) return false;
 
             //check that object is colonizable
-            if(!core.PlanetTypes.Any(e => e.objectId == planet.objectid)) return false;
+            if(!core.PlanetTypes.Any(e => e.objectId == planet.ObjectId)) return false;
             //check that player has the right research 
             if(!_user.PlayerResearch.Any(playerResearch => 
-                (playerResearch.researchId == (core.PlanetTypes.First(e => e.objectId == planet.objectid).researchRequired))
+                (playerResearch.researchId == (core.PlanetTypes.First(e => e.objectId == planet.ObjectId).researchRequired))
                 && playerResearch.isCompleted == 1)) return false;
 
 
@@ -1634,7 +1670,7 @@ namespace SpacegameServer.Core
                 colony.addGood(7, 25, true);
 
                 planet.createPlanetSurface(true);
-                planet.colonyId = colony.id;
+                planet.ColonyId = colony.id;
 
                 //ToDO: create colony HQ
                 PlanetSurface surfaceField = planet.freeSurfaceField();
@@ -1743,7 +1779,7 @@ namespace SpacegameServer.Core
         {
             this.posX = field.x;
             this.posY = field.y;
-            this.systemid = field.starId;
+            this.systemid = Core.Instance.GalaxyMap.useSolarSystems ?  field.starId : null;
             this.field = field;
         }
 
@@ -3049,12 +3085,12 @@ namespace SpacegameServer.Core
             if (systemXY== null)
             {
                 if (field.starId == null) return null;
-                return this.ObjectDescriptions[this.stars[(int)field.starId].objectid];
+                return this.ObjectDescriptions[this.stars[(int)field.starId].ObjectId];
             }
 
             //planet, asteroid or other in system stuff
             var x = this.stars[(int)field.starId].planets.Where(e=>e.x == systemXY.Item1 && e.y == systemXY.Item2);
-            if (x.Count() > 0) return this.ObjectDescriptions[x.First().objectid];
+            if (x.Count() > 0) return this.ObjectDescriptions[x.First().ObjectId];
 
             return null;
         }

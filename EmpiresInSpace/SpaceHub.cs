@@ -115,7 +115,7 @@ namespace EmpiresInSpace
                 Clients.All.ChatAddUser(user.RegistrationTicket.UserId);
 
                 //Microsoft.AspNet.SignalR.GlobalHost.ConnectionManager.GetHubContext<SpaceHub>().Clients.All.ChatAddUser(user.RegistrationTicket.UserId);
-                return ret;
+                return true;
             }
 
             return null;
@@ -159,6 +159,45 @@ namespace EmpiresInSpace
 
             //PlayerResearch
             return new {Researchs =  _game.bc.getUserResearch(userId, UserId == userId) };            
+        }
+
+        public object FetchAllData()
+        {
+            User user = _game.UserHandler.GetUser(Context.ConnectionId);
+            int UserId = user.RegistrationTicket.UserId;
+            var x = SpacegameServer.Core.Core.Instance.users[UserId].knownStars.Select(e => SpacegameServer.Core.Core.Instance.stars[e]).ToList();
+            //Stars
+            return new {
+                Stars = x.Select(e =>
+                    new
+                    {
+                        startingRegion = e.startingRegion,
+                        distanceToCenter = e.distanceToCenter,
+                        posX = e.posX,
+                        posY = e.posY,
+                        systemname = e.systemname,
+                        ObjectId = e.ObjectId,
+                        type = e.type,
+                        size = e.size,
+                        startsystem = e.startsystem,
+                        settled = e.settled,
+                        ressourceid = e.ressourceid,
+                        BackgroundObjectId = e.BackgroundObjectId,
+                        BackgroundDrawSize = e.BackgroundDrawSize,
+                        TilestartingAt= e.TilestartingAt,
+                        gif=e.gif,
+                        fieldSize=e.fieldSize,
+                        drawsize= e.drawsize,
+                        Id = e.Id,
+                        ColonyId = e.ColonyId
+                    }
+                )
+            };
+        }
+
+        public object GetPlanetTypes()
+        {
+            return new { PlanetTypes = SpacegameServer.Core.Core.Instance.PlanetTypes };
         }
 
         public object FetchAllUserResearch()
@@ -473,7 +512,7 @@ namespace EmpiresInSpace
                 {
                     int starId = (int)Ship.field.starId;
                     SpacegameServer.Core.SystemMap star = SpacegameServer.Core.Core.Instance.stars[starId];
-                    if (!(star.objectid > 4999 && star.objectid < 5005)) return;
+                    if (!(star.ObjectId > 4999 && star.ObjectId < 5005)) return;
                 }
 
                 //check that the gravity generator exists on ship

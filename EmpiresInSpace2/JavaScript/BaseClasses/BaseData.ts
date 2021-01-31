@@ -2373,7 +2373,7 @@ module BaseDataModule {
 
                 this.SpecializationResearch.push(newSpecResearch);
 
-                Helpers.Log('SpecializationResearch added');
+                //Helpers.Log('SpecializationResearch added');
             }
         }
 

@@ -67,7 +67,7 @@ namespace EmpiresInSpace
 
             string script =
                 @"<script>
-                    var ScriptPath = 'js/Scripts/';
+                    var ScriptPath = 'JavaScript/Scripts/';
                     var BuildingPath = 'Buildings/';
                     var QuestPath = 'Quests/';
                 </script>";

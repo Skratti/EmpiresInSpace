@@ -13,9 +13,9 @@ namespace MapGenerator
     public class Star
     {
         //only needed when writing to the Database
-        public int ObjectId;            
+        public int ObjectId;
 
-        //not needed yet
+        //only used when StarNebulaType = 1, this value is given to the solar system generator
         public sunTypes Type;           
 
         //if the star is the a starting system of a player. Starting system have to have a certain quality
@@ -30,7 +30,7 @@ namespace MapGenerator
         //chance that a potencial nebula is in fact a nebula. 
         public int NebulaPercentage = 0;
 
-        //Star = 1, Nebula = 2, Potential Nebula = 3
+        //Star = 1, Nebula = 2, Potential Nebula = 3, (4 to 7) other nebula types,   planet > 7
         public int StarNebulaType = 1;
 
         //Coordinates of the star. x/y-orig values are needed when the x/y position changes. It should always change in a certain distance around the orig values.
@@ -49,5 +49,16 @@ namespace MapGenerator
             Y = Orig_y = y;
         }
 
+        //constructor for new planet or Asteroid
+        public Star( int objectId, int id, int x, int y)
+        {
+            StartingSystem = false;
+            Type = sunTypes.MSBlue;
+
+            ObjectId = objectId;
+            Id = id;
+            X = Orig_x = x;
+            Y = Orig_y = y;
+        }
     }
 }

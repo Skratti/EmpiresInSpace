@@ -34,8 +34,8 @@ namespace SpacegameServer.BC
             string ret = "";
             SpacegameServer.BC.XMLGroups.ColonyPlanets response = new XMLGroups.ColonyPlanets();
 
-            response.planets.AddRange(core.planets.Where(e => e.Value.colonyId == colonyId).Select(e => new XMLGroups.ColonyPlanet(e.Value.id, e.Value, e.Value.surfaceFields)));
 
+            response.planets.AddRange(core.stars.Where(e=>e.Value.ColonyId == colonyId).Select(e => new XMLGroups.ColonyPlanet(e.Value.id, e.Value, e.Value.surfaceFields)));            
 
 
             BusinessConnector.Serialize<SpacegameServer.BC.XMLGroups.ColonyPlanets>(response, ref ret, true);

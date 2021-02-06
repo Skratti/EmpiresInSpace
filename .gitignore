@@ -88,3 +88,4 @@ MapGenerator/obj
 node_modules
 packages
 
+Database/00 CreateGameDB.sql

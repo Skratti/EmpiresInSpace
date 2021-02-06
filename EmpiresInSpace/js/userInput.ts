@@ -281,7 +281,6 @@ class CanvasMouseListener {
          */
         this.isClick = () => {
             let isClick = !this.longtouch;
-            this.longtouch = false;
 
             return isClick;
         }
@@ -329,6 +328,7 @@ class CanvasMouseListener {
 
             }
 
+            this.longtouch = false;
             this.dragging = false;
         }
 
@@ -384,21 +384,15 @@ class CanvasMouseListener {
         }
 
 
+        // TODO: relPopupBody already catches the mouseevents, which causes problems if a drag is continued over it
         /**
          * Bind the mouse- and touch-drag events to all html-elements.
          */
         this.bindDrag = () => {
             $("#canvas1").bind("mousemove touchmove", this.dragMouse);
-            $("#tools").bind("mousemove touchmove", this.dragMouse);
-            $("#quickInfo-container").bind("mousemove touchmove", this.dragMouse);
-            $("#CanvasTooltipContainer").bind("mousemove touchmove", this.dragMouse);
+            $("#ui").bind("mousemove touchmove", this.dragMouse);           // this contains all the other elements
             $("#chat").bind("mousemove touchmove", this.dragMouse);
-            $("#menuTools").bind("mousemove touchmove", this.dragMouse);
-            $("#NavigationBar").bind("mousemove touchmove", this.dragMouse);
-            $("#QuestList").bind("mousemove touchmove", this.dragMouse);
-            $("#Rank").bind("mousemove touchmove", this.dragMouse);
-            $("#panel - ul - buildings").bind("mousemove touchmove", this.dragMouse);
-            $("#quickMessageDiv").bind("mousemove touchmove", this.dragMouse);
+            $("#relPopup").bind("mousemove touchmove", this.dragMouse);
         }
 
         /**
@@ -406,46 +400,29 @@ class CanvasMouseListener {
          */
         this.unbindDrag = () => {
             $("#canvas1").unbind("mousemove touchmove", this.dragMouse);
-            $("#tools").unbind("mousemove touchmove", this.dragMouse);
-            $("#quickInfo-container").unbind("mousemove touchmove", this.dragMouse);
-            $("#CanvasTooltipContainer").unbind("mousemove touchmove", this.dragMouse);
+            $("#ui").unbind("mousemove touchmove", this.dragMouse);         // this contains all the other elements
             $("#chat").unbind("mousemove touchmove", this.dragMouse);
-            $("#menuTools").unbind("mousemove touchmove", this.dragMouse);
-            $("#NavigationBar").unbind("mousemove touchmove", this.dragMouse);
-            $("#QuestList").unbind("mousemove touchmove", this.dragMouse);
-            $("#Rank").unbind("mousemove touchmove", this.dragMouse);
-            $("#panel - ul - buildings").unbind("mousemove touchmove", this.dragMouse);
-            $("#quickMessageDiv").unbind("mousemove touchmove", this.dragMouse);
+            $("#relPopup").unbind("mousemove touchmove", this.dragMouse);
         }
 
         /**
          * Bind the mouseup events to all html-elements.
          */
         this.bindMouseUp = () => {
-            // here are all elements where a click deselects the current ship
+            // a click here deselects the current ship
             $("#canvas1").bind("mouseup touchend", this.dragMouseEnd);
-            $("#tools").bind("mouseup touchend", this.dragMouseEnd);
-            // if the mousedrag/-click ends in the quickInfo-container but not one of the elements it contains, end it like a normal drag/-click
-            $("#quickInfo-container").bind("mouseup touchend", this.dragMouseEnd);
 
-            // if there is a click made here, do not deselect the current ship
-            $("#TransferPanel").bind("mouseup touchend", this.dragMouseEndOverForeground);
-            // if there is a ship being dragged in one of the following elements, execute the movement
+            // bind to all elements contained in the ui (and the popups)
+            $("#ui").bind("mouseup touchend", this.dragMouseEndOverForeground);
+            $("#relPopup").bind("mouseup touchend", this.dragMouseEndOverForeground);
+
+            // if the mousedrag/-click ends in the quickInfo-container but not one of the elements it contains, end it like a normal drag/-click
+            $("#quickInfo-container").bind("mouseup touchend", this.dragMouseEnd);      // this should trigger before the ui-drag-end
+
+            // this should behave like the other elements in ui
             $("#quickInfoList").bind("mouseup touchend", this.dragMouseEndOverForeground);
             $("#quickInfoDetails").bind("mouseup touchend", this.dragMouseEndOverForeground);
             $("#quickInfo").bind("mouseup touchend", this.dragMouseEndOverForeground);
-
-            // TODO: change - for now treat it like the other foreground elements
-            // if a drag is ended here, cancel ship movement
-            // here a click is already catched somewhere else, only a drag event needs to be evaluated
-            $("#CanvasTooltipContainer").bind("mouseup touchend", this.dragMouseEndOverForeground);
-            $("#chat").bind("mouseup touchend", this.dragMouseEndOverForeground);
-            $("#menuTools").bind("mouseup touchend", this.dragMouseEndOverForeground);
-            $("#NavigationBar").bind("mouseup touchend", this.dragMouseEndOverForeground);
-            $("#QuestList").bind("mouseup touchend", this.dragMouseEndOverForeground);
-            $("#Rank").bind("mouseup touchend", this.dragMouseEndOverForeground);
-            $("#panel - ul - buildings").bind("mouseup touchend", this.dragMouseEndOverForeground);
-            $("#quickMessageDiv").bind("mouseup touchend", this.dragMouseEndOverForeground);
         }
 
         /**
@@ -453,21 +430,15 @@ class CanvasMouseListener {
          */
         this.unbindMouseUp = () => {
             $("#canvas1").unbind("mouseup touchend", this.dragMouseEnd);
-            $("#tools").unbind("mouseup touchend", this.dragMouseEnd);
+
+            $("#ui").unbind("mouseup touchend", this.dragMouseEndOverForeground);
+            $("#relPopup").unbind("mouseup touchend", this.dragMouseEndOverForeground);
+
             $("#quickInfo-container").unbind("mouseup touchend", this.dragMouseEnd);
-            $("#TransferPanel").unbind("mouseup touchend", this.dragMouseEndOverForeground);
+
             $("#quickInfoList").unbind("mouseup touchend", this.dragMouseEndOverForeground);
             $("#quickInfoDetails").unbind("mouseup touchend", this.dragMouseEndOverForeground);
             $("#quickInfo").unbind("mouseup touchend", this.dragMouseEndOverForeground);
-
-            $("#CanvasTooltipContainer").unbind("mouseup touchend", this.dragMouseEndOverForeground);
-            $("#chat").unbind("mouseup touchend", this.dragMouseEndOverForeground);
-            $("#menuTools").unbind("mouseup touchend", this.dragMouseEndOverForeground);
-            $("#NavigationBar").unbind("mouseup touchend", this.dragMouseEndOverForeground);
-            $("#QuestList").unbind("mouseup touchend", this.dragMouseEndOverForeground);
-            $("#Rank").unbind("mouseup touchend", this.dragMouseEndOverForeground);
-            $("#panel - ul - buildings").unbind("mouseup touchend", this.dragMouseEndOverForeground);
-            $("#quickMessageDiv").unbind("mouseup touchend", this.dragMouseEndOverForeground);
         }
 
         

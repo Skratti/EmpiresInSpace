@@ -34,8 +34,6 @@ class CanvasMouseListener {
     private dragEnd: (e: JQueryEventObject) => void;
 
 
-    private isClick: () => boolean;
-
     private bindDrag: () => void;
     private unbindDrag: () => void;
     private bindMouseUp: () => void;
@@ -257,9 +255,9 @@ class CanvasMouseListener {
          * @param e
          */
         this.dragMouseEnd = (e: JQueryEventObject) => {
-            clearTimeout(this.timeout);     // clear the click/touch timer
+            clearTimeout(this.timeout);                             // clear the click/touch timer
 
-            if (this.isClick()) this.singleClick(e, false);
+            if (!this.longtouch) this.singleClick(e, false);        // check if the event is a click
             else this.dragEnd(e);
         }
 
@@ -269,20 +267,10 @@ class CanvasMouseListener {
          * @param e
          */
         this.dragMouseEndOverForeground = (e: JQueryEventObject) => {
-            clearTimeout(this.timeout);     // clear the click/touch timer
+            clearTimeout(this.timeout);                             // clear the click/touch timer
 
-            if (this.isClick()) this.singleClick(e, true);
+            if (!this.longtouch) this.singleClick(e, true);         // check if the event is a click
             else this.dragEnd(e);
-        }
-
-        /**
-         * Check if the mouse- or touch-action is a click.
-         * @returns isClick
-         */
-        this.isClick = () => {
-            let isClick = !this.longtouch;
-
-            return isClick;
         }
 
 

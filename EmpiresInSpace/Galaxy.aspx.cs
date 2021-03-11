@@ -25,8 +25,8 @@ namespace EmpiresInSpace
             //string decoded = HttpUtility.UrlDecode(state.Value);
             //var rc = JsonConvert.DeserializeObject<RegisteredClient>(decoded);
             SocketKey = Guid.NewGuid().ToString();
-            EmpiresInSpace.Users x = (EmpiresInSpace.Users)Session["user"];
-            var rc = new RegisteredClient(SocketKey, x.id);
+            EmpiresInSpace.Users user = (EmpiresInSpace.Users)Session["user"];
+            var rc = new RegisteredClient(SocketKey, user.id);
 
             //rc.RegistrationID = (string)Session["user"];
             Game.Instance.RegistrationHandler.Register(rc);

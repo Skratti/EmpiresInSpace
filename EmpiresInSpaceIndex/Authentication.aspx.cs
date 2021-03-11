@@ -38,8 +38,9 @@ namespace SpacegameIndex
 
             gameKey = System.Web.Configuration.WebConfigurationManager.AppSettings["gameConnection"].ToString();
             
-            string activeConnection = System.Web.Configuration.WebConfigurationManager.AppSettings["activeConnection"].ToString();            
-            ConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings[activeConnection].ConnectionString;
+            //string activeConnection = System.Web.Configuration.WebConfigurationManager.AppSettings["activeConnection"].ToString();
+            //ConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings[activeConnection].ConnectionString;
+            ConnectionString = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=EmpiresIndex;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
             conn = new SqlConnection(ConnectionString);
 
             switch (action)

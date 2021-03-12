@@ -32,7 +32,8 @@ CREATE TABLE [dbo].[Users]			  (
 	verificationCode  nvarchar(63) NOT NULL,
 	salt int,
 	recoveryCode nvarchar(64) ,
-	recoveryDateTime DateTime
+	recoveryDateTime DateTime,
+	[registerCode] int NOT NULL default 0
 	constraint Users_primary primary key clustered (id)
 );
 print 'table [Users] created.'

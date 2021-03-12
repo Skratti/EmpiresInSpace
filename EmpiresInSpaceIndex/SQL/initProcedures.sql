@@ -7,7 +7,7 @@ AS
 go
 
 
-IF OBJECT_ID('[dbo].[randomBigInt]', 'FN')  IS NOT NULL  DROP view [dbo].[randomBigInt];
+IF OBJECT_ID('[dbo].[randomBigInt]', 'FN')  IS NOT NULL  DROP function [dbo].[randomBigInt];
 go
 CREATE function [dbo].[randomBigInt] () 
 returns bigint

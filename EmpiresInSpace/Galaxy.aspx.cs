@@ -11,27 +11,49 @@ namespace EmpiresInSpace
     {
         public string SocketKey;
 
+        /// <summary>
+        /// On page load check if a user is logged in and register the client.
+        /// </summary>
+        /// <param name="sender">???</param>
+        /// <param name="e">???</param>
         protected void Page_Load(object sender, EventArgs e)
         {
-            //check logged in 
+            if (!CheckUserLogin()) return;
+
+            RegisterClientSocket();
+        }
+
+        /// <summary>
+        /// Check if a user is logged in and redirect clients without user to the login page.
+        /// </summary>
+        /// <returns>True if a user is connected, false if not.</returns>
+        private bool CheckUserLogin ()
+        {
             if (Session["user"] == null)
             {
                 string redirectPath = System.Web.Configuration.WebConfigurationManager.AppSettings["index"].ToString();
                 Response.Redirect(redirectPath);
-                return;
+                return false;
             }
+            else return true;
+        }
 
-            var state = Request.Cookies["shootr.state"];
+        /// <summary>
+        /// Register the client.
+        /// </summary>
+        private void RegisterClientSocket()
+        {
+            //var state = Request.Cookies["shootr.state"];
             //string decoded = HttpUtility.UrlDecode(state.Value);
             //var rc = JsonConvert.DeserializeObject<RegisteredClient>(decoded);
             SocketKey = Guid.NewGuid().ToString();
             EmpiresInSpace.Users user = (EmpiresInSpace.Users)Session["user"];
             var rc = new RegisteredClient(SocketKey, user.id);
-
             //rc.RegistrationID = (string)Session["user"];
             Game.Instance.RegistrationHandler.Register(rc);
-
         }
+
+        // -------------------- ALL (OR MOST) OF THE FOLLOWING METHODS ARE USED BY THE PAGE ---------------------------------------
 
         protected string demoSwitch()
         {
